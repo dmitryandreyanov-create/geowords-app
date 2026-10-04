@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.3";
+const CACHE="geowords-v0.3.1";
 const CORE=[
   "./",
   "./index.html",
@@ -17,6 +17,7 @@ const CORE=[
   "./assets/mountains-puzzle-9.webp",
   "./assets/mountains-puzzle-10.webp",
   "./assets/mountains-puzzle-11.webp",
+  "./assets/icon-180.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png"
 ];
