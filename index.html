@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#eef8fb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="GeoWords" />
+  <title>GeoWords — Mountains</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <div class="brand">WORLD GEOGRAPHY SERIES</div>
+        <h1>GEOWORDS</h1>
+      </div>
+      <div class="medal" aria-label="Medals"><span>🏅</span><strong id="medalCount">0</strong></div>
+    </header>
+
+    <main>
+      <section id="homeScreen" class="screen active">
+        <div class="hero-card mountains-hero">
+          <p class="eyebrow">LEVEL 3 · MOUNTAINS</p>
+          <h2>Find the clues.<br>Build the word.</h2>
+          <p>This is the first interactive puzzle from the original <strong>GeoWords: Mountains</strong> workbook.</p>
+          <button id="startBtn" class="primary">Start Puzzle 1</button>
+        </div>
+        <div class="how-card">
+          <div><span>1</span><p>Learn the facts you will need</p></div>
+          <div><span>2</span><p>Read each clue and tap the correct letter</p></div>
+          <div><span>3</span><p>Decode the hidden geography word</p></div>
+        </div>
+      </section>
+
+      <section id="factsScreen" class="screen">
+        <div class="lesson-card">
+          <div class="bulb">💡</div>
+          <p class="eyebrow">FOR THIS QUIZ, YOU NEED TO KNOW</p>
+          <h2>Before you explore the map…</h2>
+          <ul id="introFacts"></ul>
+          <button id="factsContinueBtn" class="primary">I’m ready</button>
+        </div>
+      </section>
+
+      <section id="gameScreen" class="screen">
+        <div class="game-head">
+          <button id="backBtn" class="icon-btn" aria-label="Back">←</button>
+          <div class="progress-wrap">
+            <div class="progress-label"><span id="levelTitle">Puzzle 1</span><span id="progressText">0 / 7</span></div>
+            <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+          </div>
+        </div>
+
+        <div class="word-card compact-word">
+          <div class="word-label">SECRET WORD</div>
+          <div id="wordSlots" class="word-slots"></div>
+        </div>
+
+        <div class="clue-card sticky-clue">
+          <p class="eyebrow">CLUE <span id="clueNumber">1</span></p>
+          <p id="clueText" class="clue-text"></p>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+        </div>
+
+        <div class="map-card">
+          <div id="mapViewport" class="map-viewport" aria-label="Interactive map">
+            <div id="mapCanvas" class="map-canvas">
+              <img id="mapImage" src="./assets/mountains-puzzle-1.webp" alt="GeoWords Mountains puzzle map" draggable="false" />
+              <div id="markersLayer" class="markers-layer"></div>
+            </div>
+          </div>
+          <div class="tap-hint">Tap a letter on the map · Pinch to zoom</div>
+          <div class="map-controls">
+            <button id="zoomOut" class="zoom-btn" aria-label="Zoom out">−</button>
+            <button id="resetZoom" class="zoom-btn wide" aria-label="Reset zoom">100%</button>
+            <button id="zoomIn" class="zoom-btn" aria-label="Zoom in">+</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="finishScreen" class="screen">
+        <div class="finish-card">
+          <div class="big-medal">🏅</div>
+          <p class="eyebrow">PUZZLE COMPLETE</p>
+          <h2 id="finishWord">GRANITE</h2>
+          <p id="definition" class="definition"></p>
+        </div>
+        <div class="next-card">
+          <p class="eyebrow">FOR THE NEXT QUIZ YOU NEED TO KNOW</p>
+          <ul id="nextFacts"></ul>
+          <button id="replayBtn" class="secondary">Play Puzzle 1 again</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./data/levels.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
