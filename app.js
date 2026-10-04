@@ -20,7 +20,7 @@ function renderHome(){
   const done=completedCount();
   levelIndex=firstIncompleteIndex();
   level=levels[levelIndex];
-  $("startBtn").textContent=done===levels.length?"Play Puzzle 1 again":"Continue with Puzzle "+(levelIndex+1);
+  $("startBtn").textContent=done===levels.length?"Play Puzzle 1 again":"Continue with "+level.title;
   $("homeProgress").textContent=done+" of "+levels.length+" available puzzles complete";
   renderMedals();
 }
@@ -35,7 +35,7 @@ function selectLevel(index){
 }
 function prepareLesson(){
   renderList("introFacts",level.introFacts);
-  $("factsTitle").textContent="Before Puzzle "+(levelIndex+1)+"…";
+  $("factsTitle").textContent="Before "+level.title+"…";
 }
 function resetGame(){
   clueIndex=0;solvedMarkerIds=new Set();solvedLetters=[];scale=1;tx=0;ty=0;
@@ -95,11 +95,11 @@ function finish(){
   $("finishWord").textContent=level.answer;
   $("definition").textContent=level.definition;
   renderList("nextFacts",level.nextFacts);
-  $("replayBtn").textContent="Play Puzzle "+(levelIndex+1)+" again";
+  $("replayBtn").textContent="Play "+level.title+" again";
   const hasNext=levelIndex+1<levels.length;
   $("nextBtn").hidden=!hasNext;
-  $("nextBtn").textContent=hasNext?"Continue to Puzzle "+(levelIndex+2):"";
-  $("nextFactsLabel").textContent=hasNext?"FOR THE NEXT QUIZ YOU NEED TO KNOW":"KEEP THESE FACTS FOR THE NEXT CHALLENGE";
+  $("nextBtn").textContent=hasNext?"Continue to "+levels[levelIndex+1].title:"";
+  $("nextFactsLabel").textContent=level.finishFactsLabel||(hasNext?"FOR THE NEXT QUIZ YOU NEED TO KNOW":"KEEP THESE FACTS FOR THE NEXT CHALLENGE");
   show("finishScreen");
 }
 function clampTransform(){
