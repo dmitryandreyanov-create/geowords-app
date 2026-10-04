@@ -45,22 +45,22 @@ window.GEOWORD_LEVELS=[
   title:"Geography Puzzle 2",
   answer:"ELEVATION",
   map:"./assets/mountains-puzzle-2.webp",
-  mapAspect:"1570 / 855",
+  mapAspect:"1570 / 880",
   introFacts:[
     "The Ural Mountains separate Europe from Asia.",
     "They stretch from the Arctic region down toward Kazakhstan.",
     "They are one of the oldest mountain ranges in the world."
   ],
   markers:[
-    {id:"northern-north-america",x:17.7,y:8.6,letter:"A"},
-    {id:"southern-north-america",x:14.9,y:35.0,letter:"I"},
-    {id:"atlantic-ocean",x:28.5,y:39.4,letter:"E"},
-    {id:"ural-mountains",x:66.1,y:19.6,letter:"V"},
-    {id:"himalayas",x:72.1,y:37.3,letter:"T"},
-    {id:"pacific-ocean",x:84.1,y:32.4,letter:"O"},
-    {id:"southern-south-america",x:24.9,y:80.0,letter:"N"},
-    {id:"madagascar",x:61.5,y:72.0,letter:"E"},
-    {id:"antarctica",x:62.0,y:95.0,letter:"L"}
+    {id:"northern-north-america",x:23.50,y:8.41,letter:"A"},
+    {id:"southern-north-america",x:20.83,y:34.20,letter:"I"},
+    {id:"atlantic-ocean",x:34.08,y:38.30,letter:"E"},
+    {id:"ural-mountains",x:65.92,y:18.98,letter:"V"},
+    {id:"himalayas",x:71.40,y:36.48,letter:"T"},
+    {id:"pacific-ocean",x:83.38,y:31.59,letter:"O"},
+    {id:"southern-south-america",x:30.06,y:77.84,letter:"N"},
+    {id:"madagascar",x:61.97,y:69.66,letter:"E"},
+    {id:"antarctica",x:62.36,y:92.39,letter:"L"}
   ],
   clues:[
     {markerId:"atlantic-ocean",text:"The first letter is in the Atlantic Ocean."},
