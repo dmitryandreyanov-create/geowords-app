@@ -424,7 +424,7 @@ window.GEOWORD_LEVELS=[
       },
       {
         "markerId": "northern-australia",
-        "text": "The eighth letter is in nothern Australia."
+        "text": "The eighth letter is in northern Australia."
       },
       {
         "markerId": "northern-europe",
