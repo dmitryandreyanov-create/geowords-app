@@ -997,4 +997,299 @@ window.GEOWORD_LEVELS=[
         "y": 37.28,
         "letter": "I"
       },
+      {        "id": "southern-andes",
+        "x": 32.84,
+        "y": 73.38,
+        "letter": "S"
+      }
+    ],
+    "clues": [
       {
+        "markerId": "great-dividing-range",
+        "text": "The first letter is next to the Great Dividing Range."
+      },
+      {
+        "markerId": "east-africa",
+        "text": "The second letter is next to the mountains of East Africa."
+      },
+      {
+        "markerId": "northern-andes",
+        "text": "The third letter is in the Northern Andes."
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The fourth letter is next to the Ural Mountains."
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The fifth letter is next to the Himalayas."
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The sixth letter is next to the North American Cordillera."
+      },
+      {
+        "markerId": "atlas-mountains",
+        "text": "The seventh letter is next to the Atlas Mountains."
+      },
+      {
+        "markerId": "southern-andes",
+        "text": "The eighth letter is in the Southern Andes."
+      },
+      {
+        "markerId": "appalachian-mountains",
+        "text": "The ninth letter is in the Appalachian Mountains."
+      },
+      {
+        "markerId": "caucasus-mountains",
+        "text": "The tenth letter is in the Caucasus Mountains."
+      }
+    ],
+    "definition": "Orogenesis — the process by which mountains are formed.",
+    "nextFacts": [
+      "The Pyrenees are mountains in southwestern Europe.",
+      "They form a natural border between France and Spain.",
+      "The Pyrenees separate the Iberian Peninsula from the rest of Europe."
+    ]
+  },
+  {
+    "id": "mountains-10-mountaintop",
+    "series": "World Geography Series",
+    "level": "Level 3",
+    "unit": "Mountains",
+    "title": "Geography Puzzle 10",
+    "answer": "MOUNTAINTOP",
+    "map": "./assets/mountains-puzzle-10.webp",
+    "mapAspect": "1570 / 880",
+    "introFacts": [
+      "The Pyrenees are mountains in southwestern Europe.",
+      "They form a natural border between France and Spain.",
+      "The Pyrenees separate the Iberian Peninsula from the rest of Europe."
+    ],
+    "markers": [
+      {
+        "id": "great-dividing-range",
+        "x": 90.42,
+        "y": 75.51,
+        "letter": "M"
+      },
+      {
+        "id": "east-africa",
+        "x": 48.41,
+        "y": 57.2,
+        "letter": "O"
+      },
+      {
+        "id": "himalayas",
+        "x": 61.61,
+        "y": 48.03,
+        "letter": "U"
+      },
+      {
+        "id": "andes",
+        "x": 31.41,
+        "y": 73.88,
+        "letter": "N"
+      },
+      {
+        "id": "appalachian-mountains",
+        "x": 29.68,
+        "y": 34.59,
+        "letter": "T"
+      },
+      {
+        "id": "ural-mountains",
+        "x": 66.53,
+        "y": 24.66,
+        "letter": "A"
+      },
+      {
+        "id": "north-american-cordillera",
+        "x": 10.82,
+        "y": 23.27,
+        "letter": "I"
+      },
+      {
+        "id": "atlas-mountains",
+        "x": 39.46,
+        "y": 46.04,
+        "letter": "N"
+      },
+      {
+        "id": "caucasus-mountains",
+        "x": 54.39,
+        "y": 17.9,
+        "letter": "T"
+      },
+      {
+        "id": "pyrenees",
+        "x": 38.18,
+        "y": 18.23,
+        "letter": "O"
+      },
+      {
+        "id": "pacific-ocean",
+        "x": 89.09,
+        "y": 31.32,
+        "letter": "P"
+      }
+    ],
+    "clues": [
+      {
+        "markerId": "great-dividing-range",
+        "text": "The first letter is next to the Great Dividing Range."
+      },
+      {
+        "markerId": "east-africa",
+        "text": "The second letter is next to the mountains of East Africa."
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The third letter is in the mountain range whose highest peak is Mount Everest."
+      },
+      {
+        "markerId": "andes",
+        "text": "The fourth letter is in the Andes."
+      },
+      {
+        "markerId": "appalachian-mountains",
+        "text": "The fifth letter is next to the Appalachian Mountains."
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The sixth letter is next to the Ural Mountains."
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The seventh letter is next to the North American Cordillera."
+      },
+      {
+        "markerId": "atlas-mountains",
+        "text": "The eighth letter is next to the Atlas Mountains."
+      },
+      {
+        "markerId": "caucasus-mountains",
+        "text": "The ninth letter is in the Caucasus Mountains."
+      },
+      {
+        "markerId": "pyrenees",
+        "text": "The tenth letter is in the Pyrenees."
+      },
+      {
+        "markerId": "pacific-ocean",
+        "text": "The eleventh letter is in the Pacific Ocean."
+      }
+    ],
+    "definition": "Mountaintop — the highest part of a mountain.",
+    "nextFacts": [
+      "The Mid-Atlantic Ridge is an underwater mountain range in the Atlantic Ocean.",
+      "It runs down the middle of the Atlantic Ocean from north to south.",
+      "It is part of the mid-ocean ridge system — the longest mountain system on Earth."
+    ]
+  },
+  {
+    "id": "mountains-11-rockfall",
+    "series": "World Geography Series",
+    "level": "Level 3",
+    "unit": "Mountains",
+    "title": "Bonus quiz",
+    "answer": "ROCKFALL",
+    "map": "./assets/mountains-puzzle-11.webp",
+    "mapAspect": "1570 / 880",
+    "introFacts": [
+      "The Mid-Atlantic Ridge is an underwater mountain range in the Atlantic Ocean.",
+      "It runs down the middle of the Atlantic Ocean from north to south.",
+      "It is part of the mid-ocean ridge system — the longest mountain system on Earth."
+    ],
+    "markers": [
+      {
+        "id": "pyrenees",
+        "x": 46.96,
+        "y": 14.02,
+        "letter": "R"
+      },
+      {
+        "id": "mid-atlantic-ridge",
+        "x": 42.55,
+        "y": 62.13,
+        "letter": "O"
+      },
+      {
+        "id": "caucasus-mountains",
+        "x": 56.23,
+        "y": 42.25,
+        "letter": "C"
+      },
+      {
+        "id": "ural-mountains",
+        "x": 65.82,
+        "y": 23.46,
+        "letter": "K"
+      },
+      {
+        "id": "great-dividing-range",
+        "x": 89.86,
+        "y": 72.36,
+        "letter": "F"
+      },
+      {
+        "id": "andes",
+        "x": 18.99,
+        "y": 70.71,
+        "letter": "A"
+      },
+      {
+        "id": "north-american-cordillera",
+        "x": 10.4,
+        "y": 18.43,
+        "letter": "L"
+      },
+      {
+        "id": "atlas-mountains",
+        "x": 45.04,
+        "y": 45.81,
+        "letter": "L"
+      }
+    ],
+    "clues": [
+      {
+        "markerId": "pyrenees",
+        "text": "The first letter is in the Pyrenees."
+      },
+      {
+        "markerId": "mid-atlantic-ridge",
+        "text": "The second letter is on the Mid-Atlantic Ridge."
+      },
+      {
+        "markerId": "caucasus-mountains",
+        "text": "The third letter is in the Caucasus Mountains."
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The fourth letter is next to the Ural Mountains."
+      },
+      {
+        "markerId": "great-dividing-range",
+        "text": "The fifth letter is next to the Great Dividing Range."
+      },
+      {
+        "markerId": "andes",
+        "text": "The sixth letter is in the Andes."
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The seventh letter is next to the North American Cordillera."
+      },
+      {
+        "markerId": "atlas-mountains",
+        "text": "The eighth letter is next to the Atlas Mountains."
+      }
+    ],
+    "definition": "Rockfall — rocks falling from a steep slope or cliff.",
+    "nextFacts": [
+      "Mountains can be beautiful — and dangerous.",
+      "Stay on marked trails, watch the weather, and follow safety signs!"
+    ],
+    "finishFactsLabel": "REMEMBER"
+  }
+];
