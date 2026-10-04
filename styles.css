@@ -70,5 +70,5 @@ button{font:inherit}
 .finish-card h2{font-size:clamp(34px,11vw,45px);letter-spacing:.04em;color:var(--purple);margin:6px 0 10px;overflow-wrap:anywhere}
 .definition{font-size:18px!important;line-height:1.45;color:#4e595b}
 .next-card{padding:19px 18px;margin-top:12px;background:#f1f9e9;border-color:#b5d99e}
-@media (max-width:390px){.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}.marker-hotspot{width:54px;height:54px}}
+@media (max-width:520px){.map-card{margin-left:-8px;margin-right:-8px;padding:4px}.tap-hint{padding-top:6px}.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}.marker-hotspot{width:54px;height:54px}}
 @media (min-width:700px){.app-shell{padding-left:26px;padding-right:26px}}
