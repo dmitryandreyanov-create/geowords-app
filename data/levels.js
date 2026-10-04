@@ -77,7 +77,7 @@ window.GEOWORD_LEVELS=[
   nextFacts:[
     "The North American Cordillera is a large system of mountain ranges in western North America.",
     "It includes the Rocky Mountains, the Sierra Nevada, the Cascade Range, and other mountains.",
-    "These mountains stretches from Alaska through Canada and the United States and continues south into Mexico."
+    "These mountains stretch from Alaska through Canada and the United States and continue south into Mexico."
   ]
 }
 ];
