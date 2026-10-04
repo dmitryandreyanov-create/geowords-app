@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.2.1";
+const CACHE="geowords-v0.3";
 const CORE=[
   "./",
   "./index.html",
@@ -8,6 +8,15 @@ const CORE=[
   "./manifest.webmanifest",
   "./assets/mountains-puzzle-1.webp",
   "./assets/mountains-puzzle-2.webp",
+  "./assets/mountains-puzzle-3.webp",
+  "./assets/mountains-puzzle-4.webp",
+  "./assets/mountains-puzzle-5.webp",
+  "./assets/mountains-puzzle-6.webp",
+  "./assets/mountains-puzzle-7.webp",
+  "./assets/mountains-puzzle-8.webp",
+  "./assets/mountains-puzzle-9.webp",
+  "./assets/mountains-puzzle-10.webp",
+  "./assets/mountains-puzzle-11.webp",
   "./assets/icon-192.png",
   "./assets/icon-512.png"
 ];
