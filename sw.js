@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.2.1";
+const CACHE="geowords-v0.2.2";
 const CORE=[
   "./",
   "./index.html",
