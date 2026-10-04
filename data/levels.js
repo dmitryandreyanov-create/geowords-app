@@ -45,9 +45,7 @@ window.GEOWORD_LEVELS=[
   title:"Geography Puzzle 2",
   answer:"ELEVATION",
   map:"./assets/mountains-puzzle-2.webp",
-  mapAspect:"903 / 561",
-  mapFit:"cover",
-  mapPosition:"60% 50%",
+  mapAspect:"800 / 497",
   introFacts:[
     "The Ural Mountains separate Europe from Asia.",
     "They stretch from the Arctic region down toward Kazakhstan.",
