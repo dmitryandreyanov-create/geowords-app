@@ -9,6 +9,8 @@
   <meta name="apple-mobile-web-app-title" content="GeoWords" />
   <title>GeoWords — Mountains</title>
   <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="./assets/icon-192.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -26,8 +28,9 @@
         <div class="hero-card mountains-hero">
           <p class="eyebrow">LEVEL 3 · MOUNTAINS</p>
           <h2>Find the clues.<br>Build the word.</h2>
-          <p>This is the first interactive puzzle from the original <strong>GeoWords: Mountains</strong> workbook.</p>
+          <p>Interactive puzzles from the original <strong>GeoWords: Mountains</strong> workbook.</p>
           <button id="startBtn" class="primary">Start Puzzle 1</button>
+          <div id="homeProgress" class="home-progress"></div>
         </div>
         <div class="how-card">
           <div><span>1</span><p>Learn the facts you will need</p></div>
@@ -40,7 +43,7 @@
         <div class="lesson-card">
           <div class="bulb">💡</div>
           <p class="eyebrow">FOR THIS QUIZ, YOU NEED TO KNOW</p>
-          <h2>Before you explore the map…</h2>
+          <h2 id="factsTitle">Before you explore the map…</h2>
           <ul id="introFacts"></ul>
           <button id="factsContinueBtn" class="primary">I’m ready</button>
         </div>
@@ -90,9 +93,11 @@
           <p id="definition" class="definition"></p>
         </div>
         <div class="next-card">
-          <p class="eyebrow">FOR THE NEXT QUIZ YOU NEED TO KNOW</p>
+          <p class="eyebrow" id="nextFactsLabel">FOR THE NEXT QUIZ YOU NEED TO KNOW</p>
           <ul id="nextFacts"></ul>
-          <button id="replayBtn" class="secondary">Play Puzzle 1 again</button>
+          <button id="nextBtn" class="primary">Continue</button>
+          <button id="replayBtn" class="secondary">Play again</button>
+          <button id="homeBtn" class="tertiary">Back to Mountains</button>
         </div>
       </section>
     </main>

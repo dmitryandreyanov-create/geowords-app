@@ -1,1 +1,74 @@
-:root{--bg:#eef8fb;--paper:#fffefb;--ink:#30343a;--muted:#6c7478;--line:#d6dde0;--green:#6bc45d;--green-dark:#3f8f43;--blue:#4ca9c6;--purple:#3d3a99;--yellow:#ffe36c;--shadow:0 12px 30px rgba(53,86,97,.12)}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Avenir Next",ui-rounded,"SF Pro Rounded",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent}button{font:inherit}.app-shell{max-width:760px;margin:0 auto;min-height:100dvh;padding:calc(env(safe-area-inset-top) + 12px) 14px calc(env(safe-area-inset-bottom) + 26px)}.topbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}.brand{font-size:10px;letter-spacing:.13em;color:#db6d48;font-weight:900}.topbar h1{margin:0;font-size:30px;line-height:1;color:#55bf57;text-shadow:0 2px 0 #d9f0cf;font-weight:950;letter-spacing:.015em}.medal{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:8px 12px;display:flex;gap:6px;align-items:center;box-shadow:var(--shadow)}.screen{display:none}.screen.active{display:block}.hero-card,.lesson-card,.finish-card,.clue-card,.word-card,.map-card,.how-card,.next-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}.hero-card{padding:28px 22px;margin-top:16px;overflow:hidden;position:relative}.mountains-hero:after{content:"▲ ▲ ▲";position:absolute;right:-10px;bottom:-5px;font-size:52px;letter-spacing:-12px;color:#d8aa51;opacity:.45}.hero-card h2,.lesson-card h2,.finish-card h2{font-size:31px;line-height:1.08;margin:8px 0 12px}.hero-card p{font-size:16px;line-height:1.45;color:#48565a;max-width:520px}.eyebrow{font-size:11px!important;letter-spacing:.12em;font-weight:950;color:var(--green-dark)!important;margin:0}.primary,.secondary{width:100%;border:0;border-radius:17px;padding:15px 18px;font-weight:900;font-size:17px;margin-top:12px}.primary{background:var(--green);color:#18391f;box-shadow:0 6px 0 rgba(54,126,61,.22)}.secondary{background:#eff4f5;color:#344248;border:1px solid #d5dee1}.primary:active,.secondary:active{transform:translateY(2px)}.how-card{margin-top:12px;padding:10px}.how-card>div{display:flex;align-items:center;gap:12px;padding:10px 8px}.how-card span{width:31px;height:31px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:950}.how-card p{margin:0;font-weight:750}.lesson-card{padding:24px 20px;margin-top:18px}.bulb{font-size:44px;margin-bottom:7px}.lesson-card h2{font-size:27px}.lesson-card ul,.next-card ul{padding-left:22px;line-height:1.48;font-size:17px}.lesson-card li,.next-card li{margin:8px 0}.game-head{display:flex;gap:10px;align-items:center}.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:24px}.progress-wrap{flex:1}.progress-label{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:850;color:var(--muted);margin-bottom:6px}.progress-label span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.progress-track{height:8px;background:#dfe8e8;border-radius:99px;overflow:hidden}.progress-bar{height:100%;width:0;background:var(--green);transition:width .25s ease}.word-card{padding:11px 12px;margin-top:10px}.word-label{font-size:10px;text-align:center;letter-spacing:.13em;color:var(--muted);font-weight:950;margin-bottom:5px}.word-slots{display:flex;gap:5px;justify-content:center}.slot{width:min(10.7vw,48px);height:42px;border:2px solid #c6c9c8;background:#e4e6e5;display:grid;place-items:center;font-size:24px;font-weight:950}.slot.filled{background:#fff;color:var(--purple);border-color:#8f90bd}.clue-card{padding:15px 16px 13px;margin-top:10px;border-left:5px solid var(--green)}.clue-text{font-size:19px;line-height:1.28;margin:7px 0 0;font-weight:760}.feedback{min-height:22px;margin-top:7px;font-weight:850;font-size:13px}.feedback.ok{color:var(--green-dark)}.feedback.bad{color:#b0443f}.map-card{margin-top:10px;padding:8px;overflow:hidden}.map-viewport{aspect-ratio:14/9;min-height:280px;max-height:54vh;overflow:hidden;border-radius:17px;background:#b7e4e4;position:relative;touch-action:none;border:1px solid #bdd8dc}.map-canvas{position:absolute;inset:0;transform-origin:0 0;will-change:transform}.map-canvas img{width:100%;height:100%;object-fit:fill;display:block;user-select:none;pointer-events:none}.markers-layer{position:absolute;inset:0}.marker-hotspot{position:absolute;width:64px;height:64px;border-radius:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation}.marker-hotspot.done:after{content:"✓";position:absolute;inset:-1px;border-radius:50%;display:grid;place-items:center;background:rgba(81,181,80,.34);border:3px solid rgba(46,138,57,.82);font-size:24px;color:#fff;text-shadow:0 1px 2px #296130}.marker-hotspot.wrong:after{content:"";position:absolute;inset:3px;border-radius:50%;border:4px solid rgba(187,54,49,.9);animation:shake .28s linear 1}@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}.tap-hint{text-align:center;color:#65767b;font-size:11px;font-weight:800;padding-top:7px}.map-controls{display:flex;justify-content:center;gap:8px;padding-top:6px}.zoom-btn{height:36px;min-width:44px;border-radius:11px;border:1px solid var(--line);background:#fff;font-weight:950;font-size:18px}.zoom-btn.wide{font-size:12px;padding:0 13px}.finish-card{text-align:center;padding:29px 20px;margin-top:22px}.big-medal{font-size:66px}.finish-card h2{font-size:45px;letter-spacing:.055em;color:var(--purple);margin:6px 0 10px}.definition{font-size:18px!important;line-height:1.45;color:#4e595b}.next-card{padding:19px 18px;margin-top:12px;background:#f1f9e9;border-color:#b5d99e}@media (min-width:700px){.app-shell{padding-left:26px;padding-right:26px}.map-viewport{min-height:450px}}
+:root{
+  --bg:#eef8fb;--paper:#fffefb;--ink:#30343a;--muted:#6c7478;--line:#d6dde0;
+  --green:#6bc45d;--green-dark:#3f8f43;--blue:#4ca9c6;--purple:#3d3a99;
+  --yellow:#ffe36c;--shadow:0 12px 30px rgba(53,86,97,.12)
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Avenir Next",ui-rounded,"SF Pro Rounded",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent}
+button{font:inherit}
+.app-shell{max-width:760px;margin:0 auto;min-height:100dvh;padding:calc(env(safe-area-inset-top) + 12px) 14px calc(env(safe-area-inset-bottom) + 26px)}
+.topbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
+.brand{font-size:10px;letter-spacing:.13em;color:#db6d48;font-weight:900}
+.topbar h1{margin:0;font-size:30px;line-height:1;color:#55bf57;text-shadow:0 2px 0 #d9f0cf;font-weight:950;letter-spacing:.015em}
+.medal{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:8px 12px;display:flex;gap:6px;align-items:center;box-shadow:var(--shadow)}
+.screen{display:none}.screen.active{display:block}
+.hero-card,.lesson-card,.finish-card,.clue-card,.word-card,.map-card,.how-card,.next-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+.hero-card{padding:28px 22px;margin-top:16px;overflow:hidden;position:relative}
+.mountains-hero:after{content:"▲ ▲ ▲";position:absolute;right:-10px;bottom:-5px;font-size:52px;letter-spacing:-12px;color:#d8aa51;opacity:.45}
+.hero-card h2,.lesson-card h2,.finish-card h2{font-size:31px;line-height:1.08;margin:8px 0 12px}
+.hero-card p{font-size:16px;line-height:1.45;color:#48565a;max-width:520px}
+.eyebrow{font-size:11px!important;letter-spacing:.12em;font-weight:950;color:var(--green-dark)!important;margin:0}
+.primary,.secondary,.tertiary{width:100%;border-radius:17px;padding:15px 18px;font-weight:900;font-size:17px;margin-top:12px}
+.primary{border:0;background:var(--green);color:#18391f;box-shadow:0 6px 0 rgba(54,126,61,.22)}
+.secondary{background:#eff4f5;color:#344248;border:1px solid #d5dee1}
+.tertiary{background:transparent;color:#5a666b;border:0;margin-top:5px}
+.primary:active,.secondary:active,.tertiary:active{transform:translateY(2px)}
+.home-progress{margin-top:14px;font-size:13px;font-weight:850;color:#65767b}
+.how-card{margin-top:12px;padding:10px}
+.how-card>div{display:flex;align-items:center;gap:12px;padding:10px 8px}
+.how-card span{width:31px;height:31px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:950}
+.how-card p{margin:0;font-weight:750}
+.lesson-card{padding:24px 20px;margin-top:18px}
+.bulb{font-size:44px;margin-bottom:7px}
+.lesson-card h2{font-size:27px}
+.lesson-card ul,.next-card ul{padding-left:22px;line-height:1.48;font-size:17px}
+.lesson-card li,.next-card li{margin:8px 0}
+.game-head{display:flex;gap:10px;align-items:center}
+.icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--paper);font-size:24px}
+.progress-wrap{flex:1}
+.progress-label{display:flex;justify-content:space-between;gap:10px;font-size:11px;font-weight:850;color:var(--muted);margin-bottom:6px}
+.progress-label span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.progress-track{height:8px;background:#dfe8e8;border-radius:99px;overflow:hidden}
+.progress-bar{height:100%;width:0;background:var(--green);transition:width .25s ease}
+.word-card{padding:11px 12px;margin-top:10px}
+.word-label{font-size:10px;text-align:center;letter-spacing:.13em;color:var(--muted);font-weight:950;margin-bottom:7px}
+.word-slots{display:grid;grid-template-columns:repeat(var(--letter-count),minmax(0,1fr));gap:clamp(2px,.9vw,5px);max-width:100%;margin:0 auto}
+.slot{min-width:0;aspect-ratio:1;border:2px solid #c6c9c8;background:#e4e6e5;display:grid;place-items:center;font-size:clamp(14px,5.2vw,24px);font-weight:950;line-height:1}
+.word-slots[data-long="1"] .slot{font-size:clamp(12px,4.5vw,20px)}
+.slot.filled{background:#fff;color:var(--purple);border-color:#8f90bd}
+.clue-card{padding:15px 16px 13px;margin-top:10px;border-left:5px solid var(--green)}
+.clue-text{font-size:19px;line-height:1.28;margin:7px 0 0;font-weight:760}
+.feedback{min-height:22px;margin-top:7px;font-weight:850;font-size:13px}
+.feedback.ok{color:var(--green-dark)}.feedback.bad{color:#b0443f}
+.map-card{margin-top:10px;padding:8px;overflow:hidden}
+.map-viewport{aspect-ratio:var(--map-aspect,14/9);min-height:280px;max-height:54vh;overflow:hidden;border-radius:17px;background:#b7e4e4;position:relative;touch-action:none;border:1px solid #bdd8dc}
+.map-canvas{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
+.map-canvas img{width:100%;height:100%;object-fit:fill;display:block;user-select:none;pointer-events:none}
+.markers-layer{position:absolute;inset:0}
+.marker-hotspot{position:absolute;width:58px;height:58px;border-radius:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation}
+.marker-hotspot.done:after{content:"✓";position:absolute;right:6px;top:5px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid rgba(46,138,57,.9);font-size:12px;font-weight:950;color:#2e8a39;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+.marker-hotspot.done:before{content:"";position:absolute;inset:9px;border-radius:50%;border:2px solid rgba(46,138,57,.62)}
+.marker-hotspot.wrong:after{content:"";position:absolute;inset:8px;border-radius:50%;border:3px solid rgba(187,54,49,.9);animation:shake .28s linear 1}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
+.tap-hint{text-align:center;color:#65767b;font-size:11px;font-weight:800;padding-top:7px}
+.map-controls{display:flex;justify-content:center;gap:8px;padding-top:6px}
+.zoom-btn{height:36px;min-width:44px;border-radius:11px;border:1px solid var(--line);background:#fff;font-weight:950;font-size:18px}
+.zoom-btn.wide{font-size:12px;padding:0 13px}
+.finish-card{text-align:center;padding:29px 20px;margin-top:22px}
+.big-medal{font-size:66px}
+.finish-card h2{font-size:clamp(34px,11vw,45px);letter-spacing:.04em;color:var(--purple);margin:6px 0 10px;overflow-wrap:anywhere}
+.definition{font-size:18px!important;line-height:1.45;color:#4e595b}
+.next-card{padding:19px 18px;margin-top:12px;background:#f1f9e9;border-color:#b5d99e}
+@media (max-width:390px){.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}.marker-hotspot{width:54px;height:54px}}
+@media (min-width:700px){.app-shell{padding-left:26px;padding-right:26px}.map-viewport{min-height:450px}}
