@@ -906,7 +906,7 @@ window.GEOWORD_LEVELS=[
       },
       {
         "markerId": "ural-mountains",
-        "text": "The seventh letter is next to the Ural Mountains"
+        "text": "The seventh letter is next to the Ural Mountains."
       },
       {
         "markerId": "arctic-ocean",
