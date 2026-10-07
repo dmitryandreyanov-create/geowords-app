@@ -48,7 +48,7 @@ function renderHome(){
   const done=completedCount();
   levelIndex=firstIncompleteIndex();
   level=levels[levelIndex];
-  $("startBtn").textContent=done===levels.length?"Play Puzzle 1 again":"Continue with "+level.title;
+  $("startBtn").textContent=done===levels.length?"Play "+levels[0].title+" again":"Continue with "+level.title;
   $("homeProgress").textContent=done+" of "+levels.length+" available puzzles complete";
   renderMedals();
 }
@@ -210,14 +210,14 @@ vp.addEventListener("pointermove",e=>{
   if(!pointers.has(e.pointerId))return;
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
 
-  if(pointers.size===1&&dragStart&&scale>1){
+  if(pointers.size===1&&dragStart){
     const distance=Math.hypot(e.clientX-dragStart.x,e.clientY-dragStart.y);
     if(distance>5&&!dragStart.active){
       dragStart.active=true;
       suppressClicksUntil=performance.now()+400;
-      tryCapture(e.pointerId);
+      if(scale>1)tryCapture(e.pointerId);
     }
-    if(dragStart.active){
+    if(dragStart.active&&scale>1){
       tx=dragStart.tx+(e.clientX-dragStart.x);
       ty=dragStart.ty+(e.clientY-dragStart.y);
       applyTransform();
@@ -251,7 +251,7 @@ vp.addEventListener("click",e=>{
   if(performance.now()<suppressClicksUntil)return;
 
   const hotspot=e.target.closest?.(".marker-hotspot");
-  if(e.detail===0&&hotspot){
+  if(e.detail===0&&e.clientX===0&&e.clientY===0&&hotspot){
     const marker=level.markers.find(m=>m.id===hotspot.dataset.markerId);
     if(marker)chooseMarker(marker,hotspot);
     return;
