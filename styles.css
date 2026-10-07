@@ -1,6 +1,6 @@
 :root{
   --bg:#eef8fb;--paper:#fffefb;--ink:#30343a;--muted:#6c7478;--line:#d6dde0;
-  --green:#6bc45d;--green-dark:#3f8f43;--blue:#4ca9c6;--purple:#3d3a99;
+  --green:#6bc45d;--green-dark:#2f7f39;--blue:#4ca9c6;--purple:#3d3a99;
   --yellow:#ffe36c;--shadow:0 12px 30px rgba(53,86,97,.12)
 }
 *{box-sizing:border-box}
@@ -9,8 +9,8 @@ body{overscroll-behavior:none;-webkit-tap-highlight-color:transparent}
 button{font:inherit}
 .app-shell{max-width:760px;margin:0 auto;min-height:100dvh;padding:calc(env(safe-area-inset-top) + 12px) 14px calc(env(safe-area-inset-bottom) + 26px)}
 .topbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:12px}
-.brand{font-size:10px;letter-spacing:.13em;color:#db6d48;font-weight:900}
-.topbar h1{margin:0;font-size:30px;line-height:1;color:#55bf57;text-shadow:0 2px 0 #d9f0cf;font-weight:950;letter-spacing:.015em}
+.brand{font-size:10px;letter-spacing:.13em;color:#b94c2e;font-weight:900}
+.topbar h1{margin:0;font-size:30px;line-height:1;color:#2b8b36;text-shadow:0 2px 0 #d9f0cf;font-weight:950;letter-spacing:.015em}
 .medal{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:8px 12px;display:flex;gap:6px;align-items:center;box-shadow:var(--shadow)}
 .screen{display:none}.screen.active{display:block}
 .hero-card,.lesson-card,.finish-card,.clue-card,.word-card,.map-card,.how-card,.next-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
@@ -56,19 +56,19 @@ button{font:inherit}
 .map-canvas{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
 .map-canvas img{width:100%;height:100%;object-fit:fill;display:block;user-select:none;pointer-events:none}
 .markers-layer{position:absolute;inset:0}
-.marker-hotspot{position:absolute;width:58px;height:58px;border-radius:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation}
+.marker-hotspot{position:absolute;width:clamp(44px,12vw,52px);height:clamp(44px,12vw,52px);border-radius:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation}
 .marker-hotspot.done:after{content:"✓";position:absolute;right:6px;top:5px;width:18px;height:18px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid rgba(46,138,57,.9);font-size:12px;font-weight:950;color:#2e8a39;box-shadow:0 1px 4px rgba(0,0,0,.15)}
 .marker-hotspot.done:before{content:"";position:absolute;inset:9px;border-radius:50%;border:2px solid rgba(46,138,57,.62)}
 .marker-hotspot.wrong:after{content:"";position:absolute;inset:8px;border-radius:50%;border:3px solid rgba(187,54,49,.9);animation:shake .28s linear 1}
 @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 .tap-hint{text-align:center;color:#65767b;font-size:11px;font-weight:800;padding-top:7px}
 .map-controls{display:flex;justify-content:center;gap:8px;padding-top:6px}
-.zoom-btn{height:36px;min-width:44px;border-radius:11px;border:1px solid var(--line);background:#fff;font-weight:950;font-size:18px}
+.zoom-btn{height:44px;min-width:44px;border-radius:11px;border:1px solid var(--line);background:#fff;font-weight:950;font-size:18px}
 .zoom-btn.wide{font-size:12px;padding:0 13px}
 .finish-card{text-align:center;padding:29px 20px;margin-top:22px}
 .big-medal{font-size:66px}
 .finish-card h2{font-size:clamp(34px,11vw,45px);letter-spacing:.04em;color:var(--purple);margin:6px 0 10px;overflow-wrap:anywhere}
 .definition{font-size:18px!important;line-height:1.45;color:#4e595b}
 .next-card{padding:19px 18px;margin-top:12px;background:#f1f9e9;border-color:#b5d99e}
-@media (max-width:390px){.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}.marker-hotspot{width:54px;height:54px}}
+@media (max-width:390px){.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}}
 @media (min-width:700px){.app-shell{padding-left:26px;padding-right:26px}}
