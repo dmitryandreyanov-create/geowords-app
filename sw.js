@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.3.1";
+const CACHE="geowords-v0.3.2";
 const CORE=[
   "./",
   "./index.html",
@@ -6,24 +6,19 @@ const CORE=[
   "./app.js",
   "./data/levels.js",
   "./manifest.webmanifest",
-  "./assets/mountains-puzzle-1.webp",
-  "./assets/mountains-puzzle-2.webp",
-  "./assets/mountains-puzzle-3.webp",
-  "./assets/mountains-puzzle-4.webp",
-  "./assets/mountains-puzzle-5.webp",
-  "./assets/mountains-puzzle-6.webp",
-  "./assets/mountains-puzzle-7.webp",
-  "./assets/mountains-puzzle-8.webp",
-  "./assets/mountains-puzzle-9.webp",
-  "./assets/mountains-puzzle-10.webp",
-  "./assets/mountains-puzzle-11.webp",
   "./assets/icon-180.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png"
 ];
 
+const NETWORK_TIMEOUT_MS=3000;
+
 self.addEventListener("install",event=>{
-  event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()));
+  event.waitUntil(
+    caches.open(CACHE)
+      .then(cache=>cache.addAll(CORE))
+      .then(()=>self.skipWaiting())
+  );
 });
 
 self.addEventListener("activate",event=>{
@@ -34,20 +29,40 @@ self.addEventListener("activate",event=>{
   );
 });
 
-self.addEventListener("fetch",event=>{
-  if(event.request.method!=="GET") return;
-  const url=new URL(event.request.url);
-  if(url.origin!==self.location.origin) return;
+async function fetchWithTimeout(request){
+  const controller=new AbortController();
+  const timer=setTimeout(()=>controller.abort(),NETWORK_TIMEOUT_MS);
+  try{
+    return await fetch(request,{signal:controller.signal});
+  }finally{
+    clearTimeout(timer);
+  }
+}
 
-  event.respondWith(
-    fetch(event.request)
-      .then(response=>{
-        if(response && response.ok){
-          const copy=response.clone();
-          caches.open(CACHE).then(cache=>cache.put(event.request,copy));
-        }
-        return response;
-      })
-      .catch(()=>caches.match(event.request).then(cached=>cached||caches.match("./index.html")))
-  );
+async function networkFirst(request){
+  try{
+    const response=await fetchWithTimeout(request);
+    if(response && response.ok){
+      const copy=response.clone();
+      caches.open(CACHE).then(cache=>cache.put(request,copy)).catch(()=>{});
+    }
+    return response;
+  }catch{
+    const cached=await caches.match(request);
+    if(cached)return cached;
+
+    if(request.mode==="navigate"){
+      const shell=await caches.match("./index.html");
+      if(shell)return shell;
+    }
+
+    return new Response("Offline",{status:503,statusText:"Offline"});
+  }
+}
+
+self.addEventListener("fetch",event=>{
+  if(event.request.method!=="GET")return;
+  const url=new URL(event.request.url);
+  if(url.origin!==self.location.origin)return;
+  event.respondWith(networkFirst(event.request));
 });
