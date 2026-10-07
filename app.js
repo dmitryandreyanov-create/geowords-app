@@ -233,6 +233,7 @@ vp.addEventListener("pointermove",e=>{
 });
 const pointerEnd=e=>{
   const wasPinching=pointers.size>1;
+  if(wasPinching||dragStart?.active)suppressClicksUntil=performance.now()+400;
   pointers.delete(e.pointerId);
   releaseCapture(e.pointerId);
   if(pointers.size<2)pinchStart=null;
