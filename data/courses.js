@@ -25,7 +25,7 @@ window.GEOWORD_COURSES={
       {id:"southern-ocean",label:"Southern Ocean",lon:58,lat:-60,text:"Find the letter in the Southern Ocean."}
     ],
     steps:[
-      {id:"nile",authoredPuzzleId:"rivers-authored-01",wordIds:["delta","basin","source","mouth","stream","channel"],
+      {id:"nile",authoredPuzzleId:"rivers-authored-01",wordIds:["delta","basin","source","mouth","stream","sediment"],
        object:{id:"nile",label:"Nile River",clue:"Find the letter beside the Nile River.",
         anchor:{lon:31,lat:18},
         facts:["The Nile flows north through northeastern Africa.","It empties into the Mediterranean Sea.","Find its course on the map, then practise seven geography words."],
