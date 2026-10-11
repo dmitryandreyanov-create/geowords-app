@@ -1,5 +1,7 @@
-/* Rivers pilot: one new named river per learning step; previously introduced
-   rivers remain visible. Coordinates use lon/lat and an equirectangular map. */
+/* Rivers pilot follows the first 3 authored PDF puzzles (CHANNEL, FLOODPLAIN, RAINFOREST).
+   Puzzle 1 introduces Nile facts, puzzle 2 introduces Amazon facts, puzzle 3
+   introduces Mississippi facts; each is followed by six distinct practice words.
+   Generated-map artwork is provisional pending v0.6 authored-map calibration. */
 window.GEOWORD_COURSES={
   rivers:{
     id:"rivers",title:"Rivers",target:7,
@@ -23,21 +25,21 @@ window.GEOWORD_COURSES={
       {id:"southern-ocean",label:"Southern Ocean",lon:58,lat:-60,text:"Find the letter in the Southern Ocean."}
     ],
     steps:[
-      {id:"nile",wordIds:["river","delta","basin","source","mouth","stream","channel"],
+      {id:"nile",authoredPuzzleId:"rivers-authored-01",wordIds:["delta","basin","source","mouth","stream","channel"],
        object:{id:"nile",label:"Nile River",clue:"Find the letter beside the Nile River.",
         anchor:{lon:31,lat:18},
         facts:["The Nile flows north through northeastern Africa.","It empties into the Mediterranean Sea.","Find its course on the map, then practise seven geography words."],
         path:[[31.8,-1.0],[32.6,3.7],[31.6,9.2],[32.1,14.2],[30.9,20.5],[31.8,26.2],[31.3,31.4]]}},
-      {id:"amazon",wordIds:["erosion","rapids","valley","current","flood","meander","sediment"],
+      {id:"amazon",authoredPuzzleId:"rivers-authored-02",wordIds:["erosion","rapids","valley","current","flood","meander"],
        object:{id:"amazon",label:"Amazon River",clue:"Find the letter beside the Amazon River.",
         anchor:{lon:-60.3,lat:-4.1},
         facts:["The Amazon flows across northern South America.","It carries an enormous volume of water to the Atlantic Ocean.","The Nile remains on your map; now you will practise with both rivers."],
         path:[[-74.7,-4.4],[-70.5,-4.3],[-66,-3.8],[-62,-3.5],[-58,-3.0],[-54,-2.3],[-50.2,-1.5]]}},
-      {id:"yangtze",wordIds:["estuary","bank","tributary","waterfall","wetland","drainage","reservoir"],
-       object:{id:"yangtze",label:"Yangtze River",clue:"Find the letter beside the Yangtze River.",
-        anchor:{lon:112,lat:30.2},
-        facts:["The Yangtze flows across China from west to east.","It empties into the East China Sea.","All three rivers remain on the map for this step."],
-        path:[[91.9,33.6],[98,32.2],[102.5,29],[108.2,29.6],[113,30.3],[117.9,30.6],[121.9,31.4]]}}
+      {id:"mississippi",authoredPuzzleId:"rivers-authored-03",wordIds:["estuary","tributary","waterfall","wetland","drainage","reservoir"],
+       object:{id:"mississippi",label:"Mississippi River",clue:"Find the letter beside the Mississippi River.",
+        anchor:{lon:-91.4,lat:37.2},
+        facts:["The Mississippi River is one of the longest rivers in North America.","It flows south through North America into the Gulf of Mexico.","The Nile and Amazon remain visible alongside the Mississippi."],
+        path:[[-95,47.2],[-93.3,45],[-92.1,43],[-90.7,39],[-90.3,35],[-91.4,30.9],[-89.3,29.1]]}}
     ]
   }
 };
