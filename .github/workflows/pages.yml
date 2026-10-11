@@ -45,6 +45,11 @@ jobs:
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
+      - name: Validate reviewer choices and source mapping compatibility
+        run: |
+          node --check tools/review-import.js
+          node scripts/validate-import-review.mjs
+
       - name: Check workbook importer and mapping scripts
         run: python3 -m py_compile tools/import_workbooks.py tools/apply_author_mapping.py
 
