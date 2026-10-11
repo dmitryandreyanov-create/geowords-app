@@ -10,6 +10,17 @@
     if(!Array.isArray(levels))throw new Error("Authored levels must be an array");
     return levels.map(level=>({...level,source:"authored",courseId:"mountains"}));
   }
+  function buildDictionary(authored,practice){
+    const entries=[...(practice||[])];
+    const existing=new Set(entries.map(item=>item.id));
+    for(const level of authored){
+      const id="authored:"+level.id;
+      if(existing.has(id))throw new Error("Duplicate dictionary id: "+id);
+      existing.add(id);
+      entries.push({id,word:level.answer,definition:level.definition,source:"authored",unit:level.unit});
+    }
+    return entries;
+  }
   function project(lon,lat,bounds){
     return {x:100*(lon-bounds.west)/(bounds.east-bounds.west),
       y:100*(bounds.north-lat)/(bounds.north-bounds.south)};
@@ -48,7 +59,7 @@
   }
   function markSolved(course,progress,puzzle){
     const state=normalizeProgress(progress,course),step=state.stepIndex;
-    if(puzzle.source!=="generated"||puzzle.courseId!==course.id||puzzle.stepIndex!==step)
+    if(puzzle.source!=="generated"||puzzle.review||puzzle.courseId!==course.id||puzzle.stepIndex!==step)
       return {progress:state,credited:false,advanced:false};
     if(puzzle.dictionaryId!==nextWordId(course,state))
       return {progress:state,credited:false,advanced:false};
@@ -59,9 +70,14 @@
     return {progress:state,credited:true,advanced,
       finished:!advanced&&state.solved[step].length>=threshold};
   }
-  function generate(course,lexicon,progress,variant=0){
+  function generate(course,lexicon,progress,variant=0,review=false){
     const state=normalizeProgress(progress,course);
-    const stepIndex=state.stepIndex,wordId=nextWordId(course,state);
+    const stepIndex=state.stepIndex;
+    let wordId=nextWordId(course,state);
+    if(!wordId&&review){
+      const available=wordsForStep(course,stepIndex);
+      wordId=available[Math.abs(variant)%available.length];
+    }
     if(!wordId)return null;
     const entry=lexicon.find(item=>item.id===wordId);
     if(!entry||typeof entry.word!=="string"||!/^[A-Z]+$/.test(entry.word)||!entry.definition)
@@ -92,7 +108,7 @@
       y:Number(anchor.y.toFixed(2)),letter:entry.word[i],label:anchor.label}));
     const clues=placed.map(anchor=>({markerId:anchor.id,text:anchor.text}));
     return {
-      source:"generated",courseId:course.id,stepIndex,dictionaryId:wordId,
+      source:"generated",courseId:course.id,stepIndex,dictionaryId:wordId,review,
       id:"generated:"+course.id+":"+active.at(-1).id+":"+wordId+":"+variant,
       title:active.at(-1).object.label+" · Word "+(state.solved[stepIndex].length+1)+"/"+(course.target||TARGET),
       series:"World Geography Series",level:"Practice",unit:course.title,
@@ -101,5 +117,5 @@
       nextFacts:[],features:active.map(step=>step.object)
     };
   }
-  return {fromAuthored,newProgress,normalizeProgress,nextWordId,markSolved,generate,project};
+  return {fromAuthored,buildDictionary,newProgress,normalizeProgress,nextWordId,markSolved,generate,project};
 });
