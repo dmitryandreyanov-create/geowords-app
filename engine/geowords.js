@@ -110,7 +110,7 @@
     return {
       source:"generated",courseId:course.id,stepIndex,dictionaryId:wordId,review,
       id:"generated:"+course.id+":"+active.at(-1).id+":"+wordId+":"+variant,
-      title:active.at(-1).object.label+" · Word "+(state.solved[stepIndex].length+1)+"/"+(course.target||TARGET),
+      title:active.at(-1).object.label+(review?" · Review word":" · Word "+(state.solved[stepIndex].length+1)+"/"+(course.target||TARGET)),
       series:"World Geography Series",level:"Practice",unit:course.title,
       answer:entry.word,map:course.map,mapAspect:course.mapAspect,
       introFacts:active.at(-1).object.facts,markers,clues,definition:entry.definition,
