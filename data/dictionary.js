@@ -1,229 +1,147 @@
-/* Editorial draft lexicon: author approval required before public release. */
+/* Practice vocabulary is an editorial draft. Source workbook answers never appear early. */
 window.GEOWORD_DICTIONARY=[
-  {
-    "id": "river",
-    "word": "RIVER",
-    "definition": "River — a natural flow of water moving through a channel.",
-    "guessability": "easy"
-  },
-  {
-    "id": "delta",
-    "word": "DELTA",
-    "definition": "Delta — land built by sediment where a river divides near its mouth.",
-    "guessability": "easy"
-  },
-  {
-    "id": "basin",
-    "word": "BASIN",
-    "definition": "River basin — the land area drained by a river and its tributaries.",
-    "guessability": "easy"
-  },
-  {
-    "id": "source",
-    "word": "SOURCE",
-    "definition": "Source — the place where a river begins.",
-    "guessability": "easy"
-  },
-  {
-    "id": "mouth",
-    "word": "MOUTH",
-    "definition": "River mouth — the place where a river flows into a sea, lake, or another river.",
-    "guessability": "easy"
-  },
-  {
-    "id": "stream",
-    "word": "STREAM",
-    "definition": "Stream — a smaller natural flow of water.",
-    "guessability": "easy"
-  },
-  {
-    "id": "channel",
-    "word": "CHANNEL",
-    "definition": "Channel — the path through which a river flows."
-  },
-  {
-    "id": "erosion",
-    "word": "EROSION",
-    "definition": "Erosion — the wearing away and movement of rock or soil by water, wind, or ice."
-  },
-  {
-    "id": "rapids",
-    "word": "RAPIDS",
-    "definition": "Rapids — a section of fast-flowing, turbulent river water."
-  },
-  {
-    "id": "valley",
-    "word": "VALLEY",
-    "definition": "Valley — low land between hills or mountains, often with a river.",
-    "guessability": "easy"
-  },
-  {
-    "id": "current",
-    "word": "CURRENT",
-    "definition": "Current — water moving in a particular direction."
-  },
-  {
-    "id": "flood",
-    "word": "FLOOD",
-    "definition": "Flood — water covering land that is normally dry.",
-    "guessability": "easy"
-  },
-  {
-    "id": "meander",
-    "word": "MEANDER",
-    "definition": "Meander — a wide bend in a river.",
-    "guessability": "easy"
-  },
-  {
-    "id": "sediment",
-    "word": "SEDIMENT",
-    "definition": "Sediment — particles of rock or soil carried and deposited by water, wind, or ice."
-  },
-  {
-    "id": "estuary",
-    "word": "ESTUARY",
-    "definition": "Estuary — the tidal mouth of a river where fresh water mixes with seawater."
-  },
-  {
-    "id": "bank",
-    "word": "BANK",
-    "definition": "Riverbank — the land alongside a river."
-  },
-  {
-    "id": "tributary",
-    "word": "TRIBUTARY",
-    "definition": "Tributary — a stream or river that flows into a larger river."
-  },
-  {
-    "id": "waterfall",
-    "word": "WATERFALL",
-    "definition": "Waterfall — a place where a river or stream drops over a steep edge."
-  },
-  {
-    "id": "wetland",
-    "word": "WETLAND",
-    "definition": "Wetland — land covered or saturated with water for all or part of the year."
-  },
-  {
-    "id": "drainage",
-    "word": "DRAINAGE",
-    "definition": "Drainage — the movement of water from land through streams and rivers."
-  },
-  {
-    "id": "reservoir",
-    "word": "RESERVOIR",
-    "definition": "Reservoir — a natural or artificial lake used to store water."
-  },
-  {
-    "id": "hydrology",
-    "word": "HYDROLOGY",
-    "definition": "Hydrology — the scientific study of water on and beneath Earth's surface.",
-    "guessability": "medium",
-    "editorialStatus": "draft"
-  },
   {
     "id": "aquifer",
     "word": "AQUIFER",
-    "definition": "Aquifer — a layer of permeable rock or sediment that stores and transmits groundwater.",
+    "definition": "AQUIFER \u2014 a layer of permeable rock or sediment that holds groundwater.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "aquifer"
   },
   {
     "id": "alluvium",
     "word": "ALLUVIUM",
-    "definition": "Alluvium — loose sediment deposited by flowing water.",
+    "definition": "ALLUVIUM \u2014 loose material deposited by rivers.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "alluvium"
   },
   {
     "id": "riparian",
     "word": "RIPARIAN",
-    "definition": "Riparian — relating to land along the banks of a river or stream.",
+    "definition": "RIPARIAN \u2014 relating to land beside rivers or streams.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "riparian"
   },
   {
-    "id": "watershed",
-    "word": "WATERSHED",
-    "definition": "Watershed — the area of land that drains into a common watercourse.",
+    "id": "wetland",
+    "word": "WETLAND",
+    "definition": "WETLAND \u2014 land saturated with water for some or all of the year.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "wetland"
+  },
+  {
+    "id": "fluvial",
+    "word": "FLUVIAL",
+    "definition": "FLUVIAL \u2014 relating to rivers and their processes.",
+    "guessability": "medium",
+    "editorialStatus": "draft",
+    "conceptFamily": "fluvial"
+  },
+  {
+    "id": "estuary",
+    "word": "ESTUARY",
+    "definition": "ESTUARY \u2014 a place where river freshwater and seawater meet.",
+    "guessability": "medium",
+    "editorialStatus": "draft",
+    "conceptFamily": "estuary"
   },
   {
     "id": "humidity",
     "word": "HUMIDITY",
-    "definition": "Humidity — the amount of water vapor present in the air.",
+    "definition": "HUMIDITY \u2014 the amount of water vapor in the air.",
     "guessability": "medium",
-    "editorialStatus": "draft"
-  },
-  {
-    "id": "evaporation",
-    "word": "EVAPORATION",
-    "definition": "Evaporation — the process by which liquid water changes into water vapor.",
-    "guessability": "medium",
-    "editorialStatus": "draft"
-  },
-  {
-    "id": "alluvial",
-    "word": "ALLUVIAL",
-    "definition": "Alluvial — formed by or relating to sediments deposited by flowing water.",
-    "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "humidity"
   },
   {
     "id": "ecology",
     "word": "ECOLOGY",
-    "definition": "Ecology — the study of how living things interact with their environment.",
+    "definition": "ECOLOGY \u2014 the study of living things and their environment.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "ecology"
   },
   {
-    "id": "tropical",
-    "word": "TROPICAL",
-    "definition": "Tropical — relating to the warm regions near the equator.",
+    "id": "biomass",
+    "word": "BIOMASS",
+    "definition": "BIOMASS \u2014 the mass of living organisms in a given area.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "biomass"
   },
   {
-    "id": "inundation",
-    "word": "INUNDATION",
-    "definition": "Inundation — the flooding of land that is usually dry.",
+    "id": "canopy",
+    "word": "CANOPY",
+    "definition": "CANOPY \u2014 the upper layer of branches and leaves in a forest.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "canopy"
   },
   {
-    "id": "confluence",
-    "word": "CONFLUENCE",
-    "definition": "Confluence — a place where two streams or rivers meet.",
+    "id": "endemic",
+    "word": "ENDEMIC",
+    "definition": "ENDEMIC \u2014 native to and found naturally in a particular geographic region.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "endemic"
   },
   {
-    "id": "navigable",
-    "word": "NAVIGABLE",
-    "definition": "Navigable — deep and wide enough for boats or ships to travel through.",
+    "id": "habitat",
+    "word": "HABITAT",
+    "definition": "HABITAT \u2014 the natural home of a plant or animal.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "habitat"
   },
   {
-    "id": "deposition",
-    "word": "DEPOSITION",
-    "definition": "Deposition — the settling and accumulation of material carried by water, wind, or ice.",
+    "id": "erosion",
+    "word": "EROSION",
+    "definition": "EROSION \u2014 the wearing away and transport of soil or rock.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "erosion"
   },
   {
-    "id": "topography",
-    "word": "TOPOGRAPHY",
-    "definition": "Topography — the arrangement of natural and human-made features of an area.",
+    "id": "rapids",
+    "word": "RAPIDS",
+    "definition": "RAPIDS \u2014 fast-moving rough water in a river.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "rapids"
   },
   {
-    "id": "sedimentary",
-    "word": "SEDIMENTARY",
-    "definition": "Sedimentary — formed from deposited particles that have been compacted or cemented together.",
+    "id": "freight",
+    "word": "FREIGHT",
+    "definition": "FREIGHT \u2014 goods carried by boat, train, truck, or other transport.",
     "guessability": "medium",
-    "editorialStatus": "draft"
+    "editorialStatus": "draft",
+    "conceptFamily": "freight"
+  },
+  {
+    "id": "deposit",
+    "word": "DEPOSIT",
+    "definition": "DEPOSIT \u2014 to leave or lay down material moved by water or wind.",
+    "guessability": "medium",
+    "editorialStatus": "draft",
+    "conceptFamily": "deposit"
+  },
+  {
+    "id": "dredge",
+    "word": "DREDGE",
+    "definition": "DREDGE \u2014 to remove mud or sand from the bottom of a waterway.",
+    "guessability": "medium",
+    "editorialStatus": "draft",
+    "conceptFamily": "dredge"
+  },
+  {
+    "id": "brackish",
+    "word": "BRACKISH",
+    "definition": "BRACKISH \u2014 having a mixture of saltwater and freshwater.",
+    "guessability": "medium",
+    "editorialStatus": "draft",
+    "conceptFamily": "brackish"
   }
 ];
