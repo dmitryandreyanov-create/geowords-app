@@ -15,6 +15,30 @@
  function matchesRegion(anchor,region){
    return (anchor.regions||[]).includes(region)||(anchor.sitsIn||[]).includes(region);
  }
+ // Use the same arrow shaft geometry as the map renderer. Guard against
+ // a callout passing through another letter's touch target at 300 CSS px.
+ const ARROW_MARKER_CLEARANCE=14;
+ function arrowSegment(anchor){
+   if(!anchor.pointsTo)return null;
+   const end=anchor.pointsTo;
+   const from=end.from||{x:anchor.x+(end.x-anchor.x)*.25,y:anchor.y+(end.y-anchor.y)*.25};
+   return [from,end];
+ }
+ function pointSegmentDistance(point,a,b){
+   const px=point.x*MIN_MAP_WIDTH/100,py=point.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
+   const ax=a.x*MIN_MAP_WIDTH/100,ay=a.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
+   const bx=b.x*MIN_MAP_WIDTH/100,by=b.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
+   const dx=bx-ax,dy=by-ay;
+   const t=dx*dx+dy*dy?Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/(dx*dx+dy*dy))):0;
+   return Math.hypot(px-(ax+t*dx),py-(ay+t*dy));
+ }
+ function arrowIntersectsMarker(arrowOwner,marker){
+   const segment=arrowSegment(arrowOwner);
+   return !!segment&&pointSegmentDistance(marker,segment[0],segment[1])<ARROW_MARKER_CLEARANCE;
+ }
+ function arrowsClear(selected){
+   return selected.every(a=>selected.every(b=>a===b||!arrowIntersectsMarker(a,b)));
+ }
  function eligibleCues(anchor,selected){
    return (anchor.cues||[]).filter(cue=>selected.filter(other=>matchesRegion(other,cue[1])).length===1);
  }
@@ -22,7 +46,7 @@
  function add(selected,anchor){
    if(!anchor||!Number.isFinite(anchor.x)||!Number.isFinite(anchor.y)||anchor.x<0||anchor.x>100||anchor.y<0||anchor.y>100)return false;
    if(selected.some(other=>other.id===anchor.id||distance(other,anchor)<MIN_SEPARATION))return false;
-   if(!resolvable([...selected,anchor]))return false;
+   if(!resolvable([...selected,anchor])||!arrowsClear([...selected,anchor]))return false;
    selected.push(anchor);return true;
  }
  function generate(course,entry,stepIndex,variant,review,progress){
@@ -84,7 +108,8 @@
      if(!Number.isFinite(marker.x)||!Number.isFinite(marker.y)||marker.x<0||marker.x>100||marker.y<0||marker.y>100)return false;
      for(let j=i+1;j<selected.length;j++)if(distance(selected[i],selected[j])<MIN_SEPARATION)return false;
    }
+   if(!arrowsClear(selected))return false;
    return true;
  }
- return {generate,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION,matchesRegion};
+ return {generate,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION,matchesRegion,arrowIntersectsMarker,arrowsClear};
 });
