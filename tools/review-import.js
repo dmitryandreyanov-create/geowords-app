@@ -117,7 +117,7 @@ function exportReview(){
      if(id&&clue.candidateMarkerIds.length>1)decisions[p.id][clue.position]=id;
    }
  }
- return {schemaVersion:1,source:'GeoWords-author-map-review',status:'human_review_pending',books:['l1','l2'],decisions};
+ return {version:1,generatedFrom:'author map review',sourceQuizCount:state.puzzles.length,assignments:decisions};
 }
 function save(){
  const payload=exportReview();const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});
@@ -126,10 +126,13 @@ function save(){
  $('message').textContent='JSON экспортирован. Импортируйте его позже, чтобы продолжить, или передайте для внесения в GitHub.';
 }
 function restore(data){
- if(data?.schemaVersion!==1||data.source!=='GeoWords-author-map-review'||!data.decisions||typeof data.decisions!=='object')throw Error('Неверный формат файла разметки');
+ if(data?.version!==1||data.generatedFrom!=='author map review'||!data.assignments||typeof data.assignments!=='object')throw Error('Неверный формат файла разметки');
+ if(data.sourceQuizCount!==state.puzzles.length)throw Error('Некорректное число исходных заданий');
+ const unexpected=Object.keys(data.assignments).filter(id=>!state.puzzles.some(p=>p.id===id));
+ if(unexpected.length)throw Error('Неизвестные задания: '+unexpected.join(', '));
  const future={};for(const p of state.puzzles){
    const record={};for(const clue of p.clues){if(clue.markerId)record[clue.position]=clue.markerId}
-   const inputs=data.decisions[p.id]||{};
+   const inputs=data.assignments[p.id]||{};
    for(const [position,markerId] of Object.entries(inputs)){
      const clue=p.clues.find(c=>String(c.position)===position);
      if(!clue||!clue.candidateMarkerIds.includes(markerId))throw Error(`Недопустимый выбор ${p.id}:${position} = ${markerId}`);
