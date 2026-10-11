@@ -2,8 +2,9 @@
 const core=window.GEOWORD_CORE,authored=window.GEOWORD_LEVELS||[];
 const levels=core?core.fromAuthored(authored):authored,$=id=>document.getElementById(id);
 const riversCourse=window.GEOWORD_COURSES?.rivers||null;
+const riversAuthored=window.GEOWORD_RIVERS_AUTHORED||[];
 const dictionary=core?core.buildDictionary(levels,window.GEOWORD_DICTIONARY||[]):[];
-const riversKey="geowords_rivers_progress_v1";
+const riversKey="geowords_rivers_progress_v2";
 let playMode="authored",riversProgress=null;
 const screens=["homeScreen","factsScreen","gameScreen","finishScreen"];
 const memoryStore=new Map();
@@ -36,35 +37,52 @@ function clearPendingTimers(){
 function loadRiversProgress(){
   if(!core||!riversCourse)return null;
   let raw=null;
-  try{raw=JSON.parse(safeGet(riversKey)||"null")}catch{}
+  try{
+    raw=JSON.parse(safeGet(riversKey)||safeGet("geowords_rivers_progress_v1")||"null");
+  }catch{}
   return core.normalizeProgress(raw,riversCourse);
 }
 function saveRiversProgress(progress){safeSet(riversKey,JSON.stringify(progress))}
+function currentRiversStep(state){return riversCourse.steps[state.stepIndex]}
+function riversComplete(state){
+  return state.stepIndex===riversCourse.steps.length-1 &&
+    core.stepScore(state,currentRiversStep(state))===riversCourse.target;
+}
 function renderRiversHome(){
   if(!$("riversBtn"))return;
-  if(!core||!riversCourse){
-    $("riversBtn").disabled=true;$("riversProgress").textContent="Practice is unavailable offline.";
+  if(!core||!riversCourse||riversAuthored.length<riversCourse.steps.length){
+    $("riversBtn").disabled=true;
+    $("riversProgress").textContent="Rivers learning content is unavailable.";
     return;
   }
-  const state=loadRiversProgress(),step=state.stepIndex;
-  const count=state.solved[step].length;
-  const done=!core.nextWordId(riversCourse,state);
+  const state=loadRiversProgress(),step=currentRiversStep(state);
+  const done=riversComplete(state);
+  const count=core.stepScore(state,step);
   $("riversProgress").textContent=done
-    ?"All three rivers learned · Keep practicing!"
-    :riversCourse.steps[step].object.label+" · "+count+"/"+riversCourse.target+" words complete";
-  $("riversBtn").textContent=done?"Practice Rivers again":"Explore Rivers";
+    ?"Three original Rivers steps complete · Keep practicing!"
+    :step.object.label+" · "+count+"/7 words (1 authored + 6 practice)";
+  $("riversBtn").textContent=done?"Review Rivers":"Explore Rivers";
 }
-function startGenerated(forceIntro=false){
+function startRivers(forceIntro=false){
   if(!core||!riversCourse)return;
-  playMode="generated";
+  playMode="rivers";
   riversProgress=loadRiversProgress();
-  const finished=!core.nextWordId(riversCourse,riversProgress);
-  const variant=finished?Number(safeGet("geowords_rivers_review_variant")||"0"):0;
-  const next=core.generate(riversCourse,dictionary,riversProgress,variant,finished);
-  if(!next)return;
-  if(finished)safeSet("geowords_rivers_review_variant",String(variant+1));
+  const authoredId=core.nextAuthoredPuzzleId(riversCourse,riversProgress);
+  const finished=riversComplete(riversProgress);
+  let next=null;
+  if(authoredId){
+    next=riversAuthored.find(p=>p.id===authoredId)||null;
+  }else{
+    const variant=finished?Number(safeGet("geowords_rivers_review_variant")||"0"):0;
+    next=core.generate(riversCourse,dictionary,riversProgress,variant,finished);
+    if(finished&&next)safeSet("geowords_rivers_review_variant",String(variant+1));
+  }
+  if(!next){
+    $("riversProgress").textContent="This step is missing an authored puzzle or practice word.";
+    renderHome();show("homeScreen");return;
+  }
   level=next;
-  if(forceIntro||(!finished&&riversProgress.solved[next.stepIndex].length===0)){
+  if(forceIntro||(authoredId&&level.introFacts?.length)){
     prepareLesson();show("factsScreen");
   }else{
     resetGame();show("gameScreen");
@@ -151,8 +169,8 @@ function renderHotspots(){
   const layer=$("markersLayer");layer.innerHTML="";
   level.markers.forEach(m=>{
     const b=document.createElement("button");
-    b.className="marker-hotspot"+(level.source==="generated"?" generated":"")+(solvedMarkerIds.has(m.id)?" done":"");
-    if(level.source==="generated")b.textContent=m.letter;
+    b.className="marker-hotspot"+((level.source==="generated"||level.letterMode==="overlay")?" generated":"")+(solvedMarkerIds.has(m.id)?" done":"");
+    if(level.source==="generated"||level.letterMode==="overlay")b.textContent=m.letter;
     b.style.left=m.x+"%";b.style.top=m.y+"%";
     b.dataset.markerId=m.id;
     b.setAttribute("aria-label","Letter "+m.letter+" — "+readableLocation(m.id));
@@ -202,7 +220,7 @@ function chooseMarker(marker,el){
 }
 function finish(){
   if($("finishScreen").classList.contains("active"))return;
-  if(playMode==="generated"){
+  if(playMode==="rivers"){
     const result=core.markSolved(riversCourse,riversProgress,level);
     riversProgress=result.progress;
     if(result.credited)saveRiversProgress(riversProgress);
@@ -211,17 +229,17 @@ function finish(){
     $("replayBtn").textContent="Play this word again";
     $("homeBtn").textContent="Back to home";
     $("nextBtn").hidden=Boolean(result.advanced);
-    $("nextBtn").textContent=!core.nextWordId(riversCourse,riversProgress)?"Practice another word":"Next geography word";
-    $("nextFactsLabel").textContent=result.advanced?"NEW RIVER UNLOCKED":result.finished?"COURSE COMPLETED":"RIVERS PROGRESS";
-    const count=riversProgress.solved[result.progress.stepIndex].length;
+    $("nextBtn").textContent=riversComplete(riversProgress)?"Practice another word":"Next geography word";
+    $("nextFactsLabel").textContent=result.advanced?"NEXT RIVER UNLOCKED":result.finished?"THREE RIVERS COMPLETE":"RIVERS PROGRESS";
+    const nextObject=riversCourse.steps[riversProgress.stepIndex].object.label;
     const message=result.advanced
-      ?"You solved seven words! Introducing "+riversCourse.steps[result.progress.stepIndex].object.label+"."
-      :result.finished?"All three rivers learned. You can keep practicing as long as you like."
-      :result.credited?count+" of "+riversCourse.target+" words complete at this step."
-      :"Practice complete. This replay does not add to your progress.";
-    renderList("nextFacts",[message]);
+      ?"7/7 words solved! Next: "+nextObject+"."
+      :result.finished?"7/7 words solved! You can repeat practice without adding credit."
+      :result.credited?result.count+" of 7 words solved at this step."
+      :"Replay complete. Your progress stays unchanged.";
+    renderList("nextFacts",[message,...(level.nextFacts||[])]);
     show("finishScreen");
-    if(result.advanced)later(()=>startGenerated(true),1400);
+    if(result.advanced)later(()=>startRivers(true),1400);
     return;
   }
   safeSet(completionKey(level),"1");
@@ -357,12 +375,12 @@ $("zoomIn").addEventListener("click",()=>setScale(scale+.25));
 $("zoomOut").addEventListener("click",()=>setScale(scale-.25));
 $("resetZoom").addEventListener("click",()=>{scale=1;tx=0;ty=0;applyTransform()});
 $("startBtn").addEventListener("click",()=>{playMode="authored";selectLevel(firstIncompleteIndex());show("factsScreen")});
-$("riversBtn")?.addEventListener("click",()=>startGenerated());
+$("riversBtn")?.addEventListener("click",()=>startRivers());
 $("factsContinueBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
 $("backBtn").addEventListener("click",()=>{clearPendingTimers();inputLocked=false;renderHome();show("homeScreen")});
 $("replayBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
 $("nextBtn").addEventListener("click",()=>{
-  if(playMode==="generated"){startGenerated();return}
+  if(playMode==="rivers"){startRivers();return}
   selectLevel(levelIndex+1);show("factsScreen");
 });
 $("homeBtn").addEventListener("click",()=>{renderHome();show("homeScreen")});
