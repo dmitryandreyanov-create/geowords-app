@@ -47,6 +47,15 @@ for(const step of course.steps){
   }
   for(const id of step.wordIds)assert(words.has(id),'unknown dictionary entry '+id);
 }
+const missMiddle=cfg.rivers.mississippi.find(a=>a.id==='mississippi-middle');
+const northAmerica=cfg.base.find(a=>a.id==='north-america');
+assert(semantic.arrowIntersectsMarker(missMiddle,northAmerica),
+  'fixture: Mississippi arrow crosses an existing land marker');
+assert(!semantic.arrowsClear([missMiddle,northAmerica]),
+  'arrow shaft must not cross a selectable neighboring marker');
+const missMouth=cfg.rivers.mississippi.find(a=>a.id==='mississippi-south');
+assert.equal(missMouth.pointsTo.x,18.6,'arrow tip aligned to author map');
+assert.equal(missMouth.pointsTo.y,34.5,'arrow tip aligned to river mouth');
 const baseById=new Map(cfg.base.map(a=>[a.id,a]));
 const riverById=new Map(Object.values(cfg.rivers).flat().map(a=>[a.id,a]));
 assert(semantic.matchesRegion(riverById.get('amazon-west'),'pacific-ocean'));
