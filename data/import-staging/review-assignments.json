@@ -1,7 +1,6 @@
 {
-  "schemaVersion": 1,
-  "source": "GeoWords-author-map-review",
-  "status": "human_review_pending",
-  "books": ["l1", "l2"],
-  "decisions": {}
+  "version": 1,
+  "generatedFrom": "author map review",
+  "sourceQuizCount": 20,
+  "assignments": {}
 }
