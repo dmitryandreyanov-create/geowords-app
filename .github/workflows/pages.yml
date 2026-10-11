@@ -42,6 +42,9 @@ jobs:
       - name: Validate F1-F4 semantic anchors and non-spoiler vocabulary
         run: node scripts/validate-f4.mjs
 
+      - name: Validate staged L1 and L2 original workbook imports
+        run: node scripts/validate-import-staging.mjs
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
