@@ -211,7 +211,7 @@ function finish(){
     $("replayBtn").textContent="Play this word again";
     $("homeBtn").textContent="Back to home";
     $("nextBtn").hidden=Boolean(result.advanced);
-    $("nextBtn").textContent=result.finished?"Practice another word":"Next geography word";
+    $("nextBtn").textContent=!core.nextWordId(riversCourse,riversProgress)?"Practice another word":"Next geography word";
     $("nextFactsLabel").textContent=result.advanced?"NEW RIVER UNLOCKED":result.finished?"COURSE COMPLETED":"RIVERS PROGRESS";
     const count=riversProgress.solved[result.progress.stepIndex].length;
     const message=result.advanced
