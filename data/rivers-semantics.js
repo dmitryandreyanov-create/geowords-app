@@ -59,7 +59,7 @@ window.GEOWORD_RIVERS_SEMANTICS={
   mississippi:[
    {id:'mississippi-north',x:11,y:18,pointsTo:{x:20,y:24},sitsIn:['pacific-ocean','pacific-north'],regions:['north-america','mississippi','mississippi-north'],cues:[['near the northern end of the Mississippi shown on the map','mississippi-north']]},
    {id:'mississippi-middle',x:32,y:18,pointsTo:{x:20,y:31},sitsIn:['atlantic-ocean','atlantic-north'],regions:['north-america','mississippi','mississippi-middle'],cues:[['near the middle section of the Mississippi on the map','mississippi-middle']]},
-   {id:'mississippi-south',x:11,y:42,pointsTo:{x:21,y:36},sitsIn:['pacific-ocean','pacific-central'],regions:['north-america','mississippi','mississippi-south'],cues:[['near the southern end of the Mississippi toward the Gulf of Mexico','mississippi-south']]}
+   {id:'mississippi-south',x:11,y:42,pointsTo:{x:18.6,y:34.5},sitsIn:['pacific-ocean','pacific-central'],regions:['north-america','mississippi','mississippi-south'],cues:[['near the southern end of the Mississippi toward the Gulf of Mexico','mississippi-south']]}
   ]
  }
 };
