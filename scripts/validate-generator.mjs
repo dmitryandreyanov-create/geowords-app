@@ -13,6 +13,14 @@ assert.equal(course.steps.length,3);
 assert.equal(course.target,7);
 assert.equal(new Set(words.map(w=>w.id)).size,words.length);
 assert.equal(new Set(words.map(w=>w.word)).size,words.length);
+vm.runInContext(fs.readFileSync('data/levels.js','utf8'),sandbox,{filename:'data/levels.js'});
+const authored=core.fromAuthored(sandbox.window.GEOWORD_LEVELS);
+const combined=core.buildDictionary(authored,words);
+assert.equal(authored.length,11,'authored Mountains preserved');
+assert.equal(combined.length,authored.length+words.length,'all authored and generated words indexed');
+assert(authored.every(item=>item.source==='authored'));
+assert(authored.every(item=>combined.some(word=>word.word===item.answer&&word.source==='authored')));
+
 const dictionaryIds=new Set(words.map(w=>w.id));
 for(const step of course.steps){
  assert.equal(step.wordIds.length,7);
@@ -23,6 +31,11 @@ let progress=core.newProgress(course);
 for(let i=0;i<21;i++){
  const p=core.generate(course,words,progress);
  assert(p,'puzzle generated');
+ for(let variant=0;variant<20;variant++){
+   const v=core.generate(course,combined,progress,variant);
+   assert.equal(v.answer,p.answer,'variant must retain the same word');
+   assert(v.features.length===progress.stepIndex+1,'new river layers remain cumulative');
+ }
  assert.equal(p.source,'generated');
  assert.equal(p.clues.length,p.answer.length);
  assert.equal(p.markers.length,p.answer.length);
@@ -44,5 +57,11 @@ for(let i=0;i<21;i++){
  assert.equal(progress.solved.reduce((acc,v)=>acc+v.length,0),i+1);
 }
 assert.equal(core.generate(course,words,progress),null);
+for(let variant=0;variant<20;variant++){
+ const review=core.generate(course,combined,progress,variant,true);
+ assert(review.review,'practice replay mode');
+ assert(review.title.includes('Review word'),'no incorrect 8/7 label');
+ assert.equal(core.markSolved(course,progress,review).credited,false,'review cannot increase course progress');
+}
 assert.equal(core.normalizeProgress({version:1,courseId:'rivers',stepIndex:900,solved:[['bogus'],['bogus'],['bogus']]},course).stepIndex,0);
-console.log('Generator PASS: 21 unique words, 3 progressive river layers, repeat protection, marker geometry, save/restore.');
+console.log('Generator PASS: 11 authored + 21 generated words, 3 cumulative river steps, 420 variants, unlimited review, repeat protection, marker geometry.');
