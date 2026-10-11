@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+const model=createRequire(import.meta.url)('../tools/review-model.js');
 
 const root='data/import-staging';
 const files=['l1','l2'];
@@ -12,7 +14,7 @@ for(const book of files){
  }
 }
 const reviewed=JSON.parse(fs.readFileSync(`${root}/review-assignments.json`,'utf8'));
-assert.equal(reviewed.version,1);
+assert([1,2].includes(reviewed.version));
 assert.equal(reviewed.generatedFrom,'author map review');
 assert.equal(reviewed.sourceQuizCount,20);
 const map=reviewed.assignments;
@@ -33,4 +35,6 @@ for(const p of byId.values()){
  assert.equal(new Set(final).size,final.length,`Duplicate marker assignments in ${p.id}`);
 }
 assert(reviewedDecisions<=69);
-console.log(`PASS: ${byId.size} author puzzles, ${reviewedDecisions}/69 ambiguous assignments reviewed; no guesses, duplicate letters, or invalid references.`);
+const state=model.restore([...byId.values()],reviewed);
+const confirmed=model.stats([...byId.values()],state).confirmed;
+console.log(`PASS: ${byId.size} author puzzles, ${reviewedDecisions}/69 ambiguous assignments mapped; ${confirmed}/187 geographic confirmations; no guesses, duplicate letters, or invalid references.`);

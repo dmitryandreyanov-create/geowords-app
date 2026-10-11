@@ -3,7 +3,8 @@
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id);
-const state={books:[],puzzles:[],index:0,selected:0,assignments:{},loaded:false};
+const model=globalThis.GEOWORD_REVIEW;
+const state={books:[],puzzles:[],index:0,selected:0,assignments:{},confirmations:{},loaded:false};
 const root='../';
 const STORAGE_KEY='geowords-import-review-v2';
 let storageWarning=false;
@@ -17,13 +18,7 @@ const normalizeRef=p=>{
   if(typeof p!=='string'||!/^\.\/assets\/import-staging\/[a-z0-9-]+\.webp$/.test(p))throw Error('Unexpected map file path: '+p);
   return root+p.slice(2);
 };
-function initAssignments(){
-  for(const p of state.puzzles){
-    state.assignments[p.id]||={};
-    // Preserve only one-candidate, unambiguous assignments in base data.
-    for(const clue of p.clues)if(clue.markerId)state.assignments[p.id][clue.position]=clue.markerId;
-  }
-}
+function initAssignments(){Object.assign(state,model.create(state.puzzles))}
 function current(){return state.puzzles[state.index]}
 function selectedClue(){return current()?.clues[state.selected]}
 function assignFor(p,clue){return state.assignments[p.id]?.[clue.position]??null}
@@ -35,17 +30,9 @@ function duplicateAssignments(p){
   }
   return duplicates;
 }
-function stats(){
-  let total=0,done=0,reviewed=0;
-  for(const p of state.puzzles){
-    for(const clue of p.clues){total++;
-      if(assignFor(p,clue)){done++;if(clue.candidateMarkerIds.length>1)reviewed++;}
-    }
-  }
-  return {total,done,reviewed};
-}
 function status(){
- const s=stats();$('globalProgress').textContent=`Сопоставлено ${s.done}/${s.total} · проверено повторов ${s.reviewed}/69`;
+ const s=model.stats(state.puzzles,state);
+ $('globalProgress').textContent=`Сопоставлено ${s.done}/${s.total} · повторов ${s.assignedAmbiguous}/${s.ambiguous} · география подтверждена ${s.confirmed}/${s.total}`;
 }
 function renderList(){
  const host=$('puzzleList');host.replaceChildren();
@@ -82,7 +69,7 @@ function renderMap(){
  const usedIds=new Set(p.clues.filter(c=>c!==clue).map(c=>assignFor(p,c)).filter(Boolean));
  for(const marker of p.markers){
    const btn=put(host,el('button','map-button',marker.letter));
-   btn.type='button';btn.style.left=marker.x+'%';btn.style.top=marker.y+'%';
+   btn.type='button';btn.dataset.markerId=marker.id;btn.style.left=marker.x+'%';btn.style.top=marker.y+'%';
    const eligible=clue.candidateMarkerIds.includes(marker.id);
    btn.classList.toggle('eligible',eligible);
    btn.classList.toggle('used',usedIds.has(marker.id));
@@ -94,7 +81,10 @@ function renderMap(){
    btn.addEventListener('click',()=>selectMarker(marker.id));
  }
  const done=p.clues.filter(c=>assignFor(p,c)).length;
- $('puzzleProgress').textContent=`Задание: ${done}/${p.clues.length} привязок`;
+ const confirmed=p.clues.filter(c=>state.confirmations[p.id]?.[c.position]).length;
+ $('puzzleProgress').textContent=`Задание: ${done}/${p.clues.length} привязок · география ${confirmed}/${p.clues.length}`;
+ $('confirmSelected').disabled=!assigned;
+ $('confirmSelected').textContent=state.confirmations[p.id]?.[clue.position]?'География подтверждена ✓':'Подтвердить географию';
  $('puzzleErrors').textContent=duplicates.size?`Конфликт: ${duplicates.size} повторных назначений`:'';
 }
 function renderClues(){
@@ -109,7 +99,7 @@ function renderClues(){
    const info=put(b,el('span'));
    put(info,el('span','text',clue.text));
    const kind=duplicate.has(markerId)?'conflict':markerId?'ok':'unresolved';
-   put(info,el('span','state '+kind,marker?`✓ ${marker.letter} · ${marker.x}% / ${marker.y}%`:`Нужно назначить ${clue.answerLetter} · кандидатов: ${clue.candidateMarkerIds.length}`));
+   put(info,el('span','state '+kind,marker?`${state.confirmations[p.id]?.[clue.position]?'География подтверждена':'Назначено, требуется проверка'} · ${marker.letter} · ${marker.x}% / ${marker.y}%`:`Нужно назначить ${clue.answerLetter} · кандидатов: ${clue.candidateMarkerIds.length}`));
    b.addEventListener('click',()=>{state.selected=i;renderMap();renderClues()});
  }
 }
@@ -120,25 +110,14 @@ function selectMarker(id){
  if(p.clues.some(c=>c!==clue&&assignFor(p,c)===id)){
   $('message').textContent='Эта буква уже назначена другой подсказке.';return;
  }
- state.assignments[p.id][clue.position]=id;
+ model.assign(state,p,clue,id);
  const saved=saveLocal();
  const next=p.clues.findIndex((c,i)=>i!==state.selected&&!assignFor(p,c));
  if(next>=0)state.selected=next;
  render();
  $('message').textContent=saved?'Сохранено автоматически в браузере. Экспортируйте JSON для резервной копии.':'Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
 }
-function exportReview(){
- for(const p of state.puzzles)if(duplicateAssignments(p).size)throw Error(`Повторно назначена буква в ${p.id}`);
- const decisions={};
- for(const p of state.puzzles){
-   decisions[p.id]={};
-   for(const clue of p.clues){
-     const id=assignFor(p,clue);
-     if(id&&clue.candidateMarkerIds.length>1)decisions[p.id][clue.position]=id;
-   }
- }
- return {version:1,generatedFrom:'author map review',sourceQuizCount:state.puzzles.length,assignments:decisions};
-}
+function exportReview(){return model.exportReview(state.puzzles,state)}
 function save(){
  const payload=exportReview();const blob=new Blob([JSON.stringify(payload,null,2)+'\n'],{type:'application/json'});
  const link=document.createElement('a');link.href=URL.createObjectURL(blob);link.download='geowords-l1-l2-reviewed-assignments.json';link.click();
@@ -146,22 +125,10 @@ function save(){
  $('message').textContent='JSON экспортирован. Импортируйте его позже, чтобы продолжить, или передайте для внесения в GitHub.';
 }
 function restore(data){
- if(data?.version!==1||data.generatedFrom!=='author map review'||!data.assignments||typeof data.assignments!=='object')throw Error('Неверный формат файла разметки');
- if(data.sourceQuizCount!==state.puzzles.length)throw Error('Некорректное число исходных заданий');
- const unexpected=Object.keys(data.assignments).filter(id=>!state.puzzles.some(p=>p.id===id));
- if(unexpected.length)throw Error('Неизвестные задания: '+unexpected.join(', '));
- const future={};for(const p of state.puzzles){
-   const record={};for(const clue of p.clues){if(clue.markerId)record[clue.position]=clue.markerId}
-   const inputs=data.assignments[p.id]||{};
-   for(const [position,markerId] of Object.entries(inputs)){
-     const clue=p.clues.find(c=>String(c.position)===position);
-     if(!clue||!clue.candidateMarkerIds.includes(markerId))throw Error(`Недопустимый выбор ${p.id}:${position} = ${markerId}`);
-     record[clue.position]=markerId;
-   }
-   future[p.id]=record;
-   const values=Object.values(record);if(new Set(values).size!==values.length)throw Error(`Одна буква назначена дважды: ${p.id}`);
- }
- state.assignments=future;saveLocal();render();$('message').textContent='Разметка импортирована, проверена и сохранена в браузере.';
+ const future=model.restore(state.puzzles,data);
+ Object.assign(state,future);
+ const saved=saveLocal();render();
+ $('message').textContent=saved?'Разметка импортирована и сохранена. Старый формат не подтверждает географию автоматически.':'Разметка импортирована, но хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
 }
 async function start(){
  try{
@@ -179,12 +146,16 @@ async function start(){
    $('previous').addEventListener('click',()=>{state.index=Math.max(0,state.index-1);state.selected=0;render()});
    $('next').addEventListener('click',()=>{state.index=Math.min(state.puzzles.length-1,state.index+1);state.selected=0;render()});
    $('clearSelected').addEventListener('click',()=>{
-     const p=current(),clue=selectedClue();if(clue.markerId)return;
-     delete state.assignments[p.id][clue.position];saveLocal();render();
+     const p=current(),clue=selectedClue();model.clear(state,p,clue);const saved=saveLocal();render();
+     $('message').textContent=saved?'Выбор или подтверждение сброшены и сохранены.':'Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
+   });
+   $('confirmSelected').addEventListener('click',()=>{
+     try{model.confirm(state,current(),selectedClue());const saved=saveLocal();render();$('message').textContent=saved?'География этой подсказки подтверждена и сохранена.':'Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.'}catch(e){$('message').textContent=e.message}
    });
    $('save').addEventListener('click',()=>{try{save()}catch(e){$('message').textContent=e.message}});
    $('restore').addEventListener('change',async e=>{try{const file=e.target.files?.[0];if(file)restore(JSON.parse(await file.text()))}catch(err){$('message').textContent='Ошибка импорта: '+err.message}e.target.value=''});
    render();state.loaded=true;
+   if(storageWarning)$('message').textContent='Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
  }catch(e){$('appError').classList.remove('hidden');$('appError').textContent='Ошибка загрузки: '+e.message}
 }
 start();

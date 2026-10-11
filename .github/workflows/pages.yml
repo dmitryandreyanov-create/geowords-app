@@ -21,6 +21,18 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node for browser QA
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install browser test dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
       - name: Check JavaScript syntax
         run: |
           node --check app.js
@@ -47,7 +59,9 @@ jobs:
 
       - name: Validate reviewer choices and source mapping compatibility
         run: |
+          node --check tools/review-model.js
           node --check tools/review-import.js
+          node scripts/validate-review-model.mjs
           node scripts/validate-import-review.mjs
 
       - name: Validate mapping CLI with separate staged files
@@ -59,8 +73,11 @@ jobs:
       - name: Validate explicit Pages release manifest
         run: node scripts/build-pages.mjs
 
+      - name: Browser regression at phone width
+        run: npm run test:browser
+
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: validate
     permissions:
       contents: read

@@ -129,7 +129,7 @@ def extract_book(pdf_path,book_id,out_dir):
             candidates=[m['id'] for m in markers if m['letter']==letter]
             x.update({'answerLetter':letter,'candidateMarkerIds':candidates,
                       'markerId':candidates[0] if len(candidates)==1 else None})
-        facts_page=instructions.get_text('text',clip=fitz.Rect(65,390,733,570),sort=True).strip()
+        facts_page=instructions.get_text('text',clip=fitz.Rect(65,390,733,570),sort=True).replace('\u2028','\n').replace('\u2029','\n').strip()
         entries.append({
           'id':f'{book_id}-{i+1:02d}', 'source':'authored',
           'status':'staged_requires_semantic_mapping',
