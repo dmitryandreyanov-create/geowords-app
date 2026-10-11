@@ -61,7 +61,12 @@
       // Migration from unreleased v1 never invents a completed authored puzzle.
       const ids=v2?prev?.solvedWordIds:raw.solved[i];
       if(Array.isArray(ids)){
-        dest.solvedWordIds=[...new Set(ids.filter(id=>typeof id==="string"&&id.length>0))].slice(0,TOTAL-1);
+        const permitted=new Set(practiceIds(step));
+        const aliases=course.wordAliases||{};
+        dest.solvedWordIds=[...new Set(ids
+          .filter(id=>typeof id==="string")
+          .map(id=>aliases[id]||id)
+          .filter(id=>permitted.has(id)))].slice(0,TOTAL-1);
       }
     });
     const next=course.steps.findIndex(step=>stepScore(state,step)<TOTAL);
