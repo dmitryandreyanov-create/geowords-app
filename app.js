@@ -58,9 +58,13 @@ function renderRiversHome(){
   const state=loadRiversProgress(),step=currentRiversStep(state);
   const done=riversComplete(state);
   const count=core.stepScore(state,step);
+  const needsOriginal=!state.steps[step.id].authoredSolved;
+  const nextOriginal=riversAuthored.find(p=>p.id===step.authoredPuzzleId);
   $("riversProgress").textContent=done
-    ?"Three original Rivers steps complete · Keep practicing!"
-    :step.object.label+" · "+count+"/7 words (1 authored + 6 practice)";
+    ?"Three Rivers learning steps complete · Keep practicing!"
+    :needsOriginal
+      ?"Next original: "+(nextOriginal?.answer||"GeoWord")+" · 0/7"
+      :"Practice "+step.object.label+" · "+count+"/7 words";
   $("riversBtn").textContent=done?"Review Rivers":"Explore Rivers";
 }
 function startRivers(forceIntro=false){
