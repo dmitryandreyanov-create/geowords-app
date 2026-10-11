@@ -47,22 +47,19 @@ window.GEOWORD_RIVERS_SEMANTICS={
  ],
  rivers:{
   nile:[
-   {id:'nile-north',x:41,y:36,pointsTo:{x:49,y:37},regions:['africa','nile','nile-north'],cues:[['beside the northern part of the Nile River','nile-north'],['near the Nile River as it approaches the Mediterranean Sea','nile-north']]},
-   {id:'nile-middle',x:56,y:42,pointsTo:{x:49.5,y:42},regions:['africa','nile','nile-middle'],cues:[['beside the middle stretch of the Nile River','nile-middle']]},
-   {id:'nile-south',x:41,y:53,pointsTo:{x:49.5,y:50},regions:['africa','nile','nile-south'],cues:[['beside the southern part of the Nile River','nile-south']]},
-   {id:'nile-valley',x:56,y:59,pointsTo:{x:49.5,y:48},regions:['africa','nile','nile-valley'],cues:[['near the Nile River in northeastern Africa','nile-valley']]}
+   {id:'nile-north',x:41,y:36,pointsTo:{x:49.1,y:37.6},sitsIn:['atlantic-ocean','atlantic-north'],regions:['africa','nile','nile-north'],cues:[['near the Nile delta by the Mediterranean Sea','nile-north']]},
+   {id:'nile-middle',x:56,y:42,pointsTo:{x:49.5,y:43.6},sitsIn:['asia','eurasia'],regions:['africa','nile','nile-middle'],cues:[['beside the middle stretch of the Nile shown on the map','nile-middle']]},
+   {id:'nile-south',x:41,y:59,pointsTo:{x:49.5,y:50},sitsIn:['atlantic-ocean','atlantic-south'],regions:['africa','nile','nile-south'],cues:[['by the southern end of the Nile shown on the map','nile-south']]}
   ],
   amazon:[
-   {id:'amazon-west',x:17,y:48,pointsTo:{x:22,y:55},regions:['south-america','amazon','amazon-west'],cues:[['beside the western part of the Amazon River','amazon-west']]},
-   {id:'amazon-east',x:35,y:45,pointsTo:{x:32,y:56},regions:['south-america','amazon','amazon-east'],cues:[['beside the eastern part of the Amazon River','amazon-east']]},
-   {id:'amazon-middle',x:17,y:65,pointsTo:{x:28,y:55},regions:['south-america','amazon','amazon-middle'],cues:[['near the middle part of the Amazon River','amazon-middle']]},
-   {id:'amazon-mouth',x:38,y:67,pointsTo:{x:37,y:56},regions:['south-america','amazon','amazon-mouth'],cues:[['near the Amazon River as it reaches the Atlantic Ocean','amazon-mouth']]}
+   {id:'amazon-west',x:17,y:48,pointsTo:{x:21.5,y:54.5},sitsIn:['pacific-ocean','pacific-central'],regions:['south-america','amazon','amazon-west'],cues:[['near the western end of the Amazon shown on the map','amazon-west']]},
+   {id:'amazon-middle',x:17,y:65,pointsTo:{x:24.9,y:54.3},sitsIn:['pacific-ocean','pacific-south'],regions:['south-america','amazon','amazon-middle'],cues:[['beside the central section of the Amazon on the map','amazon-middle']]},
+   {id:'amazon-mouth',x:38,y:67,pointsTo:{x:28.15,y:54.0},sitsIn:['atlantic-ocean','atlantic-south'],regions:['south-america','amazon','amazon-mouth'],cues:[['where the Amazon reaches the Atlantic coast','amazon-mouth']]}
   ],
   mississippi:[
-   {id:'mississippi-north',x:11,y:18,pointsTo:{x:20,y:24},regions:['north-america','mississippi','mississippi-north'],cues:[['beside the northern part of the Mississippi River','mississippi-north']]},
-   {id:'mississippi-upper',x:32,y:18,pointsTo:{x:20,y:29},regions:['north-america','mississippi','mississippi-upper'],cues:[['beside the upper part of the Mississippi River','mississippi-upper']]},
-   {id:'mississippi-middle',x:11,y:42,pointsTo:{x:20,y:33},regions:['north-america','mississippi','mississippi-middle'],cues:[['beside the middle part of the Mississippi River','mississippi-middle']]},
-   {id:'mississippi-south',x:32,y:42,pointsTo:{x:21,y:36},regions:['north-america','mississippi','mississippi-south'],cues:[['beside the southern part of the Mississippi River','mississippi-south']]}
+   {id:'mississippi-north',x:11,y:18,pointsTo:{x:20,y:24},sitsIn:['pacific-ocean','pacific-north'],regions:['north-america','mississippi','mississippi-north'],cues:[['near the northern end of the Mississippi shown on the map','mississippi-north']]},
+   {id:'mississippi-middle',x:32,y:18,pointsTo:{x:20,y:31},sitsIn:['atlantic-ocean','atlantic-north'],regions:['north-america','mississippi','mississippi-middle'],cues:[['near the middle section of the Mississippi on the map','mississippi-middle']]},
+   {id:'mississippi-south',x:11,y:42,pointsTo:{x:21,y:36},sitsIn:['pacific-ocean','pacific-central'],regions:['north-america','mississippi','mississippi-south'],cues:[['near the southern end of the Mississippi toward the Gulf of Mexico','mississippi-south']]}
   ]
  }
 };

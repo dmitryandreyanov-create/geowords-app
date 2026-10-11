@@ -31,12 +31,16 @@ jobs:
           node --check data/rivers-semantics.js
           node --check data/rivers-authored.js
           node --check data/courses.js
+          node --check data/authored-answer-index.js
 
       - name: Validate authored levels
         run: node scripts/validate-levels.mjs
 
       - name: Validate generated puzzles and seven-word progression
         run: node scripts/validate-generator.mjs
+
+      - name: Validate F1-F4 semantic anchors and non-spoiler vocabulary
+        run: node scripts/validate-f4.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
