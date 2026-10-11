@@ -29,3 +29,13 @@ python3 -m http.server 8080
 - Файл решения содержит только выбранные пары «позиция подсказки → ID маркера». Это не подтверждение географической семантики и не готовый Curriculum.
 - `node scripts/validate-import-review.mjs` проверяет, что данные не повторяют буквы и не ссылаются на неподходящие символы. Он не может самостоятельно доказать правильность расположения на глобусе.
 - До полного утверждения держи `status: human_review_pending` и не подключай `data/import-staging` в `index.html`.
+
+## Применение экспортированного JSON
+
+Экспорт совместим с `tools/apply_author_mapping.py`: данные лежат в `assignments`, а заранее однозначные соответствия берутся из исходного staging. После проверки всех 69 случаев объединённый файл импорта можно получить заново через `tools/import_workbooks.py`, после чего выполнить:
+
+```sh
+python3 tools/apply_author_mapping.py --staging /tmp/geowords-import/import-staging.json --review geowords-l1-l2-reviewed-assignments.json --out /tmp/geowords-import/mapped.json --require-complete
+```
+
+Пока не проверены все 69 назначений, эта команда должна завершаться ошибкой. Экспорт сам по себе не разрешает публикацию.
