@@ -1,41 +1,34 @@
-# GeoWords PR #8 — F1–F4 handoff (11 October 2026)
+# F1–F4 и импорт L1/L2 — актуальный handoff
 
-The author-approved learning rule remains **1 original + 6 generated = 7 solved words per step**, followed by automatic progression. The existing 11 Mountains puzzles and `main` are unchanged.
+> Обновлено после CI на коммите `4494186`. Предыдущая запись о двух недостающих файлах устарела: оба файла давно загружены Claude.
 
-## Current GitHub state
+## Что проверено
 
-Completed on PR branch:
-- `engine/semantic.js`: physical letter location (`sitsIn`) can affect cue uniqueness via `matchesRegion()`.
-- `data/dictionary.js`: 18 non-spoiler draft practice words.
-- `data/courses.js`: each of the first three Rivers steps uses six different practice words.
-- `scripts/validate-f4.mjs`: standalone verification script.
+- Ветка `gpt/unified-geowords-engine`, PR #8, без merge в `main`.
+- Все исправления F1–F4 загружены: `sitsIn`, географические якоря, исправленные стрелки, 62 авторских ответа в индексе и 18 неповторяющихся тренировочных слов.
+- CI `scripts/validate-f4.mjs` проверяет 30 006 вариантов. `scripts/validate-generator.mjs` проверяет 1 авторский + 6 сгенерированных, автопереход после 7/7, защиту прогресса и существующие Mountains.
+- Дополнительно добавлена проверка пересечения стержня стрелки с **соседней выбранной буквой** в `engine/semantic.js`, включая регрессию в `validate-f4.mjs`.
+- Стрелка `mississippi-south` уточнена по исходной карте: `pointsTo:{x:18.6,y:34.5}`.
+- Все 20 исходных заданий L1 (10) и L2 (10) извлечены программно в **staging**: 187 букв, 187 подсказок, 10 уникальных авторских карт. Оригинальные PDF в GitHub не загружены.
+- CI дополнительно проверяет структурную целостность этих 20 заданий и наличие файлов карт.
 
-**Still to be uploaded from the F1–F4 review archive:**
-- `data/rivers-semantics.js`: three distinct river markers per step, `sitsIn` data and arrow corrections.
-- `data/authored-answer-index.js`: 62 original author answers used to prevent spoilers.
+## Почему импорт пока staging, а не детский каталог
 
-The complete and locally validated files are in **GeoWords_PR8_F1-F4_Fixes_Review.zip**, along with a single-line `apply_f4_patch.py` workflow.
+Остаётся **69 случаев повторяющихся букв**, где требуется проверить, какой географической подсказке соответствует конкретная буква на карте. Автоматически угадывать нельзя. Не включены все векторные стрелки исходных L1/L2 и полная последовательность открываемых фактов.
 
-The full F1–F4 verification was run locally with the complete archive:
-`node scripts/validate-f4.mjs` → **PASS, 30,006 generated variants**.
+Для работы автора добавлены:
 
-GitHub CI currently remains green on its original workflow, **but that is NOT a validation of the complete F1–F4 patch** while the two data files are missing. Do not merge this PR until those files are uploaded and `node scripts/validate-f4.mjs` is added to PR CI.
+- `tools/author-map-review.html` — отдельный экран с авторской картой, подсказками, выбором нужной буквы и экспортом JSON-разметки.
+- `tools/apply_author_mapping.py` — применяет экспорт и проверяет буквы, уникальность назначений и полноту.
+- `tools/import_workbooks.py` — воспроизводит технический импорт из оригинальных PDF.
+- `docs/IMPORT_L1_L2.md` — подробная инструкция на русском.
 
-## Once files are uploaded
+## Оставшиеся ворота перед merge
 
-Run from repository root:
+1. Автор подтверждает неоднозначные назначения и смысл географических подсказок; импортёр не заменяет эту проверку.
+2. Импортированы оригинальные векторные стрелки и факты со стадиями `learnBefore`/`unlockAfter` в Curriculum.
+3. Формируется глобальный Curriculum с `knownFacts`/`knownPlaces` и последовательным обучением L1 → L2 → Mountains.
+4. Claude проводит повторное браузерное/визуальное ревью **последнего** коммита, особенно стрелок, перетаскивания карты, узких экранов и сценария 7/7.
+5. Автор утверждает 18 тренировочных слов и новые дескрипторы; затем проверка на реальном iPhone.
 
-```sh
-node --check engine/semantic.js && node --check data/rivers-semantics.js && node --check data/dictionary.js && node --check data/courses.js && node scripts/validate-f4.mjs && node scripts/validate-generator.mjs && node scripts/validate-levels.mjs
-```
-
-Add to the `validate` job of `.github/workflows/pages.yml`:
-
-```yaml
-      - name: Validate F1-F4 semantic and vocabulary invariants
-        run: node scripts/validate-f4.mjs
-```
-
-Then request Claude headless Chromium review of 320/360px map markers and arrows, semantic disambiguation, 1+6 progression, offline cache and Mountains regression. Approval of the vocabulary and descriptions by the author remains a separate requirement. The global L1→L2 curriculum is not implemented yet.
-
-Do not merge without new review.
+Не мержить PR #8 в `main` только на основании зелёного CI.
