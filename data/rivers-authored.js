@@ -1,4 +1,5 @@
-// Imported from original Level 2 Rivers PDF, puzzles 1–3; source PDF has letters in a separate text layer.
+// First three original Level 2 Rivers puzzles, extracted from the PDF without redrawing its maps.
+// Intro facts are introduced after each preceding authored puzzle, exactly as in the workbook.
 window.GEOWORD_RIVERS_AUTHORED = [
   {
     "id": "rivers-authored-01",
@@ -109,7 +110,12 @@ window.GEOWORD_RIVERS_AUTHORED = [
     "map": "./assets/rivers-authored-2.webp",
     "mapAspect": "1587 / 1057",
     "letterMode": "overlay",
-    "introFacts": [],
+    "introFacts": [
+      "The Nile is the longest river in the world (some measurements suggest the Amazon may be longer).",
+      "The Nile flows through Africa.",
+      "The Nile flows into the Mediterranean Sea.",
+      "The Mediterranean Sea is between Europe, Africa, and Asia."
+    ],
     "markers": [
       {
         "id": "australia",
@@ -234,7 +240,11 @@ window.GEOWORD_RIVERS_AUTHORED = [
     "map": "./assets/rivers-authored-3.webp",
     "mapAspect": "1587 / 1057",
     "letterMode": "overlay",
-    "introFacts": [],
+    "introFacts": [
+      "The Amazon River carries more water than any other river in the world.",
+      "The Amazon River flows through South America.",
+      "The Amazon River flows into the Atlantic Ocean."
+    ],
     "markers": [
       {
         "id": "nile-river",
