@@ -94,7 +94,8 @@
       r.authoredSolved=true;
     }else if(puzzle.source==="generated"){
       if(!r.authoredSolved||puzzle.stepIndex!==stepIndex||
-         puzzle.dictionaryId!==nextWordId(course,state)||
+         !practiceIds(step).includes(puzzle.dictionaryId)||
+         r.solvedWordIds.length>=TOTAL-1||
          r.solvedWordIds.includes(puzzle.dictionaryId))return invalid;
       r.solvedWordIds.push(puzzle.dictionaryId);
     }else return invalid;
@@ -113,6 +114,21 @@
       wordId=available[Math.abs(variant)%available.length];
     }
     if(!wordId)return null;
+    if(course.semantic){
+      if(!review&&!nextWordId(course,state))return null;
+      const backend=(typeof module!=="undefined"&&module.exports)
+        ?require("./semantic.js"):globalThis.GEOWORD_SEMANTIC;
+      if(!backend||typeof backend.generate!=="function")throw new Error("Semantic generator unavailable");
+      const step=course.steps[stepIndex],completed=new Set(state.steps[step.id].solvedWordIds);
+      const candidates=review?practiceIds(step):practiceIds(step).filter(id=>!completed.has(id));
+      for(const id of shuffle(candidates,course.id+":"+step.id+":"+variant+":"+completed.size)){
+        const entry=lexicon.find(item=>item.id===id);
+        if(!entry)continue;
+        const puzzle=backend.generate(course,entry,stepIndex,variant,review,state);
+        if(puzzle)return puzzle;
+      }
+      return null;
+    }
     const entry=lexicon.find(item=>item.id===wordId);
     if(!entry||typeof entry.word!=="string"||!/^[A-Z]+$/.test(entry.word)||!entry.definition)
       throw new Error("Missing reviewed dictionary entry: "+wordId);
