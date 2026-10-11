@@ -12,7 +12,7 @@ window.GEOWORD_COURSES={
     object:{id:"nile",label:"Nile River"}},
    {id:"amazon",authoredPuzzleId:"rivers-authored-02",
     practiceMap:"./assets/rivers-authored-3.webp",
-    wordIds:["humidity","biodiversity","alluvial","ecology","tropical","inundation"],
+    wordIds:["humidity","evaporation","alluvial","ecology","tropical","inundation"],
     object:{id:"amazon",label:"Amazon River"}},
    {id:"mississippi",authoredPuzzleId:"rivers-authored-03",
     practiceMap:"./assets/rivers-practice-step-3.webp",
