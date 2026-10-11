@@ -25,9 +25,15 @@ jobs:
         run: |
           node --check app.js
           node --check sw.js
+          node --check engine/geowords.js
+          node --check data/dictionary.js
+          node --check data/courses.js
 
-      - name: Validate level data
+      - name: Validate authored levels
         run: node scripts/validate-levels.mjs
+
+      - name: Validate generated puzzles and seven-word progression
+        run: node scripts/validate-generator.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
