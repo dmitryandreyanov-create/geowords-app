@@ -136,7 +136,7 @@ function resetGame(){
   $("mapImage").src=level.map;
   $("mapImage").alt=level.title+" map";
   $("mapViewport").style.setProperty("--map-aspect",level.mapAspect||"14 / 9");
-  renderFeatures();renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
+  renderFeatures();renderMarkerArrows();renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
 }
 function readableLocation(id){
   return id.split("-").map(part=>part.charAt(0).toUpperCase()+part.slice(1)).join(" ");
@@ -163,6 +163,38 @@ function renderFeatures(){
     label.textContent=feature.label;
     label.style.left=point.x+"%";label.style.top=point.y+"%";
     labels.appendChild(label);
+  }
+}
+function renderMarkerArrows(){
+  const svg=$("markerArrows");
+  if(!svg)return;
+  svg.replaceChildren();
+  for(const marker of level.markers||[]){
+    if(!marker.pointsTo)continue;
+    const end=marker.pointsTo;
+    const from=end.from||{
+      x:marker.x+(end.x-marker.x)*0.25,
+      y:marker.y+(end.y-marker.y)*0.25
+    };
+    const dx=end.x-from.x,dy=end.y-from.y;
+    const dist=Math.hypot(dx*1.5,dy);
+    if(!Number.isFinite(dist)||dist<0.1)continue;
+    const ns="http://www.w3.org/2000/svg";
+    const line=document.createElementNS(ns,"line");
+    line.setAttribute("x1",from.x);line.setAttribute("y1",from.y);
+    line.setAttribute("x2",end.x);line.setAttribute("y2",end.y);
+    svg.appendChild(line);
+    const angle=Math.atan2(dy,dx*1.5);
+    const ux=Math.cos(angle)*1.0/1.5,uy=Math.sin(angle)*1.0;
+    const vx=-uy*.62/1.5,vy=ux*.62*1.5;
+    const pts=[
+      [end.x,end.y],
+      [end.x-ux+vx,end.y-uy+vy],
+      [end.x-ux-vx,end.y-uy-vy]
+    ];
+    const tip=document.createElementNS(ns,"polygon");
+    tip.setAttribute("points",pts.map(pair=>pair.map(v=>v.toFixed(2)).join(",")).join(" "));
+    svg.appendChild(tip);
   }
 }
 function renderHotspots(){
