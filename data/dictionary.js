@@ -157,9 +157,9 @@ window.GEOWORD_DICTIONARY=[
     "editorialStatus": "draft"
   },
   {
-    "id": "biodiversity",
-    "word": "BIODIVERSITY",
-    "definition": "Biodiversity — the variety of living organisms in an area.",
+    "id": "evaporation",
+    "word": "EVAPORATION",
+    "definition": "Evaporation — the process by which liquid water changes into water vapor.",
     "guessability": "medium",
     "editorialStatus": "draft"
   },
