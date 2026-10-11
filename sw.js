@@ -1,10 +1,14 @@
-const CACHE="geowords-v0.3.2";
+const CACHE="geowords-v0.4.0";
 const CORE=[
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./data/levels.js",
+  "./data/dictionary.js",
+  "./data/courses.js",
+  "./engine/geowords.js",
+  "./assets/world-rivers-base.svg",
   "./manifest.webmanifest",
   "./assets/icon-180.png",
   "./assets/icon-192.png",
