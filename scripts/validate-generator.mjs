@@ -43,7 +43,13 @@ for(let i=0;i<course.steps.length;i++){
     assert(Number.isFinite(m.x)&&m.x>=0&&m.x<=100);
     assert(Number.isFinite(m.y)&&m.y>=0&&m.y<=100);
   }
-  for(const id of step.wordIds)assert(practice.some(p=>p.id===id),'practice word missing: '+id);
+  const generatedAnswers=step.wordIds.map(id=>{
+    const entry=practice.find(p=>p.id===id);
+    assert(entry,'practice word missing: '+id);
+    return entry.word;
+  });
+  assert.equal(new Set([original.answer,...generatedAnswers]).size,7,
+    'author + 6 generated words must all be different at every step');
 }
 assert.deepEqual(Array.from(authors,p=>p.answer),['CHANNEL','FLOODPLAIN','RAINFOREST']);
 
