@@ -1,4 +1,4 @@
-/* Human-reviewed spelling and definitions. Authored Mountains words are sourced
+/* Curated draft spelling and definitions pending author review. Authored Mountains words are sourced
    directly from data/levels.js, so there is no duplicate editable copy. */
 window.GEOWORD_DICTIONARY=[
   {id:"river",word:"RIVER",definition:"River — a natural flow of water moving through a channel."},
