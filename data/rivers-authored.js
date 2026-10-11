@@ -1,5 +1,4 @@
-// First three original Level 2 Rivers puzzles, extracted from the PDF without redrawing its maps.
-// Intro facts are introduced after each preceding authored puzzle, exactly as in the workbook.
+/* Original PDF glyphs + map arrows from the vector drawing layer. */
 window.GEOWORD_RIVERS_AUTHORED = [
   {
     "id": "rivers-authored-01",
@@ -145,7 +144,15 @@ window.GEOWORD_RIVERS_AUTHORED = [
         "id": "nile-river",
         "x": 41.82,
         "y": 48.4,
-        "letter": "D"
+        "letter": "D",
+        "pointsTo": {
+          "x": 48.67,
+          "y": 46.58,
+          "from": {
+            "x": 45.6,
+            "y": 47.9
+          }
+        }
       },
       {
         "id": "north-america",
@@ -163,7 +170,15 @@ window.GEOWORD_RIVERS_AUTHORED = [
         "id": "mediterranean-sea",
         "x": 52.37,
         "y": 21.61,
-        "letter": "A"
+        "letter": "A",
+        "pointsTo": {
+          "x": 49.58,
+          "y": 31.77,
+          "from": {
+            "x": 50.83,
+            "y": 27.36
+          }
+        }
       },
       {
         "id": "atlantic-ocean",
@@ -250,19 +265,43 @@ window.GEOWORD_RIVERS_AUTHORED = [
         "id": "nile-river",
         "x": 42.87,
         "y": 44.81,
-        "letter": "R"
+        "letter": "R",
+        "pointsTo": {
+          "x": 49.49,
+          "y": 42.73,
+          "from": {
+            "x": 46.42,
+            "y": 44.05
+          }
+        }
       },
       {
         "id": "amazon-river",
         "x": 27.31,
         "y": 67.1,
-        "letter": "A"
+        "letter": "A",
+        "pointsTo": {
+          "x": 25.47,
+          "y": 57.57,
+          "from": {
+            "x": 26.31,
+            "y": 62.2
+          }
+        }
       },
       {
         "id": "mediterranean-sea",
         "x": 51.08,
         "y": 22.02,
-        "letter": "I"
+        "letter": "I",
+        "pointsTo": {
+          "x": 48.24,
+          "y": 32.11,
+          "from": {
+            "x": 49.59,
+            "y": 27.77
+          }
+        }
       },
       {
         "id": "greenland",
