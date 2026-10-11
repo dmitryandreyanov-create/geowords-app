@@ -32,6 +32,13 @@
           <button id="startBtn" class="primary">Start Puzzle 1</button>
           <div id="homeProgress" class="home-progress"></div>
         </div>
+        <div class="hero-card rivers-hero">
+          <p class="eyebrow">NEW · GENERATIVE PRACTICE</p>
+          <h2>Rivers of the World</h2>
+          <p>One new river at a time. Solve 7 geography words to unlock the next river.</p>
+          <button id="riversBtn" class="primary">Explore Rivers</button>
+          <div id="riversProgress" class="home-progress">Nile River · 0/7 words complete</div>
+        </div>
         <div class="how-card">
           <div><span>1</span><p>Learn the facts you will need</p></div>
           <div><span>2</span><p>Read each clue and tap the correct letter</p></div>
@@ -73,6 +80,8 @@
           <div id="mapViewport" class="map-viewport" aria-label="Interactive map">
             <div id="mapCanvas" class="map-canvas">
               <img id="mapImage" src="./assets/mountains-puzzle-1.webp" alt="GeoWords Mountains puzzle map" draggable="false" />
+              <svg id="geoFeatures" class="geo-features" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+              <div id="geoLabels" class="geo-labels" aria-hidden="true"></div>
               <div id="markersLayer" class="markers-layer"></div>
             </div>
           </div>
@@ -104,6 +113,9 @@
   </div>
 
   <script src="./data/levels.js"></script>
+  <script src="./data/dictionary.js"></script>
+  <script src="./data/courses.js"></script>
+  <script src="./engine/geowords.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
