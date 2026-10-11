@@ -9,8 +9,14 @@
  const ORDINALS=['first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth'];
  const MIN_MAP_WIDTH=300, MAP_ASPECT=1057/1587, MIN_SEPARATION=29;
  function distance(a,b){return Math.hypot((a.x-b.x)*MIN_MAP_WIDTH/100,(a.y-b.y)*MIN_MAP_WIDTH*MAP_ASPECT/100)}
+ // Regions denote the geographic object reached by an arrow; sitsIn records
+ // where the *letter* physically lies. An ocean clue must not also describe
+ // a river letter drawn in that ocean, even if the river target is on land.
+ function matchesRegion(anchor,region){
+   return (anchor.regions||[]).includes(region)||(anchor.sitsIn||[]).includes(region);
+ }
  function eligibleCues(anchor,selected){
-   return (anchor.cues||[]).filter(cue=>selected.filter(other=>other.regions.includes(cue[1])).length===1);
+   return (anchor.cues||[]).filter(cue=>selected.filter(other=>matchesRegion(other,cue[1])).length===1);
  }
  function resolvable(selected){return selected.every(a=>eligibleCues(a,selected).length>0)}
  function add(selected,anchor){
@@ -25,7 +31,7 @@
    const newAnchors=cfg.rivers[step.id]||[];
    const previous=course.steps.slice(0,stepIndex).map(p=>cfg.rivers[p.id]||[]);
    const quota=Math.min(newAnchors.length,Math.max(1,Math.round(word.length*.43)));
-   if(quota/word.length<.35)return null; // never under-train the newest feature
+   if(quota/word.length<.35)return null; // minimum 35% markers on new object
    const minCount=quota+previous.length;
    if(minCount>word.length)return null; // skip short word, never create undefined letters
    const seed=step.id+':'+entry.id+':'+variant;
@@ -74,11 +80,11 @@
    for(let i=0;i<puzzle.clues.length;i++){
      const cue=puzzle.clues[i],marker=puzzle.markers[i];
      if(cue.position!==i+1||cue.markerId!==marker.id||marker.letter!==puzzle.answer[i])return false;
-     if(selected.filter(a=>a.regions.includes(cue.resolvesTo)).length!==1)return false;
+     if(selected.filter(a=>matchesRegion(a,cue.resolvesTo)).length!==1)return false;
      if(!Number.isFinite(marker.x)||!Number.isFinite(marker.y)||marker.x<0||marker.x>100||marker.y<0||marker.y>100)return false;
      for(let j=i+1;j<selected.length;j++)if(distance(selected[i],selected[j])<MIN_SEPARATION)return false;
    }
    return true;
  }
- return {generate,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION};
+ return {generate,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION,matchesRegion};
 });
