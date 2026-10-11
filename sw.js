@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.4.0";
+const CACHE="geowords-v0.4.1";
 const CORE=[
   "./",
   "./index.html",
@@ -7,6 +7,10 @@ const CORE=[
   "./data/levels.js",
   "./data/dictionary.js",
   "./data/courses.js",
+  "./data/rivers-authored.js",
+  "./assets/rivers-authored-1.webp",
+  "./assets/rivers-authored-2.webp",
+  "./assets/rivers-authored-3.webp",
   "./engine/geowords.js",
   "./assets/world-rivers-base.svg",
   "./manifest.webmanifest",
