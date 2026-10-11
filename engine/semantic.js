@@ -25,6 +25,7 @@
    const newAnchors=cfg.rivers[step.id]||[];
    const previous=course.steps.slice(0,stepIndex).map(p=>cfg.rivers[p.id]||[]);
    const quota=Math.min(newAnchors.length,Math.max(1,Math.round(word.length*.43)));
+   if(quota/word.length<.35)return null; // never under-train the newest feature
    const minCount=quota+previous.length;
    if(minCount>word.length)return null; // skip short word, never create undefined letters
    const seed=step.id+':'+entry.id+':'+variant;
