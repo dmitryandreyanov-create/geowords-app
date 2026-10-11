@@ -50,8 +50,14 @@ jobs:
           node --check tools/review-import.js
           node scripts/validate-import-review.mjs
 
+      - name: Validate mapping CLI with separate staged files
+        run: node scripts/validate-author-mapping.mjs
+
       - name: Check workbook importer and mapping scripts
-        run: python3 -m py_compile tools/import_workbooks.py tools/apply_author_mapping.py
+        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py']]"
+
+      - name: Validate explicit Pages release manifest
+        run: node scripts/build-pages.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
@@ -67,13 +73,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build allowlisted Pages site
+        run: node scripts/build-pages.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
