@@ -45,7 +45,7 @@ for(let i=0;i<course.steps.length;i++){
   }
   for(const id of step.wordIds)assert(practice.some(p=>p.id===id),'practice word missing: '+id);
 }
-assert.deepEqual(authors.map(p=>p.answer),['CHANNEL','FLOODPLAIN','RAINFOREST']);
+assert.deepEqual(Array.from(authors,p=>p.answer),['CHANNEL','FLOODPLAIN','RAINFOREST']);
 
 let progress=core.newProgress(course);
 assert.equal(progress.schemaVersion,2);
