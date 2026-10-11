@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import assert from 'node:assert/strict';
 const root='data/import-staging';
 const all=[];
+const cleanMaps=new Set();
 for(const book of ['l1','l2']){
   const file=`${root}/${book}-staging.json`;
   const d=JSON.parse(fs.readFileSync(file,'utf8'));
@@ -9,6 +10,9 @@ for(const book of ['l1','l2']){
   assert.equal(d.puzzles.length,10);
   for(const p of d.puzzles){
     assert(p.id.startsWith(book+'-'));
+    const mapPath=p.map.replace(/^\.\//,'');
+    assert(fs.existsSync(mapPath),'missing original clean map: '+mapPath);
+    cleanMaps.add(mapPath);
     assert.equal(p.markers.length,p.answer.length);
     assert.equal(p.clues.length,p.answer.length);
     assert.deepEqual(p.clues.map(c=>c.position),Array.from({length:p.answer.length},(_,i)=>i+1));
@@ -30,4 +34,5 @@ const unresolved=all.reduce((n,p)=>n+p.clues.filter(c=>c.markerId===null).length
 assert.equal(all.length,20);
 assert.equal(all.reduce((n,p)=>n+p.markers.length,0),187);
 assert.equal(unresolved,69);
+assert.equal(cleanMaps.size,10,'ten unique author maps imported');
 console.log(`PASS: ${all.length} staged author puzzles, 187 exact letters/clues, ${unresolved} repeated-letter candidates require editorial matching.`);
