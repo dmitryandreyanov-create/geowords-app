@@ -5,6 +5,12 @@
 const $=id=>document.getElementById(id);
 const state={books:[],puzzles:[],index:0,selected:0,assignments:{},loaded:false};
 const root='../';
+const STORAGE_KEY='geowords-import-review-v2';
+let storageWarning=false;
+function saveLocal(){
+  try{localStorage.setItem(STORAGE_KEY,JSON.stringify(exportReview()));storageWarning=false;return true}
+  catch{storageWarning=true;return false}
+}
 const el=(tag,cls,text)=>{const node=document.createElement(tag);if(cls)node.className=cls;if(text!==undefined)node.textContent=text;return node};
 const put=(parent,child)=>{parent.appendChild(child);return child};
 const normalizeRef=p=>{
@@ -59,6 +65,19 @@ function renderMap(){
  $('puzzleTitle').textContent=`${p.id.toUpperCase()} · ${p.answer}`;
  $('mapSource').textContent=`Источник: ${p.provenance.source} · карта PDF стр. ${p.provenance.mapPdfPage} · подсказки стр. ${p.provenance.cluesPdfPage}`;
  $('facts').textContent=p.factsExtract||'Нет извлечённого текста фактов';
+ const arrows=$('mapArrows');arrows.replaceChildren();
+ for(const marker of p.markers){
+   const target=marker.pointsTo;if(!target)continue;
+   const from=target.from||{x:marker.x,y:marker.y};
+   const line=document.createElementNS('http://www.w3.org/2000/svg','line');
+   for(const [key,value] of Object.entries({x1:from.x,y1:from.y,x2:target.x,y2:target.y}))line.setAttribute(key,String(value));
+   arrows.appendChild(line);
+   const dx=target.x-from.x,dy=target.y-from.y,len=Math.hypot(dx,dy)||1;
+   const x=dx/len,y=dy/len;
+   const pts=[[target.x,target.y],[target.x-1.2*x-.55*y,target.y-1.2*y+.55*x],[target.x-1.2*x+.55*y,target.y-1.2*y-.55*x]];
+   const head=document.createElementNS('http://www.w3.org/2000/svg','polygon');
+   head.setAttribute('points',pts.map(a=>a.map(v=>v.toFixed(2)).join(',')).join(' '));arrows.appendChild(head);
+ }
  const clue=selectedClue(),assigned=assignFor(p,clue),duplicates=duplicateAssignments(p);
  const usedIds=new Set(p.clues.filter(c=>c!==clue).map(c=>assignFor(p,c)).filter(Boolean));
  for(const marker of p.markers){
@@ -102,10 +121,11 @@ function selectMarker(id){
   $('message').textContent='Эта буква уже назначена другой подсказке.';return;
  }
  state.assignments[p.id][clue.position]=id;
+ const saved=saveLocal();
  const next=p.clues.findIndex((c,i)=>i!==state.selected&&!assignFor(p,c));
  if(next>=0)state.selected=next;
  render();
- $('message').textContent='Сопоставление сохранено в памяти страницы. Экспортируйте JSON перед закрытием.';
+ $('message').textContent=saved?'Сохранено автоматически в браузере. Экспортируйте JSON для резервной копии.':'Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
 }
 function exportReview(){
  for(const p of state.puzzles)if(duplicateAssignments(p).size)throw Error(`Повторно назначена буква в ${p.id}`);
@@ -141,7 +161,7 @@ function restore(data){
    future[p.id]=record;
    const values=Object.values(record);if(new Set(values).size!==values.length)throw Error(`Одна буква назначена дважды: ${p.id}`);
  }
- state.assignments=future;render();$('message').textContent='Разметка импортирована и проверена.';
+ state.assignments=future;saveLocal();render();$('message').textContent='Разметка импортирована, проверена и сохранена в браузере.';
 }
 async function start(){
  try{
@@ -149,13 +169,18 @@ async function start(){
    const data=await Promise.all(urls.map(async url=>{const r=await fetch(url);if(!r.ok)throw Error(`Не удалось открыть ${url} (${r.status})`);return r.json()}));
    for(const d of data){if(d.status!=='not_for_live_use'||d.puzzles.length!==10)throw Error('Неверный статус или количество заданий в импорте')}
    state.books=data;state.puzzles=data.flatMap(d=>d.puzzles);initAssignments();
+   let saved=null;try{saved=localStorage.getItem(STORAGE_KEY)}catch{storageWarning=true}
+   if(saved){
+     try{const choices=JSON.parse(saved);restore(choices)}
+     catch(e){$('message').textContent='Локальные данные несовместимы. Экспортируйте копию перед дальнейшей работой: '+e.message}
+   }
    state.selected=Math.max(0,state.puzzles[0].clues.findIndex(c=>!assignFor(state.puzzles[0],c)));
    $('workspace').hidden=false;
    $('previous').addEventListener('click',()=>{state.index=Math.max(0,state.index-1);state.selected=0;render()});
    $('next').addEventListener('click',()=>{state.index=Math.min(state.puzzles.length-1,state.index+1);state.selected=0;render()});
    $('clearSelected').addEventListener('click',()=>{
      const p=current(),clue=selectedClue();if(clue.markerId)return;
-     delete state.assignments[p.id][clue.position];render();
+     delete state.assignments[p.id][clue.position];saveLocal();render();
    });
    $('save').addEventListener('click',()=>{try{save()}catch(e){$('message').textContent=e.message}});
    $('restore').addEventListener('change',async e=>{try{const file=e.target.files?.[0];if(file)restore(JSON.parse(await file.text()))}catch(err){$('message').textContent='Ошибка импорта: '+err.message}e.target.value=''});
