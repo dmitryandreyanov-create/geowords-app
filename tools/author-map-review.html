@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GeoWords — Source Map Review</title>
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif;color:#193844;background:#f3f7f8}*{box-sizing:border-box}body{margin:0}header{padding:14px 20px;background:#fff;border-bottom:1px solid #c9d4dc}h1{margin:0;font-size:20px}small{color:#55727d}main{max-width:1200px;margin:auto;padding:16px}.toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}.toolbar input,.toolbar select,.toolbar button{padding:10px;border:1px solid #acbec7;border-radius:8px;background:#fff;font-size:14px}.toolbar button{cursor:pointer;background:#176b70;color:#fff;border:0}.toolbar button:disabled{opacity:.5}.layout{display:grid;grid-template-columns:minmax(260px,1fr) minmax(280px,370px);gap:14px}.panel{background:#fff;border:1px solid #cddfe4;border-radius:12px;padding:14px}.map{position:relative;width:100%;aspect-ratio:var(--aspect,1181 / 1024);background:#d5eded;overflow:hidden}.map img{position:absolute;inset:0;width:100%;height:100%;object-fit:fill}.pin{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;width:34px;height:34px;border:2px solid #2b4190;background:#fff8db;border-radius:50%;font-size:15px;font-weight:800;box-shadow:0 1px 3px #0003;cursor:pointer}.pin.candidate{border-color:#bd4f19;background:#fff0c1}.pin.selected{background:#43a66a;color:#fff;border-color:#145d31}.list{max-height:65vh;overflow:auto}.clue{display:block;width:100%;padding:10px;margin:5px 0;text-align:left;border:1px solid #e0e7e9;background:#fafdfd;border-radius:8px;cursor:pointer}.clue.active{border-color:#b95e24;background:#fff8eb}.clue.done{border-left:4px solid #2b965f}.clue span{display:block;color:#57727a;font-size:12px;margin-top:5px}.notice{background:#fff5e8;border-radius:8px;padding:10px;font-size:13px;margin-bottom:10px}.stat{font-weight:650;font-size:14px}.unresolved{color:#a04421}.mapInfo{font-size:13px;margin:10px 0}.hint{font-size:13px;color:#46606c;line-height:1.5}@media(max-width:850px){.layout{grid-template-columns:1fr}.list{max-height:30vh}}
+</style></head>
+<body><header><h1>GeoWords · Проверка авторских карт</h1><small>Отдельный инструмент разметки, не часть детской игры</small></header>
+<main><div class="toolbar"><label>Тетрадь: <select id="book"><option value="l1">L1 — Материки и океаны</option><option value="l2">L2 — Реки</option></select></label><label>Задание: <select id="puzzle"></select></label><button id="export" disabled>Экспортировать привязки JSON</button></div>
+<div class="notice">Выберите ниже исходные файлы <code>l1-staging.json</code> и <code>l2-staging.json</code> (можно оба сразу). Данные обрабатываются только в вашем браузере. <input id="files" type="file" accept=".json" multiple></div>
+<div class="stat" id="status">Ожидаю загрузки JSON</div><div class="layout">
+<section class="panel"><div class="map" id="map"><img id="mapImage" alt="Авторская карта"><div id="pins"></div></div><div class="mapInfo" id="mapInfo"></div><p class="hint">Нажмите подсказку справа и затем соответствующую букву на карте. Красным отмечены буквы, совпадающие по символу; зелёным — выбранная. Сначала проверьте географический смысл, не выбирайте только по букве.</p></section>
+<section class="panel"><h2 style="font-size:17px;margin:0 0 10px">Оригинальные подсказки</h2><div id="clues" class="list"></div></section>
+</div><p class="hint">Экспорт содержит проверенные назначения букв: <code>puzzleId → position → markerId</code>. Инструмент не меняет рабочее приложение. Стрелки, факты и семантические шаги проверяются отдельно.</p></main>
+<script>
+(()=>{
+ const $=id=>document.getElementById(id);
+ let books={},current=null,active=0,answers={};
+ try{answers=JSON.parse(localStorage.getItem('geowords-author-map-review-v1')||'{}')||{}}catch{}
+ const save=()=>{try{localStorage.setItem('geowords-author-map-review-v1',JSON.stringify(answers))}catch{}};
+ const key=p=>p.id;
+ function chosen(p,clue){return answers[key(p)]?.[clue.position]??clue.markerId??null}
+ function unresolvedCount(){return Object.values(books).flatMap(b=>b.puzzles).reduce((n,p)=>n+p.clues.filter(c=>!chosen(p,c)).length,0)}
+ function progress(){const list=Object.values(books).flatMap(b=>b.puzzles);$('status').textContent=`Загружено: ${list.length} заданий · ручная разметка ещё требуется: ${unresolvedCount()} подсказок`; $('export').disabled=!list.length}
+ function choose(index){const b=books[$('book').value];if(!b)return;current=b.puzzles[index];active=0;display()}
+ function display(){const p=current;if(!p)return;
+   $('map').style.setProperty('--aspect',p.mapAspect.replace(' / ',' / '));
+   $('mapImage').src='../'+p.map.replace(/^\.\//,'');
+   $('mapInfo').textContent=p.title+' · ответ '+p.answer+' · '+p.provenance.source+', стр. '+p.provenance.mapPdfPage+'–'+p.provenance.cluesPdfPage;
+   const clue=p.clues[active];$('pins').replaceChildren();
+   for(const marker of p.markers){const btn=document.createElement('button');btn.className='pin'+(clue.candidateMarkerIds.includes(marker.id)?' candidate':'')+(chosen(p,clue)===marker.id?' selected':'');btn.textContent=marker.letter;btn.title=marker.id;btn.style.left=marker.x+'%';btn.style.top=marker.y+'%';btn.addEventListener('click',()=>assign(marker.id));$('pins').append(btn)}
+   $('clues').replaceChildren();
+   p.clues.forEach((c,i)=>{const btn=document.createElement('button');btn.className='clue'+(active===i?' active':'')+(chosen(p,c)?' done':'');const top=document.createElement('strong');top.textContent=c.position+'. '+c.text;btn.append(top);const detail=document.createElement('span');detail.textContent='Нужна '+c.answerLetter+' → '+(chosen(p,c)||'не выбрана')+' ('+c.candidateMarkerIds.length+' кандидатов)';btn.append(detail);btn.addEventListener('click',()=>{active=i;display()});$('clues').append(btn)});
+   progress();
+ }
+ function assign(markerId){const p=current,c=p.clues[active],m=p.markers.find(x=>x.id===markerId);if(!m||m.letter!==c.answerLetter){$('status').textContent='Неверная буква: нужна '+c.answerLetter;return;}answers[key(p)]??={};answers[key(p)][c.position]=markerId;save();if(active<p.clues.length-1)active++;display()}
+ function populate(){const b=books[$('book').value],s=$('puzzle');s.replaceChildren();if(!b){current=null;progress();return}b.puzzles.forEach((p,i)=>{const op=document.createElement('option');op.value=i;op.textContent=`${i+1}. ${p.answer}`;s.append(op)});choose(0)}
+ $('book').addEventListener('change',populate);$('puzzle').addEventListener('change',()=>choose(Number($('puzzle').value)));
+ $('files').addEventListener('change',async e=>{for(const f of e.target.files){try{const b=JSON.parse(await f.text());if(b.status!=='not_for_live_use'||!Array.isArray(b.puzzles)||b.puzzles.length!==10)throw new Error('неверный формат');const id=b.puzzles[0].id.slice(0,2);if(!['l1','l2'].includes(id))throw new Error('unknown workbook');books[id]=b}catch(ex){alert(f.name+': '+ex.message)}}populate()});
+ $('export').addEventListener('click',()=>{const list=Object.values(books).flatMap(b=>b.puzzles);const exportData={version:1,generatedFrom:'author map review',sourceQuizCount:list.length,assignments:Object.fromEntries(list.map(p=>[p.id,Object.fromEntries(p.clues.filter(c=>chosen(p,c)).map(c=>[String(c.position),chosen(p,c)]))]))};const blob=new Blob([JSON.stringify(exportData,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='geowords-author-mapping.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),3000)});
+})();
+</script></body></html>
