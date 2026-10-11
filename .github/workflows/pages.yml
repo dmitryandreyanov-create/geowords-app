@@ -26,7 +26,10 @@ jobs:
           node --check app.js
           node --check sw.js
           node --check engine/geowords.js
+          node --check engine/semantic.js
           node --check data/dictionary.js
+          node --check data/rivers-semantics.js
+          node --check data/rivers-authored.js
           node --check data/courses.js
 
       - name: Validate authored levels
