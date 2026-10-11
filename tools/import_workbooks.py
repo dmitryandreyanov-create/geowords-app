@@ -108,6 +108,10 @@ def extract_book(pdf_path,book_id,out_dir):
             source=Image.open(BytesIO(media['image'])).convert('RGB')
             file=f'{book_id}-clean-map-{len(map_files)+1}.webp'
             source.save(out_dir/file,quality=90,method=6,format='WEBP')
+            with Image.open(out_dir/file) as saved:
+                saved.load()
+                if saved.size != source.size:
+                    raise ValueError('Invalid extracted map image: ' + file)
             map_files[xref]=file
         spans=[s for block in p.get_text('dict')['blocks'] for line in block.get('lines',[]) for s in line['spans']
                if len(s['text'].strip())==1 and s['text'].strip().isalpha() and 18<s['size']<19.5 and

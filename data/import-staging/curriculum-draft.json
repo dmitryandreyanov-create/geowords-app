@@ -1,0 +1,754 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-world-geography",
+  "status": "not_for_live_use",
+  "warning": "This is an editorial skeleton. Null lesson fields mean unreviewed, not empty lessons. No source facts or test approvals are published.",
+  "courseOrder": [
+    "oceans-continents",
+    "rivers",
+    "mountains",
+    "world-waters",
+    "straits-canals",
+    "final-challenge"
+  ],
+  "courses": [
+    {
+      "id": "oceans-continents",
+      "title": "Oceans & Continents",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [],
+      "steps": [
+        {
+          "id": "l1-01-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-01",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-02-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-02",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-03-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-03",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-04-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-04",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-05-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-05",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-06-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-06",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-07-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-07",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-08-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-08",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-09-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-09",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l1-10-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-10",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rivers",
+      "title": "Rivers",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "oceans-continents"
+      ],
+      "steps": [
+        {
+          "id": "l2-01-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-01",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-02-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-02",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-03-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-03",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-04-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-04",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-05-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-05",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-06-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-06",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-07-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-07",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-08-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-08",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-09-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-09",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        },
+        {
+          "id": "l2-10-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-10",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "187 clue geographic confirmations",
+            "fact extraction and unlock timing",
+            "six approved practice words and descriptors"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mountains",
+      "title": "Mountains",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "rivers"
+      ],
+      "steps": []
+    },
+    {
+      "id": "world-waters",
+      "title": "World Waters",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "mountains"
+      ],
+      "steps": []
+    },
+    {
+      "id": "straits-canals",
+      "title": "Straits & Canals",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "world-waters"
+      ],
+      "steps": []
+    },
+    {
+      "id": "final-challenge",
+      "title": "Final Challenge",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "straits-canals"
+      ],
+      "steps": []
+    }
+  ],
+  "facts": [],
+  "places": [],
+  "lexicon": [],
+  "descriptors": [],
+  "puzzles": [
+    {
+      "id": "l1-01",
+      "courseId": "oceans-continents",
+      "answer": "CONTINENT",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 7,
+        "cluesPdfPage": 8,
+        "pdfMapRect": [
+          177.77,
+          142.71,
+          648.13,
+          551.18
+        ]
+      }
+    },
+    {
+      "id": "l1-02",
+      "courseId": "oceans-continents",
+      "answer": "HEMISPHERE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 9,
+        "cluesPdfPage": 10,
+        "pdfMapRect": [
+          177.77,
+          142.71,
+          648.02,
+          550.71
+        ]
+      }
+    },
+    {
+      "id": "l1-03",
+      "courseId": "oceans-continents",
+      "answer": "PLANKTON",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 11,
+        "cluesPdfPage": 12,
+        "pdfMapRect": [
+          185.22,
+          191.1,
+          625.47,
+          572.85
+        ]
+      }
+    },
+    {
+      "id": "l1-04",
+      "courseId": "oceans-continents",
+      "answer": "METEOROLOGIST",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 13,
+        "cluesPdfPage": 14,
+        "pdfMapRect": [
+          166.94,
+          169.56,
+          633.44,
+          573.81
+        ]
+      }
+    },
+    {
+      "id": "l1-05",
+      "courseId": "oceans-continents",
+      "answer": "SPACE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 15,
+        "cluesPdfPage": 16,
+        "pdfMapRect": [
+          196.76,
+          152.26,
+          656.52,
+          550.51
+        ]
+      }
+    },
+    {
+      "id": "l1-06",
+      "courseId": "oceans-continents",
+      "answer": "EXPLORATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 17,
+        "cluesPdfPage": 18,
+        "pdfMapRect": [
+          166.94,
+          169.56,
+          633.44,
+          573.81
+        ]
+      }
+    },
+    {
+      "id": "l1-07",
+      "courseId": "oceans-continents",
+      "answer": "HYDRATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 19,
+        "cluesPdfPage": 20,
+        "pdfMapRect": [
+          165.08,
+          147.1,
+          631.58,
+          551.35
+        ]
+      }
+    },
+    {
+      "id": "l1-08",
+      "courseId": "oceans-continents",
+      "answer": "TRIBUTARY",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 21,
+        "cluesPdfPage": 22,
+        "pdfMapRect": [
+          178.68,
+          167.24,
+          653.43,
+          578.99
+        ]
+      }
+    },
+    {
+      "id": "l1-09",
+      "courseId": "oceans-continents",
+      "answer": "DESERTIFICATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 23,
+        "cluesPdfPage": 24,
+        "pdfMapRect": [
+          164.62,
+          149.64,
+          639.37,
+          561.39
+        ]
+      }
+    },
+    {
+      "id": "l1-10",
+      "courseId": "oceans-continents",
+      "answer": "LANDMASS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 25,
+        "cluesPdfPage": 26,
+        "pdfMapRect": [
+          164.62,
+          149.64,
+          639.37,
+          561.39
+        ]
+      }
+    },
+    {
+      "id": "l2-01",
+      "courseId": "rivers",
+      "answer": "CHANNEL",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 6,
+        "cluesPdfPage": 7,
+        "pdfMapRect": [
+          151.29,
+          224.72,
+          641.04,
+          550.97
+        ]
+      }
+    },
+    {
+      "id": "l2-02",
+      "courseId": "rivers",
+      "answer": "FLOODPLAIN",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 8,
+        "cluesPdfPage": 9,
+        "pdfMapRect": [
+          161.18,
+          232.22,
+          650.93,
+          558.47
+        ]
+      }
+    },
+    {
+      "id": "l2-03",
+      "courseId": "rivers",
+      "answer": "RAINFOREST",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 10,
+        "cluesPdfPage": 11,
+        "pdfMapRect": [
+          151.76,
+          213.16,
+          641.52,
+          539.41
+        ]
+      }
+    },
+    {
+      "id": "l2-04",
+      "courseId": "rivers",
+      "answer": "MUDDINESS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 12,
+        "cluesPdfPage": 13,
+        "pdfMapRect": [
+          126.91,
+          204.04,
+          647.41,
+          550.54
+        ]
+      }
+    },
+    {
+      "id": "l2-05",
+      "courseId": "rivers",
+      "answer": "IRRIGATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 14,
+        "cluesPdfPage": 15,
+        "pdfMapRect": [
+          139.22,
+          214.46,
+          660.47,
+          561.71
+        ]
+      }
+    },
+    {
+      "id": "l2-06",
+      "courseId": "rivers",
+      "answer": "HINDUISM",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 16,
+        "cluesPdfPage": 17,
+        "pdfMapRect": [
+          113.03,
+          192.19,
+          683.78,
+          572.44
+        ]
+      }
+    },
+    {
+      "id": "l2-07",
+      "courseId": "rivers",
+      "answer": "BARBARIANS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 18,
+        "cluesPdfPage": 19,
+        "pdfMapRect": [
+          125.43,
+          195.48,
+          691.68,
+          572.73
+        ]
+      }
+    },
+    {
+      "id": "l2-08",
+      "courseId": "rivers",
+      "answer": "MEANDER",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 20,
+        "cluesPdfPage": 21,
+        "pdfMapRect": [
+          131.24,
+          198.01,
+          660.74,
+          550.51
+        ]
+      }
+    },
+    {
+      "id": "l2-09",
+      "courseId": "rivers",
+      "answer": "ATMOSPHERE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 22,
+        "cluesPdfPage": 23,
+        "pdfMapRect": [
+          163.59,
+          217.11,
+          664.59,
+          550.86
+        ]
+      }
+    },
+    {
+      "id": "l2-10",
+      "courseId": "rivers",
+      "answer": "HIMALAYAS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 24,
+        "cluesPdfPage": 25,
+        "pdfMapRect": [
+          138.22,
+          201.28,
+          677.47,
+          560.53
+        ]
+      }
+    }
+  ]
+}

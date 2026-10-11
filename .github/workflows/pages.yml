@@ -37,6 +37,7 @@ jobs:
         run: |
           node --check app.js
           node --check sw.js
+          node --check engine/curriculum.js
           node --check engine/geowords.js
           node --check engine/semantic.js
           node --check data/dictionary.js
@@ -54,6 +55,9 @@ jobs:
       - name: Validate F1-F4 semantic anchors and non-spoiler vocabulary
         run: node scripts/validate-f4.mjs
 
+      - name: Validate non-live curriculum and shared learner knowledge
+        run: node scripts/validate-curriculum.mjs
+
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
@@ -68,7 +72,7 @@ jobs:
         run: node scripts/validate-author-mapping.mjs
 
       - name: Check workbook importer and mapping scripts
-        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py']]"
+        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py','tools/verify_workbook_import.py']]"
 
       - name: Validate explicit Pages release manifest
         run: node scripts/build-pages.mjs
