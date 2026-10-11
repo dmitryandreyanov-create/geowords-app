@@ -5,7 +5,7 @@
   root.GEOWORD_CORE=api;
   if(typeof module!=="undefined"&&module.exports)module.exports=api;
 })(typeof globalThis!=="undefined"?globalThis:this,function(){
-  const TARGET=7;
+  
   function fromAuthored(levels){
     if(!Array.isArray(levels))throw new Error("Authored levels must be an array");
     return levels.map(level=>({...level,source:"authored",courseId:"mountains"}));
@@ -36,39 +36,68 @@
     for(let i=a.length-1;i>0;i--){const j=Math.floor(random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}
     return a;
   }
-  function wordsForStep(course,index){return course.steps[index]?.wordIds||[]}
+  // One authored puzzle plus six distinct generated words per curriculum step.
+  const TOTAL=7;
+  function practiceIds(step){return step?.wordIds||[]}
+  function record(state,step){return state.steps[step.id]}
+  function stepScore(state,step){const r=record(state,step);return Number(r.authoredSolved)+r.solvedWordIds.length}
   function newProgress(course){
-    return {version:1,courseId:course.id,stepIndex:0,solved:course.steps.map(()=>[])};
+    return {
+      schemaVersion:2,courseId:course.id,stepIndex:0,
+      steps:Object.fromEntries(course.steps.map(step=>[step.id,{authoredSolved:false,solvedWordIds:[]}])),
+    };
   }
   function normalizeProgress(raw,course){
     const state=newProgress(course);
-    if(!raw||raw.version!==1||raw.courseId!==course.id||!Array.isArray(raw.solved))return state;
-    for(let i=0;i<course.steps.length;i++){
-      const valid=new Set(wordsForStep(course,i));
-      const entries=Array.isArray(raw.solved[i])?raw.solved[i]:[];
-      state.solved[i]=[...new Set(entries.filter(id=>typeof id==="string"&&valid.has(id)))].slice(0,course.target||TARGET);
-    }
-    const next=state.solved.findIndex(items=>items.length<(course.target||TARGET));
-    state.stepIndex=next===-1?course.steps.length-1:next;
+    if(!raw||raw.courseId!==course.id)return state;
+    const v2=raw.schemaVersion===2&&raw.steps&&typeof raw.steps==="object";
+    const v1=raw.version===1&&Array.isArray(raw.solved);
+    if(!v2&&!v1)return state;
+    course.steps.forEach((step,i)=>{
+      const dest=record(state,step);
+      const prev=v2?raw.steps[step.id]:null;
+      if(v2)dest.authoredSolved=prev?.authoredSolved===true;
+      // Keep earned word IDs even if the editor renames or reorders the dictionary.
+      // Migration from unreleased v1 never invents a completed authored puzzle.
+      const ids=v2?prev?.solvedWordIds:raw.solved[i];
+      if(Array.isArray(ids)){
+        dest.solvedWordIds=[...new Set(ids.filter(id=>typeof id==="string"&&id.length>0))].slice(0,TOTAL-1);
+      }
+    });
+    const next=course.steps.findIndex(step=>stepScore(state,step)<TOTAL);
+    state.stepIndex=next<0?course.steps.length-1:next;
     return state;
   }
+  function nextAuthoredPuzzleId(course,progress){
+    const state=normalizeProgress(progress,course),step=course.steps[state.stepIndex];
+    return record(state,step).authoredSolved?null:step.authoredPuzzleId;
+  }
   function nextWordId(course,progress){
-    const state=normalizeProgress(progress,course);
-    const solved=new Set(state.solved[state.stepIndex]);
-    return wordsForStep(course,state.stepIndex).find(id=>!solved.has(id))||null;
+    const state=normalizeProgress(progress,course),step=course.steps[state.stepIndex];
+    if(!record(state,step).authoredSolved)return null;
+    const credited=new Set(record(state,step).solvedWordIds);
+    if(credited.size>=TOTAL-1)return null;
+    return practiceIds(step).find(id=>!credited.has(id))||null;
   }
   function markSolved(course,progress,puzzle){
-    const state=normalizeProgress(progress,course),step=state.stepIndex;
-    if(puzzle.source!=="generated"||puzzle.review||puzzle.courseId!==course.id||puzzle.stepIndex!==step)
-      return {progress:state,credited:false,advanced:false};
-    if(puzzle.dictionaryId!==nextWordId(course,state))
-      return {progress:state,credited:false,advanced:false};
-    state.solved[step].push(puzzle.dictionaryId);
-    const threshold=course.target||TARGET;
-    const advanced=state.solved[step].length>=threshold&&step<course.steps.length-1;
-    if(advanced)state.stepIndex++;
-    return {progress:state,credited:true,advanced,
-      finished:!advanced&&state.solved[step].length>=threshold};
+    const state=normalizeProgress(progress,course),stepIndex=state.stepIndex;
+    const step=course.steps[stepIndex],r=record(state,step);
+    const invalid={progress:state,credited:false,advanced:false,finished:false,count:stepScore(state,step)};
+    if(!puzzle||puzzle.courseId!==course.id||puzzle.review)return invalid;
+    if(puzzle.source==="authored"){
+      if(r.authoredSolved||puzzle.id!==step.authoredPuzzleId)return invalid;
+      r.authoredSolved=true;
+    }else if(puzzle.source==="generated"){
+      if(!r.authoredSolved||puzzle.stepIndex!==stepIndex||
+         puzzle.dictionaryId!==nextWordId(course,state)||
+         r.solvedWordIds.includes(puzzle.dictionaryId))return invalid;
+      r.solvedWordIds.push(puzzle.dictionaryId);
+    }else return invalid;
+    const count=stepScore(state,step),complete=count===TOTAL;
+    const advanced=complete&&stepIndex<course.steps.length-1;
+    const finished=complete&&!advanced;
+    if(advanced)state.stepIndex=stepIndex+1;
+    return {progress:state,credited:true,advanced,finished,count,source:puzzle.source};
   }
   function generate(course,lexicon,progress,variant=0,review=false){
     const state=normalizeProgress(progress,course);
@@ -110,12 +139,12 @@
     return {
       source:"generated",courseId:course.id,stepIndex,dictionaryId:wordId,review,
       id:"generated:"+course.id+":"+active.at(-1).id+":"+wordId+":"+variant,
-      title:active.at(-1).object.label+(review?" · Review word":" · Word "+(state.solved[stepIndex].length+1)+"/"+(course.target||TARGET)),
+      title:active.at(-1).object.label+(review?" · Review word":" · Word "+(stepScore(state,course.steps[stepIndex])+1)+"/"+TOTAL),
       series:"World Geography Series",level:"Practice",unit:course.title,
       answer:entry.word,map:course.map,mapAspect:course.mapAspect,
       introFacts:active.at(-1).object.facts,markers,clues,definition:entry.definition,
       nextFacts:[],features:active.map(step=>step.object)
     };
   }
-  return {fromAuthored,buildDictionary,newProgress,normalizeProgress,nextWordId,markSolved,generate,project};
+  return {fromAuthored,buildDictionary,newProgress,normalizeProgress,nextAuthoredPuzzleId,nextWordId,markSolved,generate,project,stepScore};
 });
