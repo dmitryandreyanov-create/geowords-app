@@ -1,4 +1,5 @@
-/* Original PDF glyphs + map arrows from the vector drawing layer. */
+// Original Level 2 Rivers puzzles; PDF letters and arrow geometry retained.
+// The first lesson includes Level 1 prerequisite facts until the full Level 1 curriculum is imported.
 window.GEOWORD_RIVERS_AUTHORED = [
   {
     "id": "rivers-authored-01",
@@ -13,7 +14,15 @@ window.GEOWORD_RIVERS_AUTHORED = [
     "map": "./assets/rivers-authored-1.webp",
     "mapAspect": "1587 / 1057",
     "letterMode": "overlay",
-    "introFacts": [],
+    "introFacts": [
+      "There are seven continents on Earth: Asia, Africa, North America, South America, Antarctica, Europe, and Australia.",
+      "Europe and Asia are sometimes counted together as Eurasia.",
+      "There are five oceans: Pacific, Atlantic, Indian, Southern, and Arctic.",
+      "The smallest continent is Australia; the hottest is Africa; the coldest is Antarctica.",
+      "The smallest ocean is the Arctic Ocean. The Southern Ocean is the coldest, and the Indian Ocean is the warmest.",
+      "The Pacific Ocean is the largest and deepest. The Atlantic has the highest average salinity among the five oceans, though local salinity varies.",
+      "A map has northern, southern, eastern, and western parts of continents and oceans."
+    ],
     "markers": [
       {
         "id": "indian-ocean",
