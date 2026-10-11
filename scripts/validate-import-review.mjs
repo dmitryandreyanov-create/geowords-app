@@ -12,10 +12,10 @@ for(const book of files){
  }
 }
 const reviewed=JSON.parse(fs.readFileSync(`${root}/review-assignments.json`,'utf8'));
-assert.equal(reviewed.schemaVersion,1);
-assert.equal(reviewed.source,'GeoWords-author-map-review');
-assert.equal(reviewed.status,'human_review_pending');
-const map=reviewed.decisions;
+assert.equal(reviewed.version,1);
+assert.equal(reviewed.generatedFrom,'author map review');
+assert.equal(reviewed.sourceQuizCount,20);
+const map=reviewed.assignments;
 assert(map&&!Array.isArray(map)&&typeof map==='object');
 for(const id of Object.keys(map))assert(byId.has(id),`Unknown puzzle ${id}`);
 let reviewedDecisions=0;
