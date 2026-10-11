@@ -104,7 +104,7 @@
     const stepIndex=state.stepIndex;
     let wordId=nextWordId(course,state);
     if(!wordId&&review){
-      const available=wordsForStep(course,stepIndex);
+      const available=practiceIds(course.steps[stepIndex]);
       wordId=available[Math.abs(variant)%available.length];
     }
     if(!wordId)return null;
