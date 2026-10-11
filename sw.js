@@ -15,7 +15,6 @@ const CORE=[
   "./assets/rivers-authored-2.webp",
   "./assets/rivers-authored-3.webp",
   "./engine/geowords.js",
-  "./assets/world-rivers-base.svg",
   "./manifest.webmanifest",
   "./assets/icon-180.png",
   "./assets/icon-192.png",
