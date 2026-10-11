@@ -19,11 +19,6 @@ window.GEOWORD_COURSES={
       {id:"south-pacific",label:"South Pacific Ocean",lon:-134,lat:-38,text:"Find the letter in the South Pacific Ocean."},
       {id:"west-pacific",label:"Western Pacific",lon:157,lat:13,text:"Find the letter in the western Pacific Ocean."},
       {id:"arctic-ocean",label:"Arctic Ocean",lon:-5,lat:74,text:"Find the letter in the Arctic Ocean."},
-      {id:"greenland",label:"Greenland",lon:-41,lat:70,text:"Find the letter on Greenland."},
-      {id:"madagascar",label:"Madagascar",lon:48,lat:-20,text:"Find the letter on Madagascar."},
-      {id:"southern-africa",label:"Southern Africa",lon:21,lat:-28,text:"Find the letter in southern Africa."},
-      {id:"central-asia",label:"Central Asia",lon:66,lat:42,text:"Find the letter in central Asia."},
-      {id:"east-asia",label:"Eastern Asia",lon:127,lat:47,text:"Find the letter in eastern Asia."},
       {id:"northern-pacific",label:"North Pacific",lon:-169,lat:45,text:"Find the letter in the North Pacific Ocean."},
       {id:"southern-ocean",label:"Southern Ocean",lon:58,lat:-60,text:"Find the letter in the Southern Ocean."}
     ],
