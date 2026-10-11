@@ -1,5 +1,10 @@
 (()=>{
-const levels=window.GEOWORD_LEVELS||[],$=id=>document.getElementById(id);
+const core=window.GEOWORD_CORE,authored=window.GEOWORD_LEVELS||[];
+const levels=core?core.fromAuthored(authored):authored,$=id=>document.getElementById(id);
+const riversCourse=window.GEOWORD_COURSES?.rivers||null;
+const dictionary=core?core.buildDictionary(levels,window.GEOWORD_DICTIONARY||[]):[];
+const riversKey="geowords_rivers_progress_v1";
+let playMode="authored",riversProgress=null;
 const screens=["homeScreen","factsScreen","gameScreen","finishScreen"];
 const memoryStore=new Map();
 const pendingTimers=new Set();
@@ -28,6 +33,43 @@ function clearPendingTimers(){
   pendingTimers.forEach(id=>clearTimeout(id));
   pendingTimers.clear();
 }
+function loadRiversProgress(){
+  if(!core||!riversCourse)return null;
+  let raw=null;
+  try{raw=JSON.parse(safeGet(riversKey)||"null")}catch{}
+  return core.normalizeProgress(raw,riversCourse);
+}
+function saveRiversProgress(progress){safeSet(riversKey,JSON.stringify(progress))}
+function renderRiversHome(){
+  if(!$("riversBtn"))return;
+  if(!core||!riversCourse){
+    $("riversBtn").disabled=true;$("riversProgress").textContent="Practice is unavailable offline.";
+    return;
+  }
+  const state=loadRiversProgress(),step=state.stepIndex;
+  const count=state.solved[step].length;
+  const done=!core.nextWordId(riversCourse,state);
+  $("riversProgress").textContent=done
+    ?"All three rivers learned · Keep practicing!"
+    :riversCourse.steps[step].object.label+" · "+count+"/"+riversCourse.target+" words complete";
+  $("riversBtn").textContent=done?"Practice Rivers again":"Explore Rivers";
+}
+function startGenerated(forceIntro=false){
+  if(!core||!riversCourse)return;
+  playMode="generated";
+  riversProgress=loadRiversProgress();
+  const finished=!core.nextWordId(riversCourse,riversProgress);
+  const variant=finished?Number(safeGet("geowords_rivers_review_variant")||"0"):0;
+  const next=core.generate(riversCourse,dictionary,riversProgress,variant,finished);
+  if(!next)return;
+  if(finished)safeSet("geowords_rivers_review_variant",String(variant+1));
+  level=next;
+  if(forceIntro||(!finished&&riversProgress.solved[next.stepIndex].length===0)){
+    prepareLesson();show("factsScreen");
+  }else{
+    resetGame();show("gameScreen");
+  }
+}
 function completionKey(item){return "geowords_completed_"+item.id}
 function isComplete(item){return safeGet(completionKey(item))==="1"}
 function completedCount(){return levels.filter(isComplete).length}
@@ -51,6 +93,7 @@ function renderHome(){
   $("startBtn").textContent=done===levels.length?"Play "+levels[0].title+" again":"Continue with "+level.title;
   $("homeProgress").textContent=done+" of "+levels.length+" available puzzles complete";
   renderMedals();
+  renderRiversHome();
 }
 function renderList(id,items){
   const ul=$(id);ul.innerHTML="";
@@ -75,16 +118,41 @@ function resetGame(){
   $("mapImage").src=level.map;
   $("mapImage").alt=level.title+" map";
   $("mapViewport").style.setProperty("--map-aspect",level.mapAspect||"14 / 9");
-  renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
+  renderFeatures();renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
 }
 function readableLocation(id){
   return id.split("-").map(part=>part.charAt(0).toUpperCase()+part.slice(1)).join(" ");
+}
+function renderFeatures(){
+  const svg=$("geoFeatures"),labels=$("geoLabels");
+  if(!svg||!labels)return;
+  svg.replaceChildren();labels.replaceChildren();
+  if(level.source!=="generated")return;
+  for(const feature of level.features||[]){
+    const points=feature.path.map(([lon,lat])=>core.project(lon,lat,riversCourse.mapBounds));
+    const d=points.map((point,i)=>(i?"L":"M")+point.x.toFixed(2)+" "+point.y.toFixed(2)).join(" ");
+    for(const [style,stroke,width] of [["outline","#fffdf1","1.9"],["river","#1682b4","1.0"]]){
+      const p=document.createElementNS("http://www.w3.org/2000/svg","path");
+      p.setAttribute("d",d);p.setAttribute("class","river-line-"+style);
+      p.setAttribute("fill","none");p.setAttribute("stroke",stroke);
+      p.setAttribute("stroke-width",width);
+      p.setAttribute("stroke-linecap","round");p.setAttribute("stroke-linejoin","round");
+      svg.appendChild(p);
+    }
+    const point=core.project(feature.anchor.lon,feature.anchor.lat,riversCourse.mapBounds);
+    const label=document.createElement("div");
+    label.className="river-map-label";
+    label.textContent=feature.label;
+    label.style.left=point.x+"%";label.style.top=point.y+"%";
+    labels.appendChild(label);
+  }
 }
 function renderHotspots(){
   const layer=$("markersLayer");layer.innerHTML="";
   level.markers.forEach(m=>{
     const b=document.createElement("button");
-    b.className="marker-hotspot"+(solvedMarkerIds.has(m.id)?" done":"");
+    b.className="marker-hotspot"+(level.source==="generated"?" generated":"")+(solvedMarkerIds.has(m.id)?" done":"");
+    if(level.source==="generated")b.textContent=m.letter;
     b.style.left=m.x+"%";b.style.top=m.y+"%";
     b.dataset.markerId=m.id;
     b.setAttribute("aria-label","Letter "+m.letter+" — "+readableLocation(m.id));
@@ -134,12 +202,35 @@ function chooseMarker(marker,el){
 }
 function finish(){
   if($("finishScreen").classList.contains("active"))return;
+  if(playMode==="generated"){
+    const result=core.markSolved(riversCourse,riversProgress,level);
+    riversProgress=result.progress;
+    if(result.credited)saveRiversProgress(riversProgress);
+    $("finishWord").textContent=level.answer;
+    $("definition").textContent=level.definition;
+    $("replayBtn").textContent="Play this word again";
+    $("homeBtn").textContent="Back to home";
+    $("nextBtn").hidden=Boolean(result.advanced);
+    $("nextBtn").textContent=result.finished?"Practice another word":"Next geography word";
+    $("nextFactsLabel").textContent=result.advanced?"NEW RIVER UNLOCKED":result.finished?"COURSE COMPLETED":"RIVERS PROGRESS";
+    const count=riversProgress.solved[result.progress.stepIndex].length;
+    const message=result.advanced
+      ?"You solved seven words! Introducing "+riversCourse.steps[result.progress.stepIndex].object.label+"."
+      :result.finished?"All three rivers learned. You can keep practicing as long as you like."
+      :result.credited?count+" of "+riversCourse.target+" words complete at this step."
+      :"Practice complete. This replay does not add to your progress.";
+    renderList("nextFacts",[message]);
+    show("finishScreen");
+    if(result.advanced)later(()=>startGenerated(true),1400);
+    return;
+  }
   safeSet(completionKey(level),"1");
   renderMedals();
   $("finishWord").textContent=level.answer;
   $("definition").textContent=level.definition;
   renderList("nextFacts",level.nextFacts);
   $("replayBtn").textContent="Play "+level.title+" again";
+  $("homeBtn").textContent="Back to Mountains";
   const hasNext=levelIndex+1<levels.length;
   $("nextBtn").hidden=!hasNext;
   $("nextBtn").textContent=hasNext?"Continue to "+levels[levelIndex+1].title:"";
@@ -265,11 +356,15 @@ vp.addEventListener("click",e=>{
 $("zoomIn").addEventListener("click",()=>setScale(scale+.25));
 $("zoomOut").addEventListener("click",()=>setScale(scale-.25));
 $("resetZoom").addEventListener("click",()=>{scale=1;tx=0;ty=0;applyTransform()});
-$("startBtn").addEventListener("click",()=>{selectLevel(firstIncompleteIndex());show("factsScreen")});
+$("startBtn").addEventListener("click",()=>{playMode="authored";selectLevel(firstIncompleteIndex());show("factsScreen")});
+$("riversBtn")?.addEventListener("click",()=>startGenerated());
 $("factsContinueBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
 $("backBtn").addEventListener("click",()=>{clearPendingTimers();inputLocked=false;renderHome();show("homeScreen")});
 $("replayBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
-$("nextBtn").addEventListener("click",()=>{selectLevel(levelIndex+1);show("factsScreen")});
+$("nextBtn").addEventListener("click",()=>{
+  if(playMode==="generated"){startGenerated();return}
+  selectLevel(levelIndex+1);show("factsScreen");
+});
 $("homeBtn").addEventListener("click",()=>{renderHome();show("homeScreen")});
 
 renderHome();
