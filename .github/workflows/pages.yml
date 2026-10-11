@@ -45,6 +45,9 @@ jobs:
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
+      - name: Check workbook importer and mapping scripts
+        run: python3 -m py_compile tools/import_workbooks.py tools/apply_author_mapping.py
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
