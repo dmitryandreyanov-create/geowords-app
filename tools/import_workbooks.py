@@ -20,24 +20,73 @@ ANSWERS={
  'l2':'CHANNEL FLOODPLAIN RAINFOREST MUDDINESS IRRIGATION HINDUISM BARBARIANS MEANDER ATMOSPHERE HIMALAYAS'.split()
 }
 
+FACT_HEADERS = re.compile(r'(?i)For the next quiz|Helpful Tips|Good to know:|Interesting fact:|Remember:|Let.s practice more!')
+
 def clues(page):
+    # Limit BOTH columns at the first factual inset heading, rather than a
+    # hard-coded bottom coordinate. The final clue can extend below y=402.
+    blocks=[b for b in page.get_text('blocks') if b[6]==0]
+    first_clue_y=min((b[1] for b in blocks if PAT.search(b[4])),default=80)
+    facts_start=min((b[1] for b in blocks if b[1]>first_clue_y+35 and FACT_HEADERS.search(b[4])),default=517)
     columns=[]
-    for xlower,xupper in [(0,400),(400,800)]:
-        blocks=[(b[1],b[4]) for b in page.get_text('blocks') if b[6]==0 and 85<=b[1]<402 and xlower<=b[0]<xupper]
-        txt=' '.join(t.replace('\n',' ') for _,t in sorted(blocks))
-        columns.append(txt)
+    for low,high in [(0,400),(400,800)]:
+        text=' '.join(b[4].replace('\n',' ') for b in sorted(blocks,key=lambda z:z[1])
+                      if 80<=b[1]<facts_start-0.4 and low<=b[0]<high)
+        columns.append(text)
     records=[]
-    for c in columns:
-        matches=list(PAT.finditer(c))
+    for col in columns:
+        matches=list(PAT.finditer(col))
         for j,m in enumerate(matches):
             ordstr=m.group(1).lower()
             index=ORD.get(ordstr) or int(re.match(r'\d+',ordstr).group())
-            end=matches[j+1].start() if j+1<len(matches) else len(c)
-            part=re.sub(r'\s+',' ',c[m.start():end]).strip()
-            # trim visible fact header if the layout boundary includes it
-            part=re.split(r'For the next quiz|Helpful Tips',part,flags=re.I)[0].strip()
+            end=matches[j+1].start() if j+1<len(matches) else len(col)
+            part=re.sub(r'\s+',' ',col[m.start():end]).strip()
+            part=FACT_HEADERS.split(part)[0].strip()
+            if not part.endswith('.'):
+                raise ValueError(f'Incomplete clue #{index} on PDF page {page.number+1}: {part!r}')
             records.append({'position':index,'text':part})
     return sorted(records,key=lambda x:x['position'])
+
+
+def extract_arrows(page,rect,markers):
+    """Match a vector arrow shaft + black triangular head to a PDF glyph.
+
+    This is structural geometry, not semantic interpretation: all results
+    retain source coordinates, and geography still requires author review.
+    """
+    import math
+    black=lambda color: color is not None and max(color)<0.12
+    lines=[]; heads=[]
+    for d in page.get_drawings():
+        if not rect.intersects(d['rect']) or not black(d['color']):
+            continue
+        items=d['items']
+        if d['type']=='s' and len(items)==1 and items[0][0]=='l':
+            _,start,end=items[0]
+            lines.append((start,end))
+        elif d['type']=='fs' and len(items)>=3 and all(item[0]=='l' for item in items):
+            heads.append(d['rect'])
+    matches=[]
+    for start,end in lines:
+        candidate=[]
+        for idx,m in enumerate(markers):
+            cx=rect.x0+m['x']*rect.width/100;cy=rect.y0+m['y']*rect.height/100
+            d=math.hypot(start.x-cx,start.y-cy)
+            if d<31:candidate.append((d,idx))
+        if not candidate: continue
+        d,idx=min(candidate)
+        matching=[r for r in heads if math.hypot((r.x0+r.x1)/2-end.x,(r.y0+r.y1)/2-end.y)<14]
+        if len(matching)!=1:continue
+        if any(m['marker']==idx for m in matches):raise ValueError('Multiple arrows for same glyph')
+        matches.append({'marker':idx,'from':{'x':round((start.x-rect.x0)*100/rect.width,3),
+                                           'y':round((start.y-rect.y0)*100/rect.height,3)},
+                        'target':{'x':round((end.x-rect.x0)*100/rect.width,3),
+                                  'y':round((end.y-rect.y0)*100/rect.height,3)}})
+    if len(matches)!=len(lines):
+        raise ValueError(f'Arrow matching incomplete on PDF page {page.number+1}: {len(matches)}/{len(lines)}')
+    for m in matches:
+        markers[m['marker']]['pointsTo']={**m['target'],'from':m['from']}
+    return len(matches)
 
 def get_map(page):
     candidates=[img for img in page.get_images(full=True) if img[2]>900 and img[3]>900]
@@ -71,6 +120,7 @@ def extract_book(pdf_path,book_id,out_dir):
             markers.append({'id':f'{book_id}-{i+1:02d}-glyph-{pos+1:02d}',
               'letter':s['text'].strip(),'x':round((cx-rect.x0)*100/rect.width,3),
               'y':round((cy-rect.y0)*100/rect.height,3)})
+        arrows=extract_arrows(p,rect,markers)
         record_clues=clues(instructions)
         if len(record_clues)!=len(answer) or [x['position'] for x in record_clues]!=list(range(1,len(answer)+1)):
             raise ValueError(f'Clue parsing failed for {book_id}-{i+1}: {len(record_clues)}/{len(answer)}')
@@ -88,7 +138,7 @@ def extract_book(pdf_path,book_id,out_dir):
           'mapAspect':f'{image[2]} / {image[3]}',
           'provenance':{'source':Path(pdf_path).name,'mapPdfPage':page_num+1,
                         'cluesPdfPage':page_num+2,'pdfMapRect':[round(v,2) for v in rect]},
-          'markers':markers,'clues':record_clues,'factsExtract':facts_page})
+          'markers':markers,'clues':record_clues,'factsExtract':facts_page,'arrowCount':arrows})
     return entries,map_files
 
 def main():
