@@ -94,14 +94,14 @@
 <polygon points="400.5,167.7 395.7,169.8 394.8,167.6 398.6,163.0 398.6,166.4 396.1,169.0 397.4,169.0 399.0,166.2 400.5,167.7" fill="#dce7bb" stroke="#9aba9f" stroke-width="1.5"/>
 <polygon points="1195.5,457.9 1193.0,459.1 1190.8,457.7 1193.9,454.7 1195.5,457.9" fill="#dce7bb" stroke="#9aba9f" stroke-width="1.5"/>
 <polygon points="80.7,290.1 80.5,284.4 84.0,287.8 80.7,290.1" fill="#dce7bb" stroke="#9aba9f" stroke-width="1.5"/>
-<text x="233.3" y="154.1" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">NORTH AMERICA</text>
-<text x="393.3" y="453.3" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">SOUTH AMERICA</text>
-<text x="650.0" y="136.0" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">EUROPE</text>
-<text x="670.0" y="358.1" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">AFRICA</text>
-<text x="893.3" y="149.6" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ASIA</text>
-<text x="1046.7" y="489.6" fill="#638674" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">AUSTRALIA</text>
-<text x="123.3" y="376.3" fill="#699bab" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">PACIFIC OCEAN</text>
-<text x="506.7" y="412.5" fill="#699bab" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ATLANTIC OCEAN</text>
-<text x="870.0" y="512.3" fill="#699bab" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">INDIAN OCEAN</text>
-<text x="560.0" y="31.7" fill="#699bab" font-size="22" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ARCTIC OCEAN</text>
+<text x="233.3" y="154.1" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">NORTH AMERICA</text>
+<text x="393.3" y="453.3" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">SOUTH AMERICA</text>
+<text x="650.0" y="136.0" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">EUROPE</text>
+<text x="670.0" y="358.1" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">AFRICA</text>
+<text x="893.3" y="149.6" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ASIA</text>
+<text x="1046.7" y="489.6" fill="#638674" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">AUSTRALIA</text>
+<text x="123.3" y="376.3" fill="#699bab" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">PACIFIC OCEAN</text>
+<text x="506.7" y="412.5" fill="#699bab" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ATLANTIC OCEAN</text>
+<text x="870.0" y="512.3" fill="#699bab" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">INDIAN OCEAN</text>
+<text x="560.0" y="31.7" fill="#699bab" font-size="36" font-family="Arial,sans-serif" font-weight="bold" text-anchor="middle" opacity=".85">ARCTIC OCEAN</text>
 </svg>
