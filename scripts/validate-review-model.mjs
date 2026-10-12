@@ -3,7 +3,8 @@ import assert from 'node:assert/strict';
 import {createRequire} from 'node:module';
 const require=createRequire(import.meta.url),model=require('../tools/review-model.js');
 const puzzles=['l1','l2'].flatMap(b=>JSON.parse(fs.readFileSync(`data/import-staging/${b}-staging.json`)).puzzles);
-const old=JSON.parse(fs.readFileSync('data/import-staging/review-assignments.json'));
+// Empty legacy fixture is independent of real editorial progress.
+const old={version:1,generatedFrom:'author map review',sourceQuizCount:puzzles.length,assignments:{}};
 let state=model.restore(puzzles,old);
 assert.deepEqual(model.stats(puzzles,state),{total:187,done:118,ambiguous:69,assignedAmbiguous:0,confirmed:0});
 const p=puzzles[0],unique=p.clues.find(c=>c.markerId),repeated=p.clues.find(c=>!c.markerId);
@@ -31,4 +32,4 @@ for(const change of [
 }
 const nextRepeated=p.clues.find(c=>c!==repeated&&c.candidateMarkerIds.includes(repeated.candidateMarkerIds[0]));
 assert.throws(()=>model.assign(model.restore(puzzles,saved),p,nextRepeated,repeated.candidateMarkerIds[0]));
-console.log('PASS: v1 migration, all 187 geographic approvals, v2 persistence, reset/change invalidation, stale evidence and duplicate rejection.');
+console.log('PASS: v1 migration, geographic-review tracking for all 187 clues, v2 persistence, reset/change invalidation, stale evidence and duplicate rejection.');

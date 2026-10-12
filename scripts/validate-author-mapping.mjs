@@ -14,7 +14,8 @@ function apply(data,flags=[],sources=inputs){
  return spawnSync('python3',['tools/apply_author_mapping.py','--staging',...sources,'--review',review,'--out',out,...flags],{encoding:'utf8'});
 }
 try{
- const legacy=JSON.parse(fs.readFileSync('data/import-staging/review-assignments.json'));
+ // Keep incomplete-input regression separate from the real received mapping.
+ const legacy={version:1,generatedFrom:'author map review',sourceQuizCount:puzzles.length,assignments:{}};
  assert.equal(apply(legacy).status,0);
  let data=JSON.parse(fs.readFileSync(out));assert.equal(data.books.length,20);assert.equal(data.unassigned,69);assert.equal(data.unreviewed,187);
  assert.notEqual(apply(legacy,['--require-complete']).status,0);
@@ -44,5 +45,13 @@ try{
   x=>{x.confirmations[puzzles[0].id][1]=null},
   x=>{x.assignments[puzzles[0].id]=[]}
  ]){const invalid=structuredClone(approved);mutate(invalid);assert.notEqual(apply(invalid).status,0)}
- console.log('PASS: separate and combined source files, legacy migration, complete mappings versus 187 geographic reviews, stale evidence and invalid/duplicate rejection.');
+ const received=JSON.parse(fs.readFileSync('data/import-staging/review-assignments.json'));
+ const actual=model.stats(puzzles,model.restore(puzzles,received));
+ const applied=apply(received);assert.equal(applied.status,0,applied.stderr);
+ const output=JSON.parse(fs.readFileSync(out));
+ assert.equal(output.unassigned,actual.total-actual.done);
+ assert.equal(output.unreviewed,actual.total-actual.confirmed);
+ if(actual.done===actual.total)assert.equal(apply(received,['--require-complete']).status,0);
+ if(actual.confirmed<actual.total)assert.notEqual(apply(received,['--require-reviewed']).status,0,'received legacy mapping must not manufacture approval');
+ console.log('PASS: separate/combined files, incomplete fixtures, v1/v2 migration, actual editorial mapping and no manufactured geographic approvals.');
 }finally{fs.rmSync(dir,{recursive:true,force:true})}
