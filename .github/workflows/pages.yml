@@ -58,6 +58,9 @@ jobs:
       - name: Validate non-live curriculum and shared learner knowledge
         run: node scripts/validate-curriculum.mjs
 
+      - name: Validate source-only lesson facts and proposed curriculum links
+        run: node scripts/validate-facts-draft.mjs
+
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
@@ -72,7 +75,7 @@ jobs:
         run: node scripts/validate-author-mapping.mjs
 
       - name: Check workbook importer and mapping scripts
-        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py','tools/verify_workbook_import.py']]"
+        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py','tools/verify_workbook_import.py','tools/extract_curriculum_facts.py']]"
 
       - name: Validate explicit Pages release manifest
         run: node scripts/build-pages.mjs

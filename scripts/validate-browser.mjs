@@ -101,7 +101,7 @@ try{
  for(const c of mountain.clues){await gp.locator(`[data-marker-id="${c.markerId}"]`).click();await gp.waitForTimeout(30)}
  await gp.locator('#finishScreen.active').waitFor();assert.equal(await gp.locator('#finishWord').innerText(),mountain.answer);
  assert.equal(await gp.evaluate(id=>localStorage.getItem('geowords_completed_'+id),mountain.id),'1');
- for(const internal of ['tools/review-import.html','tools/review-model.js','data/import-staging/l1-staging.json','data/authored-answer-index.js','engine/curriculum.js','data/import-staging/curriculum-draft.json']){
+ for(const internal of ['tools/review-import.html','tools/review-model.js','data/import-staging/l1-staging.json','data/authored-answer-index.js','engine/curriculum.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md']){
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);

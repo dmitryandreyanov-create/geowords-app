@@ -77,5 +77,6 @@ const draft=JSON.parse(fs.readFileSync('data/import-staging/curriculum-draft.jso
 engine.validate(draft);assert.equal(draft.courses.length,6);assert.equal(draft.courses[0].steps.length,10);assert.equal(draft.courses[1].steps.length,10);
 assert.deepEqual(draft.courseOrder,['oceans-continents','rivers','mountains','world-waters','straits-canals','final-challenge']);
 for(const course of draft.courses)assert.equal(engine.availability(draft,engine.newLearner(draft),course.id).reason,'CONTENT_NOT_APPROVED');
-assert.equal(draft.facts.length,0,'raw facts were not promoted to approved lessons');
+assert.equal(draft.facts.length,41);
+assert(draft.facts.every(f=>f.status==='editorial_pending'),'source excerpts were not promoted to approved lessons');
 console.log('PASS: global knowledge, explicit before/after lessons, authored + six with errors allowed, automatic transitions, replay, persistence, fact-gated unique descriptors and 20 non-live L1/L2 draft steps.');

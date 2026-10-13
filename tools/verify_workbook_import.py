@@ -6,6 +6,7 @@ import tempfile
 from pathlib import Path
 from PIL import Image, ImageChops
 from import_workbooks import extract_book
+from extract_curriculum_facts import extract as extract_facts, markdown as facts_markdown
 
 
 def main():
@@ -31,6 +32,13 @@ def main():
             count += len(fresh)
             arrows += sum(p['arrowCount'] for p in fresh)
             maps += len(images)
+    expected_facts = json.loads((root / 'data/import-staging/facts-draft.json').read_text())
+    fresh_facts = extract_facts({'l1': args.l1, 'l2': args.l2})
+    if fresh_facts != expected_facts:
+        raise ValueError('Source lesson transcript differs from staged facts')
+    if facts_markdown(fresh_facts) != (root / 'docs/SOURCE_FACTS_DRAFT.md').read_text():
+        raise ValueError('Human-readable facts draft differs from source transcript')
+    print(f"PASS: {len(fresh_facts['sourceBlocks'])} source lesson blocks and their readable transcript reproduced exactly.")
     print(f'PASS: {count} staged puzzles, {arrows} PDF arrows, {maps} pixel-identical maps; no geographic approvals inferred.')
 
 
