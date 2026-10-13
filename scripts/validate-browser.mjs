@@ -76,6 +76,7 @@ try{
  await blockedPage.locator('#geoPlaces').selectOption(['place-north-america']);
  assert.match(await blockedPage.locator('#spatialMessage').innerText(),/Хранилище недоступно/);
  await blockedPage.locator('#learningText').fill('Memory-only fixture');assert.match(await blockedPage.locator('#learningMessage').innerText(),/Автосохранение недоступно/);
+ await blockedPage.locator('#contentDefinition').fill('Memory-only vocabulary fixture');assert.match(await blockedPage.locator('#contentMessage').innerText(),/Автосохранение недоступно/);
  await blocked.close();
  // Independent spatial panel in the same editor; decisions below are synthetic.
  const spatialContext=await browser.newContext({viewport:{width:360,height:800},hasTouch:true,acceptDownloads:true});
@@ -173,6 +174,42 @@ try{
  const recoveryPromise=lp.waitForEvent('download');await lp.locator('#learningBackup').click();assert.equal(fs.readFileSync(await (await recoveryPromise).path(),'utf8'),badLearningRaw);
  await learningUpload(learningPayload);assert(await lp.locator('#learningBackup').isHidden());
  await learningContext.close();
+ // Same workspace, separate phrase/vocabulary approvals. No source decisions
+ // from this mechanical fixture are committed to the real catalog.
+ const contentContext=await browser.newContext({viewport:{width:360,height:800},acceptDownloads:true}),cp=await contentContext.newPage();cp.on('pageerror',e=>errors.push(e.message));
+ const contentOpen=async()=>{await cp.goto(url+'/tools/review-import.html');await cp.waitForSelector('#contentPanel:not([hidden])');await cp.waitForSelector('#contentWord option',{state:'attached'})};
+ await contentOpen();assert.match(await cp.locator('#contentProgress').innerText(),/0\/63.*0\/60/);assert.match(await cp.locator('#contentWordOrigin').innerText(),/Codex/);
+ await cp.locator('#contentCopyDescriptor').click();assert.match(await cp.locator('#contentDescriptorStatus').innerText(),/pending/);assert.equal(await cp.locator('#content-placeId').inputValue(),'place-australia');
+ await cp.locator('#contentReviewer').fill('SYNTHETIC QA ONLY');await cp.locator('#contentConfirmDescriptor').click();await cp.waitForFunction(()=>document.querySelector('#contentMessage').textContent.includes('все содержательные'));
+ for(const check of ['meaning','independentPhrase','dependencies'])await cp.locator('#contentCheck-descriptor-'+check).check();
+ await cp.locator('#contentConfirmDescriptor').click();await cp.waitForFunction(()=>document.querySelector('#contentDescriptorStatus').textContent.includes('подтверждены'));
+ await cp.locator('#contentCopyWord').click();assert.match(await cp.locator('#contentWordStatus').innerText(),/pending/);
+ await cp.locator('#contentDefinition').fill('SYNTHETIC definition fixture — not an author approval.');
+ for(const check of ['meaning','ageSuitable','guessability'])await cp.locator('#contentCheck-word-'+check).check();
+ await cp.locator('#contentConfirmWord').click();await cp.waitForFunction(()=>document.querySelector('#contentWordStatus').textContent.includes('подтверждены'));
+ const downloadContent=async()=>{const p=cp.waitForEvent('download');await cp.locator('#contentExport').click();return JSON.parse(fs.readFileSync(await (await p).path()))};
+ const contentPayload=await downloadContent();assert.equal(contentPayload.records.length,123);assert.equal(contentPayload.records.filter(r=>r.status==='approved').length,2);
+ const compiledContent=adaptCatalog(loadL1Sources(),{contentReview:contentPayload});assert.equal(compiledContent.curriculum,null);assert(!compiledContent.blockers.some(b=>b.code==='INVALID_CONTENT_REVIEW'));
+ await contentOpen();assert.match(await cp.locator('#contentProgress').innerText(),/1\/63.*1\/60/);
+ await cp.locator('#contentDefinition').fill('Edited mechanical definition');assert.match(await cp.locator('#contentWordStatus').innerText(),/pending/);
+ const contentUpload=async data=>{await cp.locator('#contentImport').setInputFiles({name:'content.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});await cp.waitForFunction(()=>document.querySelector('#contentImport').value==='')};
+ const contentRaw=await cp.evaluate(()=>localStorage.getItem('geowords-l1-content-review-v1')),staleContent=structuredClone(contentPayload);
+ staleContent.records.find(r=>r.key==='word:atlas').decision.definition.en='Changed confirmed data';await contentUpload(staleContent);assert.match(await cp.locator('#contentMessage').innerText(),/Ошибка импорта/);assert.equal(await cp.evaluate(()=>localStorage.getItem('geowords-l1-content-review-v1')),contentRaw);
+ await contentUpload(contentPayload);assert.match(await cp.locator('#contentWordStatus').innerText(),/подтверждены/);
+ await cp.locator('#contentCopyWord').click();assert.equal(await cp.locator('#contentDefinition').inputValue(),'SYNTHETIC definition fixture — not an author approval.');
+ await cp.locator('#contentPhrase').fill('Edited phrase fixture');assert.match(await cp.locator('#contentDescriptorStatus').innerText(),/pending/);
+ await cp.locator('#contentOp').selectOption('region');assert(await cp.locator('#content-placeId').isVisible());assert(await cp.locator('#contentDirection').isVisible());await cp.locator('#contentDirection').selectOption('north');
+ await cp.locator('#contentOp').selectOption('side');assert(await cp.locator('#content-oceanId').isVisible());await cp.locator('#content-oceanId').selectOption('place-pacific-ocean');await cp.locator('#content-sidePlaceId').selectOption('place-asia');
+ await cp.locator('#contentOp').selectOption('between');await cp.locator('#content-placeIds').selectOption(['place-africa','place-asia']);
+ await cp.locator('#contentOp').selectOption('hemisphere');await cp.locator('#contentHemisphere').selectOption(['north','east']);
+ await cp.locator('#contentOp').selectOption('boundary');assert(await cp.locator('#contentQuery-boundary').isVisible());
+ assert(await cp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'content panel fits 360px');
+ if(process.env.GEOWORDS_CONTENT_SCREENSHOT)await cp.locator('#contentPanel').screenshot({path:process.env.GEOWORDS_CONTENT_SCREENSHOT});
+ await cp.locator('#puzzleList button').nth(10).click();assert(await cp.locator('#contentPanel').isHidden());assert(await cp.locator('#contentUnavailable').isVisible());
+ const incompatibleContent=JSON.stringify({...contentPayload,courseId:'foreign'});await cp.evaluate(raw=>localStorage.setItem('geowords-l1-content-review-v1',raw),incompatibleContent);await contentOpen();assert(await cp.locator('#contentBackup').isVisible());
+ await cp.locator('#contentDefinition').fill('Protected memory-only draft');assert.equal(await cp.evaluate(()=>localStorage.getItem('geowords-l1-content-review-v1')),incompatibleContent);
+ const contentRecovery=cp.waitForEvent('download');await cp.locator('#contentBackup').click();assert.equal(fs.readFileSync(await (await contentRecovery).path(),'utf8'),incompatibleContent);
+ await contentUpload(contentPayload);assert(await cp.locator('#contentBackup').isHidden());await contentContext.close();
  // Browser API smoke for the new shared generator. Synthetic curriculum only;
  // no new game route and no source approvals are installed by this test.
  const apiContext=await browser.newContext({viewport:{width:360,height:800}});
@@ -244,9 +281,9 @@ try{
  for(const c of mountain.clues){await gp.locator(`[data-marker-id="${c.markerId}"]`).click();await gp.waitForTimeout(30)}
  await gp.locator('#finishScreen.active').waitFor();assert.equal(await gp.locator('#finishWord').innerText(),mountain.answer);
  assert.equal(await gp.evaluate(id=>localStorage.getItem('geowords_completed_'+id),mountain.id),'1');
- for(const internal of ['tools/learning-review-model.js','tools/review-learning.js','docs/LEARNING_REVIEW.md','tools/catalog-adapter.mjs','docs/CATALOG_ADAPTER.md','tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/import-staging/l1-spatial-observations.json','data/import-staging/l1-spatial-proposals.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs','tools/build_l1_spatial_proposals.mjs']){
+ for(const internal of ['tools/content-review-model.js','tools/review-content.js','docs/CONTENT_REVIEW.md','tools/learning-review-model.js','tools/review-learning.js','docs/LEARNING_REVIEW.md','tools/catalog-adapter.mjs','docs/CATALOG_ADAPTER.md','tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/import-staging/l1-spatial-observations.json','data/import-staging/l1-spatial-proposals.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs','tools/build_l1_spatial_proposals.mjs']){
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);
- console.log('PASS browser 360px: L1 facts/order approvals, reload, atomic import/recovery and null vs [], shared generator API reload/credit on synthetic data, retained user baseline, spatial review, 55 exact arrows, legacy import, blocked storage, 21 Rivers words, Mountains and release exclusion.');
+ console.log('PASS browser 360px: L1 phrase/vocabulary and facts/order approvals, reload, atomic import/recovery and null vs [], shared generator API reload/credit on synthetic data, retained user baseline, spatial review, 55 exact arrows, legacy import, blocked storage, 21 Rivers words, Mountains and release exclusion.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve))}

@@ -52,7 +52,7 @@
   r.status='approved';r.evidence={reviewedBy:reviewedBy.trim(),sourceSha256:r.sourceSha256,decisionSha256};
  }
  function revoke(state,key){const r=state.records.find(r=>r.key===key);ensure(r,'Неизвестное решение');invalidateFollowing(state,key);r.status='editorial_pending';r.evidence=null}
- function report(s,state){
+ function report(s,state,{contentReview}={}){
   const knownFacts=new Set(),knownPlaces=new Set(),rows=[];
   const record=key=>state.records.find(r=>r.key===key);
   for(const step of s.draft.courses.find(c=>c.id==='oceans-continents').steps){
@@ -64,12 +64,15 @@
     for(const id of knownFacts)for(const caveat of record('fact:'+id).decision.caveatFactIds)if(!knownFacts.has(caveat))issues.push({code:'CAVEAT_NOT_LEARNED',factId:id,caveatId:caveat})};
    learn(d.learnBefore);d.introducedPlaces.forEach(id=>knownPlaces.add(id));
    const authoredFacts=[...knownFacts];
+   let reviewed=0,total=0;
    for(const desc of s.catalog.descriptors)if(desc.occurrences.some(o=>o.puzzleId===step.authoredPuzzleId)){
-    for(const id of desc.candidateRequiresFacts)if(!knownFacts.has(id))issues.push({code:'CLUE_FACT_NOT_LEARNED',descriptorId:desc.id,factId:id});
-    for(const id of desc.candidateQuery.requiredPlaces)if(!knownPlaces.has(id))issues.push({code:'CLUE_PLACE_NOT_LEARNED',descriptorId:desc.id,placeId:id});
+    total++;const content=contentReview?.records.find(r=>r.key==='descriptor:'+desc.id),query=content?.status==='approved'?content.decision.query:desc.candidateQuery;
+    if(content?.status==='approved')reviewed++;
+    for(const id of query.requires)if(!knownFacts.has(id))issues.push({code:'CLUE_FACT_NOT_LEARNED',descriptorId:desc.id,factId:id});
+    for(const id of query.requiredPlaces)if(!knownPlaces.has(id))issues.push({code:'CLUE_PLACE_NOT_LEARNED',descriptorId:desc.id,placeId:id});
    }
    learn(d.unlockAfter);
-   rows.push({stepId:step.id,preview:true,dependencyStatus:'candidate_dependencies_not_approved',status:issues.length?'blocked':'candidate_timing_ok',issues,knownBefore:before,knownAtAuthored:authoredFacts,knownAtPractice:[...knownFacts]});
+   rows.push({stepId:step.id,preview:true,dependencyStatus:reviewed===total?'reviewed_dependencies':reviewed?'mixed_reviewed_and_candidate_dependencies':'candidate_dependencies_not_approved',status:issues.length?'blocked':'candidate_timing_ok',issues,knownBefore:before,knownAtAuthored:authoredFacts,knownAtPractice:[...knownFacts]});
    // An invalid earlier step must not provide invented knowledge to later rows.
    if(issues.length){knownFacts.clear();before.forEach(id=>knownFacts.add(id));knownPlaces.clear();beforePlaces.forEach(id=>knownPlaces.add(id))}
   }

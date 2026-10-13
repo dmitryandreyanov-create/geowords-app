@@ -76,6 +76,48 @@
 <details><summary>Предварительная проверка порядка всех десяти шагов</summary><p class="help">Проверка использует ваши решения по фактам/шагам и ещё не утверждённые candidate-зависимости исходных подсказок. «Порядок согласован» здесь не доказывает географическую однозначность и не разрешает детскую игру. Неутверждённый или ошибочный предыдущий шаг не открывает знания для следующего.</p><div id="learningReport" class="sub"></div></details>
 </div></section>
 <p id="learningUnavailable" class="help" hidden>Проверка фактов и порядка пока доступна для Level 1; Level 2 остаётся в очереди.</p>
+<section class="pane learning-pane" id="contentPanel" hidden>
+<header><h2>Подсказки и практический словарь · Level 1</h2><p id="contentProgress" class="sub"></p></header>
+<div class="details"><p class="help">Здесь проверяются формулировки и определения. Выбранная буква не доказывает смысл подсказки; географическая однозначность проверяется отдельно. Определения не открывают факты ребёнку. Слово можно оставить pending и выбрать другое из поддерживаемого списка в порядке шага.</p>
+<fieldset id="contentControls"><label>Кто проверяет<input id="contentReviewer" type="text" autocomplete="name" placeholder="Имя проверяющего"></label>
+<div class="learning-grid">
+<section><h3>Формулировка подсказки</h3><label for="contentDescriptor">Исходная фраза</label><select id="contentDescriptor"></select>
+<pre id="contentSourcePhrase" class="learning-source"></pre><details><summary>Все появления в исходных заданиях</summary><pre id="contentOccurrences" class="learning-source"></pre></details>
+<div class="toolbar"><button id="contentCopyDescriptor" type="button">Перенести фразу и предложенную интерпретацию в пустой черновик</button></div>
+<label for="contentPhrase">Фраза для общей модели (оригинальные подсказки не меняются)</label><textarea id="contentPhrase" rows="3"></textarea>
+<label for="contentKind">Тип формулировки</label><select id="contentKind"><option value="">Ещё не выбран</option value="name">Имя объекта</option><option value="directional">Направление / сторона</option><option value="relational">Отношение объектов</option><option value="superlative">Географический рекорд</option><option value="definition">Определение / свойство</option><option value="other">Другой тип, включая полушария / границу</option></select>
+<label><input id="contentQuerySet" type="checkbox"> Интерпретация задана в черновике (это не утверждение географии)</label>
+<label for="contentOp">Как понимать фразу</label><select id="contentOp"><option value="place">На объекте</option><option value="region">В части объекта</option><option value="side">На стороне океана</option><option value="between">Между двумя объектами</option><option value="hemisphere">В полушариях</option><option value="boundary">На экваторе</option></select>
+<label for="contentChannel">Что описывает фраза</label><select id="contentChannel"><option value="either">Положение буквы или цель стрелки (консервативная проверка)</option><option value="physical">Только положение буквы</option><option value="target">Цель стрелки; без стрелки — положение буквы</option></select>
+<div id="contentQuery-place"><label for="content-placeId">Объект</label><select id="content-placeId"></select></div>
+<div id="contentQuery-region" hidden><label for="contentDirection">Часть объекта</label><select id="contentDirection"><option value="">Выберите направление</option><option value="north">Север</option><option value="south">Юг</option><option value="east">Восток</option><option value="west">Запад</option></select></div>
+<div id="contentQuery-side" hidden><label for="content-oceanId">Океан</label><select id="content-oceanId"></select><label for="content-sidePlaceId">Чья сторона</label><select id="content-sidePlaceId"></select></div>
+<div id="contentQuery-between" hidden><label for="content-placeIds">Ровно два объекта</label><select id="content-placeIds" multiple size="4"></select></div>
+<div id="contentQuery-hemisphere" hidden><label for="contentHemisphere">Одно север/юг и одно восток/запад</label><select id="contentHemisphere" multiple size="4"><option value="north">Северное</option><option value="south">Южное</option><option value="east">Восточное</option><option value="west">Западное</option></select></div>
+<div id="contentQuery-boundary" hidden><p class="help">Граница: экватор. Для её использования нужны явно изученные соответствующие факты.</p></div>
+<label for="content-requires">Какие факты надо изучить раньше</label><select id="content-requires" multiple size="5"></select>
+<label for="content-requiredPlaces">Какие объекты надо знать</label><select id="content-requiredPlaces" multiple size="5"></select>
+<p id="contentDescriptorStatus" class="sub"></p>
+<label><input id="contentCheck-descriptor-meaning" type="checkbox"> Формулировка и интерпретация передают нужный географический смысл</label>
+<label><input id="contentCheck-descriptor-independentPhrase" type="checkbox"> Фраза понятна сама по себе, без знания ответа и назначенной буквы</label>
+<label><input id="contentCheck-descriptor-dependencies" type="checkbox"> Необходимые факты и объекты перечислены; это не проверка их момента изучения или географии букв</label>
+<div class="toolbar"><button id="contentConfirmDescriptor" type="button">Подтвердить фразу и интерпретацию</button><button id="contentRevokeDescriptor" type="button">Снять подтверждение фразы</button></div>
+</section>
+<section><h3>Практическое слово и определение</h3><label for="contentWord">Слово-кандидат L1</label><select id="contentWord"></select>
+<p id="contentWordOrigin" class="help"></p><p id="contentWordSteps" class="sub"></p><pre id="contentSourceDefinition" class="learning-source"></pre>
+<div class="toolbar"><button id="contentCopyWord" type="button">Перенести исходное определение в пустой черновик</button></div>
+<label for="contentWordValue">Слово (постоянный ID; переименование не выполняется)</label><input id="contentWordValue" type="text" readonly>
+<label for="contentDefinition">Проверяемое определение (английский)</label><textarea id="contentDefinition" rows="6"></textarea>
+<p class="help">Новые определения предложены Codex и не являются авторскими цитатами. Редакторское подтверждение сохраняет происхождение. Ни одно определение автоматически не становится knownFact ребёнка.</p>
+<p id="contentWordStatus" class="sub"></p>
+<label><input id="contentCheck-word-meaning" type="checkbox"> Определение точное и соответствует слову</label>
+<label><input id="contentCheck-word-ageSuitable" type="checkbox"> Определение и термин подходят целевому возрасту примерно 7–13 лет</label>
+<label><input id="contentCheck-word-guessability" type="checkbox"> Слово пригодно для практики и объяснения; возможность догадаться проверена</label>
+<div class="toolbar"><button id="contentConfirmWord" type="button">Подтвердить слово и определение</button><button id="contentRevokeWord" type="button">Снять подтверждение слова</button></div>
+</section></div>
+<div class="toolbar"><button id="contentExport" type="button">Экспорт подсказок и словаря JSON</button><label class="import-label">Импорт подсказок и словаря JSON<input id="contentImport" type="file" accept=".json,application/json"></label><button id="contentBackup" type="button" hidden>Скачать несовместимое сохранение содержания</button></div>
+</fieldset><p id="contentMessage" class="review-status" role="status" aria-live="polite"></p></div></section>
+<p id="contentUnavailable" class="help" hidden>Проверка подсказок и словаря пока доступна только для Level 1.</p>
 <style>.learning-pane{margin:0 12px 16px}.learning-pane fieldset{border:0;padding:0;min-width:0}.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.learning-pane label{display:block;margin:8px 0 5px}.learning-pane select,.learning-pane textarea,.learning-pane input[type=text]{width:100%;max-width:100%;font:inherit;border:1px solid #9fbfc5;border-radius:6px;padding:6px}.learning-source{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f8f9;padding:10px;border-radius:8px;font:inherit;font-size:13px}.learning-fields>div{margin-bottom:16px}#learningReport>div{padding:7px 0;border-bottom:1px solid #e0ecee;overflow-wrap:anywhere}#learningProvenance,#learningCandidates{overflow-wrap:anywhere}@media(max-width:750px){.learning-grid{grid-template-columns:1fr}}</style>
 <style>[hidden]{display:none!important}.spatial-pane{margin:0 12px 16px}.geo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.geo-grid label{display:flex;flex-direction:column;gap:5px}.geo-grid select{font:inherit;max-width:100%;width:100%;padding:5px;border:1px solid #9fbfc5;border-radius:6px}#geoReport>div{padding:5px 0;border-bottom:1px solid #e0ecee}@media(max-width:750px){.geo-grid{grid-template-columns:1fr}}</style>
 <script src="./review-model.js"></script>
@@ -84,6 +126,9 @@
 <script src="./review-spatial.js"></script>
 <script src="./learning-review-model.js"></script>
 <script src="./review-learning.js"></script>
+<script src="../data/authored-answer-index.js"></script>
+<script src="./content-review-model.js"></script>
+<script src="./review-content.js"></script>
 <script src="./review-import.js"></script>
 </body>
 </html>

@@ -67,6 +67,9 @@ jobs:
           node --check tools/learning-review-model.js
           node --check tools/review-learning.js
           node scripts/validate-learning-review.mjs
+          node --check tools/content-review-model.js
+          node --check tools/review-content.js
+          node scripts/validate-content-review.mjs
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs

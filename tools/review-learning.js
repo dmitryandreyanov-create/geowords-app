@@ -16,9 +16,9 @@
  const placeChoices=()=>sources.catalog.places.map(p=>[p.id,p.label.en]);
  function summary(){
   $('learningProgress').textContent=`Текст/объекты/оговорки: ${state.records.filter(r=>r.key.startsWith('fact:')&&r.status==='approved').length}/23 · порядок шагов: ${state.records.filter(r=>r.key.startsWith('step:')&&r.status==='approved').length}/10. Это редакторские решения, не выпуск уровня.`;
-  const rows=model.report(sources,state),host=$('learningReport');host.replaceChildren();
+  const rows=model.report(sources,state,{contentReview:globalThis.GEOWORD_CONTENT_PANEL?.getState()}),host=$('learningReport');host.replaceChildren();
   const label={STEP_PENDING:'Порядок ещё не проверен',UNKNOWN_PREREQUISITE:'Ранее не изучен prerequisite',FACT_PENDING:'Факт не утверждён',CAVEAT_NOT_LEARNED:'Оговорка ещё не изучена',CLUE_FACT_NOT_LEARNED:'Для авторской подсказки факт ещё не изучен',CLUE_PLACE_NOT_LEARNED:'Для авторской подсказки объект ещё не введён'};
-  for(const row of rows){const div=document.createElement('div');div.textContent=`${row.stepId}: ${row.status==='candidate_timing_ok'?'по предложенным зависимостям порядок согласован; география/запросы не утверждены':row.issues.map(i=>`${label[i.code]}${i.factId?' · '+i.factId:''}${i.placeId?' · '+i.placeId:''}${i.caveatId?' · '+i.caveatId:''}`).join('; ')}`;host.appendChild(div)}
+  for(const row of rows){const div=document.createElement('div'),basis=row.dependencyStatus==='reviewed_dependencies'?'зависимости фраз проверены':row.dependencyStatus==='mixed_reviewed_and_candidate_dependencies'?'часть зависимостей проверена, часть предложена':'зависимости фраз ещё предложены';div.textContent=`${row.stepId}: ${row.status==='candidate_timing_ok'?'порядок согласован по указанным зависимостям; география не утверждена':row.issues.map(i=>`${label[i.code]}${i.factId?' · '+i.factId:''}${i.placeId?' · '+i.placeId:''}${i.caveatId?' · '+i.caveatId:''}`).join('; ')} · ${basis}`;host.appendChild(div)}
   $('learningFactStatus').textContent=record('fact:'+factId)?.status==='approved'?'Решение по факту подтверждено':'Решение по факту pending';
   $('learningStepStatus').textContent=record('step:'+stepId)?.status==='approved'?'Порядок этого шага подтверждён':'Порядок шага pending';
  }
@@ -115,5 +115,5 @@
    return true;
   }catch(e){sources=undefined;message('Панель обучения недоступна: '+e.message);return false}
  }
- globalThis.GEOWORD_LEARNING_PANEL={init,render};
+ globalThis.GEOWORD_LEARNING_PANEL={init,render,refresh:()=>{if(state&&sources)summary()}};
 })();
