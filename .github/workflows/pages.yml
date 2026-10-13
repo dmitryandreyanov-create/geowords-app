@@ -75,6 +75,7 @@ jobs:
           node --check tools/rehearsal-model.js
           node --check tools/review-rehearsal.js
           node scripts/validate-rehearsal.mjs
+          node scripts/validate-partial-place-claims.mjs
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs

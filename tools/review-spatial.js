@@ -4,6 +4,7 @@
  const $=id=>document.getElementById(id),model=globalThis.GEOWORD_SPATIAL_REVIEW;
  const sessions={};let key='geowords-spatial-review-v1',activeBook;let scaffold,catalog,state,puzzleId,selectedId,channel='physical',assignments=()=>({}),protectedLocal=false,rawSaved=null,proposals=null;
  const options={};
+ let placeClaims=null;
  function message(text){$('spatialMessage').textContent=text+(protectedLocal?' Несовместимое сохранение оставлено нетронутым; скачайте его отдельной кнопкой. Для замены импортируйте совместимый JSON.':'')}
  function saveLocal(){if(protectedLocal)return false;try{localStorage.setItem(key,JSON.stringify(state));return true}catch{return false}}
  function selected(){return state?.puzzles.find(p=>p.puzzleId===puzzleId)?.reviews.find(r=>r.anchorId===selectedId)}
@@ -25,6 +26,8 @@
   $('geoBinding').textContent=`Буква: ${b.x}% / ${b.y}%${pt?` · конец стрелки: ${pt.x}% / ${pt.y}%`:''} · ${r.status==='approved'?'полнота географии подтверждена':'география не утверждена'}`;
   const proposed=proposal();
   $('geoProposalNotes').textContent=proposed?`Предложение по PDF стр. ${proposed.provenance.mapPdfPage}; неизвестные свойства НЕ проверены. ${proposed.notes.join(' ')}`:'Нет загруженного предложения для этой буквы.';
+  const claim=activeBook==='l1'?placeClaims?.claims.find(c=>c.anchorId===selectedId):null;
+  if(claim&&JSON.stringify(claim.sourceBinding)===JSON.stringify(r.sourceBinding))$('geoProposalNotes').textContent+=' Пользователь подтвердил принадлежность этой точки: '+claim.physicalPlaces.map(id=>catalog.places.find(p=>p.id===id)?.label.en??id).join(', ')+'. Подтверждение ограничено семью указанными континентальными ID; другие свойства не проверены. Полная география не утверждена.';
   $('geoApplyProposal').disabled=!proposed||(!proposed.physical&&!proposed.target)||r.physical!==null||r.target!==null||r.status==='approved';
  }
  function renderReport(){
@@ -70,6 +73,7 @@
     if(saved)try{session.state=model.restore(scaf,cat,JSON.parse(saved))}catch{session.protectedLocal=true;session.rawSaved=saved}sessions[book]=session;
    }
    activate('l1');
+   try{const r=await fetch('../data/import-staging/l1-place-claims.json'),value=await r.json();if(!r.ok||value.status!=='not_for_live_use'||value.scope!=='l1-01-place-memberships-in-confirmed-scope'||!Array.isArray(value.claims))throw Error('Неверный файл частичных назначений');placeClaims=value}catch(e){message('Частичные подтверждения недоступны: '+e.message)}
    try{const r=await fetch('../data/import-staging/l1-spatial-proposals.json');if(!r.ok)throw Error('Нет файла предложений');const value=await r.json();if(value.status!=='not_for_live_use'||value.origin!=='visual_source_map_proposals')throw Error('Неверный статус предложений');proposals=value}catch(e){message('Предложения недоступны; ручная разметка работает: '+e.message)}
    $('geoBackup').addEventListener('click',()=>{if(rawSaved===null)return;const link=document.createElement('a');link.href=URL.createObjectURL(new Blob([rawSaved],{type:'application/json'}));link.download='geowords-spatial-incompatible-backup.json';link.click();setTimeout(()=>URL.revokeObjectURL(link.href),5000)});
    $('geoAnchor').addEventListener('change',()=>{selectedId=$('geoAnchor').value;if(!selected().sourceBinding.pointsTo)channel='physical';display()});

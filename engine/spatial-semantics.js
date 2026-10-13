@@ -85,5 +85,21 @@
   }).map(a=>a.id);
   return {status:matchedAnchorIds.length===1?'unique':matchedAnchorIds.length?'ambiguous':'no_match',matchedAnchorIds};
  }
- return {validateQuery,validateMembership,reviewValid,resolve};
+ // Non-live inspection of explicitly scoped, partial place claims. Different
+ // statuses are intentional: runtime callers require resolve().status=unique.
+ // It never upgrades partial evidence into complete geographic approval.
+ function inspectPlaceClaims({query,anchors,claims,map,coveredPlaceIds}={}){
+  const result=(reason,extra={})=>({status:'candidate_blocked',preview:true,notForLiveUse:true,reason,matchedAnchorIds:[],...extra});
+  if(!validateQuery(query)||query.op!=='place'||!['physical','either'].includes(query.channel))return result('unsupported_partial_query');
+  if(!strings(coveredPlaceIds)||!query.requiredPlaces.every(id=>coveredPlaceIds.includes(id)))return result('outside_confirmed_place_scope');
+  if(!object(map)||typeof map.id!=='string'||!map.id||!/^[a-f0-9]{64}$/.test(map.sha256)||!strings(map.anchorIds)||!Array.isArray(anchors)||!anchors.length||anchors.some(a=>!object(a))||!samePair(map.anchorIds,anchors.map(a=>a.id))||new Set(anchors.map(a=>a.id)).size!==anchors.length||!Array.isArray(claims)||claims.some(c=>!object(c))||new Set(claims.map(c=>c.anchorId)).size!==claims.length)return result('invalid_partial_map');
+  const byId=new Map(claims.map(c=>[c.anchorId,c])),unknown=[];
+  for(const a of anchors){const c=byId.get(a.id),b=c?.sourceBinding;
+   if(a.mapId!==map.id||a.pointsTo!=null||!c||c.status!=='place_membership_confirmed_in_scope'||c.complete!==false||c.otherFields!==null||typeof c.reviewedBy!=='string'||!c.reviewedBy.trim()||!strings(c.physicalPlaces)||!strings(c.coveredPlaceIds)||!samePair(c.coveredPlaceIds,coveredPlaceIds)||!c.physicalPlaces.every(id=>coveredPlaceIds.includes(id))||b?.mapId!==map.id||b?.mapSha256!==map.sha256||!samePoint(b,a)||b.pointsTo!=null)unknown.push(a.id);
+  }
+  if(unknown.length)return result('unconfirmed_place_competitors',{unresolvedAnchorIds:unknown});
+  const matchedAnchorIds=anchors.filter(a=>matches(query,{places:byId.get(a.id).physicalPlaces})).map(a=>a.id);
+  return {status:matchedAnchorIds.length===1?'candidate_unique':matchedAnchorIds.length?'candidate_ambiguous':'candidate_no_match',preview:true,notForLiveUse:true,matchedAnchorIds,factsApproved:false};
+ }
+ return {validateQuery,validateMembership,reviewValid,resolve,inspectPlaceClaims};
 });

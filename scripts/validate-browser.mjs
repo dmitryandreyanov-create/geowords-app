@@ -86,6 +86,7 @@ try{
  assert(await sp.locator('#geoBackup').isHidden(),'recovery button only appears for incompatible saved work');
  await sp.locator('#geoApplyProposal').click();
  assert.deepEqual(await sp.locator('#geoPlaces').evaluate(s=>[...s.selectedOptions].map(o=>o.value)),['place-australia']);
+ assert.match(await sp.locator('#geoProposalNotes').innerText(),/Пользователь подтвердил принадлежность этой точки: Australia/);
  assert.match(await sp.locator('#geoProgress').innerText(),/0\/9/,'proposal does not approve geography');
  assert(await sp.locator('#geoApplyProposal').isDisabled(),'proposal cannot replace existing draft');
  await sp.locator('#geoAnchor').selectOption('l1-01-glyph-02');assert.match(await sp.locator('#geoProposalNotes').innerText(),/Пользователь подтвердил только «между»/);await sp.locator('#geoApplyProposal').click();assert.equal(await sp.locator('#geoPlaces option:checked').count(),0);assert.equal(await sp.locator('#geoBetween option:checked').count(),1);assert.match(await sp.locator('#geoBinding').innerText(),/не утверждена/);await sp.locator('#geoAnchor').selectOption('l1-01-glyph-05');
