@@ -59,6 +59,17 @@
   const r=state.puzzles.find(p=>p.puzzleId===puzzleId)?.reviews.find(r=>r.anchorId===anchorId);
   if(!r)throw Error('Неизвестная буква');r.status='editorial_pending';r.complete=false;r.evidence=null;
  }
+ function applyProposal(state,catalog,puzzleId,proposal){
+  const r=state.puzzles.find(p=>p.puzzleId===puzzleId)?.reviews.find(r=>r.anchorId===proposal?.anchorId);
+  if(!r||proposal.status!=='editorial_pending'||proposal.complete!==false||!same(r.sourceBinding,proposal.sourceBinding))throw Error('Неизвестное или устаревшее предложение');
+  if(r.physical!==null||r.target!==null||r.status==='approved')throw Error('У буквы уже есть разметка. Предложение не заменяет вашу работу.');
+  if(proposal.physical===null&&proposal.target===null)throw Error('В предложении нет определённых свойств; прочитайте замечание и заполните вручную.');
+  if(proposal.physical!==null)checkMembership(proposal.physical,catalog);
+  if(proposal.target!==null){if(!r.sourceBinding.pointsTo)throw Error('У буквы нет стрелки');checkMembership(proposal.target,catalog)}
+  r.physical=proposal.physical===null?null:normalize(proposal.physical);
+  r.target=proposal.target===null?null:normalize(proposal.target);
+  r.status='editorial_pending';r.complete=false;r.evidence=null;
+ }
  function report(state,catalog,puzzleId){
   const p=state.puzzles.find(p=>p.puzzleId===puzzleId);if(!p)return null;
   const anchors=catalog.anchors.filter(a=>a.puzzleId===puzzleId);
@@ -70,5 +81,5 @@
    return {position:occurrence.position,descriptorId:descriptor.id,preview:true,...result};
   }).sort((a,b)=>a.position-b.position);
  }
- return {create,restore,empty,edit,confirm,revoke,report};
+ return {create,restore,empty,edit,confirm,revoke,applyProposal,report};
 });

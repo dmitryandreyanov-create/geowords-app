@@ -14,7 +14,9 @@
  function samePoint(a,b){return point(a)&&point(b)&&a.x===b.x&&a.y===b.y}
  function sameArrow(a,b){
   if(a==null||b==null)return a==null&&b==null;
-  return samePoint(a,b)&&((a.from==null&&b.from==null)||samePoint(a.from,b.from));
+  return samePoint(a,b)&&((a.from==null&&b.from==null)||samePoint(a.from,b.from))&&
+   ((a.shaftEnd==null&&b.shaftEnd==null)||samePoint(a.shaftEnd,b.shaftEnd))&&
+   ((a.headPoints==null&&b.headPoints==null)||Array.isArray(a.headPoints)&&Array.isArray(b.headPoints)&&a.headPoints.length===3&&b.headPoints.length===3&&a.headPoints.every((p,i)=>samePoint(p,b.headPoints[i])));
  }
  function validateQuery(q){
   if(!object(q)||!['either','physical','target'].includes(q.channel)||!strings(q.requires)||!strings(q.requiredPlaces))return false;

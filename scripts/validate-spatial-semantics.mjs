@@ -36,6 +36,12 @@ assert.deepEqual(spatial.resolve({...arrowState,query:query('place',{placeId:'is
 assert.equal(spatial.resolve({...arrowState,query:{...ocean,channel:'target'}}).status,'unique','target and physical are distinct explicit channels');
 const stale=structuredClone(arrowState);stale.anchors[1].pointsTo.from.x++;
 assert.equal(spatial.resolve({...stale,query:ocean}).reason,'incomplete_geography');
+const triangleState=structuredClone(arrowState);
+triangleState.anchors[1].pointsTo.shaftEnd={x:79,y:39};triangleState.anchors[1].pointsTo.headPoints=[{x:80,y:40},{x:78,y:40},{x:80,y:38}];
+triangleState.reviews[1].evidence.pointsTo=structuredClone(triangleState.anchors[1].pointsTo);
+assert.equal(spatial.resolve({...triangleState,query:ocean}).status,'ambiguous');
+triangleState.anchors[1].pointsTo.headPoints[1].x--;
+assert.equal(spatial.resolve({...triangleState,query:ocean}).reason,'incomplete_geography','changed source head invalidates evidence');
 const sideState={...state,reviews:[review(anchors[0],membership(['pacific'],{sides:[{oceanId:'pacific',sidePlaceId:'asia'}]})),reviews[1]]};
 assert.equal(spatial.resolve({...sideState,query:query('side',{oceanId:'pacific',sidePlaceId:'asia'},['pacific','asia'])}).status,'unique');
 const equatorState={...state,reviews:[review(anchors[0],membership([],{boundaries:['equator']})),reviews[1]]};

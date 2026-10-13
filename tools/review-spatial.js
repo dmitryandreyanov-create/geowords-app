@@ -2,11 +2,12 @@
 (()=>{
  'use strict';
  const $=id=>document.getElementById(id),model=globalThis.GEOWORD_SPATIAL_REVIEW;
- const key='geowords-spatial-review-v1';let scaffold,catalog,state,puzzleId,selectedId,channel='physical',assignments=()=>({}),protectedLocal=false,rawSaved=null;
+ const key='geowords-spatial-review-v1';let scaffold,catalog,state,puzzleId,selectedId,channel='physical',assignments=()=>({}),protectedLocal=false,rawSaved=null,proposals=null;
  const options={};
  function message(text){$('spatialMessage').textContent=text+(protectedLocal?' Несовместимое сохранение оставлено нетронутым; скачайте его отдельной кнопкой. Для замены импортируйте совместимый JSON.':'')}
  function saveLocal(){if(protectedLocal)return false;try{localStorage.setItem(key,JSON.stringify(state));return true}catch{return false}}
  function selected(){return state?.puzzles.find(p=>p.puzzleId===puzzleId)?.reviews.find(r=>r.anchorId===selectedId)}
+ function proposal(){return proposals?.puzzles.find(p=>p.puzzleId===puzzleId)?.records.find(r=>r.anchorId===selectedId)}
  function option(select,value,label){const o=document.createElement('option');o.value=value;o.textContent=label;select.appendChild(o)}
  function values(id){return [...$(id).selectedOptions].map(o=>o.value)}
  function membership(){return {places:values('geoPlaces'),regions:values('geoRegions').map(v=>JSON.parse(v)),sides:values('geoSides').map(v=>JSON.parse(v)),between:values('geoBetween').map(v=>JSON.parse(v)),hemispheres:values('geoHemispheres'),boundaries:$('geoEquator').checked?['equator']:[]}}
@@ -21,6 +22,9 @@
   $('geoEquator').checked=data.boundaries.includes('equator');$('geoComplete').checked=false;
   const b=r.sourceBinding,pt=b.pointsTo;
   $('geoBinding').textContent=`Буква: ${b.x}% / ${b.y}%${pt?` · конец стрелки: ${pt.x}% / ${pt.y}%`:''} · ${r.status==='approved'?'полнота географии подтверждена':'география не утверждена'}`;
+  const proposed=proposal();
+  $('geoProposalNotes').textContent=proposed?`Предложение по PDF стр. ${proposed.provenance.mapPdfPage}; неизвестные свойства НЕ проверены. ${proposed.notes.join(' ')}`:'Нет загруженного предложения для этой буквы.';
+  $('geoApplyProposal').disabled=!proposed||(!proposed.physical&&!proposed.target)||r.physical!==null||r.target!==null||r.status==='approved';
  }
  function renderReport(){
   const rows=model.report(state,catalog,puzzleId);const host=$('geoReport');host.replaceChildren();if(!rows)return;
@@ -53,6 +57,7 @@
   try{
    const data=await Promise.all(['l1-catalog-draft.json','l1-spatial-review-draft.json'].map(async name=>{const r=await fetch('../data/import-staging/'+name);if(!r.ok)throw Error(`География: ${r.status}`);return r.json()}));
    [catalog,scaffold]=data;state=model.create(scaffold);
+   try{const r=await fetch('../data/import-staging/l1-spatial-proposals.json');if(!r.ok)throw Error('Нет файла предложений');const value=await r.json();if(value.status!=='not_for_live_use'||value.origin!=='visual_source_map_proposals')throw Error('Неверный статус предложений');proposals=value}catch(e){message('Предложения недоступны; ручная разметка работает: '+e.message)}
    for(const p of catalog.places)option($('geoPlaces'),p.id,p.label.en);
    const unique=(op,field)=>[...new Set(catalog.descriptors.filter(d=>d.candidateQuery.op===op).map(d=>JSON.stringify(field(d.candidateQuery))))];
    options.regions=unique('region',q=>({placeId:q.placeId,direction:q.direction}));
@@ -69,6 +74,7 @@
    $('geoAnchor').addEventListener('change',()=>{selectedId=$('geoAnchor').value;if(!selected().sourceBinding.pointsTo)channel='physical';display()});
    $('geoChannel').addEventListener('change',()=>{channel=$('geoChannel').value;display()});
    for(const id of ['geoPlaces','geoRegions','geoSides','geoBetween','geoHemispheres','geoEquator'])$(id).addEventListener('change',update);
+   $('geoApplyProposal').addEventListener('click',()=>{try{model.applyProposal(state,catalog,puzzleId,proposal());const saved=saveLocal();display();renderReport();message(saved?'Предложение перенесено только в черновик. Проверьте неизвестные свойства; утверждение не поставлено.':'Черновик заполнен, но автосохранение недоступно: экспортируйте JSON.')}catch(e){message(e.message)}});
    $('geoConfirm').addEventListener('click',()=>{
     try{
      if(!$('geoComplete').checked)throw Error('Отметьте проверку полноты обоих каналов по исходной карте');

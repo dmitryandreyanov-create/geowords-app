@@ -18,7 +18,16 @@ for(const book of ['l1','l2']){
     assert.equal(p.arrowCount,arrowCount,`Arrow count mismatch in ${p.id}`);
     counts[book]+=arrowCount;
     for(const m of p.markers){
-      for(const pos of [m,...(m.pointsTo?[m.pointsTo,m.pointsTo.from]:[])]){
+      if(m.pointsTo){
+        const t=m.pointsTo;
+        assert(Array.isArray(t.headPoints)&&t.headPoints.length===3,'Exact source triangle required');
+        assert(t.headPoints.some(v=>v.x===t.x&&v.y===t.y),'pointsTo must be a source triangle vertex');
+        const dx=t.shaftEnd.x-t.from.x,dy=t.shaftEnd.y-t.from.y;
+        const projection=v=>(v.x-t.from.x)*dx+(v.y-t.from.y)*dy;
+        assert(projection(t)>projection(t.shaftEnd),'Tip must extend beyond the shaft end');
+        assert(t.headPoints.every(v=>projection(v)<=projection(t)+.001),'Tip must be the forward source vertex');
+      }
+      for(const pos of [m,...(m.pointsTo?[m.pointsTo,m.pointsTo.from,m.pointsTo.shaftEnd,...m.pointsTo.headPoints]:[])]){
         assert(Number.isFinite(pos.x)&&Number.isFinite(pos.y)&&pos.x>=0&&pos.x<=100&&pos.y>=0&&pos.y<=100,`Bad geometry in ${p.id}`);
       }
     }

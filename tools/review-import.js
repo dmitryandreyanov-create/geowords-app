@@ -56,12 +56,13 @@ function renderMap(){
  for(const marker of p.markers){
    const target=marker.pointsTo;if(!target)continue;
    const from=target.from||{x:marker.x,y:marker.y};
+   const shaftEnd=target.shaftEnd||target;
    const line=document.createElementNS('http://www.w3.org/2000/svg','line');
-   for(const [key,value] of Object.entries({x1:from.x,y1:from.y,x2:target.x,y2:target.y}))line.setAttribute(key,String(value));
+   for(const [key,value] of Object.entries({x1:from.x,y1:from.y,x2:shaftEnd.x,y2:shaftEnd.y}))line.setAttribute(key,String(value));
    arrows.appendChild(line);
    const dx=target.x-from.x,dy=target.y-from.y,len=Math.hypot(dx,dy)||1;
    const x=dx/len,y=dy/len;
-   const pts=[[target.x,target.y],[target.x-1.2*x-.55*y,target.y-1.2*y+.55*x],[target.x-1.2*x+.55*y,target.y-1.2*y-.55*x]];
+   const pts=target.headPoints?target.headPoints.map(p=>[p.x,p.y]):[[target.x,target.y],[target.x-1.2*x-.55*y,target.y-1.2*y+.55*x],[target.x-1.2*x+.55*y,target.y-1.2*y-.55*x]];
    const head=document.createElementNS('http://www.w3.org/2000/svg','polygon');
    head.setAttribute('points',pts.map(a=>a.map(v=>v.toFixed(2)).join(',')).join(' '));arrows.appendChild(head);
  }

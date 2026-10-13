@@ -30,6 +30,13 @@ try{
   await page.locator('#puzzleList button').nth(i).click();
   const n=await page.locator('#mapArrows line').count();assert.equal(n,puzzles[i].arrowCount);arrows+=n;
   assert.equal(await page.locator('#mapArrows polygon').count(),n);
+  const sourceArrows=puzzles[i].markers.filter(m=>m.pointsTo);
+  for(let j=0;j<sourceArrows.length;j++){
+   const t=sourceArrows[j].pointsTo,polygon=await page.locator('#mapArrows polygon').nth(j).getAttribute('points');
+   assert.equal(polygon,t.headPoints.map(p=>[p.x,p.y].map(v=>v.toFixed(2)).join(',')).join(' '),'renderer preserves source head polygon');
+   assert.equal(Number(await page.locator('#mapArrows line').nth(j).getAttribute('x2')),t.shaftEnd.x);
+   assert.equal(Number(await page.locator('#mapArrows line').nth(j).getAttribute('y2')),t.shaftEnd.y);
+  }
   await page.waitForFunction(()=>document.querySelector('#mapImage').complete&&document.querySelector('#mapImage').naturalWidth>0);
   assert(await page.locator('#mapImage').evaluate(img=>img.complete&&img.naturalWidth>0),'source map loads');
  }
@@ -73,6 +80,12 @@ try{
  await sp.goto(url+'/tools/review-import.html');await sp.waitForSelector('#geoAnchor option',{state:'attached'});
  assert.match(await sp.locator('#globalProgress').innerText(),/Сопоставлено 187\/187/,'fresh editor retains the 69 user decisions');
  assert(await sp.locator('#geoBackup').isHidden(),'recovery button only appears for incompatible saved work');
+ await sp.locator('#geoApplyProposal').click();
+ assert.deepEqual(await sp.locator('#geoPlaces').evaluate(s=>[...s.selectedOptions].map(o=>o.value)),['place-australia']);
+ assert.match(await sp.locator('#geoProgress').innerText(),/0\/9/,'proposal does not approve geography');
+ assert(await sp.locator('#geoApplyProposal').isDisabled(),'proposal cannot replace existing draft');
+ await sp.reload();await sp.waitForSelector('#geoAnchor option',{state:'attached'});
+ assert.deepEqual(await sp.locator('#geoPlaces').evaluate(s=>[...s.selectedOptions].map(o=>o.value)),['place-australia']);
  assert.match(await sp.locator('#geoReport').innerText(),/заблокирована/);
  await sp.locator('#geoPlaces').selectOption(['place-north-america']);await sp.locator('#geoComplete').check();await sp.locator('#geoConfirm').click();
  assert.match(await sp.locator('#geoProgress').innerText(),/1\/9/);
@@ -97,6 +110,9 @@ try{
  assert.match(await sp.locator('#geoProgress').innerText(),/1\/11/);
  await sp.locator('#geoRevoke').click();assert.match(await sp.locator('#geoProgress').innerText(),/0\/11/);
  await sp.locator('#puzzleList button').nth(10).click();assert(await sp.locator('#spatialPanel').isHidden());assert(await sp.locator('#spatialUnavailable').isVisible());
+ await sp.locator('#puzzleList button').nth(3).click();await sp.locator('#geoAnchor').selectOption('l1-04-glyph-04');
+ assert(await sp.locator('#geoApplyProposal').isDisabled(),'unknown coastal location cannot be filled by guessing');
+ assert.match(await sp.locator('#geoProposalNotes').innerText(),/не утверждено/);
  await sp.locator('#puzzleList button').first().click();
  const exhaustive=structuredClone(geoPayload);
  for(const r of exhaustive.puzzles[0].reviews){r.status='approved';r.complete=true;r.evidence=structuredClone(r.sourceBinding);r.physical={places:[],regions:[],sides:[],between:[],hemispheres:[],boundaries:[]};r.target=null}
@@ -153,7 +169,7 @@ try{
  for(const c of mountain.clues){await gp.locator(`[data-marker-id="${c.markerId}"]`).click();await gp.waitForTimeout(30)}
  await gp.locator('#finishScreen.active').waitFor();assert.equal(await gp.locator('#finishWord').innerText(),mountain.answer);
  assert.equal(await gp.evaluate(id=>localStorage.getItem('geowords_completed_'+id),mountain.id),'1');
- for(const internal of ['tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs']){
+ for(const internal of ['tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/import-staging/l1-spatial-observations.json','data/import-staging/l1-spatial-proposals.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs','tools/build_l1_spatial_proposals.mjs']){
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);

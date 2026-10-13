@@ -1,0 +1,4074 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "origin": "visual_source_map_proposals",
+  "source": {
+    "bookId": "l1",
+    "source": "Level 1 Oceans & Continents.pdf",
+    "sha256": "6ed1badf41662af9efd35a1324584a8bbab08d1df91872c44bdf1f629e2b7946"
+  },
+  "warning": "Partial visual proposals only. Unknown properties are represented by empty draft lists, not complete negative assertions. No geographic approvals.",
+  "puzzles": [
+    {
+      "puzzleId": "l1-01",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-01-glyph-05",
+          "l1-01-glyph-07",
+          "l1-01-glyph-09",
+          "l1-01-glyph-03",
+          "l1-01-glyph-01",
+          "l1-01-glyph-04",
+          "l1-01-glyph-02",
+          "l1-01-glyph-08",
+          "l1-01-glyph-06"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-01-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 17.343,
+            "y": 35.062,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 20.018,
+            "y": 53.279,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-north-america",
+                "place-south-america"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Маркер у соединения Америк. Возможна принадлежность North America одновременно с «между»; проверить конкуренцию с материковой подсказкой."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 24.89,
+            "y": 67.862,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 58.48,
+            "y": 95.316,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-antarctica"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.796,
+            "y": 72.117,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 85.404,
+            "y": 59.842,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-asia",
+                "place-australia"
+              ],
+              [
+                "place-australia",
+                "place-eurasia"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Маркер в островной зоне между Азией и Австралией. Границы материков/океанов здесь не нарисованы; базовую принадлежность не считать доказанной."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.97,
+            "y": 58.261,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 54.786,
+            "y": 49.025,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-africa",
+                "place-eurasia"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Маркер в зоне соединения Африки и Евразии. Объект центра не установлен; проверить широкие материковые подсказки."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-01-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 68.66,
+            "y": 33.481,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 7,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-01-glyph-09"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-02",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-02-glyph-07",
+          "l1-02-glyph-02",
+          "l1-02-glyph-03",
+          "l1-02-glyph-04",
+          "l1-02-glyph-05",
+          "l1-02-glyph-06",
+          "l1-02-glyph-01",
+          "l1-02-glyph-10",
+          "l1-02-glyph-09",
+          "l1-02-glyph-08"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-02-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 51.22,
+            "y": 33.659,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-europe",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.709,
+            "y": 26.723,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 52.497,
+            "y": 95.426,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-antarctica"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.613,
+            "y": 57.69,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.868,
+            "y": 72.003,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 15.628,
+            "y": 33.659,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 89.957,
+            "y": 56.035,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-asia",
+                "place-australia"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Маркер в островной зоне между Азией и Австралией. Границы материков/океанов здесь не нарисованы; базовую принадлежность не считать доказанной."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.709,
+            "y": 86.908,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-southern-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-australia",
+                "place-antarctica"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "На схематичной карте нет границы Южного океана. Предлагаемое название бассейна требует редакторской проверки."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 26.788,
+            "y": 67.744,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-09"
+          }
+        },
+        {
+          "anchorId": "l1-02-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.06,
+            "y": 70.421,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-africa",
+                "place-south-america"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 9,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-02-glyph-10"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-03",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-03-glyph-01",
+          "l1-03-glyph-02",
+          "l1-03-glyph-05",
+          "l1-03-glyph-08",
+          "l1-03-glyph-04",
+          "l1-03-glyph-06",
+          "l1-03-glyph-07",
+          "l1-03-glyph-03"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-03-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 55.996,
+            "y": 5.421,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-arctic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 66.544,
+            "y": 59.255,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.079,
+            "y": 42.815,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 91.166,
+            "y": 42.815,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [
+              {
+                "oceanId": "place-pacific-ocean",
+                "sidePlaceId": "place-asia"
+              }
+            ],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "sides"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.31,
+            "y": 54.703,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.331,
+            "y": 85.415,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-southern-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.827,
+            "y": 44.506,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [
+              {
+                "oceanId": "place-pacific-ocean",
+                "sidePlaceId": "place-north-america"
+              }
+            ],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "sides"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-03-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.515,
+            "y": 72.908,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 11,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-03-glyph-08"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-04",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-04-glyph-01",
+          "l1-04-glyph-04",
+          "l1-04-glyph-03",
+          "l1-04-glyph-02",
+          "l1-04-glyph-07",
+          "l1-04-glyph-06",
+          "l1-04-glyph-09",
+          "l1-04-glyph-08",
+          "l1-04-glyph-05",
+          "l1-04-glyph-10",
+          "l1-04-glyph-11",
+          "l1-04-glyph-12",
+          "l1-04-glyph-13"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-04-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 48.498,
+            "y": 47.358,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [
+              {
+                "placeId": "place-africa",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 21.279,
+            "y": 83.628,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [
+              {
+                "placeId": "place-south-america",
+                "direction": "south"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 13.702,
+            "y": 21.428,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [
+              {
+                "placeId": "place-north-america",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 80.447,
+            "y": 47.358,
+            "pointsTo": null
+          },
+          "physical": null,
+          "target": null,
+          "proposedFields": {
+            "physical": [],
+            "target": []
+          },
+          "notes": [
+            "Круг закрывает азиатское побережье. Положение центра на суше/воде не утверждено; нельзя просто перенести смысл региональной подсказки в sitsIn."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.499,
+            "y": 75.031,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [
+              {
+                "placeId": "place-africa",
+                "direction": "south"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 22.753,
+            "y": 58.117,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [
+              {
+                "placeId": "place-south-america",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.684,
+            "y": 24.129,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-europe",
+              "place-eurasia"
+            ],
+            "regions": [
+              {
+                "placeId": "place-europe",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.235,
+            "y": 73.434,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 81.907,
+            "y": 21.428,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [
+              {
+                "placeId": "place-asia",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-09"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 13.921,
+            "y": 46.039,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [
+              {
+                "placeId": "place-north-america",
+                "direction": "south"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-10"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.107,
+            "y": 41.955,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-11"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-12",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 66.234,
+            "y": 62.416,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-12"
+          }
+        },
+        {
+          "anchorId": "l1-04-glyph-13",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 57.06,
+            "y": 86.33,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-southern-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 13,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-04-glyph-13"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-05",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-2.webp",
+        "sha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+        "anchorIds": [
+          "l1-05-glyph-01",
+          "l1-05-glyph-02",
+          "l1-05-glyph-03",
+          "l1-05-glyph-04",
+          "l1-05-glyph-05"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-05-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 27.297,
+            "y": 80.433,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [
+              "south",
+              "west"
+            ],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "hemispheres"
+            ],
+            "target": []
+          },
+          "notes": [
+            "По линиям исходной карты предложены только полушария; материк/океан не определён."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 15,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-05-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-05-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 73.099,
+            "y": 29.43,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [
+              "north",
+              "east"
+            ],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "hemispheres"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 15,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-05-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-05-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 27.768,
+            "y": 36.535,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [
+              "north",
+              "west"
+            ],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "hemispheres"
+            ],
+            "target": []
+          },
+          "notes": [
+            "По линиям исходной карты предложены только полушария; материк/океан не определён."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 15,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-05-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-05-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 76.878,
+            "y": 78.812,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [
+              "south",
+              "east"
+            ],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "hemispheres"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 15,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-05-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-05-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 57.693,
+            "y": 60.268,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [
+              "east"
+            ],
+            "boundaries": [
+              "equator"
+            ]
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "hemispheres",
+              "boundaries"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Линия экватора проходит через исходный круг, но центр извлечённого текстового bbox немного смещён. Не выбирать полушарие по жёсткому порогу y."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 15,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-05-glyph-05"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-06",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-06-glyph-01",
+          "l1-06-glyph-02",
+          "l1-06-glyph-03",
+          "l1-06-glyph-04",
+          "l1-06-glyph-10",
+          "l1-06-glyph-06",
+          "l1-06-glyph-07",
+          "l1-06-glyph-08",
+          "l1-06-glyph-09",
+          "l1-06-glyph-05",
+          "l1-06-glyph-11"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-06-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.807,
+            "y": 54.636,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 63.664,
+            "y": 79.838,
+            "pointsTo": {
+              "x": 58.227,
+              "y": 71.581,
+              "from": {
+                "x": 61.252,
+                "y": 75.879
+              },
+              "shaftEnd": {
+                "x": 59.14,
+                "y": 72.877
+              },
+              "headPoints": [
+                {
+                  "x": 58.289,
+                  "y": 73.434
+                },
+                {
+                  "x": 58.227,
+                  "y": 71.581
+                },
+                {
+                  "x": 59.787,
+                  "y": 72.031
+                }
+              ]
+            }
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": {
+            "places": [
+              "place-madagascar"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": [
+              "places"
+            ]
+          },
+          "notes": [
+            "Стрелка направлена к острову; вершина исходного наконечника может быть у берега/рядом с островом. Название цели — предложение, не утверждение точки суши."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 84.76,
+            "y": 20.281,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [
+              {
+                "placeId": "place-asia",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.293,
+            "y": 41.655,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.026,
+            "y": 72.839,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 42.571,
+            "y": 23.701,
+            "pointsTo": {
+              "x": 48.647,
+              "y": 16.303,
+              "from": {
+                "x": 45.389,
+                "y": 20.368
+              },
+              "shaftEnd": {
+                "x": 47.664,
+                "y": 17.529
+              },
+              "headPoints": [
+                {
+                  "x": 47.065,
+                  "y": 16.637
+                },
+                {
+                  "x": 48.647,
+                  "y": 16.303
+                },
+                {
+                  "x": 48.481,
+                  "y": 18.149
+                }
+              ]
+            }
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": {
+            "places": [
+              "place-iceland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": [
+              "places"
+            ]
+          },
+          "notes": [
+            "Стрелка направлена к острову; вершина исходного наконечника может быть у берега/рядом с островом. Название цели — предложение, не утверждение точки суши."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 22.555,
+            "y": 58.935,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [
+              {
+                "placeId": "place-south-america",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.122,
+            "y": 13.382,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-greenland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 67.452,
+            "y": 60.532,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-09"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.67,
+            "y": 77.137,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [
+              {
+                "placeId": "place-africa",
+                "direction": "south"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-10"
+          }
+        },
+        {
+          "anchorId": "l1-06-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 17.212,
+            "y": 47.636,
+            "pointsTo": null
+          },
+          "physical": null,
+          "target": null,
+          "proposedFields": {
+            "physical": [],
+            "target": []
+          },
+          "notes": [
+            "Круг у Мексики/Центральной Америки перекрывает сушу и воду. Базовую принадлежность центра оставляем неизвестной."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 17,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-06-glyph-11"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-07",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-07-glyph-01",
+          "l1-07-glyph-02",
+          "l1-07-glyph-04",
+          "l1-07-glyph-03",
+          "l1-07-glyph-05",
+          "l1-07-glyph-06",
+          "l1-07-glyph-07",
+          "l1-07-glyph-08",
+          "l1-07-glyph-09"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-07-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.445,
+            "y": 18.936,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-greenland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 81.358,
+            "y": 25.936,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 63.506,
+            "y": 80.573,
+            "pointsTo": {
+              "x": 58.305,
+              "y": 72.315,
+              "from": {
+                "x": 61.33,
+                "y": 76.613
+              },
+              "shaftEnd": {
+                "x": 59.218,
+                "y": 73.611
+              },
+              "headPoints": [
+                {
+                  "x": 58.367,
+                  "y": 74.169
+                },
+                {
+                  "x": 58.305,
+                  "y": 72.315
+                },
+                {
+                  "x": 59.865,
+                  "y": 72.765
+                }
+              ]
+            }
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": {
+            "places": [
+              "place-madagascar"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": [
+              "places"
+            ]
+          },
+          "notes": [
+            "Стрелка направлена к острову; вершина исходного наконечника может быть у берега/рядом с островом. Название цели — предложение, не утверждение точки суши."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 94.755,
+            "y": 45.822,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 52.149,
+            "y": 95.225,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-antarctica"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.365,
+            "y": 71.976,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.55,
+            "y": 48.869,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.572,
+            "y": 23.235,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-europe",
+              "place-eurasia"
+            ],
+            "regions": [
+              {
+                "placeId": "place-europe",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-07-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.099,
+            "y": 55.765,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 19,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-07-glyph-09"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-08",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-08-glyph-01",
+          "l1-08-glyph-02",
+          "l1-08-glyph-03",
+          "l1-08-glyph-04",
+          "l1-08-glyph-05",
+          "l1-08-glyph-06",
+          "l1-08-glyph-07",
+          "l1-08-glyph-08",
+          "l1-08-glyph-09"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-08-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.968,
+            "y": 56.719,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 69.105,
+            "y": 10.187,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-arctic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 29.297,
+            "y": 14.408,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-greenland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 7.977,
+            "y": 63.591,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.705,
+            "y": 72.032,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 25.635,
+            "y": 67.812,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.424,
+            "y": 37.587,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 18.29,
+            "y": 48.278,
+            "pointsTo": null
+          },
+          "physical": null,
+          "target": null,
+          "proposedFields": {
+            "physical": [],
+            "target": []
+          },
+          "notes": [
+            "Круг у Мексики/Центральной Америки перекрывает сушу и воду. Базовую принадлежность центра оставляем неизвестной."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-08-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.339,
+            "y": 19.264,
+            "pointsTo": {
+              "x": 48.149,
+              "y": 15.239,
+              "from": {
+                "x": 44.074,
+                "y": 17.973
+              },
+              "shaftEnd": {
+                "x": 46.92,
+                "y": 16.064
+              },
+              "headPoints": [
+                {
+                  "x": 46.58,
+                  "y": 15.027
+                },
+                {
+                  "x": 48.149,
+                  "y": 15.239
+                },
+                {
+                  "x": 47.533,
+                  "y": 16.916
+                }
+              ]
+            }
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": {
+            "places": [
+              "place-iceland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": [
+              "places"
+            ]
+          },
+          "notes": [
+            "Стрелка направлена к острову; вершина исходного наконечника может быть у берега/рядом с островом. Название цели — предложение, не утверждение точки суши."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 21,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-08-glyph-09"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-09",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-09-glyph-01",
+          "l1-09-glyph-02",
+          "l1-09-glyph-03",
+          "l1-09-glyph-04",
+          "l1-09-glyph-05",
+          "l1-09-glyph-12",
+          "l1-09-glyph-07",
+          "l1-09-glyph-08",
+          "l1-09-glyph-09",
+          "l1-09-glyph-10",
+          "l1-09-glyph-11",
+          "l1-09-glyph-06",
+          "l1-09-glyph-13",
+          "l1-09-glyph-14",
+          "l1-09-glyph-15"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-09-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 64.799,
+            "y": 92.873,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-antarctica"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 25.38,
+            "y": 67.783,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 48.341,
+            "y": 53.119,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 79.976,
+            "y": 24.469,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 67.97,
+            "y": 59.992,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.695,
+            "y": 86.001,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-southern-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.964,
+            "y": 57.34,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.631,
+            "y": 17.597,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-greenland"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-08"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 19.951,
+            "y": 53.119,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [
+              [
+                "place-north-america",
+                "place-south-america"
+              ]
+            ],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "between"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Маркер у соединения Америк. Возможна принадлежность North America одновременно с «между»; проверить конкуренцию с материковой подсказкой."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-09"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 47.671,
+            "y": 39.375,
+            "pointsTo": null
+          },
+          "physical": null,
+          "target": null,
+          "proposedFields": {
+            "physical": [],
+            "target": []
+          },
+          "notes": [
+            "Круг у южноевропейского берега перекрывает сушу и море. Объект центра оставлен неизвестным."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-10"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 35.444,
+            "y": 34.988,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [
+              {
+                "placeId": "place-atlantic-ocean",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-11"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-12",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 88.149,
+            "y": 74.655,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-australia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-12"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-13",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 65.901,
+            "y": 79.96,
+            "pointsTo": {
+              "x": 59.866,
+              "y": 71.923,
+              "from": {
+                "x": 62.515,
+                "y": 76.42
+              },
+              "shaftEnd": {
+                "x": 60.665,
+                "y": 73.279
+              },
+              "headPoints": [
+                {
+                  "x": 59.792,
+                  "y": 73.743
+                },
+                {
+                  "x": 59.866,
+                  "y": 71.923
+                },
+                {
+                  "x": 61.36,
+                  "y": 72.514
+                }
+              ]
+            }
+          },
+          "physical": {
+            "places": [
+              "place-indian-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": {
+            "places": [
+              "place-madagascar"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": [
+              "places"
+            ]
+          },
+          "notes": [
+            "Стрелка направлена к острову; вершина исходного наконечника может быть у берега/рядом с островом. Название цели — предложение, не утверждение точки суши."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-13"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-14",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 41.114,
+            "y": 68.432,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [
+              {
+                "placeId": "place-atlantic-ocean",
+                "direction": "south"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-14"
+          }
+        },
+        {
+          "anchorId": "l1-09-glyph-15",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 47.494,
+            "y": 24.469,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-europe",
+              "place-eurasia"
+            ],
+            "regions": [
+              {
+                "placeId": "place-europe",
+                "direction": "north"
+              }
+            ],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places",
+              "regions"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 23,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-09-glyph-15"
+          }
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-10",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-10-glyph-01",
+          "l1-10-glyph-02",
+          "l1-10-glyph-03",
+          "l1-10-glyph-04",
+          "l1-10-glyph-05",
+          "l1-10-glyph-06",
+          "l1-10-glyph-08",
+          "l1-10-glyph-07"
+        ]
+      },
+      "records": [
+        {
+          "anchorId": "l1-10-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 15.896,
+            "y": 37.64,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-north-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-01"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 74.297,
+            "y": 39.208,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-asia",
+              "place-eurasia"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-02"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.21,
+            "y": 53.932,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-africa"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-03"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 59.812,
+            "y": 92.873,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-antarctica"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [
+            "Круг находится у берега/края суши. Проверить принадлежность центра и допустимость региональной интерпретации."
+          ],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-04"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 92.061,
+            "y": 46.08,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-pacific-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-05"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 26.459,
+            "y": 67.068,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-south-america"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-06"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 36.005,
+            "y": 88.653,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-southern-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-07"
+          }
+        },
+        {
+          "anchorId": "l1-10-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 35.041,
+            "y": 32.336,
+            "pointsTo": null
+          },
+          "physical": {
+            "places": [
+              "place-atlantic-ocean"
+            ],
+            "regions": [],
+            "sides": [],
+            "between": [],
+            "hemispheres": [],
+            "boundaries": []
+          },
+          "target": null,
+          "proposedFields": {
+            "physical": [
+              "places"
+            ],
+            "target": []
+          },
+          "notes": [],
+          "provenance": {
+            "source": "Level 1 Oceans & Continents.pdf",
+            "mapPdfPage": 25,
+            "method": "visual_source_map",
+            "sourceGlyphId": "l1-10-glyph-08"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -14,6 +14,7 @@
  }
  function same(a,b){
   if(a===b)return true;
+  if(Array.isArray(a)||Array.isArray(b))return Array.isArray(a)&&Array.isArray(b)&&a.length===b.length&&a.every((v,i)=>same(v,b[i]));
   if(!object(a)||!object(b))return false;
   const keys=Object.keys(a);
   return keys.length===Object.keys(b).length&&keys.every(k=>Object.hasOwn(b,k)&&same(a[k],b[k]));

@@ -64,8 +64,14 @@ def extract_arrows(page,rect,markers):
         if d['type']=='s' and len(items)==1 and items[0][0]=='l':
             _,start,end=items[0]
             lines.append((start,end))
-        elif d['type']=='fs' and len(items)>=3 and all(item[0]=='l' for item in items):
-            heads.append(d['rect'])
+        elif d['type']=='fs' and len(items)==3 and all(item[0]=='l' for item in items):
+            vertices=[]
+            for item in items:
+                for point in item[1:]:
+                    if not any(math.hypot(point.x-v.x,point.y-v.y)<0.001 for v in vertices):
+                        vertices.append(point)
+            if len(vertices)==3:
+                heads.append({'rect':d['rect'],'vertices':vertices})
     matches=[]
     for start,end in lines:
         candidate=[]
@@ -75,17 +81,24 @@ def extract_arrows(page,rect,markers):
             if d<31:candidate.append((d,idx))
         if not candidate: continue
         d,idx=min(candidate)
-        matching=[r for r in heads if math.hypot((r.x0+r.x1)/2-end.x,(r.y0+r.y1)/2-end.y)<14]
+        matching=[h for h in heads if math.hypot((h['rect'].x0+h['rect'].x1)/2-end.x,(h['rect'].y0+h['rect'].y1)/2-end.y)<14]
         if len(matching)!=1:continue
         if any(m['marker']==idx for m in matches):raise ValueError('Multiple arrows for same glyph')
-        matches.append({'marker':idx,'from':{'x':round((start.x-rect.x0)*100/rect.width,3),
-                                           'y':round((start.y-rect.y0)*100/rect.height,3)},
-                        'target':{'x':round((end.x-rect.x0)*100/rect.width,3),
-                                  'y':round((end.y-rect.y0)*100/rect.height,3)}})
+        head=matching[0]
+        dx,dy=end.x-start.x,end.y-start.y
+        # The shaft ends inside the triangle, short of its visible apex.
+        tip=max(head['vertices'],key=lambda v:(v.x-start.x)*dx+(v.y-start.y)*dy)
+        def percent(point):
+            return {'x':round((point.x-rect.x0)*100/rect.width,3),
+                    'y':round((point.y-rect.y0)*100/rect.height,3)}
+        matches.append({'marker':idx,'from':percent(start),'shaftEnd':percent(end),
+                        'headPoints':[percent(v) for v in head['vertices']],
+                        'target':percent(tip)})
     if len(matches)!=len(lines):
         raise ValueError(f'Arrow matching incomplete on PDF page {page.number+1}: {len(matches)}/{len(lines)}')
     for m in matches:
-        markers[m['marker']]['pointsTo']={**m['target'],'from':m['from']}
+        markers[m['marker']]['pointsTo']={**m['target'],'from':m['from'],
+                                        'shaftEnd':m['shaftEnd'],'headPoints':m['headPoints']}
     return len(matches)
 
 def get_map(page):

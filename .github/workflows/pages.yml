@@ -73,6 +73,8 @@ jobs:
           node scripts/validate-spatial-semantics.mjs
           node --check tools/review-spatial.js
           node scripts/validate-spatial-review.mjs
+          node tools/build_l1_spatial_proposals.mjs --check
+          node scripts/validate-spatial-proposals.mjs
 
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs

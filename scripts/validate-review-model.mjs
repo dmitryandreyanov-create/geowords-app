@@ -12,6 +12,14 @@ model.confirm(state,p,unique);
 model.assign(state,p,repeated,repeated.candidateMarkerIds[0]);
 model.confirm(state,p,repeated);
 const saved=model.exportReview(puzzles,state);
+// Real source polygons contain arrays; roundtrip must compare their vertices.
+const arrowPuzzle=puzzles.find(p=>p.markers.some(m=>m.pointsTo));
+const arrowClue=arrowPuzzle.clues.find(c=>c.markerId&&arrowPuzzle.markers.find(m=>m.id===c.markerId)?.pointsTo);
+const arrowState=model.create(puzzles);model.confirm(arrowState,arrowPuzzle,arrowClue);
+const arrowExport=JSON.parse(JSON.stringify(model.exportReview(puzzles,arrowState)));
+assert.equal(model.stats(puzzles,model.restore(puzzles,arrowExport)).confirmed,1);
+arrowExport.confirmations[arrowPuzzle.id][arrowClue.position].pointsTo.headPoints[0].x+=.01;
+assert.throws(()=>model.restore(puzzles,arrowExport),/устарело/);
 state=model.restore(puzzles,JSON.parse(JSON.stringify(saved)));
 assert.equal(model.stats(puzzles,state).confirmed,2);
 model.assign(state,p,repeated,repeated.candidateMarkerIds[1]);
