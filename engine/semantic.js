@@ -8,7 +8,7 @@
  function shuffle(items,seed){const array=[...items];let s=hash(seed)||1;for(let i=array.length-1;i>0;i--){s^=s<<13;s^=s>>>17;s^=s<<5;const j=Math.floor(((s>>>0)/4294967296)*(i+1));[array[i],array[j]]=[array[j],array[i]]}return array}
  const ORDINALS=['first','second','third','fourth','fifth','sixth','seventh','eighth','ninth','tenth','eleventh','twelfth','thirteenth','fourteenth','fifteenth'];
  const MIN_MAP_WIDTH=300, MAP_ASPECT=1057/1587, MIN_SEPARATION=29;
- function distance(a,b){return Math.hypot((a.x-b.x)*MIN_MAP_WIDTH/100,(a.y-b.y)*MIN_MAP_WIDTH*MAP_ASPECT/100)}
+ function distance(a,b,geometry){const width=geometry?.widthPx??MIN_MAP_WIDTH,aspect=geometry?.heightPerWidth??MAP_ASPECT;return Math.hypot((a.x-b.x)*width/100,(a.y-b.y)*width*aspect/100)}
  // Regions denote the geographic object reached by an arrow; sitsIn records
  // where the *letter* physically lies. An ocean clue must not also describe
  // a river letter drawn in that ocean, even if the river target is on land.
@@ -24,30 +24,64 @@
    const from=end.from||{x:anchor.x+(end.x-anchor.x)*.25,y:anchor.y+(end.y-anchor.y)*.25};
    return [from,end];
  }
- function pointSegmentDistance(point,a,b){
-   const px=point.x*MIN_MAP_WIDTH/100,py=point.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
-   const ax=a.x*MIN_MAP_WIDTH/100,ay=a.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
-   const bx=b.x*MIN_MAP_WIDTH/100,by=b.y*MIN_MAP_WIDTH*MAP_ASPECT/100;
+ function pointSegmentDistance(point,a,b,geometry){
+   const width=geometry?.widthPx??MIN_MAP_WIDTH,aspect=geometry?.heightPerWidth??MAP_ASPECT;
+   const px=point.x*width/100,py=point.y*width*aspect/100;
+   const ax=a.x*width/100,ay=a.y*width*aspect/100;
+   const bx=b.x*width/100,by=b.y*width*aspect/100;
    const dx=bx-ax,dy=by-ay;
    const t=dx*dx+dy*dy?Math.max(0,Math.min(1,((px-ax)*dx+(py-ay)*dy)/(dx*dx+dy*dy))):0;
    return Math.hypot(px-(ax+t*dx),py-(ay+t*dy));
  }
- function arrowIntersectsMarker(arrowOwner,marker){
+ function arrowIntersectsMarker(arrowOwner,marker,geometry){
    const segment=arrowSegment(arrowOwner);
-   return !!segment&&pointSegmentDistance(marker,segment[0],segment[1])<ARROW_MARKER_CLEARANCE;
+   if(segment&&pointSegmentDistance(marker,segment[0],segment[1],geometry)<ARROW_MARKER_CLEARANCE)return true;
+   const head=arrowOwner.pointsTo?.headPoints;
+   return !!geometry&&Array.isArray(head)&&head.some((p,i)=>pointSegmentDistance(marker,p,head[(i+1)%head.length],geometry)<ARROW_MARKER_CLEARANCE);
  }
- function arrowsClear(selected){
-   return selected.every(a=>selected.every(b=>a===b||!arrowIntersectsMarker(a,b)));
+ function arrowsClear(selected,geometry){
+   return selected.every(a=>selected.every(b=>a===b||!arrowIntersectsMarker(a,b,geometry)));
  }
  function eligibleCues(anchor,selected){
    return (anchor.cues||[]).filter(cue=>selected.filter(other=>matchesRegion(other,cue[1])).length===1);
  }
- function resolvable(selected){return selected.every(a=>eligibleCues(a,selected).length>0)}
- function add(selected,anchor){
+ function resolvable(selected,cues=eligibleCues){return selected.every(a=>cues(a,selected).length>0)}
+ function add(selected,anchor,options={}){
    if(!anchor||!Number.isFinite(anchor.x)||!Number.isFinite(anchor.y)||anchor.x<0||anchor.x>100||anchor.y<0||anchor.y>100)return false;
-   if(selected.some(other=>other.id===anchor.id||distance(other,anchor)<MIN_SEPARATION))return false;
-   if(!resolvable([...selected,anchor])||!arrowsClear([...selected,anchor]))return false;
+   if(selected.some(other=>other.id===anchor.id||distance(other,anchor,options.geometry)<MIN_SEPARATION))return false;
+   if(!resolvable([...selected,anchor],options.cues)||!arrowsClear([...selected,anchor],options.geometry))return false;
    selected.push(anchor);return true;
+ }
+ // Shared planner for every approved Curriculum course. Caller supplies the
+ // independently fact-gated cue resolver; the sampler is not workbook-specific.
+ function generateAnchored({word,anchors,cues,geometry,seed,freshAnchorIds=[],attempts=128,avoidDescriptorSets=[]}={}){
+   if(typeof word!=='string'||!/^\p{L}+$/u.test(word)||!Array.isArray(anchors)||typeof cues!=='function'||
+    !geometry||!Number.isFinite(geometry.widthPx)||geometry.widthPx<MIN_MAP_WIDTH||!Number.isFinite(geometry.heightPerWidth)||geometry.heightPerWidth<=0||!Array.isArray(avoidDescriptorSets)||
+    !Number.isSafeInteger(attempts)||attempts<1||attempts>512)return null;
+   const letters=Array.from(word);if(!letters.length||letters.length>ORDINALS.length)return null;
+   if(anchors.some(a=>!a||typeof a.id!=='string')||new Set(anchors.map(a=>a.id)).size!==anchors.length||!Array.isArray(freshAnchorIds)||
+    new Set(freshAnchorIds).size!==freshAnchorIds.length||freshAnchorIds.some(id=>!anchors.some(a=>a.id===id)))return null;
+   const fresh=new Set(freshAnchorIds),quota=fresh.size?Math.ceil(letters.length*.35):0;
+   if(quota>fresh.size||letters.length>anchors.length)return null;
+   const options={cues,geometry};
+   for(let attempt=0;attempt<attempts;attempt++){
+    const chosen=[];
+    for(const a of shuffle(anchors.filter(a=>fresh.has(a.id)),seed+':fresh:'+attempt)){if(chosen.length===quota)break;add(chosen,a,options)}
+    if(chosen.length!==quota)continue;
+    for(const a of shuffle(anchors,seed+':base:'+attempt)){if(chosen.length===letters.length)break;add(chosen,a,options)}
+    if(chosen.length!==letters.length)continue;
+    const ordered=shuffle(chosen,seed+':order'),markers=[],clues=[];
+    for(const [i,a] of ordered.entries()){
+     const d=shuffle(cues(a,ordered),seed+':cue:'+a.id)[0];if(!d)return null;
+     markers.push({id:a.id,x:a.x,y:a.y,letter:letters[i],...(a.pointsTo?{pointsTo:JSON.parse(JSON.stringify(a.pointsTo))}:{})});
+     // Stored localized phrase is kept whole; no geography grammar is synthesized.
+     clues.push({position:i+1,markerId:a.id,descriptorId:d.id,text:'The '+ORDINALS[i]+' letter — '+d.text.en});
+    }
+    const descriptorSignature=clues.map(c=>c.descriptorId).sort().join('|');
+    if(avoidDescriptorSets.includes(descriptorSignature))continue;
+    return {answer:word,markers,clues,descriptorSignature,freshCount:ordered.filter(a=>fresh.has(a.id)).length,requiredFreshCount:quota};
+   }
+   return null;
  }
  function generate(course,entry,stepIndex,variant,review,progress){
    const cfg=course.semantic,step=course.steps[stepIndex],word=entry.word;
@@ -111,5 +145,5 @@
    if(!arrowsClear(selected))return false;
    return true;
  }
- return {generate,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION,matchesRegion,arrowIntersectsMarker,arrowsClear};
+ return {generate,generateAnchored,verify,distance,MIN_MAP_WIDTH,MIN_SEPARATION,matchesRegion,arrowIntersectsMarker,arrowsClear};
 });

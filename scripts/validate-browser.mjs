@@ -4,6 +4,7 @@ import path from 'node:path';
 import http from 'node:http';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
+import {generatorFixture} from './validate-curriculum-generator.mjs';
 const root=process.cwd(),puzzles=['l1','l2'].flatMap(b=>JSON.parse(fs.readFileSync(`data/import-staging/${b}-staging.json`)).puzzles);
 const mime={'.html':'text/html','.js':'text/javascript','.json':'application/json','.webp':'image/webp','.css':'text/css','.webmanifest':'application/manifest+json'};
 const server=http.createServer((req,res)=>{
@@ -123,6 +124,31 @@ try{
  assert(await sp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'spatial panel fits phone width');
  if(process.env.GEOWORDS_QA_SCREENSHOT)await sp.locator('#spatialPanel').screenshot({path:process.env.GEOWORDS_QA_SCREENSHOT});
  await spatialContext.close();
+ // Browser API smoke for the new shared generator. Synthetic curriculum only;
+ // no new game route and no source approvals are installed by this test.
+ const apiContext=await browser.newContext({viewport:{width:360,height:800}});
+ const apiPage=await apiContext.newPage();apiPage.on('pageerror',e=>errors.push(e.message));
+ const loadApis=async()=>{await apiPage.goto(url+'/tools/review-import.html');await apiPage.waitForSelector('#geoAnchor option',{state:'attached'});for(const file of ['geowords.js','semantic.js','curriculum.js'])await apiPage.addScriptTag({url:url+'/engine/'+file})};
+ await loadApis();
+ const fixture=generatorFixture();
+ const apiCreated=await apiPage.evaluate(({c,one})=>{
+  const api=globalThis.GEOWORD_CURRICULUM;let state=api.newLearner(c);
+  state=api.acknowledge(c,state,'fixture-course',one.id,'before').state;
+  state=api.complete(c,state,'fixture-course',{id:one.authoredPuzzleId,courseId:'fixture-course',source:'authored'}).state;
+  state=api.acknowledge(c,state,'fixture-course',one.id,'after').state;
+  const result=api.generatePractice(c,state,'fixture-course',{variant:7});
+  localStorage.setItem('synthetic-curriculum-qa',JSON.stringify({c,state:result.state,puzzle:result.puzzle}));
+  return {kind:result.kind,fresh:result.puzzle.freshCount,letters:result.puzzle.markers.length};
+ },fixture);
+ assert.equal(apiCreated.kind,'generated');assert(apiCreated.fresh/apiCreated.letters>=.35);
+ await loadApis();
+ const apiRestored=await apiPage.evaluate(()=>{
+  const api=globalThis.GEOWORD_CURRICULUM,{c,state:raw,puzzle}=JSON.parse(localStorage.getItem('synthetic-curriculum-qa'));
+  const state=api.normalize(c,raw),valid=api.verifyPractice(c,state,'fixture-course',puzzle),done=api.complete(c,state,'fixture-course',puzzle);
+  return {valid,count:done.count,credited:done.credited,duplicate:api.complete(c,done.state,'fixture-course',puzzle).credited,history:state.generationHistory.length};
+ });
+ assert.deepEqual(apiRestored,{valid:true,count:2,credited:true,duplicate:false,history:1});
+ await apiContext.close();
  const incompatibleContext=await browser.newContext({viewport:{width:360,height:800},acceptDownloads:true});
  await incompatibleContext.addInitScript(value=>localStorage.setItem('geowords-spatial-review-v1',value),JSON.stringify(geoStale));
  const ip=await incompatibleContext.newPage();ip.on('pageerror',e=>errors.push(e.message));await ip.goto(url+'/tools/review-import.html');await ip.waitForSelector('#geoAnchor option',{state:'attached'});
@@ -173,5 +199,5 @@ try{
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);
- console.log('PASS browser 360px: retained user baseline, spatial reload/export/import and approval invalidation, both arrow channels, 55 editor arrows, legacy review, blocked storage, 21 Rivers words, Mountains and release exclusion.');
+ console.log('PASS browser 360px: shared generator API reload/credit on synthetic data, retained user baseline, spatial review, 55 exact arrows, legacy import, blocked storage, 21 Rivers words, Mountains and release exclusion.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve))}
