@@ -5,6 +5,7 @@ import curriculum from '../engine/curriculum.js';
 import spatial from '../engine/spatial-semantics.js';
 import geography from './spatial-review-model.js';
 import mapping from './review-model.js';
+import learning from './learning-review-model.js';
 import {buildCatalog} from './build_l1_catalog.mjs';
 import {buildSpatialReview} from './build_l1_spatial_review.mjs';
 import {loadScript} from './build_lexicon_draft.mjs';
@@ -39,17 +40,18 @@ function inventory(s,spatialReview=geography.create(s.spatial)){
  const plans=s.lexicon.practicePlans.filter(p=>course.steps.some(step=>step.id===p.stepId));
  const wordIds=new Set(plans.flatMap(p=>p.candidateWordIds));
  const rows=[];
+ const learningSources=new Map(learning.sourceRows(s).map(r=>[r.key,r.source]));
  const add=(section,id,source,fields)=>rows.push({key:section+':'+id,section,id,sourceSha256:fingerprint(source),fields});
  add('release',s.draft.id,{id:s.draft.id,courseId:course.id,authoredAnswers:s.authoredAnswers},{courseIds:null});
  add('course',course.id,course,{requiresFacts:null,requiresCourses:null});
  s.catalog.places.forEach(p=>add('place',p.id,p,{label:null,kind:null}));
- facts.forEach(f=>add('fact',f.id,f,{text:null,introducesPlaces:null,caveatFactIds:null}));
+ facts.forEach(f=>add('fact',f.id,learningSources.get('fact:'+f.id),{text:null,introducesPlaces:null,caveatFactIds:null}));
  s.catalog.descriptors.forEach(d=>add('descriptor',d.id,d,{text:null,kind:null,query:null}));
  s.lexicon.entries.filter(e=>wordIds.has(e.id)).forEach(e=>add('word',e.id,e,{word:null,definition:null}));
  course.steps.forEach(step=>{
   const p=s.staging.puzzles.find(p=>p.id===step.authoredPuzzleId),scope=s.spatial.puzzles.find(p=>p.puzzleId===step.authoredPuzzleId);
   ensure(p&&scope,'Не найдено исходное задание');
-  add('step',step.id,{step,plan:plans.find(p=>p.stepId===step.id)},{requiresFacts:null,learnBefore:null,unlockAfter:null,introducedPlaces:null,wordIds:null,focusPlaceIds:null});
+  add('step',step.id,learningSources.get('step:'+step.id),{requiresFacts:null,learnBefore:null,unlockAfter:null,introducedPlaces:null,wordIds:null,focusPlaceIds:null});
   add('map',p.id,{map:scope.map,asset:p.map,aspect:p.mapAspect},{containsPlaces:null});
   add('puzzle',p.id,{p,assignments:s.assignments.assignments[p.id]||{}},{contentReviewed:null});
  });
@@ -67,7 +69,7 @@ export function createEditorialTemplate(s,{spatialReview=geography.create(s.spat
   records:rows.map(r=>({key:r.key,sourceSha256:r.sourceSha256,status:'editorial_pending',decision:clone(r.fields),evidence:null}))};
 }
 
-export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spatial),assignments=s.assignments}={}){
+export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spatial),assignments=s.assignments,learningReview}={}){
  const {course,facts}=inventory(s),blockers=[],decisions=new Map();
  const block=(code,key,detail)=>blockers.push({code,key,detail});
  const result=()=>({schemaVersion:1,courseId:course.id,ready:blockers.length===0,blockers,curriculum:null});
@@ -76,6 +78,15 @@ export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spati
  try{mapped=mapping.restore([...s.staging.puzzles,...s.otherStaging.puzzles],assignments)}catch(e){block('INVALID_ASSIGNMENTS','assignments',e.message)}
  const rows=inventory(s,geo||geography.create(s.spatial)).rows;
  editorial??=createEditorialTemplate(s,{spatialReview:geo||geography.create(s.spatial)});
+ if(learningReview){
+  try{
+   const hashes=Object.fromEntries(learning.sourceRows(s).map(r=>[r.key,fingerprint(r.source)]));
+   const decisionHashes=Object.fromEntries((learningReview.records||[]).map(r=>[r.key,fingerprint(r.decision)]));
+   const checked=learning.restore(s,learning.create(s,hashes),learningReview,decisionHashes);
+   editorial=clone(editorial);
+   for(const row of checked.records){const dest=editorial.records.find(r=>r.key===row.key);ensure(dest,'Нет записи в общем manifest');ensure(dest.status!=='approved'||same(dest,row),'Конфликт с утверждённым общим manifest: '+row.key);Object.assign(dest,row)}
+  }catch(e){block('INVALID_LEARNING_REVIEW','learning',e.message);return result()}
+ }
  if(editorial?.schemaVersion!==1||editorial.courseId!==course.id||!Array.isArray(editorial.records)){
   block('INVALID_EDITORIAL','editorial','Неверный формат редакторских решений');return result();
  }
@@ -209,7 +220,7 @@ if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const s=loadL1Sources(),args=process.argv.slice(2),option=name=>{const i=args.indexOf(name);if(i<0)return undefined;ensure(args[i+1]&&!args[i+1].startsWith('--'),'Нет пути для '+name);return args[i+1]};
  const read=path=>path?JSON.parse(fs.readFileSync(path,'utf8')):undefined;
  const spatialReview=read(option('--spatial'));
- const result=args.includes('--template')?createEditorialTemplate(s,{spatialReview}):adaptCatalog(s,{editorial:read(option('--editorial')),spatialReview,assignments:read(option('--assignments'))});
+ const result=args.includes('--template')?createEditorialTemplate(s,{spatialReview}):adaptCatalog(s,{editorial:read(option('--editorial')),spatialReview,assignments:read(option('--assignments')),learningReview:read(option('--learning'))});
  console.log(JSON.stringify(result,null,2));
  if(args.includes('--require-ready')&&!result.ready)process.exitCode=1;
 }

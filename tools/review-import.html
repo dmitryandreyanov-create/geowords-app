@@ -41,11 +41,49 @@
 <details open><summary>Независимый черновой отчёт о подсказках</summary><p class="help">Отчёт проверяет все буквы задания, но использует ещё не утверждённые запросы и предполагаемые факты. Он не подтверждает уроки, не ставит старые отметки географии и не публикует задания.</p><div id="geoReport" class="sub"></div></details>
 </div></section>
 <p id="spatialUnavailable" class="help" hidden>Географическая панель пока доступна только для Level 1. Назначения и проверка подсказок Level 2 работают как раньше.</p>
+<section class="pane learning-pane" id="learningPanel" hidden>
+<header><h2>Факты и порядок обучения · Level 1</h2><p id="learningProgress" class="sub"></p></header>
+<div class="details">
+<p class="help">Проверяйте содержание по исходнику: текст, применимость, оговорки и момент изучения. Подтверждение здесь не утверждает географию, словарь или выпуск уровня. Карты и детская игра не меняются. Для списков можно выбрать несколько пунктов; пустой список становится решением только после явной отметки проверки.</p>
+<fieldset id="learningControls">
+<label>Кто проверяет<input id="learningReviewer" type="text" autocomplete="name" placeholder="Имя проверяющего — для явного подтверждения"></label>
+<div class="learning-grid">
+<section><h3>Содержание факта</h3>
+<label for="learningFact">Исходный блок L1</label><select id="learningFact"></select>
+<p id="learningProvenance" class="sub"></p><pre id="learningSource" class="learning-source"></pre>
+<details><summary>Связанные оговорки исходника</summary><pre id="learningCaveatSource" class="learning-source"></pre></details>
+<div class="toolbar"><button id="learningCopyFact" type="button">Перенести исходный текст в пустой черновик</button></div>
+<label for="learningText">Проверяемый текст (английский)</label><textarea id="learningText" rows="6"></textarea>
+<label for="learningFact-introducesPlaces">Какие объекты вводит этот факт</label><select id="learningFact-introducesPlaces" multiple size="5"></select>
+<label><input id="learningFactKnown-introducesPlaces" type="checkbox"> Список объектов проверен (пустой = не вводит объектов)</label>
+<label for="learningFact-caveatFactIds">Оговорки, которые нужно изучить вместе с фактом</label><select id="learningFact-caveatFactIds" multiple size="4"></select>
+<label><input id="learningFactKnown-caveatFactIds" type="checkbox"> Список оговорок проверен</label>
+<p id="learningFactStatus" class="sub"></p>
+<label><input id="learningFactChecked" type="checkbox"> Проверил текст, применимость, оговорки и вводимые объекты</label>
+<div class="toolbar"><button id="learningConfirmFact" type="button">Подтвердить решение по факту</button><button id="learningRevokeFact" type="button">Снять подтверждение факта</button></div>
+</section>
+<section><h3>Порядок шага</h3><label for="learningStep">Шаг L1</label><select id="learningStep"></select>
+<pre id="learningCandidates" class="learning-source"></pre>
+<div class="toolbar"><button id="learningCopyStep" type="button">Перенести предложения в пустой черновик</button></div>
+<div id="learningStepFields" class="learning-fields"></div>
+<p id="learningStepStatus" class="sub"></p>
+<label><input id="learningStepChecked" type="checkbox"> Проверил, что факты доступны к нужному моменту, списки объектов и шесть слов уместны. Это не утверждение определений слов или географии</label>
+<div class="toolbar"><button id="learningConfirmStep" type="button">Подтвердить порядок шага</button><button id="learningRevokeStep" type="button">Снять подтверждение порядка</button></div>
+</section></div>
+<div class="toolbar"><button id="learningExport" type="button">Экспорт фактов и порядка JSON</button><label class="import-label">Импорт фактов и порядка JSON<input id="learningImport" type="file" accept=".json,application/json"></label><button id="learningBackup" type="button" hidden>Скачать несовместимое сохранение обучения</button></div>
+</fieldset>
+<p id="learningMessage" class="review-status" role="status" aria-live="polite"></p>
+<details><summary>Предварительная проверка порядка всех десяти шагов</summary><p class="help">Проверка использует ваши решения по фактам/шагам и ещё не утверждённые candidate-зависимости исходных подсказок. «Порядок согласован» здесь не доказывает географическую однозначность и не разрешает детскую игру. Неутверждённый или ошибочный предыдущий шаг не открывает знания для следующего.</p><div id="learningReport" class="sub"></div></details>
+</div></section>
+<p id="learningUnavailable" class="help" hidden>Проверка фактов и порядка пока доступна для Level 1; Level 2 остаётся в очереди.</p>
+<style>.learning-pane{margin:0 12px 16px}.learning-pane fieldset{border:0;padding:0;min-width:0}.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.learning-pane label{display:block;margin:8px 0 5px}.learning-pane select,.learning-pane textarea,.learning-pane input[type=text]{width:100%;max-width:100%;font:inherit;border:1px solid #9fbfc5;border-radius:6px;padding:6px}.learning-source{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f8f9;padding:10px;border-radius:8px;font:inherit;font-size:13px}.learning-fields>div{margin-bottom:16px}#learningReport>div{padding:7px 0;border-bottom:1px solid #e0ecee;overflow-wrap:anywhere}#learningProvenance,#learningCandidates{overflow-wrap:anywhere}@media(max-width:750px){.learning-grid{grid-template-columns:1fr}}</style>
 <style>[hidden]{display:none!important}.spatial-pane{margin:0 12px 16px}.geo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.geo-grid label{display:flex;flex-direction:column;gap:5px}.geo-grid select{font:inherit;max-width:100%;width:100%;padding:5px;border:1px solid #9fbfc5;border-radius:6px}#geoReport>div{padding:5px 0;border-bottom:1px solid #e0ecee}@media(max-width:750px){.geo-grid{grid-template-columns:1fr}}</style>
 <script src="./review-model.js"></script>
 <script src="../engine/spatial-semantics.js"></script>
 <script src="./spatial-review-model.js"></script>
 <script src="./review-spatial.js"></script>
+<script src="./learning-review-model.js"></script>
+<script src="./review-learning.js"></script>
 <script src="./review-import.js"></script>
 </body>
 </html>

@@ -62,7 +62,11 @@ jobs:
         run: node scripts/validate-curriculum-generator.mjs
 
       - name: Validate real L1 catalog adapter and explicit editorial gates
-        run: node scripts/validate-catalog-adapter.mjs
+        run: |
+          node scripts/validate-catalog-adapter.mjs
+          node --check tools/learning-review-model.js
+          node --check tools/review-learning.js
+          node scripts/validate-learning-review.mjs
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs

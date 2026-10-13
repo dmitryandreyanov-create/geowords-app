@@ -104,7 +104,7 @@ function renderClues(){
    b.addEventListener('click',()=>{state.selected=i;renderMap();renderClues()});
  }
 }
-function render(){renderList();renderMap();renderClues();status();globalThis.GEOWORD_SPATIAL_PANEL?.render(current().id)}
+function render(){renderList();renderMap();renderClues();status();globalThis.GEOWORD_SPATIAL_PANEL?.render(current().id);globalThis.GEOWORD_LEARNING_PANEL?.render(current().id)}
 function selectMarker(id){
  const p=current(),clue=selectedClue();
  if(!clue.candidateMarkerIds.includes(id))return;
@@ -147,7 +147,6 @@ async function start(){
      catch(e){$('message').textContent='Локальные данные несовместимы. Экспортируйте копию перед дальнейшей работой: '+e.message}
    }
    state.selected=Math.max(0,state.puzzles[0].clues.findIndex(c=>!assignFor(state.puzzles[0],c)));
-   $('workspace').hidden=false;
    $('previous').addEventListener('click',()=>{state.index=Math.max(0,state.index-1);state.selected=0;render()});
    $('next').addEventListener('click',()=>{state.index=Math.min(state.puzzles.length-1,state.index+1);state.selected=0;render()});
    $('clearSelected').addEventListener('click',()=>{
@@ -160,7 +159,8 @@ async function start(){
    $('save').addEventListener('click',()=>{try{save()}catch(e){$('message').textContent=e.message}});
    $('restore').addEventListener('change',async e=>{try{const file=e.target.files?.[0];if(file)restore(JSON.parse(await file.text()))}catch(err){$('message').textContent='Ошибка импорта: '+err.message}e.target.value=''});
    await globalThis.GEOWORD_SPATIAL_PANEL?.init(()=>state.assignments);
-   render();state.loaded=true;
+   await globalThis.GEOWORD_LEARNING_PANEL?.init();
+   $('workspace').hidden=false;render();state.loaded=true;
    if(storageWarning)$('message').textContent='Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
  }catch(e){$('appError').classList.remove('hidden');$('appError').textContent='Ошибка загрузки: '+e.message}
 }
