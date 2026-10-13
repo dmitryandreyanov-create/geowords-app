@@ -58,6 +58,16 @@ assert.deepEqual(state,baseState,'generation does not mutate the supplied state'
 const noRelease=structuredClone(c);noRelease.status='not_for_live_use';
 assert.equal(engine.generatePractice(noRelease,state,'fixture-course').reason,'CURRICULUM_NOT_APPROVED');
 assert(!engine.verifyPractice(noRelease,state,'fixture-course',sameA.puzzle));
+assert.deepEqual(engine.normalize(noRelease,state).knownFacts,[],'unreleased curriculum cannot restore learned facts');
+assert.equal(engine.availability(noRelease,engine.newLearner(noRelease),'fixture-course').kind,'blocked');
+assert(!engine.acknowledge(noRelease,engine.newLearner(noRelease),'fixture-course',one.id,'before').accepted);
+assert(!engine.complete(noRelease,state,'fixture-course',authored(one)).credited);
+const lostLessonPlace=structuredClone(c);
+lostLessonPlace.courses[0].steps[1].introducedPlaces=[];
+lostLessonPlace.courses[0].steps[1].learnBefore=[];
+lostLessonPlace.courses[0].steps[1].generatedPractice={mapId:'second-map',focusPlaceIds:[]};
+lostLessonPlace.maps.push({...structuredClone(map),id:'second-map',containsPlaces:[...map.containsPlaces].filter(id=>id!==focus)});
+assert.throws(()=>engine.validate(lostLessonPlace),/loses a previously introduced/,'places introduced by lessons must accumulate too');
 const fingerprints=new Set();
 for(let i=0;i<20;i++){
  const result=engine.generatePractice(c,state,'fixture-course',{variant:i});assert.equal(result.kind,'generated');

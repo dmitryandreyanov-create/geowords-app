@@ -61,6 +61,9 @@ jobs:
       - name: Validate shared Curriculum practice generator on synthetic data
         run: node scripts/validate-curriculum-generator.mjs
 
+      - name: Validate real L1 catalog adapter and explicit editorial gates
+        run: node scripts/validate-catalog-adapter.mjs
+
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs
 

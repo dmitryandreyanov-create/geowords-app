@@ -57,7 +57,8 @@
      const cfg=step.generatedPractice,map=maps.get(cfg.mapId);
      if(!approved(map)||!/^\.\/assets\/(?:[A-Za-z0-9_-]+\/)*[A-Za-z0-9_-][A-Za-z0-9_.-]*\.(?:webp|png|jpe?g|svg)$/.test(map.asset)||!mapGeometry(map)||!/^[a-f0-9]{64}$/.test(map.sha256))throw Error('Missing approved practice map');
      refs(map.containsPlaces,places,'map visible place');
-     const retained=course.steps.slice(0,course.steps.indexOf(step)+1).flatMap(s=>s.introducedPlaces);
+     const retained=course.steps.slice(0,course.steps.indexOf(step)+1).flatMap(s=>[...s.introducedPlaces,
+      ...[...s.learnBefore,...s.unlockAfter].flatMap(id=>facts.get(id).introducesPlaces||[])]);
      if(retained.some(id=>!map.containsPlaces.includes(id)))throw Error('Practice map loses a previously introduced course object');
      refs(cfg.focusPlaceIds,places,'practice focus');
      const introduced=new Set([...step.introducedPlaces,...[...step.learnBefore,...step.unlockAfter].flatMap(id=>facts.get(id).introducesPlaces||[])]);
@@ -91,7 +92,7 @@
   const learn=factIds=>{for(const id of factIds){knownFacts.add(id);for(const place of catalog.facts.get(id).introducesPlaces||[])knownPlaces.add(place)}};
   for(const courseId of c.courseOrder){
    const course=catalog.courses.get(courseId),dest=state.courses[courseId];
-   if(!approved(course)||!course.requiresFacts.every(id=>knownFacts.has(id))||!course.requiresCourses.every(id=>finished(catalog.courses.get(id),state.courses[id])))continue;
+   if(c.status!==undefined&&!approved(c)||!approved(course)||!course.requiresFacts.every(id=>knownFacts.has(id))||!course.requiresCourses.every(id=>finished(catalog.courses.get(id),state.courses[id])))continue;
    const base=core.normalizeProgress(previous[courseId],course);
    for(const step of course.steps){
     if(!step.requiresFacts.every(id=>knownFacts.has(id)))break;
@@ -129,6 +130,7 @@
   const catalog=validate(c),state=normalize(c,raw),course=catalog.courses.get(courseId);
   if(!course)return {state,kind:'blocked',reason:'UNKNOWN_COURSE'};
   if(!approved(course))return {state,kind:'blocked',reason:'CONTENT_NOT_APPROVED'};
+  if(c.status!==undefined&&!approved(c))return {state,kind:'blocked',reason:'CURRICULUM_NOT_APPROVED'};
   if(!course.requiresCourses.every(id=>finished(catalog.courses.get(id),state.courses[id])))return {state,kind:'blocked',reason:'PREREQUISITE_COURSE'};
   if(!course.requiresFacts.every(id=>state.knownFacts.includes(id)))return {state,kind:'blocked',reason:'UNKNOWN_FACTS'};
   if(finished(course,state.courses[courseId]))return {state,kind:'review',courseId};
