@@ -1,0 +1,1704 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "warning": "Blank geographic review scaffold, not inferred from selected clue answers. No spatial memberships are approved.",
+  "puzzles": [
+    {
+      "puzzleId": "l1-01",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-01-glyph-05",
+          "l1-01-glyph-07",
+          "l1-01-glyph-09",
+          "l1-01-glyph-03",
+          "l1-01-glyph-01",
+          "l1-01-glyph-04",
+          "l1-01-glyph-02",
+          "l1-01-glyph-08",
+          "l1-01-glyph-06"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-01-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.796,
+            "y": 72.117,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.97,
+            "y": 58.261,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 68.66,
+            "y": 33.481,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 24.89,
+            "y": 67.862,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 17.343,
+            "y": 35.062,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 58.48,
+            "y": 95.316,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 20.018,
+            "y": 53.279,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 54.786,
+            "y": 49.025,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-01-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 85.404,
+            "y": 59.842,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-02",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-02-glyph-07",
+          "l1-02-glyph-02",
+          "l1-02-glyph-03",
+          "l1-02-glyph-04",
+          "l1-02-glyph-05",
+          "l1-02-glyph-06",
+          "l1-02-glyph-01",
+          "l1-02-glyph-10",
+          "l1-02-glyph-09",
+          "l1-02-glyph-08"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-02-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 89.957,
+            "y": 56.035,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.709,
+            "y": 26.723,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 52.497,
+            "y": 95.426,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.613,
+            "y": 57.69,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.868,
+            "y": 72.003,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 15.628,
+            "y": 33.659,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 51.22,
+            "y": 33.659,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.06,
+            "y": 70.421,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 26.788,
+            "y": 67.744,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-02-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.709,
+            "y": 86.908,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-03",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-03-glyph-01",
+          "l1-03-glyph-02",
+          "l1-03-glyph-05",
+          "l1-03-glyph-08",
+          "l1-03-glyph-04",
+          "l1-03-glyph-06",
+          "l1-03-glyph-07",
+          "l1-03-glyph-03"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-03-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 55.996,
+            "y": 5.421,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 66.544,
+            "y": 59.255,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.31,
+            "y": 54.703,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.515,
+            "y": 72.908,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 91.166,
+            "y": 42.815,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.331,
+            "y": 85.415,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.827,
+            "y": 44.506,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-03-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.079,
+            "y": 42.815,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-04",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-04-glyph-01",
+          "l1-04-glyph-04",
+          "l1-04-glyph-03",
+          "l1-04-glyph-02",
+          "l1-04-glyph-07",
+          "l1-04-glyph-06",
+          "l1-04-glyph-09",
+          "l1-04-glyph-08",
+          "l1-04-glyph-05",
+          "l1-04-glyph-10",
+          "l1-04-glyph-11",
+          "l1-04-glyph-12",
+          "l1-04-glyph-13"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-04-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 48.498,
+            "y": 47.358,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 80.447,
+            "y": 47.358,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 13.702,
+            "y": 21.428,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 21.279,
+            "y": 83.628,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.684,
+            "y": 24.129,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 22.753,
+            "y": 58.117,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 81.907,
+            "y": 21.428,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.235,
+            "y": 73.434,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 50.499,
+            "y": 75.031,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 13.921,
+            "y": 46.039,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.107,
+            "y": 41.955,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-12",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 66.234,
+            "y": 62.416,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-04-glyph-13",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 57.06,
+            "y": 86.33,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-05",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-2.webp",
+        "sha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+        "anchorIds": [
+          "l1-05-glyph-01",
+          "l1-05-glyph-02",
+          "l1-05-glyph-03",
+          "l1-05-glyph-04",
+          "l1-05-glyph-05"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-05-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 27.297,
+            "y": 80.433,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-05-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 73.099,
+            "y": 29.43,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-05-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 27.768,
+            "y": 36.535,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-05-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 76.878,
+            "y": 78.812,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-05-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-2.webp",
+            "mapSha256": "9710bf5f9c26b7ca1b6632eabec4c5fda7019782747570e4439eb9a3882e202e",
+            "x": 57.693,
+            "y": 60.268,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-06",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-06-glyph-01",
+          "l1-06-glyph-02",
+          "l1-06-glyph-03",
+          "l1-06-glyph-04",
+          "l1-06-glyph-10",
+          "l1-06-glyph-06",
+          "l1-06-glyph-07",
+          "l1-06-glyph-08",
+          "l1-06-glyph-09",
+          "l1-06-glyph-05",
+          "l1-06-glyph-11"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-06-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.807,
+            "y": 54.636,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 63.664,
+            "y": 79.838,
+            "pointsTo": {
+              "x": 59.14,
+              "y": 72.877,
+              "from": {
+                "x": 61.252,
+                "y": 75.879
+              }
+            }
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 84.76,
+            "y": 20.281,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.293,
+            "y": 41.655,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.67,
+            "y": 77.137,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 42.571,
+            "y": 23.701,
+            "pointsTo": {
+              "x": 47.664,
+              "y": 17.529,
+              "from": {
+                "x": 45.389,
+                "y": 20.368
+              }
+            }
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 22.555,
+            "y": 58.935,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.122,
+            "y": 13.382,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 67.452,
+            "y": 60.532,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.026,
+            "y": 72.839,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-06-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 17.212,
+            "y": 47.636,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-07",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-07-glyph-01",
+          "l1-07-glyph-02",
+          "l1-07-glyph-04",
+          "l1-07-glyph-03",
+          "l1-07-glyph-05",
+          "l1-07-glyph-06",
+          "l1-07-glyph-07",
+          "l1-07-glyph-08",
+          "l1-07-glyph-09"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-07-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.445,
+            "y": 18.936,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 81.358,
+            "y": 25.936,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 94.755,
+            "y": 45.822,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 63.506,
+            "y": 80.573,
+            "pointsTo": {
+              "x": 59.218,
+              "y": 73.611,
+              "from": {
+                "x": 61.33,
+                "y": 76.613
+              }
+            }
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 52.149,
+            "y": 95.225,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 87.365,
+            "y": 71.976,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 32.55,
+            "y": 48.869,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.572,
+            "y": 23.235,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-07-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.099,
+            "y": 55.765,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-08",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-08-glyph-01",
+          "l1-08-glyph-02",
+          "l1-08-glyph-03",
+          "l1-08-glyph-04",
+          "l1-08-glyph-05",
+          "l1-08-glyph-06",
+          "l1-08-glyph-07",
+          "l1-08-glyph-08",
+          "l1-08-glyph-09"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-08-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.968,
+            "y": 56.719,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 69.105,
+            "y": 10.187,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 29.297,
+            "y": 14.408,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 7.977,
+            "y": 63.591,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 86.705,
+            "y": 72.032,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 25.635,
+            "y": 67.812,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 76.424,
+            "y": 37.587,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 18.29,
+            "y": 48.278,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-08-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.339,
+            "y": 19.264,
+            "pointsTo": {
+              "x": 46.92,
+              "y": 16.064,
+              "from": {
+                "x": 44.074,
+                "y": 17.973
+              }
+            }
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-09",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-09-glyph-01",
+          "l1-09-glyph-02",
+          "l1-09-glyph-03",
+          "l1-09-glyph-04",
+          "l1-09-glyph-05",
+          "l1-09-glyph-12",
+          "l1-09-glyph-07",
+          "l1-09-glyph-08",
+          "l1-09-glyph-09",
+          "l1-09-glyph-10",
+          "l1-09-glyph-11",
+          "l1-09-glyph-06",
+          "l1-09-glyph-13",
+          "l1-09-glyph-14",
+          "l1-09-glyph-15"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-09-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 64.799,
+            "y": 92.873,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 25.38,
+            "y": 67.783,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 48.341,
+            "y": 53.119,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 79.976,
+            "y": 24.469,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 67.97,
+            "y": 59.992,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-12",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 88.149,
+            "y": 74.655,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 6.964,
+            "y": 57.34,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 30.631,
+            "y": 17.597,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-09",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 19.951,
+            "y": 53.119,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-10",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 47.671,
+            "y": 39.375,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-11",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 35.444,
+            "y": 34.988,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 40.695,
+            "y": 86.001,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-13",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 65.901,
+            "y": 79.96,
+            "pointsTo": {
+              "x": 60.665,
+              "y": 73.279,
+              "from": {
+                "x": 62.515,
+                "y": 76.42
+              }
+            }
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-14",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 41.114,
+            "y": 68.432,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-09-glyph-15",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 47.494,
+            "y": 24.469,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    },
+    {
+      "puzzleId": "l1-10",
+      "map": {
+        "id": "./assets/import-staging/l1-clean-map-1.webp",
+        "sha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "anchorIds": [
+          "l1-10-glyph-01",
+          "l1-10-glyph-02",
+          "l1-10-glyph-03",
+          "l1-10-glyph-04",
+          "l1-10-glyph-05",
+          "l1-10-glyph-06",
+          "l1-10-glyph-08",
+          "l1-10-glyph-07"
+        ]
+      },
+      "reviews": [
+        {
+          "anchorId": "l1-10-glyph-01",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 15.896,
+            "y": 37.64,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-02",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 74.297,
+            "y": 39.208,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-03",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 49.21,
+            "y": 53.932,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-04",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 59.812,
+            "y": 92.873,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-05",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 92.061,
+            "y": 46.08,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-06",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 26.459,
+            "y": 67.068,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-08",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 35.041,
+            "y": 32.336,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        },
+        {
+          "anchorId": "l1-10-glyph-07",
+          "status": "editorial_pending",
+          "complete": false,
+          "sourceBinding": {
+            "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+            "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+            "x": 36.005,
+            "y": 88.653,
+            "pointsTo": null
+          },
+          "evidence": null,
+          "physical": null,
+          "target": null
+        }
+      ]
+    }
+  ]
+}

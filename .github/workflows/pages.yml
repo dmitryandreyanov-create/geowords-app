@@ -66,6 +66,12 @@ jobs:
           node tools/build_l1_catalog.mjs --check
           node scripts/validate-l1-catalog.mjs
 
+      - name: Validate independent spatial resolution and pending L1 geography
+        run: |
+          node --check engine/spatial-semantics.js
+          node tools/build_l1_spatial_review.mjs --check
+          node scripts/validate-spatial-semantics.mjs
+
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 

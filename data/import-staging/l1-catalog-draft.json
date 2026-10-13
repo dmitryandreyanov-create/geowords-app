@@ -1859,7 +1859,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-australia"
+        ],
+        "op": "place",
+        "placeId": "place-australia"
+      }
     },
     {
       "id": "l1-descriptor-02",
@@ -1896,7 +1908,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
     },
     {
       "id": "l1-descriptor-03",
@@ -1934,7 +1958,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents",
+          "f-l1-p06-eurasia"
+        ],
+        "requiredPlaces": [
+          "place-eurasia"
+        ],
+        "op": "place",
+        "placeId": "place-eurasia"
+      }
     },
     {
       "id": "l1-descriptor-04",
@@ -1990,7 +2027,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america"
+        ],
+        "op": "place",
+        "placeId": "place-south-america"
+      }
     },
     {
       "id": "l1-descriptor-05",
@@ -2046,7 +2095,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america"
+        ],
+        "op": "place",
+        "placeId": "place-north-america"
+      }
     },
     {
       "id": "l1-descriptor-06",
@@ -2083,7 +2144,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
     },
     {
       "id": "l1-descriptor-07",
@@ -2142,7 +2215,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america",
+          "place-south-america"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-north-america",
+          "place-south-america"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-08",
@@ -2183,7 +2272,24 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents",
+          "f-l1-p06-eurasia"
+        ],
+        "requiredPlaces": [
+          "place-africa",
+          "place-eurasia"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-africa",
+          "place-eurasia"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-09",
@@ -2224,7 +2330,24 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents",
+          "f-l1-p06-eurasia"
+        ],
+        "requiredPlaces": [
+          "place-australia",
+          "place-eurasia"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-australia",
+          "place-eurasia"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-10",
@@ -2264,7 +2387,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia",
+          "place-australia"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-asia",
+          "place-australia"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-11",
@@ -2301,7 +2440,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "place",
+        "placeId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-12",
@@ -2339,7 +2490,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p08-continent-properties",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
     },
     {
       "id": "l1-descriptor-13",
@@ -2377,7 +2541,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p08-continent-properties",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
     },
     {
       "id": "l1-descriptor-14",
@@ -2434,7 +2611,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p08-continent-properties",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-australia"
+        ],
+        "op": "place",
+        "placeId": "place-australia"
+      }
     },
     {
       "id": "l1-descriptor-15",
@@ -2471,7 +2661,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-europe"
+        ],
+        "op": "place",
+        "placeId": "place-europe"
+      }
     },
     {
       "id": "l1-descriptor-16",
@@ -2511,7 +2713,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa",
+          "place-south-america"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-africa",
+          "place-south-america"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-17",
@@ -2551,7 +2769,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-australia",
+          "place-antarctica"
+        ],
+        "op": "between",
+        "placeIds": [
+          "place-australia",
+          "place-antarctica"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-18",
@@ -2608,7 +2842,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-left",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-arctic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-arctic-ocean"
+      }
     },
     {
       "id": "l1-descriptor-19",
@@ -2684,7 +2931,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-indian-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-indian-ocean"
+      }
     },
     {
       "id": "l1-descriptor-20",
@@ -2741,7 +3001,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p08-continent-properties",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
     },
     {
       "id": "l1-descriptor-21",
@@ -2783,7 +3056,24 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p06-continents",
+          "f-l1-p06-oceans",
+          "f-l1-p06-pacific-map"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean",
+          "place-asia"
+        ],
+        "op": "side",
+        "oceanId": "place-pacific-ocean",
+        "sidePlaceId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-22",
@@ -2859,7 +3149,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-left",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-southern-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-southern-ocean"
+      }
     },
     {
       "id": "l1-descriptor-23",
@@ -2901,7 +3204,24 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p06-continents",
+          "f-l1-p06-oceans",
+          "f-l1-p06-pacific-map"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean",
+          "place-north-america"
+        ],
+        "op": "side",
+        "oceanId": "place-pacific-ocean",
+        "sidePlaceId": "place-north-america"
+      }
     },
     {
       "id": "l1-descriptor-24",
@@ -2997,7 +3317,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-atlantic-ocean"
+      }
     },
     {
       "id": "l1-descriptor-25",
@@ -3035,7 +3369,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "region",
+        "placeId": "place-africa",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-26",
@@ -3073,7 +3421,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "region",
+        "placeId": "place-asia",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-27",
@@ -3111,7 +3473,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america"
+        ],
+        "op": "region",
+        "placeId": "place-north-america",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-28",
@@ -3149,7 +3525,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america"
+        ],
+        "op": "region",
+        "placeId": "place-south-america",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-29",
@@ -3225,7 +3615,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-europe"
+        ],
+        "op": "region",
+        "placeId": "place-europe",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-30",
@@ -3282,7 +3686,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america"
+        ],
+        "op": "region",
+        "placeId": "place-south-america",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-31",
@@ -3339,7 +3757,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "region",
+        "placeId": "place-asia",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-32",
@@ -3396,7 +3828,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "region",
+        "placeId": "place-africa",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-33",
@@ -3472,7 +3918,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america"
+        ],
+        "op": "region",
+        "placeId": "place-north-america",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-34",
@@ -3509,7 +3969,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-atlantic-ocean"
+      }
     },
     {
       "id": "l1-descriptor-35",
@@ -3546,7 +4018,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-indian-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-indian-ocean"
+      }
     },
     {
       "id": "l1-descriptor-36",
@@ -3583,7 +4067,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-southern-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-southern-ocean"
+      }
     },
     {
       "id": "l1-descriptor-37",
@@ -3621,7 +4117,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p14-equator",
+          "f-l1-p14-prime-meridian"
+        ],
+        "requiredPlaces": [],
+        "op": "hemisphere",
+        "values": [
+          "south",
+          "west"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-38",
@@ -3659,7 +4169,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p14-equator",
+          "f-l1-p14-prime-meridian"
+        ],
+        "requiredPlaces": [],
+        "op": "hemisphere",
+        "values": [
+          "north",
+          "east"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-39",
@@ -3697,7 +4221,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p14-equator",
+          "f-l1-p14-prime-meridian"
+        ],
+        "requiredPlaces": [],
+        "op": "hemisphere",
+        "values": [
+          "north",
+          "west"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-40",
@@ -3735,7 +4273,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p14-equator",
+          "f-l1-p14-prime-meridian"
+        ],
+        "requiredPlaces": [],
+        "op": "hemisphere",
+        "values": [
+          "south",
+          "east"
+        ]
+      }
     },
     {
       "id": "l1-descriptor-41",
@@ -3772,7 +4324,17 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p14-equator"
+        ],
+        "requiredPlaces": [],
+        "op": "boundary",
+        "boundary": "equator"
+      }
     },
     {
       "id": "l1-descriptor-42",
@@ -3810,7 +4372,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans",
+          "f-l1-p06-pacific-map"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-pacific-ocean"
+      }
     },
     {
       "id": "l1-descriptor-43",
@@ -3888,7 +4463,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-madagascar",
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-madagascar"
+      }
     },
     {
       "id": "l1-descriptor-44",
@@ -3944,7 +4533,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-right"
+        ],
+        "requiredPlaces": [
+          "place-iceland"
+        ],
+        "op": "place",
+        "placeId": "place-iceland"
+      }
     },
     {
       "id": "l1-descriptor-45",
@@ -4038,7 +4639,19 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left"
+        ],
+        "requiredPlaces": [
+          "place-greenland"
+        ],
+        "op": "place",
+        "placeId": "place-greenland"
+      }
     },
     {
       "id": "l1-descriptor-46",
@@ -4134,7 +4747,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-right",
+          "f-l1-p16-island-continent-note",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-australia"
+        ],
+        "op": "place",
+        "placeId": "place-australia"
+      }
     },
     {
       "id": "l1-descriptor-47",
@@ -4172,7 +4799,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p18-residents-climate-population",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "place",
+        "placeId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-48",
@@ -4211,7 +4851,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p18-residents-climate-population",
+          "f-l1-p06-oceans",
+          "f-l1-p06-pacific-map"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-pacific-ocean"
+      }
     },
     {
       "id": "l1-descriptor-49",
@@ -4249,7 +4903,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p18-residents-climate-population",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
     },
     {
       "id": "l1-descriptor-50",
@@ -4309,7 +4976,22 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p20-records-left",
+          "f-l1-p20-nile-note",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa",
+          "place-nile"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
     },
     {
       "id": "l1-descriptor-51",
@@ -4386,7 +5068,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p20-records-right",
+          "f-l1-p06-oceans",
+          "f-l1-p06-pacific-map"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-pacific-ocean"
+      }
     },
     {
       "id": "l1-descriptor-52",
@@ -4445,7 +5141,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p20-records-right",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america",
+          "place-andes"
+        ],
+        "op": "place",
+        "placeId": "place-south-america"
+      }
     },
     {
       "id": "l1-descriptor-53",
@@ -4485,7 +5195,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p20-records-left",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia",
+          "place-everest"
+        ],
+        "op": "place",
+        "placeId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-54",
@@ -4523,7 +5247,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-deserts",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
     },
     {
       "id": "l1-descriptor-55",
@@ -4561,7 +5298,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-deserts",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
     },
     {
       "id": "l1-descriptor-56",
@@ -4599,7 +5349,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-coldest-settlement",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "place",
+        "placeId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-57",
@@ -4637,7 +5400,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-europe"
+        ],
+        "op": "region",
+        "placeId": "place-europe",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-58",
@@ -4677,7 +5454,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "region",
+        "placeId": "place-atlantic-ocean",
+        "direction": "north"
+      }
     },
     {
       "id": "l1-descriptor-59",
@@ -4717,7 +5510,23 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p12-directions",
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note",
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "region",
+        "placeId": "place-atlantic-ocean",
+        "direction": "south"
+      }
     },
     {
       "id": "l1-descriptor-60",
@@ -4757,7 +5566,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p24-appalachians",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america",
+          "place-appalachians"
+        ],
+        "op": "place",
+        "placeId": "place-north-america"
+      }
     },
     {
       "id": "l1-descriptor-61",
@@ -4797,7 +5620,21 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p24-himalayas",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-asia",
+          "place-himalayas"
+        ],
+        "op": "place",
+        "placeId": "place-asia"
+      }
     },
     {
       "id": "l1-descriptor-62",
@@ -4835,7 +5672,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-deserts",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
     },
     {
       "id": "l1-descriptor-63",
@@ -4873,7 +5723,20 @@
             ]
           }
         }
-      ]
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p18-residents-climate-population",
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america"
+        ],
+        "op": "place",
+        "placeId": "place-south-america"
+      }
     }
   ],
   "audit": [

@@ -76,6 +76,23 @@ const fact = name => 'f-l1-'+name;
 const place = name => 'place-'+name;
 const split = value => value ? value.split(',') : [];
 
+export function candidateQuery(descriptor){
+ const d=descriptor;
+ const query={status:'editorial_pending',channel:'either',
+  requires:[...d.candidateRequiresFacts],requiredPlaces:[...new Set([d.candidateTargetPlaceId,...d.candidateRelatedPlaceIds].filter(Boolean))]};
+ if(d.kind==='relational')return {...query,op:'between',placeIds:[...d.candidateRelatedPlaceIds]};
+ if(d.kind==='hemisphere')return {...query,op:'hemisphere',values:[...d.sourcePredicate.en.matchAll(/Northern|Southern|Eastern|Western/g)].map(m=>({Northern:'north',Southern:'south',Eastern:'east',Western:'west'})[m[0]])};
+ if(d.kind==='boundary')return {...query,op:'boundary',boundary:'equator'};
+ if(d.kind==='directional'){
+  if(d.sourcePredicate.en.includes(' side '))return {...query,op:'side',oceanId:d.candidateTargetPlaceId,sidePlaceId:d.candidateRelatedPlaceIds[0]};
+  const direction=d.sourcePredicate.en.match(/northern|southern/)?.[0];
+  if(!direction)throw Error('Unclassified directional predicate');
+  return {...query,op:'region',placeId:d.candidateTargetPlaceId,direction:direction==='northern'?'north':'south'};
+ }
+ if(!d.candidateTargetPlaceId)throw Error('Missing proposed place target');
+ return {...query,op:'place',placeId:d.candidateTargetPlaceId};
+}
+
 export function buildCatalog(staging, mapping, curriculum) {
  const descriptors = rows.map(([text,target,kind='name',related,facts],i) => {
   const refs=[...new Set([target,...split(related)].filter(Boolean))];
@@ -90,6 +107,7 @@ export function buildCatalog(staging, mapping, curriculum) {
    requires:null,resolvesTo:null,geographicReview:'pending',occurrences:[]};
  });
  const byText = new Map(descriptors.map(d=>[d.sourcePredicate.en,d]));
+ descriptors.forEach(d=>{d.candidateQuery=candidateQuery(d)});
  const anchors=[]; const known=new Set(); const audit=[];
  const steps=curriculum.courses.find(c=>c.id==='oceans-continents').steps;
  for(const puzzle of staging.puzzles){
