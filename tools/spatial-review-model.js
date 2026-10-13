@@ -8,14 +8,14 @@
  const clone=v=>JSON.parse(JSON.stringify(v));
  const canonical=v=>Array.isArray(v)?v.map(canonical):v&&typeof v==='object'?Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])])):v;
  const same=(a,b)=>JSON.stringify(canonical(a))===JSON.stringify(canonical(b));
- const normalize=g=>({places:[...g.places],regions:g.regions.map(r=>({placeId:r.placeId,direction:r.direction})),sides:g.sides.map(s=>({oceanId:s.oceanId,sidePlaceId:s.sidePlaceId})),between:g.between.map(p=>[...p]),hemispheres:[...g.hemispheres],boundaries:[...g.boundaries]});
+ const normalize=g=>({places:[...g.places],regions:g.regions.map(r=>({placeId:r.placeId,direction:r.direction})),sides:g.sides.map(s=>({oceanId:s.oceanId,sidePlaceId:s.sidePlaceId})),between:g.between.map(p=>[...p]),hemispheres:[...g.hemispheres],boundaries:[...g.boundaries],...(g.nearPlaces===undefined?{}:{nearPlaces:[...g.nearPlaces]})});
  const empty=()=>({places:[],regions:[],sides:[],between:[],hemispheres:[],boundaries:[]});
  function create(scaffold){return {version:1,status:'not_for_live_use',generatedFrom:'spatial author review',puzzles:clone(scaffold.puzzles)}}
  const anchor=r=>({id:r.anchorId,mapId:r.sourceBinding.mapId,x:r.sourceBinding.x,y:r.sourceBinding.y,pointsTo:r.sourceBinding.pointsTo});
  function checkMembership(g,catalog){
   if(!spatial.validateMembership(g))throw Error('Неверные или противоречивые географические свойства');
   const places=new Set(catalog.places.map(p=>p.id));
-  const refs=[...g.places,...g.regions.map(r=>r.placeId),...g.sides.flatMap(s=>[s.oceanId,s.sidePlaceId]),...g.between.flat()];
+  const refs=[...g.places,...g.regions.map(r=>r.placeId),...g.sides.flatMap(s=>[s.oceanId,s.sidePlaceId]),...g.between.flat(),...(g.nearPlaces||[])];
   if(refs.some(id=>!places.has(id)))throw Error('Неизвестный географический объект');
  }
  function restore(scaffold,catalog,data){
@@ -33,6 +33,7 @@
     if(r.physical!==null)checkMembership(r.physical,catalog);
     if(r.target!==null){if(!original.sourceBinding.pointsTo)throw Error('У буквы нет стрелки');checkMembership(r.target,catalog)}
     if(r.status==='approved'){
+     if(target.requiresNearReview&&(!Array.isArray(r.physical?.nearPlaces)||r.target!==null&&!Array.isArray(r.target?.nearPlaces)))throw Error('Близость к объектам L2 ещё не проверена');
      if(!spatial.reviewValid(anchor(original),r,target.map))throw Error('Неполное или устаревшее подтверждение географии');
     }else if(r.complete||r.evidence!==null)throw Error('Черновик не может содержать утверждение');
     Object.assign(original,{status:r.status,complete:r.complete,evidence:clone(r.evidence),physical:r.physical===null?null:normalize(r.physical),target:r.target===null?null:normalize(r.target)});
@@ -52,6 +53,7 @@
   const p=state.puzzles.find(p=>p.puzzleId===puzzleId),r=p?.reviews.find(r=>r.anchorId===anchorId);
   if(!r)throw Error('Неизвестная буква');
   const proposed={...r,status:'approved',complete:true,evidence:clone(r.sourceBinding)};
+  if(p.requiresNearReview&&(!Array.isArray(r.physical?.nearPlaces)||r.target!==null&&!Array.isArray(r.target?.nearPlaces)))throw Error('Проверьте близость к объектам в обоих каналах L2');
   if(!spatial.reviewValid(anchor(r),proposed,p.map))throw Error('Заполните положение буквы и конец стрелки, если она есть');
   Object.assign(r,proposed);
  }

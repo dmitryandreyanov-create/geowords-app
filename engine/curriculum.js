@@ -183,7 +183,7 @@
    const position=anchor.maps[map.id];if(!position)continue;
    const value={id:anchor.id,mapId:map.id,x:position.x,y:position.y,pointsTo:position.pointsTo??null,owner:place.id,review:position.spatialReview};
    if(!spatial.reviewValid(value,value.review,map))continue;
-   if(![...value.review.physical.places,...(value.review.target?.places||[])].includes(place.id))continue;
+   if(![...value.review.physical.places,...(value.review.physical.nearPlaces||[]),...(value.review.target?.places||[]),...(value.review.target?.nearPlaces||[])].includes(place.id))continue;
    pool.push(value);
   }
   const descriptors=[...catalog.descriptors.values()].filter(d=>approved(d)&&d.query&&d.text.en?.trim()&&d.requires.every(id=>a.state.knownFacts.includes(id))&&d.requiredPlaces.every(id=>a.state.knownPlaces.includes(id)));

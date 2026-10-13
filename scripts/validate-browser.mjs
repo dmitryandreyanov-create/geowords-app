@@ -5,7 +5,7 @@ import http from 'node:http';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
 import {generatorFixture} from './validate-curriculum-generator.mjs';
-import {adaptCatalog,loadL1Sources} from '../tools/catalog-adapter.mjs';
+import {adaptCatalog,loadL1Sources,loadL2Sources} from '../tools/catalog-adapter.mjs';
 const root=process.cwd(),puzzles=['l1','l2'].flatMap(b=>JSON.parse(fs.readFileSync(`data/import-staging/${b}-staging.json`)).puzzles);
 const mime={'.html':'text/html','.js':'text/javascript','.json':'application/json','.webp':'image/webp','.css':'text/css','.webmanifest':'application/manifest+json'};
 const server=http.createServer((req,res)=>{
@@ -113,7 +113,7 @@ try{
  await sp.locator('#geoChannel').selectOption('target');await sp.locator('#geoPlaces').selectOption(['place-madagascar']);await sp.locator('#geoComplete').check();await sp.locator('#geoConfirm').click();
  assert.match(await sp.locator('#geoProgress').innerText(),/1\/11/);
  await sp.locator('#geoRevoke').click();assert.match(await sp.locator('#geoProgress').innerText(),/0\/11/);
- await sp.locator('#puzzleList button').nth(10).click();assert(await sp.locator('#spatialPanel').isHidden());assert(await sp.locator('#spatialUnavailable').isVisible());
+ await sp.locator('#puzzleList button').nth(10).click();assert(await sp.locator('#spatialPanel').isVisible());assert.match(await sp.locator('#spatialTitle').innerText(),/L2/);assert(await sp.locator('#geoNearRow').isVisible());
  await sp.locator('#puzzleList button').nth(3).click();await sp.locator('#geoAnchor').selectOption('l1-04-glyph-04');
  assert(await sp.locator('#geoApplyProposal').isDisabled(),'unknown coastal location cannot be filled by guessing');
  assert.match(await sp.locator('#geoProposalNotes').innerText(),/не утверждено/);
@@ -167,7 +167,7 @@ try{
  assert.equal(await lp.locator('#learningText').inputValue(),'Keep edited draft','proposal cannot overwrite existing work');
  assert(await lp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'learning panel fits 360px');
  if(process.env.GEOWORDS_LEARNING_SCREENSHOT)await lp.locator('#learningPanel').screenshot({path:process.env.GEOWORDS_LEARNING_SCREENSHOT});
- await lp.locator('#puzzleList button').nth(10).click();assert(await lp.locator('#learningPanel').isHidden());assert(await lp.locator('#learningUnavailable').isVisible());
+ await lp.locator('#puzzleList button').nth(10).click();assert(await lp.locator('#learningPanel').isVisible());assert.match(await lp.locator('#learningTitle').innerText(),/L2/);
  const badLearningRaw=JSON.stringify({...learningPayload,courseId:'foreign'});
  await lp.evaluate(raw=>localStorage.setItem('geowords-l1-learning-review-v1',raw),badLearningRaw);await learningOpen();assert(await lp.locator('#learningBackup').isVisible());
  await lp.locator('#learningText').fill('Protected memory-only draft');assert.equal(await lp.evaluate(()=>localStorage.getItem('geowords-l1-learning-review-v1')),badLearningRaw,'incompatible local work is protected');
@@ -205,11 +205,35 @@ try{
  await cp.locator('#contentOp').selectOption('boundary');assert(await cp.locator('#contentQuery-boundary').isVisible());
  assert(await cp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'content panel fits 360px');
  if(process.env.GEOWORDS_CONTENT_SCREENSHOT)await cp.locator('#contentPanel').screenshot({path:process.env.GEOWORDS_CONTENT_SCREENSHOT});
- await cp.locator('#puzzleList button').nth(10).click();assert(await cp.locator('#contentPanel').isHidden());assert(await cp.locator('#contentUnavailable').isVisible());
+ await cp.locator('#puzzleList button').nth(10).click();assert(await cp.locator('#contentPanel').isVisible());assert.match(await cp.locator('#contentTitle').innerText(),/L2/);
  const incompatibleContent=JSON.stringify({...contentPayload,courseId:'foreign'});await cp.evaluate(raw=>localStorage.setItem('geowords-l1-content-review-v1',raw),incompatibleContent);await contentOpen();assert(await cp.locator('#contentBackup').isVisible());
  await cp.locator('#contentDefinition').fill('Protected memory-only draft');assert.equal(await cp.evaluate(()=>localStorage.getItem('geowords-l1-content-review-v1')),incompatibleContent);
  const contentRecovery=cp.waitForEvent('download');await cp.locator('#contentBackup').click();assert.equal(fs.readFileSync(await (await contentRecovery).path(),'utf8'),incompatibleContent);
  await contentUpload(contentPayload);assert(await cp.locator('#contentBackup').isHidden());await contentContext.close();
+ // L2 uses the same panels but separate state and scopes; no implicit L1
+ // knowledge or geographic/semantic approvals are introduced by switching.
+ const l2Context=await browser.newContext({viewport:{width:360,height:800},acceptDownloads:true}),rp=await l2Context.newPage();rp.on('pageerror',e=>errors.push(e.message));
+ await rp.goto(url+'/tools/review-import.html');await rp.waitForSelector('#contentPanel:not([hidden])');
+ await rp.locator('#learningText').fill('L1 retained mechanical draft');await rp.locator('#contentDefinition').fill('L1 retained vocabulary draft');await rp.locator('#geoPlaces').selectOption(['place-australia']);
+ const l1Saved=await rp.evaluate(()=>['geowords-l1-learning-review-v1','geowords-l1-content-review-v1','geowords-spatial-review-v1'].map(k=>localStorage.getItem(k)));
+ await rp.locator('#puzzleList button').nth(10).click();assert.match(await rp.locator('#learningProgress').innerText(),/0\/18.*0\/10/);assert.match(await rp.locator('#contentProgress').innerText(),/0\/45.*0\/18/);assert(await rp.locator('#geoNearRow').isVisible());
+ await rp.locator('#geoPlaces').selectOption(['place-indian-ocean']);await rp.locator('#geoComplete').check();await rp.locator('#geoConfirm').click();assert.match(await rp.locator('#geoProgress').innerText(),/1\/7/);
+ const l2Download=async id=>{const p=rp.waitForEvent('download');await rp.locator(id).click();return JSON.parse(fs.readFileSync(await (await p).path()))};
+ const l2Geo=await l2Download('#geoExport');assert.equal(l2Geo.puzzles.flatMap(p=>p.reviews).length,90);assert.deepEqual(l2Geo.puzzles[0].reviews.find(r=>r.status==='approved').physical.nearPlaces,[]);
+ await rp.locator('#learningCopyFact').click();await rp.locator('#learningText').fill('L2 mechanical fact draft');await rp.locator('#learningFact-introducesPlaces').selectOption(['place-nile']);
+ await rp.locator('#learningCopyStep').click();for(const field of ['requiresFacts','introducedPlaces','focusPlaceIds'])await rp.locator('#learningStepKnown-'+field).check();await rp.locator('#learningReviewer').fill('SYNTHETIC QA ONLY');await rp.locator('#learningStepChecked').check();await rp.locator('#learningConfirmStep').click();await rp.waitForFunction(()=>document.querySelector('#learningStepStatus').textContent.includes('подтверждён'));
+ await rp.locator('#learningPanel details').last().locator('summary').click();assert.match(await rp.locator('#learningReport').innerText(),/Входные знания L1 не подтверждены/);
+ const l2Learn=await l2Download('#learningExport');assert.equal(l2Learn.records.length,28);assert.equal(l2Learn.scope,'l2-learning-review');
+ await rp.locator('#puzzleList button').nth(13).click();assert.match(await rp.locator('#learningCandidates').innerText(),/план ещё не подготовлен/);await rp.locator('#learningCopyStep').click();assert(!(await rp.locator('#learningStepKnown-wordIds').isChecked()),'unknown seven plans are not converted to empty or approved words');
+ const l2Source=loadL2Sources(),nearDesc=l2Source.catalog.descriptors.find(d=>d.candidateQuery.op==='near');await rp.locator('#contentDescriptor').selectOption(nearDesc.id);await rp.locator('#contentCopyDescriptor').click();assert.equal(await rp.locator('#contentOp').inputValue(),'near');assert(await rp.locator('#content-placeId').isVisible());assert(await rp.locator('#contentQuery-near').isVisible());
+ await rp.locator('#contentDefinition').fill('L2 mechanical vocabulary draft');const l2Content=await l2Download('#contentExport');assert.equal(l2Content.records.length,63);assert.equal(l2Content.scope,'l2-content-review');
+ const l2Adapter=adaptCatalog(l2Source,{spatialReview:l2Geo,learningReview:l2Learn,contentReview:l2Content});assert.equal(l2Adapter.curriculum,null);assert(l2Adapter.blockers.some(b=>b.code==='L2_COMPOSITE_RUNTIME_PENDING'));
+ const beforeForeign=await rp.evaluate(()=>localStorage.getItem('geowords-l2-content-review-v1'));
+ await rp.locator('#contentImport').setInputFiles({name:'foreign-l1.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(contentPayload))});await rp.waitForFunction(()=>document.querySelector('#contentImport').value==='');assert.match(await rp.locator('#contentMessage').innerText(),/Ошибка импорта/);assert.equal(await rp.evaluate(()=>localStorage.getItem('geowords-l2-content-review-v1')),beforeForeign);
+ await rp.locator('#puzzleList button').first().click();assert.equal(await rp.locator('#learningText').inputValue(),'L1 retained mechanical draft');assert.equal(await rp.locator('#contentDefinition').inputValue(),'L1 retained vocabulary draft');assert(!(await rp.locator('#geoNearRow').isVisible()));
+ assert.deepEqual(await rp.evaluate(()=>['geowords-l1-learning-review-v1','geowords-l1-content-review-v1','geowords-spatial-review-v1'].map(k=>localStorage.getItem(k))),l1Saved,'L2 does not overwrite any L1 export');
+ await rp.reload();await rp.waitForSelector('#contentPanel:not([hidden])');await rp.locator('#puzzleList button').nth(10).click();assert.equal(await rp.locator('#learningText').inputValue(),'L2 mechanical fact draft');assert.equal(await rp.locator('#contentDefinition').inputValue(),'L2 mechanical vocabulary draft');assert.match(await rp.locator('#geoProgress').innerText(),/1\/7/);
+ assert(await rp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));if(process.env.GEOWORDS_L2_SCREENSHOT)await rp.locator('#learningPanel').screenshot({path:process.env.GEOWORDS_L2_SCREENSHOT});await l2Context.close();
  // Browser API smoke for the new shared generator. Synthetic curriculum only;
  // no new game route and no source approvals are installed by this test.
  const apiContext=await browser.newContext({viewport:{width:360,height:800}});
@@ -281,9 +305,9 @@ try{
  for(const c of mountain.clues){await gp.locator(`[data-marker-id="${c.markerId}"]`).click();await gp.waitForTimeout(30)}
  await gp.locator('#finishScreen.active').waitFor();assert.equal(await gp.locator('#finishWord').innerText(),mountain.answer);
  assert.equal(await gp.evaluate(id=>localStorage.getItem('geowords_completed_'+id),mountain.id),'1');
- for(const internal of ['tools/content-review-model.js','tools/review-content.js','docs/CONTENT_REVIEW.md','tools/learning-review-model.js','tools/review-learning.js','docs/LEARNING_REVIEW.md','tools/catalog-adapter.mjs','docs/CATALOG_ADAPTER.md','tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/import-staging/l1-spatial-observations.json','data/import-staging/l1-spatial-proposals.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs','tools/build_l1_spatial_proposals.mjs']){
+ for(const internal of ['data/import-staging/l2-catalog-draft.json','data/import-staging/l2-spatial-review-draft.json','data/import-staging/l2-practice-plans-draft.json','tools/build_l2_catalog.mjs','docs/L2_REVIEW.md','tools/content-review-model.js','tools/review-content.js','docs/CONTENT_REVIEW.md','tools/learning-review-model.js','tools/review-learning.js','docs/LEARNING_REVIEW.md','tools/catalog-adapter.mjs','docs/CATALOG_ADAPTER.md','tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/import-staging/l1-spatial-observations.json','data/import-staging/l1-spatial-proposals.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs','tools/build_l1_spatial_proposals.mjs']){
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);
- console.log('PASS browser 360px: L1 phrase/vocabulary and facts/order approvals, reload, atomic import/recovery and null vs [], shared generator API reload/credit on synthetic data, retained user baseline, spatial review, 55 exact arrows, legacy import, blocked storage, 21 Rivers words, Mountains and release exclusion.');
+ console.log('PASS browser 360px: L2 panels/proximity/book-isolated exports, L1 phrase/vocabulary and facts/order approvals, reload, atomic import/recovery and null vs [], shared generator API reload/credit on synthetic data, retained user baseline, spatial review, 55 exact arrows, legacy import, blocked storage, 21 Rivers words, Mountains and release exclusion.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve))}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "courseId": "rivers",
+  "warning": "Only the existing three pilot word plans are proposed; remaining seven plans stay null. Not sixty generated puzzles.",
+  "practicePlans": [
+    {
+      "stepId": "l2-01-step",
+      "status": "editorial_pending",
+      "candidateWordIds": [
+        "aquifer",
+        "alluvium",
+        "riparian",
+        "wetland",
+        "fluvial",
+        "estuary"
+      ],
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-02-step",
+      "status": "editorial_pending",
+      "candidateWordIds": [
+        "humidity",
+        "ecology",
+        "biomass",
+        "canopy",
+        "endemic",
+        "habitat"
+      ],
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-03-step",
+      "status": "editorial_pending",
+      "candidateWordIds": [
+        "erosion",
+        "rapids",
+        "freight",
+        "deposit",
+        "dredge",
+        "brackish"
+      ],
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-04-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-05-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-06-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-07-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-08-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-09-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-10-step",
+      "status": "editorial_pending",
+      "candidateWordIds": null,
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    }
+  ]
+}

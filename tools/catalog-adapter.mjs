@@ -10,6 +10,7 @@ import content from './content-review-model.js';
 import {buildCatalog} from './build_l1_catalog.mjs';
 import {buildSpatialReview} from './build_l1_spatial_review.mjs';
 import {loadScript} from './build_lexicon_draft.mjs';
+import {buildL2Sources} from './build_l2_catalog.mjs';
 
 // Editorial compiler, not a second generator. Nothing from candidates is
 // approved by this module; decisions and geography are separate inputs.
@@ -20,7 +21,7 @@ const same=(a,b)=>fingerprint(a)===fingerprint(b);
 const strings=v=>Array.isArray(v)&&v.every(x=>typeof x==='string'&&x)&&new Set(v).size===v.length;
 const text=v=>v&&typeof v.en==='string'&&v.en.trim();
 const ensure=(ok,message)=>{if(!ok)throw Error(message)};
-const membershipPlaces=g=>[...g.places,...g.regions.map(r=>r.placeId),...g.sides.flatMap(s=>[s.oceanId,s.sidePlaceId]),...g.between.flat()];
+const membershipPlaces=g=>[...g.places,...g.regions.map(r=>r.placeId),...g.sides.flatMap(s=>[s.oceanId,s.sidePlaceId]),...g.between.flat(),...(g.nearPlaces||[])];
 
 export function loadL1Sources(){
  const read=name=>JSON.parse(fs.readFileSync('data/import-staging/'+name+'.json','utf8'));
@@ -31,15 +32,21 @@ export function loadL1Sources(){
  ensure(same(buildSpatialReview(sources.catalog),sources.spatial),'География не соответствует исходным картам');
  return sources;
 }
+export function loadL2Sources(){
+ const read=name=>JSON.parse(fs.readFileSync('data/import-staging/'+name+'.json','utf8')),built=buildL2Sources();
+ const catalog=read('l2-catalog-draft'),spatial=read('l2-spatial-review-draft'),plans=read('l2-practice-plans-draft');
+ ensure(same(catalog,built.catalog)&&same(spatial,built.spatial)&&same(plans,built.plans),'Каталог L2 устарел относительно исходников');
+ return {draft:read('curriculum-draft'),catalog,spatial,staging:read('l2-staging'),otherStaging:read('l1-staging'),assignments:read('review-assignments'),lexicon:{...read('lexicon-draft'),practicePlans:plans.practicePlans},authoredAnswers:loadScript('data/authored-answer-index.js','GEOWORD_AUTHORED_ANSWERS').map(e=>e.word)};
+}
 
-// Scope deliberately limited to L1. Other course drafts are not promoted or
-// silently compiled; this package can be composed with reviewed L2 later.
+// The same review inventory serves both books. Runtime compilation is still
+// limited to L1; L2 requires an explicit composite L1→L2 program and maps.
 function inventory(s,spatialReview=geography.create(s.spatial)){
  const course=s.draft.courses.find(c=>c.id===s.catalog.courseId);
  ensure(course&&course.steps.length===s.staging.puzzles.length,'Неверный scope курса');
- const facts=s.draft.facts.filter(f=>f.id.startsWith('f-l1-'));
+ const facts=learning.ownFacts(s);
  const plans=s.lexicon.practicePlans.filter(p=>course.steps.some(step=>step.id===p.stepId));
- const wordIds=new Set(plans.flatMap(p=>p.candidateWordIds));
+ const wordIds=new Set(plans.flatMap(p=>p.candidateWordIds||[]));
  const rows=[];
  const learningSources=new Map(learning.sourceRows(s).map(r=>[r.key,r.source]));
  const contentSources=new Map(content.sourceRows(s).map(r=>[r.key,r.source]));
@@ -125,6 +132,7 @@ export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spati
   if(!id||!original)block('CATALOG_MAPPING_MISMATCH',p.id+':'+clue.position,'Назначение изменилось; требуется пересобрать каталог');
   if(!mapped.confirmations[p.id]?.[clue.position])block('CLUE_REVIEW_PENDING',p.id+':'+clue.position,'Назначение получено, содержательная проверка ещё не подтверждена');
  }
+ if(course.id==='rivers')block('L2_COMPOSITE_RUNTIME_PENDING','rivers','Редактор L2 подготовлен; выпуск требует составной программы L1→L2, проверенного входного знания и явных карт практики.');
  if(blockers.length)return result();
  const get=(section,id)=>decisions.get(section+':'+id);
  let compiled;
@@ -149,7 +157,7 @@ export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spati
   const sourceAnchors=new Map();
   for(const a of s.catalog.anchors){
    const scope=geo.puzzles.find(p=>p.puzzleId===a.puzzleId),review=scope.reviews.find(r=>r.anchorId===a.id),owner=get('anchor',a.id).ownerPlaceId;
-   ensure(placeMap.has(owner)&&[...review.physical.places,...(review.target?.places||[])].includes(owner),'Владелец якоря не подтверждён географией '+a.id);
+   ensure(placeMap.has(owner)&&[...review.physical.places,...(review.physical.nearPlaces||[]),...(review.target?.places||[]),...(review.target?.nearPlaces||[])].includes(owner),'Владелец якоря не подтверждён географией '+a.id);
    const map=maps.find(m=>m.id===a.puzzleId+'-map');
    const geoPlaces=[...membershipPlaces(review.physical),...(review.target?membershipPlaces(review.target):[])];
    ensure(geoPlaces.every(id=>map.containsPlaces.includes(id)),'География ссылается на отсутствующий на карте объект '+a.id);
@@ -228,7 +236,8 @@ export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spati
 }
 
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
- const s=loadL1Sources(),args=process.argv.slice(2),option=name=>{const i=args.indexOf(name);if(i<0)return undefined;ensure(args[i+1]&&!args[i+1].startsWith('--'),'Нет пути для '+name);return args[i+1]};
+ const args=process.argv.slice(2),option=name=>{const i=args.indexOf(name);if(i<0)return undefined;ensure(args[i+1]&&!args[i+1].startsWith('--'),'Нет пути для '+name);return args[i+1]};
+ const book=option('--book')||'l1';ensure(['l1','l2'].includes(book),'Неизвестная книга');const s=book==='l2'?loadL2Sources():loadL1Sources();
  const read=path=>path?JSON.parse(fs.readFileSync(path,'utf8')):undefined;
  const spatialReview=read(option('--spatial'));
  const result=args.includes('--template')?createEditorialTemplate(s,{spatialReview}):adaptCatalog(s,{editorial:read(option('--editorial')),spatialReview,assignments:read(option('--assignments')),learningReview:read(option('--learning')),contentReview:read(option('--content'))});

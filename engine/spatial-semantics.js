@@ -21,7 +21,7 @@
  function validateQuery(q){
   if(!object(q)||!['either','physical','target'].includes(q.channel)||!strings(q.requires)||!strings(q.requiredPlaces))return false;
   switch(q.op){
-   case 'place':return typeof q.placeId==='string'&&q.requiredPlaces.includes(q.placeId);
+   case 'place':case 'near':return typeof q.placeId==='string'&&q.requiredPlaces.includes(q.placeId);
    case 'region':return q.requiredPlaces.includes(q.placeId)&&directions.includes(q.direction);
    case 'side':return q.requiredPlaces.includes(q.oceanId)&&q.requiredPlaces.includes(q.sidePlaceId);
    case 'between':return pair(q.placeIds)&&q.placeIds.every(id=>q.requiredPlaces.includes(id));
@@ -36,7 +36,8 @@
    Array.isArray(g.between)&&g.between.every(pair)&&strings(g.hemispheres)&&g.hemispheres.every(v=>directions.includes(v))&&
    !(g.hemispheres.includes('north')&&g.hemispheres.includes('south'))&&!(g.hemispheres.includes('east')&&g.hemispheres.includes('west'))&&
    strings(g.boundaries)&&g.boundaries.every(v=>v==='equator')&&
-   !(g.boundaries.includes('equator')&&g.hemispheres.some(v=>['north','south'].includes(v)));
+   !(g.boundaries.includes('equator')&&g.hemispheres.some(v=>['north','south'].includes(v)))&&
+   (g.nearPlaces===undefined||strings(g.nearPlaces));
  }
  function reviewValid(anchor,review,map){
   const e=review?.evidence;
@@ -49,6 +50,7 @@
  function matches(q,g){
   switch(q.op){
    case 'place':return g.places.includes(q.placeId);
+   case 'near':return g.places.includes(q.placeId)||g.nearPlaces.includes(q.placeId);
    case 'region':return g.regions.some(r=>r.placeId===q.placeId&&r.direction===q.direction);
    case 'side':return g.sides.some(s=>s.oceanId===q.oceanId&&s.sidePlaceId===q.sidePlaceId);
    case 'between':return g.between.some(p=>samePair(p,q.placeIds));
@@ -72,6 +74,10 @@
   const byId=new Map(reviews.map(r=>[r.anchorId,r]));
   const unresolved=anchors.filter(a=>!reviewValid(a,byId.get(a.id),map)).map(a=>a.id);
   if(unresolved.length)return blocked('incomplete_geography',{unresolvedAnchorIds:unresolved});
+  if(query.op==='near'){
+   const unknown=anchors.filter(a=>{const r=byId.get(a.id),channels=query.channel==='physical'?[r.physical]:query.channel==='target'?[r.target??r.physical]:[r.physical,r.target].filter(Boolean);return channels.some(g=>!Array.isArray(g.nearPlaces))}).map(a=>a.id);
+   if(unknown.length)return blocked('incomplete_proximity',{unresolvedAnchorIds:unknown});
+  }
   const matchedAnchorIds=anchors.filter(a=>{
    const r=byId.get(a.id);
    const channels=query.channel==='physical'?[r.physical]:query.channel==='target'?[r.target??r.physical]:[r.physical,r.target].filter(Boolean);

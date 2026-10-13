@@ -70,6 +70,8 @@ jobs:
           node --check tools/content-review-model.js
           node --check tools/review-content.js
           node scripts/validate-content-review.mjs
+          node tools/build_l2_catalog.mjs --check
+          node scripts/validate-l2-review.mjs
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs
