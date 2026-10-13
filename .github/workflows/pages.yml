@@ -61,6 +61,11 @@ jobs:
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs
 
+      - name: Validate non-live Level 1 source catalog and fact timing
+        run: |
+          node tools/build_l1_catalog.mjs --check
+          node scripts/validate-l1-catalog.mjs
+
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
