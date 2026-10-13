@@ -132,7 +132,13 @@ export function adaptCatalog(s,{editorial,spatialReview=geography.create(s.spati
   if(!id||!original)block('CATALOG_MAPPING_MISMATCH',p.id+':'+clue.position,'Назначение изменилось; требуется пересобрать каталог');
   if(!mapped.confirmations[p.id]?.[clue.position])block('CLUE_REVIEW_PENDING',p.id+':'+clue.position,'Назначение получено, содержательная проверка ещё не подтверждена');
  }
- if(course.id==='rivers')block('L2_COMPOSITE_RUNTIME_PENDING','rivers','Редактор L2 подготовлен; выпуск требует составной программы L1→L2, проверенного входного знания и явных карт практики.');
+ if(course.id==='rivers'){
+  for(const plan of s.lexicon.practicePlans){
+   block('L2_PRACTICE_MAP_REVIEW_PENDING',plan.stepId,'Карта/SHA/набор якорей и фокус предложены; отдельное редакторское утверждение и безопасная геометрия ещё не реализованы.');
+   if(plan.candidateL1RepeatedWordIds?.length)block('L2_CROSS_COURSE_REUSE_PENDING',plan.stepId,'Автору нужно решить, допустимы ли повторы слов L1: '+plan.candidateL1RepeatedWordIds.join(', '));
+  }
+  block('L2_COMPOSITE_RUNTIME_PENDING','rivers','Редактор L2 подготовлен; выпуск требует составной программы L1→L2, проверенного входного знания и явных карт практики.');
+ }
  if(blockers.length)return result();
  const get=(section,id)=>decisions.get(section+':'+id);
  let compiled;

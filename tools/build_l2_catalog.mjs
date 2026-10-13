@@ -49,8 +49,34 @@ export function buildL2Catalog(staging,mapping,draft,l1Catalog){
  const places=[...clone(l1Catalog.places),...extras.map(([id,kind])=>({id:'place-'+id,status:'editorial_pending',kind,label:{en:id.split('-').map(w=>w[0].toUpperCase()+w.slice(1)).join(' ')},introducedBy:null,anchors:[]}))];
  return {schemaVersion:1,status:'not_for_live_use',bookId:'l2',courseId:'rivers',requiresCourses:['oceans-continents'],warning:'Source proposals only. L1 knowledge is not assumed learned. Near a river is distinct from on a river; all geography, lesson timing and word distribution remain pending.',places,anchors,descriptors,audit};
 }
-export function buildL2Plans(draft,pilot){return {schemaVersion:1,status:'not_for_live_use',courseId:'rivers',warning:'Only the existing three pilot word plans are proposed; remaining seven plans stay null. Not sixty generated puzzles.',practicePlans:draft.courses.find(c=>c.id==='rivers').steps.map((s,i)=>({stepId:s.id,status:'editorial_pending',candidateWordIds:i<3?[...pilot.steps[i].wordIds]:null,geometryStatus:'not_verified',teachingOrderStatus:'editorial_pending',generatedPuzzles:[]}))}}
-export function buildL2Sources(){const read=name=>JSON.parse(fs.readFileSync('data/import-staging/'+name+'.json')),draft=read('curriculum-draft'),catalog=buildL2Catalog(read('l2-staging'),read('review-assignments'),draft,read('l1-catalog-draft')),spatial=buildSpatialReview(catalog);spatial.warning='L2 blank scopes, all proximity and arrow channels unreviewed.';spatial.puzzles.forEach(p=>p.requiresNearReview=true);
- const pilot=loadScript('data/courses.js','GEOWORD_COURSES').rivers;return {catalog,spatial,plans:buildL2Plans(draft,pilot)};
+// Explicit proposals, not an algorithm assigning words by the author answer.
+// Existing global definitions are reused; their age/meaning checks remain open.
+const laterWords=[
+ ['watershed','catchment','confluence','headwater','basin','distance'],
+ ['aridity','drought','oasis','climate','tropics','islet'],
+ ['settlement','migration','urban','rural','density','region'],
+ ['border','mapping','atlas','globe','compass','bearing'],
+ ['terrain','canyon','plateau','ridge','ridgeline','summit'],
+ ['temperate','polar','slope','salinity','seawater','current'],
+ ['latitude','meridian','parallel','grid','position','reference'],
+];
+const practiceScopes=['l2-02','l2-03','l2-04','l2-05','l2-06','l2-07','l2-08','l2-09','l2-10','l2-10'];
+const focus=[['nile'],['amazon'],['mississippi'],['yangtze'],['ganges'],['danube'],['volga'],['nile','amazon','mississippi','yangtze','ganges','danube','volga'],['nile','amazon','mississippi','yangtze','ganges','danube','volga'],['nile','amazon','mississippi','yangtze','ganges','danube','volga']];
+export function buildL2Plans(draft,pilot,lexicon,staging,spatial){
+ const entries=new Map(lexicon.entries.map(e=>[e.id,e])),l1Words=new Set(lexicon.practicePlans.flatMap(p=>p.candidateWordIds)),used=new Set();
+ const plans=draft.courses.find(c=>c.id==='rivers').steps.map((s,i)=>{
+  const words=i<3?[...pilot.steps[i].wordIds]:[...laterWords[i-3]],puzzle=staging.puzzles.find(p=>p.id===practiceScopes[i]),scope=spatial.puzzles.find(p=>p.puzzleId===puzzle?.id);
+  if(!scope||words.length!==6||new Set(words).size!==6)throw Error('Invalid explicit L2 practice proposal');
+  for(const id of words){const e=entries.get(id);if(!e||used.has(id)||e.word.length>scope.map.anchorIds.length)throw Error('Unknown/repeated/over-capacity L2 word '+id);used.add(id)}
+  return {stepId:s.id,status:'editorial_pending',authoredFirst:true,target:7,practiceCount:6,candidateWordIds:words,
+   wordProposalOrigin:i<3?'existing_pilot_plan':'codex_global_lexicon_selection_not_authored',
+   candidateL1RepeatedWordIds:words.filter(id=>l1Words.has(id)),crossCourseReuseStatus:'editorial_pending',
+   candidatePracticeMap:{status:'editorial_pending',sourcePuzzleId:puzzle.id,asset:puzzle.map,aspect:puzzle.mapAspect,mapSha256:scope.map.sha256,anchorIds:[...scope.map.anchorIds],provenance:clone(puzzle.provenance),candidateFocusPlaceIds:focus[i].map(id=>'place-'+id),focusStatus:'editorial_pending',capacityStatus:'word_length_within_source_anchor_count_only',geographicResolution:'not_verified'},
+   geometryStatus:'not_verified',teachingOrderStatus:'editorial_pending',generatedPuzzles:[]};
+ });
+ return {schemaVersion:1,status:'not_for_live_use',courseId:'rivers',warning:'Sixty candidate slots using existing global definitions, not generated puzzles. Cross-course reuse, explicit source map/focus, geography, age suitability and teaching order require review. No facts are learned by these proposals.',practicePlans:plans};
 }
-if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const s=buildL2Sources();for(const [name,data] of [['l2-catalog-draft',s.catalog],['l2-spatial-review-draft',s.spatial],['l2-practice-plans-draft',s.plans]]){const path='data/import-staging/'+name+'.json',content=JSON.stringify(data,null,2)+'\n';if(process.argv.includes('--check')){if(fs.readFileSync(path,'utf8')!==content)throw Error('Stale L2 source '+name)}else{if(fs.existsSync(path)&&fs.readFileSync(path,'utf8')!==content)throw Error('Refusing to overwrite an existing L2 source; inspect changes explicitly');fs.writeFileSync(path,content)}}console.log(`L2 pending: ${s.catalog.anchors.length} anchors, ${s.catalog.descriptors.length} phrases, ${s.spatial.puzzles.length} scopes; three legacy word proposals, seven unknown plans.`)}
+export function buildL2Sources(){const read=name=>JSON.parse(fs.readFileSync('data/import-staging/'+name+'.json')),draft=read('curriculum-draft'),catalog=buildL2Catalog(read('l2-staging'),read('review-assignments'),draft,read('l1-catalog-draft')),spatial=buildSpatialReview(catalog);spatial.warning='L2 blank scopes, all proximity and arrow channels unreviewed.';spatial.puzzles.forEach(p=>p.requiresNearReview=true);
+ const pilot=loadScript('data/courses.js','GEOWORD_COURSES').rivers;return {catalog,spatial,plans:buildL2Plans(draft,pilot,read('lexicon-draft'),read('l2-staging'),spatial)};
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){const s=buildL2Sources();for(const [name,data] of [['l2-catalog-draft',s.catalog],['l2-spatial-review-draft',s.spatial],['l2-practice-plans-draft',s.plans]]){const path='data/import-staging/'+name+'.json',content=JSON.stringify(data,null,2)+'\n';if(process.argv.includes('--check')){if(fs.readFileSync(path,'utf8')!==content)throw Error('Stale L2 source '+name)}else{if(fs.existsSync(path)&&fs.readFileSync(path,'utf8')!==content)throw Error('Refusing to overwrite an existing L2 source; inspect changes explicitly');fs.writeFileSync(path,content)}}console.log(`L2 pending: ${s.catalog.anchors.length} anchors, ${s.catalog.descriptors.length} phrases, ${s.spatial.puzzles.length} scopes; sixty candidate slots and ten explicit map proposals, no generated puzzles.`)}

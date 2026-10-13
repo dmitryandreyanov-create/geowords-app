@@ -43,6 +43,8 @@
   const s=step(),r=record('step:'+stepId);if(!s||!r)return;$('learningStep').value=stepId;
   const plan=sources.lexicon.practicePlans.find(p=>p.stepId===s.id);
   $('learningCandidates').textContent=`Предложено ДО: ${s.candidateLearnBefore.join(', ')||'пусто'}\nПредложено ПОСЛЕ: ${s.candidateUnlockAfter.join(', ')||'пусто'}\nДополнительные блоки: ${s.candidateOptionalAfter.join(', ')||'пусто'}\nСлова-кандидаты: ${plan.candidateWordIds?.join(', ')||'план ещё не подготовлен; шесть слов не выбраны'}. Это предложения, не готовые задания.`;
+  const map=plan.candidatePracticeMap;
+  if(map)$('learningCandidates').textContent+=`\nКарта практики — предложение pending: ${map.sourcePuzzleId} · PDF ${map.provenance.mapPdfPage} · ${map.asset}\nSHA: ${map.mapSha256}\nНабор якорей именно этого задания: ${map.anchorIds.length}; совпадение bitmap не объединяет наборы. Фокус-кандидат: ${map.candidateFocusPlaceIds.join(', ')}. География, доля фокуса и безопасная генерация не проверены.\nПовторы относительно предложений L1: ${plan.candidateL1RepeatedWordIds.join(', ')||'нет'}. Допустимость повторов между курсами требует решения автора. Копирование слов не утверждает карту или фокус.`;
   for(const [field] of stepFields){
    const rows=field==='wordIds'?model.wordChoices(sources).map(e=>[e.id,e.word]):['introducedPlaces','focusPlaceIds'].includes(field)?placeChoices():factChoices();
    choices($('learningStep-'+field),rows,r.decision[field]);$('learningStepKnown-'+field).checked=r.decision[field]!==null;
