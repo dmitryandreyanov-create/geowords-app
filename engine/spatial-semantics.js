@@ -77,5 +77,5 @@
   }).map(a=>a.id);
   return {status:matchedAnchorIds.length===1?'unique':matchedAnchorIds.length?'ambiguous':'no_match',matchedAnchorIds};
  }
- return {validateQuery,resolve};
+ return {validateQuery,validateMembership,reviewValid,resolve};
 });

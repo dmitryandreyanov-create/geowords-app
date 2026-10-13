@@ -103,7 +103,7 @@ function renderClues(){
    b.addEventListener('click',()=>{state.selected=i;renderMap();renderClues()});
  }
 }
-function render(){renderList();renderMap();renderClues();status()}
+function render(){renderList();renderMap();renderClues();status();globalThis.GEOWORD_SPATIAL_PANEL?.render(current().id)}
 function selectMarker(id){
  const p=current(),clue=selectedClue();
  if(!clue.candidateMarkerIds.includes(id))return;
@@ -136,6 +136,10 @@ async function start(){
    const data=await Promise.all(urls.map(async url=>{const r=await fetch(url);if(!r.ok)throw Error(`Не удалось открыть ${url} (${r.status})`);return r.json()}));
    for(const d of data){if(d.status!=='not_for_live_use'||d.puzzles.length!==10)throw Error('Неверный статус или количество заданий в импорте')}
    state.books=data;state.puzzles=data.flatMap(d=>d.puzzles);initAssignments();
+   // The supplied user export is the baseline, not a fresh blank assignment task.
+   const baseline=await fetch('../data/import-staging/review-assignments.json');
+   if(!baseline.ok)throw Error('Не удалось загрузить уже полученные назначения');
+   Object.assign(state,model.restore(state.puzzles,await baseline.json()));
    let saved=null;try{saved=localStorage.getItem(STORAGE_KEY)}catch{storageWarning=true}
    if(saved){
      try{const choices=JSON.parse(saved);restore(choices)}
@@ -154,6 +158,7 @@ async function start(){
    });
    $('save').addEventListener('click',()=>{try{save()}catch(e){$('message').textContent=e.message}});
    $('restore').addEventListener('change',async e=>{try{const file=e.target.files?.[0];if(file)restore(JSON.parse(await file.text()))}catch(err){$('message').textContent='Ошибка импорта: '+err.message}e.target.value=''});
+   await globalThis.GEOWORD_SPATIAL_PANEL?.init(()=>state.assignments);
    render();state.loaded=true;
    if(storageWarning)$('message').textContent='Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
  }catch(e){$('appError').classList.remove('hidden');$('appError').textContent='Ошибка загрузки: '+e.message}

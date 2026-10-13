@@ -17,7 +17,33 @@
 <section class="pane"><header><h2 id="puzzleTitle">Карта</h2><div id="mapSource" class="sub"></div></header><div class="stage"><div id="map" class="map" aria-label="Оригинальная карта с буквами"><img id="mapImage" alt="Оригинальная карта без букв"><svg id="mapArrows" class="arrow-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg></div><p class="map-guide">Выберите подсказку справа, затем соответствующую букву на карте. Обведённые жёлтым буквы — допустимые кандидаты. Для каждого задания одна буква используется один раз.</p><div class="info"><span id="puzzleProgress" class="review-status"></span><span id="puzzleErrors" class="bad"></span></div><details><summary>Исходные факты из PDF (требуют редакторской проверки)</summary><div id="facts" class="facts"></div></details></div></section>
 <section class="pane details-pane"><header><h2>Подсказки</h2><div class="sub" id="clueHeader"></div></header><div class="details"><div id="clues" class="clues"></div><div class="toolbar"><button id="previous" type="button">← Предыдущее</button><button id="next" type="button">Следующее →</button><button id="confirmSelected" type="button">Подтвердить географию</button><button id="clearSelected" type="button">Сбросить выбор</button></div><div class="toolbar"><button id="save" class="primary" type="button">Экспорт разметки JSON</button><label class="import-label" for="restore">Импорт сохранённой разметки<input id="restore" type="file" accept=".json,application/json"></label></div><p class="help">Экспорт сохраняет назначения и отдельные подтверждения географии. Проверьте также буквы, сопоставленные автоматически. Разметка автоматически сохраняется в этом браузере, если доступно локальное хранилище. Периодически экспортируйте JSON как резервную копию. Незавершённые соответствия остаются пустыми.</p><div id="message" class="review-status" role="status" aria-live="polite"></div></div></section>
 </main>
+<section class="pane spatial-pane" id="spatialPanel" hidden>
+<header><h2>География букв · Level 1</h2><p id="geoProgress" class="sub"></p></header>
+<div class="details">
+<p class="help">Это отдельная проверка всех букв, не повторное назначение ответов. Выберите букву независимо от выбранной подсказки. Укажите все применимые свойства по исходной карте, включая вложенные объекты (например, Asia и Eurasia). В списках можно выбрать несколько пунктов; на Windows — Ctrl + щелчок. Пустой список означает отсутствие свойства только после подтверждения полноты.</p>
+<div class="geo-grid">
+<label>Буква на карте<select id="geoAnchor"></select></label>
+<label>Что проверяем<select id="geoChannel"><option value="physical">Положение самой буквы</option><option value="target">Конец стрелки</option></select></label>
+<label>Все географические объекты<select id="geoPlaces" multiple size="5"></select></label>
+<label>Части объектов<select id="geoRegions" multiple size="5"></select></label>
+<label>Сторона океана<select id="geoSides" multiple size="3"></select></label>
+<label>Между объектами<select id="geoBetween" multiple size="4"></select></label>
+<label>Полушария<select id="geoHemispheres" multiple size="4"><option value="north">Северное</option><option value="south">Южное</option><option value="east">Восточное</option><option value="west">Западное</option></select></label>
+<label><input id="geoEquator" type="checkbox"> На экваторе</label>
+</div>
+<p id="geoBinding" class="sub"></p>
+<label><input id="geoComplete" type="checkbox"> Проверил полноту всех свойств буквы и конца стрелки по исходной карте</label>
+<div class="toolbar"><button id="geoConfirm" type="button">Подтвердить полноту географии буквы</button><button id="geoRevoke" type="button">Снять утверждение</button><button id="geoExport" type="button">Экспорт географии JSON</button><label class="import-label">Импорт географии JSON<input id="geoImport" type="file" accept=".json,application/json"></label></div>
+<p id="spatialMessage" class="review-status" role="status" aria-live="polite"></p>
+<div class="toolbar"><button id="geoBackup" type="button" hidden>Скачать несовместимое сохранение</button></div>
+<details open><summary>Независимый черновой отчёт о подсказках</summary><p class="help">Отчёт проверяет все буквы задания, но использует ещё не утверждённые запросы и предполагаемые факты. Он не подтверждает уроки, не ставит старые отметки географии и не публикует задания.</p><div id="geoReport" class="sub"></div></details>
+</div></section>
+<p id="spatialUnavailable" class="help" hidden>Географическая панель пока доступна только для Level 1. Назначения и проверка подсказок Level 2 работают как раньше.</p>
+<style>[hidden]{display:none!important}.spatial-pane{margin:0 12px 16px}.geo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.geo-grid label{display:flex;flex-direction:column;gap:5px}.geo-grid select{font:inherit;max-width:100%;width:100%;padding:5px;border:1px solid #9fbfc5;border-radius:6px}#geoReport>div{padding:5px 0;border-bottom:1px solid #e0ecee}@media(max-width:750px){.geo-grid{grid-template-columns:1fr}}</style>
 <script src="./review-model.js"></script>
+<script src="../engine/spatial-semantics.js"></script>
+<script src="./spatial-review-model.js"></script>
+<script src="./review-spatial.js"></script>
 <script src="./review-import.js"></script>
 </body>
 </html>

@@ -19,8 +19,10 @@ let browser;
 try{
  browser=await chromium.launch({headless:true,...(process.env.CHROMIUM_EXECUTABLE_PATH?{executablePath:process.env.CHROMIUM_EXECUTABLE_PATH,args:['--no-sandbox','--disable-dev-shm-usage','--use-gl=angle','--use-angle=swiftshader']}:{})});
  const context=await browser.newContext({viewport:{width:360,height:800},hasTouch:true,acceptDownloads:true});
+ // Mechanical incomplete fixture, not the user's complete baseline.
+ await context.addInitScript(()=>{if(!localStorage.getItem('geowords-import-review-v2'))localStorage.setItem('geowords-import-review-v2',JSON.stringify({version:1,generatedFrom:'author map review',sourceQuizCount:20,assignments:{}}))});
  const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
- const open=async()=>{await page.goto(url+'/tools/review-import.html');await page.waitForSelector('#workspace:not([hidden])')};
+ const open=async()=>{await page.goto(url+'/tools/review-import.html');await page.waitForSelector('#workspace:not([hidden])');await page.waitForSelector('#geoAnchor option',{state:'attached'})};
  await open();
  assert.match(await page.locator('#globalProgress').innerText(),/география подтверждена 0\/187/);
  let arrows=0;
@@ -61,7 +63,57 @@ try{
  await blockedPage.locator('#restore').setInputFiles({name:'review.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(payload))});
  await blockedPage.waitForFunction(()=>document.querySelector('#restore').value==='');
  assert.match(await blockedPage.locator('#message').innerText(),/хранилище недоступно/i);
+ await blockedPage.waitForSelector('#geoAnchor option',{state:'attached'});
+ await blockedPage.locator('#geoPlaces').selectOption(['place-north-america']);
+ assert.match(await blockedPage.locator('#spatialMessage').innerText(),/Хранилище недоступно/);
  await blocked.close();
+ // Independent spatial panel in the same editor; decisions below are synthetic.
+ const spatialContext=await browser.newContext({viewport:{width:360,height:800},hasTouch:true,acceptDownloads:true});
+ const sp=await spatialContext.newPage();sp.on('pageerror',e=>errors.push(e.message));
+ await sp.goto(url+'/tools/review-import.html');await sp.waitForSelector('#geoAnchor option',{state:'attached'});
+ assert.match(await sp.locator('#globalProgress').innerText(),/Сопоставлено 187\/187/,'fresh editor retains the 69 user decisions');
+ assert(await sp.locator('#geoBackup').isHidden(),'recovery button only appears for incompatible saved work');
+ assert.match(await sp.locator('#geoReport').innerText(),/заблокирована/);
+ await sp.locator('#geoPlaces').selectOption(['place-north-america']);await sp.locator('#geoComplete').check();await sp.locator('#geoConfirm').click();
+ assert.match(await sp.locator('#geoProgress').innerText(),/1\/9/);
+ assert.match(await sp.locator('#globalProgress').innerText(),/география подтверждена 0\/187/,'spatial approval does not create clue approval');
+ await sp.reload();await sp.waitForSelector('#geoAnchor option',{state:'attached'});assert.match(await sp.locator('#geoProgress').innerText(),/1\/9/);
+ const spatialDownload=sp.waitForEvent('download');await sp.locator('#geoExport').click();
+ const exported=await spatialDownload,geoPayload=JSON.parse(fs.readFileSync(await exported.path()));
+ assert.equal(geoPayload.generatedFrom,'spatial author review');assert.equal(geoPayload.puzzles[0].reviews[0].status,'approved');
+ await sp.locator('#geoPlaces').selectOption(['place-africa']);assert.match(await sp.locator('#geoProgress').innerText(),/0\/9/);
+ const geoUpload=async data=>{await sp.locator('#geoImport').setInputFiles({name:'geo.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(data))});await sp.waitForFunction(()=>document.querySelector('#geoImport').value==='')};
+ await geoUpload(geoPayload);assert.match(await sp.locator('#geoProgress').innerText(),/1\/9/);
+ const geoBefore=await sp.evaluate(()=>localStorage.getItem('geowords-spatial-review-v1'));
+ const geoStale=structuredClone(geoPayload);geoStale.puzzles[0].reviews[0].sourceBinding.x++;await geoUpload(geoStale);
+ assert.match(await sp.locator('#spatialMessage').innerText(),/Ошибка импорта/);assert.equal(await sp.evaluate(()=>localStorage.getItem('geowords-spatial-review-v1')),geoBefore);
+ await geoUpload(payload);assert.match(await sp.locator('#spatialMessage').innerText(),/Ошибка импорта/);
+ await sp.locator('#restore').setInputFiles({name:'old.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...payload,version:1}))});await sp.waitForFunction(()=>document.querySelector('#restore').value==='');
+ assert.equal(await sp.evaluate(()=>localStorage.getItem('geowords-spatial-review-v1')),geoBefore,'legacy assignments do not erase spatial review');
+ await sp.locator('#puzzleList button').nth(5).click();await sp.locator('#geoAnchor').selectOption('l1-06-glyph-02');
+ await sp.locator('#geoPlaces').selectOption(['place-indian-ocean']);await sp.locator('#geoComplete').check();await sp.locator('#geoConfirm').click();
+ assert.match(await sp.locator('#spatialMessage').innerText(),/конец стрелки/);
+ await sp.locator('#geoChannel').selectOption('target');await sp.locator('#geoPlaces').selectOption(['place-madagascar']);await sp.locator('#geoComplete').check();await sp.locator('#geoConfirm').click();
+ assert.match(await sp.locator('#geoProgress').innerText(),/1\/11/);
+ await sp.locator('#geoRevoke').click();assert.match(await sp.locator('#geoProgress').innerText(),/0\/11/);
+ await sp.locator('#puzzleList button').nth(10).click();assert(await sp.locator('#spatialPanel').isHidden());assert(await sp.locator('#spatialUnavailable').isVisible());
+ await sp.locator('#puzzleList button').first().click();
+ const exhaustive=structuredClone(geoPayload);
+ for(const r of exhaustive.puzzles[0].reviews){r.status='approved';r.complete=true;r.evidence=structuredClone(r.sourceBinding);r.physical={places:[],regions:[],sides:[],between:[],hemispheres:[],boundaries:[]};r.target=null}
+ exhaustive.puzzles[0].reviews[1].physical.places=['place-australia'];
+ await geoUpload(exhaustive);assert.match(await sp.locator('#geoReport').innerText(),/НЕ совпадает с назначением/);
+ assert(await sp.locator('#geoBackup').isHidden());
+ assert.match(await sp.locator('#globalProgress').innerText(),/география подтверждена 0\/187/);
+ assert(await sp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'spatial panel fits phone width');
+ if(process.env.GEOWORDS_QA_SCREENSHOT)await sp.locator('#spatialPanel').screenshot({path:process.env.GEOWORDS_QA_SCREENSHOT});
+ await spatialContext.close();
+ const incompatibleContext=await browser.newContext({viewport:{width:360,height:800},acceptDownloads:true});
+ await incompatibleContext.addInitScript(value=>localStorage.setItem('geowords-spatial-review-v1',value),JSON.stringify(geoStale));
+ const ip=await incompatibleContext.newPage();ip.on('pageerror',e=>errors.push(e.message));await ip.goto(url+'/tools/review-import.html');await ip.waitForSelector('#geoAnchor option',{state:'attached'});
+ assert(await ip.locator('#geoBackup').isVisible());
+ await ip.locator('#geoPlaces').selectOption(['place-africa']);assert.equal(await ip.evaluate(()=>localStorage.getItem('geowords-spatial-review-v1')),JSON.stringify(geoStale),'incompatible saved work is protected from autosave');
+ const backupPromise=ip.waitForEvent('download');await ip.locator('#geoBackup').click();const backup=await backupPromise;
+ assert.equal(fs.readFileSync(await backup.path(),'utf8'),JSON.stringify(geoStale),'raw incompatible work can be recovered');await incompatibleContext.close();
  // Real clicks through all 21 pilot words. Accelerate only UI delays.
  const game=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
  await game.addInitScript(()=>{const later=window.setTimeout;window.setTimeout=(fn,ms,...args)=>later(fn,ms<=1500?10:ms,...args)});
@@ -101,9 +153,9 @@ try{
  for(const c of mountain.clues){await gp.locator(`[data-marker-id="${c.markerId}"]`).click();await gp.waitForTimeout(30)}
  await gp.locator('#finishScreen.active').waitFor();assert.equal(await gp.locator('#finishWord').innerText(),mountain.answer);
  assert.equal(await gp.evaluate(id=>localStorage.getItem('geowords_completed_'+id),mountain.id),'1');
- for(const internal of ['tools/review-import.html','tools/review-model.js','data/import-staging/l1-staging.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs']){
+ for(const internal of ['tools/review-import.html','tools/review-model.js','tools/review-spatial.js','tools/spatial-review-model.js','data/import-staging/l1-staging.json','data/authored-answer-index.js','engine/curriculum.js','engine/spatial-semantics.js','data/import-staging/curriculum-draft.json','data/import-staging/facts-draft.json','data/import-staging/l1-catalog-draft.json','data/import-staging/l1-spatial-review-draft.json','data/import-staging/review-status.json','docs/SOURCE_FACTS_DRAFT.md','docs/L1_CATALOG_DRAFT.md','docs/SPATIAL_SEMANTICS.md','tools/build_l1_catalog.mjs','tools/build_l1_spatial_review.mjs']){
   assert.equal((await gp.request.get(url+'/release/'+internal)).status(),404,'internal excluded: '+internal);
  }
  assert.deepEqual(errors,[]);
- console.log('PASS browser 360px: 55 editor arrows, real reload/export/import, all-clue confirmations, legacy migration, blocked storage, 21 Rivers words, error correction, reload during practice, Mountains and release exclusion.');
+ console.log('PASS browser 360px: retained user baseline, spatial reload/export/import and approval invalidation, both arrow channels, 55 editor arrows, legacy review, blocked storage, 21 Rivers words, Mountains and release exclusion.');
 }finally{await browser?.close();await new Promise(resolve=>server.close(resolve))}
