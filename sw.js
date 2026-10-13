@@ -1,9 +1,11 @@
-const CACHE="geowords-v0.6.0-l1-phone";
+const CACHE="geowords-v0.6.1-expedition";
 const CORE=[
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
+  "./game/fun.js",
+  "./game/fun.css",
   "./data/levels.js",
   "./data/dictionary.js",
   "./data/courses.js",

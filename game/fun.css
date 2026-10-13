@@ -1,0 +1,78 @@
+/* Expedition layer styles (see game/fun.js) */
+.topbar{align-items:center}
+.fun-bar{display:flex;gap:6px;margin-left:auto;margin-right:8px}
+.fun-chip{display:flex;align-items:center;gap:4px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:7px 9px;font-size:14px;box-shadow:var(--shadow)}
+.fun-chip b{font-weight:400}
+.fun-btn{cursor:pointer;font-size:15px;min-width:38px;justify-content:center}
+
+/* home explorer card */
+.explorer-card{display:flex;gap:14px;align-items:center;margin-top:12px;padding:16px;border-radius:22px;background:linear-gradient(135deg,#fff7e6,#ffe9c7);border:1px solid #f2d3a0;box-shadow:var(--shadow)}
+.explorer-pip{width:84px;flex:0 0 84px;animation:pip-idle 3s ease-in-out infinite}
+.explorer-pip svg,.pip-avatar svg,.finish-pip svg{display:block;width:100%;height:auto}
+.explorer-info{flex:1;min-width:0}
+.explorer-info h2{margin:4px 0 8px;font-size:22px;line-height:1.1}
+.explorer-card .eyebrow{color:#b5651d!important}
+.xp-track{height:12px;border-radius:8px;background:#f3dcb8;overflow:hidden}
+.xp-fill{height:100%;border-radius:8px;background:linear-gradient(90deg,#ffb347,#ff7a3d);transition:width .6s ease}
+.xp-text{font-size:12px;font-weight:800;color:#8a5a2b;margin-top:5px}
+.passport-btn{margin-top:10px;border:0;border-radius:12px;padding:9px 12px;background:#3d3a99;color:#fff;font-weight:850;font-size:14px;cursor:pointer;width:100%;text-align:left}
+
+/* guide in the clue card */
+.clue-card{position:relative}
+.pip-guide{display:flex;align-items:flex-end;gap:8px;margin-top:10px}
+.pip-avatar{width:56px;height:56px;flex:0 0 56px;padding:0;border:0;background:transparent;cursor:pointer;animation:pip-idle 3s ease-in-out infinite}
+.pip-bubble{position:relative;flex:1;background:#fff7e6;border:1px solid #f2d3a0;border-radius:14px;padding:8px 11px;font-size:14px;font-weight:750;color:#6b4320;min-height:36px}
+.pip-bubble:before{content:"";position:absolute;left:-7px;bottom:12px;border:7px solid transparent;border-right-color:#f2d3a0;border-left:0}
+.pip-bubble:empty{visibility:hidden}
+.pip-guide.pop .pip-bubble{animation:bubble-pop .3s ease}
+.pip-guide.happy .pip-avatar{animation:pip-jump .5s ease}
+.pip-guide.sad .pip-avatar{animation:pip-shake .4s ease}
+.pip-guide.hint .pip-avatar{animation:pip-wiggle .8s ease infinite}
+.pip-guide.hint .pip-bubble{background:#eef6ff;border-color:#9cc3ef;color:#244a78}
+.hint-btn{display:block;margin-top:6px;border:0;border-radius:10px;padding:7px 10px;background:#2f6fb5;color:#fff;font-weight:850;font-size:14px;cursor:pointer}
+.combo-chip{position:absolute;top:12px;right:14px;font-size:13px;font-weight:950;color:#c2410c;background:#ffedd5;border-radius:12px;padding:4px 9px;opacity:0;transform:scale(.6);transition:all .25s ease;pointer-events:none}
+.combo-chip.on{opacity:1;transform:scale(1)}
+
+/* map + letters */
+.marker-hotspot.hint-glow{z-index:3;border-radius:50%;animation:hint-ring 1s ease-in-out infinite;background:rgba(255,214,90,.35)!important;box-shadow:0 0 0 4px #ffd34d}
+.fly-letter{position:fixed;z-index:50;transform:translate(0,0);transition:transform .55s cubic-bezier(.3,1.4,.5,1),opacity .55s ease .25s;margin:-18px 0 0 -18px;width:36px;height:36px;border-radius:50%;background:#ffd34d;color:#27316c;font-weight:950;font-size:20px;display:grid;place-items:center;box-shadow:0 4px 12px rgba(0,0,0,.25);pointer-events:none}
+.slot-pop{animation:slot-pop .45s ease}
+
+/* finish */
+.fun-finish{margin:6px 0 4px}
+.star-row{display:flex;justify-content:center;gap:6px}
+.star{font-size:46px;color:#d9dee0;transform:scale(0);animation:star-in .5s cubic-bezier(.3,1.6,.5,1) forwards}
+.star.on{color:#ffc93c;text-shadow:0 3px 0 #e0a218}
+.fun-gain{font-weight:900;color:#c2410c;margin-top:4px}
+.rank-up{margin:10px auto 0;display:inline-block;background:#3d3a99;color:#fff;border-radius:14px;padding:8px 14px;font-weight:900;animation:bubble-pop .5s ease}
+.finish-pip{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;font-weight:800;color:#6b4320}
+.finish-pip svg{width:56px;flex:0 0 56px;animation:pip-jump 1s ease 2}
+
+/* confetti */
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:60;overflow:hidden}
+.confetti i{position:absolute;top:-12px;width:9px;height:14px;border-radius:2px;animation:confetti-fall 2.2s ease-in forwards}
+
+/* passport */
+.passport-overlay{position:fixed;inset:0;z-index:70;background:rgba(20,30,40,.45);display:grid;place-items:center;padding:16px}
+.passport{width:min(560px,100%);max-height:86dvh;overflow:auto;background:#fdf6e3;border:3px solid #3d3a99;border-radius:22px;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.passport-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.passport-head h2{margin:4px 0 0;font-size:22px}
+.passport-close{border:0;background:#e9e3d0;border-radius:50%;width:40px;height:40px;font-size:18px;cursor:pointer}
+.passport-sub{color:#6b5a3a;font-weight:700}
+.stamps{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px}
+.stamp{transform:rotate(var(--tilt));border:3px dashed #c2410c;border-radius:14px;padding:10px 6px;text-align:center;color:#c2410c;background:rgba(255,255,255,.55);display:flex;flex-direction:column;gap:3px}
+.stamp-word{font-weight:950;letter-spacing:.06em;font-size:14px;overflow-wrap:anywhere}
+.stamp-stars{color:#e0a218;font-size:18px}
+.stamp-unit{font-size:10px;font-weight:800;color:#8a6a4a;text-transform:uppercase}
+
+@keyframes pip-idle{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes pip-jump{0%,100%{transform:translateY(0)}40%{transform:translateY(-12px) rotate(-4deg)}}
+@keyframes pip-shake{0%,100%{transform:rotate(0)}25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+@keyframes pip-wiggle{0%,100%{transform:rotate(0) scale(1)}50%{transform:rotate(6deg) scale(1.08)}}
+@keyframes bubble-pop{0%{transform:scale(.85);opacity:.4}100%{transform:scale(1);opacity:1}}
+@keyframes hint-ring{0%,100%{box-shadow:0 0 0 3px #ffd34d}50%{box-shadow:0 0 0 12px rgba(255,211,77,.25)}}
+@keyframes slot-pop{0%{transform:scale(1)}50%{transform:scale(1.18)}100%{transform:scale(1)}}
+@keyframes star-in{to{transform:scale(1)}}
+@keyframes confetti-fall{to{transform:translate(var(--dx),105vh) rotate(var(--rot));opacity:.9}}
+@media (prefers-reduced-motion:reduce){.explorer-pip,.pip-avatar,.star,.confetti i,.fly-letter{animation:none!important;transition:none!important}.star{transform:none}}
+@media (max-width:460px){.topbar{flex-wrap:wrap;row-gap:8px}.fun-bar{order:3;width:100%;margin:0}.fun-chip{padding:5px 9px;font-size:13px;box-shadow:none}}

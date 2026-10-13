@@ -171,6 +171,7 @@ function resetGame(){
   $("mapViewport").style.setProperty("--map-aspect",level.mapAspect||"14 / 9");
   renderFeatures();renderMarkerArrows();renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
   if(playMode==='l1'&&solvedLetters.length===level.clues.length)later(finish,100);
+  emit("gw:start",{expected:level.clues[clueIndex]?.markerId||null});
 }
 function readableLocation(id){
   return id.split("-").map(part=>part.charAt(0).toUpperCase()+part.slice(1)).join(" ");
@@ -268,14 +269,17 @@ function chooseMarker(marker,el){
   const expected=level.clues[clueIndex].markerId,feedback=$("feedback");
   if(marker.id!==expected){
     if(el){el.classList.remove("wrong");void el.offsetWidth;el.classList.add("wrong")}
-    feedback.textContent="Not this one — try another letter.";feedback.className="feedback bad";return;
+    feedback.textContent="Not this one — try another letter.";feedback.className="feedback bad";
+    emit("gw:wrong",{expected});return;
   }
 
   inputLocked=true;
+  const fromRect=(el||markerElement(marker.id))?.getBoundingClientRect()||null;
   if(!solvedMarkerIds.has(marker.id)){solvedMarkerIds.add(marker.id);solvedLetters.push(marker.letter)}
   if(playMode==='l1'&&!l1Replay){l1Model.partial(l1,l1State,level,[...solvedMarkerIds]);saveL1()}
   feedback.textContent="Yes! You found "+marker.letter+".";feedback.className="feedback ok";
   renderHotspots();renderWord();renderProgress();
+  emit("gw:correct",{letter:marker.letter,rect:fromRect,nextExpected:level.clues[clueIndex+1]?.markerId||null});
 
   if(solvedLetters.length===level.clues.length){
     later(finish,550);
@@ -285,8 +289,10 @@ function chooseMarker(marker,el){
   clueIndex+=1;
   later(()=>{renderClue();inputLocked=false},420);
 }
+function emit(name,detail){document.dispatchEvent(new CustomEvent(name,{detail}))}
 function finish(){
   if($("finishScreen").classList.contains("active"))return;
+  emit("gw:finish",{answer:level.answer,unit:level.unit||level.title||"",mode:playMode});
   if(playMode==='l1'){
     const result=l1Replay?{credited:false,advanced:false,finished:false}:l1Model.solve(l1,l1State,level,[...solvedMarkerIds]);saveL1();
     $('finishWord').textContent=level.answer;$('definition').textContent=level.definition;
