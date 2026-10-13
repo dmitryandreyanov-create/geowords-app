@@ -79,6 +79,11 @@ jobs:
       - name: Validate staged L1 and L2 original workbook imports
         run: node scripts/validate-import-staging.mjs
 
+      - name: Validate non-live global lexicon and L1 practice plans
+        run: |
+          node tools/build_lexicon_draft.mjs --check
+          node scripts/validate-lexicon-draft.mjs
+
       - name: Validate reviewer choices and source mapping compatibility
         run: |
           node --check tools/review-model.js
