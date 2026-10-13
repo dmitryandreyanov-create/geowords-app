@@ -75,9 +75,7 @@
             "pointsTo": null
           },
           "physical": {
-            "places": [
-              "place-north-america"
-            ],
+            "places": [],
             "regions": [],
             "sides": [],
             "between": [
@@ -92,18 +90,29 @@
           "target": null,
           "proposedFields": {
             "physical": [
-              "places",
               "between"
             ],
             "target": []
           },
+          "confirmedRelation": {
+            "usage": "between_only",
+            "between": [
+              [
+                "place-north-america",
+                "place-south-america"
+              ]
+            ],
+            "physicalPlaces": null,
+            "complete": false,
+            "source": "data/import-staging/l1-relation-decisions.json"
+          },
           "notes": [
-            "Маркер у соединения Америк. Возможна принадлежность North America одновременно с «между»; проверить конкуренцию с материковой подсказкой."
+            "Пользователь подтвердил только «между» и использование этой точки только для такой подсказки. Принадлежность континенту остаётся неизвестной; пустой черновой список НЕ означает отсутствие принадлежности. Полная география не утверждена."
           ],
           "provenance": {
             "source": "Level 1 Oceans & Continents.pdf",
             "mapPdfPage": 7,
-            "method": "visual_source_map",
+            "method": "user_confirmed_relation_on_source_map",
             "sourceGlyphId": "l1-01-glyph-02"
           }
         },
@@ -232,10 +241,6 @@
             "sides": [],
             "between": [
               [
-                "place-asia",
-                "place-australia"
-              ],
-              [
                 "place-australia",
                 "place-eurasia"
               ]
@@ -250,13 +255,25 @@
             ],
             "target": []
           },
+          "confirmedRelation": {
+            "usage": "between_only",
+            "between": [
+              [
+                "place-australia",
+                "place-eurasia"
+              ]
+            ],
+            "physicalPlaces": null,
+            "complete": false,
+            "source": "data/import-staging/l1-relation-decisions.json"
+          },
           "notes": [
-            "Маркер в островной зоне между Азией и Австралией. Границы материков/океанов здесь не нарисованы; базовую принадлежность не считать доказанной."
+            "Пользователь подтвердил только «между» и использование этой точки только для такой подсказки. Принадлежность континенту остаётся неизвестной; пустой черновой список НЕ означает отсутствие принадлежности. Полная география не утверждена."
           ],
           "provenance": {
             "source": "Level 1 Oceans & Continents.pdf",
             "mapPdfPage": 7,
-            "method": "visual_source_map",
+            "method": "user_confirmed_relation_on_source_map",
             "sourceGlyphId": "l1-01-glyph-06"
           }
         },
@@ -327,13 +344,25 @@
             ],
             "target": []
           },
+          "confirmedRelation": {
+            "usage": "between_only",
+            "between": [
+              [
+                "place-africa",
+                "place-eurasia"
+              ]
+            ],
+            "physicalPlaces": null,
+            "complete": false,
+            "source": "data/import-staging/l1-relation-decisions.json"
+          },
           "notes": [
-            "Маркер в зоне соединения Африки и Евразии. Объект центра не установлен; проверить широкие материковые подсказки."
+            "Пользователь подтвердил только «между» и использование этой точки только для такой подсказки. Принадлежность континенту остаётся неизвестной; пустой черновой список НЕ означает отсутствие принадлежности. Полная география не утверждена."
           ],
           "provenance": {
             "source": "Level 1 Oceans & Continents.pdf",
             "mapPdfPage": 7,
-            "method": "visual_source_map",
+            "method": "user_confirmed_relation_on_source_map",
             "sourceGlyphId": "l1-01-glyph-08"
           }
         },

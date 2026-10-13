@@ -5,10 +5,17 @@ import model from '../tools/spatial-review-model.js';
 const read=name=>JSON.parse(fs.readFileSync('data/import-staging/'+name));
 const scaffold=read('l1-spatial-review-draft.json'),staging=read('l1-staging.json'),catalog=read('l1-catalog-draft.json'),observations=read('l1-spatial-observations.json'),proposals=read('l1-spatial-proposals.json');
 const source=read('facts-draft.json').sources.find(s=>s.bookId==='l1');
-assert.equal(serializeProposals(proposals),serializeProposals(buildProposals(observations,scaffold,staging,source)));
+const relations=read('l1-relation-decisions.json');
+assert.equal(serializeProposals(proposals),serializeProposals(buildProposals(observations,scaffold,staging,source,relations)));
+assert.equal(relations.decisions.length,3);
+const baseline=buildProposals(observations,scaffold,staging,source).puzzles.flatMap(p=>p.records);
+for(const d of relations.decisions){const r=proposals.puzzles[0].records.find(r=>r.anchorId===d.anchorId);assert.deepEqual(r.physical.between,d.between);assert.deepEqual(r.physical.places,[]);assert.deepEqual(r.proposedFields.physical,['between']);assert.equal(r.confirmedRelation.physicalPlaces,null);assert.equal(r.confirmedRelation.complete,false)}
+for(const r of proposals.puzzles.flatMap(p=>p.records).filter(r=>!r.confirmedRelation))assert.deepEqual(r,baseline.find(b=>b.anchorId===r.anchorId),'other 94 visual proposals unchanged');
+for(const mutate of [r=>r.decisions[0].sourceBinding.x++,r=>r.decisions[0].sourceBinding.mapSha256='0'.repeat(64),r=>r.decisions[0].physicalPlaces=[],r=>r.decisions[0].complete=true,r=>r.decisions[0].between=[['place-africa','foreign']],r=>r.decisions.push(r.decisions[0])]){const bad=structuredClone(relations);mutate(bad);assert.throws(()=>buildProposals(observations,scaffold,staging,source,bad))}
 assert.equal(observations.status,'not_for_live_use');assert.equal(proposals.status,'not_for_live_use');
 const records=proposals.puzzles.flatMap(p=>p.records);assert.equal(records.length,97);assert.equal(new Set(records.map(r=>r.anchorId)).size,97);
 assert.equal(records.filter(r=>r.notes.length).length,29);assert.equal(records.filter(r=>r.target).length,5);
+if(fs.existsSync('dist'))assert(!fs.existsSync('dist/data/import-staging/l1-relation-decisions.json'),'partial relation receipts are not released to Pages');
 const state=model.create(scaffold);let applied=0;
 for(const p of proposals.puzzles)for(const r of p.records){
  assert.equal(r.status,'editorial_pending');assert.equal(r.complete,false);assert(!Object.hasOwn(r,'evidence'));
@@ -29,6 +36,6 @@ assert.throws(()=>model.applyProposal(fresh,catalog,'l1-01',bad),/устарев
 assert.equal(fresh.puzzles[0].reviews.find(r=>r.anchorId===first.anchorId).physical,null);
 // Independence from source clue mappings: builder only consumes markers/provenance.
 const changed=structuredClone(staging);changed.puzzles.forEach(p=>{p.clues=[];p.answer='NO-ANSWER'});
-assert.equal(serializeProposals(buildProposals(observations,scaffold,changed,source)),serializeProposals(proposals));
+assert.equal(serializeProposals(buildProposals(observations,scaffold,changed,source,relations)),serializeProposals(proposals));
 const equator=records.find(r=>r.anchorId==='l1-05-glyph-05');assert.deepEqual(equator.physical.boundaries,['equator']);assert(!equator.physical.hemispheres.some(v=>['north','south'].includes(v)));
 console.log('PASS: 97 source-bound visual proposals, 29 review notes, 5 tentative island targets, no answer dependence; 93 fillable drafts, zero geographic approvals, no overwriting user work.');
