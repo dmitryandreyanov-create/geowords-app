@@ -279,7 +279,7 @@ function chooseMarker(marker,el){
   if(playMode==='l1'&&!l1Replay){l1Model.partial(l1,l1State,level,[...solvedMarkerIds]);saveL1()}
   feedback.textContent="Yes! You found "+marker.letter+".";feedback.className="feedback ok";
   renderHotspots();renderWord();renderProgress();
-  emit("gw:correct",{letter:marker.letter,rect:fromRect,nextExpected:level.clues[clueIndex+1]?.markerId||null});
+  emit("gw:correct",{letter:marker.letter,rect:fromRect,clue:level.clues[clueIndex]?.text||"",nextExpected:level.clues[clueIndex+1]?.markerId||null});
 
   if(solvedLetters.length===level.clues.length){
     later(finish,550);
