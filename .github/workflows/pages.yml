@@ -72,6 +72,9 @@ jobs:
           node scripts/validate-content-review.mjs
           node tools/build_l2_catalog.mjs --check
           node scripts/validate-l2-review.mjs
+          node --check tools/rehearsal-model.js
+          node --check tools/review-rehearsal.js
+          node scripts/validate-rehearsal.mjs
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs

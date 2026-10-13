@@ -104,7 +104,7 @@ function renderClues(){
    b.addEventListener('click',()=>{state.selected=i;renderMap();renderClues()});
  }
 }
-function render(){renderList();renderMap();renderClues();status();globalThis.GEOWORD_SPATIAL_PANEL?.render(current().id);globalThis.GEOWORD_LEARNING_PANEL?.render(current().id);globalThis.GEOWORD_CONTENT_PANEL?.render(current().id)}
+function render(){renderList();renderMap();renderClues();status();globalThis.GEOWORD_SPATIAL_PANEL?.render(current().id);globalThis.GEOWORD_LEARNING_PANEL?.render(current().id);globalThis.GEOWORD_CONTENT_PANEL?.render(current().id);globalThis.GEOWORD_REHEARSAL_PANEL?.render(current().id)}
 function selectMarker(id){
  const p=current(),clue=selectedClue();
  if(!clue.candidateMarkerIds.includes(id))return;
@@ -161,6 +161,7 @@ async function start(){
    await globalThis.GEOWORD_SPATIAL_PANEL?.init(()=>state.assignments);
    await globalThis.GEOWORD_LEARNING_PANEL?.init();
    await globalThis.GEOWORD_CONTENT_PANEL?.init();
+   await globalThis.GEOWORD_REHEARSAL_PANEL?.init(id=>{const i=state.puzzles.findIndex(p=>p.id===id);if(i<0)return;state.index=i;state.selected=0;render()});
    $('workspace').hidden=false;render();state.loaded=true;
    if(storageWarning)$('message').textContent='Хранилище недоступно: экспортируйте JSON перед закрытием вкладки.';
  }catch(e){$('appError').classList.remove('hidden');$('appError').textContent='Ошибка загрузки: '+e.message}
