@@ -3,6 +3,8 @@ const core=window.GEOWORD_CORE,authored=window.GEOWORD_LEVELS||[];
 const levels=core?core.fromAuthored(authored):authored,$=id=>document.getElementById(id);
 const riversCourse=window.GEOWORD_COURSES?.rivers||null;
 const riversAuthored=window.GEOWORD_RIVERS_AUTHORED||[];
+const l1=window.GEOWORD_L1_PHONE,l1Model=window.GEOWORD_L1_TRIAL,l1Key='geowords_l1_phone_trial_v1';
+let l1State=null,l1Replay=false,l1Protected=false;
 const dictionary=core?core.buildDictionary(levels,window.GEOWORD_DICTIONARY||[]):[];
 const riversKey="geowords_rivers_progress_v2";
 let playMode="authored",riversProgress=null;
@@ -43,6 +45,29 @@ function loadRiversProgress(){
   return core.normalizeProgress(raw,riversCourse);
 }
 function saveRiversProgress(progress){safeSet(riversKey,JSON.stringify(progress))}
+function loadL1(){
+  if(l1State)return l1State;
+  const raw=safeGet(l1Key);l1State=l1Model.create(l1);
+  if(raw)try{l1State=l1Model.restore(l1,JSON.parse(raw))}catch{l1Protected=true}
+  return l1State;
+}
+function saveL1(){if(!l1Protected)safeSet(l1Key,JSON.stringify(l1State))}
+function renderL1Home(){
+  if(!l1||!l1Model||!$('l1Btn'))return;
+  const state=loadL1(),c=l1Model.current(l1,state),score=core.stepScore(state.progress,c.step);
+  $('l1Progress').textContent=l1Protected?'Previous test save kept safe. Export it before replacing this version.':c.phase==='complete'?'Level 1 test complete · 70/70 words':c.step.authored.answer+' · '+score+'/7 · step '+(state.progress.stepIndex+1)+'/10';
+  $('l1Btn').textContent=c.phase==='complete'?'Review completed test':'Continue Level 1 test';
+}
+function startL1(){
+  playMode='l1';l1Replay=false;loadL1();const c=l1Model.current(l1,l1State);
+  if(c.phase==='complete'){
+    level=c.step.practices.at(-1);$('finishWord').textContent='LEVEL 1 COMPLETE';$('definition').textContent='70/70 test words solved.';renderList('nextFacts',[]);$('nextFactsLabel').textContent='PHONE TEST';$('nextBtn').hidden=true;$('replayBtn').textContent='Play the last word again';$('homeBtn').textContent='Back to home';show('finishScreen');return;
+  }
+  if(c.phase==='before'||c.phase==='after'){
+    level=c.step.authored;renderList('introFacts',c.phase==='before'?level.introFacts:level.nextFacts);$('factsTitle').textContent=c.phase==='before'?'Before '+level.title+'…':'For the next quiz you need to know';show('factsScreen');return;
+  }
+  level=c.puzzle;resetGame();show('gameScreen');
+}
 function currentRiversStep(state){return riversCourse.steps[state.stepIndex]}
 function riversComplete(state){
   return state.stepIndex===riversCourse.steps.length-1 &&
@@ -116,6 +141,7 @@ function renderHome(){
   $("homeProgress").textContent=done+" of "+levels.length+" available puzzles complete";
   renderMedals();
   renderRiversHome();
+  renderL1Home();
 }
 function renderList(id,items){
   const ul=$(id);ul.innerHTML="";
@@ -135,12 +161,16 @@ function resetGame(){
   inputLocked=false;
   suppressClicksUntil=0;
   clueIndex=0;solvedMarkerIds=new Set();solvedLetters=[];scale=1;tx=0;ty=0;
+  if(playMode==='l1'&&!l1Replay&&l1State.partial?.puzzleId===level.id){
+    const ids=l1State.partial.markerIds;solvedMarkerIds=new Set(ids);solvedLetters=ids.map(id=>level.markers.find(m=>m.id===id).letter);clueIndex=ids.length;
+  }
   pointers.clear();dragStart=null;pinchStart=null;
   $("levelTitle").textContent=level.title+" · "+level.unit;
   $("mapImage").src=level.map;
   $("mapImage").alt=level.title+" map";
   $("mapViewport").style.setProperty("--map-aspect",level.mapAspect||"14 / 9");
   renderFeatures();renderMarkerArrows();renderHotspots();renderWord();renderClue();renderProgress();applyTransform();
+  if(playMode==='l1'&&solvedLetters.length===level.clues.length)later(finish,100);
 }
 function readableLocation(id){
   return id.split("-").map(part=>part.charAt(0).toUpperCase()+part.slice(1)).join(" ");
@@ -149,7 +179,7 @@ function renderFeatures(){
   const svg=$("geoFeatures"),labels=$("geoLabels");
   if(!svg||!labels)return;
   svg.replaceChildren();labels.replaceChildren();
-  if(level.source!=="generated")return;
+  if(level.source!=="generated"||playMode==='l1')return;
   for(const feature of level.features||[]){
     const points=feature.path.map(([lon,lat])=>core.project(lon,lat,riversCourse.mapBounds));
     const d=points.map((point,i)=>(i?"L":"M")+point.x.toFixed(2)+" "+point.y.toFixed(2)).join(" ");
@@ -243,6 +273,7 @@ function chooseMarker(marker,el){
 
   inputLocked=true;
   if(!solvedMarkerIds.has(marker.id)){solvedMarkerIds.add(marker.id);solvedLetters.push(marker.letter)}
+  if(playMode==='l1'&&!l1Replay){l1Model.partial(l1,l1State,level,[...solvedMarkerIds]);saveL1()}
   feedback.textContent="Yes! You found "+marker.letter+".";feedback.className="feedback ok";
   renderHotspots();renderWord();renderProgress();
 
@@ -256,6 +287,13 @@ function chooseMarker(marker,el){
 }
 function finish(){
   if($("finishScreen").classList.contains("active"))return;
+  if(playMode==='l1'){
+    const result=l1Replay?{credited:false,advanced:false,finished:false}:l1Model.solve(l1,l1State,level,[...solvedMarkerIds]);saveL1();
+    $('finishWord').textContent=level.answer;$('definition').textContent=level.definition;
+    $('replayBtn').textContent='Play this word again';$('homeBtn').textContent='Back to home';$('nextBtn').hidden=Boolean(result.advanced||result.finished);$('nextBtn').textContent='Next geography word';$('nextFactsLabel').textContent='LEVEL 1 · PHONE TEST';
+    renderList('nextFacts',[result.advanced?'7/7! Next: '+l1.steps[l1State.progress.stepIndex].authored.answer:result.finished?'70/70 test words complete!':result.credited?result.count+' of 7 words solved.':'Replay complete. Progress unchanged.',...(level.nextFacts||[])]);
+    show('finishScreen');if(result.advanced||result.finished)later(startL1,1400);return;
+  }
   if(playMode==="rivers"){
     const result=core.markSolved(riversCourse,riversProgress,level);
     riversProgress=result.progress;
@@ -412,11 +450,14 @@ $("zoomOut").addEventListener("click",()=>setScale(scale-.25));
 $("resetZoom").addEventListener("click",()=>{scale=1;tx=0;ty=0;applyTransform()});
 $("startBtn").addEventListener("click",()=>{playMode="authored";selectLevel(firstIncompleteIndex());show("factsScreen")});
 $("riversBtn")?.addEventListener("click",()=>startRivers());
-$("factsContinueBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
+$('l1Btn')?.addEventListener('click',startL1);
+$('l1Export')?.addEventListener('click',()=>{loadL1();const a=document.createElement('a'),url=URL.createObjectURL(new Blob([l1Protected?safeGet(l1Key):JSON.stringify(l1State,null,2)],{type:'application/json'}));a.href=url;a.download='GeoWords-L1-test-progress.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)});
+$("factsContinueBtn").addEventListener("click",()=>{if(playMode==='l1'){l1Model.acknowledge(l1,l1State);saveL1();startL1();return}resetGame();show("gameScreen")});
 $("backBtn").addEventListener("click",()=>{clearPendingTimers();inputLocked=false;renderHome();show("homeScreen")});
-$("replayBtn").addEventListener("click",()=>{resetGame();show("gameScreen")});
+$("replayBtn").addEventListener("click",()=>{if(playMode==='l1')l1Replay=true;resetGame();show("gameScreen")});
 $("nextBtn").addEventListener("click",()=>{
   if(playMode==="rivers"){startRivers();return}
+  if(playMode==='l1'){const c=l1Model.current(l1,l1State);if(c.phase==='after'){l1Model.acknowledge(l1,l1State);saveL1()}startL1();return}
   selectLevel(levelIndex+1);show("factsScreen");
 });
 $("homeBtn").addEventListener("click",()=>{renderHome();show("homeScreen")});

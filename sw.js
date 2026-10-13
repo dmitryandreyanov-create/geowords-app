@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.5.0-pilot";
+const CACHE="geowords-v0.6.0-l1-phone";
 const CORE=[
   "./",
   "./index.html",
@@ -15,6 +15,10 @@ const CORE=[
   "./assets/rivers-authored-2.webp",
   "./assets/rivers-authored-3.webp",
   "./engine/geowords.js",
+  "./engine/l1-phone.js",
+  "./data/l1-phone.js",
+  "./assets/l1-trial/l1-clean-map-1.webp",
+  "./assets/l1-trial/l1-clean-map-2.webp",
   "./manifest.webmanifest",
   "./assets/icon-180.png",
   "./assets/icon-192.png",

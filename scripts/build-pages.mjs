@@ -11,6 +11,8 @@ const named=[
   'data/levels.js','data/dictionary.js','data/courses.js',
   'data/rivers-semantics.js','data/rivers-authored.js',
   'engine/geowords.js','engine/semantic.js',
+  'data/l1-phone.js','engine/l1-phone.js',
+  'assets/l1-trial/l1-clean-map-1.webp','assets/l1-trial/l1-clean-map-2.webp',
   'assets/icon-180.png','assets/icon-192.png','assets/icon-512.png',
   'assets/rivers-authored-1.webp','assets/rivers-authored-2.webp',
   'assets/rivers-authored-3.webp','assets/rivers-practice-step-3.webp',

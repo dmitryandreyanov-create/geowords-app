@@ -25,6 +25,14 @@
 
     <main>
       <section id="homeScreen" class="screen active">
+        <div class="hero-card">
+          <p class="eyebrow">LEVEL 1 · PHONE TEST</p>
+          <h2>Oceans &amp; Continents</h2>
+          <p>10 original puzzles + 60 practice words. Test version: report any incorrect letters, clues or locations.</p>
+          <button id="l1Btn" class="primary">Start Level 1 test</button>
+          <div id="l1Progress" class="home-progress"></div>
+          <button id="l1Export" class="tertiary">Save test progress</button>
+        </div>
         <div class="hero-card mountains-hero">
           <p class="eyebrow">LEVEL 3 · MOUNTAINS</p>
           <h2>Find the clues.<br>Build the word.</h2>
@@ -120,6 +128,8 @@
   <script src="./data/rivers-authored.js"></script>
   <script src="./engine/semantic.js"></script>
   <script src="./engine/geowords.js"></script>
+  <script src="./data/l1-phone.js"></script>
+  <script src="./engine/l1-phone.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

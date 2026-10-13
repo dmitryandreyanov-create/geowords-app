@@ -2,7 +2,7 @@ name: Validate and Deploy GeoWords
 
 on:
   push:
-    branches: [main]
+    branches: [main, gpt/unified-geowords-engine]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -76,6 +76,8 @@ jobs:
           node --check tools/review-rehearsal.js
           node scripts/validate-rehearsal.mjs
           node scripts/validate-partial-place-claims.mjs
+          node scripts/validate-l1-phone.mjs
+          node --check engine/l1-phone.js
 
       - name: Validate source-only lesson facts and proposed curriculum links
         run: node scripts/validate-facts-draft.mjs
@@ -122,8 +124,11 @@ jobs:
       - name: Browser regression at phone width
         run: npm run test:browser
 
+      - name: Play full L1 phone trial at phone width
+        run: node scripts/validate-l1-phone-browser.mjs
+
   deploy:
-    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gpt/unified-geowords-engine')
     needs: validate
     permissions:
       contents: read
