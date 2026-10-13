@@ -25,12 +25,27 @@
 
     <main>
       <section id="homeScreen" class="screen active">
+        <div class="hero-card">
+          <p class="eyebrow">LEVEL 1 · PHONE TEST</p>
+          <h2>Oceans &amp; Continents</h2>
+          <p>10 original puzzles + 60 practice words. Test version: report any incorrect letters, clues or locations.</p>
+          <button id="l1Btn" class="primary">Start Level 1 test</button>
+          <div id="l1Progress" class="home-progress"></div>
+          <button id="l1Export" class="tertiary">Save test progress</button>
+        </div>
         <div class="hero-card mountains-hero">
           <p class="eyebrow">LEVEL 3 · MOUNTAINS</p>
           <h2>Find the clues.<br>Build the word.</h2>
           <p>Interactive puzzles from the original <strong>GeoWords: Mountains</strong> workbook.</p>
           <button id="startBtn" class="primary">Start Puzzle 1</button>
           <div id="homeProgress" class="home-progress"></div>
+        </div>
+        <div class="hero-card rivers-hero">
+          <p class="eyebrow">NEW · GENERATIVE PRACTICE</p>
+          <h2>Rivers of the World</h2>
+          <p>Solve one original workbook puzzle and six fresh practice words to unlock each river step.</p>
+          <button id="riversBtn" class="primary">Explore Rivers</button>
+          <div id="riversProgress" class="home-progress">Nile River · 0/7 words (1 original + 6 practice)</div>
         </div>
         <div class="how-card">
           <div><span>1</span><p>Learn the facts you will need</p></div>
@@ -73,6 +88,9 @@
           <div id="mapViewport" class="map-viewport" aria-label="Interactive map">
             <div id="mapCanvas" class="map-canvas">
               <img id="mapImage" src="./assets/mountains-puzzle-1.webp" alt="GeoWords Mountains puzzle map" draggable="false" />
+              <svg id="geoFeatures" class="geo-features" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+              <div id="geoLabels" class="geo-labels" aria-hidden="true"></div>
+              <svg id="markerArrows" class="marker-arrows" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
               <div id="markersLayer" class="markers-layer"></div>
             </div>
           </div>
@@ -104,6 +122,14 @@
   </div>
 
   <script src="./data/levels.js"></script>
+  <script src="./data/dictionary.js"></script>
+  <script src="./data/rivers-semantics.js"></script>
+  <script src="./data/courses.js"></script>
+  <script src="./data/rivers-authored.js"></script>
+  <script src="./engine/semantic.js"></script>
+  <script src="./engine/geowords.js"></script>
+  <script src="./data/l1-phone.js"></script>
+  <script src="./engine/l1-phone.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

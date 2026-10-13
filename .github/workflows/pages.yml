@@ -2,7 +2,7 @@ name: Validate and Deploy GeoWords
 
 on:
   push:
-    branches: [main]
+    branches: [main, gpt/unified-geowords-engine]
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -21,16 +21,114 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node for browser QA
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install browser test dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
       - name: Check JavaScript syntax
         run: |
           node --check app.js
           node --check sw.js
+          node --check engine/curriculum.js
+          node --check engine/geowords.js
+          node --check engine/semantic.js
+          node --check data/dictionary.js
+          node --check data/rivers-semantics.js
+          node --check data/rivers-authored.js
+          node --check data/courses.js
+          node --check data/authored-answer-index.js
 
-      - name: Validate level data
+      - name: Validate authored levels
         run: node scripts/validate-levels.mjs
 
+      - name: Validate generated puzzles and seven-word progression
+        run: node scripts/validate-generator.mjs
+
+      - name: Validate F1-F4 semantic anchors and non-spoiler vocabulary
+        run: node scripts/validate-f4.mjs
+
+      - name: Validate non-live curriculum and shared learner knowledge
+        run: node scripts/validate-curriculum.mjs
+
+      - name: Validate shared Curriculum practice generator on synthetic data
+        run: node scripts/validate-curriculum-generator.mjs
+
+      - name: Validate real L1 catalog adapter and explicit editorial gates
+        run: |
+          node scripts/validate-catalog-adapter.mjs
+          node --check tools/learning-review-model.js
+          node --check tools/review-learning.js
+          node scripts/validate-learning-review.mjs
+          node --check tools/content-review-model.js
+          node --check tools/review-content.js
+          node scripts/validate-content-review.mjs
+          node tools/build_l2_catalog.mjs --check
+          node scripts/validate-l2-review.mjs
+          node --check tools/rehearsal-model.js
+          node --check tools/review-rehearsal.js
+          node scripts/validate-rehearsal.mjs
+          node scripts/validate-partial-place-claims.mjs
+          node scripts/validate-l1-phone.mjs
+          node --check engine/l1-phone.js
+
+      - name: Validate source-only lesson facts and proposed curriculum links
+        run: node scripts/validate-facts-draft.mjs
+
+      - name: Validate non-live Level 1 source catalog and fact timing
+        run: |
+          node tools/build_l1_catalog.mjs --check
+          node scripts/validate-l1-catalog.mjs
+
+      - name: Validate independent spatial resolution and pending L1 geography
+        run: |
+          node --check engine/spatial-semantics.js
+          node tools/build_l1_spatial_review.mjs --check
+          node scripts/validate-spatial-semantics.mjs
+          node --check tools/review-spatial.js
+          node scripts/validate-spatial-review.mjs
+          node tools/build_l1_spatial_proposals.mjs --check
+          node scripts/validate-spatial-proposals.mjs
+
+      - name: Validate staged L1 and L2 original workbook imports
+        run: node scripts/validate-import-staging.mjs
+
+      - name: Validate non-live global lexicon and L1 practice plans
+        run: |
+          node tools/build_lexicon_draft.mjs --check
+          node scripts/validate-lexicon-draft.mjs
+
+      - name: Validate reviewer choices and source mapping compatibility
+        run: |
+          node --check tools/review-model.js
+          node --check tools/review-import.js
+          node scripts/validate-review-model.mjs
+          node scripts/validate-import-review.mjs
+
+      - name: Validate mapping CLI with separate staged files
+        run: node scripts/validate-author-mapping.mjs
+
+      - name: Check workbook importer and mapping scripts
+        run: python3 -B -c "import ast,pathlib; [ast.parse(pathlib.Path(p).read_text()) for p in ['tools/import_workbooks.py','tools/apply_author_mapping.py','tools/verify_workbook_import.py','tools/extract_curriculum_facts.py']]"
+
+      - name: Validate explicit Pages release manifest
+        run: node scripts/build-pages.mjs
+
+      - name: Browser regression at phone width
+        run: npm run test:browser
+
+      - name: Play full L1 phone trial at phone width
+        run: node scripts/validate-l1-phone-browser.mjs
+
   deploy:
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gpt/unified-geowords-engine')
     needs: validate
     permissions:
       contents: read
@@ -43,13 +141,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Build allowlisted Pages site
+        run: node scripts/build-pages.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: ./dist
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
