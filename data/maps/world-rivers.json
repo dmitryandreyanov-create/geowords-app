@@ -1,0 +1,175 @@
+{
+  "map": "./assets/world-base.webp",
+  "mapAspect": "2200 / 1211",
+  "coordinateSystem": "layers are full-size transparent overlays aligned to the base; SVG viewBox 0 0 3300 1817 scales to the base; bbox = [x0,y0,x1,y1] in % of image",
+  "projection": "Miller cylindrical, 168°W–192°E, 72°S–82°N",
+  "source": "Natural Earth 1:10m rivers, 1:50m coastlines and lakes",
+  "notes": [
+    "Nile: White Nile from Lake Victoria; Cairo-Rosetta branch drawn (delta absent in Natural Earth); Blue Nile not included",
+    "Ganges: main stem + one channel to the sea (delta distributaries omitted at world scale)"
+  ],
+  "rivers": [
+    {
+      "id": "nile",
+      "order": 1,
+      "name": {
+        "en": "Nile",
+        "ru": "Нил"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-nile.webp",
+        "svg": "./assets/layers/world-river-nile.svg"
+      },
+      "bbox": [
+        54.94,
+        38.8,
+        56.18,
+        55.92
+      ]
+    },
+    {
+      "id": "amazon",
+      "order": 2,
+      "name": {
+        "en": "Amazon",
+        "ru": "Амазонка"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-amazon.webp",
+        "svg": "./assets/layers/world-river-amazon.svg"
+      },
+      "bbox": [
+        25.64,
+        55.48,
+        32.55,
+        63.24
+      ]
+    },
+    {
+      "id": "mississippi",
+      "order": 3,
+      "name": {
+        "en": "Mississippi",
+        "ru": "Миссисипи"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-mississippi.webp",
+        "svg": "./assets/layers/world-river-mississippi.svg"
+      },
+      "bbox": [
+        20.12,
+        29.22,
+        22.0,
+        40.4
+      ]
+    },
+    {
+      "id": "yangtze",
+      "order": 4,
+      "name": {
+        "en": "Yangtze",
+        "ru": "Янцзы"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-yangtze.webp",
+        "svg": "./assets/layers/world-river-yangtze.svg"
+      },
+      "bbox": [
+        72.42,
+        36.93,
+        80.55,
+        42.05
+      ]
+    },
+    {
+      "id": "huang-he",
+      "order": 5,
+      "name": {
+        "en": "Yellow River (Huang He)",
+        "ru": "Хуанхэ"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-huang-he.webp",
+        "svg": "./assets/layers/world-river-huang-he.svg"
+      },
+      "bbox": [
+        73.36,
+        33.35,
+        79.79,
+        38.03
+      ]
+    },
+    {
+      "id": "ganges",
+      "order": 6,
+      "name": {
+        "en": "Ganges",
+        "ru": "Ганг"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-ganges.webp",
+        "svg": "./assets/layers/world-river-ganges.svg"
+      },
+      "bbox": [
+        68.24,
+        39.19,
+        71.85,
+        44.14
+      ]
+    },
+    {
+      "id": "indus",
+      "order": 7,
+      "name": {
+        "en": "Indus",
+        "ru": "Инд"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-indus.webp",
+        "svg": "./assets/layers/world-river-indus.svg"
+      },
+      "bbox": [
+        65.3,
+        36.27,
+        68.82,
+        43.15
+      ]
+    },
+    {
+      "id": "danube",
+      "order": 8,
+      "name": {
+        "en": "Danube",
+        "ru": "Дунай"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-danube.webp",
+        "svg": "./assets/layers/world-river-danube.svg"
+      },
+      "bbox": [
+        48.85,
+        28.23,
+        54.97,
+        31.92
+      ]
+    },
+    {
+      "id": "volga",
+      "order": 9,
+      "name": {
+        "en": "Volga",
+        "ru": "Волга"
+      },
+      "layer": {
+        "png": "./assets/layers/world-river-volga.webp",
+        "svg": "./assets/layers/world-river-volga.svg"
+      },
+      "bbox": [
+        55.67,
+        21.85,
+        60.67,
+        30.71
+      ]
+    }
+  ]
+}
