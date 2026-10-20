@@ -26,6 +26,16 @@
 .quest-fill{height:100%;background:#6bc45d;border-radius:8px;transition:width .5s ease}
 .quest.done{border-style:solid;border-color:#6bc45d;background:#effbea}
 .explorer-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.action-btn[hidden]{display:none}
+.goal{display:flex;gap:8px;align-items:center;font-weight:850;color:#4b3a24;font-size:14px}
+.goal.done{color:#2f7f39}
+.settings{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid #eadfc4;border-radius:14px;padding:12px}
+.setting{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-weight:800;color:#4b3a24}
+.seg{display:flex;border:2px solid #3d3a99;border-radius:12px;overflow:hidden}
+.seg button{border:0;background:#fff;color:#3d3a99;font-weight:850;padding:8px 12px;cursor:pointer;font-size:14px}
+.seg button.on{background:#3d3a99;color:#fff}
+.seg button:focus-visible{outline:3px solid #2765c4;outline-offset:-3px}
+.setting-note{margin:0;font-size:12px;color:#8a6a4a;font-weight:700}
 .action-btn{display:flex;align-items:center;gap:7px;border:0;border-radius:13px;padding:11px 10px;background:#3d3a99;color:#fff;font-weight:850;font-size:14px;cursor:pointer;text-align:left;min-width:0}
 .action-btn span{min-width:0;overflow-wrap:anywhere}
 .action-btn:nth-child(2){background:#c2410c}.action-btn:nth-child(3){background:#2f7f39}

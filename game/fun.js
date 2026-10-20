@@ -35,11 +35,13 @@ const QUESTS=[
 const pick=list=>list[Math.floor(Math.random()*list.length)];
 const esc=v=>String(v).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]);
 const $=id=>document.getElementById(id);
-const today=()=>new Date().toISOString().slice(0,10);
+const dayKey=d=>{const z=n=>String(n).padStart(2,"0");return d.getFullYear()+"-"+z(d.getMonth()+1)+"-"+z(d.getDate())};
+const today=()=>dayKey(new Date());
+const daysBetween=(a,b)=>Math.round((new Date(b+"T12:00:00")-new Date(a+"T12:00:00"))/864e5);
 const readJSON=k=>{try{return JSON.parse(localStorage.getItem(k)||"null")}catch{return null}};
 
 function load(){
-  const base={xp:0,stars:0,stamps:{},streak:0,lastDay:"",sound:true,voice:false,outfit:"hat",cards:{},quest:null,huntBest:0};
+  const base={xp:0,stars:0,stamps:{},streak:0,lastDay:"",sound:true,voice:false,outfit:"hat",cards:{},quest:null,huntBest:0,mode:"kid",freezes:1,goal:1,goalDay:"",goalN:0,goalDone:false,goalPaid:""};
   const raw=readJSON(KEY);return {...base,...(raw&&typeof raw==="object"?raw:{})};
 }
 let state=load();
@@ -113,6 +115,7 @@ function refreshPips(){document.querySelectorAll("[data-pip]").forEach(el=>{el.i
 function toast(text){
   let box=$("funToasts");
   if(!box){box=document.createElement("div");box.id="funToasts";box.className="fun-toasts";box.setAttribute("aria-live","polite");document.body.appendChild(box)}
+  while(box.children.length>=3)box.firstChild.remove();
   const t=document.createElement("div");t.className="fun-toast";t.textContent=text;box.appendChild(t);
   setTimeout(()=>t.classList.add("out"),2600);setTimeout(()=>t.remove(),3100);
 }
@@ -141,8 +144,21 @@ function gainXP(n,quiet){
 }
 function touchStreak(){
   const d=today();if(state.lastDay===d)return;
-  const y=new Date(Date.now()-864e5).toISOString().slice(0,10);
-  state.streak=state.lastDay===y?state.streak+1:1;state.lastDay=d;save();renderBar();
+  const gap=state.lastDay?daysBetween(state.lastDay,d):0;
+  if(gap===1)state.streak++;
+  else if(gap===2&&state.freezes>0){state.freezes--;state.streak++;toast(`❄️ A streak freeze covered the missed day. ${state.streak} days in a row!`)}
+  else state.streak=1;
+  if(state.streak>1&&state.streak%7===0&&state.freezes<2){state.freezes++;toast("❄️ 7 days in a row: you earned a streak freeze!")}
+  state.lastDay=d;save();renderBar();
+}
+function goalState(){
+  const d=today();if(state.goalDay!==d){state.goalDay=d;state.goalN=0;state.goalDone=false}
+  return {n:state.goalN,goal:state.goal,done:state.goalDone};
+}
+function countGoalWord(){
+  goalState();state.goalN++;
+  state.goalDone=state.goalN>=state.goal;
+  if(state.goalDone&&state.goalPaid!==state.goalDay){state.goalPaid=state.goalDay;toast("✅ Daily goal reached! +30 XP");gainXP(30)}
 }
 function quest(){
   const d=today();
@@ -293,9 +309,20 @@ function openPassport(){
   const wardrobe=Object.keys(OUTFITS).map(o=>{
     const ok=open.includes(o),need=RANKS.find(r=>r.outfit===o);
     return `<button class="outfit ${state.outfit===o?"on":""}" type="button" data-outfit="${o}" ${ok?"":"disabled"} aria-pressed="${state.outfit===o}"><span class="outfit-pip">${pipSVG(o)}</span><span>${ok?OUTFITS[o]:"🔒 "+need.name}</span></button>`}).join("");
-  const m=modal("Explorer Passport",`<p class="sheet-sub">${rankFor(state.xp).icon} ${rankFor(state.xp).name} · ⭐ ${state.stars} stars · 🔥 ${state.streak} ${state.streak===1?"day":"days"} in a row</p>
+  const m=modal("Explorer Passport",`<p class="sheet-sub">${rankFor(state.xp).icon} ${rankFor(state.xp).name} · ⭐ ${state.stars} ${state.stars===1?"star":"stars"} · 🔥 ${state.streak} ${state.streak===1?"day":"days"} in a row · ❄️ ${state.freezes} ${state.freezes===1?"freeze":"freezes"}</p>
+   <h3 class="sheet-h3">Settings</h3>
+   <div class="settings"><div class="setting"><span>Who is playing?</span><div class="seg" role="group" aria-label="Mode">${[["kid","Child"],["adult","Adult"]].map(([v,t])=>`<button type="button" data-mode="${v}" aria-pressed="${state.mode===v}" class="${state.mode===v?"on":""}">${t}</button>`).join("")}</div></div>
+   <div class="setting"><span>Daily goal</span><div class="seg" role="group" aria-label="Daily goal">${[1,2,3].map(n=>`<button type="button" data-goal="${n}" aria-pressed="${state.goal===n}" class="${state.goal===n?"on":""}">${n} ${n===1?"word":"words"}</button>`).join("")}</div></div>
+   <p class="setting-note">Adult mode adds the timed Speed Hunt challenge.</p></div>
    <h3 class="sheet-h3">Pip's wardrobe</h3><div class="wardrobe">${wardrobe}</div>
    <h3 class="sheet-h3">Stamps</h3>${stamps.length?`<div class="stamps">${stamps.map((s,i)=>`<div class="stamp" style="--tilt:${tilt(i)}deg"><span class="stamp-word">${esc(s.word)}</span><span class="stamp-stars">${"★".repeat(s.stars)}${"☆".repeat(3-s.stars)}</span><span class="stamp-unit">${esc(s.unit||"")}</span></div>`).join("")}</div>`:`<p class="sheet-sub">Solve your first word to earn a stamp!</p>`}`,"wide passport-sheet");
+  const seg=(attr,apply)=>m.body.querySelectorAll(`[data-${attr}]`).forEach(b=>b.addEventListener("click",()=>{
+    apply(b.dataset[attr]);save();renderHomeCard();
+    m.body.querySelectorAll(`[data-${attr}]`).forEach(x=>{const on=x===b;x.classList.toggle("on",on);x.setAttribute("aria-pressed",String(on))});
+    tone(660,0,.1,"triangle");
+  }));
+  seg("mode",v=>{state.mode=v==="adult"?"adult":"kid"});
+  seg("goal",v=>{state.goal=Math.min(3,Math.max(1,Number(v)||1));goalState();state.goalDone=state.goalN>=state.goal});
   m.body.querySelectorAll(".outfit").forEach(b=>b.addEventListener("click",()=>{
     state.outfit=b.dataset.outfit;save();refreshPips();
     m.body.querySelectorAll(".outfit").forEach(x=>{x.classList.toggle("on",x===b);x.setAttribute("aria-pressed",String(x===b))});
@@ -316,6 +343,7 @@ function huntPool(){
 }
 const huntText=t=>String(t).replace(/^The\s+\w+\s+letter\s+is\s+/i,"Find the letter ");
 function openHunt(){
+  if(state.mode!=="adult")return;
   const pool=huntPool();
   if(!pool.length){modal("Speed Hunt",`<div class="hunt-locked"><span data-pip class="hunt-pip"></span><p>Solve your first puzzle, then come back! Speed Hunt uses maps you have already explored.</p></div>`).body.querySelectorAll("[data-pip]").forEach(e=>{e.innerHTML=pipSVG()});return}
   const m=modal("Speed Hunt",`<div class="hunt-top"><span class="hunt-time" id="huntTime">60</span><span class="hunt-score">Found: <b id="huntScore">0</b></span><span class="hunt-best">Best: ${state.huntBest}</span></div>
@@ -371,7 +399,7 @@ function renderBar(){
     $("funSound").addEventListener("click",()=>{state.sound=!state.sound;save();renderBar();if(state.sound)tone(660,0,.12)});
     $("funVoice")?.addEventListener("click",()=>{state.voice=!state.voice;save();renderBar();if(state.voice)speak("I will read the clues for you.");else try{speechSynthesis.cancel()}catch{}});
   }
-  $("funStars").textContent=state.stars;$("funStreak").textContent=state.streak;
+  $("funStars").textContent=state.stars;$("funStreak").textContent=state.streak;$("funStreak").parentElement.title=`Days in a row · ${state.freezes} streak ${state.freezes===1?"freeze":"freezes"}`;
   $("funSound").textContent=state.sound?"🔊":"🔇";$("funSound").setAttribute("aria-label",state.sound?"Sound on":"Sound off");
   if($("funVoice")){$("funVoice").textContent="🗣️";$("funVoice").classList.toggle("off",!state.voice);$("funVoice").setAttribute("aria-label",state.voice?"Read clues aloud: on":"Read clues aloud: off")}
   renderHomeCard();
@@ -382,7 +410,8 @@ function renderHomeCard(){
   if(!card){
     card=document.createElement("div");card.id="explorerCard";card.className="explorer-card";
     card.innerHTML=`<div class="explorer-top"><div class="explorer-pip" data-pip></div><div class="explorer-info"><p class="eyebrow">YOUR EXPEDITION</p><h2 id="rankName"></h2><div class="xp-track"><div id="xpFill" class="xp-fill"></div></div><div id="xpText" class="xp-text"></div></div></div>
-      <div class="quest" id="questBox"><span class="quest-icon">🎯</span><div class="quest-main"><div class="quest-title">Today's quest</div><div id="questText" class="quest-text"></div><div class="quest-track"><div id="questFill" class="quest-fill"></div></div></div></div>
+      <div class="goal" id="goalBox"><span>🎯</span><span id="goalText"></span></div>
+      <div class="quest" id="questBox"><span class="quest-icon">🧭</span><div class="quest-main"><div class="quest-title">Today's quest</div><div id="questText" class="quest-text"></div><div class="quest-track"><div id="questFill" class="quest-fill"></div></div></div></div>
       <div class="explorer-actions">
         <button type="button" id="mapBtn" class="action-btn">🗺️ <span>Expedition map</span></button>
         <button type="button" id="huntBtn" class="action-btn">⏱️ <span>Speed Hunt</span></button>
@@ -404,6 +433,10 @@ function renderHomeCard(){
   $("questText").textContent=q.done?`${q.text} · done! ✓`:`${q.text} · ${q.n}/${q.goal}`;
   $("questFill").style.width=Math.round(q.n/q.goal*100)+"%";
   $("questBox").classList.toggle("done",q.done);
+  const g=goalState();
+  $("goalText").textContent=g.done?`Daily goal: done! ✓`:`Daily goal: ${g.n}/${g.goal} ${g.goal===1?"word":"words"}`;
+  $("goalBox").classList.toggle("done",g.done);
+  $("huntBtn").hidden=state.mode!=="adult";
 }
 
 /* ---------- finish card extras ---------- */
@@ -454,6 +487,7 @@ document.addEventListener("gw:finish",e=>{
   if(!prev){state.stars+=stars;state.stamps[key]={word:d.answer,stars,unit:d.unit||"",t:Date.now()}}
   else if(stars>prev.stars){state.stars+=stars-prev.stars;prev.stars=stars}
   questEvent("finish");if(stars===3&&word.mistakes===0)questEvent("perfect");
+  countGoalWord();
   save();renderBar();
   showFinish(stars,word.xp,rankUp);
   confetti();sfx.finish();buzz([20,60,20,60,40]);
