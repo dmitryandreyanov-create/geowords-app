@@ -313,7 +313,7 @@ function openPassport(){
    <h3 class="sheet-h3">Settings</h3>
    <div class="settings"><div class="setting"><span>Who is playing?</span><div class="seg" role="group" aria-label="Mode">${[["kid","Child"],["adult","Adult"]].map(([v,t])=>`<button type="button" data-mode="${v}" aria-pressed="${state.mode===v}" class="${state.mode===v?"on":""}">${t}</button>`).join("")}</div></div>
    <div class="setting"><span>Daily goal</span><div class="seg" role="group" aria-label="Daily goal">${[1,2,3].map(n=>`<button type="button" data-goal="${n}" aria-pressed="${state.goal===n}" class="${state.goal===n?"on":""}">${n} ${n===1?"word":"words"}</button>`).join("")}</div></div>
-   <p class="setting-note">Adult mode adds the timed Speed Hunt challenge.</p></div>
+   <p class="setting-note">Lessons have no timer in either mode. Speed Hunt is a separate timed challenge for everyone.</p></div>
    <h3 class="sheet-h3">Pip's wardrobe</h3><div class="wardrobe">${wardrobe}</div>
    <h3 class="sheet-h3">Stamps</h3>${stamps.length?`<div class="stamps">${stamps.map((s,i)=>`<div class="stamp" style="--tilt:${tilt(i)}deg"><span class="stamp-word">${esc(s.word)}</span><span class="stamp-stars">${"★".repeat(s.stars)}${"☆".repeat(3-s.stars)}</span><span class="stamp-unit">${esc(s.unit||"")}</span></div>`).join("")}</div>`:`<p class="sheet-sub">Solve your first word to earn a stamp!</p>`}`,"wide passport-sheet");
   const seg=(attr,apply)=>m.body.querySelectorAll(`[data-${attr}]`).forEach(b=>b.addEventListener("click",()=>{
@@ -343,7 +343,6 @@ function huntPool(){
 }
 const huntText=t=>String(t).replace(/^The\s+\w+\s+letter\s+is\s+/i,"Find the letter ");
 function openHunt(){
-  if(state.mode!=="adult")return;
   const pool=huntPool();
   if(!pool.length){modal("Speed Hunt",`<div class="hunt-locked"><span data-pip class="hunt-pip"></span><p>Solve your first puzzle, then come back! Speed Hunt uses maps you have already explored.</p></div>`).body.querySelectorAll("[data-pip]").forEach(e=>{e.innerHTML=pipSVG()});return}
   const m=modal("Speed Hunt",`<div class="hunt-top"><span class="hunt-time" id="huntTime">60</span><span class="hunt-score">Found: <b id="huntScore">0</b></span><span class="hunt-best">Best: ${state.huntBest}</span></div>
@@ -436,7 +435,6 @@ function renderHomeCard(){
   const g=goalState();
   $("goalText").textContent=g.done?`Daily goal: done! ✓`:`Daily goal: ${g.n}/${g.goal} ${g.goal===1?"word":"words"}`;
   $("goalBox").classList.toggle("done",g.done);
-  $("huntBtn").hidden=state.mode!=="adult";
 }
 
 /* ---------- finish card extras ---------- */
