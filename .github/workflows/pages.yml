@@ -29,6 +29,9 @@ jobs:
       - name: Validate level data
         run: node scripts/validate-levels.mjs
 
+      - name: Validate map data and assets
+        run: node scripts/validate-maps.mjs
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
