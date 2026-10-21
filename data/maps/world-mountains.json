@@ -1,0 +1,201 @@
+{
+  "map": "./assets/world-base-plain.webp",
+  "mapAspect": "2200 / 1211",
+  "coordinateSystem": "layers are full-size transparent overlays aligned to the base; bbox = [x0,y0,x1,y1] in % of image",
+  "projection": "Miller cylindrical, 168°W–192°E, 72°S–82°N (same frame as world-base.webp)",
+  "source": "Natural Earth 1:10m geography regions (mountain ranges); Mid-Atlantic Ridge axis from PB2002 plate boundaries (Bird 2003)",
+  "notes": [
+    "world-base-plain = world base without the relief tint, so mountains are not revealed before their step",
+    "North American Cordillera = Rocky, Coast, Cascade, Sierra Nevada, Sierra Madre ranges, Alaska/Brooks/Mackenzie/Columbia/Ogilvie/Wasatch ranges + Columbia and Yukon plateaus",
+    "Mountains of East Africa = Ethiopian Highlands, Mitumba Mts, Ruwenzori (Kilimanjaro/Mt Kenya have no outline in Natural Earth)"
+  ],
+  "mountains": [
+    {
+      "id": "himalayas",
+      "order": 1,
+      "name": {
+        "en": "Himalayas",
+        "ru": "Гималаи"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-himalayas.webp"
+      },
+      "bbox": [
+        67.58,
+        37.37,
+        73.18,
+        41.66
+      ]
+    },
+    {
+      "id": "ural",
+      "order": 2,
+      "name": {
+        "en": "Ural Mountains",
+        "ru": "Уральские горы"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-ural.webp"
+      },
+      "bbox": [
+        62.15,
+        13.87,
+        65.33,
+        26.86
+      ]
+    },
+    {
+      "id": "cordillera",
+      "order": 3,
+      "name": {
+        "en": "North American Cordillera",
+        "ru": "Североамериканские Кордильеры"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-cordillera.webp"
+      },
+      "bbox": [
+        0.36,
+        11.17,
+        21.48,
+        47.83
+      ]
+    },
+    {
+      "id": "andes",
+      "order": 4,
+      "name": {
+        "en": "Andes",
+        "ru": "Анды"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-andes.webp"
+      },
+      "bbox": [
+        24.12,
+        49.31,
+        29.27,
+        86.46
+      ]
+    },
+    {
+      "id": "appalachians",
+      "order": 5,
+      "name": {
+        "en": "Appalachian Mountains",
+        "ru": "Аппалачи"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-appalachians.webp"
+      },
+      "bbox": [
+        21.94,
+        27.85,
+        28.91,
+        38.41
+      ]
+    },
+    {
+      "id": "east-africa",
+      "order": 6,
+      "name": {
+        "en": "Mountains of East Africa",
+        "ru": "Горы Восточной Африки"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-east-africa.webp"
+      },
+      "bbox": [
+        54.33,
+        46.12,
+        58.73,
+        57.68
+      ]
+    },
+    {
+      "id": "great-dividing-range",
+      "order": 7,
+      "name": {
+        "en": "Great Dividing Range",
+        "ru": "Большой Водораздельный хребет"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-great-dividing-range.webp"
+      },
+      "bbox": [
+        86.24,
+        61.86,
+        89.36,
+        75.95
+      ]
+    },
+    {
+      "id": "atlas",
+      "order": 8,
+      "name": {
+        "en": "Atlas Mountains",
+        "ru": "Атласские горы"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-atlas.webp"
+      },
+      "bbox": [
+        43.61,
+        35.44,
+        49.64,
+        40.78
+      ]
+    },
+    {
+      "id": "caucasus",
+      "order": 9,
+      "name": {
+        "en": "Caucasus Mountains",
+        "ru": "Кавказские горы"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-caucasus.webp"
+      },
+      "bbox": [
+        57.09,
+        30.71,
+        60.42,
+        33.85
+      ]
+    },
+    {
+      "id": "pyrenees",
+      "order": 10,
+      "name": {
+        "en": "Pyrenees",
+        "ru": "Пиренеи"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-pyrenees.webp"
+      },
+      "bbox": [
+        46.06,
+        31.7,
+        47.58,
+        32.97
+      ]
+    },
+    {
+      "id": "mid-atlantic-ridge",
+      "order": 11,
+      "name": {
+        "en": "Mid-Atlantic Ridge",
+        "ru": "Срединно-Атлантический хребет"
+      },
+      "layer": {
+        "png": "./assets/layers/world-mountain-mid-atlantic-ridge.webp"
+      },
+      "bbox": [
+        33.45,
+        12.27,
+        46.61,
+        86.3
+      ]
+    }
+  ]
+}
