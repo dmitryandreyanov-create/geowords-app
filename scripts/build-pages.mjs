@@ -18,6 +18,13 @@ const named=[
   'assets/rivers-authored-1.webp','assets/rivers-authored-2.webp',
   'assets/rivers-authored-3.webp','assets/rivers-practice-step-3.webp',
   ...Array.from({length:11},(_,i)=>`assets/mountains-puzzle-${i+1}.webp`),
+  // Map lab (manual tap testing of approved map content).
+  'lab/index.html','lab/lab.js','lab/lab.css',
+  ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
+  ...fs.readdirSync(path.join(root,'assets/layers')).filter(f=>f.endsWith('.webp')).map(f=>`assets/layers/${f}`),
+  'assets/world-base.webp','assets/world-base-plain.webp',
+  'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
+  'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){

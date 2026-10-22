@@ -26,6 +26,7 @@ button{font:inherit}
 .primary:active,.secondary:active,.tertiary:active{transform:translateY(2px)}
 .home-progress{margin-top:14px;font-size:13px;font-weight:850;color:#65767b}
 .how-card{margin-top:12px;padding:10px}
+.lab-link{display:block;margin-top:12px;padding:12px 14px;border-radius:14px;border:1px dashed #3d3a99;background:#fffefb;color:#3d3a99;font-weight:850;text-decoration:none;text-align:center}
 .how-card>div{display:flex;align-items:center;gap:12px;padding:10px 8px}
 .how-card span{width:31px;height:31px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:950}
 .how-card p{margin:0;font-weight:750}
