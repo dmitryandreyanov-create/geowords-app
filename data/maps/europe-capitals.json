@@ -1,0 +1,205 @@
+{
+  "map": "./assets/europe-capitals.webp",
+  "alsoValidFor": [
+    "./assets/europe-blank.webp",
+    "./assets/europe-rivers.webp",
+    "./assets/europe-mountains.webp"
+  ],
+  "mapAspect": "11 / 8",
+  "coordinateSystem": "x,y in % of image width/height from top-left; same for all four europe-*.webp (shared base)",
+  "source": "Natural Earth 1:10m/1:50m; Lambert conformal conic (std parallels 45N/65N, centre 24E 54N)",
+  "capitals": [
+    {
+      "id": "london",
+      "name": "London",
+      "lon": -0.1278,
+      "lat": 51.5074,
+      "x": 36.04,
+      "y": 57.89
+    },
+    {
+      "id": "paris",
+      "name": "Paris",
+      "lon": 2.3522,
+      "lat": 48.8566,
+      "x": 36.98,
+      "y": 63.89
+    },
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "lon": -3.7038,
+      "lat": 40.4168,
+      "x": 26.78,
+      "y": 76.8
+    },
+    {
+      "id": "rome",
+      "name": "Rome",
+      "lon": 12.4964,
+      "lat": 41.9028,
+      "x": 44.69,
+      "y": 80.8
+    },
+    {
+      "id": "berlin",
+      "name": "Berlin",
+      "lon": 13.405,
+      "lat": 52.52,
+      "x": 48.02,
+      "y": 60.03
+    },
+    {
+      "id": "brussels",
+      "name": "Brussels",
+      "lon": 4.3517,
+      "lat": 50.8503,
+      "x": 39.6,
+      "y": 60.85
+    },
+    {
+      "id": "vienna",
+      "name": "Vienna",
+      "lon": 16.3738,
+      "lat": 48.2082,
+      "x": 49.92,
+      "y": 69.01
+    },
+    {
+      "id": "warsaw",
+      "name": "Warsaw",
+      "lon": 21.0122,
+      "lat": 52.2297,
+      "x": 54.63,
+      "y": 61.49
+    },
+    {
+      "id": "athens",
+      "name": "Athens",
+      "lon": 23.7275,
+      "lat": 37.9838,
+      "x": 56.95,
+      "y": 90.25
+    },
+    {
+      "id": "stockholm",
+      "name": "Stockholm",
+      "lon": 18.0686,
+      "lat": 59.3293,
+      "x": 52.91,
+      "y": 47.26
+    },
+    {
+      "id": "kyiv",
+      "name": "Kyiv",
+      "lon": 30.5234,
+      "lat": 50.4501,
+      "x": 63.26,
+      "y": 64.72
+    },
+    {
+      "id": "moscow",
+      "name": "Moscow",
+      "lon": 37.6173,
+      "lat": 55.7558,
+      "x": 68.23,
+      "y": 53.11
+    },
+    {
+      "id": "lisbon",
+      "name": "Lisbon",
+      "lon": -9.1393,
+      "lat": 38.7223,
+      "x": 20.06,
+      "y": 76.31
+    },
+    {
+      "id": "prague",
+      "name": "Prague",
+      "lon": 14.4378,
+      "lat": 50.0755,
+      "x": 48.43,
+      "y": 65.01
+    },
+    {
+      "id": "budapest",
+      "name": "Budapest",
+      "lon": 19.0402,
+      "lat": 47.4979,
+      "x": 52.41,
+      "y": 70.74
+    },
+    {
+      "id": "copenhagen",
+      "name": "Copenhagen",
+      "lon": 12.5683,
+      "lat": 55.6761,
+      "x": 48.04,
+      "y": 53.7
+    },
+    {
+      "id": "oslo",
+      "name": "Oslo",
+      "lon": 10.7522,
+      "lat": 59.9139,
+      "x": 47.74,
+      "y": 45.11
+    },
+    {
+      "id": "helsinki",
+      "name": "Helsinki",
+      "lon": 24.9384,
+      "lat": 60.1699,
+      "x": 57.94,
+      "y": 45.84
+    },
+    {
+      "id": "dublin",
+      "name": "Dublin",
+      "lon": -6.2603,
+      "lat": 53.3498,
+      "x": 32.07,
+      "y": 51.7
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "lon": 4.9041,
+      "lat": 52.3676,
+      "x": 40.68,
+      "y": 58.15
+    },
+    {
+      "id": "bern",
+      "name": "Bern",
+      "lon": 7.4474,
+      "lat": 46.948,
+      "x": 41.0,
+      "y": 69.4
+    },
+    {
+      "id": "minsk",
+      "name": "Minsk",
+      "lon": 27.5615,
+      "lat": 53.9006,
+      "x": 60.29,
+      "y": 58.16
+    },
+    {
+      "id": "bucharest",
+      "name": "Bucharest",
+      "lon": 26.1025,
+      "lat": 44.4268,
+      "x": 59.47,
+      "y": 77.09
+    },
+    {
+      "id": "belgrade",
+      "name": "Belgrade",
+      "lon": 20.4489,
+      "lat": 44.7866,
+      "x": 53.59,
+      "y": 76.28
+    }
+  ]
+}

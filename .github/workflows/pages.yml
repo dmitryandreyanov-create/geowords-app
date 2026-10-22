@@ -127,6 +127,9 @@ jobs:
       - name: Play full L1 phone trial at phone width
         run: node scripts/validate-l1-phone-browser.mjs
 
+      - name: Validate map data and assets
+        run: node scripts/validate-maps.mjs
+
   deploy:
     if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gpt/unified-geowords-engine')
     needs: validate
