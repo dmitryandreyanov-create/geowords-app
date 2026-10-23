@@ -38,6 +38,7 @@
  "rules": [
   "use only objects with learnedInUnit <= the unit the child has finished; record/relation phrases only from their learnedInUnit",
   "one letter per object; if there are fewer objects than letters, the word waits for a later unit",
+  "never pick two objects where one lies inside the other's area (insideArea): e.g. \"in the north\" sits in the Arctic Ocean, so they never appear in the same puzzle",
   "never use a phrase that contains the answer word (e.g. no \"continent\" phrases for CONTINENT)",
   "only approved undisputed facts appear here; disputed facts (Southern Ocean coldest, Atlantic saltiest) are deliberately absent",
   "reveal order: no neighbouring positions in a row; first letter late; last letters not early (same checks as validate-geowords.mjs)",
@@ -58,7 +59,10 @@
    "place": {
     "en": "in the north",
     "ru": "на севере"
-   }
+   },
+   "insideArea": [
+    "arctic-ocean"
+   ]
   },
   {
    "id": "south",
@@ -68,7 +72,10 @@
    "place": {
     "en": "in the south",
     "ru": "на юге"
-   }
+   },
+   "insideArea": [
+    "southern-ocean"
+   ]
   },
   {
    "id": "east",
@@ -78,7 +85,10 @@
    "place": {
     "en": "in the east",
     "ru": "на востоке"
-   }
+   },
+   "insideArea": [
+    "pacific-ocean"
+   ]
   },
   {
    "id": "west",
@@ -88,7 +98,10 @@
    "place": {
     "en": "in the west",
     "ru": "на западе"
-   }
+   },
+   "insideArea": [
+    "pacific-ocean"
+   ]
   },
   {
    "id": "equator",
@@ -98,7 +111,10 @@
    "place": {
     "en": "on the Equator",
     "ru": "на экваторе"
-   }
+   },
+   "insideArea": [
+    "atlantic-ocean"
+   ]
   },
   {
    "id": "prime-meridian",
@@ -108,7 +124,10 @@
    "place": {
     "en": "on the Prime Meridian",
     "ru": "на нулевом меридиане"
-   }
+   },
+   "insideArea": [
+    "europe"
+   ]
   },
   {
    "id": "asia",
