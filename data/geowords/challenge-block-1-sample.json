@@ -1,0 +1,4260 @@
+{
+ "block": "world-1",
+ "sample": true,
+ "rules": {
+  "source": "app-generated; this file is the approved spot-check sample (Svetlana, 2026-10-23), not a fixed list",
+  "words": "review words of sections 1-5 plus the challenge-extra words of data/dictionary/block-1.json; a word repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) is used once",
+  "places": "about half the letters on objects of the word's own section (a third for words of 15+ letters), the rest from the other sections of the block; about 30% of places named by an approved record",
+  "neverTogether": "Suez with Bosporus/Dardanelles; Hormuz with Gulf of Oman; Drake with Magellan; Antarctica with Southern Ocean; for 15+ letters also Ganges with Indus and Yangtze with Huang He",
+  "rivers": "a river is either on or at the mouth; 15+ letters: on only (mouths are fixed points)",
+  "seas": "circle at the centre of the sea (label point, or a deep point within 1.5%)",
+  "nesting": "no letter inside another object of the same puzzle",
+  "fixedPoints": "15+ letters: at most 3 seas/straits",
+  "spacing": "circles at least 5.4% of map width apart; needsZoom true for every puzzle",
+  "clues": "answer never inside a clue; reveal order as validate-geowords.mjs"
+ },
+ "puzzles": [
+  {
+   "id": "challenge-continents-oceans-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "en",
+   "answer": "PENINSULA",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9.7,
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 12.54,
+     "letter": "P"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 93,
+     "letter": "E"
+    },
+    {
+     "id": "north-america",
+     "x": 3.2,
+     "y": 14.52,
+     "letter": "N"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "I"
+    },
+    {
+     "id": "volga-river",
+     "x": 60.3,
+     "y": 23.85,
+     "letter": "N"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 91.36,
+     "y": 84.49,
+     "letter": "S"
+    },
+    {
+     "id": "asia",
+     "x": 75.36,
+     "y": 7.43,
+     "letter": "U"
+    },
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "L"
+    },
+    {
+     "id": "yangtze-mouth",
+     "x": 80.55,
+     "y": 38.93,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "east-africa",
+     "position": 4,
+     "text": "Find the fourth letter in the mountains of East Africa."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 2,
+     "text": "Find the second letter in Antarctica."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 5,
+     "text": "Find the fifth letter on the Volga."
+    },
+    {
+     "markerId": "yangtze-mouth",
+     "position": 9,
+     "text": "Find the ninth letter at the mouth of the Yangtze."
+    },
+    {
+     "markerId": "north-america",
+     "position": 3,
+     "text": "Find the third letter in North America."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Indian Ocean."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Nile."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "asia",
+     "position": 7,
+     "text": "Find the seventh letter in Asia."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "eca704db6153a53b"
+   }
+  },
+  {
+   "id": "challenge-continents-oceans-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "en",
+   "answer": "BLIZZARD",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 14.5,
+   "markers": [
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.73,
+     "y": 41.09,
+     "letter": "B"
+    },
+    {
+     "id": "indus-river",
+     "x": 68.8,
+     "y": 38.38,
+     "letter": "L"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 69.64,
+     "y": 86.8,
+     "letter": "I"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 96.8,
+     "y": 20.46,
+     "letter": "Z"
+    },
+    {
+     "id": "australia",
+     "x": 88,
+     "y": 69.47,
+     "letter": "Z"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "A"
+    },
+    {
+     "id": "africa",
+     "x": 52.27,
+     "y": 67.33,
+     "letter": "R"
+    },
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "D"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "indian-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Indian Ocean."
+    },
+    {
+     "markerId": "andes",
+     "position": 6,
+     "text": "Find the sixth letter in the longest range on land."
+    },
+    {
+     "markerId": "indus-river",
+     "position": 2,
+     "text": "Find the second letter on the Indus."
+    },
+    {
+     "markerId": "africa",
+     "position": 7,
+     "text": "Find the seventh letter in Africa."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 1,
+     "text": "Find the first letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "australia",
+     "position": 5,
+     "text": "Find the fifth letter in Australia."
+    },
+    {
+     "markerId": "danube-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Danube."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7138ed35ed9482b7"
+   }
+  },
+  {
+   "id": "challenge-continents-oceans-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "ru",
+   "answer": "ПОЛУОСТРОВ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 12,
+   "markers": [
+    {
+     "id": "southern-ocean",
+     "x": 96.8,
+     "y": 93,
+     "letter": "П"
+    },
+    {
+     "id": "africa",
+     "x": 43.64,
+     "y": 48.51,
+     "letter": "О"
+    },
+    {
+     "id": "europe",
+     "x": 50,
+     "y": 19.31,
+     "letter": "Л"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "У"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "О"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.36,
+     "y": 41.58,
+     "letter": "С"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "Т"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "Р"
+    },
+    {
+     "id": "volga-mouth",
+     "x": 60.32,
+     "y": 30.56,
+     "letter": "О"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 76.57,
+     "letter": "В"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "europe",
+     "position": 3,
+     "text": "Найди третью букву в Европе."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 7,
+     "text": "Найди седьмую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Найди пятую букву в самой длинной горной цепи на суше."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 10,
+     "text": "Найди десятую букву в Тихом океане."
+    },
+    {
+     "markerId": "africa",
+     "position": 2,
+     "text": "Найди вторую букву в Африке."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 4,
+     "text": "Найди четвёртую букву в Мозамбикском проливе."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 8,
+     "text": "Найди восьмую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Южном океане."
+    },
+    {
+     "markerId": "volga-mouth",
+     "position": 9,
+     "text": "Найди девятую букву в устье Волги."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 6,
+     "text": "Найди шестую букву в Мексиканском заливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "05ea29c1abdcd016"
+   }
+  },
+  {
+   "id": "challenge-continents-oceans-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "ru",
+   "answer": "ЦУНАМИ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 18.7,
+   "markers": [
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "Ц"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "У"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 21.36,
+     "y": 20.46,
+     "letter": "Н"
+    },
+    {
+     "id": "africa",
+     "x": 53.55,
+     "y": 70.79,
+     "letter": "А"
+    },
+    {
+     "id": "north-america",
+     "x": 39.18,
+     "y": 4.5,
+     "letter": "М"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 90.09,
+     "y": 86.63,
+     "letter": "И"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "africa",
+     "position": 4,
+     "text": "Найди четвёртую букву в Африке."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 2,
+     "text": "Найди вторую букву в Гималаях."
+    },
+    {
+     "markerId": "north-america",
+     "position": 5,
+     "text": "Найди пятую букву в Северной Америке."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 3,
+     "text": "Найди третью букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Индийском океане."
+    },
+    {
+     "markerId": "danube-mouth",
+     "position": 1,
+     "text": "Найди первую букву в устье Дуная."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "5d3f2345ae259178"
+   }
+  },
+  {
+   "id": "challenge-rivers-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "en",
+   "answer": "CONFLUENCE",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.4,
+   "markers": [
+    {
+     "id": "strait-of-magellan",
+     "x": 27.03,
+     "y": 85.14,
+     "letter": "C"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "O"
+    },
+    {
+     "id": "himalayas",
+     "x": 71.64,
+     "y": 40.76,
+     "letter": "N"
+    },
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "F"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "L"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "U"
+    },
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "E"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.09,
+     "y": 34.32,
+     "letter": "N"
+    },
+    {
+     "id": "appalachians",
+     "x": 28.55,
+     "y": 28.38,
+     "letter": "C"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 78.09,
+     "y": 40.01,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "himalayas",
+     "position": 3,
+     "text": "Find the third letter in the Himalayas."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Nile."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 2,
+     "text": "Find the second letter in the English Channel."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 5,
+     "text": "Find the fifth letter at the mouth of the Mississippi."
+    },
+    {
+     "markerId": "danube-mouth",
+     "position": 7,
+     "text": "Find the seventh letter at the mouth of the Danube."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 9,
+     "text": "Find the ninth letter in the Appalachians."
+    },
+    {
+     "markerId": "indus-mouth",
+     "position": 4,
+     "text": "Find the fourth letter at the mouth of the Indus."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 10,
+     "text": "Find the tenth letter on the longest river in Asia."
+    },
+    {
+     "markerId": "strait-of-magellan",
+     "position": 1,
+     "text": "Find the first letter in the Strait of Magellan."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "ed21a4136e89f458"
+   }
+  },
+  {
+   "id": "challenge-rivers-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "en",
+   "answer": "ESTUARY",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "caspian-sea",
+     "x": 60.36,
+     "y": 32.51,
+     "letter": "E"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "S"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 94.64,
+     "y": 86.14,
+     "letter": "T"
+    },
+    {
+     "id": "indus-river",
+     "x": 68.8,
+     "y": 38.38,
+     "letter": "U"
+    },
+    {
+     "id": "appalachians",
+     "x": 28.55,
+     "y": 28.38,
+     "letter": "A"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "R"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 78.09,
+     "y": 40.01,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pacific-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 5,
+     "text": "Find the fifth letter in the Appalachians."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 2,
+     "text": "Find the second letter on the Nile."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Amazon."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 1,
+     "text": "Find the first letter in the largest inland body of water."
+    },
+    {
+     "markerId": "indus-river",
+     "position": 4,
+     "text": "Find the fourth letter on the Indus."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 7,
+     "text": "Find the seventh letter on the Yangtze."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "be58aceed808b15d"
+   }
+  },
+  {
+   "id": "challenge-rivers-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "ru",
+   "answer": "ВОДОХРАНИЛИЩЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.6,
+   "markers": [
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "В"
+    },
+    {
+     "id": "cordillera",
+     "x": 13.64,
+     "y": 25.41,
+     "letter": "О"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "Д"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "О"
+    },
+    {
+     "id": "ganges-river",
+     "x": 68.34,
+     "y": 40.41,
+     "letter": "Х"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 51.64,
+     "y": 37.95,
+     "letter": "Р"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "А"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "Н"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "И"
+    },
+    {
+     "id": "danube-river",
+     "x": 48.92,
+     "y": 28.98,
+     "letter": "Л"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "И"
+    },
+    {
+     "id": "volga-river",
+     "x": 57.15,
+     "y": 22.74,
+     "letter": "Щ"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bering-strait",
+     "position": 7,
+     "text": "Найди седьмую букву в самом узком месте между Азией и Северной Америкой."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 3,
+     "text": "Найди третью букву в устье Амазонки."
+    },
+    {
+     "markerId": "danube-river",
+     "position": 10,
+     "text": "Найди десятую букву на Дунае."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 13,
+     "text": "Найди тринадцатую букву в проливе Дрейка."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 8,
+     "text": "Найди восьмую букву в устье Миссисипи."
+    },
+    {
+     "markerId": "ganges-river",
+     "position": 5,
+     "text": "Найди пятую букву на Ганге."
+    },
+    {
+     "markerId": "ural",
+     "position": 9,
+     "text": "Найди девятую букву на Урале."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 2,
+     "text": "Найди вторую букву в Кордильерах."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Волге."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Средиземном море."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Ниле."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 1,
+     "text": "Найди первую букву в устье Хуанхэ."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 4,
+     "text": "Найди четвёртую букву в Панамском канале."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "3b04c6aef9c9977f"
+   }
+  },
+  {
+   "id": "challenge-rivers-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "ru",
+   "answer": "ПОЙМА",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9.7,
+   "markers": [
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "П"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "О"
+    },
+    {
+     "id": "ganges-river",
+     "x": 68.34,
+     "y": 40.41,
+     "letter": "Й"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 20.23,
+     "y": 29.47,
+     "letter": "М"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 77.29,
+     "y": 33.67,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mississippi-river",
+     "position": 4,
+     "text": "Найди четвёртую букву на Миссисипи."
+    },
+    {
+     "markerId": "andes",
+     "position": 2,
+     "text": "Найди вторую букву в самой длинной горной цепи на суше."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 5,
+     "text": "Найди пятую букву на Хуанхэ."
+    },
+    {
+     "markerId": "ganges-river",
+     "position": 3,
+     "text": "Найди третью букву на Ганге."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 1,
+     "text": "Найди первую букву в Мозамбикском проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "cd196de0beba1a2e"
+   }
+  },
+  {
+   "id": "challenge-mountains-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "mountains",
+   "language": "en",
+   "answer": "AVALANCHE",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.6,
+   "markers": [
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "A"
+    },
+    {
+     "id": "caucasus",
+     "x": 59.91,
+     "y": 33,
+     "letter": "V"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 77.29,
+     "y": 33.67,
+     "letter": "A"
+    },
+    {
+     "id": "appalachians",
+     "x": 28.55,
+     "y": 28.38,
+     "letter": "L"
+    },
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "A"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.27,
+     "y": 43.4,
+     "letter": "N"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.55,
+     "y": 86.2,
+     "letter": "C"
+    },
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "H"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "indus-mouth",
+     "position": 5,
+     "text": "Find the fifth letter at the mouth of the Indus."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 3,
+     "text": "Find the third letter on the river that carries the most sediment."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 6,
+     "text": "Find the sixth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 4,
+     "text": "Find the fourth letter in the Appalachians."
+    },
+    {
+     "markerId": "ural",
+     "position": 9,
+     "text": "Find the ninth letter in the Urals."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 2,
+     "text": "Find the second letter in the Caucasus."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 8,
+     "text": "Find the eighth letter in the Pyrenees."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 1,
+     "text": "Find the first letter in the Suez Canal."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 7,
+     "text": "Find the seventh letter on the Mid-Atlantic Ridge."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "e39082773dc0a3fb"
+   }
+  },
+  {
+   "id": "challenge-mountains-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "mountains",
+   "language": "en",
+   "answer": "MOUNTAINEER",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.8,
+   "markers": [
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "M"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "O"
+    },
+    {
+     "id": "coral-sea",
+     "x": 90.73,
+     "y": 63.37,
+     "letter": "U"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.26,
+     "letter": "N"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 87.18,
+     "y": 75.08,
+     "letter": "T"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.73,
+     "y": 42.9,
+     "letter": "A"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "I"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 93,
+     "letter": "N"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "E"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "E"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 7,
+     "text": "Find the seventh letter in the Bab-el-Mandeb."
+    },
+    {
+     "markerId": "ural",
+     "position": 2,
+     "text": "Find the second letter in the Urals."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 8,
+     "text": "Find the eighth letter in Antarctica."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 6,
+     "text": "Find the sixth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 3,
+     "text": "Find the third letter in the Coral Sea."
+    },
+    {
+     "markerId": "andes",
+     "position": 10,
+     "text": "Find the tenth letter in the Andes."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 4,
+     "text": "Find the fourth letter in the Himalayas."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 11,
+     "text": "Find the eleventh letter in the Strait of Gibraltar."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 9,
+     "text": "Find the ninth letter in the range with Africa's highest peak."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 5,
+     "text": "Find the fifth letter in the Great Dividing Range."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 1,
+     "text": "Find the first letter in the North American Cordillera."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "fd3aaf14930ea107"
+   }
+  },
+  {
+   "id": "challenge-mountains-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "mountains",
+   "language": "ru",
+   "answer": "АЛЬПИНИСТ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9.7,
+   "markers": [
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "А"
+    },
+    {
+     "id": "black-sea",
+     "x": 55.82,
+     "y": 32.01,
+     "letter": "Л"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.09,
+     "y": 19.31,
+     "letter": "Ь"
+    },
+    {
+     "id": "appalachians",
+     "x": 22.36,
+     "y": 37.95,
+     "letter": "П"
+    },
+    {
+     "id": "himalayas",
+     "x": 67.91,
+     "y": 38.12,
+     "letter": "И"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 42.34,
+     "y": 80,
+     "letter": "Н"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "И"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "С"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 77.29,
+     "y": 33.67,
+     "letter": "Т"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 6,
+     "text": "Найди шестую букву на Срединно-Атлантическом хребте."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 3,
+     "text": "Найди третью букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 5,
+     "text": "Найди пятую букву в Гималаях."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 9,
+     "text": "Найди девятую букву на Хуанхэ."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Чёрном море."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 7,
+     "text": "Найди седьмую букву в Мозамбикском проливе."
+    },
+    {
+     "markerId": "atlas",
+     "position": 1,
+     "text": "Найди первую букву в Атласских горах."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 4,
+     "text": "Найди четвёртую букву в Аппалачах."
+    },
+    {
+     "markerId": "ural",
+     "position": 8,
+     "text": "Найди восьмую букву на Урале."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "dbd83eec3640dd13"
+   }
+  },
+  {
+   "id": "challenge-mountains-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "mountains",
+   "language": "ru",
+   "answer": "СТРАТОВУЛКАН",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "С"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "Т"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "Р"
+    },
+    {
+     "id": "appalachians",
+     "x": 25.09,
+     "y": 32.18,
+     "letter": "А"
+    },
+    {
+     "id": "danube-river",
+     "x": 51.99,
+     "y": 29.22,
+     "letter": "Т"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "О"
+    },
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "В"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 77.29,
+     "y": 33.67,
+     "letter": "У"
+    },
+    {
+     "id": "antarctica",
+     "x": 85.91,
+     "y": 93,
+     "letter": "Л"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
+     "letter": "К"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "А"
+    },
+    {
+     "id": "andes",
+     "x": 27.09,
+     "y": 69.64,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cordillera",
+     "position": 3,
+     "text": "Найди третью букву в Кордильерах."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 6,
+     "text": "Найди шестую букву в горах Восточной Африки."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 4,
+     "text": "Найди четвёртую букву в Аппалачах."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 7,
+     "text": "Найди седьмую букву в устье Нила."
+    },
+    {
+     "markerId": "andes",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Андах."
+    },
+    {
+     "markerId": "danube-river",
+     "position": 5,
+     "text": "Найди пятую букву на Дунае."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 2,
+     "text": "Найди вторую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву в Антарктиде."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Найди первую букву в Пиренеях."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 8,
+     "text": "Найди восьмую букву на реке, которая несёт больше всего наносов."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 10,
+     "text": "Найди десятую букву на Срединно-Атлантическом хребте."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "28c9cbe4c972ee75"
+   }
+  },
+  {
+   "id": "challenge-seas-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "seas",
+   "language": "en",
+   "answer": "JELLYFISH",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.4,
+   "markers": [
+    {
+     "id": "coral-sea",
+     "x": 90.82,
+     "y": 65.02,
+     "letter": "J"
+    },
+    {
+     "id": "red-sea",
+     "x": 57.27,
+     "y": 45.21,
+     "letter": "E"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 64.64,
+     "y": 50.99,
+     "letter": "L"
+    },
+    {
+     "id": "appalachians",
+     "x": 25.55,
+     "y": 33.66,
+     "letter": "L"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "Y"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 24.27,
+     "y": 49.01,
+     "letter": "F"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.09,
+     "y": 19.31,
+     "letter": "I"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "S"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "H"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "red-sea",
+     "position": 2,
+     "text": "Find the second letter in the Red Sea."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 4,
+     "text": "Find the fourth letter in the Appalachians."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 3,
+     "text": "Find the third letter in the Arabian Sea."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Amazon."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 5,
+     "text": "Find the fifth letter in the mountains of East Africa."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 7,
+     "text": "Find the seventh letter in Hudson Bay."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 9,
+     "text": "Find the ninth letter in the strait that carries a fifth of the world's oil."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 1,
+     "text": "Find the first letter in the Coral Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "be4a05b61b6f27d7"
+   }
+  },
+  {
+   "id": "challenge-seas-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "seas",
+   "language": "en",
+   "answer": "HURRICANE",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9.5,
+   "markers": [
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "H"
+    },
+    {
+     "id": "andes",
+     "x": 28.55,
+     "y": 66.83,
+     "letter": "U"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "R"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.55,
+     "y": 86.2,
+     "letter": "R"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.18,
+     "y": 47.36,
+     "letter": "I"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 24.18,
+     "y": 46.04,
+     "letter": "C"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.64,
+     "y": 47.19,
+     "letter": "A"
+    },
+    {
+     "id": "coral-sea",
+     "x": 90.64,
+     "y": 65.68,
+     "letter": "N"
+    },
+    {
+     "id": "black-sea",
+     "x": 55.36,
+     "y": 30.86,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "drake-passage",
+     "position": 3,
+     "text": "Find the third letter in the Drake Passage."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the Red Sea."
+    },
+    {
+     "markerId": "andes",
+     "position": 2,
+     "text": "Find the second letter in the Andes."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 4,
+     "text": "Find the fourth letter on the Mid-Atlantic Ridge."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the sea with the largest coral reef."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 1,
+     "text": "Find the first letter in the English Channel."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 7,
+     "text": "Find the seventh letter in the Bay of Bengal."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Black Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7c0494d965b63da4"
+   }
+  },
+  {
+   "id": "challenge-seas-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "seas",
+   "language": "ru",
+   "answer": "КАРАКАТИЦА",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.6,
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "К"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.36,
+     "y": 36.8,
+     "letter": "А"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.27,
+     "y": 43.4,
+     "letter": "Р"
+    },
+    {
+     "id": "europe",
+     "x": 62.64,
+     "y": 15.51,
+     "letter": "А"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 88,
+     "y": 74.42,
+     "letter": "К"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.45,
+     "y": 50.5,
+     "letter": "А"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "Т"
+    },
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "И"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.27,
+     "y": 35.31,
+     "letter": "Ц"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 23.55,
+     "y": 19.64,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "europe",
+     "position": 4,
+     "text": "Найди четвёртую букву в Европе."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Средиземном море."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 7,
+     "text": "Найди седьмую букву в устье Амазонки."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 3,
+     "text": "Найди третью букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 9,
+     "text": "Найди девятую букву в самом большом внутреннем водоёме."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 5,
+     "text": "Найди пятую букву на Большом Водораздельном хребте."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 10,
+     "text": "Найди десятую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "danube-mouth",
+     "position": 8,
+     "text": "Найди восьмую букву в устье Дуная."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 6,
+     "text": "Найди шестую букву в самом большом заливе мира."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7cdc7a4a9493e962"
+   }
+  },
+  {
+   "id": "challenge-seas-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "seas",
+   "language": "ru",
+   "answer": "ЛАГУНА",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.6,
+   "markers": [
+    {
+     "id": "arabian-sea",
+     "x": 62.91,
+     "y": 49.01,
+     "letter": "Л"
+    },
+    {
+     "id": "africa",
+     "x": 43.64,
+     "y": 44.06,
+     "letter": "А"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "Г"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.45,
+     "y": 41.42,
+     "letter": "У"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.64,
+     "y": 47.19,
+     "letter": "Н"
+    },
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bay-of-bengal",
+     "position": 5,
+     "text": "Найди пятую букву в самом большом заливе мира."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 3,
+     "text": "Найди третью букву в Панамском канале."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 6,
+     "text": "Найди шестую букву в устье Хуанхэ."
+    },
+    {
+     "markerId": "africa",
+     "position": 2,
+     "text": "Найди вторую букву в Африке."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 4,
+     "text": "Найди четвёртую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 1,
+     "text": "Найди первую букву в Аравийском море."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "48b5608c57a1e865"
+   }
+  },
+  {
+   "id": "challenge-straits-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "straits",
+   "language": "en",
+   "answer": "ALBATROSS",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "A"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "L"
+    },
+    {
+     "id": "bosporus",
+     "inset": "turkish-straits",
+     "x": 73.04,
+     "y": 21.25,
+     "letter": "B"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "A"
+    },
+    {
+     "id": "africa",
+     "x": 53.55,
+     "y": 70.79,
+     "letter": "T"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 60.45,
+     "y": 32.34,
+     "letter": "R"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "O"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 28.91,
+     "y": 8.91,
+     "letter": "S"
+    },
+    {
+     "id": "strait-of-magellan",
+     "x": 27.03,
+     "y": 85.14,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "caspian-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the largest inland body of water."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 2,
+     "text": "Find the second letter in the strait that carries a fifth of the world's oil."
+    },
+    {
+     "markerId": "africa",
+     "position": 5,
+     "text": "Find the fifth letter in Africa."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 7,
+     "text": "Find the seventh letter in the strait that carries the most oil."
+    },
+    {
+     "markerId": "strait-of-magellan",
+     "position": 9,
+     "text": "Find the ninth letter in the Strait of Magellan."
+    },
+    {
+     "markerId": "bosporus",
+     "position": 3,
+     "text": "Find the third letter in the Bosporus."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Find the first letter in the Pyrenees."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 4,
+     "text": "Find the fourth letter in the Panama Canal."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "3b00d6d8b46f9aad"
+   }
+  },
+  {
+   "id": "challenge-straits-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "straits",
+   "language": "en",
+   "answer": "DESALINATION",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering",
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.3,
+   "markers": [
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "D"
+    },
+    {
+     "id": "south-america",
+     "x": 34.27,
+     "y": 65.18,
+     "letter": "E"
+    },
+    {
+     "id": "gulf-of-oman",
+     "x": 63.44,
+     "y": 43,
+     "letter": "S"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "A"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 3.2,
+     "y": 93,
+     "letter": "L"
+    },
+    {
+     "id": "dardanelles",
+     "inset": "turkish-straits",
+     "x": 16.3,
+     "y": 69.61,
+     "letter": "I"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "N"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "A"
+    },
+    {
+     "id": "coral-sea",
+     "x": 90,
+     "y": 66.5,
+     "letter": "T"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "I"
+    },
+    {
+     "id": "east-africa",
+     "x": 56.36,
+     "y": 51.16,
+     "letter": "O"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bering-strait",
+     "position": 4,
+     "text": "Find the fourth letter in the Bering Strait."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 8,
+     "text": "Find the eighth letter in the Drake Passage."
+    },
+    {
+     "markerId": "south-america",
+     "position": 2,
+     "text": "Find the second letter in South America."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 12,
+     "text": "Find the twelfth letter in the Mozambique Channel."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Coral Sea."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 11,
+     "text": "Find the eleventh letter in the mountains of East Africa."
+    },
+    {
+     "markerId": "dardanelles",
+     "position": 6,
+     "text": "Find the sixth letter in the Dardanelles."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 10,
+     "text": "Find the tenth letter at the mouth of the Mississippi."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 7,
+     "text": "Find the seventh letter in the Panama Canal."
+    },
+    {
+     "markerId": "ural",
+     "position": 1,
+     "text": "Find the first letter in the Urals."
+    },
+    {
+     "markerId": "gulf-of-oman",
+     "position": 3,
+     "text": "Find the third letter in the Gulf of Oman."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Southern Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "db0151f94da5ffb4"
+   }
+  },
+  {
+   "id": "challenge-straits-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "straits",
+   "language": "ru",
+   "answer": "АЛЬБАТРОС",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.2,
+   "markers": [
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "А"
+    },
+    {
+     "id": "caucasus",
+     "x": 58.91,
+     "y": 32.34,
+     "letter": "Л"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 23.55,
+     "y": 19.64,
+     "letter": "Ь"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "Б"
+    },
+    {
+     "id": "volga-river",
+     "x": 55.74,
+     "y": 22.76,
+     "letter": "А"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.45,
+     "y": 41.42,
+     "letter": "Т"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "Р"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "О"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "С"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 6,
+     "text": "Найди шестую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 3,
+     "text": "Найди третью букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 5,
+     "text": "Найди пятую букву на Волге."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 2,
+     "text": "Найди вторую букву на Кавказе."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 8,
+     "text": "Найди восьмую букву в самом узком месте между Азией и Северной Америкой."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 4,
+     "text": "Найди четвёртую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 7,
+     "text": "Найди седьмую букву в Гибралтарском проливе."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 1,
+     "text": "Найди первую букву в Ормузском проливе."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 9,
+     "text": "Найди девятую букву в Панамском канале."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "470924a4e48ff5c0"
+   }
+  },
+  {
+   "id": "challenge-straits-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "straits",
+   "language": "ru",
+   "answer": "КОНТЕЙНЕРОВОЗ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering",
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 9.5,
+   "markers": [
+    {
+     "id": "yangtze-mouth",
+     "x": 80.55,
+     "y": 38.93,
+     "letter": "К"
+    },
+    {
+     "id": "indus-river",
+     "x": 67.01,
+     "y": 36.65,
+     "letter": "О"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 22.27,
+     "y": 42.9,
+     "letter": "Н"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "Т"
+    },
+    {
+     "id": "dardanelles",
+     "inset": "turkish-straits",
+     "x": 16.3,
+     "y": 69.61,
+     "letter": "Е"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "Й"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "Н"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 23.55,
+     "y": 19.64,
+     "letter": "Е"
+    },
+    {
+     "id": "bosporus",
+     "inset": "turkish-straits",
+     "x": 73.04,
+     "y": 21.25,
+     "letter": "Р"
+    },
+    {
+     "id": "cordillera",
+     "x": 13,
+     "y": 29.21,
+     "letter": "О"
+    },
+    {
+     "id": "andes",
+     "x": 28.55,
+     "y": 64.69,
+     "letter": "В"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "О"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "З"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bosporus",
+     "position": 9,
+     "text": "Найди девятую букву в Босфоре."
+    },
+    {
+     "markerId": "dardanelles",
+     "position": 5,
+     "text": "Найди пятую букву в Дарданеллах."
+    },
+    {
+     "markerId": "indus-river",
+     "position": 2,
+     "text": "Найди вторую букву на Инде."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 8,
+     "text": "Найди восьмую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 10,
+     "text": "Найди десятую букву в Кордильерах."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 6,
+     "text": "Найди шестую букву в проливе Дрейка."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 7,
+     "text": "Найди седьмую букву в самом узком месте между Азией и Северной Америкой."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 3,
+     "text": "Найди третью букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "andes",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Андах."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 13,
+     "text": "Найди тринадцатую букву в проливе Ла-Манш."
+    },
+    {
+     "markerId": "yangtze-mouth",
+     "position": 1,
+     "text": "Найди первую букву в устье Янцзы."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 4,
+     "text": "Найди четвёртую букву в Мозамбикском проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "396011915b861ad7"
+   }
+  },
+  {
+   "id": "challenge-extra-en-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "en",
+   "answer": "CONTINENTALITY",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.4,
+   "markers": [
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "C"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 72.36,
+     "y": 92.24,
+     "letter": "O"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "N"
+    },
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "T"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 35.73,
+     "y": 82.18,
+     "letter": "I"
+    },
+    {
+     "id": "ganges-river",
+     "x": 69.11,
+     "y": 41.93,
+     "letter": "N"
+    },
+    {
+     "id": "australia",
+     "x": 87.55,
+     "y": 67.99,
+     "letter": "E"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "N"
+    },
+    {
+     "id": "africa",
+     "x": 53.55,
+     "y": 70.79,
+     "letter": "T"
+    },
+    {
+     "id": "south-america",
+     "x": 26.82,
+     "y": 52.15,
+     "letter": "A"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.09,
+     "y": 19.31,
+     "letter": "L"
+    },
+    {
+     "id": "bosporus",
+     "inset": "turkish-straits",
+     "x": 73.04,
+     "y": 21.25,
+     "letter": "I"
+    },
+    {
+     "id": "north-america",
+     "x": 3.2,
+     "y": 14.52,
+     "letter": "T"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.55,
+     "y": 87.13,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "atlantic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "africa",
+     "position": 9,
+     "text": "Find the ninth letter in Africa."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 4,
+     "text": "Find the fourth letter in the Pyrenees."
+    },
+    {
+     "markerId": "south-america",
+     "position": 10,
+     "text": "Find the tenth letter in South America."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Southern Ocean."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 8,
+     "text": "Find the eighth letter in the Strait of Hormuz."
+    },
+    {
+     "markerId": "ganges-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Ganges."
+    },
+    {
+     "markerId": "bosporus",
+     "position": 12,
+     "text": "Find the twelfth letter in the Bosporus."
+    },
+    {
+     "markerId": "australia",
+     "position": 7,
+     "text": "Find the seventh letter in Australia."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 11,
+     "text": "Find the eleventh letter in Hudson Bay."
+    },
+    {
+     "markerId": "ural",
+     "position": 3,
+     "text": "Find the third letter in the Urals."
+    },
+    {
+     "markerId": "north-america",
+     "position": 13,
+     "text": "Find the thirteenth letter in North America."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 1,
+     "text": "Find the first letter in the Bab-el-Mandeb."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 14,
+     "text": "Find the fourteenth letter in the Pacific Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "51e6328237899610"
+   }
+  },
+  {
+   "id": "challenge-extra-en-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "en",
+   "answer": "EVAPOTRANSPIRATION",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.8,
+   "markers": [
+    {
+     "id": "ganges-river",
+     "x": 68.87,
+     "y": 39.25,
+     "letter": "E"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
+     "letter": "V"
+    },
+    {
+     "id": "danube-river",
+     "x": 51.04,
+     "y": 28.79,
+     "letter": "A"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "P"
+    },
+    {
+     "id": "volga-river",
+     "x": 57.33,
+     "y": 22,
+     "letter": "O"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 22.18,
+     "y": 93,
+     "letter": "T"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 78.09,
+     "y": 40.01,
+     "letter": "R"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 65.68,
+     "letter": "A"
+    },
+    {
+     "id": "appalachians",
+     "x": 28.55,
+     "y": 28.38,
+     "letter": "N"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 21.28,
+     "y": 34.2,
+     "letter": "S"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "P"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 86.82,
+     "y": 73.6,
+     "letter": "R"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "A"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "T"
+    },
+    {
+     "id": "gulf-of-oman",
+     "x": 63.44,
+     "y": 43,
+     "letter": "I"
+    },
+    {
+     "id": "caucasus",
+     "x": 59.91,
+     "y": 33,
+     "letter": "O"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.09,
+     "y": 19.31,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "danube-river",
+     "position": 3,
+     "text": "Find the third letter on the Danube."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 14,
+     "text": "Find the fourteenth letter in the range with Africa's highest peak."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 11,
+     "text": "Find the eleventh letter in the North American Cordillera."
+    },
+    {
+     "markerId": "australia",
+     "position": 13,
+     "text": "Find the thirteenth letter in Australia."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 15,
+     "text": "Find the fifteenth letter in the narrowest gap between Europe and Africa."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 17,
+     "text": "Find the seventeenth letter in the Caucasus."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 5,
+     "text": "Find the fifth letter on the Volga."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 9,
+     "text": "Find the ninth letter in the Appalachians."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 2,
+     "text": "Find the second letter on the Mid-Atlantic Ridge."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "mississippi-river",
+     "position": 10,
+     "text": "Find the tenth letter on the Mississippi."
+    },
+    {
+     "markerId": "ural",
+     "position": 12,
+     "text": "Find the twelfth letter in the Urals."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 18,
+     "text": "Find the eighteenth letter in Hudson Bay."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 7,
+     "text": "Find the seventh letter on the Yangtze."
+    },
+    {
+     "markerId": "gulf-of-oman",
+     "position": 16,
+     "text": "Find the sixteenth letter in the Gulf of Oman."
+    },
+    {
+     "markerId": "ganges-river",
+     "position": 1,
+     "text": "Find the first letter on the Ganges."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Southern Ocean."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Pacific Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f3ea7efc210b560b"
+   }
+  },
+  {
+   "id": "challenge-extra-en-3",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "rivers",
+   "language": "en",
+   "answer": "PRECIPITATION",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.2,
+   "markers": [
+    {
+     "id": "volga-river",
+     "x": 60.3,
+     "y": 23.85,
+     "letter": "P"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "R"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "E"
+    },
+    {
+     "id": "yangtze-mouth",
+     "x": 80.55,
+     "y": 38.93,
+     "letter": "C"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "I"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 74.47,
+     "y": 36.69,
+     "letter": "P"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "I"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "T"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.45,
+     "y": 50.5,
+     "letter": "A"
+    },
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "T"
+    },
+    {
+     "id": "south-america",
+     "x": 27.82,
+     "y": 71.29,
+     "letter": "I"
+    },
+    {
+     "id": "indus-river",
+     "x": 68.21,
+     "y": 37.45,
+     "letter": "O"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 20.23,
+     "y": 29.47,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bay-of-bengal",
+     "position": 9,
+     "text": "Find the ninth letter in the largest bay in the world."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 5,
+     "text": "Find the fifth letter in the Drake Passage."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 7,
+     "text": "Find the seventh letter in the English Channel."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 2,
+     "text": "Find the second letter in the strait that carries a fifth of the world's oil."
+    },
+    {
+     "markerId": "mississippi-river",
+     "position": 13,
+     "text": "Find the thirteenth letter on the Mississippi."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Amazon."
+    },
+    {
+     "markerId": "danube-mouth",
+     "position": 10,
+     "text": "Find the tenth letter at the mouth of the Danube."
+    },
+    {
+     "markerId": "indus-river",
+     "position": 12,
+     "text": "Find the twelfth letter on the Indus."
+    },
+    {
+     "markerId": "ural",
+     "position": 3,
+     "text": "Find the third letter in the Urals."
+    },
+    {
+     "markerId": "south-america",
+     "position": 11,
+     "text": "Find the eleventh letter in South America."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 1,
+     "text": "Find the first letter on the Volga."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Yellow River."
+    },
+    {
+     "markerId": "yangtze-mouth",
+     "position": 4,
+     "text": "Find the fourth letter at the mouth of the Yangtze."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "48aa0417ce1ae222"
+   }
+  },
+  {
+   "id": "challenge-extra-ru-1",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "continents-oceans",
+   "language": "ru",
+   "answer": "МЕЖЛЕДНИКОВЬЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 6.7,
+   "markers": [
+    {
+     "id": "cordillera",
+     "x": 14.18,
+     "y": 31.52,
+     "letter": "М"
+    },
+    {
+     "id": "australia",
+     "x": 87.64,
+     "y": 71.78,
+     "letter": "Е"
+    },
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "Ж"
+    },
+    {
+     "id": "south-america",
+     "x": 27.55,
+     "y": 77.89,
+     "letter": "Л"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 84.49,
+     "letter": "Е"
+    },
+    {
+     "id": "appalachians",
+     "x": 28.55,
+     "y": 28.38,
+     "letter": "Д"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 24.27,
+     "y": 49.01,
+     "letter": "Н"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "И"
+    },
+    {
+     "id": "asia",
+     "x": 75.36,
+     "y": 7.43,
+     "letter": "К"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 58,
+     "y": 93,
+     "letter": "О"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 19.73,
+     "y": 4.5,
+     "letter": "В"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 60.91,
+     "y": 32.67,
+     "letter": "Ь"
+    },
+    {
+     "id": "europe",
+     "x": 51.45,
+     "y": 16.17,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "appalachians",
+     "position": 6,
+     "text": "Найди шестую букву в Аппалачах."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 3,
+     "text": "Найди третью букву в устье Нила."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 10,
+     "text": "Найди десятую букву в Южном океане."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 5,
+     "text": "Найди пятую букву в Тихом океане."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 8,
+     "text": "Найди восьмую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "asia",
+     "position": 9,
+     "text": "Найди девятую букву в Азии."
+    },
+    {
+     "markerId": "australia",
+     "position": 2,
+     "text": "Найди вторую букву в Австралии."
+    },
+    {
+     "markerId": "europe",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Европе."
+    },
+    {
+     "markerId": "south-america",
+     "position": 4,
+     "text": "Найди четвёртую букву в Южной Америке."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 7,
+     "text": "Найди седьмую букву в Карибском море."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Каспийском море."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 1,
+     "text": "Найди первую букву в Кордильерах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "aac1016d58d935db"
+   }
+  },
+  {
+   "id": "challenge-extra-ru-2",
+   "block": "world-1",
+   "unit": "challenge",
+   "role": "challenge-sample",
+   "section": "seas",
+   "language": "ru",
+   "answer": "ГЛУБОКОВОДЬЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "small objects (straits, small seas) and close circles",
+   "minSeparation": 5.4,
+   "markers": [
+    {
+     "id": "volga-river",
+     "x": 59.58,
+     "y": 23.46,
+     "letter": "Г"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 23.55,
+     "y": 19.64,
+     "letter": "Л"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 96.8,
+     "y": 83,
+     "letter": "У"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "Б"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 64.64,
+     "y": 50.99,
+     "letter": "О"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "К"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "О"
+    },
+    {
+     "id": "red-sea",
+     "x": 57.27,
+     "y": 45.21,
+     "letter": "В"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 26.09,
+     "y": 48.02,
+     "letter": "О"
+    },
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "Д"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 20.36,
+     "y": 41.58,
+     "letter": "Ь"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 51.73,
+     "y": 35.81,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pacific-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Тихом океане."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 6,
+     "text": "Найди шестую букву в горах Восточной Африки."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в Красном море."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 5,
+     "text": "Найди пятую букву в Аравийском море."
+    },
+    {
+     "markerId": "atlas",
+     "position": 10,
+     "text": "Найди десятую букву в Атласских горах."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 4,
+     "text": "Найди четвёртую букву в проливе Ла-Манш."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 9,
+     "text": "Найди девятую букву в Карибском море."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Средиземном море."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 2,
+     "text": "Найди вторую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 7,
+     "text": "Найди седьмую букву в проливе, через который идёт пятая часть мировой нефти."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 1,
+     "text": "Найди первую букву на самой длинной реке Европы."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "cfe5ccff9fb6e08d"
+   }
+  }
+ ]
+}
