@@ -1,0 +1,1125 @@
+{
+ "section": "rivers-of-the-world",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on rivers (\"on the Nile\" = a point on the drawn river line; \"at the mouth of the Nile\" = where it flows into the sea), continents and oceans from section 1; unit 3 names rivers by approved undisputed records; the disputed \"Nile is the longest\" is never used",
+  "onOrMouth": "a river appears either \"on\" or \"at the mouth\", never both in one puzzle",
+  "spacing": "circles are placed as far apart as possible; a continent circle is placed far from a river circle on the same continent (Svetlana, 2026-10-23); no callout arrows — every circle sits exactly on its point",
+  "needsZoom": "true when two circles are closer than one circle (18 CSS px on a 336 px map): show the pinch-zoom hint again for this puzzle, even if it was seen before",
+  "approval": "same as section-1.json: sha256 over {answer, markers, clues}"
+ },
+ "puzzles": [
+  {
+   "id": "section-2-unit-1-en",
+   "section": "rivers-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "FLOODPLAIN",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": false,
+   "minSeparation": 14.9,
+   "markers": [
+    {
+     "id": "europe",
+     "x": 62.64,
+     "y": 15.51,
+     "letter": "F"
+    },
+    {
+     "id": "asia",
+     "x": 94.45,
+     "y": 15.68,
+     "letter": "L"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.55,
+     "y": 87.13,
+     "letter": "O"
+    },
+    {
+     "id": "antarctica",
+     "x": 72.55,
+     "y": 93,
+     "letter": "O"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 3.2,
+     "y": 4.5,
+     "letter": "D"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "P"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 20.23,
+     "y": 29.47,
+     "letter": "L"
+    },
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "A"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 53.73,
+     "y": 79.04,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 87.55,
+     "y": 67.99,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pacific-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "asia",
+     "position": 2,
+     "text": "Find the second letter in Asia."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Nile."
+    },
+    {
+     "markerId": "australia",
+     "position": 10,
+     "text": "Find the tenth letter in Australia."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 4,
+     "text": "Find the fourth letter in Antarctica."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Amazon."
+    },
+    {
+     "markerId": "europe",
+     "position": 1,
+     "text": "Find the first letter in Europe."
+    },
+    {
+     "markerId": "mississippi-river",
+     "position": 7,
+     "text": "Find the seventh letter on the Mississippi."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 9,
+     "text": "Find the ninth letter in the Indian Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "b3c2f244d1df6489"
+   }
+  },
+  {
+   "id": "section-2-unit-1-ru",
+   "section": "rivers-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МУТНОСТЬ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": false,
+   "minSeparation": 13.6,
+   "markers": [
+    {
+     "id": "nile-river",
+     "x": 55.83,
+     "y": 43.42,
+     "letter": "М"
+    },
+    {
+     "id": "antarctica",
+     "x": 71.18,
+     "y": 93,
+     "letter": "У"
+    },
+    {
+     "id": "africa",
+     "x": 53.55,
+     "y": 70.79,
+     "letter": "Т"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "Н"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "О"
+    },
+    {
+     "id": "australia",
+     "x": 87.55,
+     "y": 67.99,
+     "letter": "С"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.55,
+     "y": 87.13,
+     "letter": "Т"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mississippi-mouth",
+     "position": 4,
+     "text": "Найди четвёртую букву в устье Миссисипи."
+    },
+    {
+     "markerId": "australia",
+     "position": 6,
+     "text": "Найди шестую букву в Австралии."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 2,
+     "text": "Найди вторую букву в Антарктиде."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 7,
+     "text": "Найди седьмую букву в Тихом океане."
+    },
+    {
+     "markerId": "africa",
+     "position": 3,
+     "text": "Найди третью букву в Африке."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 1,
+     "text": "Найди первую букву на Ниле."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 8,
+     "text": "Найди восьмую букву в устье Амазонки."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 5,
+     "text": "Найди пятую букву в Северном Ледовитом океане."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "e97d57fbb936801d"
+   }
+  },
+  {
+   "id": "section-2-unit-2-en",
+   "section": "rivers-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "IRRIGATION",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 4.6,
+   "markers": [
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "I"
+    },
+    {
+     "id": "ganges-mouth",
+     "x": 71.77,
+     "y": 44.1,
+     "letter": "R"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 76,
+     "y": 40.32,
+     "letter": "R"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 43.18,
+     "y": 12.71,
+     "letter": "I"
+    },
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "G"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "A"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "T"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "O"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 93,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mississippi-mouth",
+     "position": 6,
+     "text": "Find the sixth letter at the mouth of the Mississippi."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 3,
+     "text": "Find the third letter on the Yangtze."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 7,
+     "text": "Find the seventh letter on the Nile."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 10,
+     "text": "Find the tenth letter in Antarctica."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 8,
+     "text": "Find the eighth letter on the Amazon."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "ganges-mouth",
+     "position": 2,
+     "text": "Find the second letter at the mouth of the Ganges."
+    },
+    {
+     "markerId": "australia",
+     "position": 9,
+     "text": "Find the ninth letter in Australia."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 1,
+     "text": "Find the first letter at the mouth of the Yellow River."
+    },
+    {
+     "markerId": "indus-mouth",
+     "position": 5,
+     "text": "Find the fifth letter at the mouth of the Indus."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "997d223b46228c44"
+   }
+  },
+  {
+   "id": "section-2-unit-2-ru",
+   "section": "rivers-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ОРОШЕНИЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 4.6,
+   "markers": [
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "О"
+    },
+    {
+     "id": "amazon-river",
+     "x": 25.73,
+     "y": 58.96,
+     "letter": "Р"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 76,
+     "y": 40.32,
+     "letter": "О"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 94.64,
+     "y": 86.14,
+     "letter": "Ш"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "Е"
+    },
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "Н"
+    },
+    {
+     "id": "europe",
+     "x": 51.45,
+     "y": 16.17,
+     "letter": "И"
+    },
+    {
+     "id": "ganges-mouth",
+     "x": 71.77,
+     "y": 44.1,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "indus-mouth",
+     "position": 6,
+     "text": "Найди шестую букву в устье Инда."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тихом океане."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 2,
+     "text": "Найди вторую букву на Амазонке."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 5,
+     "text": "Найди пятую букву на Ниле."
+    },
+    {
+     "markerId": "europe",
+     "position": 7,
+     "text": "Найди седьмую букву в Европе."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 1,
+     "text": "Найди первую букву в устье Хуанхэ."
+    },
+    {
+     "markerId": "ganges-mouth",
+     "position": 8,
+     "text": "Найди восьмую букву в устье Ганга."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 3,
+     "text": "Найди третью букву на Янцзы."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "048bc127bda07af7"
+   }
+  },
+  {
+   "id": "section-2-unit-3-en",
+   "section": "rivers-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BARBARIANS",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 5.3,
+   "markers": [
+    {
+     "id": "danube-river",
+     "x": 48.92,
+     "y": 28.98,
+     "letter": "B"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 20.23,
+     "y": 29.47,
+     "letter": "A"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "R"
+    },
+    {
+     "id": "huang-he-river",
+     "x": 77.29,
+     "y": 33.67,
+     "letter": "B"
+    },
+    {
+     "id": "ganges-river",
+     "x": 68.32,
+     "y": 39.99,
+     "letter": "A"
+    },
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "R"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "A"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 74.57,
+     "y": 41.84,
+     "letter": "N"
+    },
+    {
+     "id": "volga-river",
+     "x": 60.3,
+     "y": 23.85,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "amazon-river",
+     "position": 7,
+     "text": "Find the seventh letter on the river that carries the most water."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "ganges-river",
+     "position": 5,
+     "text": "Find the fifth letter on the Ganges."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 10,
+     "text": "Find the tenth letter on the longest river in Europe."
+    },
+    {
+     "markerId": "mississippi-river",
+     "position": 2,
+     "text": "Find the second letter on the Mississippi."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 6,
+     "text": "Find the sixth letter at the mouth of the Nile."
+    },
+    {
+     "markerId": "huang-he-river",
+     "position": 4,
+     "text": "Find the fourth letter on the river that carries the most sediment."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 9,
+     "text": "Find the ninth letter on the longest river in Asia."
+    },
+    {
+     "markerId": "danube-river",
+     "position": 1,
+     "text": "Find the first letter on the river that flows through the most countries."
+    },
+    {
+     "markerId": "australia",
+     "position": 8,
+     "text": "Find the eighth letter in Australia."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0a3c9a94e342f8c4"
+   }
+  },
+  {
+   "id": "section-2-unit-3-ru",
+   "section": "rivers-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ВАРВАРЫ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": false,
+   "minSeparation": 6.7,
+   "markers": [
+    {
+     "id": "volga-river",
+     "x": 59.43,
+     "y": 23.59,
+     "letter": "В"
+    },
+    {
+     "id": "danube-river",
+     "x": 48.92,
+     "y": 28.98,
+     "letter": "А"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "Р"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "В"
+    },
+    {
+     "id": "indus-river",
+     "x": 66.35,
+     "y": 38.92,
+     "letter": "А"
+    },
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "Р"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 72.95,
+     "y": 37.06,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "indus-river",
+     "position": 5,
+     "text": "Найди пятую букву на Инде."
+    },
+    {
+     "markerId": "danube-river",
+     "position": 2,
+     "text": "Найди вторую букву на реке, которая течёт через больше всего стран."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 4,
+     "text": "Найди четвёртую букву на самой полноводной реке."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 6,
+     "text": "Найди шестую букву в устье Хуанхэ."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 3,
+     "text": "Найди третью букву в устье Миссисипи."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 7,
+     "text": "Найди седьмую букву на самой длинной реке Азии."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 1,
+     "text": "Найди первую букву на самой длинной реке Европы."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "34e215911cfac6cd"
+   }
+  },
+  {
+   "id": "section-2-final-en",
+   "section": "rivers-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "ATMOSPHERE",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 4.6,
+   "markers": [
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "A"
+    },
+    {
+     "id": "danube-river",
+     "x": 48.92,
+     "y": 28.98,
+     "letter": "T"
+    },
+    {
+     "id": "mississippi-river",
+     "x": 20.23,
+     "y": 29.47,
+     "letter": "M"
+    },
+    {
+     "id": "amazon-mouth",
+     "x": 32.82,
+     "y": 55.2,
+     "letter": "O"
+    },
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "S"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.55,
+     "y": 55.79,
+     "letter": "P"
+    },
+    {
+     "id": "volga-mouth",
+     "x": 60.32,
+     "y": 30.56,
+     "letter": "H"
+    },
+    {
+     "id": "ganges-mouth",
+     "x": 71.77,
+     "y": 44.1,
+     "letter": "E"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 76,
+     "y": 40.32,
+     "letter": "R"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.55,
+     "y": 87.13,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "volga-mouth",
+     "position": 7,
+     "text": "Find the seventh letter at the mouth of the Volga."
+    },
+    {
+     "markerId": "amazon-mouth",
+     "position": 4,
+     "text": "Find the fourth letter at the mouth of the Amazon."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 6,
+     "text": "Find the sixth letter on the Nile."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 9,
+     "text": "Find the ninth letter on the Yangtze."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 5,
+     "text": "Find the fifth letter at the mouth of the Yellow River."
+    },
+    {
+     "markerId": "ganges-mouth",
+     "position": 8,
+     "text": "Find the eighth letter at the mouth of the Ganges."
+    },
+    {
+     "markerId": "mississippi-river",
+     "position": 3,
+     "text": "Find the third letter on the Mississippi."
+    },
+    {
+     "markerId": "indus-mouth",
+     "position": 1,
+     "text": "Find the first letter at the mouth of the Indus."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 10,
+     "text": "Find the tenth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "danube-river",
+     "position": 2,
+     "text": "Find the second letter on the Danube."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "081cb5d96b7c3090"
+   }
+  },
+  {
+   "id": "section-2-final-ru",
+   "section": "rivers-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "АТМОСФЕРА",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-river-huang-he.webp",
+    "./assets/layers/world-river-ganges.webp",
+    "./assets/layers/world-river-indus.webp",
+    "./assets/layers/world-river-danube.webp",
+    "./assets/layers/world-river-volga.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 4.4,
+   "markers": [
+    {
+     "id": "nile-mouth",
+     "x": 55.1,
+     "y": 38.9,
+     "letter": "А"
+    },
+    {
+     "id": "volga-river",
+     "x": 60.3,
+     "y": 23.85,
+     "letter": "Т"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 76,
+     "y": 40.32,
+     "letter": "М"
+    },
+    {
+     "id": "indus-mouth",
+     "x": 65.3,
+     "y": 43.12,
+     "letter": "О"
+    },
+    {
+     "id": "danube-mouth",
+     "x": 54.92,
+     "y": 30.86,
+     "letter": "С"
+    },
+    {
+     "id": "huang-he-mouth",
+     "x": 79.72,
+     "y": 35.31,
+     "letter": "Ф"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "Е"
+    },
+    {
+     "id": "ganges-mouth",
+     "x": 71.77,
+     "y": 44.1,
+     "letter": "Р"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "danube-mouth",
+     "position": 5,
+     "text": "Найди пятую букву в устье Дуная."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 2,
+     "text": "Найди вторую букву на Волге."
+    },
+    {
+     "markerId": "indus-mouth",
+     "position": 4,
+     "text": "Найди четвёртую букву в устье Инда."
+    },
+    {
+     "markerId": "ganges-mouth",
+     "position": 8,
+     "text": "Найди восьмую букву в устье Ганга."
+    },
+    {
+     "markerId": "huang-he-mouth",
+     "position": 6,
+     "text": "Найди шестую букву в устье Хуанхэ."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 3,
+     "text": "Найди третью букву на Янцзы."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 7,
+     "text": "Найди седьмую букву на Амазонке."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 9,
+     "text": "Найди девятую букву в устье Миссисипи."
+    },
+    {
+     "markerId": "nile-mouth",
+     "position": 1,
+     "text": "Найди первую букву в устье Нила."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7834bfdb26be2294"
+   }
+  }
+ ]
+}
