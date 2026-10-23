@@ -241,9 +241,9 @@
      "letter": "И"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 43.45,
-     "y": 86.3,
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 83.83,
      "letter": "К"
     }
    ],
@@ -264,9 +264,9 @@
      "text": "Найди вторую букву в Австралии."
     },
     {
-     "markerId": "atlantic-ocean",
+     "markerId": "pacific-ocean",
      "position": 9,
-     "text": "Найди девятую букву в Атлантическом океане."
+     "text": "Найди девятую букву в Тихом океане."
     },
     {
      "markerId": "arctic-ocean",
@@ -298,7 +298,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "4e1adf0e28c99e1f"
+    "contentSha256": "55c15f366a4fc0a6"
    }
   },
   {
