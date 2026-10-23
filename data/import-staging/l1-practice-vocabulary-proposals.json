@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "origin": "codex_vocabulary_proposal_not_authored",
+  "warning": "Words, definitions and theme assignments are proposed for editorial review. They are not authored workbook material or generated puzzles. Geographic feasibility, difficulty and teaching order are unapproved.",
+  "steps": [
+    {"stepId":"l1-01-step","themeProposal":"Maps and regions","words":[
+      ["ATLAS","A book or collection of maps."],
+      ["GLOBE","A round model of Earth."],
+      ["MAPPING","Making a map of a place or area."],
+      ["REGION","An area with a feature or group of features in common."],
+      ["BORDER","A line separating two areas."],
+      ["SPHERE","A round three-dimensional shape like a ball."]
+    ]},
+    {"stepId":"l1-02-step","themeProposal":"Regions and location","words":[
+      ["TROPICS","The region of Earth around the Equator."],
+      ["POLAR","Relating to the areas around Earth's poles."],
+      ["TEMPERATE","Relating to regions between the tropics and the polar regions."],
+      ["CLIMATE","The usual patterns of weather in a place over many years."],
+      ["LATITUDE","The angle that tells how far north or south a place is from the Equator."],
+      ["AZIMUTH","The angle of a direction, measured clockwise from north."]
+    ]},
+    {"stepId":"l1-03-step","themeProposal":"Oceans","words":[
+      ["SALINITY","The amount of dissolved salts in water."],
+      ["SEAWATER","The salty water in seas and oceans."],
+      ["SEAFLOOR","The bottom of a sea or ocean."],
+      ["CURRENT","Water moving in a particular direction."],
+      ["UPWELLING","The movement of deeper water toward the surface."],
+      ["ABYSSAL","Relating to a very deep part of the ocean."]
+    ]},
+    {"stepId":"l1-04-step","themeProposal":"Directions and maps","words":[
+      ["COMPASS","An instrument used to find directions."],
+      ["BEARING","A direction expressed as an angle from a reference direction."],
+      ["HORIZON","The line where the sky seems to meet land or water."],
+      ["DISTANCE","How far apart two places are."],
+      ["LOCATOR","A tool or map that helps find a place."],
+      ["TOPOGRAPHY","The shapes and features of the land's surface."]
+    ]},
+    {"stepId":"l1-05-step","themeProposal":"Map references","words":[
+      ["MERIDIAN","An imaginary line running from pole to pole on Earth."],
+      ["PARALLEL","An imaginary line joining places with the same latitude."],
+      ["GRID","A pattern of lines used to locate positions on a map."],
+      ["POSITION","The location of a place or object."],
+      ["COORDINATE","One of the values used to describe a position."],
+      ["REFERENCE","A point or system used to describe a position or direction."]
+    ]},
+    {"stepId":"l1-06-step","themeProposal":"Islands and volcanoes","words":[
+      ["ISLET","A small island."],
+      ["PENINSULA","Land surrounded by water on most sides and joined to other land."],
+      ["ISTHMUS","A narrow strip of land joining two larger land areas."],
+      ["VOLCANISM","The processes that move magma and volcanic material toward or onto the surface."],
+      ["MAGMA","Molten rock beneath Earth's surface."],
+      ["LAVA","Molten rock that has reached Earth's surface."]
+    ]},
+    {"stepId":"l1-07-step","themeProposal":"People and environments","words":[
+      ["DENSITY","How much of something is found in a given space or area."],
+      ["SETTLEMENT","A place where people live."],
+      ["MIGRATION","Movement from one place to another."],
+      ["URBAN","Relating to towns and cities."],
+      ["RURAL","Relating to the countryside."],
+      ["HABITAT",null]
+    ]},
+    {"stepId":"l1-08-step","themeProposal":"Rivers and mountain records","words":[
+      ["WATERSHED","An area of land whose water drains to a common outlet."],
+      ["CATCHMENT","An area from which water flows toward a particular river, lake or other outlet."],
+      ["CONFLUENCE","A place where two streams or rivers meet."],
+      ["SUMMIT","The highest point of a hill or mountain."],
+      ["RIDGELINE","A line along the top of a ridge."],
+      ["HEADWATER","A stream or source area at the beginning of a river."]
+    ]},
+    {"stepId":"l1-09-step","themeProposal":"Dry and cold regions","words":[
+      ["ARIDITY","The condition of having very little moisture."],
+      ["DROUGHT","An unusually long period with too little rain or snow for an area."],
+      ["DUNEFIELD","An area containing many dunes."],
+      ["OASIS","A place in a desert where water is available."],
+      ["PERMAFROST","Ground that stays frozen for at least two years in a row."],
+      ["PRECIPITATION","Water that falls from clouds as rain, snow or other forms."]
+    ]},
+    {"stepId":"l1-10-step","themeProposal":"Landforms","words":[
+      ["PLATEAU","An area of high land with a fairly level surface."],
+      ["CANYON","A deep valley with steep sides."],
+      ["TERRAIN","The physical features of a piece of land."],
+      ["BASIN","A low area of land or an area drained by a river system."],
+      ["RIDGE","A long, narrow raised part of the land."],
+      ["SLOPE","A surface that rises or falls at an angle."]
+    ]}
+  ]
+}

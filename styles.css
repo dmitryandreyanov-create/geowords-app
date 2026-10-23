@@ -26,6 +26,7 @@ button{font:inherit}
 .primary:active,.secondary:active,.tertiary:active{transform:translateY(2px)}
 .home-progress{margin-top:14px;font-size:13px;font-weight:850;color:#65767b}
 .how-card{margin-top:12px;padding:10px}
+.lab-link{display:block;margin-top:12px;padding:12px 14px;border-radius:14px;border:1px dashed #3d3a99;background:#fffefb;color:#3d3a99;font-weight:850;text-decoration:none;text-align:center}
 .how-card>div{display:flex;align-items:center;gap:12px;padding:10px 8px}
 .how-card span{width:31px;height:31px;border-radius:50%;background:var(--yellow);display:grid;place-items:center;font-weight:950}
 .how-card p{margin:0;font-weight:750}
@@ -54,6 +55,17 @@ button{font:inherit}
 .map-card{margin-top:10px;padding:8px;overflow:hidden}
 .map-viewport{width:100%;aspect-ratio:var(--map-aspect,14/9);min-height:0;max-height:none;overflow:hidden;border-radius:17px;background:#b7e4e4;position:relative;touch-action:none;border:1px solid #bdd8dc}
 .map-canvas{position:absolute;inset:0;transform-origin:0 0;will-change:transform}
+.rivers-hero{margin-top:14px;background:linear-gradient(135deg,#f7fffc,#dff2fb);border-color:#a9d9e8}
+.rivers-hero h2{font-size:26px;margin:8px 0 10px}
+.rivers-hero p{font-size:15px;line-height:1.45;color:#385e69;margin:8px 0}
+.rivers-hero .home-progress{font-size:13px}
+.geo-features,.geo-labels{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.marker-arrows{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.marker-arrows line{stroke:#183a48;stroke-width:.42;stroke-linecap:round}
+.marker-arrows polygon{fill:#183a48}
+.river-map-label{position:absolute;transform:translate(-50%,-165%);font-size:clamp(10px,2.7vw,13px);font-weight:950;white-space:nowrap;color:#074e75;background:rgba(255,255,247,.92);border:1px solid #6eb5cf;border-radius:8px;padding:1px 4px;box-shadow:0 1px 3px rgba(11,45,74,.18)}
+.marker-hotspot.generated{width:clamp(27px,8vw,35px);height:clamp(27px,8vw,35px);border:2px solid #f1a837;background:#fff8dd;color:#27316c;font-size:15px;font-weight:950;display:grid;place-items:center;box-shadow:0 1px 4px rgba(0,0,0,.26)}
+.marker-hotspot.generated.done{background:#d6f2d3;border-color:#3d984c}
 .map-canvas img{width:100%;height:100%;object-fit:fill;display:block;user-select:none;pointer-events:none}
 .markers-layer{position:absolute;inset:0}
 .marker-hotspot{position:absolute;width:clamp(44px,12vw,52px);height:clamp(44px,12vw,52px);border-radius:50%;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation}
@@ -72,3 +84,15 @@ button{font:inherit}
 .next-card{padding:19px 18px;margin-top:12px;background:#f1f9e9;border-color:#b5d99e}
 @media (max-width:390px){.app-shell{padding-left:10px;padding-right:10px}.clue-text{font-size:18px}}
 @media (min-width:700px){.app-shell{padding-left:26px;padding-right:26px}}
+
+.pinch-hint{position:absolute;inset:auto 10px 10px 10px;display:flex;align-items:center;gap:12px;padding:10px 14px;border-radius:14px;background:rgba(255,253,246,.94);border:1px solid var(--line);box-shadow:0 4px 14px rgba(0,0,0,.18);pointer-events:none;z-index:5}
+.pinch-hint[hidden]{display:none}
+.pinch-hint p{margin:0;font-size:14px;line-height:1.3;font-weight:700;color:#3b3226}
+.pinch-hint p span{font-weight:600;color:#6b5d4a}
+.pinch-hands{position:relative;flex:0 0 52px;height:44px}
+.finger{position:absolute;top:12px;width:18px;height:18px;border-radius:50%;background:#6a8fd0;box-shadow:0 0 0 4px rgba(106,143,208,.25)}
+.finger.f1{left:16px;animation:pinch-l 1.4s ease-in-out infinite}
+.finger.f2{left:18px;animation:pinch-r 1.4s ease-in-out infinite}
+@keyframes pinch-l{0%,20%{transform:translateX(0)}60%,100%{transform:translateX(-14px)}}
+@keyframes pinch-r{0%,20%{transform:translateX(0)}60%,100%{transform:translateX(14px)}}
+@media (prefers-reduced-motion:reduce){.finger{animation:none}.finger.f1{left:2px}.finger.f2{left:32px}}

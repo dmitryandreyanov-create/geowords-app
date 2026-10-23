@@ -1,0 +1,1817 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-world-geography",
+  "status": "not_for_live_use",
+  "warning": "Editorial skeleton only. Candidate lesson fields are source-derived proposals; runtime learnBefore/unlockAfter remain null and all facts are editorial_pending.",
+  "courseOrder": [
+    "oceans-continents",
+    "rivers",
+    "mountains",
+    "world-waters",
+    "straits-canals",
+    "final-challenge"
+  ],
+  "courses": [
+    {
+      "id": "oceans-continents",
+      "title": "Oceans & Continents",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [],
+      "steps": [
+        {
+          "id": "l1-01-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-01",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-intro",
+            "l1-01-after"
+          ],
+          "candidateLearnBefore": [
+            "f-l1-p06-continents",
+            "f-l1-p06-eurasia",
+            "f-l1-p06-oceans",
+            "f-l1-p06-land-water",
+            "f-l1-p06-pacific-map"
+          ],
+          "candidateUnlockAfter": [
+            "f-l1-p08-continent-properties"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-02-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-02",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-02-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p10-oceans-left",
+            "f-l1-p10-oceans-right",
+            "f-l1-p10-salinity-note"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-03-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-03",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-03-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p12-directions"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-04-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-04",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-04-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p14-equator",
+            "f-l1-p14-prime-meridian"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-05-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-05",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-05-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p16-islands-left",
+            "f-l1-p16-islands-right",
+            "f-l1-p16-island-continent-note"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-06-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-06",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-06-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p18-residents-climate-population"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-07-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-07",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-07-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p20-records-left",
+            "f-l1-p20-records-right",
+            "f-l1-p20-nile-note"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-08-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-08",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-08-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p22-deserts",
+            "f-l1-p22-coldest-settlement"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-09-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-09",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-09-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l1-p24-appalachians",
+            "f-l1-p24-himalayas"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l1-10-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l1-10",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l1-10-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [],
+          "candidateOptionalAfter": []
+        }
+      ]
+    },
+    {
+      "id": "rivers",
+      "title": "Rivers",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "oceans-continents"
+      ],
+      "steps": [
+        {
+          "id": "l2-01-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-01",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-01-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p07-nile-mediterranean",
+            "f-l2-p07-nile-note"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l2-02-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-02",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-02-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p09-amazon-volume",
+            "f-l2-p09-amazon-location"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l2-03-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-03",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-03-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p11-mississippi-gulf"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l2-04-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-04",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-04-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p13-yangtze"
+          ],
+          "candidateOptionalAfter": [
+            "f-l2-p13-direction-tips"
+          ]
+        },
+        {
+          "id": "l2-05-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-05",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-05-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p15-ganges",
+            "f-l2-p15-rituals"
+          ],
+          "candidateOptionalAfter": []
+        },
+        {
+          "id": "l2-06-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-06",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-06-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p17-danube"
+          ],
+          "candidateOptionalAfter": [
+            "f-l2-p17-roman-forts"
+          ]
+        },
+        {
+          "id": "l2-07-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-07",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-07-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [
+            "f-l2-p19-volga",
+            "f-l2-p19-volga-kama-note"
+          ],
+          "candidateOptionalAfter": [
+            "f-l2-p19-caspian"
+          ]
+        },
+        {
+          "id": "l2-08-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-08",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-08-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [],
+          "candidateOptionalAfter": [
+            "f-l2-p21-civilizations",
+            "f-l2-p21-hydronyms"
+          ]
+        },
+        {
+          "id": "l2-09-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-09",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-09-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [],
+          "candidateOptionalAfter": [
+            "f-l2-p23-river-benefits"
+          ]
+        },
+        {
+          "id": "l2-10-step",
+          "status": "editorial_pending",
+          "requiresFacts": null,
+          "learnBefore": null,
+          "introducedPlaces": null,
+          "authoredPuzzleId": "l2-10",
+          "wordIds": [],
+          "unlockAfter": null,
+          "pending": [
+            "geographic testing deferred by user",
+            "source facts and candidate lesson timing need review",
+            "six approved practice words and descriptors"
+          ],
+          "sourceLessonIds": [
+            "l2-10-after"
+          ],
+          "candidateLearnBefore": [],
+          "candidateUnlockAfter": [],
+          "candidateOptionalAfter": [
+            "f-l2-p25-care-for-rivers"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mountains",
+      "title": "Mountains",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "rivers"
+      ],
+      "steps": []
+    },
+    {
+      "id": "world-waters",
+      "title": "World Waters",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "mountains"
+      ],
+      "steps": []
+    },
+    {
+      "id": "straits-canals",
+      "title": "Straits & Canals",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "world-waters"
+      ],
+      "steps": []
+    },
+    {
+      "id": "final-challenge",
+      "title": "Final Challenge",
+      "status": "editorial_pending",
+      "target": 7,
+      "advanceOn": "solved",
+      "requiresFacts": null,
+      "requiresCourses": [
+        "straits-canals"
+      ],
+      "steps": []
+    }
+  ],
+  "facts": [
+    {
+      "id": "f-l1-p06-continents",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are seven continents on Earth: Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
+      },
+      "sourceBlockId": "source-l1-p06-continents",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          225,
+          115,
+          740,
+          175
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-eurasia",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Sometimes Europe and Asia are counted as one continent. Together, they are called Eurasia."
+      },
+      "sourceBlockId": "source-l1-p06-eurasia",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          180,
+          740,
+          268
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-oceans",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are five oceans on Earth: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans."
+      },
+      "sourceBlockId": "source-l1-p06-oceans",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          278,
+          740,
+          362
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-land-water",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Continents are very large areas of land. Oceans are very large areas of salt water."
+      },
+      "sourceBlockId": "source-l1-p06-land-water",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          375,
+          740,
+          476
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-pacific-map",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Pacific Ocean appears on both sides of the map, but it is one ocean."
+      },
+      "sourceBlockId": "source-l1-p06-pacific-map",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          475,
+          480,
+          740,
+          558
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p08-continent-properties",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Eurasia contains Europe and Asia. The largest continent is Asia. The smallest continent is Australia. The hottest continent is Africa. The coldest continent is Antarctica."
+      },
+      "sourceBlockId": "source-l1-p08-continent-properties",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 8,
+        "region": [
+          300,
+          405,
+          740,
+          532
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p10-oceans-left",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are five oceans in the world. The smallest ocean is the Arctic Ocean. The coldest ocean is the Southern Ocean."
+      },
+      "sourceBlockId": "source-l1-p10-oceans-left",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          110,
+          440,
+          410,
+          510
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p10-salinity-note"
+      ]
+    },
+    {
+      "id": "f-l1-p10-oceans-right",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The warmest ocean is the Indian Ocean. The deepest ocean is the Pacific Ocean. The saltiest ocean is the Atlantic Ocean.*"
+      },
+      "sourceBlockId": "source-l1-p10-oceans-right",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          430,
+          440,
+          740,
+          510
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p10-salinity-note"
+      ]
+    },
+    {
+      "id": "f-l1-p10-salinity-note",
+      "status": "editorial_pending",
+      "text": {
+        "en": "*The Atlantic is considered the saltiest of the five oceans based on its average salinity. However, salinity varies from place to place, and some areas may be saltier or less salty than others."
+      },
+      "sourceBlockId": "source-l1-p10-salinity-note",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          50,
+          520,
+          740,
+          556
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "caveat",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p12-directions",
+      "status": "editorial_pending",
+      "text": {
+        "en": "To read a map, we use directions: north, south, east, and west. Every continent and ocean has northern, southern, eastern, and western parts."
+      },
+      "sourceBlockId": "source-l1-p12-directions",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 12,
+        "region": [
+          125,
+          430,
+          740,
+          516
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p14-equator",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Equator divides the Earth into the Northern and Southern Hemispheres."
+      },
+      "sourceBlockId": "source-l1-p14-equator",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 14,
+        "region": [
+          130,
+          450,
+          415,
+          520
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p14-prime-meridian",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Prime Meridian divides the Earth into the Eastern and Western Hemispheres."
+      },
+      "sourceBlockId": "source-l1-p14-prime-meridian",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 14,
+        "region": [
+          435,
+          450,
+          740,
+          520
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p16-islands-left",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The largest island in the world is Greenland. Madagascar was once part of Africa."
+      },
+      "sourceBlockId": "source-l1-p16-islands-left",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          130,
+          430,
+          415,
+          503
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p16-island-continent-note"
+      ]
+    },
+    {
+      "id": "f-l1-p16-islands-right",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Australia is both an island and a continent*. Iceland is a volcanic island."
+      },
+      "sourceBlockId": "source-l1-p16-islands-right",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          435,
+          430,
+          740,
+          503
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p16-island-continent-note"
+      ]
+    },
+    {
+      "id": "f-l1-p16-island-continent-note",
+      "status": "editorial_pending",
+      "text": {
+        "en": "*Australia is often called an “island continent” because it is surrounded by water. However, it is classified as a continent and is not included in lists of islands."
+      },
+      "sourceBlockId": "source-l1-p16-island-continent-note",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          50,
+          510,
+          740,
+          556
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "caveat",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p18-residents-climate-population",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are no permanent residents in Antarctica. Only scientists live there for research. The Pacific Ocean is the largest and the most geologically active ocean. Asia is the most populous continent. South America is the wettest continent."
+      },
+      "sourceBlockId": "source-l1-p18-residents-climate-population",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 18,
+        "region": [
+          90,
+          408,
+          740,
+          529
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p20-records-left",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Africa has the longest river — the Nile.* Asia has the highest mountain — Mount Everest."
+      },
+      "sourceBlockId": "source-l1-p20-records-left",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          135,
+          378,
+          410,
+          511
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p20-nile-note"
+      ]
+    },
+    {
+      "id": "f-l1-p20-records-right",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Pacific Ocean contains the deepest point on Earth. South America has the world’s longest continental mountain range — the Andes."
+      },
+      "sourceBlockId": "source-l1-p20-records-right",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          425,
+          378,
+          740,
+          511
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l1-p20-nile-note"
+      ]
+    },
+    {
+      "id": "f-l1-p20-nile-note",
+      "status": "editorial_pending",
+      "text": {
+        "en": "*Some scientists say the Amazon River may be the longest."
+      },
+      "sourceBlockId": "source-l1-p20-nile-note",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          50,
+          518,
+          740,
+          550
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "caveat",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p22-deserts",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The largest desert in the world is Antarctica. It is a cold desert! The continent with the largest hot desert is Africa."
+      },
+      "sourceBlockId": "source-l1-p22-deserts",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 22,
+        "region": [
+          130,
+          415,
+          415,
+          518
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p22-coldest-settlement",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The coldest place where people live is in Asia (Oymyakon, Russia). Africa is the hottest continent."
+      },
+      "sourceBlockId": "source-l1-p22-coldest-settlement",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 22,
+        "region": [
+          450,
+          415,
+          740,
+          518
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p24-appalachians",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Appalachian Mountains in North America are among the oldest mountain ranges in the world."
+      },
+      "sourceBlockId": "source-l1-p24-appalachians",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 24,
+        "region": [
+          105,
+          448,
+          415,
+          519
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p24-himalayas",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Himalayas in Asia are among the youngest mountain ranges in the world."
+      },
+      "sourceBlockId": "source-l1-p24-himalayas",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 24,
+        "region": [
+          425,
+          448,
+          740,
+          519
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p07-nile-mediterranean",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Nile is the longest river in the world*. The Nile flows through Africa. The Nile flows into the Mediterranean Sea. The Mediterranean Sea is between Europe, Africa, and Asia."
+      },
+      "sourceBlockId": "source-l2-p07-nile-mediterranean",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 7,
+        "region": [
+          365,
+          370,
+          740,
+          511
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l2-p07-nile-note"
+      ]
+    },
+    {
+      "id": "f-l2-p07-nile-note",
+      "status": "editorial_pending",
+      "text": {
+        "en": "*Some measurements suggest that the Amazon River may be longer."
+      },
+      "sourceBlockId": "source-l2-p07-nile-note",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 7,
+        "region": [
+          90,
+          515,
+          740,
+          536
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "caveat",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p09-amazon-volume",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Amazon River carries more water than any other river in the world."
+      },
+      "sourceBlockId": "source-l2-p09-amazon-volume",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 9,
+        "region": [
+          135,
+          472,
+          380,
+          536
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p09-amazon-location",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Amazon River flows through South America. The Amazon River flows into the Atlantic Ocean."
+      },
+      "sourceBlockId": "source-l2-p09-amazon-location",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 9,
+        "region": [
+          400,
+          472,
+          740,
+          530
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p11-mississippi-gulf",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Mississippi River is one of the longest rivers in North America. The Mississippi River flows through North America. The Mississippi River flows into the Gulf of Mexico. The Gulf of Mexico is a large body of water bordered by North America."
+      },
+      "sourceBlockId": "source-l2-p11-mississippi-gulf",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 11,
+        "region": [
+          95,
+          405,
+          740,
+          505
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p13-yangtze",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Yangtze River is the longest river in Asia. The Yangtze River flows through China. The Yangtze River has played an important role in Chinese history."
+      },
+      "sourceBlockId": "source-l2-p13-yangtze",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 13,
+        "region": [
+          130,
+          405,
+          425,
+          536
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p13-direction-tips",
+      "status": "editorial_pending",
+      "text": {
+        "en": "“North” means up on the map. “South” means down. “East” is right. “West” is left."
+      },
+      "sourceBlockId": "source-l2-p13-direction-tips",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 13,
+        "region": [
+          515,
+          425,
+          740,
+          508
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p15-ganges",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Ganges River is one of the most important rivers in India."
+      },
+      "sourceBlockId": "source-l2-p15-ganges",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 15,
+        "region": [
+          130,
+          460,
+          415,
+          510
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p15-rituals",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Many people believe the river is sacred and use it for special rituals."
+      },
+      "sourceBlockId": "source-l2-p15-rituals",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 15,
+        "region": [
+          430,
+          460,
+          740,
+          510
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p17-danube",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Danube River is the second-longest river in Europe. It flows through many countries. In the Middle Ages, it was an important border between the Roman Empire and other lands."
+      },
+      "sourceBlockId": "source-l2-p17-danube",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 17,
+        "region": [
+          95,
+          378,
+          380,
+          508
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p17-roman-forts",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Long ago, Roman soldiers built forts along the Danube River to protect their empire. These forts formed a long defensive line along the border. They helped guard the empire from tribes living beyond the river."
+      },
+      "sourceBlockId": "source-l2-p17-roman-forts",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 17,
+        "region": [
+          490,
+          393,
+          740,
+          513
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p19-volga",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Volga River is the longest river in Europe*. It flows through Russia and empties into the Caspian Sea. It has been an important trade route for centuries"
+      },
+      "sourceBlockId": "source-l2-p19-volga",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          130,
+          397,
+          435,
+          497
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": [
+        "f-l2-p19-volga-kama-note"
+      ]
+    },
+    {
+      "id": "f-l2-p19-caspian",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Caspian Sea is the largest lake in the world, even though it is called a sea."
+      },
+      "sourceBlockId": "source-l2-p19-caspian",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          490,
+          405,
+          740,
+          481
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p19-volga-kama-note",
+      "status": "editorial_pending",
+      "text": {
+        "en": "*The Volga is traditionally considered the longest river in Europe. However, the Kama is longer than the Volga before the two rivers meet."
+      },
+      "sourceBlockId": "source-l2-p19-volga-kama-note",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          75,
+          499,
+          740,
+          531
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "caveat",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p21-civilizations",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Many of the world’s first civilizations began near rivers."
+      },
+      "sourceBlockId": "source-l2-p21-civilizations",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 21,
+        "region": [
+          250,
+          350,
+          435,
+          413
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p21-hydronyms",
+      "status": "editorial_pending",
+      "text": {
+        "en": "You learned 7 new river names, also called hydronyms. A hydronym is the name of a body of water on a map."
+      },
+      "sourceBlockId": "source-l2-p21-hydronyms",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 21,
+        "region": [
+          500,
+          420,
+          740,
+          503
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p23-river-benefits",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Rivers give people fresh water, food, and ways to travel."
+      },
+      "sourceBlockId": "source-l2-p23-river-benefits",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 23,
+        "region": [
+          310,
+          421,
+          500,
+          486
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l2-p25-care-for-rivers",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Rivers are important for our planet. Let’s help keep them clean and healthy!"
+      },
+      "sourceBlockId": "source-l2-p25-care-for-rivers",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 25,
+        "region": [
+          225,
+          450,
+          550,
+          505
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "context",
+      "caveatFactIds": []
+    }
+  ],
+  "places": [],
+  "lexicon": [],
+  "descriptors": [],
+  "puzzles": [
+    {
+      "id": "l1-01",
+      "courseId": "oceans-continents",
+      "answer": "CONTINENT",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 7,
+        "cluesPdfPage": 8,
+        "pdfMapRect": [
+          177.77,
+          142.71,
+          648.13,
+          551.18
+        ]
+      }
+    },
+    {
+      "id": "l1-02",
+      "courseId": "oceans-continents",
+      "answer": "HEMISPHERE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 9,
+        "cluesPdfPage": 10,
+        "pdfMapRect": [
+          177.77,
+          142.71,
+          648.02,
+          550.71
+        ]
+      }
+    },
+    {
+      "id": "l1-03",
+      "courseId": "oceans-continents",
+      "answer": "PLANKTON",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 11,
+        "cluesPdfPage": 12,
+        "pdfMapRect": [
+          185.22,
+          191.1,
+          625.47,
+          572.85
+        ]
+      }
+    },
+    {
+      "id": "l1-04",
+      "courseId": "oceans-continents",
+      "answer": "METEOROLOGIST",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 13,
+        "cluesPdfPage": 14,
+        "pdfMapRect": [
+          166.94,
+          169.56,
+          633.44,
+          573.81
+        ]
+      }
+    },
+    {
+      "id": "l1-05",
+      "courseId": "oceans-continents",
+      "answer": "SPACE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 15,
+        "cluesPdfPage": 16,
+        "pdfMapRect": [
+          196.76,
+          152.26,
+          656.52,
+          550.51
+        ]
+      }
+    },
+    {
+      "id": "l1-06",
+      "courseId": "oceans-continents",
+      "answer": "EXPLORATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 17,
+        "cluesPdfPage": 18,
+        "pdfMapRect": [
+          166.94,
+          169.56,
+          633.44,
+          573.81
+        ]
+      }
+    },
+    {
+      "id": "l1-07",
+      "courseId": "oceans-continents",
+      "answer": "HYDRATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 19,
+        "cluesPdfPage": 20,
+        "pdfMapRect": [
+          165.08,
+          147.1,
+          631.58,
+          551.35
+        ]
+      }
+    },
+    {
+      "id": "l1-08",
+      "courseId": "oceans-continents",
+      "answer": "TRIBUTARY",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 21,
+        "cluesPdfPage": 22,
+        "pdfMapRect": [
+          178.68,
+          167.24,
+          653.43,
+          578.99
+        ]
+      }
+    },
+    {
+      "id": "l1-09",
+      "courseId": "oceans-continents",
+      "answer": "DESERTIFICATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 23,
+        "cluesPdfPage": 24,
+        "pdfMapRect": [
+          164.62,
+          149.64,
+          639.37,
+          561.39
+        ]
+      }
+    },
+    {
+      "id": "l1-10",
+      "courseId": "oceans-continents",
+      "answer": "LANDMASS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "mapPdfPage": 25,
+        "cluesPdfPage": 26,
+        "pdfMapRect": [
+          164.62,
+          149.64,
+          639.37,
+          561.39
+        ]
+      }
+    },
+    {
+      "id": "l2-01",
+      "courseId": "rivers",
+      "answer": "CHANNEL",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 6,
+        "cluesPdfPage": 7,
+        "pdfMapRect": [
+          151.29,
+          224.72,
+          641.04,
+          550.97
+        ]
+      }
+    },
+    {
+      "id": "l2-02",
+      "courseId": "rivers",
+      "answer": "FLOODPLAIN",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 8,
+        "cluesPdfPage": 9,
+        "pdfMapRect": [
+          161.18,
+          232.22,
+          650.93,
+          558.47
+        ]
+      }
+    },
+    {
+      "id": "l2-03",
+      "courseId": "rivers",
+      "answer": "RAINFOREST",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 10,
+        "cluesPdfPage": 11,
+        "pdfMapRect": [
+          151.76,
+          213.16,
+          641.52,
+          539.41
+        ]
+      }
+    },
+    {
+      "id": "l2-04",
+      "courseId": "rivers",
+      "answer": "MUDDINESS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 12,
+        "cluesPdfPage": 13,
+        "pdfMapRect": [
+          126.91,
+          204.04,
+          647.41,
+          550.54
+        ]
+      }
+    },
+    {
+      "id": "l2-05",
+      "courseId": "rivers",
+      "answer": "IRRIGATION",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 14,
+        "cluesPdfPage": 15,
+        "pdfMapRect": [
+          139.22,
+          214.46,
+          660.47,
+          561.71
+        ]
+      }
+    },
+    {
+      "id": "l2-06",
+      "courseId": "rivers",
+      "answer": "HINDUISM",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 16,
+        "cluesPdfPage": 17,
+        "pdfMapRect": [
+          113.03,
+          192.19,
+          683.78,
+          572.44
+        ]
+      }
+    },
+    {
+      "id": "l2-07",
+      "courseId": "rivers",
+      "answer": "BARBARIANS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 18,
+        "cluesPdfPage": 19,
+        "pdfMapRect": [
+          125.43,
+          195.48,
+          691.68,
+          572.73
+        ]
+      }
+    },
+    {
+      "id": "l2-08",
+      "courseId": "rivers",
+      "answer": "MEANDER",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 20,
+        "cluesPdfPage": 21,
+        "pdfMapRect": [
+          131.24,
+          198.01,
+          660.74,
+          550.51
+        ]
+      }
+    },
+    {
+      "id": "l2-09",
+      "courseId": "rivers",
+      "answer": "ATMOSPHERE",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 22,
+        "cluesPdfPage": 23,
+        "pdfMapRect": [
+          163.59,
+          217.11,
+          664.59,
+          550.86
+        ]
+      }
+    },
+    {
+      "id": "l2-10",
+      "courseId": "rivers",
+      "answer": "HIMALAYAS",
+      "source": "authored",
+      "status": "editorial_pending",
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "mapPdfPage": 24,
+        "cluesPdfPage": 25,
+        "pdfMapRect": [
+          138.22,
+          201.28,
+          677.47,
+          560.53
+        ]
+      }
+    }
+  ]
+}

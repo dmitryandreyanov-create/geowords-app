@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GeoWords · Проверка авторского импорта</title>
+<style>
+:root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#193740;background:#f2f7f8;font-size:15px}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,.map-button:focus-visible{outline:3px solid #2765c4;outline-offset:2px}.top{background:#fff;border-bottom:1px solid #d4e3e8;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}.top h1{margin:0;font-size:22px}.top p{margin:3px 0 0;color:#527580;font-size:13px}.pill{border-radius:999px;background:#e4f1f3;padding:7px 12px;font-weight:700}.notice{padding:10px 16px;margin:12px 16px;background:#fff4da;border:1px solid #e9cb7b;border-radius:9px;font-size:13px}.layout{display:grid;grid-template-columns:220px minmax(360px,1.3fr) minmax(380px,1fr);gap:12px;padding:0 12px 16px;align-items:start}.pane{background:#fff;border:1px solid #d3e2e6;border-radius:12px;box-shadow:0 1px 4px #14364710;min-width:0}.pane header{padding:12px 14px;border-bottom:1px solid #e0ecee}.pane h2{margin:0;font-size:16px}.sub{color:#6a8490;font-size:13px}.list{padding:8px;max-height:calc(100vh - 220px);overflow:auto}.list button{width:100%;border:0;border-radius:9px;background:transparent;padding:11px 9px;text-align:left;display:flex;flex-direction:column;gap:2px}.list button[aria-current=true]{background:#dff2ed;border:1px solid #74bea9}.list small{color:#688691}.stage{padding:12px}.map{width:100%;position:relative;border:1px solid #c4d8dd;border-radius:8px;overflow:hidden;background:#c7e9ec;aspect-ratio:var(--map-aspect,1587 / 1057)}.map svg.arrow-overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}.map svg.arrow-overlay line{stroke:#17272e;stroke-width:.36;stroke-linecap:round}.map svg.arrow-overlay polygon{fill:#17272e}.map img{width:100%;height:100%;position:absolute;inset:0;object-fit:fill;pointer-events:none}.map-button{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;display:grid;place-items:center;border:2px solid #f19a42;border-radius:50%;background:#fffcdf;color:#193a5d;font-weight:800;box-shadow:0 1px 5px #0005;z-index:2}.map-button.current{background:#ffd576;border:3px solid #d86500}.map-button.used{background:#e0f2e4;border-color:#448c5a}.map-button.eligible{box-shadow:0 0 0 5px #ffca5980,0 1px 6px #0005}.map-button.conflict{background:#ffd6d6;border-color:#cd3a3a}.map-button:disabled{opacity:.65}.map-guide{margin:10px 0 4px;color:#41616d;font-size:13px}.details{padding:12px}.clues{display:flex;flex-direction:column;gap:7px;max-height:calc(100vh - 350px);overflow:auto}.clue{display:grid;grid-template-columns:28px 1fr;gap:7px;border:1px solid #dbe7e8;background:#fbfdfd;border-radius:8px;padding:8px;cursor:pointer;text-align:left;width:100%}.clue[aria-current=true]{border-color:#26866d;background:#edf9f5}.clue .num{width:25px;height:25px;display:grid;place-items:center;border-radius:100%;background:#dce9ed;font-weight:700}.clue .text{line-height:1.38}.clue .state{display:block;font-size:12px;margin-top:3px;color:#647b84}.clue .state.unresolved{color:#aa5922}.clue .state.conflict{color:#ad3131;font-weight:700}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.toolbar button,.import-label{border:1px solid #9fbfc5;border-radius:8px;padding:9px 10px;background:white;color:#174758;font-weight:650;display:inline-block;cursor:pointer}.toolbar .primary{background:#146c72;color:#fff;border-color:#146c72}.info{display:flex;gap:8px;align-items:center;margin:8px 0}.review-status{font-size:13px;color:#406775}.facts{white-space:pre-wrap;background:#f3f8f9;padding:10px;border-radius:8px;color:#526f78;font-size:12px;max-height:110px;overflow:auto}.hidden{display:none!important}.ok{color:#17693a}.bad{color:#ae3030}.import-label input{display:none}.help{padding:9px;font-size:13px;color:#56707b}#appError{color:#b12525;font-weight:bold;padding:10px}@media(max-width:1130px){.layout{grid-template-columns:200px minmax(320px,1fr)}.details-pane{grid-column:2}.list{max-height:610px}.clues{max-height:400px}}@media(max-width:750px){.layout{grid-template-columns:1fr}.details-pane{grid-column:auto}.list{max-height:230px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.stage{padding:8px}.clues{max-height:480px}.map-button{width:29px;height:29px}}
+</style>
+</head>
+<body>
+<div class="top"><div><h1>GeoWords · Проверка импорта</h1><p>Внутренний редактор для сопоставления авторских подсказок с буквами; исходные карты не изменяются</p></div><div id="globalProgress" class="pill" aria-live="polite">Загрузка…</div></div>
+<div class="notice"><strong>Не для публикации.</strong> Зелёная отметка означает только выбранный маркер. Стрелки воспроизведены из PDF; географическую правильность нужно подтвердить по оригиналу. Экспортируемый JSON не публикует задания автоматически.</div>
+<div id="appError" role="alert" class="hidden"></div>
+<main class="layout" id="workspace" hidden>
+<section class="pane"><header><h2>Авторские задания</h2><div class="sub">L1 → L2 · 20 геовордов</div></header><div id="puzzleList" class="list"></div></section>
+<section class="pane"><header><h2 id="puzzleTitle">Карта</h2><div id="mapSource" class="sub"></div></header><div class="stage"><div id="map" class="map" aria-label="Оригинальная карта с буквами"><img id="mapImage" alt="Оригинальная карта без букв"><svg id="mapArrows" class="arrow-overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg></div><p class="map-guide">Выберите подсказку справа, затем соответствующую букву на карте. Обведённые жёлтым буквы — допустимые кандидаты. Для каждого задания одна буква используется один раз.</p><div class="info"><span id="puzzleProgress" class="review-status"></span><span id="puzzleErrors" class="bad"></span></div><details><summary>Исходные факты из PDF (требуют редакторской проверки)</summary><div id="facts" class="facts"></div></details></div></section>
+<section class="pane details-pane"><header><h2>Подсказки</h2><div class="sub" id="clueHeader"></div></header><div class="details"><div id="clues" class="clues"></div><div class="toolbar"><button id="previous" type="button">← Предыдущее</button><button id="next" type="button">Следующее →</button><button id="confirmSelected" type="button">Подтвердить географию</button><button id="clearSelected" type="button">Сбросить выбор</button></div><div class="toolbar"><button id="save" class="primary" type="button">Экспорт разметки JSON</button><label class="import-label" for="restore">Импорт сохранённой разметки<input id="restore" type="file" accept=".json,application/json"></label></div><p class="help">Экспорт сохраняет назначения и отдельные подтверждения географии. Проверьте также буквы, сопоставленные автоматически. Разметка автоматически сохраняется в этом браузере, если доступно локальное хранилище. Периодически экспортируйте JSON как резервную копию. Незавершённые соответствия остаются пустыми.</p><div id="message" class="review-status" role="status" aria-live="polite"></div></div></section>
+</main>
+<section class="pane spatial-pane" id="spatialPanel" hidden>
+<header><h2 id="spatialTitle">География букв · L1/L2</h2><p id="geoProgress" class="sub"></p></header>
+<div class="details">
+<p class="help">Это отдельная проверка всех букв, не повторное назначение ответов. Выберите букву независимо от выбранной подсказки. Укажите все применимые свойства по исходной карте, включая вложенные объекты (например, Asia и Eurasia). В списках можно выбрать несколько пунктов; на Windows — Ctrl + щелчок. Пустой список означает отсутствие свойства только после подтверждения полноты.</p>
+<div class="geo-grid">
+<label>Буква на карте<select id="geoAnchor"></select></label>
+<label>Что проверяем<select id="geoChannel"><option value="physical">Положение самой буквы</option><option value="target">Конец стрелки</option></select></label>
+<label>Все географические объекты<select id="geoPlaces" multiple size="5"></select></label>
+<label id="geoNearRow" hidden>Рядом с объектами (не означает «на объекте»)<select id="geoNear" multiple size="5"></select><span class="sub">Проверьте близость всех букв-конкурентов отдельно от принадлежности и цели стрелки.</span></label>
+<label>Части объектов<select id="geoRegions" multiple size="5"></select></label>
+<label>Сторона океана<select id="geoSides" multiple size="3"></select></label>
+<label>Между объектами<select id="geoBetween" multiple size="4"></select></label>
+<label>Полушария<select id="geoHemispheres" multiple size="4"><option value="north">Северное</option><option value="south">Южное</option><option value="east">Восточное</option><option value="west">Западное</option></select></label>
+<label><input id="geoEquator" type="checkbox"> На экваторе</label>
+</div>
+<p id="geoBinding" class="sub"></p>
+<p id="geoProposalNotes" class="help"></p>
+<div class="toolbar"><button id="geoApplyProposal" type="button" disabled>Заполнить пустой черновик по предложению</button></div>
+<label><input id="geoComplete" type="checkbox"> Проверил полноту всех свойств буквы и конца стрелки по исходной карте</label>
+<div class="toolbar"><button id="geoConfirm" type="button">Подтвердить полноту географии буквы</button><button id="geoRevoke" type="button">Снять утверждение</button><button id="geoExport" type="button">Экспорт географии JSON</button><label class="import-label">Импорт географии JSON<input id="geoImport" type="file" accept=".json,application/json"></label></div>
+<p id="spatialMessage" class="review-status" role="status" aria-live="polite"></p>
+<div class="toolbar"><button id="geoBackup" type="button" hidden>Скачать несовместимое сохранение</button></div>
+<details open><summary>Независимый черновой отчёт о подсказках</summary><p class="help">Отчёт проверяет все буквы задания, но использует ещё не утверждённые запросы и предполагаемые факты. Он не подтверждает уроки, не ставит старые отметки географии и не публикует задания.</p><div id="geoReport" class="sub"></div></details>
+</div></section>
+<p id="spatialUnavailable" class="help" hidden>Для выбранного раздела географическая панель не подготовлена.</p>
+<section class="pane learning-pane" id="learningPanel" hidden>
+<header><h2 id="learningTitle">Факты и порядок обучения · L1/L2</h2><p id="learningProgress" class="sub"></p></header>
+<div class="details">
+<p class="help">Проверяйте содержание по исходнику: текст, применимость, оговорки и момент изучения. Подтверждение здесь не утверждает географию, словарь или выпуск уровня. Карты и детская игра не меняются. Для списков можно выбрать несколько пунктов; пустой список становится решением только после явной отметки проверки.</p>
+<fieldset id="learningControls">
+<label>Кто проверяет<input id="learningReviewer" type="text" autocomplete="name" placeholder="Имя проверяющего — для явного подтверждения"></label>
+<div class="learning-grid">
+<section><h3>Содержание факта</h3>
+<label for="learningFact">Исходный блок текущей книги</label><select id="learningFact"></select>
+<p id="learningProvenance" class="sub"></p><pre id="learningSource" class="learning-source"></pre>
+<details><summary>Связанные оговорки исходника</summary><pre id="learningCaveatSource" class="learning-source"></pre></details>
+<div class="toolbar"><button id="learningCopyFact" type="button">Перенести исходный текст в пустой черновик</button></div>
+<label for="learningText">Проверяемый текст (английский)</label><textarea id="learningText" rows="6"></textarea>
+<label for="learningFact-introducesPlaces">Какие объекты вводит этот факт</label><select id="learningFact-introducesPlaces" multiple size="5"></select>
+<label><input id="learningFactKnown-introducesPlaces" type="checkbox"> Список объектов проверен (пустой = не вводит объектов)</label>
+<label for="learningFact-caveatFactIds">Оговорки, которые нужно изучить вместе с фактом</label><select id="learningFact-caveatFactIds" multiple size="4"></select>
+<label><input id="learningFactKnown-caveatFactIds" type="checkbox"> Список оговорок проверен</label>
+<p id="learningFactStatus" class="sub"></p>
+<label><input id="learningFactChecked" type="checkbox"> Проверил текст, применимость, оговорки и вводимые объекты</label>
+<div class="toolbar"><button id="learningConfirmFact" type="button">Подтвердить решение по факту</button><button id="learningRevokeFact" type="button">Снять подтверждение факта</button></div>
+</section>
+<section><h3>Порядок шага</h3><label for="learningStep">Шаг текущей книги</label><select id="learningStep"></select>
+<pre id="learningCandidates" class="learning-source"></pre>
+<div class="toolbar"><button id="learningCopyStep" type="button">Перенести предложения в пустой черновик</button></div>
+<div id="learningStepFields" class="learning-fields"></div>
+<p id="learningStepStatus" class="sub"></p>
+<label><input id="learningStepChecked" type="checkbox"> Проверил, что факты доступны к нужному моменту, списки объектов и шесть слов уместны. Это не утверждение определений слов или географии</label>
+<div class="toolbar"><button id="learningConfirmStep" type="button">Подтвердить порядок шага</button><button id="learningRevokeStep" type="button">Снять подтверждение порядка</button></div>
+</section></div>
+<div class="toolbar"><button id="learningExport" type="button">Экспорт фактов и порядка JSON</button><label class="import-label">Импорт фактов и порядка JSON<input id="learningImport" type="file" accept=".json,application/json"></label><button id="learningBackup" type="button" hidden>Скачать несовместимое сохранение обучения</button></div>
+</fieldset>
+<p id="learningMessage" class="review-status" role="status" aria-live="polite"></p>
+<details><summary>Предварительная проверка порядка всех десяти шагов</summary><p class="help">Проверка использует ваши решения по фактам/шагам и ещё не утверждённые candidate-зависимости исходных подсказок. «Порядок согласован» здесь не доказывает географическую однозначность и не разрешает детскую игру. Неутверждённый или ошибочный предыдущий шаг не открывает знания для следующего.</p><div id="learningReport" class="sub"></div></details>
+</div></section>
+<p id="learningUnavailable" class="help" hidden>Для выбранного раздела проверка фактов и порядка не подготовлена.</p>
+<section class="pane learning-pane" id="contentPanel" hidden>
+<header><h2 id="contentTitle">Подсказки и практический словарь · L1/L2</h2><p id="contentProgress" class="sub"></p></header>
+<div class="details"><p class="help">Здесь проверяются формулировки и определения. Выбранная буква не доказывает смысл подсказки; географическая однозначность проверяется отдельно. Определения не открывают факты ребёнку. Слово можно оставить pending и выбрать другое из поддерживаемого списка в порядке шага.</p>
+<fieldset id="contentControls"><label>Кто проверяет<input id="contentReviewer" type="text" autocomplete="name" placeholder="Имя проверяющего"></label>
+<div class="learning-grid">
+<section><h3>Формулировка подсказки</h3><label for="contentDescriptor">Исходная фраза</label><select id="contentDescriptor"></select>
+<pre id="contentSourcePhrase" class="learning-source"></pre><details><summary>Все появления в исходных заданиях</summary><pre id="contentOccurrences" class="learning-source"></pre></details>
+<div class="toolbar"><button id="contentCopyDescriptor" type="button">Перенести фразу и предложенную интерпретацию в пустой черновик</button></div>
+<label for="contentPhrase">Фраза для общей модели (оригинальные подсказки не меняются)</label><textarea id="contentPhrase" rows="3"></textarea>
+<label for="contentKind">Тип формулировки</label><select id="contentKind"><option value="">Ещё не выбран</option value="name">Имя объекта</option><option value="directional">Направление / сторона</option><option value="relational">Отношение объектов</option><option value="superlative">Географический рекорд</option><option value="definition">Определение / свойство</option><option value="other">Другой тип, включая полушария / границу</option></select>
+<label><input id="contentQuerySet" type="checkbox"> Интерпретация задана в черновике (это не утверждение географии)</label>
+<label for="contentOp">Как понимать фразу</label><select id="contentOp"><option value="place">На объекте</option><option value="region">В части объекта</option><option value="side">На стороне океана</option><option value="between">Между двумя объектами</option><option value="hemisphere">В полушариях</option><option value="boundary">На экваторе</option><option value="near">Рядом с объектом</option></select>
+<label for="contentChannel">Что описывает фраза</label><select id="contentChannel"><option value="either">Положение буквы или цель стрелки (консервативная проверка)</option><option value="physical">Только положение буквы</option><option value="target">Цель стрелки; без стрелки — положение буквы</option></select>
+<div id="contentQuery-place"><label for="content-placeId">Объект</label><select id="content-placeId"></select></div>
+<div id="contentQuery-region" hidden><label for="contentDirection">Часть объекта</label><select id="contentDirection"><option value="">Выберите направление</option><option value="north">Север</option><option value="south">Юг</option><option value="east">Восток</option><option value="west">Запад</option></select></div>
+<div id="contentQuery-side" hidden><label for="content-oceanId">Океан</label><select id="content-oceanId"></select><label for="content-sidePlaceId">Чья сторона</label><select id="content-sidePlaceId"></select></div>
+<div id="contentQuery-between" hidden><label for="content-placeIds">Ровно два объекта</label><select id="content-placeIds" multiple size="4"></select></div>
+<div id="contentQuery-hemisphere" hidden><label for="contentHemisphere">Одно север/юг и одно восток/запад</label><select id="contentHemisphere" multiple size="4"><option value="north">Северное</option><option value="south">Южное</option><option value="east">Восточное</option><option value="west">Западное</option></select></div>
+<div id="contentQuery-boundary" hidden><p class="help">Граница: экватор. Для её использования нужны явно изученные соответствующие факты.</p></div>
+<div id="contentQuery-near" hidden><p class="help">«Рядом» — отдельное отношение. Нельзя выводить его из назначенной буквы или объявлять букву лежащей на реке. Неизвестная близость конкурента блокирует проверку.</p></div>
+<label for="content-requires">Какие факты надо изучить раньше</label><select id="content-requires" multiple size="5"></select>
+<label for="content-requiredPlaces">Какие объекты надо знать</label><select id="content-requiredPlaces" multiple size="5"></select>
+<p id="contentDescriptorStatus" class="sub"></p>
+<label><input id="contentCheck-descriptor-meaning" type="checkbox"> Формулировка и интерпретация передают нужный географический смысл</label>
+<label><input id="contentCheck-descriptor-independentPhrase" type="checkbox"> Фраза понятна сама по себе, без знания ответа и назначенной буквы</label>
+<label><input id="contentCheck-descriptor-dependencies" type="checkbox"> Необходимые факты и объекты перечислены; это не проверка их момента изучения или географии букв</label>
+<div class="toolbar"><button id="contentConfirmDescriptor" type="button">Подтвердить фразу и интерпретацию</button><button id="contentRevokeDescriptor" type="button">Снять подтверждение фразы</button></div>
+</section>
+<section><h3>Практическое слово и определение</h3><label for="contentWord">Поддерживаемое слово-кандидат текущей книги</label><select id="contentWord"></select>
+<p id="contentWordOrigin" class="help"></p><p id="contentWordSteps" class="sub"></p><pre id="contentSourceDefinition" class="learning-source"></pre>
+<div class="toolbar"><button id="contentCopyWord" type="button">Перенести исходное определение в пустой черновик</button></div>
+<label for="contentWordValue">Слово (постоянный ID; переименование не выполняется)</label><input id="contentWordValue" type="text" readonly>
+<label for="contentDefinition">Проверяемое определение (английский)</label><textarea id="contentDefinition" rows="6"></textarea>
+<p class="help">Новые определения предложены Codex и не являются авторскими цитатами. Редакторское подтверждение сохраняет происхождение. Ни одно определение автоматически не становится knownFact ребёнка.</p>
+<p id="contentWordStatus" class="sub"></p>
+<label><input id="contentCheck-word-meaning" type="checkbox"> Определение точное и соответствует слову</label>
+<label><input id="contentCheck-word-ageSuitable" type="checkbox"> Определение и термин подходят целевому возрасту примерно 7–13 лет</label>
+<label><input id="contentCheck-word-guessability" type="checkbox"> Слово пригодно для практики и объяснения; возможность догадаться проверена</label>
+<div class="toolbar"><button id="contentConfirmWord" type="button">Подтвердить слово и определение</button><button id="contentRevokeWord" type="button">Снять подтверждение слова</button></div>
+</section></div>
+<div class="toolbar"><button id="contentExport" type="button">Экспорт подсказок и словаря JSON</button><label class="import-label">Импорт подсказок и словаря JSON<input id="contentImport" type="file" accept=".json,application/json"></label><button id="contentBackup" type="button" hidden>Скачать несовместимое сохранение содержания</button></div>
+</fieldset><p id="contentMessage" class="review-status" role="status" aria-live="polite"></p></div></section>
+<p id="contentUnavailable" class="help" hidden>Для выбранного раздела проверка подсказок и словаря не подготовлена.</p>
+<style>.learning-pane{margin:0 12px 16px}.learning-pane fieldset{border:0;padding:0;min-width:0}.learning-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.learning-pane label{display:block;margin:8px 0 5px}.learning-pane select,.learning-pane textarea,.learning-pane input[type=text]{width:100%;max-width:100%;font:inherit;border:1px solid #9fbfc5;border-radius:6px;padding:6px}.learning-source{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f8f9;padding:10px;border-radius:8px;font:inherit;font-size:13px}.learning-fields>div{margin-bottom:16px}#learningReport>div{padding:7px 0;border-bottom:1px solid #e0ecee;overflow-wrap:anywhere}#learningProvenance,#learningCandidates{overflow-wrap:anywhere}@media(max-width:750px){.learning-grid{grid-template-columns:1fr}}</style>
+<style>[hidden]{display:none!important}.spatial-pane{margin:0 12px 16px}.geo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.geo-grid label{display:flex;flex-direction:column;gap:5px}.geo-grid select{font:inherit;max-width:100%;width:100%;padding:5px;border:1px solid #9fbfc5;border-radius:6px}#geoReport>div{padding:5px 0;border-bottom:1px solid #e0ecee}@media(max-width:750px){.geo-grid{grid-template-columns:1fr}}</style>
+<section class="pane learning-pane" id="rehearsalPanel" hidden>
+<header><h2>Пробное прохождение первого комплекта L1</h2><p id="trialProgress" class="sub"></p></header>
+<div class="details"><p class="help">Отдельная проба для взрослого: CONTINENT и шесть фиксированных вариантов, визуально проверенных пользователем. Новые варианты здесь не генерируются. Независимая географическая разметка, возрастная пригодность определений и точность фактов остаются pending. Этот режим не утверждает содержание и не меняет прогресс детской игры.</p>
+<h3 id="trialTitle"></h3><div id="trialFacts" lang="en"></div>
+<div class="toolbar"><button id="trialAcknowledge" type="button">Прочитано — продолжить пробу</button></div>
+<div id="trialPuzzle" hidden><p id="trialDefinition" lang="en"></p><div id="trialMap" class="map" aria-label="Карта пробного задания"><img id="trialImage" alt="Исходная карта с пробными буквами"></div><ol id="trialClues"></ol><p id="trialAnswer" aria-live="polite"></p><div class="toolbar"><button id="trialUndo" type="button">Убрать последнюю букву</button><button id="trialClear" type="button">Очистить текущий ответ</button><button id="trialSubmit" class="primary" type="button">Проверить ответ</button></div></div>
+<div class="toolbar"><button id="trialExport" type="button">Экспорт пробного прогресса</button><label class="import-label">Импорт пробного прогресса<input id="trialImport" type="file" accept=".json,application/json"></label><button id="trialBackup" type="button" hidden>Скачать несовместимое пробное сохранение</button></div><p id="trialMessage" class="review-status" role="status" aria-live="polite"></p></div></section>
+<style>#trialFacts p,#trialClues li{overflow-wrap:anywhere}#trialClues li{padding:5px 0}#trialClues li[aria-current=step]{background:#edf9f5}#trialMap{max-width:650px}#trialMessage{overflow-wrap:anywhere}</style>
+<script src="./review-model.js"></script>
+<script src="../engine/spatial-semantics.js"></script>
+<script src="./spatial-review-model.js"></script>
+<script src="./review-spatial.js"></script>
+<script src="./learning-review-model.js"></script>
+<script src="./review-learning.js"></script>
+<script src="../data/authored-answer-index.js"></script>
+<script src="./content-review-model.js"></script>
+<script src="./review-content.js"></script>
+<script src="../engine/geowords.js"></script>
+<script src="./rehearsal-model.js"></script>
+<script src="./review-rehearsal.js"></script>
+<script src="./review-import.js"></script>
+</body>
+</html>
