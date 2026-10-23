@@ -42,8 +42,8 @@
   "only approved undisputed facts appear here; disputed facts (Southern Ocean coldest, Atlantic saltiest) are deliberately absent",
   "reveal order: no neighbouring positions in a row; first letter late; last letters not early (same checks as validate-geowords.mjs)",
   "bare directions (\"in the west\", \"on the Equator\"...) are used only in unit 1 (onlyInUnit: 1); after unit 1 a direction is always tied to a continent: \"in the west of Africa\" (decided by Svetlana 2026-10-23)",
-  "a continent part (partOf) never appears together with its whole continent; two parts of one continent only as an opposite pair (north+south or east+west, oppositeOf)",
-  "parts exist only where the two opposite points are far enough apart on a phone (>= 7% of map width) and well inside the land"
+  "parts exist only where the two opposite points are far enough apart on a phone (>= 7% of map width) and well inside the land",
+  "a continent part never appears with its whole continent — not in one puzzle and not anywhere in the same unit (see continentModeByUnit); two parts of one continent in one puzzle only as an opposite pair (oppositeOf)"
  ],
  "approval": {
   "status": "approved",
@@ -547,5 +547,42 @@
     "ru": "на западе Австралии"
    }
   }
- ]
+ ],
+ "continentModeByUnit": {
+  "rule": "unit-wide: within one unit a continent is used EITHER whole (\"in Africa\") OR in parts (\"in the west of Africa\"), never both, across all puzzles of that unit (final + review). A continent the unit final uses whole stays whole for the whole unit; for the others the app picks one mode per unit and keeps it (decided by Svetlana 2026-10-23)",
+  "wholeFromFinals": {
+   "1": [],
+   "2": [
+    "africa",
+    "antarctica",
+    "asia",
+    "australia",
+    "europe",
+    "north-america",
+    "south-america"
+   ],
+   "3": [
+    "africa",
+    "asia",
+    "australia",
+    "south-america"
+   ],
+   "4": [
+    "africa",
+    "antarctica",
+    "asia",
+    "australia",
+    "europe",
+    "north-america",
+    "south-america"
+   ],
+   "section-final": [
+    "africa",
+    "antarctica",
+    "asia",
+    "north-america",
+    "south-america"
+   ]
+  }
+ }
 }
