@@ -5,7 +5,8 @@
   "revealOrder": "no two neighbouring positions in a row; long words (>=7): first letter among the last 3, last 2-3 letters not among the first 3; short words: first letter among the last 2, last letter not among the first 2",
   "unit1": "one letter per place (Equator, north, south, east, west, + Prime Meridian in EN), as in the workbook; no continent names yet",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, markers, clues} (JSON, sorted keys, UTF-8); show only approved puzzles",
-  "layers": "line layers come from data/maps/world-continents-oceans.json (#21)"
+  "layers": "line layers come from data/maps/world-continents-oceans.json (#21)",
+  "units2to4": "letters on learned continents / oceans (label points of world-continents-oceans.json); unit 4 names an object by an approved undisputed record where one exists; disputed facts are never used in clues"
  },
  "puzzles": [
   {
@@ -174,6 +175,736 @@
     "by": "Svetlana",
     "date": "2026-10-23",
     "contentSha256": "1cc7f4077f779bb5"
+   }
+  },
+  {
+   "id": "section-1-unit-2-en",
+   "section": "continents-and-oceans",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "PANGAEA",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "P"
+    },
+    {
+     "id": "north-america",
+     "x": 18.12,
+     "y": 30.99,
+     "letter": "A"
+    },
+    {
+     "id": "antarctica",
+     "x": 75.3,
+     "y": 93,
+     "letter": "N"
+    },
+    {
+     "id": "europe",
+     "x": 58.18,
+     "y": 23.5,
+     "letter": "G"
+    },
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "A"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "E"
+    },
+    {
+     "id": "asia",
+     "x": 71.85,
+     "y": 28.29,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "north-america",
+     "position": 2,
+     "text": "Find the second letter in North America."
+    },
+    {
+     "markerId": "australia",
+     "position": 5,
+     "text": "Find the fifth letter in Australia."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 3,
+     "text": "Find the third letter in Antarctica."
+    },
+    {
+     "markerId": "asia",
+     "position": 7,
+     "text": "Find the seventh letter in Asia."
+    },
+    {
+     "markerId": "europe",
+     "position": 4,
+     "text": "Find the fourth letter in Europe."
+    },
+    {
+     "markerId": "africa",
+     "position": 1,
+     "text": "Find the first letter in Africa."
+    },
+    {
+     "markerId": "south-america",
+     "position": 6,
+     "text": "Find the sixth letter in South America."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "b45612c097ee0ddd"
+   }
+  },
+  {
+   "id": "section-1-unit-2-ru",
+   "section": "continents-and-oceans",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПАНГЕЯ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "north-america",
+     "x": 18.12,
+     "y": 30.99,
+     "letter": "П"
+    },
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "А"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "Н"
+    },
+    {
+     "id": "antarctica",
+     "x": 75.3,
+     "y": 93,
+     "letter": "Г"
+    },
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "Е"
+    },
+    {
+     "id": "asia",
+     "x": 71.85,
+     "y": 28.29,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "antarctica",
+     "position": 4,
+     "text": "Найди четвёртую букву в Антарктиде."
+    },
+    {
+     "markerId": "australia",
+     "position": 2,
+     "text": "Найди вторую букву в Австралии."
+    },
+    {
+     "markerId": "asia",
+     "position": 6,
+     "text": "Найди шестую букву в Азии."
+    },
+    {
+     "markerId": "south-america",
+     "position": 3,
+     "text": "Найди третью букву в Южной Америке."
+    },
+    {
+     "markerId": "africa",
+     "position": 5,
+     "text": "Найди пятую букву в Африке."
+    },
+    {
+     "markerId": "north-america",
+     "position": 1,
+     "text": "Найди первую букву в Северной Америке."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "83849184cf666beb"
+   }
+  },
+  {
+   "id": "section-1-unit-3-en",
+   "section": "continents-and-oceans",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SALINITY",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "pacific-ocean",
+     "x": 12.52,
+     "y": 67.14,
+     "letter": "S"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 54.24,
+     "y": 93,
+     "letter": "A"
+    },
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "L"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 85.3,
+     "y": 4.5,
+     "letter": "I"
+    },
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "N"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 42.73,
+     "y": 74.3,
+     "letter": "I"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 68.88,
+     "y": 72.76,
+     "letter": "T"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "atlantic-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "southern-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Southern Ocean."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 7,
+     "text": "Find the seventh letter in the Indian Ocean."
+    },
+    {
+     "markerId": "africa",
+     "position": 5,
+     "text": "Find the fifth letter in Africa."
+    },
+    {
+     "markerId": "south-america",
+     "position": 8,
+     "text": "Find the eighth letter in South America."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Find the third letter in Australia."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0798813080a40538"
+   }
+  },
+  {
+   "id": "section-1-unit-3-ru",
+   "section": "continents-and-oceans",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СОЛЁНОСТЬ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 85.3,
+     "y": 4.5,
+     "letter": "С"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "О"
+    },
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "Л"
+    },
+    {
+     "id": "southern-ocean",
+     "x": 54.24,
+     "y": 93,
+     "letter": "Ё"
+    },
+    {
+     "id": "asia",
+     "x": 71.85,
+     "y": 28.29,
+     "letter": "Н"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 68.88,
+     "y": 72.76,
+     "letter": "О"
+    },
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "С"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 12.52,
+     "y": 67.14,
+     "letter": "Т"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 42.73,
+     "y": 74.3,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "southern-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Южном океане."
+    },
+    {
+     "markerId": "south-america",
+     "position": 2,
+     "text": "Найди вторую букву в Южной Америке."
+    },
+    {
+     "markerId": "asia",
+     "position": 5,
+     "text": "Найди пятую букву в Азии."
+    },
+    {
+     "markerId": "africa",
+     "position": 7,
+     "text": "Найди седьмую букву в Африке."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Найди третью букву в Австралии."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Индийском океане."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 9,
+     "text": "Найди девятую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Тихом океане."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "287fb8015cf6715d"
+   }
+  },
+  {
+   "id": "section-1-unit-4-en",
+   "section": "continents-and-oceans",
+   "unit": 4,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ARCHIPELAGO",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "asia",
+     "x": 71.85,
+     "y": 28.29,
+     "letter": "A"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 85.3,
+     "y": 4.5,
+     "letter": "R"
+    },
+    {
+     "id": "europe",
+     "x": 58.18,
+     "y": 23.5,
+     "letter": "C"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 12.52,
+     "y": 67.14,
+     "letter": "H"
+    },
+    {
+     "id": "antarctica",
+     "x": 75.3,
+     "y": 93,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "P"
+    },
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "E"
+    },
+    {
+     "id": "north-america",
+     "x": 18.12,
+     "y": 30.99,
+     "letter": "L"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 68.88,
+     "y": 72.76,
+     "letter": "A"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 42.73,
+     "y": 74.3,
+     "letter": "G"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "europe",
+     "position": 3,
+     "text": "Find the third letter in Europe."
+    },
+    {
+     "markerId": "north-america",
+     "position": 8,
+     "text": "Find the eighth letter in North America."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the largest ocean."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 10,
+     "text": "Find the tenth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 5,
+     "text": "Find the fifth letter on the coldest continent."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 2,
+     "text": "Find the second letter in the smallest ocean."
+    },
+    {
+     "markerId": "australia",
+     "position": 6,
+     "text": "Find the sixth letter on the smallest continent."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 9,
+     "text": "Find the ninth letter in the warmest ocean."
+    },
+    {
+     "markerId": "south-america",
+     "position": 11,
+     "text": "Find the eleventh letter on the wettest continent."
+    },
+    {
+     "markerId": "asia",
+     "position": 1,
+     "text": "Find the first letter on the largest continent."
+    },
+    {
+     "markerId": "africa",
+     "position": 7,
+     "text": "Find the seventh letter on the hottest continent."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "200c4389f32dd121"
+   }
+  },
+  {
+   "id": "section-1-unit-4-ru",
+   "section": "continents-and-oceans",
+   "unit": 4,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АРХИПЕЛАГ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp"
+   ],
+   "markers": [
+    {
+     "id": "australia",
+     "x": 83.36,
+     "y": 67.25,
+     "letter": "А"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 12.52,
+     "y": 67.14,
+     "letter": "Р"
+    },
+    {
+     "id": "africa",
+     "x": 53.94,
+     "y": 52.28,
+     "letter": "Х"
+    },
+    {
+     "id": "north-america",
+     "x": 18.12,
+     "y": 30.99,
+     "letter": "И"
+    },
+    {
+     "id": "south-america",
+     "x": 30.85,
+     "y": 62.8,
+     "letter": "П"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 68.88,
+     "y": 72.76,
+     "letter": "Е"
+    },
+    {
+     "id": "europe",
+     "x": 58.18,
+     "y": 23.5,
+     "letter": "Л"
+    },
+    {
+     "id": "asia",
+     "x": 71.85,
+     "y": 28.29,
+     "letter": "А"
+    },
+    {
+     "id": "antarctica",
+     "x": 75.3,
+     "y": 93,
+     "letter": "Г"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "south-america",
+     "position": 5,
+     "text": "Найди пятую букву на самом влажном континенте."
+    },
+    {
+     "markerId": "africa",
+     "position": 3,
+     "text": "Найди третью букву на самом жарком континенте."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в самом тёплом океане."
+    },
+    {
+     "markerId": "north-america",
+     "position": 4,
+     "text": "Найди четвёртую букву в Северной Америке."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву на самом холодном континенте."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в самом большом океане."
+    },
+    {
+     "markerId": "asia",
+     "position": 8,
+     "text": "Найди восьмую букву на самом большом континенте."
+    },
+    {
+     "markerId": "australia",
+     "position": 1,
+     "text": "Найди первую букву на самом маленьком континенте."
+    },
+    {
+     "markerId": "europe",
+     "position": 7,
+     "text": "Найди седьмую букву в Европе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0635d544800482df"
    }
   }
  ]
