@@ -1,0 +1,391 @@
+{
+ "block": "world-1",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on objects from all five sections of block 1 (2-3 per section): continents and oceans, rivers, mountains, seas, straits and canals",
+  "insets": "as section-5.json: Bering Strait is answered inside its magnifier inset; showInsets lists the magnifiers shown",
+  "role": "block-final: the final GeoWords of the block-review unit (passport stamp)",
+  "needsZoom": "true: straits and small seas are tiny on a phone map",
+  "approval": "same as section-1.json"
+ },
+ "puzzles": [
+  {
+   "id": "block-1-final-en",
+   "block": "world-1",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "en",
+   "answer": "CARTOGRAPHER",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits and small seas are tiny on a phone map; Bering Strait is answered in its magnifier inset",
+   "minSeparation": 10.8,
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 77.36,
+     "y": 4.5,
+     "letter": "C"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.22,
+     "y": 46.1,
+     "letter": "A"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "R"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "T"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "O"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 76.57,
+     "letter": "G"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "R"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "A"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "P"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 22.64,
+     "y": 44.39,
+     "letter": "H"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "E"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.27,
+     "y": 29.87,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "himalayas",
+     "position": 5,
+     "text": "Find the fifth letter in the Himalayas."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 9,
+     "text": "Find the ninth letter in the Bering Strait."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 8,
+     "text": "Find the eighth letter in the Strait of Gibraltar."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 10,
+     "text": "Find the tenth letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "andes",
+     "position": 7,
+     "text": "Find the seventh letter in the Andes."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 2,
+     "text": "Find the second letter on the Nile."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 11,
+     "text": "Find the eleventh letter in the Mozambique Channel."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 4,
+     "text": "Find the fourth letter on the Amazon."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 12,
+     "text": "Find the twelfth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Find the third letter in Australia."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d783cb8469300a02"
+   }
+  },
+  {
+   "id": "block-1-final-ru",
+   "block": "world-1",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "ru",
+   "answer": "ПУТЕШЕСТВЕННИК",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-river-volga.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-yangtze.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits and small seas are tiny on a phone map; Bering Strait is answered in its magnifier inset",
+   "minSeparation": 6.3,
+   "markers": [
+    {
+     "id": "indian-ocean",
+     "x": 54.73,
+     "y": 75.58,
+     "letter": "П"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "У"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "Т"
+    },
+    {
+     "id": "yangtze-river",
+     "x": 77.55,
+     "y": 39.25,
+     "letter": "Е"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.45,
+     "y": 93,
+     "letter": "Ш"
+    },
+    {
+     "id": "coral-sea",
+     "x": 92.91,
+     "y": 60.56,
+     "letter": "Е"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "С"
+    },
+    {
+     "id": "australia",
+     "x": 81.64,
+     "y": 69.8,
+     "letter": "Т"
+    },
+    {
+     "id": "volga-river",
+     "x": 57.33,
+     "y": 22,
+     "letter": "В"
+    },
+    {
+     "id": "cordillera",
+     "x": 13.64,
+     "y": 25.41,
+     "letter": "Е"
+    },
+    {
+     "id": "himalayas",
+     "x": 67.91,
+     "y": 38.12,
+     "letter": "Н"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "Н"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "И"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "К"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "panama-canal",
+     "position": 7,
+     "text": "Найди седьмую букву в Панамском канале."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Средиземном море."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 5,
+     "text": "Найди пятую букву в Антарктиде."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 3,
+     "text": "Найди третью букву в устье Миссисипи."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 10,
+     "text": "Найди десятую букву в Кордильерах."
+    },
+    {
+     "markerId": "andes",
+     "position": 14,
+     "text": "Найди четырнадцатую букву в Андах."
+    },
+    {
+     "markerId": "volga-river",
+     "position": 9,
+     "text": "Найди девятую букву на Волге."
+    },
+    {
+     "markerId": "yangtze-river",
+     "position": 4,
+     "text": "Найди четвёртую букву на Янцзы."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "australia",
+     "position": 8,
+     "text": "Найди восьмую букву в Австралии."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Индийском океане."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Коралловом море."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Гималаях."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "5933e016b6084150"
+   }
+  }
+ ]
+}
