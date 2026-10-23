@@ -46,9 +46,10 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       const finals = words.filter(w => w.role === "final").length;
       const reviews = words.filter(w => w.role === "review").length;
       const sectionFinal = words.filter(w => w.role === "section-final" || w.role === "block-final").length;
-      if (sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
+      const challengeOnly = (u.words?.en || []).concat(u.words?.ru || []).every(w => w.role === "challenge");
+      if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
         errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final / block-final)`);
-      if (!words.length) errors.push(`${file}: ${u.id} has no ${lang} words`);
+      if (!words.length && !challengeOnly) errors.push(`${file}: ${u.id} has no ${lang} words`);
       for (const w of words) {
         count++;
         const a = w.approval;

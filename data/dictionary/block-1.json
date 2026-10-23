@@ -6,7 +6,8 @@
  "rules": {
   "structure": "one block-final word per language; the block-review unit uses it as its final GeoWords, and Challenge reuses the review words of sections 1-5",
   "languages": "EN and RU lists are independent",
-  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}"
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "challengeExtra": "extra English words used only in Challenge GeoWords (Svetlana, 2026-10-23); no Russian pairs. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge"
  },
  "units": [
   {
@@ -42,6 +43,51 @@
       }
      }
     ]
+   }
+  },
+  {
+   "id": "challenge-extra",
+   "title": {
+    "en": "Challenge words",
+    "ru": "Слова Challenge"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CONTINENTALITY",
+      "role": "challenge",
+      "definition": "How strongly the climate of a place is affected by being far from the ocean: the farther inland, the bigger the difference between summer and winter temperatures.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a7cb932497c676ba"
+      }
+     },
+     {
+      "answer": "EVAPOTRANSPIRATION",
+      "role": "challenge",
+      "definition": "Water rising into the air from the land: it evaporates from soil, lakes and rivers and is given off by plants through their leaves.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "292c3f9755b8d8d7"
+      }
+     },
+     {
+      "answer": "PRECIPITATION",
+      "role": "challenge",
+      "definition": "Water that falls from clouds to the ground as rain, snow, sleet or hail.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "49b14575b2fc97dd"
+      }
+     }
+    ],
+    "ru": []
    }
   }
  ]
