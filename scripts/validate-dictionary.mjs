@@ -35,8 +35,8 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     if (unitIds.join() !== release.units.join()) errors.push(`${file}: units must be ${release.units.join(", ")} (found ${unitIds.join(", ") || "none"})`);
   }
   for (const lang of ["en", "ru"]) {
-    const sectionFinals = units.filter(u => (u.words?.[lang] || []).some(w => w.role === "section-final"));
-    if (sectionFinals.length !== 1) errors.push(`${file}: ${lang} must have exactly one section-final unit`);
+    const sectionFinals = units.filter(u => (u.words?.[lang] || []).some(w => w.role === "section-final" || w.role === "block-final"));
+    if (sectionFinals.length !== 1) errors.push(`${file}: ${lang} must have exactly one section-final (or block-final) unit`);
     else if (release && sectionFinals[0].id !== release.units.at(-1)) errors.push(`${file}: ${lang} section-final must be in ${release.units.at(-1)}`);
   }
   for (const lang of ["en", "ru"]) {
@@ -45,9 +45,9 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       const words = u.words?.[lang] || [];
       const finals = words.filter(w => w.role === "final").length;
       const reviews = words.filter(w => w.role === "review").length;
-      const sectionFinal = words.filter(w => w.role === "section-final").length;
+      const sectionFinal = words.filter(w => w.role === "section-final" || w.role === "block-final").length;
       if (sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
-        errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final)`);
+        errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final / block-final)`);
       if (!words.length) errors.push(`${file}: ${u.id} has no ${lang} words`);
       for (const w of words) {
         count++;
