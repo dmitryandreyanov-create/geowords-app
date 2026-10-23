@@ -7,7 +7,7 @@
   "structure": "one block-final word per language; the block-review unit uses it as its final GeoWords, and Challenge reuses the review words of sections 1-5",
   "languages": "EN and RU lists are independent",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
-  "challengeExtra": "extra English words used only in Challenge GeoWords (Svetlana, 2026-10-23); no Russian pairs. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge"
+  "challengeExtra": "extra words used only in Challenge GeoWords (Svetlana, 2026-10-23): CONTINENTALITY, EVAPOTRANSPIRATION, PRECIPITATION / МЕЖЛЕДНИКОВЬЕ, ГЛУБОКОВОДЬЕ. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge"
  },
  "units": [
   {
@@ -87,7 +87,30 @@
       }
      }
     ],
-    "ru": []
+    "ru": [
+     {
+      "answer": "МЕЖЛЕДНИКОВЬЕ",
+      "role": "challenge",
+      "definition": "Тёплый период между двумя ледниковыми периодами, когда ледники отступают. Сейчас на Земле как раз межледниковье.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "60587ad76318ffd8"
+      }
+     },
+     {
+      "answer": "ГЛУБОКОВОДЬЕ",
+      "role": "challenge",
+      "definition": "Участок моря, озера или реки с большой глубиной, далеко от мелей и берега.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "32a733d68f179ba3"
+      }
+     }
+    ]
    }
   }
  ]
