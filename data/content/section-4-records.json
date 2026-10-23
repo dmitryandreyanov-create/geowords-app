@@ -1,0 +1,115 @@
+{
+ "section": "seas-of-the-world",
+ "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues",
+ "approvalRule": "same as section-1-facts.json",
+ "items": [
+  {
+   "id": "red-sea-saltiest",
+   "order": 1,
+   "object": "red-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Red Sea",
+    "ru": "Красное море"
+   },
+   "fact": {
+    "en": "The Red Sea is the saltiest large sea connected to the ocean.",
+    "ru": "Красное море — самое солёное из крупных морей Мирового океана."
+   },
+   "figure": {
+    "value": "40-41",
+    "unit": "psu (‰)"
+   },
+   "source": "National Academies (\"the most saline large body of ocean water\")",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "94a2af51427dd465"
+   }
+  },
+  {
+   "id": "bay-of-bengal-largest-bay",
+   "order": 2,
+   "object": "bay-of-bengal",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Bay of Bengal",
+    "ru": "Бенгальский залив"
+   },
+   "fact": {
+    "en": "The Bay of Bengal is the largest bay in the world.",
+    "ru": "Бенгальский залив — самый большой залив в мире."
+   },
+   "figure": {
+    "value": 2172000,
+    "unit": "km²"
+   },
+   "source": "Guinness World Records",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "b42e7d0694f1ae1c"
+   }
+  },
+  {
+   "id": "caspian-largest-inland",
+   "order": 3,
+   "object": "caspian-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Caspian Sea",
+    "ru": "Каспийское море"
+   },
+   "fact": {
+    "en": "The Caspian Sea is the largest inland body of water in the world.",
+    "ru": "Каспийское море — самый большой внутренний водоём в мире."
+   },
+   "figure": {
+    "value": 371000,
+    "unit": "km²"
+   },
+   "source": "Guinness World Records",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "34d967bd03215d48"
+   }
+  },
+  {
+   "id": "coral-sea-largest-reef",
+   "order": 4,
+   "object": "coral-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Coral Sea",
+    "ru": "Коралловое море"
+   },
+   "fact": {
+    "en": "The Coral Sea is home to the largest coral reef system in the world.",
+    "ru": "В Коралловом море находится самая большая система коралловых рифов в мире."
+   },
+   "figure": {
+    "value": 2300,
+    "unit": "km long (Great Barrier Reef)"
+   },
+   "source": "WorldAtlas",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "120c54d314cd67ac"
+   }
+  }
+ ]
+}
