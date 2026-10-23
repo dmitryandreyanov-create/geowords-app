@@ -8,7 +8,7 @@
    "speed-hunt",
    "geowords"
   ],
-  "geowords": "app-generated from the review words of sections 1-5 (rules and spot-check sample to follow; approved like review puzzles)"
+  "geowords": "app-generated from the review words of sections 1-5 and the challenge-extra words; rules and the approved spot-check sample in data/geowords/challenge-block-1-sample.json"
  },
  "speedHunt": {
   "durationSeconds": 60,
