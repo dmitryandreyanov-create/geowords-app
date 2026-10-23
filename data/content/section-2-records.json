@@ -1,0 +1,180 @@
+{
+ "section": "rivers-of-the-world",
+ "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues; disputed records (nile-longest) get the «Есть нюанс» popup and are never used in clues or single-answer exercises",
+ "approvalRule": "same as section-1-facts.json",
+ "items": [
+  {
+   "id": "nile-longest",
+   "order": 1,
+   "object": "nile",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Nile",
+    "ru": "Нил"
+   },
+   "fact": {
+    "en": "The Nile is usually called the longest river in the world.",
+    "ru": "Нил обычно называют самой длинной рекой мира."
+   },
+   "figure": {
+    "nile": {
+     "value": 6650,
+     "unit": "km"
+    },
+    "amazon": {
+     "value": 6400,
+     "unit": "km",
+     "alt": "up to 6,990 km with another source"
+    }
+   },
+   "source": "USGS via ExplorersWeb",
+   "disputed": true,
+   "caveat": {
+    "en": "Some scientists think the Amazon is longer: its length depends on which stream is taken as its source, and there is no agreement yet.",
+    "ru": "Некоторые учёные считают, что Амазонка длиннее: её длина зависит от того, какой ручей считать истоком, и единого мнения пока нет."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "420dbd7da9d0fa97"
+   }
+  },
+  {
+   "id": "amazon-most-water",
+   "order": 2,
+   "object": "amazon",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Amazon",
+    "ru": "Амазонка"
+   },
+   "fact": {
+    "en": "The Amazon carries the most water of any river.",
+    "ru": "Амазонка — самая полноводная река мира."
+   },
+   "figure": {
+    "value": 20,
+    "unit": "% of river freshwater to the ocean (up to)"
+   },
+   "source": "Britannica",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "bdf3b3f3b30d1f46"
+   }
+  },
+  {
+   "id": "volga-longest-europe",
+   "order": 3,
+   "object": "volga",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Volga",
+    "ru": "Волга"
+   },
+   "fact": {
+    "en": "The Volga is the longest river in Europe.",
+    "ru": "Волга — самая длинная река Европы."
+   },
+   "figure": {
+    "value": 3531,
+    "unit": "km"
+   },
+   "source": "Wikipedia: Volga",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "5beb037fb1f051e4"
+   }
+  },
+  {
+   "id": "yangtze-longest-asia",
+   "order": 4,
+   "object": "yangtze",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Yangtze",
+    "ru": "Янцзы"
+   },
+   "fact": {
+    "en": "The Yangtze is the longest river in Asia.",
+    "ru": "Янцзы — самая длинная река Азии."
+   },
+   "figure": {
+    "value": 6300,
+    "unit": "km"
+   },
+   "source": "Britannica; Smart Water Magazine",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d4e206655bda305d"
+   }
+  },
+  {
+   "id": "danube-most-countries",
+   "order": 5,
+   "object": "danube",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Danube",
+    "ru": "Дунай"
+   },
+   "fact": {
+    "en": "The Danube flows through more countries than any other river.",
+    "ru": "Дунай протекает через больше стран, чем любая другая река."
+   },
+   "figure": {
+    "value": 10,
+    "unit": "countries"
+   },
+   "source": "New World Encyclopedia",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0ffeda40546c6c1f"
+   }
+  },
+  {
+   "id": "huang-he-most-sediment",
+   "order": 6,
+   "object": "huang-he",
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Yellow River (Huang He)",
+    "ru": "Хуанхэ"
+   },
+   "fact": {
+    "en": "The Yellow River carries more sediment than any other river.",
+    "ru": "Хуанхэ несёт больше наносов, чем любая другая река."
+   },
+   "figure": {
+    "value": 1.6,
+    "unit": "billion tons of silt a year"
+   },
+   "source": "New World Encyclopedia",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "94507d8ea5604664"
+   }
+  }
+ ]
+}
