@@ -32,6 +32,9 @@ jobs:
       - name: Validate map data and assets
         run: node scripts/validate-maps.mjs
 
+      - name: Validate dictionary
+        run: node scripts/validate-dictionary.mjs
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
