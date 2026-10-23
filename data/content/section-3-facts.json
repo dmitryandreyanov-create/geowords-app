@@ -1,0 +1,270 @@
+{
+ "section": "mountains-of-the-world",
+ "use": "introduction cards (exercise type 0), one fact per mountain range; ids match data/maps/world-mountains.json",
+ "intro": {
+  "note": "shown once before the section: \"Before this quiz you need to know…\" / «Перед этим разделом тебе нужно знать…» — summit, slope, foot; no unit or puzzles",
+  "image": {
+   "en": "./assets/intro/mountains-intro-en.webp",
+   "ru": "./assets/intro/mountains-intro-ru.webp"
+  },
+  "terms": [
+   {
+    "en": "Summit",
+    "ru": "Вершина"
+   },
+   {
+    "en": "Slope",
+    "ru": "Склон"
+   },
+   {
+    "en": "Foot",
+    "ru": "Подножие"
+   }
+  ]
+ },
+ "approvalRule": "same as section-1-facts.json: sha256 over {name, fact, caveat}",
+ "items": [
+  {
+   "id": "himalayas",
+   "order": 1,
+   "kind": "mountain-range",
+   "unit": 1,
+   "name": {
+    "en": "Himalayas",
+    "ru": "Гималаи"
+   },
+   "fact": {
+    "en": "Mount Everest, in the Himalayas, is the highest mountain in the world above sea level.",
+    "ru": "Эверест в Гималаях — самая высокая гора мира над уровнем моря."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "323efa26ea3ba1c8"
+   }
+  },
+  {
+   "id": "ural",
+   "order": 2,
+   "kind": "mountain-range",
+   "unit": 1,
+   "name": {
+    "en": "Ural Mountains",
+    "ru": "Уральские горы"
+   },
+   "fact": {
+    "en": "The Ural Mountains separate Europe from Asia.",
+    "ru": "Уральские горы разделяют Европу и Азию."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "ec53b9cff50cda94"
+   }
+  },
+  {
+   "id": "cordillera",
+   "order": 3,
+   "kind": "mountain-range",
+   "unit": 1,
+   "name": {
+    "en": "North American Cordillera",
+    "ru": "Кордильеры Северной Америки"
+   },
+   "fact": {
+    "en": "The North American Cordillera stretches from Alaska through Canada and the United States into Mexico.",
+    "ru": "Кордильеры Северной Америки тянутся от Аляски через Канаду и США до Мексики."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "851201254d34a643"
+   }
+  },
+  {
+   "id": "andes",
+   "order": 4,
+   "kind": "mountain-range",
+   "unit": 1,
+   "name": {
+    "en": "Andes",
+    "ru": "Анды"
+   },
+   "fact": {
+    "en": "The Andes are the longest continental mountain range in the world.",
+    "ru": "Анды — самая длинная горная цепь на суше."
+   },
+   "source": "Mountains workbook (prototype data/levels.js); New World Encyclopedia (over 7,000 km)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "e350fdb94b983764"
+   }
+  },
+  {
+   "id": "appalachians",
+   "order": 5,
+   "kind": "mountain-range",
+   "unit": 2,
+   "name": {
+    "en": "Appalachian Mountains",
+    "ru": "Аппалачи"
+   },
+   "fact": {
+    "en": "The Appalachians are considered the oldest mountains in North America. Over hundreds of millions of years they have been worn down and become lower.",
+    "ru": "Аппалачи считают самыми древними горами Северной Америки. За сотни миллионов лет они сильно разрушились и стали ниже."
+   },
+   "source": "Britannica, New World Encyclopedia (\"some of the oldest mountains on the planet\"); \"oldest mountains\" in North America: USPS Wonders of America 2006 — hence \"considered\" (Svetlana, 2026-10-23)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "047882e6a6207e41"
+   }
+  },
+  {
+   "id": "east-africa",
+   "order": 6,
+   "kind": "mountain-range",
+   "unit": 2,
+   "name": {
+    "en": "Mountains of East Africa",
+    "ru": "Горы Восточной Африки"
+   },
+   "fact": {
+    "en": "Mount Kilimanjaro is the highest mountain in Africa.",
+    "ru": "Килиманджаро — самая высокая гора Африки."
+   },
+   "source": "Mountains workbook (prototype data/levels.js); Oregon State Volcano World (5,895 m)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "dd3685c12bf31987"
+   }
+  },
+  {
+   "id": "great-dividing-range",
+   "order": 7,
+   "kind": "mountain-range",
+   "unit": 2,
+   "name": {
+    "en": "Great Dividing Range",
+    "ru": "Большой Водораздельный хребет"
+   },
+   "fact": {
+    "en": "The Great Dividing Range is the longest mountain range in Australia.",
+    "ru": "Большой Водораздельный хребет — самая длинная горная цепь Австралии."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "6ba9a1600dd5fcbf"
+   }
+  },
+  {
+   "id": "atlas",
+   "order": 8,
+   "kind": "mountain-range",
+   "unit": 2,
+   "name": {
+    "en": "Atlas Mountains",
+    "ru": "Атласские горы"
+   },
+   "fact": {
+    "en": "The Atlas Mountains separate the Mediterranean and Atlantic coasts from the Sahara Desert.",
+    "ru": "Атласские горы отделяют побережья Средиземного моря и Атлантики от пустыни Сахара."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "3112a33df00ce972"
+   }
+  },
+  {
+   "id": "caucasus",
+   "order": 9,
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Caucasus Mountains",
+    "ru": "Кавказские горы"
+   },
+   "fact": {
+    "en": "The Caucasus Mountains lie between the Black Sea and the Caspian Sea. They are sometimes considered a border between Europe and Asia.",
+    "ru": "Кавказские горы лежат между Чёрным и Каспийским морями. Иногда их считают границей между Европой и Азией."
+   },
+   "source": "Mountains workbook (prototype data/levels.js) (wording \"sometimes\" by Svetlana: the app map uses the Kuma-Manych border)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7f86e7a13c59c099"
+   }
+  },
+  {
+   "id": "pyrenees",
+   "order": 10,
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Pyrenees",
+    "ru": "Пиренеи"
+   },
+   "fact": {
+    "en": "The Pyrenees form a natural border between France and Spain.",
+    "ru": "Пиренеи — естественная граница между Францией и Испанией."
+   },
+   "source": "Mountains workbook (prototype data/levels.js); WorldAtlas",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "163ab0324b7951f7"
+   }
+  },
+  {
+   "id": "mid-atlantic-ridge",
+   "order": 11,
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Mid-Atlantic Ridge",
+    "ru": "Срединно-Атлантический хребет"
+   },
+   "fact": {
+    "en": "The Mid-Atlantic Ridge is an underwater mountain range that runs down the middle of the Atlantic Ocean.",
+    "ru": "Срединно-Атлантический хребет — подводная горная цепь, которая тянется по середине Атлантического океана."
+   },
+   "source": "Mountains workbook (prototype data/levels.js)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "5aa31eaff19d4ebf"
+   }
+  }
+ ]
+}

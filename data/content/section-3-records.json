@@ -1,0 +1,183 @@
+{
+ "section": "mountains-of-the-world",
+ "use": "unit 3 records; disputed records (elbrus-highest-europe) get the «Есть нюанс» popup and are never used in clues or single-answer exercises",
+ "approvalRule": "same as section-1-facts.json",
+ "items": [
+  {
+   "id": "everest-highest",
+   "order": 1,
+   "object": "himalayas",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Himalayas",
+    "ru": "Гималаи"
+   },
+   "fact": {
+    "en": "Mount Everest is the highest mountain in the world.",
+    "ru": "Эверест — самая высокая гора мира."
+   },
+   "figure": {
+    "value": 8849,
+    "unit": "m",
+    "exact": 8848.86
+   },
+   "source": "Nepal and China, 2020 (Al Jazeera)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f2474b0a3372a565"
+   }
+  },
+  {
+   "id": "andes-longest-continental",
+   "order": 2,
+   "object": "andes",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Andes",
+    "ru": "Анды"
+   },
+   "fact": {
+    "en": "The Andes are the longest continental mountain range.",
+    "ru": "Анды — самая длинная горная цепь на суше."
+   },
+   "figure": {
+    "value": 7000,
+    "unit": "km",
+    "note": "over"
+   },
+   "source": "New World Encyclopedia",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "7aa00baea47e3722"
+   }
+  },
+  {
+   "id": "mid-ocean-ridge-longest",
+   "order": 3,
+   "object": "mid-atlantic-ridge",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Mid-Atlantic Ridge",
+    "ru": "Срединно-Атлантический хребет"
+   },
+   "fact": {
+    "en": "The Mid-Atlantic Ridge is part of the mid-ocean ridge system, the longest mountain range on Earth.",
+    "ru": "Срединно-Атлантический хребет — часть системы срединно-океанических хребтов, самых длинных гор на Земле."
+   },
+   "figure": {
+    "value": 65000,
+    "unit": "km",
+    "note": "nearly"
+   },
+   "source": "NOAA Ocean Explorer",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f14e6356ec98a61d"
+   }
+  },
+  {
+   "id": "kilimanjaro-highest-africa",
+   "order": 4,
+   "object": "east-africa",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Mountains of East Africa",
+    "ru": "Горы Восточной Африки"
+   },
+   "fact": {
+    "en": "Mount Kilimanjaro is the highest mountain in Africa.",
+    "ru": "Килиманджаро — самая высокая гора Африки."
+   },
+   "figure": {
+    "value": 5895,
+    "unit": "m"
+   },
+   "source": "Oregon State Volcano World",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "dd3685c12bf31987"
+   }
+  },
+  {
+   "id": "aconcagua-highest-south-america",
+   "order": 5,
+   "object": "andes",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Andes",
+    "ru": "Анды"
+   },
+   "fact": {
+    "en": "Aconcagua, in the Andes, is the highest mountain in South America.",
+    "ru": "Аконкагуа в Андах — самая высокая гора Южной Америки."
+   },
+   "figure": {
+    "value": 6960,
+    "unit": "m",
+    "note": "about"
+   },
+   "source": "New World Encyclopedia",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a0d1a363aa9d9bca"
+   }
+  },
+  {
+   "id": "elbrus-highest-europe",
+   "order": 6,
+   "object": "caucasus",
+   "kind": "mountain-range",
+   "unit": 3,
+   "name": {
+    "en": "Caucasus Mountains",
+    "ru": "Кавказские горы"
+   },
+   "fact": {
+    "en": "Mount Elbrus, in the Caucasus, is often called the highest mountain in Europe.",
+    "ru": "Эльбрус на Кавказе часто называют самой высокой горой Европы."
+   },
+   "figure": {
+    "elbrus": {
+     "value": 5642,
+     "unit": "m"
+    },
+    "montBlanc": {
+     "value": 4806,
+     "unit": "m"
+    }
+   },
+   "source": "WorldAtlas: extreme points of Europe",
+   "disputed": true,
+   "caveat": {
+    "en": "It depends on where the border between Europe and Asia is drawn. If the Caucasus is counted as part of Asia, the highest mountain in Europe is Mont Blanc in the Alps.",
+    "ru": "Всё зависит от того, где проводят границу Европы и Азии. Если Кавказ относят к Азии, самой высокой горой Европы считают Монблан в Альпах."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f9ed1c2c23e935cc"
+   }
+  }
+ ]
+}
