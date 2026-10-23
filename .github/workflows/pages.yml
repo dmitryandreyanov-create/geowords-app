@@ -32,6 +32,9 @@ jobs:
       - name: Validate map data and assets
         run: node scripts/validate-maps.mjs
 
+      - name: Validate GeoWords puzzles
+        run: node scripts/validate-geowords.mjs
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
