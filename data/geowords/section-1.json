@@ -953,9 +953,9 @@
      "letter": "T"
     },
     {
-     "id": "southern-ocean",
-     "x": 54.24,
-     "y": 93,
+     "id": "atlantic-ocean",
+     "x": 42.27,
+     "y": 13.2,
      "letter": "I"
     },
     {
@@ -990,9 +990,9 @@
      "text": "Find the second letter in Asia."
     },
     {
-     "markerId": "southern-ocean",
+     "markerId": "atlantic-ocean",
      "position": 5,
-     "text": "Find the fifth letter in the ocean around Antarctica."
+     "text": "Find the fifth letter in the Atlantic Ocean."
     },
     {
      "markerId": "pacific-ocean",
@@ -1034,7 +1034,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "e08becabcd1eb42a"
+    "contentSha256": "84b3f8c5588200c0"
    }
   },
   {
@@ -1076,9 +1076,9 @@
      "letter": "Н"
     },
     {
-     "id": "southern-ocean",
-     "x": 54.24,
-     "y": 93,
+     "id": "atlantic-ocean",
+     "x": 42.27,
+     "y": 13.2,
      "letter": "Т"
     },
     {
@@ -1119,9 +1119,9 @@
      "text": "Найди шестую букву в самом тёплом океане."
     },
     {
-     "markerId": "southern-ocean",
+     "markerId": "atlantic-ocean",
      "position": 4,
-     "text": "Найди четвёртую букву в океане вокруг Антарктиды."
+     "text": "Найди четвёртую букву в Атлантическом океане."
     },
     {
      "markerId": "pacific-ocean",
@@ -1163,7 +1163,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "8992186b522b10ce"
+    "contentSha256": "4ede1396b583fa3a"
    }
   }
  ]
