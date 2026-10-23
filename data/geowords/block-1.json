@@ -42,7 +42,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "straits and small seas are tiny on a phone map; Bering Strait is answered in its magnifier inset",
-   "minSeparation": 10.8,
+   "minSeparation": 7.4,
    "markers": [
     {
      "id": "arctic-ocean",
@@ -64,8 +64,8 @@
     },
     {
      "id": "amazon-river",
-     "x": 26.75,
-     "y": 63.16,
+     "x": 30.49,
+     "y": 56.97,
      "letter": "T"
     },
     {
@@ -101,8 +101,8 @@
     },
     {
      "id": "caribbean-sea",
-     "x": 22.64,
-     "y": 44.39,
+     "x": 24.79,
+     "y": 48.32,
      "letter": "H"
     },
     {
@@ -113,8 +113,8 @@
     },
     {
      "id": "caspian-sea",
-     "x": 61.27,
-     "y": 29.87,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "R"
     }
    ],
@@ -184,7 +184,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "d783cb8469300a02"
+    "contentSha256": "c5104f95af57d275"
    }
   },
   {
@@ -223,15 +223,15 @@
    "minSeparation": 6.3,
    "markers": [
     {
-     "id": "indian-ocean",
-     "x": 54.73,
-     "y": 75.58,
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
      "letter": "П"
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 51.76,
+     "y": 36.76,
      "letter": "У"
     },
     {
@@ -254,8 +254,8 @@
     },
     {
      "id": "coral-sea",
-     "x": 92.91,
-     "y": 60.56,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "Е"
     },
     {
@@ -365,9 +365,9 @@
      "text": "Найди тринадцатую букву в Беринговом проливе."
     },
     {
-     "markerId": "indian-ocean",
+     "markerId": "arctic-ocean",
      "position": 1,
-     "text": "Найди первую букву в Индийском океане."
+     "text": "Найди первую букву в Северном Ледовитом океане."
     },
     {
      "markerId": "coral-sea",
@@ -384,7 +384,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "5933e016b6084150"
+    "contentSha256": "91ee79f7dcbc20b3"
    }
   }
  ]
