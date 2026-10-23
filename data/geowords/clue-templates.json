@@ -1,0 +1,279 @@
+{
+ "section": "continents-and-oceans",
+ "use": "building blocks for app-generated review GeoWords (rules in docs/app-mechanics.md, decided 2026-10-23)",
+ "template": {
+  "en": "Find the {ordinal} letter {place}.",
+  "ru": "Найди {ordinal} букву {place}."
+ },
+ "ordinals": {
+  "en": [
+   "first",
+   "second",
+   "third",
+   "fourth",
+   "fifth",
+   "sixth",
+   "seventh",
+   "eighth",
+   "ninth",
+   "tenth",
+   "eleventh",
+   "twelfth"
+  ],
+  "ru": [
+   "первую",
+   "вторую",
+   "третью",
+   "четвёртую",
+   "пятую",
+   "шестую",
+   "седьмую",
+   "восьмую",
+   "девятую",
+   "десятую",
+   "одиннадцатую",
+   "двенадцатую"
+  ]
+ },
+ "rules": [
+  "use only objects with learnedInUnit <= the unit the child has finished; record/relation phrases only from their learnedInUnit",
+  "one letter per object; if there are fewer objects than letters, the word waits for a later unit",
+  "never use a phrase that contains the answer word (e.g. no \"continent\" phrases for CONTINENT)",
+  "only approved undisputed facts appear here; disputed facts (Southern Ocean coldest, Atlantic saltiest) are deliberately absent",
+  "reveal order: no neighbouring positions in a row; first letter late; last letters not early (same checks as validate-geowords.mjs)",
+  "unit-1 places and continents/oceans can be mixed once both are learned"
+ ],
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-10-23",
+  "scope": "rules and phrases; review puzzles are spot-checked"
+ },
+ "objects": [
+  {
+   "id": "north",
+   "learnedInUnit": 1,
+   "x": 57.78,
+   "y": 7.75,
+   "place": {
+    "en": "in the north",
+    "ru": "на севере"
+   }
+  },
+  {
+   "id": "south",
+   "learnedInUnit": 1,
+   "x": 67.5,
+   "y": 92.25,
+   "place": {
+    "en": "in the south",
+    "ru": "на юге"
+   }
+  },
+  {
+   "id": "east",
+   "learnedInUnit": 1,
+   "x": 94.44,
+   "y": 62.45,
+   "place": {
+    "en": "in the east",
+    "ru": "на востоке"
+   }
+  },
+  {
+   "id": "west",
+   "learnedInUnit": 1,
+   "x": 4.44,
+   "y": 46.16,
+   "place": {
+    "en": "in the west",
+    "ru": "на западе"
+   }
+  },
+  {
+   "id": "equator",
+   "learnedInUnit": 1,
+   "x": 39.72,
+   "y": 55.34,
+   "place": {
+    "en": "on the Equator",
+    "ru": "на экваторе"
+   }
+  },
+  {
+   "id": "prime-meridian",
+   "learnedInUnit": 1,
+   "x": 46.67,
+   "y": 29.39,
+   "place": {
+    "en": "on the Prime Meridian",
+    "ru": "на нулевом меридиане"
+   }
+  },
+  {
+   "id": "asia",
+   "learnedInUnit": 2,
+   "x": 71.85,
+   "y": 28.29,
+   "place": {
+    "en": "in Asia",
+    "ru": "в Азии"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the largest continent",
+    "ru": "на самом большом континенте"
+   }
+  },
+  {
+   "id": "africa",
+   "learnedInUnit": 2,
+   "x": 53.94,
+   "y": 52.28,
+   "place": {
+    "en": "in Africa",
+    "ru": "в Африке"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the hottest continent",
+    "ru": "на самом жарком континенте"
+   }
+  },
+  {
+   "id": "north-america",
+   "learnedInUnit": 2,
+   "x": 18.12,
+   "y": 30.99,
+   "place": {
+    "en": "in North America",
+    "ru": "в Северной Америке"
+   }
+  },
+  {
+   "id": "south-america",
+   "learnedInUnit": 2,
+   "x": 30.85,
+   "y": 62.8,
+   "place": {
+    "en": "in South America",
+    "ru": "в Южной Америке"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the wettest continent",
+    "ru": "на самом влажном континенте"
+   }
+  },
+  {
+   "id": "antarctica",
+   "learnedInUnit": 2,
+   "x": 75.3,
+   "y": 93.0,
+   "place": {
+    "en": "in Antarctica",
+    "ru": "в Антарктиде"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the coldest continent",
+    "ru": "на самом холодном континенте"
+   }
+  },
+  {
+   "id": "europe",
+   "learnedInUnit": 2,
+   "x": 58.18,
+   "y": 23.5,
+   "place": {
+    "en": "in Europe",
+    "ru": "в Европе"
+   }
+  },
+  {
+   "id": "australia",
+   "learnedInUnit": 2,
+   "x": 83.36,
+   "y": 67.25,
+   "place": {
+    "en": "in Australia",
+    "ru": "в Австралии"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the smallest continent",
+    "ru": "на самом маленьком континенте"
+   }
+  },
+  {
+   "id": "pacific-ocean",
+   "learnedInUnit": 3,
+   "x": 12.52,
+   "y": 67.14,
+   "place": {
+    "en": "in the Pacific Ocean",
+    "ru": "в Тихом океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the largest ocean",
+    "ru": "в самом большом океане"
+   }
+  },
+  {
+   "id": "atlantic-ocean",
+   "learnedInUnit": 3,
+   "x": 42.73,
+   "y": 74.3,
+   "place": {
+    "en": "in the Atlantic Ocean",
+    "ru": "в Атлантическом океане"
+   }
+  },
+  {
+   "id": "indian-ocean",
+   "learnedInUnit": 3,
+   "x": 68.88,
+   "y": 72.76,
+   "place": {
+    "en": "in the Indian Ocean",
+    "ru": "в Индийском океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the warmest ocean",
+    "ru": "в самом тёплом океане"
+   }
+  },
+  {
+   "id": "arctic-ocean",
+   "learnedInUnit": 3,
+   "x": 85.3,
+   "y": 4.5,
+   "place": {
+    "en": "in the Arctic Ocean",
+    "ru": "в Северном Ледовитом океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the smallest ocean",
+    "ru": "в самом маленьком океане"
+   }
+  },
+  {
+   "id": "southern-ocean",
+   "learnedInUnit": 3,
+   "x": 54.24,
+   "y": 93.0,
+   "place": {
+    "en": "in the Southern Ocean",
+    "ru": "в Южном океане"
+   },
+   "relation": {
+    "learnedInUnit": 3,
+    "en": "in the ocean around Antarctica",
+    "ru": "в океане вокруг Антарктиды"
+   }
+  }
+ ]
+}
