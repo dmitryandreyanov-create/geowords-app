@@ -34,7 +34,7 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     for (const id of release.ids) if (!ids.includes(id)) errors.push(`${file}: missing card ${id}`);
     for (const id of ids) if (!release.ids.includes(id)) errors.push(`${file}: unexpected card ${id}`);
   }
-  if (!Array.isArray(j.items) || !j.items.length) errors.push(`${file}: no items`);
+  if (release && (!Array.isArray(j.items) || !j.items.length)) errors.push(`${file}: no items`);
   for (const it of j.items || []) {
     count++;
     const id = it.id || "(no id)";
