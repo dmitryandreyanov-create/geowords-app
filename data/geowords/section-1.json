@@ -1,0 +1,180 @@
+{
+ "section": "continents-and-oceans",
+ "rules": {
+  "clues": "clues are listed in reveal order; position = slot the letter fills; letters open out of word order",
+  "revealOrder": "no two neighbouring positions in a row; long words (>=7): first letter among the last 3, last 2-3 letters not among the first 3; short words: first letter among the last 2, last letter not among the first 2",
+  "unit1": "one letter per place (Equator, north, south, east, west, + Prime Meridian in EN), as in the workbook; no continent names yet",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, markers, clues} (JSON, sorted keys, UTF-8); show only approved puzzles",
+  "layers": "line layers come from data/maps/world-continents-oceans.json (#21)"
+ },
+ "puzzles": [
+  {
+   "id": "section-1-unit-1-en",
+   "section": "continents-and-oceans",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ZENITH",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp",
+    "./assets/layers/world-line-prime-meridian.webp"
+   ],
+   "markers": [
+    {
+     "id": "north",
+     "x": 57.78,
+     "y": 7.75,
+     "letter": "Z"
+    },
+    {
+     "id": "prime-meridian",
+     "x": 46.67,
+     "y": 29.39,
+     "letter": "E"
+    },
+    {
+     "id": "east",
+     "x": 94.44,
+     "y": 62.45,
+     "letter": "N"
+    },
+    {
+     "id": "equator",
+     "x": 39.72,
+     "y": 55.34,
+     "letter": "I"
+    },
+    {
+     "id": "west",
+     "x": 4.44,
+     "y": 46.16,
+     "letter": "T"
+    },
+    {
+     "id": "south",
+     "x": 67.5,
+     "y": 92.25,
+     "letter": "H"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "equator",
+     "position": 4,
+     "text": "Find the fourth letter on the Equator."
+    },
+    {
+     "markerId": "prime-meridian",
+     "position": 2,
+     "text": "Find the second letter on the Prime Meridian."
+    },
+    {
+     "markerId": "west",
+     "position": 5,
+     "text": "Find the fifth letter in the west."
+    },
+    {
+     "markerId": "east",
+     "position": 3,
+     "text": "Find the third letter in the east."
+    },
+    {
+     "markerId": "north",
+     "position": 1,
+     "text": "Find the first letter in the north."
+    },
+    {
+     "markerId": "south",
+     "position": 6,
+     "text": "Find the sixth letter in the south."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "8c3cbdec0f7a634f"
+   }
+  },
+  {
+   "id": "section-1-unit-1-ru",
+   "section": "continents-and-oceans",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ЗЕНИТ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-line-equator.webp"
+   ],
+   "markers": [
+    {
+     "id": "east",
+     "x": 94.44,
+     "y": 62.45,
+     "letter": "З"
+    },
+    {
+     "id": "west",
+     "x": 4.44,
+     "y": 46.16,
+     "letter": "Е"
+    },
+    {
+     "id": "north",
+     "x": 57.78,
+     "y": 7.75,
+     "letter": "Н"
+    },
+    {
+     "id": "equator",
+     "x": 39.72,
+     "y": 55.34,
+     "letter": "И"
+    },
+    {
+     "id": "south",
+     "x": 67.5,
+     "y": 92.25,
+     "letter": "Т"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "equator",
+     "position": 4,
+     "text": "Найди четвёртую букву на экваторе."
+    },
+    {
+     "markerId": "west",
+     "position": 2,
+     "text": "Найди вторую букву на западе."
+    },
+    {
+     "markerId": "south",
+     "position": 5,
+     "text": "Найди пятую букву на юге."
+    },
+    {
+     "markerId": "north",
+     "position": 3,
+     "text": "Найди третью букву на севере."
+    },
+    {
+     "markerId": "east",
+     "position": 1,
+     "text": "Найди первую букву на востоке."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "1cc7f4077f779bb5"
+   }
+  }
+ ]
+}
