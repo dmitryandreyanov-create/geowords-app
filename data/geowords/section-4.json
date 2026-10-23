@@ -34,7 +34,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 7.3,
+   "minSeparation": 5.5,
    "markers": [
     {
      "id": "arctic-ocean",
@@ -50,14 +50,14 @@
     },
     {
      "id": "black-sea",
-     "x": 54.45,
-     "y": 32.34,
+     "x": 55.36,
+     "y": 31.81,
      "letter": "G"
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 50.82,
+     "y": 37.29,
      "letter": "H"
     },
     {
@@ -74,8 +74,8 @@
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "O"
     },
     {
@@ -86,8 +86,8 @@
     },
     {
      "id": "caspian-sea",
-     "x": 61.55,
-     "y": 35.64,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "S"
     },
     {
@@ -153,7 +153,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "ce853cd215a7eb6d"
+    "contentSha256": "c84320226273edcb"
    }
   },
   {
@@ -182,7 +182,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 7.3,
+   "minSeparation": 5.5,
    "markers": [
     {
      "id": "australia",
@@ -191,9 +191,9 @@
      "letter": "З"
     },
     {
-     "id": "indian-ocean",
-     "x": 91.36,
-     "y": 84.49,
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
      "letter": "В"
     },
     {
@@ -210,26 +210,26 @@
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 50.82,
+     "y": 37.29,
      "letter": "Д"
     },
     {
      "id": "black-sea",
-     "x": 54.45,
-     "y": 32.34,
+     "x": 55.36,
+     "y": 31.81,
      "letter": "О"
     },
     {
      "id": "caspian-sea",
-     "x": 61.55,
-     "y": 35.64,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "Ч"
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "Ё"
     },
     {
@@ -241,9 +241,9 @@
    ],
    "clues": [
     {
-     "markerId": "indian-ocean",
+     "markerId": "arctic-ocean",
      "position": 2,
-     "text": "Найди вторую букву в Индийском океане."
+     "text": "Найди вторую букву в Северном Ледовитом океане."
     },
     {
      "markerId": "black-sea",
@@ -290,7 +290,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "33cf06726b0cbf73"
+    "contentSha256": "4842fdc43f109d5e"
    }
   },
   {
@@ -315,11 +315,12 @@
     "./assets/layers/world-river-nile.webp",
     "./assets/layers/world-mountain-andes.webp",
     "./assets/layers/world-mountain-cordillera.webp",
-    "./assets/layers/world-mountain-himalayas.webp"
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp"
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 8.9,
+   "minSeparation": 6.4,
    "markers": [
     {
      "id": "cordillera",
@@ -335,38 +336,38 @@
     },
     {
      "id": "arabian-sea",
-     "x": 64.45,
-     "y": 53.14,
+     "x": 64.27,
+     "y": 48.54,
      "letter": "U"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 46.82,
-     "y": 84.49,
+     "id": "mid-atlantic-ridge",
+     "x": 46.55,
+     "y": 86.2,
      "letter": "S"
     },
     {
      "id": "red-sea",
-     "x": 57,
-     "y": 44.22,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "T"
     },
     {
      "id": "caspian-sea",
-     "x": 61.27,
-     "y": 29.87,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "A"
     },
     {
      "id": "bay-of-bengal",
-     "x": 72.55,
-     "y": 45.38,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "C"
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "E"
     },
     {
@@ -377,8 +378,8 @@
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 51.76,
+     "y": 36.76,
      "letter": "N"
     },
     {
@@ -410,9 +411,9 @@
      "text": "Find the eleventh letter in Antarctica."
     },
     {
-     "markerId": "atlantic-ocean",
+     "markerId": "mid-atlantic-ridge",
      "position": 4,
-     "text": "Find the fourth letter in the Atlantic Ocean."
+     "text": "Find the fourth letter on the Mid-Atlantic Ridge."
     },
     {
      "markerId": "coral-sea",
@@ -449,7 +450,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "0f49ebad97896aa4"
+    "contentSha256": "da8f7355fb519086"
    }
   },
   {
@@ -474,11 +475,12 @@
     "./assets/layers/world-river-nile.webp",
     "./assets/layers/world-mountain-andes.webp",
     "./assets/layers/world-mountain-cordillera.webp",
-    "./assets/layers/world-mountain-himalayas.webp"
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp"
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 7.3,
+   "minSeparation": 5.5,
    "markers": [
     {
      "id": "nile-river",
@@ -488,26 +490,26 @@
     },
     {
      "id": "caspian-sea",
-     "x": 61.55,
-     "y": 35.64,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "А"
     },
     {
      "id": "bay-of-bengal",
-     "x": 72.73,
-     "y": 46.04,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "К"
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "О"
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 50.82,
+     "y": 37.29,
      "letter": "О"
     },
     {
@@ -523,9 +525,9 @@
      "letter": "Р"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 41.91,
-     "y": 87.13,
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
      "letter": "А"
     },
     {
@@ -536,8 +538,8 @@
     },
     {
      "id": "black-sea",
-     "x": 54.45,
-     "y": 32.34,
+     "x": 55.36,
+     "y": 31.81,
      "letter": "Н"
     },
     {
@@ -548,8 +550,8 @@
     },
     {
      "id": "arabian-sea",
-     "x": 64.18,
-     "y": 52.48,
+     "x": 64.27,
+     "y": 48.54,
      "letter": "Е"
     }
    ],
@@ -610,16 +612,16 @@
      "text": "Найди одиннадцатую букву в Северном Ледовитом океане."
     },
     {
-     "markerId": "atlantic-ocean",
+     "markerId": "mid-atlantic-ridge",
      "position": 8,
-     "text": "Найди восьмую букву в Атлантическом океане."
+     "text": "Найди восьмую букву на Срединно-Атлантическом хребте."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "720f616fd7156ecf"
+    "contentSha256": "114d9dda30e0c175"
    }
   },
   {
@@ -648,7 +650,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 10.6,
+   "minSeparation": 5.4,
    "markers": [
     {
      "id": "andes",
@@ -658,38 +660,38 @@
     },
     {
      "id": "hudson-bay",
-     "x": 22.64,
-     "y": 16.34,
+     "x": 22.24,
+     "y": 20.53,
      "letter": "N"
     },
     {
      "id": "caspian-sea",
-     "x": 61.27,
-     "y": 29.87,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "O"
     },
     {
      "id": "gulf-of-mexico",
-     "x": 19.73,
-     "y": 41.09,
+     "x": 20.64,
+     "y": 41.91,
      "letter": "R"
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "K"
     },
     {
      "id": "bay-of-bengal",
-     "x": 72.73,
-     "y": 46.04,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "E"
     },
     {
      "id": "caribbean-sea",
-     "x": 29.91,
-     "y": 49.17,
+     "x": 24.79,
+     "y": 48.32,
      "letter": "L"
     },
     {
@@ -700,8 +702,8 @@
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "N"
     },
     {
@@ -767,7 +769,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "e49849b92f41851d"
+    "contentSha256": "3f46f2352cc76e37"
    }
   },
   {
@@ -796,7 +798,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 9,
+   "minSeparation": 5.4,
    "markers": [
     {
      "id": "himalayas",
@@ -806,20 +808,20 @@
     },
     {
      "id": "bay-of-bengal",
-     "x": 72.55,
-     "y": 52.15,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "Н"
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "О"
     },
     {
      "id": "caribbean-sea",
-     "x": 29.91,
-     "y": 49.17,
+     "x": 25,
+     "y": 48.84,
      "letter": "Р"
     },
     {
@@ -830,26 +832,26 @@
     },
     {
      "id": "hudson-bay",
-     "x": 22.64,
-     "y": 16.34,
+     "x": 22.24,
+     "y": 20.53,
      "letter": "Л"
     },
     {
      "id": "gulf-of-mexico",
-     "x": 19.73,
-     "y": 41.09,
+     "x": 20.94,
+     "y": 42.32,
      "letter": "И"
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "Н"
     },
     {
      "id": "caspian-sea",
-     "x": 59.82,
-     "y": 31.02,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "Г"
     }
    ],
@@ -904,7 +906,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "4bcbbd8298a60cfa"
+    "contentSha256": "1aa37324f06e041e"
    }
   },
   {
@@ -933,66 +935,66 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 7.3,
+   "minSeparation": 5.4,
    "markers": [
     {
      "id": "caspian-sea",
-     "x": 61.55,
-     "y": 35.64,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "P"
     },
     {
      "id": "caribbean-sea",
-     "x": 29.91,
-     "y": 49.17,
+     "x": 25,
+     "y": 48.84,
      "letter": "L"
     },
     {
      "id": "arabian-sea",
-     "x": 66.09,
-     "y": 54.46,
+     "x": 64.27,
+     "y": 48.54,
      "letter": "E"
     },
     {
      "id": "bay-of-bengal",
-     "x": 71.91,
-     "y": 43.73,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "S"
     },
     {
      "id": "gulf-of-mexico",
-     "x": 19.73,
-     "y": 41.09,
+     "x": 20.94,
+     "y": 42.32,
      "letter": "I"
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "O"
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "S"
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 50.82,
+     "y": 37.29,
      "letter": "A"
     },
     {
      "id": "black-sea",
-     "x": 54.45,
-     "y": 32.34,
+     "x": 55.36,
+     "y": 31.81,
      "letter": "U"
     },
     {
      "id": "hudson-bay",
-     "x": 22.64,
-     "y": 16.34,
+     "x": 22.24,
+     "y": 20.53,
      "letter": "R"
     }
    ],
@@ -1052,7 +1054,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "f0dd769bbc24fbf2"
+    "contentSha256": "ecd7c1d663664652"
    }
   },
   {
@@ -1081,66 +1083,66 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
-   "minSeparation": 7.3,
+   "minSeparation": 5.4,
    "markers": [
     {
      "id": "hudson-bay",
-     "x": 22.64,
-     "y": 16.34,
+     "x": 22.24,
+     "y": 20.53,
      "letter": "П"
     },
     {
      "id": "coral-sea",
-     "x": 93.64,
-     "y": 65.68,
+     "x": 89.52,
+     "y": 64.17,
      "letter": "Л"
     },
     {
      "id": "mediterranean-sea",
-     "x": 45.36,
-     "y": 36.3,
+     "x": 50.82,
+     "y": 37.29,
      "letter": "Е"
     },
     {
      "id": "arabian-sea",
-     "x": 66.09,
-     "y": 54.46,
+     "x": 64.27,
+     "y": 48.54,
      "letter": "З"
     },
     {
      "id": "gulf-of-mexico",
-     "x": 19.73,
-     "y": 41.09,
+     "x": 20.64,
+     "y": 41.91,
      "letter": "И"
     },
     {
      "id": "red-sea",
-     "x": 58.55,
-     "y": 48.51,
+     "x": 57.61,
+     "y": 45.57,
      "letter": "О"
     },
     {
      "id": "black-sea",
-     "x": 54.45,
-     "y": 32.34,
+     "x": 55.36,
+     "y": 31.81,
      "letter": "З"
     },
     {
      "id": "caspian-sea",
-     "x": 61.55,
-     "y": 35.64,
+     "x": 60.91,
+     "y": 34.73,
      "letter": "А"
     },
     {
      "id": "bay-of-bengal",
-     "x": 71.91,
-     "y": 43.73,
+     "x": 70.7,
+     "y": 48.93,
      "letter": "В"
     },
     {
      "id": "caribbean-sea",
-     "x": 29.91,
-     "y": 49.17,
+     "x": 24.79,
+     "y": 48.32,
      "letter": "Р"
     }
    ],
@@ -1200,7 +1202,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "850541625e393e83"
+    "contentSha256": "b7128c9e1c52db4e"
    }
   }
  ]
