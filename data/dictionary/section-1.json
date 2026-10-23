@@ -13,7 +13,8 @@
   "uniqueAfterLetters": "EN only: letters revealed (best order) before only one word in a 370k English word list fits; higher = harder",
   "mechanics": "GeoWords mechanics (letters on map objects, revealed out of order) are in docs/app-mechanics.md; this file is vocabulary only",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition} (JSON, sorted keys, UTF-8). Any change needs re-approval.",
-  "review": "definitions are an editorial version; final scientific check before release"
+  "review": "definitions are an editorial version; final scientific check before release",
+  "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)"
  },
  "sources": {
   "PANGAEA": "USGS: about 300–200 million years ago; break-up began about 225–200 million years ago"
@@ -28,15 +29,15 @@
    "words": {
     "en": [
      {
-      "answer": "HEMISPHERE",
+      "answer": "ZENITH",
       "role": "final",
-      "definition": "Half of Earth, divided by the Equator or the Prime Meridian and the opposite meridian.",
-      "uniqueAfterLetters": 10,
+      "definition": "The point in the sky directly above an observer.",
+      "uniqueAfterLetters": 5,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
        "date": "2026-10-23",
-       "contentSha256": "58d25a18dd112fab"
+       "contentSha256": "f65433f5fce0a1c1"
       }
      },
      {
@@ -88,15 +89,15 @@
       }
      },
      {
-      "answer": "CARDINAL",
+      "answer": "HEMISPHERE",
       "role": "review",
-      "definition": "Relating to the four main compass directions: north, south, east and west.",
-      "uniqueAfterLetters": 7,
+      "definition": "Half of Earth, divided by the Equator or the Prime Meridian and the opposite meridian.",
+      "uniqueAfterLetters": 10,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
        "date": "2026-10-23",
-       "contentSha256": "03b3ee68e60144a8"
+       "contentSha256": "58d25a18dd112fab"
       }
      },
      {
@@ -114,14 +115,14 @@
     ],
     "ru": [
      {
-      "answer": "ПОЛУШАРИЕ",
+      "answer": "ЗЕНИТ",
       "role": "final",
-      "definition": "Половина земного шара. Экватор делит Землю на Северное и Южное полушария, а нулевой и противоположный ему меридианы — на Восточное и Западное.",
+      "definition": "Точка на небе прямо над головой наблюдателя.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
        "date": "2026-10-23",
-       "contentSha256": "7d83529c966a8a54"
+       "contentSha256": "ed904eaaac58706f"
       }
      },
      {
@@ -169,14 +170,14 @@
       }
      },
      {
-      "answer": "ОРИЕНТИР",
+      "answer": "ПОЛУШАРИЕ",
       "role": "review",
-      "definition": "Заметный объект на местности, который помогает определить своё местоположение или направление движения.",
+      "definition": "Половина земного шара. Экватор делит Землю на Северное и Южное полушария, а нулевой и противоположный ему меридианы — на Восточное и Западное.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
        "date": "2026-10-23",
-       "contentSha256": "26a4e8a0d89e1d8b"
+       "contentSha256": "7d83529c966a8a54"
       }
      },
      {
