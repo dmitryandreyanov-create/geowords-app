@@ -404,12 +404,16 @@
     "pdfPage": 10,
     "note": "adapted wording"
    },
-   "disputed": false,
+   "disputed": true,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "1955c4ebeec9d81c"
+    "contentSha256": "0d5d5bf880b43bbd"
+   },
+   "caveat": {
+    "en": "The Southern Ocean is often considered the coldest ocean because of its extremely cold surface waters. However, the Arctic Ocean is also very cold, and the answer depends on how ocean temperatures are measured and compared.",
+    "ru": "Южный океан часто считают самым холодным из-за очень холодной воды у поверхности. Но Северный Ледовитый океан тоже очень холодный, и ответ зависит от того, как измерять и сравнивать температуру океанов."
    }
   }
  ]
