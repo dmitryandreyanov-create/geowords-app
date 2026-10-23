@@ -202,9 +202,9 @@
      "letter": "У"
     },
     {
-     "id": "africa",
-     "x": 53.55,
-     "y": 70.79,
+     "id": "europe",
+     "x": 62.91,
+     "y": 15.68,
      "letter": "Т"
     },
     {
@@ -260,9 +260,9 @@
      "text": "Найди седьмую букву в Тихом океане."
     },
     {
-     "markerId": "africa",
+     "markerId": "europe",
      "position": 3,
-     "text": "Найди третью букву в Африке."
+     "text": "Найди третью букву в Европе."
     },
     {
      "markerId": "nile-river",
@@ -284,7 +284,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "e97d57fbb936801d"
+    "contentSha256": "07160ad761c3aeec"
    }
   },
   {
@@ -349,8 +349,8 @@
     },
     {
      "id": "mississippi-mouth",
-     "x": 21.95,
-     "y": 40.36,
+     "x": 21.92,
+     "y": 40.2,
      "letter": "A"
     },
     {
@@ -434,7 +434,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "997d223b46228c44"
+    "contentSha256": "e2c05c1f7cbd7b7c"
    }
   },
   {
@@ -465,12 +465,12 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": true,
-   "minSeparation": 4.6,
+   "minSeparation": 4.3,
    "markers": [
     {
      "id": "huang-he-mouth",
-     "x": 79.72,
-     "y": 35.31,
+     "x": 79.49,
+     "y": 35.61,
      "letter": "О"
     },
     {
@@ -562,7 +562,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "048bc127bda07af7"
+    "contentSha256": "097fa46d1a2ace6e"
    }
   },
   {
@@ -860,7 +860,7 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": true,
-   "minSeparation": 4.6,
+   "minSeparation": 4.3,
    "markers": [
     {
      "id": "indus-mouth",
@@ -888,8 +888,8 @@
     },
     {
      "id": "huang-he-mouth",
-     "x": 79.72,
-     "y": 35.31,
+     "x": 79.49,
+     "y": 35.61,
      "letter": "S"
     },
     {
@@ -979,7 +979,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "081cb5d96b7c3090"
+    "contentSha256": "9c67c30ee6b6813b"
    }
   },
   {

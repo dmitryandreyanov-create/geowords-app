@@ -39,5 +39,23 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     }
   }
 }
+// Placement rules (Svetlana, 2026-10-23): a sea's circle sits at the centre of the sea (its label point, within 1.5% of map
+// width), and no letter lies inside another object of the same puzzle (checked here for seas and straits, whose tap
+// areas are in data/maps; the generator also checks continents, oceans, rivers and mountains).
+const ASP = 1211 / 2200, near = (a, b) => Math.hypot(a.x - b.x, (a.y - b.y) * ASP);
+const readMap = (f, key) => { const p = path.join(process.cwd(), "data/maps", f); return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8"))[key] || [] : []; };
+const seas = Object.fromEntries(readMap("world-waters.json", "waters").map(w => [w.id, w]));
+const areas = Object.fromEntries([...Object.values(seas), ...readMap("world-straits.json", "items").filter(s => !s.inset)].map(o => [o.id, o.tapArea]));
+const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
+const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
+  for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+    const ms = (p.markers || []).filter(m => !m.inset);
+    for (const m of ms) {
+      if (seas[m.id] && near(m, seas[m.id].label) > 1.5) errors.push(`${file}: ${p.id} circle for ${m.id} is not at the centre of the sea`);
+      for (const o of ms) if (o !== m && areas[o.id] && polys(areas[o.id]).some(pl => inPoly(m.x, m.y, pl))) errors.push(`${file}: ${p.id} letter on ${m.id} lies inside ${o.id}`);
+    }
+  }
+}
 if (errors.length) { console.error("GeoWords validation failed:\n" + errors.map(e => "- " + e).join("\n")); process.exit(1); }
 console.log(`GeoWords validation passed: ${count} puzzles, letters, clue order and approvals valid.`);
