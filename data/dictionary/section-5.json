@@ -1,0 +1,589 @@
+{
+ "section": "straits-and-canals",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "3 units x (1 final + 6 review) + section final CIRCUMNAVIGATION / КРУГОСВЕТКА",
+  "languages": "EN and RU lists are independent",
+  "fromWorkbook": "all 11 English workbook words; Russian workbook words where one word: ШЛЮЗОВЩИК, ПЕНТЕКОНТЕРА, ГОЛОВОНОГИЕ, СТОЯНКА, ХРОНОМЕТР, КОРАБЛЕКРУШЕНИЕ",
+  "repeats": "SHIPWRECK / КОРАБЛЕКРУШЕНИЕ repeat from section 4 with the same definitions (SHIPWRECK = the sunk ship, КОРАБЛЕКРУШЕНИЕ = the event)",
+  "notes": "CIRCUMNAVIGATION (16 letters) is the longest answer in the app; КРУГОСВЕТКА is the colloquial one-word form, the full form is in the definition",
+  "checked": "penteconter 50 oars/rowers; Hormuz and Malacca as chokepoints (EIA); Harrison chronometer and longitude (Royal Museums Greenwich); Elcano completed the first circumnavigation in 1522 (National Geographic)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}"
+ },
+ "units": [
+  {
+   "id": "unit-1-canals-and-european-straits",
+   "title": {
+    "en": "Canals and European straits",
+    "ru": "Каналы и проливы Европы"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "LOCKKEEPER",
+      "role": "final",
+      "definition": "A person who operates a canal lock to help boats move between different water levels.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "63eebfe1a1bb7466"
+      }
+     },
+     {
+      "answer": "DRAWBRIDGE",
+      "role": "review",
+      "definition": "A bridge that can be raised or moved to let ships pass.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b9a16ef148d10990"
+      }
+     },
+     {
+      "answer": "PENTEKONTER",
+      "role": "review",
+      "definition": "An ancient Greek ship powered by fifty rowers, usually twenty-five on each side.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e1ef5bb6534c0752"
+      }
+     },
+     {
+      "answer": "OARSMANSHIP",
+      "role": "review",
+      "definition": "The skill of rowing a boat.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "8a2c537a9312b4db"
+      }
+     },
+     {
+      "answer": "TUGBOAT",
+      "role": "review",
+      "definition": "A small, powerful boat that pushes or pulls large ships, especially in harbours and canals.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "5b013151766e0f93"
+      }
+     },
+     {
+      "answer": "DREDGING",
+      "role": "review",
+      "definition": "Digging sand and mud from the bottom of a canal, river or harbour to keep it deep enough for ships.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "7be2e3a23e14f6c1"
+      }
+     },
+     {
+      "answer": "NAVIGATION",
+      "role": "review",
+      "definition": "Finding and following the right route for a ship.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f0d2c2c2b631186e"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ШЛЮЗОВЩИК",
+      "role": "final",
+      "definition": "Работник, который управляет воротами шлюза, чтобы суда переходили с одного уровня воды на другой.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "886fcfe6f2c9f975"
+      }
+     },
+     {
+      "answer": "ПЕНТЕКОНТЕРА",
+      "role": "review",
+      "definition": "Древнегреческое судно с пятьюдесятью гребцами, обычно по двадцать пять с каждого борта.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "22a89545e5d8ae13"
+      }
+     },
+     {
+      "answer": "БУКСИРОВКА",
+      "role": "review",
+      "definition": "Перемещение судна с помощью другого судна — буксира — на тросе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9254fba4f57c8558"
+      }
+     },
+     {
+      "answer": "ЗЕМСНАРЯД",
+      "role": "review",
+      "definition": "Судно, которое углубляет дно каналов, рек и гаваней, вычерпывая песок и ил.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3d6335914ab681fb"
+      }
+     },
+     {
+      "answer": "НАВИГАЦИЯ",
+      "role": "review",
+      "definition": "Выбор и прокладка правильного пути для судна.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "36c2e2dd2607ae0a"
+      }
+     },
+     {
+      "answer": "ПЕРЕПРАВА",
+      "role": "review",
+      "definition": "Место, где через реку или пролив перевозят людей и грузы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "bedfe64e6bf38b01"
+      }
+     },
+     {
+      "answer": "ВОДОИЗМЕЩЕНИЕ",
+      "role": "review",
+      "definition": "Масса воды, вытесняемой плавающим судном. Она равна массе самого судна вместе с грузом.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "fb52f536823ef488"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-straits-of-asia-and-africa",
+   "title": {
+    "en": "Straits of Asia and Africa",
+    "ru": "Проливы Азии и Африки"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CHOKEPOINT",
+      "role": "final",
+      "definition": "A narrow, strategically important waterway used by many ships, such as the Strait of Hormuz.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e80bba1d68b50e9c"
+      }
+     },
+     {
+      "answer": "ANCHORAGE",
+      "role": "review",
+      "definition": "A place where ships can safely stay at anchor.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "20b82a7167889fb0"
+      }
+     },
+     {
+      "answer": "CEPHALOPOD",
+      "role": "review",
+      "definition": "A sea animal with arms or tentacles, such as an octopus, squid or cuttlefish.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2b323813b6122f8b"
+      }
+     },
+     {
+      "answer": "SUPERTANKER",
+      "role": "review",
+      "definition": "A very large ship that carries oil.",
+      "uniqueAfterLetters": 10,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "c0455e346396e231"
+      }
+     },
+     {
+      "answer": "DESALINATION",
+      "role": "review",
+      "definition": "Removing salt from seawater so that people can drink it or use it.",
+      "uniqueAfterLetters": 11,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3be830662e9c47a7"
+      }
+     },
+     {
+      "answer": "SANDBANK",
+      "role": "review",
+      "definition": "A raised area of sand under shallow water that can be dangerous for ships.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9a7e644577e1adf0"
+      }
+     },
+     {
+      "answer": "CONTAINER",
+      "role": "review",
+      "definition": "A large metal box used to carry goods on ships, trains and trucks.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a89858a36e8e5313"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ГОЛОВОНОГИЕ",
+      "role": "final",
+      "definition": "Морские моллюски, у которых вокруг рта расположены щупальца или похожие на них конечности. К ним относятся осьминоги, кальмары и каракатицы.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f7a601177c36b8ec"
+      }
+     },
+     {
+      "answer": "СТОЯНКА",
+      "role": "review",
+      "definition": "Место, где суда безопасно стоят на якоре.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "46ee21cbcb9790b2"
+      }
+     },
+     {
+      "answer": "СУПЕРТАНКЕР",
+      "role": "review",
+      "definition": "Огромное судно для перевозки нефти.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f9eb6875fac3a341"
+      }
+     },
+     {
+      "answer": "ОПРЕСНЕНИЕ",
+      "role": "review",
+      "definition": "Удаление соли из морской воды, чтобы её можно было пить и использовать.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3bb7bf03afd1d046"
+      }
+     },
+     {
+      "answer": "МЕЛКОВОДЬЕ",
+      "role": "review",
+      "definition": "Участок моря или реки с небольшой глубиной, опасный для крупных судов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "4dc9a2d80c651fc8"
+      }
+     },
+     {
+      "answer": "КОНТЕЙНЕРОВОЗ",
+      "role": "review",
+      "definition": "Судно для перевозки грузов в больших металлических контейнерах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "c21d3bad573433ae"
+      }
+     },
+     {
+      "answer": "ГРУЗОПОТОК",
+      "role": "review",
+      "definition": "Количество грузов, которое перевозят по какому-то пути; через Малаккский пролив проходит один из самых больших грузопотоков мира.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ecd093ba4fba8bb9"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-straits-of-the-americas-and-polar-seas",
+   "title": {
+    "en": "Straits of the Americas and polar seas",
+    "ru": "Проливы Америк и полярных морей"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CHRONOMETER",
+      "role": "final",
+      "definition": "A very accurate clock that sailors used to find their longitude at sea.",
+      "uniqueAfterLetters": 11,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d33b3032c72add44"
+      }
+     },
+     {
+      "answer": "SAILMAKING",
+      "role": "review",
+      "definition": "The craft of making sails for ships.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "359bc082c1787a02"
+      }
+     },
+     {
+      "answer": "SHIPWRECK",
+      "role": "review",
+      "definition": "A ship that has sunk or been destroyed at sea.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1beb33a616a9a3a9"
+      }
+     },
+     {
+      "answer": "ALBATROSS",
+      "role": "review",
+      "definition": "A large seabird with very long wings that glides over stormy southern seas, like the Drake Passage.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "055565f9a9304e17"
+      }
+     },
+     {
+      "answer": "EXPLORER",
+      "role": "review",
+      "definition": "A person who travels to explore places and learn about them.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9dccde4427e96e15"
+      }
+     },
+     {
+      "answer": "WHALING",
+      "role": "review",
+      "definition": "Hunting whales, a practice that is now heavily restricted in many countries.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "71e2163699887c17"
+      }
+     },
+     {
+      "answer": "HEADWIND",
+      "role": "review",
+      "definition": "A wind that blows against the direction a ship is moving.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "be4b0db5fc9c0cfc"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ХРОНОМЕТР",
+      "role": "final",
+      "definition": "Очень точные часы, по которым моряки определяли долготу в море.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "23b34e20ca42633d"
+      }
+     },
+     {
+      "answer": "КОРАБЛЕКРУШЕНИЕ",
+      "role": "review",
+      "definition": "Гибель или тяжёлое повреждение корабля в море.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d985b05af8c3a5ae"
+      }
+     },
+     {
+      "answer": "ПАРУСИНА",
+      "role": "review",
+      "definition": "Плотная прочная ткань, из которой шьют паруса.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "6aef696fdcac51c9"
+      }
+     },
+     {
+      "answer": "АЛЬБАТРОС",
+      "role": "review",
+      "definition": "Крупная морская птица с очень длинными крыльями, парящая над бурными южными морями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1a3360164aec85fe"
+      }
+     },
+     {
+      "answer": "ПЕРВООТКРЫВАТЕЛЬ",
+      "role": "review",
+      "definition": "Путешественник или исследователь, впервые описавший ранее неизвестные ему земли или маршруты.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b846008be9ac8c65"
+      }
+     },
+     {
+      "answer": "КИТОБОЙ",
+      "role": "review",
+      "definition": "Человек или судно, занимающиеся охотой на китов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e2d20f63ffa44b01"
+      }
+     },
+     {
+      "answer": "БУРЕВЕСТНИК",
+      "role": "review",
+      "definition": "Морская птица, которая часто летает над бурным морем.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9120f70cd701d38a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "en": "Section final",
+    "ru": "Итог раздела"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CIRCUMNAVIGATION",
+      "role": "section-final",
+      "definition": "Sailing all the way around the world, an island or a continent; the first voyage around the world was made by Magellan’s expedition (1519–1522) and completed by Juan Sebastián Elcano.",
+      "uniqueAfterLetters": 15,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "752d3d46a6b134ca"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "КРУГОСВЕТКА",
+      "role": "section-final",
+      "definition": "Кругосветное плавание — путешествие вокруг земного шара; первое совершила экспедиция Магеллана в 1519–1522 годах, завершил его Хуан Себастьян Элькано.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "68da10f8aa705335"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
