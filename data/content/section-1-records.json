@@ -1,0 +1,170 @@
+{
+ "section": "continents-and-oceans",
+ "use": "unit 4 «Соседи и рекорды»: record cards and True/False, Pairs; figures are rounded for children, exact values in figure",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {name, fact, caveat} (JSON, sorted keys, UTF-8), same as section-1-facts.json",
+ "items": [
+  {
+   "id": "asia-largest",
+   "order": 1,
+   "object": "asia",
+   "kind": "continent",
+   "unit": 4,
+   "name": {
+    "en": "Asia",
+    "ru": "Азия"
+   },
+   "fact": {
+    "en": "Asia is the largest continent: about 44.6 million km², almost a third of all land.",
+    "ru": "Азия — самый большой континент: около 44,6 млн км², почти треть всей суши."
+   },
+   "figure": {
+    "value": 44.6,
+    "unit": "million km²"
+   },
+   "source": "Encyclopedic data: 44,579,000 km², about 30% of Earth's land area",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a16231606c662511"
+   }
+  },
+  {
+   "id": "australia-smallest",
+   "order": 2,
+   "object": "australia",
+   "kind": "continent",
+   "unit": 4,
+   "name": {
+    "en": "Australia",
+    "ru": "Австралия"
+   },
+   "fact": {
+    "en": "Australia is the smallest continent: 7.69 million km².",
+    "ru": "Австралия — самый маленький континент: 7,69 млн км²."
+   },
+   "figure": {
+    "value": 7.69,
+    "unit": "million km²"
+   },
+   "source": "Geoscience Australia: 7,688,287 km², \"the smallest continental land mass\"",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "901179089de936c0"
+   }
+  },
+  {
+   "id": "antarctica-coldest",
+   "order": 3,
+   "object": "antarctica",
+   "kind": "continent",
+   "unit": 4,
+   "name": {
+    "en": "Antarctica",
+    "ru": "Антарктида"
+   },
+   "fact": {
+    "en": "The lowest temperature ever recorded on Earth, −89.2 °C, was measured at Vostok Station in Antarctica on 21 July 1983.",
+    "ru": "Самая низкая температура на Земле, −89,2 °C, была измерена на станции «Восток» в Антарктиде 21 июля 1983 года."
+   },
+   "figure": {
+    "value": -89.2,
+    "unit": "°C"
+   },
+   "source": "Guinness World Records: lowest temperature recorded on Earth, Vostok Station, 21 July 1983",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "cefba24b203c9ccf"
+   }
+  },
+  {
+   "id": "pacific-largest",
+   "order": 4,
+   "object": "pacific-ocean",
+   "kind": "ocean",
+   "unit": 4,
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The Pacific is the largest ocean: about 166 million km², bigger than all the land on Earth put together.",
+    "ru": "Тихий океан — самый большой: около 166 млн км², больше всей суши вместе взятой."
+   },
+   "figure": {
+    "value": 166,
+    "unit": "million km²"
+   },
+   "source": "Webb, Introduction to Oceanography 1.1 (166 million km²); NOAA Ocean Explorer: larger than all continents combined",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "bca97fb1f22a7123"
+   }
+  },
+  {
+   "id": "pacific-deepest",
+   "order": 5,
+   "object": "pacific-ocean",
+   "kind": "ocean",
+   "unit": 4,
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The deepest place in the ocean is the Mariana Trench in the Pacific: almost 11 km (10,935 m).",
+    "ru": "Самое глубокое место океана — Марианская впадина в Тихом океане: почти 11 км (10 935 м)."
+   },
+   "figure": {
+    "value": 10935,
+    "unit": "m"
+   },
+   "source": "Guinness World Records: Challenger Deep 10,935 m ± 6 m (dives of June 2020)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a5cc5e58660b2fbb"
+   }
+  },
+  {
+   "id": "arctic-smallest-shallowest",
+   "order": 6,
+   "object": "arctic-ocean",
+   "kind": "ocean",
+   "unit": 4,
+   "name": {
+    "en": "Arctic Ocean",
+    "ru": "Северный Ледовитый океан"
+   },
+   "fact": {
+    "en": "The Arctic is the smallest and shallowest ocean: 15.6 million km², average depth 1,205 m.",
+    "ru": "Северный Ледовитый — самый маленький и самый мелкий океан: 15,6 млн км², средняя глубина 1205 м."
+   },
+   "figure": {
+    "value": 15.6,
+    "unit": "million km²",
+    "averageDepthM": 1205
+   },
+   "source": "Guinness World Records (NOAA figures): 15,558,000 km², average depth 1,205 m",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a42aeb6f5dd825f9"
+   }
+  }
+ ]
+}

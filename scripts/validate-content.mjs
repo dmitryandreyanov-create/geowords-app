@@ -29,5 +29,19 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     }
   }
 }
+// Relations (washedBy / neutral): every id must be a known continent or ocean; neutral never doubles as an answer.
+const facts = path.join(dir, "section-1-facts.json"), relFile = path.join(dir, "section-1-relations.json");
+if (fs.existsSync(facts) && fs.existsSync(relFile)) {
+  const kinds = Object.fromEntries(JSON.parse(fs.readFileSync(facts, "utf8")).items.map(it => [it.id, it.kind]));
+  const rel = JSON.parse(fs.readFileSync(relFile, "utf8"));
+  for (const [c, oceans] of Object.entries(rel.washedBy || {})) {
+    if (kinds[c] !== "continent") errors.push(`section-1-relations.json: ${c} is not a continent`);
+    for (const o of oceans) if (kinds[o] !== "ocean") errors.push(`section-1-relations.json: ${c} -> ${o} is not an ocean`);
+    for (const o of Object.keys(rel.neutral?.[c] || {}))
+      if (oceans.includes(o) || kinds[o] !== "ocean") errors.push(`section-1-relations.json: neutral ${c} -> ${o} must be an ocean that is not an answer`);
+  }
+  if (Object.keys(rel.washedBy || {}).length !== Object.values(kinds).filter(k => k === "continent").length)
+    errors.push("section-1-relations.json: washedBy must list every continent");
+}
 if (errors.length) { console.error("Content validation failed:\n" + errors.map(e => "- " + e).join("\n")); process.exit(1); }
 console.log(`Content validation passed: ${count} items, approvals match their text.`);
