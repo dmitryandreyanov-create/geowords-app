@@ -86,13 +86,13 @@
      {
       "answer": "SHIPWRECK",
       "role": "review",
-      "definition": "The remains of a ship that has sunk or been destroyed at sea.",
+      "definition": "A ship that has sunk or been destroyed at sea.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
        "date": "2026-10-23",
-       "contentSha256": "6f3dd281b84b5c40"
+       "contentSha256": "1beb33a616a9a3a9"
       }
      },
      {
