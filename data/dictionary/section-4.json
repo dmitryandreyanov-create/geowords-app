@@ -1,0 +1,590 @@
+{
+ "section": "seas-of-the-world",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "3 units x (1 final + 6 review) + section final PLESIOSAUR / ПЛЕЗИОЗАВР; no intro card for this section",
+  "languages": "EN and RU lists are independent",
+  "fromWorkbook": "all 10 English workbook words; Russian workbook words used where they are one word: ЛАГУНА, ПЛАВСРЕДСТВО, ЗВЕЗДОЧЁТ, РАКООБРАЗНЫЕ, СНОРКЛИНГ (for \"плавание с маской и трубкой\"), ВЕЙКБОРДИНГ, ПЛЕЗИОЗАВР; ВИД and МАЯК too short, «кунья акула» two words",
+  "shortWords": "LAGOON (6) kept as a workbook word",
+  "checked": "Pharos one of the Seven Wonders; Sundarbans largest continuous mangrove forest (UNESCO); no free oxygen below ~150 m in the Black Sea; cyclone (Indian Ocean) vs hurricane (Atlantic) per NOAA",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}"
+ },
+ "units": [
+  {
+   "id": "unit-1-mediterranean-black-red-caspian",
+   "title": {
+    "en": "Mediterranean, Black, Red and Caspian Seas",
+    "ru": "Средиземное, Чёрное, Красное и Каспийское моря"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "LIGHTHOUSE",
+      "role": "final",
+      "definition": "A tower with a bright light that guides ships at night; the Lighthouse of Alexandria on the Mediterranean was one of the Seven Wonders of the Ancient World.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "013ce517d57dd284"
+      }
+     },
+     {
+      "answer": "STARGAZER",
+      "role": "review",
+      "definition": "A fish that buries itself in the sand on the seabed, with eyes on top of its head looking upward.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2cab84a8d65eb43a"
+      }
+     },
+     {
+      "answer": "HOUNDSHARK",
+      "role": "review",
+      "definition": "A small, slender shark that lives near coasts and often hunts on the seabed.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "bb2be9cc9ce895ba"
+      }
+     },
+     {
+      "answer": "LANDLOCKED",
+      "role": "review",
+      "definition": "Completely surrounded by land; the Caspian Sea is landlocked.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2d5062c7fd9329ed"
+      }
+     },
+     {
+      "answer": "STURGEON",
+      "role": "review",
+      "definition": "A large, ancient fish of the Caspian and Black Sea regions whose eggs are eaten as caviar.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "082dce316c26a792"
+      }
+     },
+     {
+      "answer": "SHIPWRECK",
+      "role": "review",
+      "definition": "A ship that has sunk or been destroyed at sea.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1beb33a616a9a3a9"
+      }
+     },
+     {
+      "answer": "SEAHORSE",
+      "role": "review",
+      "definition": "A small fish that swims upright and has a head shaped like a horse’s.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "89608f2154922c0c"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ЗВЕЗДОЧЁТ",
+      "role": "final",
+      "definition": "Рыба, которая зарывается в песок на дне; её глаза находятся на верхней стороне головы и смотрят вверх.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e0a482e0052d35c8"
+      }
+     },
+     {
+      "answer": "ПЛАВСРЕДСТВО",
+      "role": "review",
+      "definition": "Любое судно или устройство для передвижения по воде: лодка, корабль, плот.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "32b1193c8293e92b"
+      }
+     },
+     {
+      "answer": "ОСЕТРОВЫЕ",
+      "role": "review",
+      "definition": "Древние крупные рыбы Каспийского и Чёрного морей; их икра — чёрная икра.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2a789ca2fd129dbb"
+      }
+     },
+     {
+      "answer": "СЕРОВОДОРОД",
+      "role": "review",
+      "definition": "Ядовитый газ; глубинные воды Чёрного моря насыщены им, поэтому там почти нет жизни.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "6e32487b0694c60b"
+      }
+     },
+     {
+      "answer": "КОРАБЛЕКРУШЕНИЕ",
+      "role": "review",
+      "definition": "Гибель или тяжёлое повреждение корабля в море.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d985b05af8c3a5ae"
+      }
+     },
+     {
+      "answer": "ДЕЛЬФИН",
+      "role": "review",
+      "definition": "Умное морское млекопитающее из отряда китообразных, которое дышит воздухом.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2c1943a0a7107c1c"
+      }
+     },
+     {
+      "answer": "МОЛЛЮСКИ",
+      "role": "review",
+      "definition": "Мягкотелые животные, многие из которых живут в раковинах: мидии, устрицы, улитки, а также кальмары.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "0827703ea6d753be"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-arabian-bengal-coral",
+   "title": {
+    "en": "Arabian Sea, Bay of Bengal, Coral Sea",
+    "ru": "Аравийское море, Бенгальский залив, Коралловое море"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CRUSTACEANS",
+      "role": "final",
+      "definition": "Animals with a hard outer shell and jointed legs, such as crabs, shrimp and lobsters.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "6857302ffd1679e9"
+      }
+     },
+     {
+      "answer": "SPECIES",
+      "role": "review",
+      "definition": "A group of living things of the same kind that can breed with each other.",
+      "uniqueAfterLetters": 6,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e28fe50d22e50c7f"
+      }
+     },
+     {
+      "answer": "LAGOON",
+      "role": "review",
+      "definition": "A shallow area of salt water separated from the sea by a reef or a strip of land.",
+      "uniqueAfterLetters": 5,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "7226aae144f24a9a"
+      }
+     },
+     {
+      "answer": "MANGROVE",
+      "role": "review",
+      "definition": "A tree that grows in salty water along tropical coasts; the Sundarbans on the Bay of Bengal is the largest continuous mangrove forest in the world.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "484060aafb84a5ef"
+      }
+     },
+     {
+      "answer": "JELLYFISH",
+      "role": "review",
+      "definition": "A soft sea animal with a bell-shaped body and stinging tentacles.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b9d2a2975e525243"
+      }
+     },
+     {
+      "answer": "CYCLONE",
+      "role": "review",
+      "definition": "A powerful tropical storm with strong winds; in the Bay of Bengal such storms are called cyclones.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f33562bafc9f3b30"
+      }
+     },
+     {
+      "answer": "SEAFARING",
+      "role": "review",
+      "definition": "Travelling by sea, especially as a way of life or work.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f57d1476d913ee5f"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "РАКООБРАЗНЫЕ",
+      "role": "final",
+      "definition": "Животные с твёрдым панцирем и членистыми ногами: крабы, креветки, раки, омары.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "93811ca7ab043610"
+      }
+     },
+     {
+      "answer": "ЛАГУНА",
+      "role": "review",
+      "definition": "Мелководный залив или озеро с солёной водой, отделённые от моря рифом или полосой суши.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "186126a3e3d19846"
+      }
+     },
+     {
+      "answer": "МАНГРОВЫ",
+      "role": "review",
+      "definition": "Деревья и кустарники, растущие в солёной воде у тропических берегов; Сундарбан на Бенгальском заливе — самый большой сплошной мангровый лес мира.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9eea40882e16de12"
+      }
+     },
+     {
+      "answer": "БИОРАЗНООБРАЗИЕ",
+      "role": "review",
+      "definition": "Разнообразие видов живых организмов в какой-то местности; Коралловое море — одно из самых богатых по биоразнообразию.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "61bbafc31f33be3e"
+      }
+     },
+     {
+      "answer": "ЖЕМЧУЖИНА",
+      "role": "review",
+      "definition": "Блестящий шарик, который образуется внутри раковины моллюска; жемчуг издавна добывали в Персидском заливе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "55fcbaf70dce065a"
+      }
+     },
+     {
+      "answer": "МОРЕПЛАВАТЕЛЬ",
+      "role": "review",
+      "definition": "Человек, который совершает плавания по морям.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9d8149d82f5e94c1"
+      }
+     },
+     {
+      "answer": "КАРАКАТИЦА",
+      "role": "review",
+      "definition": "Морской моллюск со щупальцами, который выпускает чернильное облако, чтобы спрятаться.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f47ae341d3f1870a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-caribbean-gulf-of-mexico-hudson-bay-records",
+   "title": {
+    "en": "Caribbean Sea, Gulf of Mexico, Hudson Bay and records",
+    "ru": "Карибское море, Мексиканский и Гудзонов заливы, рекорды"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "SNORKELING",
+      "role": "final",
+      "definition": "Swimming at the surface with a mask and a breathing tube to look at the underwater world.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1848fbe2305413b3"
+      }
+     },
+     {
+      "answer": "WATERCRAFT",
+      "role": "review",
+      "definition": "A boat, ship or other vehicle that travels on water.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "2802931447ecde00"
+      }
+     },
+     {
+      "answer": "WAKEBOARDING",
+      "role": "review",
+      "definition": "A water sport in which a rider on a board is pulled behind a motorboat.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f87e082bdd974ca6"
+      }
+     },
+     {
+      "answer": "HURRICANE",
+      "role": "review",
+      "definition": "A powerful tropical storm with very strong winds that forms over the Atlantic, including the Caribbean Sea and the Gulf of Mexico.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "538c1656380d3011"
+      }
+     },
+     {
+      "answer": "BARRACUDA",
+      "role": "review",
+      "definition": "A long, fast fish with sharp teeth that lives in warm seas such as the Caribbean.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a756d48e55e07dcb"
+      }
+     },
+     {
+      "answer": "PIRATES",
+      "role": "review",
+      "definition": "Robbers who attack ships at sea; the Caribbean was famous for them in the 1600s and 1700s.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "90fd06beab44ab56"
+      }
+     },
+     {
+      "answer": "ICEBREAKER",
+      "role": "review",
+      "definition": "A strong ship that breaks through ice to open a path for other ships.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "227373318ad42cb7"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "СНОРКЛИНГ",
+      "role": "final",
+      "definition": "Плавание у поверхности воды с маской и трубкой, чтобы рассматривать подводный мир.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "57bc16125d1bec67"
+      }
+     },
+     {
+      "answer": "ВЕЙКБОРДИНГ",
+      "role": "review",
+      "definition": "Водный вид спорта: спортсмен на доске едет за моторной лодкой.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b237090b30d7e7a3"
+      }
+     },
+     {
+      "answer": "ПИРАТСТВО",
+      "role": "review",
+      "definition": "Морской разбой — нападения на корабли; в XVII–XVIII веках Карибское море было известно пиратами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "847e8ad9e20aa39b"
+      }
+     },
+     {
+      "answer": "БАРРАКУДА",
+      "role": "review",
+      "definition": "Длинная быстрая хищная рыба с острыми зубами, живущая в тёплых морях, например в Карибском.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d58a73665acdf6e8"
+      }
+     },
+     {
+      "answer": "ЛЕДОКОЛ",
+      "role": "review",
+      "definition": "Мощное судно, которое ломает лёд и прокладывает путь другим кораблям.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "4c545a0cbed8de3a"
+      }
+     },
+     {
+      "answer": "АКВАЛАНГ",
+      "role": "review",
+      "definition": "Аппарат для дыхания под водой с баллонами сжатого воздуха.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "bc8c55559d1d63b3"
+      }
+     },
+     {
+      "answer": "ПОЛЯРНИК",
+      "role": "review",
+      "definition": "Человек, который живёт и работает в полярных районах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9eaeedff8a350377"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "en": "Section final",
+    "ru": "Итог раздела"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "PLESIOSAUR",
+      "role": "section-final",
+      "definition": "A large sea reptile with a long neck and four flippers that lived in the age of the dinosaurs.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "8bac3a147a2196c9"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПЛЕЗИОЗАВР",
+      "role": "section-final",
+      "definition": "Крупная морская рептилия с длинной шеей и четырьмя ластами, жившая в эпоху динозавров.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b0fb4b5f6d28a44f"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
