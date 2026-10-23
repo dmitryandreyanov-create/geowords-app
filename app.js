@@ -4,7 +4,7 @@ const screens=["homeScreen","factsScreen","gameScreen","finishScreen"];
 const memoryStore=new Map();
 const pendingTimers=new Set();
 let levelIndex=0,level=levels[0];
-let clueIndex=0,solvedMarkerIds=new Set(),solvedLetters=[],scale=1,tx=0,ty=0,pointers=new Map(),dragStart=null,pinchStart=null;
+let clueIndex=0,solvedMarkerIds=new Set(),solvedLetters=[],filledCount=0,scale=1,tx=0,ty=0,pointers=new Map(),dragStart=null,pinchStart=null;
 let inputLocked=false,suppressClicksUntil=0;
 
 function safeGet(key){
@@ -69,7 +69,7 @@ function resetGame(){
   clearPendingTimers();
   inputLocked=false;
   suppressClicksUntil=0;
-  clueIndex=0;solvedMarkerIds=new Set();solvedLetters=[];scale=1;tx=0;ty=0;
+  clueIndex=0;solvedMarkerIds=new Set();solvedLetters=new Array(level.answer.length).fill(null);filledCount=0;scale=1;tx=0;ty=0;
   pointers.clear();dragStart=null;pinchStart=null;
   $("levelTitle").textContent=level.title+" · "+level.unit;
   $("mapImage").src=level.map;
@@ -97,7 +97,7 @@ function renderWord(){
   wrap.dataset.long=level.answer.length>=9?"1":"0";
   level.answer.split("").forEach((_,i)=>{
     const d=document.createElement("div");d.className="slot";
-    if(i<solvedLetters.length){d.textContent=solvedLetters[i];d.classList.add("filled")}
+    if(solvedLetters[i]){d.textContent=solvedLetters[i];d.classList.add("filled")}
     wrap.appendChild(d);
   });
 }
@@ -108,8 +108,8 @@ function renderClue(){
   $("feedback").textContent="";$("feedback").className="feedback";
 }
 function renderProgress(){
-  $("progressText").textContent=solvedLetters.length+" / "+level.clues.length;
-  $("progressBar").style.width=(solvedLetters.length/level.clues.length*100)+"%";
+  $("progressText").textContent=filledCount+" / "+level.clues.length;
+  $("progressBar").style.width=(filledCount/level.clues.length*100)+"%";
 }
 function chooseMarker(marker,el){
   if(inputLocked||clueIndex>=level.clues.length)return;
@@ -120,11 +120,16 @@ function chooseMarker(marker,el){
   }
 
   inputLocked=true;
-  if(!solvedMarkerIds.has(marker.id)){solvedMarkerIds.add(marker.id);solvedLetters.push(marker.letter)}
+  if(!solvedMarkerIds.has(marker.id)){
+    solvedMarkerIds.add(marker.id);
+    // letters need not come in word order: each clue names its slot
+    const position=(level.clues[clueIndex].position||clueIndex+1)-1;
+    solvedLetters[position]=marker.letter;filledCount+=1;
+  }
   feedback.textContent="Yes! You found "+marker.letter+".";feedback.className="feedback ok";
   renderHotspots();renderWord();renderProgress();
 
-  if(solvedLetters.length===level.clues.length){
+  if(filledCount===level.clues.length){
     later(finish,550);
     return;
   }
@@ -156,7 +161,12 @@ function applyTransform(){
   $("mapCanvas").style.transform="translate("+tx+"px,"+ty+"px) scale("+scale+")";
   $("resetZoom").textContent=Math.round(scale*100)+"%";
 }
+function hidePinchHint(){
+  const h=$("pinchHint");if(!h||h.hidden)return;
+  h.hidden=true;safeSet("geowords-pinch-hint-seen","1");
+}
 function setScale(next,cx,cy){
+  hidePinchHint();
   next=Math.max(1,Math.min(3,next));
   const vp=$("mapViewport");
   cx=cx??vp.clientWidth/2;cy=cy??vp.clientHeight/2;
@@ -194,6 +204,7 @@ function releaseCapture(pointerId){
 
 const vp=$("mapViewport");
 vp.addEventListener("pointerdown",e=>{
+  hidePinchHint();
   pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});
   if(pointers.size===1){
     dragStart={pointerId:e.pointerId,x:e.clientX,y:e.clientY,tx,ty,active:false};
@@ -273,6 +284,8 @@ $("nextBtn").addEventListener("click",()=>{selectLevel(levelIndex+1);show("facts
 $("homeBtn").addEventListener("click",()=>{renderHome();show("homeScreen")});
 
 renderHome();
+// first visit: show the pinch-to-zoom hint until the map is touched or zoomed
+if($("pinchHint")&&safeGet("geowords-pinch-hint-seen")!=="1")$("pinchHint").hidden=false;
 if("serviceWorker" in navigator){
   navigator.serviceWorker.register("./sw.js").then(reg=>reg.update()).catch(()=>{});
 }
