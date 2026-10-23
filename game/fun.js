@@ -218,8 +218,9 @@ function useHint(){
   if(!el)return;
   word.hintUsed=true;el.classList.add("hint-glow");say(pick(SAY.hint),"hint");tone(880,0,.25,"sine",.07);
 }
-function flyLetter(letter,from){
-  const slots=document.querySelectorAll("#wordSlots .slot.filled");const to=slots[slots.length-1];
+function flyLetter(letter,from,slot){
+  const slots=document.querySelectorAll("#wordSlots .slot.filled");
+  const to=(slot!=null&&document.querySelector(`#wordSlots .slot[data-slot="${slot}"]`))||slots[slots.length-1];
   if(!from||!to)return;
   const t=to.getBoundingClientRect(),f=document.createElement("div");
   f.className="fly-letter";f.textContent=letter;
@@ -461,7 +462,7 @@ document.addEventListener("gw:correct",e=>{
   touchStreak();
   word.combo++;word.best=Math.max(word.best,word.combo);word.clueMistakes=0;word.expected=e.detail.nextExpected||null;
   const xp=10+Math.min(word.combo-1,5)*2;word.xp+=xp;gainXP(xp,true);
-  sfx.correct(word.combo);buzz(15);flyLetter(e.detail.letter,e.detail.rect);setCombo();
+  sfx.correct(word.combo);buzz(15);flyLetter(e.detail.letter,e.detail.rect,e.detail.slot);setCombo();
   say(word.combo>=3&&word.combo%3===0?pick(SAY.combo):pick(SAY.correct),"happy");
   questEvent("correct",e.detail.clue);if(word.combo===5)questEvent("combo5");
   save();
