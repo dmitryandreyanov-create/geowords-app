@@ -1,0 +1,1207 @@
+{
+ "section": "seas-of-the-world",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters inside the 10 seas (World Waters tap areas), plus mountains, rivers, continents and oceans already learned; unit 3 names seas by approved records; \"Gulf of Mexico\" kept as on the map (naming caveat lives on the fact card)",
+  "spacing": "as sections 2-3: circles far apart, no callout arrows",
+  "needsZoom": "true for every puzzle here: the seas are smaller than a finger on a phone map (Svetlana, 2026-10-23). General rule: re-show the pinch hint when circles are close OR the puzzle has small objects",
+  "approval": "same as section-1.json"
+ },
+ "puzzles": [
+  {
+   "id": "section-4-unit-1-en",
+   "section": "seas-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "LIGHTHOUSE",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 7.3,
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "L"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 72.44,
+     "letter": "I"
+    },
+    {
+     "id": "black-sea",
+     "x": 54.45,
+     "y": 32.34,
+     "letter": "G"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "H"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "T"
+    },
+    {
+     "id": "mississippi-mouth",
+     "x": 21.95,
+     "y": 40.36,
+     "letter": "H"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "O"
+    },
+    {
+     "id": "australia",
+     "x": 87.55,
+     "y": 67.99,
+     "letter": "U"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.55,
+     "y": 35.64,
+     "letter": "S"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 93,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Find the fifth letter in the Andes."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the Red Sea."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 10,
+     "text": "Find the tenth letter in Antarctica."
+    },
+    {
+     "markerId": "mississippi-mouth",
+     "position": 6,
+     "text": "Find the sixth letter at the mouth of the Mississippi."
+    },
+    {
+     "markerId": "australia",
+     "position": 8,
+     "text": "Find the eighth letter in Australia."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 3,
+     "text": "Find the third letter in the Black Sea."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 4,
+     "text": "Find the fourth letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Caspian Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "ce853cd215a7eb6d"
+   }
+  },
+  {
+   "id": "section-4-unit-1-ru",
+   "section": "seas-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ЗВЕЗДОЧЁТ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 7.3,
+   "markers": [
+    {
+     "id": "australia",
+     "x": 79.36,
+     "y": 67.66,
+     "letter": "З"
+    },
+    {
+     "id": "indian-ocean",
+     "x": 91.36,
+     "y": 84.49,
+     "letter": "В"
+    },
+    {
+     "id": "amazon-river",
+     "x": 26.75,
+     "y": 63.16,
+     "letter": "Е"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "З"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "Д"
+    },
+    {
+     "id": "black-sea",
+     "x": 54.45,
+     "y": 32.34,
+     "letter": "О"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.55,
+     "y": 35.64,
+     "letter": "Ч"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "Ё"
+    },
+    {
+     "id": "antarctica",
+     "x": 56.55,
+     "y": 93,
+     "letter": "Т"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "indian-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в Индийском океане."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Чёрном море."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 4,
+     "text": "Найди четвёртую букву в Кордильерах."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву в Антарктиде."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 5,
+     "text": "Найди пятую букву в Средиземном море."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в Красном море."
+    },
+    {
+     "markerId": "amazon-river",
+     "position": 3,
+     "text": "Найди третью букву на Амазонке."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 7,
+     "text": "Найди седьмую букву в Каспийском море."
+    },
+    {
+     "markerId": "australia",
+     "position": 1,
+     "text": "Найди первую букву в Австралии."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "33cf06726b0cbf73"
+   }
+  },
+  {
+   "id": "section-4-unit-2-en",
+   "section": "seas-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CRUSTACEANS",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 8.9,
+   "markers": [
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "C"
+    },
+    {
+     "id": "andes",
+     "x": 25.73,
+     "y": 62.38,
+     "letter": "R"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 64.45,
+     "y": 53.14,
+     "letter": "U"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 46.82,
+     "y": 84.49,
+     "letter": "S"
+    },
+    {
+     "id": "red-sea",
+     "x": 57,
+     "y": 44.22,
+     "letter": "T"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.27,
+     "y": 29.87,
+     "letter": "A"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 72.55,
+     "y": 45.38,
+     "letter": "C"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "E"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "A"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "N"
+    },
+    {
+     "id": "antarctica",
+     "x": 74.73,
+     "y": 93,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "caspian-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "andes",
+     "position": 2,
+     "text": "Find the second letter in the Andes."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the Red Sea."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 11,
+     "text": "Find the eleventh letter in Antarctica."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the Coral Sea."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 3,
+     "text": "Find the third letter in the Arabian Sea."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 7,
+     "text": "Find the seventh letter in the Bay of Bengal."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 10,
+     "text": "Find the tenth letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 1,
+     "text": "Find the first letter in the North American Cordillera."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 9,
+     "text": "Find the ninth letter in the Arctic Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0f49ebad97896aa4"
+   }
+  },
+  {
+   "id": "section-4-unit-2-ru",
+   "section": "seas-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "РАКООБРАЗНЫЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 7.3,
+   "markers": [
+    {
+     "id": "nile-river",
+     "x": 55.05,
+     "y": 50.78,
+     "letter": "Р"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.55,
+     "y": 35.64,
+     "letter": "А"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 72.73,
+     "y": 46.04,
+     "letter": "К"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "О"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "О"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "Б"
+    },
+    {
+     "id": "andes",
+     "x": 24.45,
+     "y": 56.93,
+     "letter": "Р"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 41.91,
+     "y": 87.13,
+     "letter": "А"
+    },
+    {
+     "id": "antarctica",
+     "x": 74.27,
+     "y": 93,
+     "letter": "З"
+    },
+    {
+     "id": "black-sea",
+     "x": 54.45,
+     "y": 32.34,
+     "letter": "Н"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "Ы"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 64.18,
+     "y": 52.48,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cordillera",
+     "position": 6,
+     "text": "Найди шестую букву в Кордильерах."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 3,
+     "text": "Найди третью букву в Бенгальском заливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву в Антарктиде."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Аравийском море."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 5,
+     "text": "Найди пятую букву в Средиземном море."
+    },
+    {
+     "markerId": "andes",
+     "position": 7,
+     "text": "Найди седьмую букву в Андах."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Каспийском море."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 10,
+     "text": "Найди десятую букву в Чёрном море."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Коралловом море."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 1,
+     "text": "Найди первую букву на Ниле."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Атлантическом океане."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "720f616fd7156ecf"
+   }
+  },
+  {
+   "id": "section-4-unit-3-en",
+   "section": "seas-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SNORKELING",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 10.6,
+   "markers": [
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "S"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.64,
+     "y": 16.34,
+     "letter": "N"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.27,
+     "y": 29.87,
+     "letter": "O"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 19.73,
+     "y": 41.09,
+     "letter": "R"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "K"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 72.73,
+     "y": 46.04,
+     "letter": "E"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 29.91,
+     "y": 49.17,
+     "letter": "L"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "I"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "N"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.45,
+     "y": 93,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bay-of-bengal",
+     "position": 6,
+     "text": "Find the sixth letter in the largest bay in the world."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 2,
+     "text": "Find the second letter in Hudson Bay."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 10,
+     "text": "Find the tenth letter in Antarctica."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 3,
+     "text": "Find the third letter in the largest inland body of water."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the sea with the largest coral reef."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the saltiest sea connected to the ocean."
+    },
+    {
+     "markerId": "andes",
+     "position": 1,
+     "text": "Find the first letter in the longest range on land."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 4,
+     "text": "Find the fourth letter in the Gulf of Mexico."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "e49849b92f41851d"
+   }
+  },
+  {
+   "id": "section-4-unit-3-ru",
+   "section": "seas-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СНОРКЛИНГ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "himalayas",
+     "x": 68,
+     "y": 37.95,
+     "letter": "С"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 72.55,
+     "y": 52.15,
+     "letter": "Н"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "О"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 29.91,
+     "y": 49.17,
+     "letter": "Р"
+    },
+    {
+     "id": "antarctica",
+     "x": 62.18,
+     "y": 93,
+     "letter": "К"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.64,
+     "y": 16.34,
+     "letter": "Л"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 19.73,
+     "y": 41.09,
+     "letter": "И"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "Н"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 59.82,
+     "y": 31.02,
+     "letter": "Г"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "coral-sea",
+     "position": 3,
+     "text": "Найди третью букву в море с самым большим коралловым рифом."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 6,
+     "text": "Найди шестую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 2,
+     "text": "Найди вторую букву в самом большом заливе мира."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Карибском море."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 7,
+     "text": "Найди седьмую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 5,
+     "text": "Найди пятую букву в Антарктиде."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 9,
+     "text": "Найди девятую букву в самом большом внутреннем водоёме."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 1,
+     "text": "Найди первую букву в горах с самой высокой вершиной мира."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в самом солёном море Мирового океана."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "4bcbbd8298a60cfa"
+   }
+  },
+  {
+   "id": "section-4-final-en",
+   "section": "seas-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "PLESIOSAUR",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 7.3,
+   "markers": [
+    {
+     "id": "caspian-sea",
+     "x": 61.55,
+     "y": 35.64,
+     "letter": "P"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 29.91,
+     "y": 49.17,
+     "letter": "L"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 66.09,
+     "y": 54.46,
+     "letter": "E"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.91,
+     "y": 43.73,
+     "letter": "S"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 19.73,
+     "y": 41.09,
+     "letter": "I"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "O"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "S"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "A"
+    },
+    {
+     "id": "black-sea",
+     "x": 54.45,
+     "y": 32.34,
+     "letter": "U"
+    },
+    {
+     "id": "hudson-bay",
+     "x": 22.64,
+     "y": 16.34,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "coral-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the Coral Sea."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 2,
+     "text": "Find the second letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 4,
+     "text": "Find the fourth letter in the Bay of Bengal."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 10,
+     "text": "Find the tenth letter in Hudson Bay."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the Red Sea."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Black Sea."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 3,
+     "text": "Find the third letter in the Arabian Sea."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 5,
+     "text": "Find the fifth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 1,
+     "text": "Find the first letter in the Caspian Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f0dd769bbc24fbf2"
+   }
+  },
+  {
+   "id": "section-4-final-ru",
+   "section": "seas-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ПЛЕЗИОЗАВР",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "small seas: their areas are smaller than a finger on a phone map",
+   "minSeparation": 7.3,
+   "markers": [
+    {
+     "id": "hudson-bay",
+     "x": 22.64,
+     "y": 16.34,
+     "letter": "П"
+    },
+    {
+     "id": "coral-sea",
+     "x": 93.64,
+     "y": 65.68,
+     "letter": "Л"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 45.36,
+     "y": 36.3,
+     "letter": "Е"
+    },
+    {
+     "id": "arabian-sea",
+     "x": 66.09,
+     "y": 54.46,
+     "letter": "З"
+    },
+    {
+     "id": "gulf-of-mexico",
+     "x": 19.73,
+     "y": 41.09,
+     "letter": "И"
+    },
+    {
+     "id": "red-sea",
+     "x": 58.55,
+     "y": 48.51,
+     "letter": "О"
+    },
+    {
+     "id": "black-sea",
+     "x": 54.45,
+     "y": 32.34,
+     "letter": "З"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 61.55,
+     "y": 35.64,
+     "letter": "А"
+    },
+    {
+     "id": "bay-of-bengal",
+     "x": 71.91,
+     "y": 43.73,
+     "letter": "В"
+    },
+    {
+     "id": "caribbean-sea",
+     "x": 29.91,
+     "y": 49.17,
+     "letter": "Р"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mediterranean-sea",
+     "position": 3,
+     "text": "Найди третью букву в Средиземном море."
+    },
+    {
+     "markerId": "gulf-of-mexico",
+     "position": 5,
+     "text": "Найди пятую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "coral-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Коралловом море."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в Каспийском море."
+    },
+    {
+     "markerId": "arabian-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Аравийском море."
+    },
+    {
+     "markerId": "caribbean-sea",
+     "position": 10,
+     "text": "Найди десятую букву в Карибском море."
+    },
+    {
+     "markerId": "black-sea",
+     "position": 7,
+     "text": "Найди седьмую букву в Чёрном море."
+    },
+    {
+     "markerId": "bay-of-bengal",
+     "position": 9,
+     "text": "Найди девятую букву в Бенгальском заливе."
+    },
+    {
+     "markerId": "red-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Красном море."
+    },
+    {
+     "markerId": "hudson-bay",
+     "position": 1,
+     "text": "Найди первую букву в Гудзоновом заливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "850541625e393e83"
+   }
+  }
+ ]
+}
