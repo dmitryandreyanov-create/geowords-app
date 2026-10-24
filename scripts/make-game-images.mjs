@@ -21,11 +21,12 @@ for(const a of manifest.assets){
   // Sheets and wide scenes are for review, not for the game screens.
   if(a.width!==a.height){skipped++;continue}
   const out=path.join(path.dirname(a.path),'game',path.basename(a.path).replace(/\.png$/i,'.webp')).replaceAll(path.sep,'/');
-  if(a.gamePath===out&&a.gameSourceSha256===a.sha256&&fs.existsSync(out)){kept++;continue}
+  const size=Math.min(GAME_SIZE,a.width);
+  if(a.gamePath===out&&a.gameSourceSha256===a.sha256&&a.gameSize===size&&fs.existsSync(out)){kept++;continue}
   fs.mkdirSync(path.dirname(out),{recursive:true});
-  execFileSync('ffmpeg',['-loglevel','error','-y','-i',a.path,'-vf',`scale=${GAME_SIZE}:${GAME_SIZE}:flags=lanczos`,
+  execFileSync('ffmpeg',['-loglevel','error','-y','-i',a.path,'-vf',`scale=${size}:${size}:flags=lanczos`,
     '-c:v','libwebp','-q:v',String(QUALITY),'-compression_level','6',out]);
-  Object.assign(a,{gamePath:out,gameSize:GAME_SIZE,gameBytes:fs.statSync(out).size,gameSourceSha256:a.sha256});
+  Object.assign(a,{gamePath:out,gameSize:size,gameBytes:fs.statSync(out).size,gameSourceSha256:a.sha256});
   made++;
 }
 fs.writeFileSync(MANIFEST,JSON.stringify(manifest,null,2)+'\n');

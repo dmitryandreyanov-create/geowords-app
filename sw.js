@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.6.9-expedition-graphics";
+const CACHE="geowords-v0.6.10-graphics-complete";
 const CORE=[
   "./",
   "./index.html",
@@ -30,6 +30,10 @@ const CORE=[
   "./assets/graphics/game/rank-4-sail.webp",
   "./assets/graphics/game/rank-5-anchor.webp",
   "./assets/graphics/game/rank-6-globe.webp",
+  "./assets/graphics/game/icon-star.webp",
+  "./assets/graphics/game/icon-streak.webp",
+  "./assets/graphics/game/icon-goal.webp",
+  "./assets/graphics/game/icon-hint.webp",
   "./graphics/index.html",
   "./graphics/gallery.css",
   "./graphics/gallery.js",

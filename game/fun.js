@@ -449,7 +449,7 @@ document.addEventListener("gw:wrong",e=>{
   setCombo();sfx.wrong();buzz([30,40,30]);
   if(word.clueMistakes>=3){
     say(pick(SAY.hintOffer),"hint");
-    const btn=document.createElement("button");btn.type="button";btn.className="hint-btn";btn.textContent="🔭 Use telescope";
+    const btn=document.createElement("button");btn.type="button";btn.className="hint-btn";btn.textContent="Use telescope";
     btn.addEventListener("click",useHint);$("pipGuide")?.querySelector(".pip-bubble").appendChild(btn);
   }else say(pick(SAY.wrong),"sad");
 });

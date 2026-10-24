@@ -1,4 +1,9 @@
 .rank-badge{display:inline-block;width:32px;height:32px;object-fit:contain;vertical-align:middle}
+.fun-chip[title="Stars"]>b,.fun-chip:has(#funStreak)>b,#goalBox>span:first-child{display:inline-block;width:24px;height:24px;font-size:0;background:center/contain no-repeat;flex-shrink:0}
+.fun-chip[title="Stars"]>b{background-image:url(../assets/graphics/game/icon-star.webp)}
+.fun-chip:has(#funStreak)>b{background-image:url(../assets/graphics/game/icon-streak.webp)}
+#goalBox>span:first-child{background-image:url(../assets/graphics/game/icon-goal.webp)}
+.hint-btn::before{content:"";display:inline-block;width:24px;height:24px;margin-right:6px;vertical-align:middle;background:url(../assets/graphics/game/icon-hint.webp) center/contain no-repeat}
 /* Expedition layer styles (see game/fun.js) */
 .topbar{align-items:center}
 .fun-bar{display:flex;gap:6px;margin-left:auto;margin-right:8px}
