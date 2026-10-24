@@ -17,6 +17,14 @@ const RELEASE = {
     section: "rivers-of-the-world",
     ids: ["nile", "amazon", "mississippi", "yangtze", "huang-he", "ganges", "indus", "danube", "volga"],
   },
+  "section-3-records.json": {
+    section: "mountains-of-the-world",
+    ids: ["everest-highest", "andes-longest-continental", "mid-ocean-ridge-longest", "kilimanjaro-highest-africa", "aconcagua-highest-south-america", "elbrus-highest-europe"],
+  },
+  "section-3-facts.json": {
+    section: "mountains-of-the-world",
+    ids: ["himalayas", "ural", "cordillera", "andes", "appalachians", "east-africa", "great-dividing-range", "atlas", "caucasus", "pyrenees", "mid-atlantic-ridge"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",
