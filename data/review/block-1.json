@@ -1,0 +1,594 @@
+{
+ "block": "world-1",
+ "unit": "block-review",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "noNewObjects": "no type-0 introductions: every object was learned in sections 1-5",
+  "lesson": "about 10 tasks, 3-5 minutes; mistakes come back at the end until answered correctly; about 60% of objects are the child's weakest",
+  "smallObjects": "tiny tap areas (straits, Gulf of Oman) use the Speed Hunt hit rule: within 22 CSS px, nearest object wins",
+  "insets": "Bering Strait, Bosporus and Dardanelles are answered through their magnifiers",
+  "records": "only approved undisputed records; a false statement repeats the record with another object of the same kind",
+  "relations": "use = yes: any exercise; after-card: only after the convention card has been shown; only-border-question: Ural only in the border question; no: never in single-answer exercises",
+  "trueFalseTexts": "statements for relation True/False are complete EN/RU phrases, approved separately (to follow)"
+ },
+ "lessons": [
+  {
+   "id": "lesson-1-land",
+   "title": {
+    "en": "Land",
+    "ru": "Суша"
+   },
+   "objects": [
+    "continents",
+    "mountains",
+    "rivers"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-2-water",
+   "title": {
+    "en": "Water",
+    "ru": "Вода"
+   },
+   "objects": [
+    "oceans",
+    "seas",
+    "straits-and-canals"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-3-relations",
+   "title": {
+    "en": "Connections",
+    "ru": "Связи"
+   },
+   "objects": [
+    "relations"
+   ],
+   "tasks": [
+    {
+     "type": "pairs",
+     "count": 4,
+     "kinds": [
+      "flowsInto",
+      "inOcean",
+      "onContinent",
+      "separates"
+     ]
+    },
+    {
+     "type": "select-all",
+     "count": 3,
+     "examples": {
+      "en": [
+       "Tap all the rivers of Asia",
+       "Tap all the seas of the Indian Ocean",
+       "Tap all the mountains of Africa"
+      ],
+      "ru": [
+       "Нажми на все реки Азии",
+       "Нажми на все моря Индийского океана",
+       "Нажми на все горы Африки"
+      ]
+     }
+    },
+    {
+     "type": "true-false",
+     "count": 2
+    },
+    {
+     "type": "trap",
+     "count": 1,
+     "example": {
+      "en": "Which ocean is the Caspian Sea in? — none",
+      "ru": "В каком океане Каспийское море? — ни в каком"
+     }
+    }
+   ]
+  },
+  {
+   "id": "lesson-4-records",
+   "title": {
+    "en": "Records",
+    "ru": "Рекорды"
+   },
+   "objects": [
+    "records"
+   ],
+   "tasks": [
+    {
+     "type": "true-false",
+     "count": 4
+    },
+    {
+     "type": "pairs",
+     "count": 3
+    },
+    {
+     "type": "find-by-record",
+     "count": 2
+    },
+    {
+     "type": "what-is-it-by-record",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "en": "Block final",
+    "ru": "Итог блока"
+   },
+   "geowords": [
+    "block-1-final-en",
+    "block-1-final-ru"
+   ],
+   "reward": "passport stamp"
+  }
+ ],
+ "relations": [
+  {
+   "relation": "onContinent",
+   "subject": "nile",
+   "object": "africa",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "nile",
+   "object": "mediterranean-sea",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "amazon",
+   "object": "south-america",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "amazon",
+   "object": "atlantic-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "mississippi",
+   "object": "north-america",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "mississippi",
+   "object": "gulf-of-mexico",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "yangtze",
+   "object": "asia",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "yangtze",
+   "object": "pacific-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "huang-he",
+   "object": "asia",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "huang-he",
+   "object": "pacific-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "ganges",
+   "object": "asia",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "ganges",
+   "object": "bay-of-bengal",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "indus",
+   "object": "asia",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "indus",
+   "object": "arabian-sea",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "danube",
+   "object": "europe",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "danube",
+   "object": "black-sea",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "volga",
+   "object": "europe",
+   "use": "yes"
+  },
+  {
+   "relation": "flowsInto",
+   "subject": "volga",
+   "object": "caspian-sea",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "himalayas",
+   "object": "asia",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "cordillera",
+   "object": "north-america",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "appalachians",
+   "object": "north-america",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "andes",
+   "object": "south-america",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "east-africa",
+   "object": "africa",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "atlas",
+   "object": "africa",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "great-dividing-range",
+   "object": "australia",
+   "use": "yes"
+  },
+  {
+   "relation": "onContinent",
+   "subject": "pyrenees",
+   "object": "europe",
+   "use": "yes"
+  },
+  {
+   "relation": "onOceanFloor",
+   "subject": "mid-atlantic-ridge",
+   "object": "atlantic-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "onBorderOf",
+   "subject": "ural",
+   "object": [
+    "europe",
+    "asia"
+   ],
+   "use": "only-border-question",
+   "note": "used only in \"mountains on the border of two parts of the world\""
+  },
+  {
+   "relation": "onContinent",
+   "subject": "caucasus",
+   "object": null,
+   "use": "no",
+   "note": "border disputed"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "arabian-sea",
+   "object": "indian-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "bay-of-bengal",
+   "object": "indian-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "red-sea",
+   "object": "indian-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "gulf-of-oman",
+   "object": "indian-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "coral-sea",
+   "object": "pacific-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "caribbean-sea",
+   "object": "atlantic-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "gulf-of-mexico",
+   "object": "atlantic-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "mediterranean-sea",
+   "object": "atlantic-ocean",
+   "use": "after-card",
+   "note": "our map convention; show it on a card before asking"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "black-sea",
+   "object": "atlantic-ocean",
+   "use": "after-card",
+   "note": "our map convention; show it on a card before asking"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "hudson-bay",
+   "object": null,
+   "use": "no",
+   "note": "Britannica: inland sea connected to both the Atlantic and the Arctic Ocean"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "caspian-sea",
+   "object": null,
+   "use": "yes",
+   "note": "inland body of water: in no ocean (answer \"none\")"
+  },
+  {
+   "relation": "connects",
+   "subject": "strait-of-gibraltar",
+   "object": [
+    "atlantic-ocean",
+    "mediterranean-sea"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "bab-el-mandeb",
+   "object": [
+    "red-sea",
+    "indian-ocean"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "strait-of-malacca",
+   "object": [
+    "indian-ocean",
+    "pacific-ocean"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "bering-strait",
+   "object": [
+    "pacific-ocean",
+    "arctic-ocean"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "strait-of-magellan",
+   "object": [
+    "atlantic-ocean",
+    "pacific-ocean"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "suez-canal",
+   "object": [
+    "mediterranean-sea",
+    "red-sea"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": "panama-canal",
+   "object": [
+    "atlantic-ocean",
+    "pacific-ocean"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "connects",
+   "subject": [
+    "bosporus",
+    "dardanelles"
+   ],
+   "object": [
+    "black-sea",
+    "mediterranean-sea"
+   ],
+   "use": "yes",
+   "note": "the two straits together"
+  },
+  {
+   "relation": "separates",
+   "subject": "strait-of-gibraltar",
+   "object": [
+    "europe",
+    "africa"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "bab-el-mandeb",
+   "object": [
+    "africa",
+    "asia"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "bering-strait",
+   "object": [
+    "asia",
+    "north-america"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "drake-passage",
+   "object": [
+    "south-america",
+    "antarctica"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "suez-canal",
+   "object": [
+    "africa",
+    "asia"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "bosporus",
+   "object": [
+    "europe",
+    "asia"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "separates",
+   "subject": "dardanelles",
+   "object": [
+    "europe",
+    "asia"
+   ],
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "english-channel",
+   "object": "atlantic-ocean",
+   "use": "yes"
+  },
+  {
+   "relation": "inOcean",
+   "subject": "mozambique-channel",
+   "object": "indian-ocean",
+   "use": "yes",
+   "note": "between Africa and Madagascar"
+  },
+  {
+   "relation": "connects",
+   "subject": "drake-passage",
+   "object": null,
+   "use": "no",
+   "note": "Svetlana 2026-10-23: ask only what it separates (South America and Antarctica)"
+  },
+  {
+   "relation": "connects",
+   "subject": "strait-of-hormuz",
+   "object": null,
+   "use": "no",
+   "note": "Svetlana 2026-10-23: no relations; used in lesson 2 (find) and lesson 4 (approved record)"
+  },
+  {
+   "relation": "separates",
+   "subject": "panama-canal",
+   "object": null,
+   "use": "no",
+   "note": "does not separate continents (border is the Panama-Colombia border)"
+  }
+ ]
+}
