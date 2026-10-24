@@ -9,7 +9,9 @@
   "fromWorkbook": "all 11 English workbook words are used (definitions from the workbook, some refined by Svetlana)",
   "notes": "SNOWLINE kept (Merriam-Webster spells \"snow line\"; the definition says so). WATERSHED in its American sense (drainage basin). FRONTIER kept by Svetlana. ПОДВОДНЫЙ replaced with БАТИСКАФ; ОБЛЕДЕНЕНИЕ -> ОЛЕДЕНЕНИЕ",
   "checked": "Kilimanjaro is a volcanic massif of stratovolcanoes; the Pyrenees form much of the France-Spain border (Andorra lies in the range); the Mid-Atlantic Ridge is mostly underwater, above sea level in Iceland and some islands",
-  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}"
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
  },
  "units": [
   {
@@ -36,14 +38,14 @@
      {
       "answer": "GRANITE",
       "role": "review",
-      "definition": "A type of igneous rock formed when magma cools slowly underground.",
+      "definition": "A hard rock that forms when hot melted rock (magma) cools slowly deep underground.",
       "uniqueAfterLetters": 7,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "c1db482129b973ad"
+       "date": "2026-10-24",
+       "contentSha256": "0d27fcc36c1558aa"
       }
      },
      {
@@ -62,14 +64,14 @@
      {
       "answer": "FOOTHILLS",
       "role": "review",
-      "definition": "Low hills at the base of a mountain range.",
+      "definition": "Low, rolling land at the base of a range.",
       "uniqueAfterLetters": 8,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "6c408dd31f66a842"
+       "date": "2026-10-24",
+       "contentSha256": "a050cf2e8f7c0d63"
       }
      },
      {
@@ -88,24 +90,24 @@
      {
       "answer": "SNOWLINE",
       "role": "review",
-      "definition": "The lowest level on a mountain above which snow stays on the ground all year round (also written snow line).",
+      "definition": "The lowest level on a mountain above which the ground stays white all year round (also written as two words).",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "5ac752c88fe092e5"
+       "date": "2026-10-24",
+       "contentSha256": "079fb113a049f9e2"
       }
      },
      {
       "answer": "MOUNTAINEER",
       "role": "review",
-      "definition": "A person who climbs mountains.",
+      "definition": "A person who climbs high peaks.",
       "uniqueAfterLetters": 11,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "f50e60d3bf734890"
+       "date": "2026-10-24",
+       "contentSha256": "e2ba43e9842e57a5"
       }
      }
     ],
@@ -113,23 +115,23 @@
      {
       "answer": "ОПОЛЗЕНЬ",
       "role": "final",
-      "definition": "Сползание масс земли и горных пород вниз по склону.",
+      "definition": "Смещение масс земли и горных пород вниз по склону под действием силы тяжести.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "09b83927abbc9c1e"
+       "date": "2026-10-24",
+       "contentSha256": "0457f59946db0bfe"
       }
      },
      {
       "answer": "ПРЕДГОРЬЕ",
       "role": "review",
-      "definition": "Невысокие холмы и горы у подножия горного хребта.",
+      "definition": "Возвышенная местность у подножия хребта.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "41ef168892d109dd"
+       "date": "2026-10-24",
+       "contentSha256": "a229d44de6572e38"
       }
      },
      {
@@ -146,45 +148,45 @@
      {
       "answer": "СНЕЖНИК",
       "role": "review",
-      "definition": "Скопление снега, которое сохраняется дольше обычного снежного покрова, иногда круглый год.",
+      "definition": "Белое пятно слежавшегося зимнего покрова, которое лежит в горах дольше обычного, иногда круглый год.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "18a4a039cda98508"
+       "date": "2026-10-24",
+       "contentSha256": "42e0e27b9035a22f"
       }
      },
      {
       "answer": "ВЫСОТОМЕР",
       "role": "review",
-      "definition": "Прибор, который показывает высоту над уровнем моря.",
+      "definition": "Прибор, показывающий, на сколько метров над уровнем моря поднялся самолёт или альпинист.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "3f82eaa56832165c"
+       "date": "2026-10-24",
+       "contentSha256": "1d989092ce4dc976"
       }
      },
      {
       "answer": "КАМНЕПАД",
       "role": "review",
-      "definition": "Падение камней с крутого склона или скалы.",
+      "definition": "Обрушение обломков горных пород с крутого склона или скалы.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "be5d39fdf65db221"
+       "date": "2026-10-24",
+       "contentSha256": "63a363d2da32e7bd"
       }
      },
      {
       "answer": "НАГОРЬЕ",
       "role": "review",
-      "definition": "Обширная высокая территория, где горы чередуются с равнинами и плато.",
+      "definition": "Обширная возвышенная территория, где хребты чередуются с равнинами и плато.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "f7626ae5be3a26cc"
+       "date": "2026-10-24",
+       "contentSha256": "fc456e49320baf80"
       }
      }
     ]
@@ -240,13 +242,13 @@
      {
       "answer": "VOLCANO",
       "role": "review",
-      "definition": "A mountain formed by lava and ash from deep inside the Earth; Kilimanjaro in East Africa is a volcanic mountain.",
+      "definition": "A mountain formed by lava and ash from deep inside the Earth; Kilimanjaro in East Africa is one.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "6d65f181b1eb69bc"
+       "date": "2026-10-24",
+       "contentSha256": "d27ec4aa1bdee854"
       }
      },
      {
@@ -290,12 +292,12 @@
      {
       "answer": "ВЫВЕТРИВАНИЕ",
       "role": "final",
-      "definition": "Медленное разрушение горных пород под действием солнца, воды, ветра и мороза.",
+      "definition": "Медленное разрушение горных пород под действием солнца, воды, мороза и живых организмов.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "ca2434208881372a"
+       "date": "2026-10-24",
+       "contentSha256": "4b60e0872f5c8727"
       }
      },
      {
@@ -312,34 +314,34 @@
      {
       "answer": "СТРАТОВУЛКАН",
       "role": "review",
-      "definition": "Вулкан, сложенный чередующимися слоями застывшей лавы и вулканического материала (пепла и обломков). Из таких вулканов состоит массив Килиманджаро.",
+      "definition": "Конусообразная огнедышащая гора из чередующихся слоёв застывшей лавы и пепла; такие горы образуют массив Килиманджаро.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "a91cbf6654fe4219"
+       "date": "2026-10-24",
+       "contentSha256": "ccedefc66dac61e4"
       }
      },
      {
       "answer": "КРИВОЛЕСЬЕ",
       "role": "review",
-      "definition": "Низкие искривлённые деревья у верхней границы леса в горах.",
+      "definition": "Низкорослые, изогнутые ветром и морозом деревья у верхней границы древесной растительности в горах.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "c2d1d55b51b7ac44"
+       "date": "2026-10-24",
+       "contentSha256": "7675eff975eda632"
       }
      },
      {
       "answer": "КРУТИЗНА",
       "role": "review",
-      "definition": "Насколько круто поднимается или опускается склон.",
+      "definition": "Степень наклона склона.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "4b0723ece84ae8ac"
+       "date": "2026-10-24",
+       "contentSha256": "f1c5fa37854e19e1"
       }
      },
      {
@@ -356,12 +358,12 @@
      {
       "answer": "ОЛЕДЕНЕНИЕ",
       "role": "review",
-      "definition": "Процесс образования и распространения ледников на поверхности Земли.",
+      "definition": "Процесс, при котором огромные массы замёрзшей воды надолго покрывают сушу.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "98fe7b0a83bf51fa"
+       "date": "2026-10-24",
+       "contentSha256": "c18297783dfb2e19"
       }
      }
     ]
@@ -378,39 +380,39 @@
      {
       "answer": "MOUNTAINTOP",
       "role": "final",
-      "definition": "The highest part of a mountain.",
+      "definition": "The very highest point of a peak, where climbers aim to stand.",
       "uniqueAfterLetters": 9,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "b0ddb269adb0969f"
+       "date": "2026-10-24",
+       "contentSha256": "13a16b843c6ed739"
       }
      },
      {
       "answer": "ROCKFALL",
       "role": "review",
-      "definition": "Rocks falling from a steep slope or cliff.",
+      "definition": "Loose stones and boulders tumbling down a steep slope or cliff.",
       "uniqueAfterLetters": 7,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "37e79538dd34ad4b"
+       "date": "2026-10-24",
+       "contentSha256": "85b4e1d236aa1166"
       }
      },
      {
       "answer": "UNDERWATER",
       "role": "review",
-      "definition": "Below the surface of the water; the Mid-Atlantic Ridge is a mountain range that lies mostly underwater.",
+      "definition": "Below the surface of the water; the Mid-Atlantic Ridge is a mountain range hidden mostly beneath the ocean.",
       "uniqueAfterLetters": 9,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "0855a99a78a7f1b4"
+       "date": "2026-10-24",
+       "contentSha256": "892056b45386fcca"
       }
      },
      {
@@ -440,13 +442,13 @@
      {
       "answer": "HIGHLANDS",
       "role": "review",
-      "definition": "An area of high or mountainous land.",
+      "definition": "A region of hills and mountains, such as northern Scotland.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "3f44f9bfaea90c72"
+       "date": "2026-10-24",
+       "contentSha256": "a86e09bec58cbd08"
       }
      },
      {
@@ -466,12 +468,12 @@
      {
       "answer": "ЗЕМЛЕТРЯСЕНИЕ",
       "role": "final",
-      "definition": "Подземные толчки и колебания земной поверхности.",
+      "definition": "Внезапные толчки и колебания почвы, вызванные движениями в глубине планеты.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "d94604d5f50847cc"
+       "date": "2026-10-24",
+       "contentSha256": "a7e3d25f5402ab07"
       }
      },
      {
@@ -521,12 +523,12 @@
      {
       "answer": "ЛЕДОРУБ",
       "role": "review",
-      "definition": "Инструмент альпиниста для движения по льду и снегу.",
+      "definition": "Инструмент альпиниста с клювом и штычком для подъёма по крутым замёрзшим склонам.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "163a67989866f508"
+       "date": "2026-10-24",
+       "contentSha256": "0a1f238892e3090c"
       }
      },
      {
