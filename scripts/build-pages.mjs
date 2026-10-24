@@ -23,7 +23,8 @@ const named=[
   ...Array.from({length:11},(_,i)=>`assets/mountains-puzzle-${i+1}.webp`),
   // GeoWords «Экспедиция» app (section 1, unit 1 playable) and the approved data it reads.
   'app/index.html','app/app.css','app/app.js',
-  'data/content/section-1-facts.json','data/geowords/section-1.json','data/dictionary/section-1.json','data/geowords/clue-templates.json',
+  'data/content/section-1-facts.json','data/content/section-1-records.json','data/content/section-1-relations.json',
+  'data/geowords/section-1.json','data/dictionary/section-1.json','data/geowords/clue-templates.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
