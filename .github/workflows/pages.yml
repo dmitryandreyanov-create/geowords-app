@@ -44,6 +44,11 @@ jobs:
           node scripts/validate-content.mjs
           node scripts/test-validate-content.mjs
 
+      - name: Validate GeoWords puzzles
+        run: |
+          node scripts/validate-geowords.mjs
+          node scripts/test-validate-geowords.mjs
+
   deploy:
     if: github.event_name != 'pull_request'
     needs: validate
