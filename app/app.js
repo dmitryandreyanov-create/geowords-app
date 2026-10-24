@@ -20,7 +20,7 @@ const IMG={
 /* ---------- UI strings (content itself comes from data) ---------- */
 const T={
  ru:{tag:'Экспедиция по карте мира с лисёнком Пипом',lead:'Короткие уроки по карте и слово-загадка в конце каждого юнита.',words:'На каком языке слова?',
-  go:'В путь',section:'Раздел 1',sectionName:'Материки и океаны',unit:'Юнит',lessonN:n=>'Урок '+n,final:'Итог юнита: GeoWords',
+  go:'В путь',soon:'Скоро',notReady:'Этот юнит ещё готовится. Пока открыт юнит 1.',nextLesson:'Следующий урок',nextFinal:'К итогу юнита',section:'Раздел 1',sectionName:'Материки и океаны',unit:'Юнит',lessonN:n=>'Урок '+n,final:'Итог юнита: GeoWords',
   locked:'Сначала пройди предыдущий шаг',start:'Начать',later:'Позже',again:'Пройти урок ещё раз',finalAgain:'Итоговое слово ещё раз',practice:'Новое слово для повторения',
   practiceNone:'Новые слова для повторения откроются в следующих юнитах: для длинных слов пока не хватает выученных мест на карте.',
   intro:'Знакомство',find:'Найди на карте',what:'Что это?',hemi:'Полушария',line:'Линии на карте',washed:'Кто кого омывает',record:'Рекорд',
@@ -38,7 +38,7 @@ const T={
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
   tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
-  go:'Let’s go',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
+  go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
   locked:'Finish the previous step first',start:'Start',later:'Later',again:'Play the lesson again',finalAgain:'Final word again',practice:'New review word',
   practiceNone:'New review words open in the next units: long words need more places you have learned on the map.',
   intro:'New',find:'Find on the map',what:'What is it?',hemi:'Hemispheres',line:'Lines on the map',washed:'Neighbours',record:'Record',
@@ -126,11 +126,15 @@ const COURSE=[
    {id:'u4-l2',title:{ru:'Рекорды',en:'Records'},plan:recordLesson},
    {id:'u4-l3',title:{ru:'Экватор и полушария',en:'The Equator and hemispheres'},plan:mixLesson}]}
 ];
+// Units with content approved by the author. Units 2-4 are built from approved data but their lessons are not approved yet.
+const READY_UNITS=[1];
 const STEPS=[];
 COURSE.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`u${u.n}-final`,kind:'final',unit:u.n})});
 STEPS.push({id:'s1-final',kind:'section',unit:'S'});
 const stepOf=id=>STEPS.find(s=>s.id===id);
-function unlocked(id){if(S.unlockAll)return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
+const ready=s=>READY_UNITS.includes(s.unit);
+function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll)return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
+const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
 const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='final'?t().final:t().sectionFinal;
 
 /* ---------- small helpers ---------- */
@@ -210,8 +214,8 @@ function home(){
     return `<div class="stop-row"><button type="button" class="${cls}" data-step="${s.id}" style="left:${pos}%" aria-label="${esc(titleOf(s))}"><span class="disc">${disc}</span></button>
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
-  const body=COURSE.map(u=>`<div class="unit-head"><span class="eyebrow">${x.unit} ${u.n}</span><h3>${x.units[u.n-1][0]}</h3><p>${x.units[u.n-1][1]}</p></div>`+
-     STEPS.filter(s=>s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'));
+  const body=COURSE.map(u=>`<div class="unit-head"><span class="eyebrow">${x.unit} ${u.n}${READY_UNITS.includes(u.n)?'':' · '+x.soon}</span><h3>${x.units[u.n-1][0]}</h3><p>${x.units[u.n-1][1]}</p></div>`+
+     STEPS.filter(s=>s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section} · ${x.soon}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'));
   h(`<section class="screen home">
    <div class="topbar"><span class="chip"><img src="${IMG.streak}" alt="">${S.streak}</span><span class="chip"><span class="star">★</span>${S.xp}</span><span class="grow"></span>
     <button type="button" class="iconbtn" id="gear" aria-label="${x.settings}">⚙</button></div>
@@ -230,7 +234,7 @@ function drawTrail(){const path=app.querySelector('.path');if(!path)return;const
 
 function openStep(id){
   const x=t(),st=stepOf(id);
-  if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${x.locked}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
+  if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
   const head=st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:x.finalDesc;
   let buttons;
@@ -239,7 +243,7 @@ function openStep(id){
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
   s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else lesson(st)};
-  const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{const p=practicePuzzle(st.unit==='S'?4:st.unit);s.remove();
+  const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{const p=practicePuzzle(Math.max(...READY_UNITS.filter(u=>u<=(st.unit==='S'?4:st.unit))));s.remove();
     if(p)geowords(p);else{const m=sheet(`<h3>${x.practice}</h3><p>${x.practiceNone}</p><button type="button" class="btn sand">OK</button>`);m.querySelector('button').onclick=()=>m.remove()}};
 }
 
@@ -264,6 +268,10 @@ function unitIntro(next){
   app.querySelector('.fb .btn').onclick=()=>{S.introSeen=true;save();next()};
 }
 
+function nextBtns(id){const n=nextStep(id),x=t();
+  return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
+function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').onclick=home;
+  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?lesson(n):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
   const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
@@ -334,7 +342,7 @@ function lesson(step){
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=10+Math.max(0,5-wrong);S.done[id]=true;S.xp+=xp;bumpStreak();save();
     h(`<section class="screen done"><img class="pip" src="${IMG.cheer}" alt=""><h2>${x.lessonDone}</h2>
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.acc}</small><b>${Math.round(total/(total+wrong)*100)}%</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
-     <button type="button" class="btn">${x.home}</button></section>`);app.querySelector('.btn').onclick=home}
+     ${nextBtns(id)}</section>`);wireNext(id)}
   next();
 }
 
@@ -405,7 +413,8 @@ function geowords(P){
      <h2>${P.kind==='practice'?x.practiceDone:section?x.sectionDone:x.unitDone}</h2>
      <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
-     ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}<button type="button" class="btn">${x.home}</button></section>`);app.querySelector('.btn').onclick=home}
+     ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}${P.stepId?nextBtns(P.stepId):`<button type="button" class="btn" data-a="home">${x.home}</button>`}</section>`);
+    if(P.stepId)wireNext(P.stepId);else app.querySelector('[data-a=home]').onclick=home}
   clue();
 }
 
