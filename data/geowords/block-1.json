@@ -184,7 +184,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "c5104f95af57d275"
+    "contentSha256": "f6a6dd247453a6d4"
    }
   },
   {
@@ -249,7 +249,7 @@
     {
      "id": "antarctica",
      "x": 70.45,
-     "y": 93,
+     "y": 97.3,
      "letter": "Ш"
     },
     {
@@ -383,8 +383,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "91ee79f7dcbc20b3"
+    "date": "2026-10-24",
+    "contentSha256": "6764d675b9ece967"
    }
   }
  ]
