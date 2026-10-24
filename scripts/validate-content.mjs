@@ -9,6 +9,14 @@ import crypto from "node:crypto";
 const dir = process.env.CONTENT_DIR || path.join(process.cwd(), "data/content");
 // Release packages: file -> section and the exact card ids it must contain.
 const RELEASE = {
+  "section-3-records.json": {
+    section: "mountains-of-the-world",
+    ids: ["everest-highest", "andes-longest-continental", "mid-ocean-ridge-longest", "kilimanjaro-highest-africa", "aconcagua-highest-south-america", "elbrus-highest-europe"],
+  },
+  "section-3-facts.json": {
+    section: "mountains-of-the-world",
+    ids: ["himalayas", "ural", "cordillera", "andes", "appalachians", "east-africa", "great-dividing-range", "atlas", "caucasus", "pyrenees", "mid-atlantic-ridge"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",
