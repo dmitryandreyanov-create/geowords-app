@@ -523,7 +523,12 @@ const layersFor=st=>st.sec?riverLayers():st.unit===1?['world-line-equator','worl
 // Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
 function practiceWords(st){const lang=L(),places=placesFor(st);
   const DI=st.sec===2?D.s2.dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
-  const groups=[];for(let u=st.unit-1;u>=0;u--)groups.push(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
+  const byLen=a=>a.sort((x,y)=>[...y.answer].length-[...x.answer].length);
+  const all=DI.units.flatMap(u=>u.words[lang]),U=DI.units[st.unit-1];
+  // this unit's own review words and reserve words, then its approved practiceExtra (short words of later units), then earlier units (longest first)
+  const groups=[shuffle(U.words[lang].filter(w=>w.role==='review'&&ok(w))),shuffle(U.words[lang].filter(w=>w.role==='reserve'&&ok(w))),
+    (U.practiceExtra?.[lang]||[]).map(a=>all.find(w=>w.answer===a)).filter(w=>w&&ok(w))];
+  for(let u=st.unit-2;u>=0;u--)groups.push(byLen(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w)))));
   if(st.sec===2)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
   groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
   const out=[];for(const g of groups)for(const w of g)if(out.length<6&&!out.some(o=>o.answer===w.answer))out.push(w);
