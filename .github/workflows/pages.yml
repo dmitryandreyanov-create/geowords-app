@@ -130,6 +130,9 @@ jobs:
       - name: Play full L1 phone trial at phone width
         run: node scripts/validate-l1-phone-browser.mjs
 
+      - name: Expedition replay and locked-unit regression at phone width
+        run: node scripts/validate-expedition-browser.mjs
+
       - name: Validate dictionary
         run: |
           node scripts/validate-dictionary.mjs
