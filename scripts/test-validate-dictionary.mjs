@@ -36,6 +36,8 @@ const cases = {
   "reserve word longer than reserveMaxLetters": edit(d => { const w = d.units[0].words.en.find(x => x.role === "reserve"); w.answer = "MERIDIANS"; reapprove(w); }),
   "reserve words without reserveMaxLetters": edit(d => { delete d.units[0].reserveMaxLetters; }),
   "unknown word role": edit(d => { d.units[0].words.en.find(x => x.role === "reserve").role = "spare"; }),
+  "practiceExtra word missing from later units": edit(d => { d.units[1].practiceExtra.en.push("ZEPPELIN"); }),
+  "practiceExtra word too long": edit(d => { d.units[1].practiceExtra.en.push("PERMAFROST"); }),
   "answer in its own definition (EN)": edit(d => { const w = firstWord(d, "en"); w.definition = `Like a ${w.answer.toLowerCase()}s.`; reapprove(w); }),
   "answer in its own definition (RU, other case)": edit(d => { const w = firstWord(d, "ru"); w.definition = `Похоже на ${w.answer.toLowerCase().replace(/[аеиоуыэюяьй]$/, "")}ой.`; reapprove(w); }),
 };
