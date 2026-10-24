@@ -1,7 +1,7 @@
 {
  "section": "rivers-of-the-world",
  "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues; disputed records (nile-longest) get the «Есть нюанс» popup and are never used in clues or single-answer exercises",
- "approvalRule": "same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "nile-longest",
@@ -38,8 +38,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "420dbd7da9d0fa97"
-   }
+    "contentSha256": "b18e6669512bed64"
+   },
+   "category": "conditional"
   },
   {
    "id": "amazon-most-water",
@@ -65,8 +66,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "bdf3b3f3b30d1f46"
-   }
+    "contentSha256": "70a871574e0d386d"
+   },
+   "category": "stable"
   },
   {
    "id": "volga-longest-europe",
@@ -92,8 +94,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "5beb037fb1f051e4"
-   }
+    "contentSha256": "b9be3f7e1c0882a4"
+   },
+   "category": "stable"
   },
   {
    "id": "yangtze-longest-asia",
@@ -119,8 +122,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "d4e206655bda305d"
-   }
+    "contentSha256": "a948006c5b3092e8"
+   },
+   "category": "stable"
   },
   {
    "id": "danube-most-countries",
@@ -133,8 +137,8 @@
     "ru": "Дунай"
    },
    "fact": {
-    "en": "The Danube flows through more countries than any other river.",
-    "ru": "Дунай протекает через больше стран, чем любая другая река."
+    "en": "The Danube flows through or along the borders of more countries than any other river.",
+    "ru": "Дунай течёт по территории или по границам большего числа стран, чем любая другая река."
    },
    "figure": {
     "value": 10,
@@ -145,12 +149,13 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "0ffeda40546c6c1f"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "1b32061c3e1e4f00"
+   },
+   "category": "stable"
   },
   {
-   "id": "huang-he-most-sediment",
+   "id": "huang-he-muddiest",
    "order": 6,
    "object": "huang-he",
    "kind": "river",
@@ -160,21 +165,19 @@
     "ru": "Хуанхэ"
    },
    "fact": {
-    "en": "The Yellow River carries more sediment than any other river.",
-    "ru": "Хуанхэ несёт больше наносов, чем любая другая река."
+    "en": "The Yellow River is famous for its sediment-rich waters and is often called the muddiest river in the world.",
+    "ru": "Хуанхэ славится водой, богатой наносами, и её часто называют самой мутной рекой мира."
    },
-   "figure": {
-    "value": 1.6,
-    "unit": "billion tons of silt a year"
-   },
-   "source": "New World Encyclopedia",
+   "source": "New World Encyclopedia: Yellow River; sediment load fell from 1.6 billion t/yr (1970s) to about 0.3 billion t/yr (Chinese Academy of Sciences, 2015), so it is given as \"often called\", not as a current record",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "94507d8ea5604664"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "51ebf725c6ff577c"
+   },
+   "category": "conditional"
   }
- ]
+ ],
+ "categoryRule": "record category (Svetlana, 2026-10-24): stable — may be used in GeoWords clues; conditional — only with its criterion in the wording (\"often called…\"); changing — only with a year (asOf) and never in clues"
 }

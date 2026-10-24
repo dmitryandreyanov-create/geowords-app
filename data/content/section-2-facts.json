@@ -22,7 +22,7 @@
    }
   ]
  },
- "approvalRule": "same as section-1-facts.json: sha256 over {name, fact, caveat}",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "nile",
@@ -43,7 +43,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "07b50311a4a02db1"
+    "contentSha256": "690f2693148de29b"
    }
   },
   {
@@ -65,7 +65,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "bf4177415ca2a2f6"
+    "contentSha256": "8d0612191ff9dce3"
    }
   },
   {
@@ -87,7 +87,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "4554c169f65e8831"
+    "contentSha256": "c6bb15dc1675b53f"
    }
   },
   {
@@ -100,16 +100,16 @@
     "ru": "Янцзы"
    },
    "fact": {
-    "en": "The Yangtze is the longest river in Asia, about 6,300 km long. The Three Gorges Dam on it is the most powerful power station in the world.",
-    "ru": "Янцзы — самая длинная река Азии, около 6300 км. На ней стоит «Три ущелья», самая мощная электростанция мира."
+    "en": "The Yangtze is the longest river in Asia, about 6,300 km long. The Three Gorges power station on it is the most powerful in the world.",
+    "ru": "Янцзы — самая длинная река Азии, около 6300 км. На ней стоит ГЭС «Три ущелья» — самая мощная электростанция мира."
    },
    "source": "Britannica summary (6,300 km); Smart Water Magazine (longest in Asia); Wikipedia: Three Gorges Dam (22,500 MW, largest by installed capacity)",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "f3bc33d3193f1e12"
+    "date": "2026-10-24",
+    "contentSha256": "52c79200530056eb"
    }
   },
   {
@@ -122,16 +122,16 @@
     "ru": "Хуанхэ"
    },
    "fact": {
-    "en": "The Yellow River gets its colour and its name from loess, a fine yellow soil. It carries more sediment than any other river.",
-    "ru": "Хуанхэ получила цвет и имя от лёсса, мелкой жёлтой почвы. Она несёт больше наносов, чем любая другая река."
+    "en": "The Yellow River gets its color and its name from loess, a fine yellow soil. It is famous for its sediment-rich waters and is often called the muddiest river in the world.",
+    "ru": "Хуанхэ получила цвет и имя от лёсса, мелкой жёлтой почвы. Она славится водой, богатой наносами, и её часто называют самой мутной рекой мира."
    },
-   "source": "New World Encyclopedia: Yellow River (\"most sediment-laden river in the world\")",
+   "source": "New World Encyclopedia: Yellow River; sediment load fell from 1.6 billion t/yr (1970s) to about 0.3 billion t/yr (Chinese Academy of Sciences, 2015), so it is given as \"often called\", not as a current record",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "2f2a716c997fe0ff"
+    "date": "2026-10-24",
+    "contentSha256": "f29b069bac621bdb"
    }
   },
   {
@@ -153,7 +153,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "aac569c4bc82a330"
+    "contentSha256": "1d67391c825794f3"
    }
   },
   {
@@ -175,7 +175,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "2e286debe3648fbc"
+    "contentSha256": "72af6cd8034a476b"
    }
   },
   {
@@ -197,7 +197,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "b658cd6e16589e78"
+    "contentSha256": "9f4545fdc9ab677d"
    }
   },
   {
@@ -219,7 +219,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "ae4fb0e6a961bf32"
+    "contentSha256": "18a09c60357a6965"
    }
   }
  ]
