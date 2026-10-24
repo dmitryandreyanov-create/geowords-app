@@ -25,12 +25,12 @@ try{
     args:['--no-sandbox','--disable-dev-shm-usage']
   }:{})});
   const base='http://127.0.0.1:'+server.address().port;
-  async function makePage(lang){
+  async function makePage(lang,done={'u1-l1':true,'u1-l2':true,'u1-practice':true,'u1-final':true}){
     const context=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
-    await context.addInitScript(value=>localStorage.setItem('geowords_expedition_v1',JSON.stringify({
-      lang:value,done:{'u1-l1':true,'u1-l2':true,'u1-final':true},
+    await context.addInitScript(([value,doneSteps])=>{if(sessionStorage.getItem('fixture'))return;sessionStorage.setItem('fixture','1');localStorage.setItem('geowords_expedition_v1',JSON.stringify({
+      lang:value,done:doneSteps,
       introSeen:true,learned:['north','south','east','west','equator','prime-meridian'],recent:[]
-    })),lang);
+    }))},[lang,done]);
     const page=await context.newPage();
     await page.goto(base+'/app/');
     await page.waitForSelector('[data-step="u1-final"]');
@@ -97,6 +97,29 @@ try{
   await flow.page.waitForFunction(()=>window.__gwTask?.k==='introObj'&&window.__gwTask?.id==='asia');
   assert.equal(await flow.page.evaluate(()=>window.__gwTask.id),'asia');
   await flow.context.close();
+  // Mandatory unit practice (Svetlana, 24.10.2026): the unit final stays locked until 6 practice GeoWords are solved.
+  const gate=await makePage('ru',{'u1-l1':true,'u1-l2':true});
+  await gate.page.locator('[data-step="u1-final"]').click();
+  assert.equal(await gate.page.locator('.sheet [data-a="go"]').count(),0,'unit final is locked before the unit practice');
+  await gate.page.locator('.sheet button').click();
+  await gate.page.locator('[data-step="u1-practice"]').click();
+  await gate.page.locator('.sheet [data-a="go"]').click();
+  const words=new Set();
+  for(let w=0;w<6;w++){
+    await gate.page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);
+    const p=await gate.page.evaluate(()=>window.__gwPuzzle);
+    assert.equal(p.stepId,'u1-practice');assert.equal(p.seq.total,6,'six practice words');words.add(p.answer);
+    assert(p.clues.every(c=>!c.text.toUpperCase().replace(/Ё/g,'Е').includes(p.answer.replace(/Ё/g,'Е'))));
+    for(const c of p.clues){await gate.page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await gate.page.waitForTimeout(370)}
+    if(w<5)await gate.page.locator('[data-a="nextword"]').click();
+    else await gate.page.locator('.screen.done [data-a="next"]').waitFor({timeout:8000});
+  }
+  assert.equal(words.size,6,'six different words');
+  assert.equal(await gate.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-practice']),true);
+  await gate.page.locator('.screen.done [data-a="next"]').click();
+  await gate.page.waitForSelector('.gw-clue');
+  assert.equal(await gate.page.evaluate(()=>window.__gwPuzzle.answer),'ЗЕНИТ','practice leads to the unit final');
+  await gate.context.close();
   const en=await makePage('en');
   await en.page.locator('[data-step="u1-final"]').click();
   assert.equal(await en.page.locator('.sheet [data-a="practice"]').count(),0,
@@ -106,7 +129,7 @@ try{
   await en.page.waitForSelector('.gw-clue');
   assert.equal(await en.page.evaluate(()=>window.__gwPuzzle.answer),'ZENITH');
   await en.context.close();
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

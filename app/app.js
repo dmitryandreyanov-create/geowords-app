@@ -192,7 +192,7 @@ STEPS.push({id:'s2-final',sec:2,kind:'section',unit:'S'});
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
 const ready=s=>s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
-function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll)return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
+function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
 const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:t().sectionFinal;
 
