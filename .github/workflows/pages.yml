@@ -33,7 +33,9 @@ jobs:
         run: node scripts/validate-maps.mjs
 
       - name: Validate teaching content and approvals
-        run: node scripts/validate-content.mjs
+        run: |
+          node scripts/validate-content.mjs
+          node scripts/test-validate-content.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
