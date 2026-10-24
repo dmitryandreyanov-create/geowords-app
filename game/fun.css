@@ -11,19 +11,19 @@
 .explorer-top{display:flex;gap:14px;align-items:center}
 .explorer-pip{width:84px;flex:0 0 84px;animation:pip-idle 3s ease-in-out infinite}
 [data-pip] svg,.explorer-pip svg,.pip-avatar svg{display:block;width:100%;height:auto}
-.pip-art{display:block;width:100%;aspect-ratio:1;background-image:url('../assets/pip/pip-hello.png');background-repeat:no-repeat;background-size:contain;background-position:center}
-.pip-art[data-pose="celebrate"]{background-image:url('../assets/pip/pip-yes.png')}
-.finish-pip .pip-art{background-image:url('../assets/pip/pip-cheer.png')}
-.pip-art[data-pose="map"]{background-image:url('../assets/pip/pip-map.png')}
-.pip-art[data-pose="encourage"]{background-image:url('../assets/pip/pip-point-left.png')}
-.pip-art[data-pose="oops"]{background-image:url('../assets/pip/pip-oops.png')}
-.pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/pip-spyglass.png')}
-.pip-art[data-pose="point-right"]{background-image:url('../assets/pip/pip-point-right.png')}
-.pip-art[data-pose="wonder"]{background-image:url('../assets/pip/pip-wonder.png')}
-.pip-avatar .pip-art{background-image:url('../assets/pip/pip-face-happy.png')}
-.pip-avatar .pip-art[data-pose="celebrate"]{background-image:url('../assets/pip/pip-face-wow.png')}
-.pip-avatar .pip-art[data-pose="oops"]{background-image:url('../assets/pip/pip-face-oops.png')}
-.pip-avatar .pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/pip-spyglass.png')}
+.pip-art{display:block;width:100%;aspect-ratio:1;background-image:url('../assets/pip/game/pip-hello.webp');background-repeat:no-repeat;background-size:contain;background-position:center}
+.pip-art[data-pose="celebrate"]{background-image:url('../assets/pip/game/pip-yes.webp')}
+.finish-pip .pip-art{background-image:url('../assets/pip/game/pip-cheer.webp')}
+.pip-art[data-pose="map"]{background-image:url('../assets/pip/game/pip-map.webp')}
+.pip-art[data-pose="encourage"]{background-image:url('../assets/pip/game/pip-point-left.webp')}
+.pip-art[data-pose="oops"]{background-image:url('../assets/pip/game/pip-oops.webp')}
+.pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/game/pip-spyglass.webp')}
+.pip-art[data-pose="point-right"]{background-image:url('../assets/pip/game/pip-point-right.webp')}
+.pip-art[data-pose="wonder"]{background-image:url('../assets/pip/game/pip-wonder.webp')}
+.pip-avatar .pip-art{background-image:url('../assets/pip/game/pip-face-happy.webp')}
+.pip-avatar .pip-art[data-pose="celebrate"]{background-image:url('../assets/pip/game/pip-face-wow.webp')}
+.pip-avatar .pip-art[data-pose="oops"]{background-image:url('../assets/pip/game/pip-face-oops.webp')}
+.pip-avatar .pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/game/pip-spyglass.webp')}
 .explorer-info{flex:1;min-width:0}
 .explorer-info h2{margin:4px 0 8px;font-size:22px;line-height:1.1}
 .explorer-card .eyebrow{color:#b5651d!important}

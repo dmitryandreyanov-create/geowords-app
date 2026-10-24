@@ -24,7 +24,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "abc0d702802c174f49ab6a5f1b06512b6ca51e9dbc335b57892d6428e4ee9ab6",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-hello.webp",
+      "gameSize": 384,
+      "gameBytes": 34346,
+      "gameSourceSha256": "abc0d702802c174f49ab6a5f1b06512b6ca51e9dbc335b57892d6428e4ee9ab6"
     },
     {
       "file": "pip-yes.png",
@@ -36,7 +40,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "f1e9a9cab0195955c9d2feccd22ce81c9b3d081941b1e96f778e2d7d24f0a10f",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-yes.webp",
+      "gameSize": 384,
+      "gameBytes": 32634,
+      "gameSourceSha256": "f1e9a9cab0195955c9d2feccd22ce81c9b3d081941b1e96f778e2d7d24f0a10f"
     },
     {
       "file": "pip-map.png",
@@ -48,7 +56,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "0719196f637ccf459828140b90ede5bb7770fc8d07acddc27e4bafa800e3018e",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-map.webp",
+      "gameSize": 384,
+      "gameBytes": 35210,
+      "gameSourceSha256": "0719196f637ccf459828140b90ede5bb7770fc8d07acddc27e4bafa800e3018e"
     },
     {
       "file": "pip-point-left.png",
@@ -60,7 +72,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "20a02d542dcca9e0f58be5fcb356039d749c810b52aabf8c9a40cfa3110b1165",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-point-left.webp",
+      "gameSize": 384,
+      "gameBytes": 30560,
+      "gameSourceSha256": "20a02d542dcca9e0f58be5fcb356039d749c810b52aabf8c9a40cfa3110b1165"
     },
     {
       "file": "pip-oops.png",
@@ -72,7 +88,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "9f2c5f8ce4427da89df5b8eb48db6a253658b3df379b4051ccde82a1d4a6eef7",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-oops.webp",
+      "gameSize": 384,
+      "gameBytes": 28436,
+      "gameSourceSha256": "9f2c5f8ce4427da89df5b8eb48db6a253658b3df379b4051ccde82a1d4a6eef7"
     },
     {
       "file": "pip-spyglass.png",
@@ -84,7 +104,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "7ea769bb3949d99f439a3154c255a2bb262b756c629d180fa883554cb38989d1",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-spyglass.webp",
+      "gameSize": 384,
+      "gameBytes": 30908,
+      "gameSourceSha256": "7ea769bb3949d99f439a3154c255a2bb262b756c629d180fa883554cb38989d1"
     },
     {
       "file": "pip-cheer.png",
@@ -96,7 +120,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "636f18293d41322bf7f19b1315ef0900bf315361b474f168b55ad976d719b009",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-cheer.webp",
+      "gameSize": 384,
+      "gameBytes": 35470,
+      "gameSourceSha256": "636f18293d41322bf7f19b1315ef0900bf315361b474f168b55ad976d719b009"
     },
     {
       "file": "pip-point-right.png",
@@ -108,7 +136,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "72c0468fb80e536e012b67cdb589f518484194af994d818f3a9727d3dfe81052",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-point-right.webp",
+      "gameSize": 384,
+      "gameBytes": 29506,
+      "gameSourceSha256": "72c0468fb80e536e012b67cdb589f518484194af994d818f3a9727d3dfe81052"
     },
     {
       "file": "pip-wonder.png",
@@ -120,7 +152,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "2af62be46d6f3249805df4d9a30afe75036bfae6ef9f0a47e9dac0ace166c145",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-wonder.webp",
+      "gameSize": 384,
+      "gameBytes": 30536,
+      "gameSourceSha256": "2af62be46d6f3249805df4d9a30afe75036bfae6ef9f0a47e9dac0ace166c145"
     },
     {
       "file": "pip-sleep.png",
@@ -148,7 +184,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "9b90ac3ccaff3f261b7e6a5439b324169e6a99560f46d3282f2a5690b44d0992",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-face-happy.webp",
+      "gameSize": 384,
+      "gameBytes": 36742,
+      "gameSourceSha256": "9b90ac3ccaff3f261b7e6a5439b324169e6a99560f46d3282f2a5690b44d0992"
     },
     {
       "file": "pip-face-oops.png",
@@ -160,7 +200,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "10fedd9619668346e1c9c64a30bd64a0f1b1a3961f611da8001d25946249e48a",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-face-oops.webp",
+      "gameSize": 384,
+      "gameBytes": 39300,
+      "gameSourceSha256": "10fedd9619668346e1c9c64a30bd64a0f1b1a3961f611da8001d25946249e48a"
     },
     {
       "file": "pip-face-wow.png",
@@ -172,7 +216,11 @@
       "width": 1024,
       "height": 1024,
       "sha256": "901d3e8a48ba51551a0349e9fe1ff37cbf27d18b814a0d88f3993ae68aa71e7a",
-      "visualReview": "awaiting_phone_review"
+      "visualReview": "awaiting_phone_review",
+      "gamePath": "assets/pip/game/pip-face-wow.webp",
+      "gameSize": 384,
+      "gameBytes": 41712,
+      "gameSourceSha256": "901d3e8a48ba51551a0349e9fe1ff37cbf27d18b814a0d88f3993ae68aa71e7a"
     },
     {
       "file": "pip-outfit-1-explorer.png",
