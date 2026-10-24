@@ -29,13 +29,25 @@ jobs:
       - name: Validate level data
         run: node scripts/validate-levels.mjs
 
+      - name: Validate dictionary
+        run: |
+          node scripts/validate-dictionary.mjs
+          node scripts/test-validate-dictionary.mjs
+
       - name: Validate map data and assets
-        run: node scripts/validate-maps.mjs
+        run: |
+          node scripts/validate-maps.mjs
+          node scripts/test-validate-maps.mjs
 
       - name: Validate teaching content and approvals
         run: |
           node scripts/validate-content.mjs
           node scripts/test-validate-content.mjs
+
+      - name: Validate GeoWords puzzles
+        run: |
+          node scripts/validate-geowords.mjs
+          node scripts/test-validate-geowords.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
