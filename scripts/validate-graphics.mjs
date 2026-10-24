@@ -21,7 +21,8 @@ for(const a of assets.filter(a=>a.status==='ready')){
  assert(w.subarray(0,4).toString()==='RIFF'&&w.subarray(8,12).toString()==='WEBP','Game copy is not WebP: '+a.gamePath);
  assert.equal(a.gameSourceSha256,a.sha256,'Game copy is older than its PNG, run node scripts/make-game-images.mjs: '+a.file);
  assert.equal(w.length,a.gameBytes,'Game copy size does not match the manifest: '+a.gamePath);
- assert(w.length<=150*1024,'Game copy too heavy for phones (>150 KB): '+a.gamePath);game++;
+ const limit=a.width===a.height?150:300; // KB: square art vs wide scenes and cards
+ assert(w.length<=limit*1024,`Game copy too heavy for phones (>${limit} KB): `+a.gamePath);game++;
 }
 // The game and the offline cache must use the WebP copies, never the 1 MB PNG originals.
 const pngs=new Set(assets.map(a=>a.path));

@@ -670,7 +670,11 @@
       "height": 1400,
       "sha256": "263e7c2988a4b640f28a6f8c0cf0b10721a96f108db13a7f6c5a155200bfc762",
       "visualReview": "awaiting_phone_review",
-      "transparent": true
+      "transparent": true,
+      "gamePath": "assets/graphics/game/passport-cover.webp",
+      "gameSize": 1024,
+      "gameBytes": 197030,
+      "gameSourceSha256": "263e7c2988a4b640f28a6f8c0cf0b10721a96f108db13a7f6c5a155200bfc762"
     },
     {
       "file": "passport-page.png",
@@ -683,7 +687,11 @@
       "height": 1400,
       "sha256": "2c0a91009b17cf77ad8d56b645546f495990a83801328f32d1a9e759ae158a06",
       "visualReview": "awaiting_phone_review",
-      "transparent": true
+      "transparent": true,
+      "gamePath": "assets/graphics/game/passport-page.webp",
+      "gameSize": 1200,
+      "gameBytes": 127146,
+      "gameSourceSha256": "2c0a91009b17cf77ad8d56b645546f495990a83801328f32d1a9e759ae158a06"
     },
     {
       "file": "medal-unit.png",
@@ -1019,7 +1027,11 @@
       "height": 1000,
       "sha256": "a6d3fb121823d3fc6ad1c9d7ae2cbc54e3e5eb7749aa24c74e5ee8ebb598937c",
       "visualReview": "awaiting_phone_review",
-      "transparent": false
+      "transparent": false,
+      "gamePath": "assets/graphics/game/scene-welcome.webp",
+      "gameSize": 1200,
+      "gameBytes": 174172,
+      "gameSourceSha256": "a6d3fb121823d3fc6ad1c9d7ae2cbc54e3e5eb7749aa24c74e5ee8ebb598937c"
     },
     {
       "file": "scene-rank-up.png",
@@ -1032,7 +1044,11 @@
       "height": 1000,
       "sha256": "b69ace4d1aeaaa8a549335d7018b29347f60e56d58b9a60cccc56ffc6bd9279d",
       "visualReview": "awaiting_phone_review",
-      "transparent": false
+      "transparent": false,
+      "gamePath": "assets/graphics/game/scene-rank-up.webp",
+      "gameSize": 1200,
+      "gameBytes": 148220,
+      "gameSourceSha256": "b69ace4d1aeaaa8a549335d7018b29347f60e56d58b9a60cccc56ffc6bd9279d"
     },
     {
       "file": "scene-streak.png",
@@ -1045,7 +1061,11 @@
       "height": 1000,
       "sha256": "2b97d11ee0a7ed8b6b5256b0d1768de476fdc5f4a4854d4bdf73226b8ed3d673",
       "visualReview": "awaiting_phone_review",
-      "transparent": false
+      "transparent": false,
+      "gamePath": "assets/graphics/game/scene-streak.webp",
+      "gameSize": 1200,
+      "gameBytes": 157900,
+      "gameSourceSha256": "2b97d11ee0a7ed8b6b5256b0d1768de476fdc5f4a4854d4bdf73226b8ed3d673"
     },
     {
       "file": "scene-parents.png",
@@ -1058,7 +1078,11 @@
       "height": 1000,
       "sha256": "a52a87f5089f9c0643ba408f73b84764309fb15cfd4ea085da13cd254176198b",
       "visualReview": "awaiting_phone_review",
-      "transparent": false
+      "transparent": false,
+      "gamePath": "assets/graphics/game/scene-parents.webp",
+      "gameSize": 1200,
+      "gameBytes": 164680,
+      "gameSourceSha256": "a52a87f5089f9c0643ba408f73b84764309fb15cfd4ea085da13cd254176198b"
     },
     {
       "file": "scene-offline.png",
@@ -1071,7 +1095,11 @@
       "height": 1000,
       "sha256": "29505ec3d493eb7e8bf63d6d16bd2b60389888849c159c0a7f8d6f8f40ccbea2",
       "visualReview": "awaiting_phone_review",
-      "transparent": false
+      "transparent": false,
+      "gamePath": "assets/graphics/game/scene-offline.webp",
+      "gameSize": 1200,
+      "gameBytes": 137426,
+      "gameSourceSha256": "29505ec3d493eb7e8bf63d6d16bd2b60389888849c159c0a7f8d6f8f40ccbea2"
     },
     {
       "file": "intro-continents-oceans.png",
@@ -1086,7 +1114,11 @@
       "visualReview": "awaiting_phone_review",
       "transparent": false,
       "editorialReview": "pending",
-      "source": "assets/graphics/intro-continents-oceans.svg (approved world base, continent layers and Equator/Prime Meridian layers from main; rendered to PNG)"
+      "source": "assets/graphics/intro-continents-oceans.svg (approved world base, continent layers and Equator/Prime Meridian layers from main; rendered to PNG)",
+      "gamePath": "assets/graphics/game/intro-continents-oceans.webp",
+      "gameSize": 1200,
+      "gameBytes": 59226,
+      "gameSourceSha256": "5f34ceeb0206205f9f070ac8a9fc985613846a1dc5466f56e7cab06ce147453a"
     },
     {
       "file": "intro-seas.png",
@@ -1100,7 +1132,11 @@
       "sha256": "82b5b8528ebbc24e811e172072fb9e9640fd290d0d11aee9bd8a75736fe5d956",
       "visualReview": "awaiting_phone_review",
       "transparent": false,
-      "editorialReview": "pending"
+      "editorialReview": "pending",
+      "gamePath": "assets/graphics/game/intro-seas.webp",
+      "gameSize": 1200,
+      "gameBytes": 8240,
+      "gameSourceSha256": "82b5b8528ebbc24e811e172072fb9e9640fd290d0d11aee9bd8a75736fe5d956"
     },
     {
       "file": "intro-straits.png",
@@ -1114,7 +1150,11 @@
       "sha256": "52eb81092844d81afa881bf334b04745344ea13acf1a6e7878d65e5a817d01c9",
       "visualReview": "awaiting_phone_review",
       "transparent": false,
-      "editorialReview": "pending"
+      "editorialReview": "pending",
+      "gamePath": "assets/graphics/game/intro-straits.webp",
+      "gameSize": 1200,
+      "gameBytes": 10446,
+      "gameSourceSha256": "52eb81092844d81afa881bf334b04745344ea13acf1a6e7878d65e5a817d01c9"
     },
     {
       "file": "avatar-owl.png",
