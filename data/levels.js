@@ -58,32 +58,39 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "southern-africa",
-        "text": "The first letter is in southern Africa."
-      },
-      {
-        "markerId": "indian-ocean",
-        "text": "The second letter is in the Indian Ocean."
-      },
-      {
         "markerId": "greenland",
-        "text": "The third letter is in Greenland."
-      },
-      {
-        "markerId": "americas",
-        "text": "The fourth letter is between North and South America."
+        "text": "The third letter is in Greenland.",
+        "position": 3
       },
       {
         "markerId": "arctic",
-        "text": "The fifth letter is in the Arctic Ocean."
+        "text": "The fifth letter is in the Arctic Ocean.",
+        "position": 5
       },
       {
-        "markerId": "southern-ocean",
-        "text": "The sixth letter is in the Southern Ocean."
+        "markerId": "indian-ocean",
+        "text": "The second letter is in the Indian Ocean.",
+        "position": 2
       },
       {
         "markerId": "himalayas",
-        "text": "The seventh letter is next to the highest mountain range in the world."
+        "text": "The seventh letter is next to the highest mountain range in the world.",
+        "position": 7
+      },
+      {
+        "markerId": "americas",
+        "text": "The fourth letter is between North and South America.",
+        "position": 4
+      },
+      {
+        "markerId": "southern-ocean",
+        "text": "The sixth letter is in the Southern Ocean.",
+        "position": 6
+      },
+      {
+        "markerId": "southern-africa",
+        "text": "The first letter is in southern Africa.",
+        "position": 1
       }
     ],
     "definition": "Granite — a very hard rock formed deep underground.",
@@ -165,40 +172,49 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "atlantic-ocean",
-        "text": "The first letter is in the Atlantic Ocean."
+        "markerId": "himalayas",
+        "text": "The sixth letter is in the Himalayas.",
+        "position": 6
       },
       {
         "markerId": "antarctica",
-        "text": "The second letter is in Antarctica."
-      },
-      {
-        "markerId": "madagascar",
-        "text": "The third letter is on the island of Madagascar."
+        "text": "The second letter is in Antarctica.",
+        "position": 2
       },
       {
         "markerId": "ural-mountains",
-        "text": "The fourth letter is in the mountains that separate Europe from Asia."
-      },
-      {
-        "markerId": "northern-north-america",
-        "text": "The fifth letter is in northern North America."
-      },
-      {
-        "markerId": "himalayas",
-        "text": "The sixth letter is in the Himalayas."
-      },
-      {
-        "markerId": "southern-north-america",
-        "text": "The seventh letter is in southern North America."
+        "text": "The fourth letter is in the mountains that separate Europe from Asia.",
+        "position": 4
       },
       {
         "markerId": "pacific-ocean",
-        "text": "The eighth letter is in the Pacific Ocean."
+        "text": "The eighth letter is in the Pacific Ocean.",
+        "position": 8
+      },
+      {
+        "markerId": "northern-north-america",
+        "text": "The fifth letter is in northern North America.",
+        "position": 5
+      },
+      {
+        "markerId": "southern-north-america",
+        "text": "The seventh letter is in southern North America.",
+        "position": 7
       },
       {
         "markerId": "southern-south-america",
-        "text": "The ninth letter is in southern South America."
+        "text": "The ninth letter is in southern South America.",
+        "position": 9
+      },
+      {
+        "markerId": "madagascar",
+        "text": "The third letter is on the island of Madagascar.",
+        "position": 3
+      },
+      {
+        "markerId": "atlantic-ocean",
+        "text": "The first letter is in the Atlantic Ocean.",
+        "position": 1
       }
     ],
     "definition": "Elevation — the height of a place above sea level.",
@@ -280,40 +296,49 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "ural-mountains",
-        "text": "The first letter is next to the Ural Mountains."
+        "markerId": "north-africa",
+        "text": "The fifth letter is in North Africa.",
+        "position": 5
       },
       {
         "markerId": "south-america-antarctica",
-        "text": "The second letter is between South America and Antarctica."
-      },
-      {
-        "markerId": "north-america-greenland",
-        "text": "The third letter is between North America and Greenland."
+        "text": "The second letter is between South America and Antarctica.",
+        "position": 2
       },
       {
         "markerId": "africa-antarctica",
-        "text": "The fourth letter is between Africa and Antarctica."
-      },
-      {
-        "markerId": "north-africa",
-        "text": "The fifth letter is in North Africa."
-      },
-      {
-        "markerId": "south-africa",
-        "text": "The sixth letter is in South Africa."
+        "text": "The fourth letter is between Africa and Antarctica.",
+        "position": 4
       },
       {
         "markerId": "himalayas",
-        "text": "The seventh letter is next to the highest mountain range in the world."
-      },
-      {
-        "markerId": "north-american-cordillera",
-        "text": "The eighth letter is next to the North American Cordillera."
+        "text": "The seventh letter is next to the highest mountain range in the world.",
+        "position": 7
       },
       {
         "markerId": "europe-greenland",
-        "text": "The ninth letter is between Europe and Greenland."
+        "text": "The ninth letter is between Europe and Greenland.",
+        "position": 9
+      },
+      {
+        "markerId": "north-america-greenland",
+        "text": "The third letter is between North America and Greenland.",
+        "position": 3
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The first letter is next to the Ural Mountains.",
+        "position": 1
+      },
+      {
+        "markerId": "south-africa",
+        "text": "The sixth letter is in South Africa.",
+        "position": 6
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The eighth letter is next to the North American Cordillera.",
+        "position": 8
       }
     ],
     "definition": "Foothills — low hills at the base of a mountain range.",
@@ -395,40 +420,49 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "north-american-cordillera",
-        "text": "The first letter is next to the North American Cordillera."
-      },
-      {
         "markerId": "ural-mountains",
-        "text": "The second letter is next to the Ural Mountains."
-      },
-      {
-        "markerId": "himalayas",
-        "text": "The third letter is next to the Himalayas."
-      },
-      {
-        "markerId": "andes",
-        "text": "The fourth letter is next to the Andes."
-      },
-      {
-        "markerId": "northeast-asia",
-        "text": "The fifth letter is in northeast Asia."
+        "text": "The second letter is next to the Ural Mountains.",
+        "position": 2
       },
       {
         "markerId": "southern-australia",
-        "text": "The sixth letter is in southern Australia."
+        "text": "The sixth letter is in southern Australia.",
+        "position": 6
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The third letter is next to the Himalayas.",
+        "position": 3
       },
       {
         "markerId": "pacific-ocean",
-        "text": "The seventh letter is in the Pacific Ocean."
-      },
-      {
-        "markerId": "northern-australia",
-        "text": "The eighth letter is in northern Australia."
+        "text": "The seventh letter is in the Pacific Ocean.",
+        "position": 7
       },
       {
         "markerId": "northern-europe",
-        "text": "The ninth letter is in northern Europe."
+        "text": "The ninth letter is in northern Europe.",
+        "position": 9
+      },
+      {
+        "markerId": "andes",
+        "text": "The fourth letter is next to the Andes.",
+        "position": 4
+      },
+      {
+        "markerId": "northern-australia",
+        "text": "The eighth letter is in northern Australia.",
+        "position": 8
+      },
+      {
+        "markerId": "northeast-asia",
+        "text": "The fifth letter is in northeast Asia.",
+        "position": 5
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The first letter is next to the North American Cordillera.",
+        "position": 1
       }
     ],
     "definition": "Landslide — a large amount of rock and soil moving down a slope.",
@@ -510,40 +544,49 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "himalayas",
-        "text": "The first letter is next to the Himalayas."
-      },
-      {
-        "markerId": "appalachian-mountains",
-        "text": "The second letter is next to the Appalachian Mountains."
+        "markerId": "andes",
+        "text": "The fifth letter is next to the Andes.",
+        "position": 5
       },
       {
         "markerId": "north-american-cordillera",
-        "text": "The third letter is next to the North American Cordillera."
-      },
-      {
-        "markerId": "ural-mountains",
-        "text": "The fourth letter is next to the Ural Mountains."
-      },
-      {
-        "markerId": "andes",
-        "text": "The fifth letter is next to the Andes."
+        "text": "The third letter is next to the North American Cordillera.",
+        "position": 3
       },
       {
         "markerId": "madagascar",
-        "text": "The sixth letter is next to Madagascar."
+        "text": "The sixth letter is next to Madagascar.",
+        "position": 6
       },
       {
-        "markerId": "indian-ocean",
-        "text": "The seventh letter is in the Indian Ocean."
-      },
-      {
-        "markerId": "arctic-ocean",
-        "text": "The eighth letter is in the Arctic Ocean."
+        "markerId": "ural-mountains",
+        "text": "The fourth letter is next to the Ural Mountains.",
+        "position": 4
       },
       {
         "markerId": "southern-ocean",
-        "text": "The ninth letter is in the Southern Ocean."
+        "text": "The ninth letter is in the Southern Ocean.",
+        "position": 9
+      },
+      {
+        "markerId": "appalachian-mountains",
+        "text": "The second letter is next to the Appalachian Mountains.",
+        "position": 2
+      },
+      {
+        "markerId": "arctic-ocean",
+        "text": "The eighth letter is in the Arctic Ocean.",
+        "position": 8
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The first letter is next to the Himalayas.",
+        "position": 1
+      },
+      {
+        "markerId": "indian-ocean",
+        "text": "The seventh letter is in the Indian Ocean.",
+        "position": 7
       }
     ],
     "definition": "Avalanche — a large mass of snow and ice moving quickly down a mountain.",
@@ -631,44 +674,54 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "north-atlantic-ocean",
-        "text": "The first letter is in the North Atlantic Ocean."
-      },
-      {
-        "markerId": "east-africa",
-        "text": "The second letter is next to the mountains of East Africa."
-      },
-      {
-        "markerId": "everest",
-        "text": "The third letter is next to the highest mountain in the world."
-      },
-      {
-        "markerId": "ural-mountains",
-        "text": "The fourth letter is next to the Ural Mountains."
+        "markerId": "south-atlantic-ocean",
+        "text": "The seventh letter is in the South Atlantic Ocean.",
+        "position": 7
       },
       {
         "markerId": "appalachian-mountains",
-        "text": "The fifth letter is next to the Appalachian Mountains."
+        "text": "The fifth letter is next to the Appalachian Mountains.",
+        "position": 5
       },
       {
-        "markerId": "andes",
-        "text": "The sixth letter is next to the Andes."
-      },
-      {
-        "markerId": "south-atlantic-ocean",
-        "text": "The seventh letter is in the South Atlantic Ocean."
-      },
-      {
-        "markerId": "north-american-cordillera",
-        "text": "The eighth letter is next to the North American Cordillera."
-      },
-      {
-        "markerId": "pacific-ocean",
-        "text": "The ninth letter is in the Pacific Ocean."
+        "markerId": "everest",
+        "text": "The third letter is next to the highest mountain in the world.",
+        "position": 3
       },
       {
         "markerId": "indian-ocean",
-        "text": "The tenth letter is in the Indian Ocean."
+        "text": "The tenth letter is in the Indian Ocean.",
+        "position": 10
+      },
+      {
+        "markerId": "north-american-cordillera",
+        "text": "The eighth letter is next to the North American Cordillera.",
+        "position": 8
+      },
+      {
+        "markerId": "east-africa",
+        "text": "The second letter is next to the mountains of East Africa.",
+        "position": 2
+      },
+      {
+        "markerId": "pacific-ocean",
+        "text": "The ninth letter is in the Pacific Ocean.",
+        "position": 9
+      },
+      {
+        "markerId": "north-atlantic-ocean",
+        "text": "The first letter is in the North Atlantic Ocean.",
+        "position": 1
+      },
+      {
+        "markerId": "andes",
+        "text": "The sixth letter is next to the Andes.",
+        "position": 6
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The fourth letter is next to the Ural Mountains.",
+        "position": 4
       }
     ],
     "definition": "Escarpment — a long, steep slope or cliff separating two areas of land.",
@@ -756,44 +809,54 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "himalayas",
-        "text": "The first letter is next to the Himalayas."
+        "markerId": "ural-mountains",
+        "text": "The fifth letter is next to the Ural Mountains.",
+        "position": 5
       },
       {
         "markerId": "great-dividing-range",
-        "text": "The second letter is next to the Great Dividing Range."
-      },
-      {
-        "markerId": "east-africa",
-        "text": "The third letter is next to the mountains of East Africa."
-      },
-      {
-        "markerId": "andes",
-        "text": "The fourth letter is next to the longest mountain range in the world."
-      },
-      {
-        "markerId": "ural-mountains",
-        "text": "The fifth letter is next to the Ural Mountains."
+        "text": "The second letter is next to the Great Dividing Range.",
+        "position": 2
       },
       {
         "markerId": "north-american-cordillera",
-        "text": "The sixth letter is next to the North American Cordillera."
-      },
-      {
-        "markerId": "appalachian-mountains",
-        "text": "The seventh letter is next to the Appalachian Mountains."
+        "text": "The sixth letter is next to the North American Cordillera.",
+        "position": 6
       },
       {
         "markerId": "antarctica",
-        "text": "The eighth letter is on the continent with the largest desert in the world."
+        "text": "The eighth letter is on the continent with the largest desert in the world.",
+        "position": 8
+      },
+      {
+        "markerId": "andes",
+        "text": "The fourth letter is next to the longest mountain range in the world.",
+        "position": 4
+      },
+      {
+        "markerId": "appalachian-mountains",
+        "text": "The seventh letter is next to the Appalachian Mountains.",
+        "position": 7
+      },
+      {
+        "markerId": "east-africa",
+        "text": "The third letter is next to the mountains of East Africa.",
+        "position": 3
       },
       {
         "markerId": "greenland",
-        "text": "The ninth letter is on the largest island in the world."
+        "text": "The ninth letter is on the largest island in the world.",
+        "position": 9
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The first letter is next to the Himalayas.",
+        "position": 1
       },
       {
         "markerId": "australia-asia",
-        "text": "The tenth letter is between Australia and Asia."
+        "text": "The tenth letter is between Australia and Asia.",
+        "position": 10
       }
     ],
     "definition": "Timberline — the elevation above which trees cannot grow.",
@@ -881,44 +944,54 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "andes",
-        "text": "The first letter is next to the Andes Mountains."
-      },
-      {
-        "markerId": "himalayas",
-        "text": "The second letter is next to the Himalayas."
-      },
-      {
-        "markerId": "atlas-mountains",
-        "text": "The third letter is next to the Atlas Mountains."
+        "markerId": "north-american-cordillera",
+        "text": "The sixth letter is next to the North American Cordillera.",
+        "position": 6
       },
       {
         "markerId": "east-africa",
-        "text": "The fourth letter is in the mountains of East Africa."
-      },
-      {
-        "markerId": "great-dividing-range",
-        "text": "The fifth letter is next to the Great Dividing Range."
-      },
-      {
-        "markerId": "north-american-cordillera",
-        "text": "The sixth letter is next to the North American Cordillera."
+        "text": "The fourth letter is in the mountains of East Africa.",
+        "position": 4
       },
       {
         "markerId": "ural-mountains",
-        "text": "The seventh letter is next to the Ural Mountains."
+        "text": "The seventh letter is next to the Ural Mountains.",
+        "position": 7
+      },
+      {
+        "markerId": "great-dividing-range",
+        "text": "The fifth letter is next to the Great Dividing Range.",
+        "position": 5
+      },
+      {
+        "markerId": "atlas-mountains",
+        "text": "The third letter is next to the Atlas Mountains.",
+        "position": 3
       },
       {
         "markerId": "arctic-ocean",
-        "text": "The eighth letter is in the smallest ocean in the world."
-      },
-      {
-        "markerId": "west-antarctica",
-        "text": "The ninth letter is in West Antarctica."
+        "text": "The eighth letter is in the smallest ocean in the world.",
+        "position": 8
       },
       {
         "markerId": "east-antarctica",
-        "text": "The tenth letter is in East Antarctica."
+        "text": "The tenth letter is in East Antarctica.",
+        "position": 10
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The second letter is next to the Himalayas.",
+        "position": 2
+      },
+      {
+        "markerId": "west-antarctica",
+        "text": "The ninth letter is in West Antarctica.",
+        "position": 9
+      },
+      {
+        "markerId": "andes",
+        "text": "The first letter is next to the Andes Mountains.",
+        "position": 1
       }
     ],
     "definition": "Weathering — the process that slowly breaks rocks into smaller pieces.",
@@ -997,7 +1070,8 @@ window.GEOWORD_LEVELS=[
         "y": 37.28,
         "letter": "I"
       },
-      {        "id": "southern-andes",
+      {
+        "id": "southern-andes",
         "x": 32.84,
         "y": 73.38,
         "letter": "S"
@@ -1005,44 +1079,54 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "great-dividing-range",
-        "text": "The first letter is next to the Great Dividing Range."
-      },
-      {
-        "markerId": "east-africa",
-        "text": "The second letter is next to the mountains of East Africa."
-      },
-      {
-        "markerId": "northern-andes",
-        "text": "The third letter is in the Northern Andes."
+        "markerId": "atlas-mountains",
+        "text": "The seventh letter is next to the Atlas Mountains.",
+        "position": 7
       },
       {
         "markerId": "ural-mountains",
-        "text": "The fourth letter is next to the Ural Mountains."
-      },
-      {
-        "markerId": "himalayas",
-        "text": "The fifth letter is next to the Himalayas."
+        "text": "The fourth letter is next to the Ural Mountains.",
+        "position": 4
       },
       {
         "markerId": "north-american-cordillera",
-        "text": "The sixth letter is next to the North American Cordillera."
-      },
-      {
-        "markerId": "atlas-mountains",
-        "text": "The seventh letter is next to the Atlas Mountains."
-      },
-      {
-        "markerId": "southern-andes",
-        "text": "The eighth letter is in the Southern Andes."
+        "text": "The sixth letter is next to the North American Cordillera.",
+        "position": 6
       },
       {
         "markerId": "appalachian-mountains",
-        "text": "The ninth letter is in the Appalachian Mountains."
+        "text": "The ninth letter is in the Appalachian Mountains.",
+        "position": 9
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The fifth letter is next to the Himalayas.",
+        "position": 5
+      },
+      {
+        "markerId": "southern-andes",
+        "text": "The eighth letter is in the Southern Andes.",
+        "position": 8
+      },
+      {
+        "markerId": "northern-andes",
+        "text": "The third letter is in the Northern Andes.",
+        "position": 3
+      },
+      {
+        "markerId": "great-dividing-range",
+        "text": "The first letter is next to the Great Dividing Range.",
+        "position": 1
       },
       {
         "markerId": "caucasus-mountains",
-        "text": "The tenth letter is in the Caucasus Mountains."
+        "text": "The tenth letter is in the Caucasus Mountains.",
+        "position": 10
+      },
+      {
+        "markerId": "east-africa",
+        "text": "The second letter is next to the mountains of East Africa.",
+        "position": 2
       }
     ],
     "definition": "Orogenesis — the process by which mountains are formed.",
@@ -1136,48 +1220,59 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "great-dividing-range",
-        "text": "The first letter is next to the Great Dividing Range."
-      },
-      {
-        "markerId": "east-africa",
-        "text": "The second letter is next to the mountains of East Africa."
-      },
-      {
-        "markerId": "himalayas",
-        "text": "The third letter is in the mountain range whose highest peak is Mount Everest."
-      },
-      {
-        "markerId": "andes",
-        "text": "The fourth letter is in the Andes."
+        "markerId": "atlas-mountains",
+        "text": "The eighth letter is next to the Atlas Mountains.",
+        "position": 8
       },
       {
         "markerId": "appalachian-mountains",
-        "text": "The fifth letter is next to the Appalachian Mountains."
-      },
-      {
-        "markerId": "ural-mountains",
-        "text": "The sixth letter is next to the Ural Mountains."
+        "text": "The fifth letter is next to the Appalachian Mountains.",
+        "position": 5
       },
       {
         "markerId": "north-american-cordillera",
-        "text": "The seventh letter is next to the North American Cordillera."
+        "text": "The seventh letter is next to the North American Cordillera.",
+        "position": 7
       },
       {
-        "markerId": "atlas-mountains",
-        "text": "The eighth letter is next to the Atlas Mountains."
+        "markerId": "east-africa",
+        "text": "The second letter is next to the mountains of East Africa.",
+        "position": 2
       },
       {
-        "markerId": "caucasus-mountains",
-        "text": "The ninth letter is in the Caucasus Mountains."
+        "markerId": "andes",
+        "text": "The fourth letter is in the Andes.",
+        "position": 4
+      },
+      {
+        "markerId": "ural-mountains",
+        "text": "The sixth letter is next to the Ural Mountains.",
+        "position": 6
+      },
+      {
+        "markerId": "himalayas",
+        "text": "The third letter is in the mountain range whose highest peak is Mount Everest.",
+        "position": 3
       },
       {
         "markerId": "pyrenees",
-        "text": "The tenth letter is in the Pyrenees."
+        "text": "The tenth letter is in the Pyrenees.",
+        "position": 10
+      },
+      {
+        "markerId": "great-dividing-range",
+        "text": "The first letter is next to the Great Dividing Range.",
+        "position": 1
       },
       {
         "markerId": "pacific-ocean",
-        "text": "The eleventh letter is in the Pacific Ocean."
+        "text": "The eleventh letter is in the Pacific Ocean.",
+        "position": 11
+      },
+      {
+        "markerId": "caucasus-mountains",
+        "text": "The ninth letter is in the Caucasus Mountains.",
+        "position": 9
       }
     ],
     "definition": "Mountaintop — the highest part of a mountain.",
@@ -1253,36 +1348,44 @@ window.GEOWORD_LEVELS=[
     ],
     "clues": [
       {
-        "markerId": "pyrenees",
-        "text": "The first letter is in the Pyrenees."
-      },
-      {
         "markerId": "mid-atlantic-ridge",
-        "text": "The second letter is on the Mid-Atlantic Ridge."
-      },
-      {
-        "markerId": "caucasus-mountains",
-        "text": "The third letter is in the Caucasus Mountains."
+        "text": "The second letter is on the Mid-Atlantic Ridge.",
+        "position": 2
       },
       {
         "markerId": "ural-mountains",
-        "text": "The fourth letter is next to the Ural Mountains."
-      },
-      {
-        "markerId": "great-dividing-range",
-        "text": "The fifth letter is next to the Great Dividing Range."
+        "text": "The fourth letter is next to the Ural Mountains.",
+        "position": 4
       },
       {
         "markerId": "andes",
-        "text": "The sixth letter is in the Andes."
+        "text": "The sixth letter is in the Andes.",
+        "position": 6
+      },
+      {
+        "markerId": "caucasus-mountains",
+        "text": "The third letter is in the Caucasus Mountains.",
+        "position": 3
+      },
+      {
+        "markerId": "great-dividing-range",
+        "text": "The fifth letter is next to the Great Dividing Range.",
+        "position": 5
       },
       {
         "markerId": "north-american-cordillera",
-        "text": "The seventh letter is next to the North American Cordillera."
+        "text": "The seventh letter is next to the North American Cordillera.",
+        "position": 7
+      },
+      {
+        "markerId": "pyrenees",
+        "text": "The first letter is in the Pyrenees.",
+        "position": 1
       },
       {
         "markerId": "atlas-mountains",
-        "text": "The eighth letter is next to the Atlas Mountains."
+        "text": "The eighth letter is next to the Atlas Mountains.",
+        "position": 8
       }
     ],
     "definition": "Rockfall — rocks falling from a steep slope or cliff.",

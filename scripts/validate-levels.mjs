@@ -59,21 +59,38 @@ if(!Array.isArray(levels)||levels.length===0){
       errors.push(`${label}: ${clues.length} clues for ${level.answer.length}-letter answer`);
     }
 
-    const built=clues.map((clue,clueIndex)=>{
+    // A clue may carry "position" (1-based letter slot); without it, clues fill slots in order.
+    const ORD=["first","second","third","fourth","fifth","sixth","seventh","eighth","ninth","tenth","eleventh","twelfth"];
+    const slots=new Array(clues.length).fill("?");
+    const usedPositions=new Set();
+    clues.forEach((clue,clueIndex)=>{
+      const position=clue?.position??clueIndex+1;
+      if(!Number.isInteger(position)||position<1||position>clues.length){
+        errors.push(`${label}: clue #${clueIndex+1} has invalid position ${position}`);
+        return;
+      }
+      if(usedPositions.has(position))errors.push(`${label}: position ${position} used twice`);
+      usedPositions.add(position);
       if(!clue?.markerId){
         errors.push(`${label}: clue #${clueIndex+1} missing markerId`);
-        return "?";
+        return;
       }
       const marker=markerById.get(clue.markerId);
       if(!marker){
         errors.push(`${label}: clue #${clueIndex+1} references missing marker ${clue.markerId}`);
-        return "?";
+        return;
       }
       if(typeof clue.text!=="string"||!clue.text.trim()){
         errors.push(`${label}: clue #${clueIndex+1} missing text`);
+      }else{
+        const m=clue.text.match(/\bThe (\w+) letter\b/i);
+        if(m&&ORD.indexOf(m[1].toLowerCase())+1!==position){
+          errors.push(`${label}: clue #${clueIndex+1} says "${m[1]} letter" but has position ${position}`);
+        }
       }
-      return marker.letter;
-    }).join("");
+      slots[position-1]=marker.letter;
+    });
+    const built=slots.join("");
 
     if(level?.answer&&built!==level.answer){
       errors.push(`${label}: clue sequence builds ${built}, expected ${level.answer}`);

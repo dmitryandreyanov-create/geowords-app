@@ -1,0 +1,226 @@
+{
+ "section": "rivers-of-the-world",
+ "use": "introduction cards (exercise type 0), one fact per river",
+ "intro": {
+  "note": "shown once before the section: \"Before this quiz you need to know…\" / «Перед этим разделом тебе нужно знать…» — source, river channel, mouth; no unit or puzzles",
+  "image": {
+   "en": "./assets/intro/rivers-intro-en.webp",
+   "ru": "./assets/intro/rivers-intro-ru.webp"
+  },
+  "terms": [
+   {
+    "en": "Source",
+    "ru": "Исток"
+   },
+   {
+    "en": "River channel",
+    "ru": "Русло"
+   },
+   {
+    "en": "Mouth",
+    "ru": "Устье"
+   }
+  ]
+ },
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
+ "items": [
+  {
+   "id": "nile",
+   "order": 1,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Nile",
+    "ru": "Нил"
+   },
+   "fact": {
+    "en": "Every year the Nile used to flood and leave rich, fertile mud on the fields of ancient Egypt.",
+    "ru": "Каждый год Нил разливался и оставлял на полях Древнего Египта плодородный ил."
+   },
+   "source": "Wikipedia: Flooding of the Nile (natural floods ended in 1970 with the Aswan High Dam)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "690f2693148de29b"
+   }
+  },
+  {
+   "id": "amazon",
+   "order": 2,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Amazon",
+    "ru": "Амазонка"
+   },
+   "fact": {
+    "en": "The Amazon carries more water than any other river: up to a fifth of all the fresh water that rivers pour into the ocean.",
+    "ru": "Амазонка несёт больше воды, чем любая другая река: до пятой части всей пресной воды, которую реки приносят в океан."
+   },
+   "source": "Britannica: Amazon River facts (up to 20% of freshwater discharged to the ocean)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "8d0612191ff9dce3"
+   }
+  },
+  {
+   "id": "mississippi",
+   "order": 3,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Mississippi",
+    "ru": "Миссисипи"
+   },
+   "fact": {
+    "en": "Together with the Missouri, the Mississippi forms the longest river system in North America.",
+    "ru": "Вместе с Миссури Миссисипи образует самую длинную речную систему Северной Америки."
+   },
+   "source": "WorldAtlas: longest rivers in North America (Mississippi-Missouri-Jefferson ~6,275 km). Note: \"Big Muddy\" is the Missouri's nickname, deliberately not used",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "c6bb15dc1675b53f"
+   }
+  },
+  {
+   "id": "yangtze",
+   "order": 4,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Yangtze",
+    "ru": "Янцзы"
+   },
+   "fact": {
+    "en": "The Yangtze is the longest river in Asia, about 6,300 km long. The Three Gorges power station on it is the most powerful in the world.",
+    "ru": "Янцзы — самая длинная река Азии, около 6300 км. На ней стоит ГЭС «Три ущелья» — самая мощная электростанция мира."
+   },
+   "source": "Britannica summary (6,300 km); Smart Water Magazine (longest in Asia); Wikipedia: Three Gorges Dam (22,500 MW, largest by installed capacity)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "52c79200530056eb"
+   }
+  },
+  {
+   "id": "huang-he",
+   "order": 5,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Yellow River (Huang He)",
+    "ru": "Хуанхэ"
+   },
+   "fact": {
+    "en": "The Yellow River gets its color and its name from loess, a fine yellow soil. It is famous for its sediment-rich waters and is often called the muddiest river in the world.",
+    "ru": "Хуанхэ получила цвет и имя от лёсса, мелкой жёлтой почвы. Она славится водой, богатой наносами, и её часто называют самой мутной рекой мира."
+   },
+   "source": "New World Encyclopedia: Yellow River; sediment load fell from 1.6 billion t/yr (1970s) to about 0.3 billion t/yr (Chinese Academy of Sciences, 2015), so it is given as \"often called\", not as a current record",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "f29b069bac621bdb"
+   }
+  },
+  {
+   "id": "ganges",
+   "order": 6,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Ganges",
+    "ru": "Ганг"
+   },
+   "fact": {
+    "en": "The Ganges begins at the Gangotri Glacier in the Himalayas. Many Hindus consider it sacred and come to bathe in it.",
+    "ru": "Ганг начинается у ледника Ганготри в Гималаях. Многие индуисты считают его священным и приходят совершить в нём омовение."
+   },
+   "source": "National Geographic: Chasing the Sacred, down the Ganges",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "1d67391c825794f3"
+   }
+  },
+  {
+   "id": "indus",
+   "order": 7,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Indus",
+    "ru": "Инд"
+   },
+   "fact": {
+    "en": "More than 4,500 years ago, one of the world's first civilizations, the Indus Valley (Harappan) Civilization, grew up along the Indus.",
+    "ru": "Больше 4500 лет назад вдоль Инда возникла одна из первых цивилизаций мира — Индская (Хараппская)."
+   },
+   "source": "Live Science: mature phase c. 2600-1900 BC",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "72af6cd8034a476b"
+   }
+  },
+  {
+   "id": "danube",
+   "order": 8,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Danube",
+    "ru": "Дунай"
+   },
+   "fact": {
+    "en": "The Danube flows through or along the borders of 10 countries, more than any other river.",
+    "ru": "Дунай течёт по территории или по границам 10 стран — больше, чем любая другая река."
+   },
+   "source": "New World Encyclopedia: Danube (\"most international river in the world\", ten countries)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "9f4545fdc9ab677d"
+   }
+  },
+  {
+   "id": "volga",
+   "order": 9,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Volga",
+    "ru": "Волга"
+   },
+   "fact": {
+    "en": "The Volga is the longest river in Europe, about 3,530 km long.",
+    "ru": "Волга — самая длинная река Европы, около 3530 км."
+   },
+   "source": "Wikipedia: Volga (3,531 km, longest river in Europe)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "18a09c60357a6965"
+   }
+  }
+ ]
+}

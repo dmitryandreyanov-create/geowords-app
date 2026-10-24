@@ -1,0 +1,598 @@
+{
+ "section": "rivers-of-the-world",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "3 units x (1 final + 6 review) + section final; before the section an intro card (source, river channel, mouth) is shown — no unit or puzzles for it",
+  "languages": "EN and RU lists are independent: a row is not a translation",
+  "fromWorkbook": "fromWorkbook = word from the printed Rivers workbook (all 10 used)",
+  "repeats": "RAINFOREST repeats from section 1 on purpose (same definition)",
+  "shortWords": "short words replaced with longer ones (LOESS, LEVEE, GORGE, ПОРОГ, ДАМБА, ЛЁСС, ШЛЮЗ); short workbook words РУСЛО, ПОЙМА kept",
+  "yo": "answers are shown with Ё; where the player types a word, Е and Ё are equal",
+  "uniqueAfterLetters": "EN only, estimate: letters revealed before only one word in a 370k English word list fits",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition} (JSON, sorted keys, UTF-8). Any change needs re-approval.",
+  "checked": "checked by Svetlana 2026-10-23: six Nile cataracts, Ganges source in the Himalayas, Danube as part of the Roman frontier, flood terms (паводок/половодье/наводнение), CHANNEL vs RIVERBED, CATARACT vs WATERFALL, HYDROPOWER vs HYDROELECTRICITY, ESTUARY at school level",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
+ },
+ "units": [
+  {
+   "id": "unit-1-nile-amazon-mississippi",
+   "title": {
+    "en": "Nile, Amazon, Mississippi",
+    "ru": "Нил, Амазонка, Миссисипи"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "FLOODPLAIN",
+      "role": "final",
+      "definition": "Flat land beside a river that is covered with water when the river overflows its banks.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "59fad5520bf5cdbb"
+      }
+     },
+     {
+      "answer": "CHANNEL",
+      "role": "review",
+      "definition": "The natural path in the ground through which a river flows.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a019a4e3a4048abb"
+      }
+     },
+     {
+      "answer": "MEANDER",
+      "role": "review",
+      "definition": "A winding bend or loop in a river.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "53f36bc4d381d8d2"
+      }
+     },
+     {
+      "answer": "RAINFOREST",
+      "role": "review",
+      "definition": "A thick, very wet tropical woodland, like the Amazon.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "01ef9fff1a27c9cf"
+      }
+     },
+     {
+      "answer": "MUDDINESS",
+      "role": "review",
+      "definition": "How cloudy river water becomes because of tiny particles of soil and sand.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "7d96c1ba3e7e45da"
+      }
+     },
+     {
+      "answer": "CATARACT",
+      "role": "review",
+      "definition": "A rocky stretch of a river with rapids that make navigation difficult. The Nile traditionally has six of them.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "ebe9f152c3248dab"
+      }
+     },
+     {
+      "answer": "EMBANKMENT",
+      "role": "review",
+      "definition": "A raised ridge of earth built along a river, often to help prevent flooding.",
+      "uniqueAfterLetters": 10,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "bb720cae36f5ef7b"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "МУТНОСТЬ",
+      "role": "final",
+      "definition": "Насколько вода в реке непрозрачна из-за мелких частиц песка и глины, которые она несёт.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "58286994f333963c"
+      }
+     },
+     {
+      "answer": "РУСЛО",
+      "role": "review",
+      "definition": "Углубление в земной поверхности, по которому течёт река.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1eb29335d5dfb28c"
+      }
+     },
+     {
+      "answer": "ПОЙМА",
+      "role": "review",
+      "definition": "Часть речной долины, которую затапливает во время половодья или паводка.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d3bf04cd76518c88"
+      }
+     },
+     {
+      "answer": "МЕАНДР",
+      "role": "review",
+      "definition": "Изгиб речного русла, часто имеющий форму петли.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a90a803ce5ee82c6"
+      }
+     },
+     {
+      "answer": "ПАВОДОК",
+      "role": "review",
+      "definition": "Обычно кратковременный подъём уровня реки, вызванный дождями или таянием снега.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "84d6e86ae3f09987"
+      }
+     },
+     {
+      "answer": "НАВОДНЕНИЕ",
+      "role": "review",
+      "definition": "Затопление местности при разливе реки, которое может причинить вред людям, зданиям и природе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "5794f957a037d7ab"
+      }
+     },
+     {
+      "answer": "ДЖУНГЛИ",
+      "role": "review",
+      "definition": "Густые, труднопроходимые заросли деревьев и других растений, обычно в тропиках.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "8299962e42cbf9d2"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-rivers-of-asia",
+   "title": {
+    "en": "Rivers of Asia",
+    "ru": "Реки Азии"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "IRRIGATION",
+      "role": "final",
+      "definition": "Supplying water to fields to help crops grow, especially when there is not enough rain.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "537d1b61c2b025b0"
+      }
+     },
+     {
+      "answer": "HINDUISM",
+      "role": "review",
+      "definition": "A religion that developed in India; its followers consider the Ganges a sacred river.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "4c7dffd566e451b9"
+      }
+     },
+     {
+      "answer": "HIMALAYAS",
+      "role": "review",
+      "definition": "The mountain range with Earth's highest peaks, including Everest. The Ganges begins high in these mountains.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "662ed67068a215d4"
+      }
+     },
+     {
+      "answer": "ALLUVIUM",
+      "role": "review",
+      "definition": "Sand, silt, clay, and other materials deposited by a river.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "389053bd5af7bfd9"
+      }
+     },
+     {
+      "answer": "HYDROPOWER",
+      "role": "review",
+      "definition": "Energy produced from moving water, often used to generate electricity.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "89a89d82dfc58ae6"
+      }
+     },
+     {
+      "answer": "RESERVOIR",
+      "role": "review",
+      "definition": "A large area of stored water, often created by building a dam across a river.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "268e33d266df0dec"
+      }
+     },
+     {
+      "answer": "SEDIMENT",
+      "role": "review",
+      "definition": "Small pieces of rock, sand, and mud carried or deposited by water.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e24607e0b990763c"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ОРОШЕНИЕ",
+      "role": "final",
+      "definition": "Искусственная подача воды на поля для выращивания растений.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "c765fbb3622c78b4"
+      }
+     },
+     {
+      "answer": "ИНДУИЗМ",
+      "role": "review",
+      "definition": "Религия, возникшая в Индии; её последователи считают Ганг священной рекой.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "b2bf204269bd7c44"
+      }
+     },
+     {
+      "answer": "ГИМАЛАИ",
+      "role": "review",
+      "definition": "Горная система, в которой находятся высочайшие вершины Земли. Здесь берёт начало Ганг.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "6300bf947ce0028b"
+      }
+     },
+     {
+      "answer": "УЩЕЛЬЕ",
+      "role": "review",
+      "definition": "Глубокая узкая долина с крутыми, часто скалистыми склонами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e82261d7d40ad34d"
+      }
+     },
+     {
+      "answer": "ПЛОТИНА",
+      "role": "review",
+      "definition": "Сооружение, перегораживающее водный поток, чтобы удерживать или регулировать воду.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1380c39184a4145a"
+      }
+     },
+     {
+      "answer": "ПАЛОМНИК",
+      "role": "review",
+      "definition": "Человек, который совершает путешествие к священному месту по религиозным причинам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d7be453bc79cd5a2"
+      }
+     },
+     {
+      "answer": "ВОДОХРАНИЛИЩЕ",
+      "role": "review",
+      "definition": "Искусственное озеро, созданное с помощью плотины, чтобы делать запасы на засушливое время.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "6004b8cf6f654b00"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-danube-volga-records",
+   "title": {
+    "en": "Danube, Volga and records",
+    "ru": "Дунай, Волга и рекорды"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "BARBARIANS",
+      "role": "final",
+      "definition": "A name the ancient Greeks and Romans used for peoples they considered foreign. The Danube marked part of the Roman Empire’s frontier.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ea949d0769add8c5"
+      }
+     },
+     {
+      "answer": "NAVIGABLE",
+      "role": "review",
+      "definition": "Deep, wide, and safe enough for boats or ships to travel on.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "438cc1f903dd32fd"
+      }
+     },
+     {
+      "answer": "WATERWAY",
+      "role": "review",
+      "definition": "A river, canal, or other route used by boats and ships.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "82810d377d1ba86e"
+      }
+     },
+     {
+      "answer": "DISCHARGE",
+      "role": "review",
+      "definition": "The volume of water flowing past a point in a river each second.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a07caa7479773992"
+      }
+     },
+     {
+      "answer": "UPSTREAM",
+      "role": "review",
+      "definition": "In the direction of a river’s source, against the current.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "93d746a506bddf7d"
+      }
+     },
+     {
+      "answer": "CONFLUENCE",
+      "role": "review",
+      "definition": "The place where two rivers or streams meet and flow together.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "d499cbb96176b6fa"
+      }
+     },
+     {
+      "answer": "ESTUARY",
+      "role": "review",
+      "definition": "A partly enclosed coastal area where river water meets and mixes with seawater.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "863f638b60634d92"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ВАРВАРЫ",
+      "role": "final",
+      "definition": "Так древние греки и римляне называли чужеземные народы. Дунай служил частью границы Римской империи.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "9acc00fb77fe0995"
+      }
+     },
+     {
+      "answer": "СУДОХОДСТВО",
+      "role": "review",
+      "definition": "Перевозка людей и грузов на кораблях по рекам, озёрам и морям.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "74c7cd59093b3d14"
+      }
+     },
+     {
+      "answer": "ФАРВАТЕР",
+      "role": "review",
+      "definition": "Путь по водоёму, достаточно глубокий и безопасный для движения судов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "56bcecc449b5c1e6"
+      }
+     },
+     {
+      "answer": "ЛЕДОХОД",
+      "role": "review",
+      "definition": "Движение льдин по течению реки весной, когда тает и ломается её зимний покров.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "979f42d2713b9dcd"
+      }
+     },
+     {
+      "answer": "ВЕРХОВЬЕ",
+      "role": "review",
+      "definition": "Участок реки, расположенный ближе к её истоку.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a71a3b84613be61d"
+      }
+     },
+     {
+      "answer": "ВОДОРАЗДЕЛ",
+      "role": "review",
+      "definition": "Граница между бассейнами рек: дожди и талый снег с одной её стороны стекают в одну реку, с другой — в другую.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "7e8edace38717429"
+      }
+     },
+     {
+      "answer": "ПОЛОВОДЬЕ",
+      "role": "review",
+      "definition": "Ежегодно повторяющийся сезонный подъём уровня реки, часто вызванный таянием снега или дождями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "af1eae2badc3505a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "en": "Section final",
+    "ru": "Итог раздела"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "ATMOSPHERE",
+      "role": "section-final",
+      "definition": "The layer of gases surrounding Earth. Water evaporates into it and later falls back as rain or snow.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "ff66d9404c15ad7e"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "АТМОСФЕРА",
+      "role": "section-final",
+      "definition": "Газовая оболочка Земли. Испарившаяся вода поднимается в неё и возвращается на поверхность дождём или снегом.",
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "8dfcbde4a098e8ee"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

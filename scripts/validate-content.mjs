@@ -9,6 +9,22 @@ import crypto from "node:crypto";
 const dir = process.env.CONTENT_DIR || path.join(process.cwd(), "data/content");
 // Release packages: file -> section and the exact card ids it must contain.
 const RELEASE = {
+  "section-2-records.json": {
+    section: "rivers-of-the-world",
+    ids: ["nile-longest", "amazon-most-water", "volga-longest-europe", "yangtze-longest-asia", "danube-most-countries", "huang-he-muddiest"],
+  },
+  "section-2-facts.json": {
+    section: "rivers-of-the-world",
+    ids: ["nile", "amazon", "mississippi", "yangtze", "huang-he", "ganges", "indus", "danube", "volga"],
+  },
+  "section-3-records.json": {
+    section: "mountains-of-the-world",
+    ids: ["everest-highest", "andes-longest-continental", "mid-ocean-ridge-longest", "kilimanjaro-highest-africa", "aconcagua-highest-south-america", "elbrus-highest-europe"],
+  },
+  "section-3-facts.json": {
+    section: "mountains-of-the-world",
+    ids: ["himalayas", "ural", "cordillera", "andes", "appalachians", "east-africa", "great-dividing-range", "atlas", "caucasus", "pyrenees", "mid-atlantic-ridge"],
+  },
   "section-4-records.json": {
     section: "seas-of-the-world",
     ids: ["red-sea-saltiest", "bay-of-bengal-largest-bay", "caspian-largest-inland", "coral-sea-largest-reef"],
@@ -68,6 +84,20 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       if (sha !== it.approval.contentSha256) errors.push(`${file}: ${id} text or disputed mark changed after approval — needs re-approval`);
     }
   }
+}
+// Relations (washedBy / neutral): every id must be a known continent or ocean; neutral never doubles as an answer.
+const facts = path.join(dir, "section-1-facts.json"), relFile = path.join(dir, "section-1-relations.json");
+if (fs.existsSync(facts) && fs.existsSync(relFile)) {
+  const kinds = Object.fromEntries(JSON.parse(fs.readFileSync(facts, "utf8")).items.map(it => [it.id, it.kind]));
+  const rel = JSON.parse(fs.readFileSync(relFile, "utf8"));
+  for (const [c, oceans] of Object.entries(rel.washedBy || {})) {
+    if (kinds[c] !== "continent") errors.push(`section-1-relations.json: ${c} is not a continent`);
+    for (const o of oceans) if (kinds[o] !== "ocean") errors.push(`section-1-relations.json: ${c} -> ${o} is not an ocean`);
+    for (const o of Object.keys(rel.neutral?.[c] || {}))
+      if (oceans.includes(o) || kinds[o] !== "ocean") errors.push(`section-1-relations.json: neutral ${c} -> ${o} must be an ocean that is not an answer`);
+  }
+  if (Object.keys(rel.washedBy || {}).length !== Object.values(kinds).filter(k => k === "continent").length)
+    errors.push("section-1-relations.json: washedBy must list every continent");
 }
 if (errors.length) { console.error("Content validation failed:\n" + errors.map(e => "- " + e).join("\n")); process.exit(1); }
 console.log(`Content validation passed: ${count} items, approvals match their text.`);
