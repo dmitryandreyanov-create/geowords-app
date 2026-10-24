@@ -320,7 +320,7 @@ function openStep(id){
   }else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?(st.kind==='practice'?x.practiceAgain:x.again):x.start}</button></div>`;
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
-  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else if(!S.introSeen2&&id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)};
+  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else startLesson(st)};
   const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{s.remove();startPractice(st)};
 }
 
@@ -345,6 +345,8 @@ function unitIntro(next){
   app.querySelector('.fb .btn').onclick=()=>{S.introSeen=true;save();next()};
 }
 
+// The rivers intro card (source · channel · mouth) opens the first rivers lesson every time, however the lesson is started.
+function startLesson(st){if(st.id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)}
 function riversIntro(next){
   const x=t(),lang=L(),I=D.s2.intro;
   h(`<section class="screen lesson"><div class="task"><span class="kind">${x.sectionN(2)} · ${x.riversIntro}</span>
@@ -356,7 +358,7 @@ function riversIntro(next){
 function nextBtns(id){const n=nextStep(id),x=t();
   return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:n.kind==='practice'?x.nextPractice:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
 function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').onclick=home;
-  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?lesson(n):n.kind==='practice'?runPractice(n):geowords(finalPuzzle(n))}
+  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?startLesson(n):n.kind==='practice'?runPractice(n):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
   const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
