@@ -26,8 +26,18 @@ const cases = {
   "definition changed after approval": edit(d => { firstWord(d, "ru").definition += "!"; }),
   "wrong section": edit(d => { d.section = "rivers"; }),
 };
+const script = "scripts/validate-dictionary.mjs";
+const runRaw = setup => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), "gw-missing-"));
+  setup(dir);
+  const r = spawnSync(process.execPath, [script], { env: { ...process.env, DICTIONARY_DIR: dir }, encoding: "utf8" });
+  fs.rmSync(dir, { recursive: true, force: true });
+  return r.status;
+};
 const failed = [];
+if (runRaw(() => {}) === 0) failed.push("missing release file should fail");
+if (runRaw(dir => fs.rmSync(dir, { recursive: true, force: true })) === 0) failed.push("missing directory should fail");
 if (run(base) !== 0) failed.push("unchanged package should pass");
 for (const [name, data] of Object.entries(cases)) if (run(data) === 0) failed.push(`${name} should fail`);
 if (failed.length) { console.error("Dictionary validator tests failed:\n" + failed.map(f => "- " + f).join("\n")); process.exit(1); }
-console.log(`Dictionary validator tests passed: ${Object.keys(cases).length} broken packages rejected.`);
+console.log(`Dictionary validator tests passed: ${Object.keys(cases).length} broken packages rejected, missing file and directory rejected.`);
