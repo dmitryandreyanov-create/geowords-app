@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="1000" viewBox="0 0 1600 1000"><rect width="1600" height="1000" fill="#f8f4e9"/>
+<image x="100" y="150" width="1400" height="770.6363636363636" xlink:href="../world-base.webp"/>
+<path d="M100 576.4534126659255H1500" stroke="#c16c35" stroke-width="7" stroke-dasharray="22 13"/>
+<path d="M753.3333333333334 150V920.6363636363636" stroke="#285f62" stroke-width="7" stroke-dasharray="22 13"/>
+<path d="M800 128V48M778 72L800 48L822 72" fill="none" stroke="#285f62" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

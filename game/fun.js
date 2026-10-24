@@ -13,6 +13,8 @@ const RANKS=[
   {xp:2200,name:"Legendary Explorer",icon:"🏆",outfit:"crown"}
 ];
 const OUTFITS={hat:"Map Reader",scarf:"Trail Scout",binoculars:"Pathfinder",backpack:"Navigator",captain:"Captain",crown:"Legendary Explorer"};
+const RANK_BADGES=['rank-1-map.webp','rank-2-boot.webp','rank-3-compass.webp','rank-4-sail.webp','rank-5-anchor.webp','rank-6-globe.webp'];
+const rankBadge=rank=>`<img class="rank-badge" src="./assets/graphics/game/${RANK_BADGES[RANKS.indexOf(rank)]}" alt="">`;
 const SAY={
   start:["Let's explore! Read the clue and find the letter.","Ready, explorer? Where is our first letter?","Adventure time! I'll follow your lead."],
   correct:["Yes! Great map reading!","You found it!","Nice one, explorer!","Spot on!","Brilliant!"],
@@ -399,7 +401,7 @@ function renderHomeCard(){
     card.querySelector("[data-pip]").innerHTML=pipArt();
   }
   const r=rankFor(state.xp),n=nextRank(state.xp);
-  $("rankName").textContent=r.icon+" "+r.name;
+  $("rankName").innerHTML=rankBadge(r)+" "+esc(r.name);
   $("xpFill").style.width=(n?Math.round((state.xp-r.xp)/(n.xp-r.xp)*100):100)+"%";
   $("xpText").textContent=n?`${state.xp} XP · ${n.xp-state.xp} XP to ${n.name}`:`${state.xp} XP · top rank reached!`;
   $("stampCount").textContent=Object.keys(state.stamps).length;

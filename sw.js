@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.6.8-pip-webp";
+const CACHE="geowords-v0.6.9-expedition-graphics";
 const CORE=[
   "./",
   "./index.html",
@@ -24,6 +24,12 @@ const CORE=[
   "./assets/pip/game/pip-outfit-4-navigator.webp",
   "./assets/pip/game/pip-outfit-5-captain.webp",
   "./assets/pip/game/pip-outfit-6-legend.webp",
+  "./assets/graphics/game/rank-1-map.webp",
+  "./assets/graphics/game/rank-2-boot.webp",
+  "./assets/graphics/game/rank-3-compass.webp",
+  "./assets/graphics/game/rank-4-sail.webp",
+  "./assets/graphics/game/rank-5-anchor.webp",
+  "./assets/graphics/game/rank-6-globe.webp",
   "./graphics/index.html",
   "./graphics/gallery.css",
   "./graphics/gallery.js",
