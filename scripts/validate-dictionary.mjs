@@ -9,6 +9,10 @@ import crypto from "node:crypto";
 const dir = process.env.DICTIONARY_DIR || path.join(process.cwd(), "data/dictionary");
 // Release packages: file -> section and the exact unit ids it must contain (the last one is the section final).
 const RELEASE = {
+  "block-1.json": {
+    section: "world-1",
+    units: ["block-final", "challenge-extra"],
+  },
   "section-5.json": {
     section: "straits-and-canals",
     units: ["unit-1-canals-and-european-straits", "unit-2-straits-of-asia-and-africa", "unit-3-straits-of-the-americas-and-polar-seas", "section-final"],
