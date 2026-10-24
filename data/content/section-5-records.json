@@ -1,62 +1,8 @@
 {
  "section": "straits-and-canals",
  "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues",
- "approvalRule": "same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
-  {
-   "id": "malacca-most-oil",
-   "order": 1,
-   "object": "strait-of-malacca",
-   "kind": "strait",
-   "unit": 3,
-   "name": {
-    "en": "Strait of Malacca",
-    "ru": "Малаккский пролив"
-   },
-   "fact": {
-    "en": "The Strait of Malacca is the world's busiest route for shipping oil.",
-    "ru": "Малаккский пролив — крупнейший в мире путь перевозки нефти."
-   },
-   "figure": {
-    "value": 23.2,
-    "unit": "million barrels a day (1H 2025)"
-   },
-   "source": "EIA",
-   "disputed": false,
-   "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "6fef67a03a4c5323"
-   }
-  },
-  {
-   "id": "hormuz-fifth-of-oil",
-   "order": 2,
-   "object": "strait-of-hormuz",
-   "kind": "strait",
-   "unit": 3,
-   "name": {
-    "en": "Strait of Hormuz",
-    "ru": "Ормузский пролив"
-   },
-   "fact": {
-    "en": "About a fifth of the world's oil passes through the Strait of Hormuz.",
-    "ru": "Через Ормузский пролив идёт около пятой части мировой нефти."
-   },
-   "figure": {
-    "value": 20.9,
-    "unit": "million barrels a day (1H 2025)"
-   },
-   "source": "EIA",
-   "disputed": false,
-   "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "7fc66fb7556554e7"
-   }
-  },
   {
    "id": "gibraltar-narrowest-europe-africa",
    "order": 3,
@@ -69,20 +15,21 @@
    },
    "fact": {
     "en": "The Strait of Gibraltar is the narrowest gap between Europe and Africa.",
-    "ru": "Гибралтар — самое узкое место между Европой и Африкой."
+    "ru": "Гибралтарский пролив — самое узкое место между Европой и Африкой."
    },
    "figure": {
-    "value": 14.2,
+    "value": 13,
     "unit": "km"
    },
-   "source": "Wikipedia: Strait of Gibraltar",
+   "source": "Britannica: Strait of Gibraltar",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "be994ba6b29ca733"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "6f58d4a999159ef8"
+   },
+   "category": "stable"
   },
   {
    "id": "bering-narrowest-asia-america",
@@ -108,8 +55,10 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "7b315d1e295128c8"
-   }
+    "contentSha256": "e0ec41b86bef40c8"
+   },
+   "category": "stable"
   }
- ]
+ ],
+ "categoryRule": "record category (Svetlana, 2026-10-24): stable — may be used in GeoWords clues; conditional — only with its criterion in the wording (\"often called…\"); changing — only with a year (asOf) and never in clues"
 }

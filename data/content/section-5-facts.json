@@ -1,7 +1,7 @@
 {
  "section": "straits-and-canals",
  "use": "introduction cards (exercise type 0), one fact per object; ids match data/maps/world-straits.json",
- "approvalRule": "same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "suez-canal",
@@ -22,7 +22,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "8ed1164ac91bf612"
+    "contentSha256": "c10f87a0b1b34398"
    }
   },
   {
@@ -35,7 +35,7 @@
     "ru": "Панамский канал"
    },
    "fact": {
-    "en": "The Panama Canal (1914) connects the Atlantic and Pacific Oceans. Its locks lift ships 26 metres up to Gatun Lake.",
+    "en": "The Panama Canal (1914) connects the Atlantic and Pacific Oceans. Its locks lift ships 26 meters up to Gatun Lake.",
     "ru": "Панамский канал (1914) соединяет Атлантический и Тихий океаны. Шлюзы поднимают суда на 26 метров, до озера Гатун."
    },
    "source": "Wikipedia: Panama Canal",
@@ -43,8 +43,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "7c32f078d91f00d3"
+    "date": "2026-10-24",
+    "contentSha256": "48e6d25bef9a3ae5"
    }
   },
   {
@@ -57,16 +57,16 @@
     "ru": "Гибралтарский пролив"
    },
    "fact": {
-    "en": "At its narrowest point, only about 14 km separate Europe and Africa.",
-    "ru": "В самом узком месте Европу и Африку разделяют всего около 14 км."
+    "en": "At its narrowest point, only about 13 km separate Europe and Africa.",
+    "ru": "В самом узком месте Европу и Африку разделяют всего около 13 км."
    },
-   "source": "Wikipedia: Strait of Gibraltar (14.2 km)",
+   "source": "Britannica: Strait of Gibraltar (8 miles, 13 km)",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "18f944e5b26adf03"
+    "date": "2026-10-24",
+    "contentSha256": "145740293c65d5da"
    }
   },
   {
@@ -88,7 +88,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "b147a6832c948a2b"
+    "contentSha256": "2d5e30dc8a38a1f9"
    }
   },
   {
@@ -110,7 +110,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "47e00bbe692b964a"
+    "contentSha256": "35f4193d1685f070"
    }
   },
   {
@@ -132,7 +132,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "7f4bd553454d760a"
+    "contentSha256": "fa5a0dc2a6d0ed1a"
    }
   },
   {
@@ -154,7 +154,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "816b26339599ba04"
+    "contentSha256": "0bd79551a19fdb45"
    }
   },
   {
@@ -167,16 +167,16 @@
     "ru": "Ормузский пролив"
    },
    "fact": {
-    "en": "About a fifth of all the oil the world uses passes through the Strait of Hormuz.",
-    "ru": "Через Ормузский пролив проходит около пятой части всей нефти, которую потребляет мир."
+    "en": "The Strait of Hormuz connects the Persian Gulf with the Gulf of Oman. It is one of the most important routes for shipping oil.",
+    "ru": "Ормузский пролив соединяет Персидский и Оманский заливы. Это один из важнейших путей перевозки нефти."
    },
-   "source": "EIA (20.9 million b/d, about a fifth of global consumption)",
+   "source": "EIA: World Oil Transit Chokepoints",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "a4867866506435fe"
+    "date": "2026-10-24",
+    "contentSha256": "0bdc17a85357bf7a"
    }
   },
   {
@@ -198,7 +198,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "416b761904960dc2"
+    "contentSha256": "d1b96d2ec5782cb5"
    }
   },
   {
@@ -211,16 +211,16 @@
     "ru": "Малаккский пролив"
    },
    "fact": {
-    "en": "More oil is shipped through the Strait of Malacca than through any other strait.",
-    "ru": "Через Малаккский пролив перевозят больше нефти, чем через любой другой пролив."
+    "en": "The Strait of Malacca is one of the world's busiest shipping routes between the Indian and Pacific Oceans.",
+    "ru": "Малаккский пролив — один из самых оживлённых морских путей мира между Индийским и Тихим океанами."
    },
-   "source": "EIA (\"largest chokepoint in the world in terms of oil transit volume\")",
+   "source": "EIA: World Oil Transit Chokepoints",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ac409f85449d9969"
+    "date": "2026-10-24",
+    "contentSha256": "a1a2b54bee806d00"
    }
   },
   {
@@ -242,7 +242,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "c94e3ee4e9ef4ac7"
+    "contentSha256": "b78d0cee5308b99a"
    }
   },
   {
@@ -264,7 +264,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "9cca1ebdd4307250"
+    "contentSha256": "0b8b7eb99d15a59f"
    }
   },
   {
@@ -286,7 +286,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "e5329e1894887546"
+    "contentSha256": "72281dabc8dcac20"
    }
   },
   {
@@ -308,7 +308,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "d4aa76abba87d0c3"
+    "contentSha256": "5b8ea6c15026b223"
    }
   }
  ]
