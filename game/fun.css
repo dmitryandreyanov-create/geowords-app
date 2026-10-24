@@ -11,6 +11,10 @@
 .explorer-top{display:flex;gap:14px;align-items:center}
 .explorer-pip{width:84px;flex:0 0 84px;animation:pip-idle 3s ease-in-out infinite}
 [data-pip] svg,.explorer-pip svg,.pip-avatar svg{display:block;width:100%;height:auto}
+.pip-art{display:block;width:100%;aspect-ratio:1355 / 1161;background-image:url('../assets/pip/pip-poses-v1.png');background-repeat:no-repeat;background-size:200% 200%;background-position:0 0}
+.pip-art[data-pose="celebrate"],.finish-pip .pip-art{background-position:100% 0}
+.pip-art[data-pose="map"]{background-position:0 100%}
+.pip-art[data-pose="encourage"]{background-position:100% 100%}
 .explorer-info{flex:1;min-width:0}
 .explorer-info h2{margin:4px 0 8px;font-size:22px;line-height:1.1}
 .explorer-card .eyebrow{color:#b5651d!important}

@@ -88,6 +88,9 @@ const ACCESSORY={
   crown:`<path d="M24 34 L28 12 L39 26 L50 8 L61 26 L72 12 L76 34Z" fill="#ffcf3a" stroke="#d29b12" stroke-width="2" stroke-linejoin="round"/><circle cx="50" cy="22" r="3.5" fill="#e2483d"/><circle cx="35" cy="28" r="2.6" fill="#3d9be2"/><circle cx="65" cy="28" r="2.6" fill="#4cc46a"/>`
 };
 function pipSVG(outfit=state.outfit){
+  // Approved painted design for the base outfit. Other unlocked costumes keep
+  // their existing renderer until matching illustrated outfits are approved.
+  if(outfit==='hat')return '<span class="pip-art" aria-hidden="true"></span>';
   const id="pipwc"+(++pipSeq);
   const head=outfit==="hat"||outfit==="captain"||outfit==="crown";
   const acc=ACCESSORY[outfit]||ACCESSORY.hat;
@@ -199,6 +202,8 @@ function say(text,mood){
   g.querySelector(".pip-bubble").textContent=text;
   g.classList.remove("happy","sad","hint","pop");void g.offsetWidth;
   g.classList.add("pop");if(mood)g.classList.add(mood);
+  const art=g.querySelector('.pip-art');
+  if(art)art.dataset.pose=mood==='happy'?'celebrate':mood==='sad'?'encourage':mood==='hint'?'map':'greet';
 }
 const clueObserver=new MutationObserver(()=>{
   const t=$("clueText")?.textContent;

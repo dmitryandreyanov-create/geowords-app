@@ -12,6 +12,7 @@ const named=[
   'data/rivers-semantics.js','data/rivers-authored.js',
   'engine/geowords.js','engine/semantic.js',
   'game/fun.js','game/fun.css',
+  'assets/pip/pip-poses-v1.png',
   'data/l1-phone.js','engine/l1-phone.js',
   'assets/l1-trial/l1-clean-map-1.webp','assets/l1-trial/l1-clean-map-2.webp',
   'assets/icon-180.png','assets/icon-192.png','assets/icon-512.png',

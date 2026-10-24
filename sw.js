@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.6.3-letter-order";
+const CACHE="geowords-v0.6.4-painted-pip";
 const CORE=[
   "./",
   "./index.html",
@@ -6,6 +6,7 @@ const CORE=[
   "./app.js",
   "./game/fun.js",
   "./game/fun.css",
+  "./assets/pip/pip-poses-v1.png",
   "./data/levels.js",
   "./data/dictionary.js",
   "./data/courses.js",
