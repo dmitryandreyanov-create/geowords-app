@@ -34,6 +34,7 @@ const RELEASE = {
     units: ["unit-1-directions-hemispheres", "unit-2-continents", "unit-3-oceans", "unit-4-neighbours-records", "section-final"],
   },
 };
+const ROLES = new Set(["final", "review", "reserve", "section-final", "block-final", "challenge"]);
 const STATUSES = new Set(["approved", "draft"]);
 // Release packages are required: a missing directory or file fails.
 if (!fs.existsSync(dir)) { console.error(`Dictionary validation failed:\n- missing directory ${dir}`); process.exit(1); }
@@ -82,8 +83,18 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
         errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final / block-final)`);
       if (!words.length && !challengeOnly) errors.push(`${file}: ${u.id} has no ${lang} words`);
+      // Reserve words ("Play again" when no review word fits the learned places): only beside a unit final,
+      // and never longer than the unit's reserveMaxLetters.
+      const reserves = words.filter(w => w.role === "reserve");
+      if (reserves.length) {
+        if (finals !== 1) errors.push(`${file}: ${u.id} ${lang} reserve words need a unit with a final word`);
+        if (!Number.isInteger(u.reserveMaxLetters) || u.reserveMaxLetters < 3) errors.push(`${file}: ${u.id} has reserve words but no reserveMaxLetters`);
+        else for (const w of reserves) if ([...(w.answer || "")].length > u.reserveMaxLetters)
+          errors.push(`${file}: ${u.id} ${lang} reserve word ${w.answer} is longer than ${u.reserveMaxLetters} letters`);
+      }
       for (const w of words) {
         count++;
+        if (!ROLES.has(w.role)) errors.push(`${file}: ${u.id} ${lang} ${w.answer} has unknown role "${w.role}"`);
         const a = w.approval;
         if (a && !STATUSES.has(a.status)) errors.push(`${file}: ${w.answer} unknown approval status "${a.status}"`);
         if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
