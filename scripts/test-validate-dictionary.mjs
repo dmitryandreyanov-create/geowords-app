@@ -33,6 +33,9 @@ const cases = {
   "unknown approval status": edit(d => { firstWord(d, "ru").approval.status = "ok"; }),
   "definition changed after approval": edit(d => { firstWord(d, "ru").definition += "!"; }),
   "wrong section": edit(d => { d.section = "rivers"; }),
+  "reserve word longer than reserveMaxLetters": edit(d => { const w = d.units[0].words.en.find(x => x.role === "reserve"); w.answer = "MERIDIANS"; reapprove(w); }),
+  "reserve words without reserveMaxLetters": edit(d => { delete d.units[0].reserveMaxLetters; }),
+  "unknown word role": edit(d => { d.units[0].words.en.find(x => x.role === "reserve").role = "spare"; }),
   "answer in its own definition (EN)": edit(d => { const w = firstWord(d, "en"); w.definition = `Like a ${w.answer.toLowerCase()}s.`; reapprove(w); }),
   "answer in its own definition (RU, other case)": edit(d => { const w = firstWord(d, "ru"); w.definition = `Похоже на ${w.answer.toLowerCase().replace(/[аеиоуыэюяьй]$/, "")}ой.`; reapprove(w); }),
 };

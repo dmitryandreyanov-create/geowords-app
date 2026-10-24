@@ -16,7 +16,8 @@
   "review": "definitions are an editorial version; final scientific check before release",
   "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)",
   "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
-  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms",
+  "reserve": "reserve words (role \"reserve\", unit 1 only for now): short words for \"Play again\" when no review word fits the places learned so far; at most reserveMaxLetters letters (unit 1 has 6 places: Equator, Prime Meridian, far N/S/E/W). Approved by Svetlana 2026-10-24"
  },
  "sources": {
   "PANGAEA": "USGS: about 300–200 million years ago; break-up began about 225–200 million years ago"
@@ -113,6 +114,78 @@
        "date": "2026-10-23",
        "contentSha256": "057264228921ace3"
       }
+     },
+     {
+      "answer": "NADIR",
+      "role": "reserve",
+      "definition": "The point in the sky directly below an observer, on the opposite side of Earth; the opposite of the zenith.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "01fa4a3beba6efd7"
+      }
+     },
+     {
+      "answer": "TROPIC",
+      "role": "reserve",
+      "definition": "Either of two imaginary lines about 23.4° north and south of the Equator. Over each of them, the Sun stands directly overhead at noon once a year.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "0e69cc74abe3534f"
+      }
+     },
+     {
+      "answer": "ORBIT",
+      "role": "reserve",
+      "definition": "The curved path of a planet, moon or spacecraft around a star or planet. Earth completes its path around the Sun in one year.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "1091bd6c1e6228cf"
+      }
+     },
+     {
+      "answer": "GLOBE",
+      "role": "reserve",
+      "definition": "A small model of Earth in the shape of a ball, showing the continents and oceans.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "46dfc9e6e0c29010"
+      }
+     },
+     {
+      "answer": "ATLAS",
+      "role": "reserve",
+      "definition": "A book or collection of maps.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "0e97045aa75fc876"
+      }
+     },
+     {
+      "answer": "POLAR",
+      "role": "reserve",
+      "definition": "Relating to the icy regions around the northern and southern ends of Earth's axis.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "a7cfbdd695827b93"
+      }
      }
     ],
     "ru": [
@@ -192,9 +265,76 @@
        "date": "2026-10-23",
        "contentSha256": "e69fccad310cec8a"
       }
+     },
+     {
+      "answer": "НАДИР",
+      "role": "reserve",
+      "definition": "Точка небесной сферы прямо под наблюдателем, противоположная зениту.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "18ec829d128fa1f6"
+      }
+     },
+     {
+      "answer": "ТРОПИК",
+      "role": "reserve",
+      "definition": "Каждая из двух воображаемых линий примерно в 23,4° к северу и к югу от экватора. Над ними Солнце в полдень один раз в году стоит прямо над головой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "cd836e1291d9ad79"
+      }
+     },
+     {
+      "answer": "ОРБИТА",
+      "role": "reserve",
+      "definition": "Путь, по которому планета, спутник или космический корабль движется вокруг звезды или планеты. Земля проходит свой путь вокруг Солнца за год.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "e63bdb7fa1664d12"
+      }
+     },
+     {
+      "answer": "ГЛОБУС",
+      "role": "reserve",
+      "definition": "Уменьшенная модель Земли в форме шара, на которой показаны материки и океаны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "659ca93d03aaef91"
+      }
+     },
+     {
+      "answer": "АТЛАС",
+      "role": "reserve",
+      "definition": "Книга или сборник географических карт.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "363854dabee26252"
+      }
+     },
+     {
+      "answer": "КОМПАС",
+      "role": "reserve",
+      "definition": "Прибор с магнитной стрелкой, которая указывает на север и помогает определять стороны света.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "af71b372c8eb4e36"
+      }
      }
     ]
-   }
+   },
+   "reserveMaxLetters": 6
   },
   {
    "id": "unit-2-continents",
