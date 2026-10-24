@@ -11,7 +11,8 @@
   "insets": "Bering Strait, Bosporus and Dardanelles are answered through their magnifiers",
   "records": "only approved undisputed records; a false statement repeats the record with another object of the same kind",
   "relations": "use = yes: any exercise; after-card: only after the convention card has been shown; only-border-question: Ural only in the border question; no: never in single-answer exercises",
-  "trueFalseTexts": "relation statements in trueFalse.pairs (approved 2026-10-23)"
+  "trueFalseTexts": "relation statements in trueFalse.pairs (approved 2026-10-23)",
+  "approval": "each true/false pair: approval.contentSha256 = first 16 hex of sha256 over {id, subject, relation, true, false} (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged)"
  },
  "lessons": [
   {
@@ -394,14 +395,16 @@
    "subject": "mediterranean-sea",
    "object": "atlantic-ocean",
    "use": "after-card",
-   "note": "our map convention; show it on a card before asking"
+   "note": "our map convention; show it on a card before asking",
+   "requiresCard": "card-map-convention-med-black-atlantic"
   },
   {
    "relation": "inOcean",
    "subject": "black-sea",
    "object": "atlantic-ocean",
    "use": "after-card",
-   "note": "our map convention; show it on a card before asking"
+   "note": "our map convention; show it on a card before asking",
+   "requiresCard": "card-map-convention-med-black-atlantic"
   },
   {
    "relation": "inOcean",
@@ -616,7 +619,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "bc782e63887949ca"
+     "contentSha256": "4e7ddde2a865c10e"
     }
    },
    {
@@ -635,7 +638,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "ed310de08dcdf908"
+     "contentSha256": "57cf507d236a710b"
     }
    },
    {
@@ -654,7 +657,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "f2da8cd863aba3b5"
+     "contentSha256": "acec406475a4bbda"
     }
    },
    {
@@ -673,7 +676,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "96070263cb759364"
+     "contentSha256": "6416b5d53a4ea9a5"
     }
    },
    {
@@ -692,7 +695,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "64f8a44aa19a1369"
+     "contentSha256": "f3b009af5c642c6f"
     }
    },
    {
@@ -711,7 +714,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "643d2fe5b83d8280"
+     "contentSha256": "626c8fbfa79b7f9b"
     }
    },
    {
@@ -730,7 +733,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "f33e0e1357a05e43"
+     "contentSha256": "72153a0721b46594"
     }
    },
    {
@@ -749,7 +752,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "d1c62fc0785f9d2b"
+     "contentSha256": "c5859de831510d89"
     }
    },
    {
@@ -768,7 +771,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "8729121a9497be6c"
+     "contentSha256": "a8faa29ba5fcbdb6"
     }
    },
    {
@@ -787,7 +790,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "65163321c072a21b"
+     "contentSha256": "0d49d358bc6b10d0"
     }
    },
    {
@@ -806,7 +809,7 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "fe15adaa31a204f1"
+     "contentSha256": "12c0a0b857a7857d"
     }
    },
    {
@@ -825,9 +828,16 @@
      "status": "approved",
      "by": "Svetlana",
      "date": "2026-10-23",
-     "contentSha256": "09733954e35ec5ec"
+     "contentSha256": "d51060baef94274b"
     }
    }
   ]
- }
+ },
+ "cards": [
+  {
+   "id": "card-map-convention-med-black-atlantic",
+   "for": "developer",
+   "describes": "shows on the map that the Mediterranean and Black Seas are counted as part of the Atlantic Ocean in this app; must be shown before any after-card relation is asked. Child-facing EN/RU text to be approved by Svetlana before release."
+  }
+ ]
 }
