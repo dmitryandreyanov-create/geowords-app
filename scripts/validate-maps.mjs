@@ -7,7 +7,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = process.cwd();
-const dir = path.join(root, "data/maps");
+const dir = process.env.MAPS_DIR || path.join(root, "data/maps");
 const MAP_WIDTH_PX = 300;   // narrowest phone map width the app supports
 const MIN_TAP_PX = 44;      // recommended minimum touch target
 const errors = [], notes = [], smallTaps = new Map();
@@ -56,6 +56,7 @@ function exists(file, ref, what) {
   return rel;
 }
 const pct = v => Number.isFinite(v) && v >= 0 && v <= 100;
+const OVERLAP_TOL = 0.2; // % of map width
 function pointInPoly(pt, poly) {
   let inside = false;
   for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
@@ -64,7 +65,7 @@ function pointInPoly(pt, poly) {
   }
   return inside;
 }
-function checkTap(file, id, label, tapArea, aspect, where) {
+function checkTap(file, id, label, tapArea, aspect, where, holes) {
   if (!label || !pct(label.x) || !pct(label.y)) { fail(file, `${id}: ${where} label outside 0..100`); return; }
   if (!Array.isArray(tapArea) || !tapArea.length) { fail(file, `${id}: ${where} tapArea missing`); return; }
   for (const poly of tapArea) {
@@ -75,6 +76,12 @@ function checkTap(file, id, label, tapArea, aspect, where) {
     if (out > 0) notes.push(`${file}: ${id} ${where} tapArea extends ${out.toFixed(1)}% past the image edge (clip it)`);
   }
   if (!tapArea.some(poly => pointInPoly(label, poly))) fail(file, `${id}: ${where} label is not inside its tapArea`);
+  // Holes (islands cut out of an ocean): each lies inside the area, the label is not in one.
+  for (const hole of holes || []) {
+    if (!Array.isArray(hole) || hole.length < 3) { fail(file, `${id}: ${where} invalid hole`); continue; }
+    if (!tapArea.some(poly => pointInPoly({ x: hole[0][0], y: hole[0][1] }, poly))) fail(file, `${id}: ${where} hole lies outside its tapArea`);
+  }
+  if ((holes || []).some(h => pointInPoly(label, h))) fail(file, `${id}: ${where} label is inside a hole`);
   if (where === "map") {
     // Largest single polygon: an area split by the map edge is not one big target.
     const dims = tapArea.map(poly => {
@@ -180,7 +187,7 @@ for (const file of files) {
     if (typeof it.layer === "string") exists(file, it.layer, `${id} layer`);
 
     if ("x" in it || "y" in it) { if (!pct(it.x) || !pct(it.y)) fail(file, `${id}: x/y outside 0..100`); }
-    if (it.tapArea) checkTap(file, id, it.label, it.tapArea, aspect, "map");
+    if (it.tapArea) checkTap(file, id, it.label, it.tapArea, aspect, "map", it.holes);
     if (it.inset) {
       const inset = j.insets?.[it.inset.id];
       if (!inset) fail(file, `${id}: unknown inset ${it.inset.id}`);
@@ -193,6 +200,25 @@ for (const file of files) {
   for (const [name, inset] of Object.entries(j.insets || {})) {
     exists(file, inset.image, `inset ${name}`);
     for (const m of inset.magnifier || []) if (!pct(m.x) || !pct(m.y)) fail(file, `inset ${name}: magnifier point outside the map`);
+  }
+
+  // Continents and oceans never share a tap area: a point inside a continent must not count for an ocean.
+  // Grid every 0.5%; points closer than OVERLAP_TOL to a polygon edge are coastline simplification and are skipped.
+  const conts = items.filter(it => it.kind === "continent" && it.tapArea), oceans = items.filter(it => it.kind === "ocean" && it.tapArea);
+  if (conts.length && oceans.length) {
+    const inArea = (it, pt) => it.tapArea.some(p => pointInPoly(pt, p)) && !(it.holes || []).some(h => pointInPoly(pt, h));
+    const edgeDist = (polys, pt) => Math.min(...polys.flatMap(p => p.map((a, i) => {
+      const b = p[(i + 1) % p.length], ax = b[0] - a[0], ay = (b[1] - a[1]) / aspect, px = pt.x - a[0], py = (pt.y - a[1]) / aspect;
+      const t = Math.max(0, Math.min(1, (px * ax + py * ay) / ((ax * ax + ay * ay) || 1e-12)));
+      return Math.hypot(px - ax * t, py - ay * t);
+    })));
+    const bad = new Map();
+    for (let x = 0.25; x < 100; x += 0.5) for (let y = 0.25; y < 100; y += 0.5) {
+      const pt = { x, y }, c = conts.find(it => inArea(it, pt)); if (!c) continue;
+      const o = oceans.find(it => inArea(it, pt)); if (!o) continue;
+      if (edgeDist([...c.tapArea, ...o.tapArea, ...(o.holes || [])], pt) > OVERLAP_TOL) bad.set(`${c.id}/${o.id}`, (bad.get(`${c.id}/${o.id}`) || 0) + 1);
+    }
+    for (const [pair, n] of bad) fail(file, `${pair}: continent and ocean tap areas overlap (${n} grid points)`);
   }
 
   // Lambert maps with lon/lat: x/y must follow one linear transform of the projection.
