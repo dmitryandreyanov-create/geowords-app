@@ -1,0 +1,50 @@
+{
+ "section": "continents-and-oceans",
+ "use": "unit 4: «Выбери все» (which oceans wash this continent) and Pairs",
+ "source": "computed from the coastlines of data/maps/world-continents-oceans.json (5 oceans, Southern Ocean south of 60°S)",
+ "neutralRule": "a neutral ocean counts as neither right nor wrong: never a required answer, never marked as a mistake",
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-10-23"
+ },
+ "washedBy": {
+  "asia": [
+   "pacific-ocean",
+   "indian-ocean",
+   "arctic-ocean"
+  ],
+  "africa": [
+   "atlantic-ocean",
+   "indian-ocean"
+  ],
+  "north-america": [
+   "pacific-ocean",
+   "atlantic-ocean",
+   "arctic-ocean"
+  ],
+  "south-america": [
+   "pacific-ocean",
+   "atlantic-ocean"
+  ],
+  "antarctica": [
+   "southern-ocean"
+  ],
+  "europe": [
+   "atlantic-ocean",
+   "arctic-ocean"
+  ],
+  "australia": [
+   "indian-ocean",
+   "pacific-ocean"
+  ]
+ },
+ "neutral": {
+  "asia": {
+   "atlantic-ocean": "touches Asia only through the Mediterranean and Black Sea (coasts of Turkey, the Levant); schools usually do not count it"
+  },
+  "australia": {
+   "southern-ocean": "Australia calls the waters off its south coast the Southern Ocean; with the 60°S boundary they are Indian Ocean"
+  }
+ }
+}
