@@ -36,6 +36,8 @@ jobs:
         run: |
           node scripts/validate-geowords.mjs
           node scripts/test-validate-geowords.mjs
+          node scripts/validate-challenge.mjs
+          node scripts/test-validate-challenge.mjs
 
   deploy:
     if: github.event_name != 'pull_request'
