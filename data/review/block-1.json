@@ -11,7 +11,7 @@
   "insets": "Bering Strait, Bosporus and Dardanelles are answered through their magnifiers",
   "records": "only approved undisputed records; a false statement repeats the record with another object of the same kind",
   "relations": "use = yes: any exercise; after-card: only after the convention card has been shown; only-border-question: Ural only in the border question; no: never in single-answer exercises",
-  "trueFalseTexts": "statements for relation True/False are complete EN/RU phrases, approved separately (to follow)"
+  "trueFalseTexts": "relation statements in trueFalse.pairs (approved 2026-10-23)"
  },
  "lessons": [
   {
@@ -590,5 +590,244 @@
    "use": "no",
    "note": "does not separate continents (border is the Panama-Colombia border)"
   }
- ]
+ ],
+ "trueFalse": {
+  "rules": [
+   "one statement per task; the child answers true or false",
+   "only one statement of a pair per lesson (true or false, chosen at random)",
+   "answers mixed: never more than two identical answers in a row; about half true over a lesson",
+   "no strict alternation (true, false, true, false): random order within the limits above",
+   "same rules for record statements in lesson 4"
+  ],
+  "pairs": [
+   {
+    "id": "tf-01",
+    "subject": "volga",
+    "relation": "flowsInto",
+    "true": {
+     "ru": "Волга впадает в Каспийское море.",
+     "en": "The Volga flows into the Caspian Sea."
+    },
+    "false": {
+     "ru": "Волга впадает в Чёрное море.",
+     "en": "The Volga flows into the Black Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "bc782e63887949ca"
+    }
+   },
+   {
+    "id": "tf-02",
+    "subject": "danube",
+    "relation": "flowsInto",
+    "true": {
+     "ru": "Дунай впадает в Чёрное море.",
+     "en": "The Danube flows into the Black Sea."
+    },
+    "false": {
+     "ru": "Дунай впадает в Каспийское море.",
+     "en": "The Danube flows into the Caspian Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "ed310de08dcdf908"
+    }
+   },
+   {
+    "id": "tf-03",
+    "subject": "nile",
+    "relation": "flowsInto",
+    "true": {
+     "ru": "Нил впадает в Средиземное море.",
+     "en": "The Nile flows into the Mediterranean Sea."
+    },
+    "false": {
+     "ru": "Нил впадает в Красное море.",
+     "en": "The Nile flows into the Red Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "f2da8cd863aba3b5"
+    }
+   },
+   {
+    "id": "tf-04",
+    "subject": "mississippi",
+    "relation": "flowsInto",
+    "true": {
+     "ru": "Миссисипи впадает в Мексиканский залив.",
+     "en": "The Mississippi flows into the Gulf of Mexico."
+    },
+    "false": {
+     "ru": "Миссисипи впадает в Карибское море.",
+     "en": "The Mississippi flows into the Caribbean Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "96070263cb759364"
+    }
+   },
+   {
+    "id": "tf-05",
+    "subject": "ganges",
+    "relation": "flowsInto",
+    "true": {
+     "ru": "Ганг впадает в Бенгальский залив.",
+     "en": "The Ganges flows into the Bay of Bengal."
+    },
+    "false": {
+     "ru": "Ганг впадает в Аравийское море.",
+     "en": "The Ganges flows into the Arabian Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "64f8a44aa19a1369"
+    }
+   },
+   {
+    "id": "tf-06",
+    "subject": "andes",
+    "relation": "onContinent",
+    "true": {
+     "ru": "Анды находятся в Южной Америке.",
+     "en": "The Andes are in South America."
+    },
+    "false": {
+     "ru": "Анды находятся в Северной Америке.",
+     "en": "The Andes are in North America."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "643d2fe5b83d8280"
+    }
+   },
+   {
+    "id": "tf-07",
+    "subject": "atlas",
+    "relation": "onContinent",
+    "true": {
+     "ru": "Атлас находится в Африке.",
+     "en": "The Atlas Mountains are in Africa."
+    },
+    "false": {
+     "ru": "Атлас находится в Европе.",
+     "en": "The Atlas Mountains are in Europe."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "f33e0e1357a05e43"
+    }
+   },
+   {
+    "id": "tf-08",
+    "subject": "coral-sea",
+    "relation": "inOcean",
+    "true": {
+     "ru": "Коралловое море — часть Тихого океана.",
+     "en": "The Coral Sea is part of the Pacific Ocean."
+    },
+    "false": {
+     "ru": "Коралловое море — часть Индийского океана.",
+     "en": "The Coral Sea is part of the Indian Ocean."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "d1c62fc0785f9d2b"
+    }
+   },
+   {
+    "id": "tf-09",
+    "subject": "red-sea",
+    "relation": "inOcean",
+    "true": {
+     "ru": "Красное море — часть Индийского океана.",
+     "en": "The Red Sea is part of the Indian Ocean."
+    },
+    "false": {
+     "ru": "Красное море — часть Атлантического океана.",
+     "en": "The Red Sea is part of the Atlantic Ocean."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "8729121a9497be6c"
+    }
+   },
+   {
+    "id": "tf-10",
+    "subject": "strait-of-gibraltar",
+    "relation": "separates",
+    "true": {
+     "ru": "Гибралтарский пролив разделяет Европу и Африку.",
+     "en": "The Strait of Gibraltar separates Europe and Africa."
+    },
+    "false": {
+     "ru": "Гибралтарский пролив разделяет Европу и Азию.",
+     "en": "The Strait of Gibraltar separates Europe and Asia."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "65163321c072a21b"
+    }
+   },
+   {
+    "id": "tf-11",
+    "subject": "bering-strait",
+    "relation": "separates",
+    "true": {
+     "ru": "Берингов пролив разделяет Азию и Северную Америку.",
+     "en": "The Bering Strait separates Asia and North America."
+    },
+    "false": {
+     "ru": "Берингов пролив разделяет Азию и Австралию.",
+     "en": "The Bering Strait separates Asia and Australia."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "fe15adaa31a204f1"
+    }
+   },
+   {
+    "id": "tf-12",
+    "subject": "suez-canal",
+    "relation": "connects",
+    "true": {
+     "ru": "Суэцкий канал соединяет Средиземное и Красное моря.",
+     "en": "The Suez Canal connects the Mediterranean and Red Seas."
+    },
+    "false": {
+     "ru": "Суэцкий канал соединяет Атлантический и Тихий океаны.",
+     "en": "The Suez Canal connects the Atlantic and Pacific Oceans."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-23",
+     "contentSha256": "09733954e35ec5ec"
+    }
+   }
+  ]
+ }
 }
