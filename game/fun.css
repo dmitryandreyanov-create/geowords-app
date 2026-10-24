@@ -20,10 +20,16 @@
 .pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/pip-spyglass.png')}
 .pip-art[data-pose="point-right"]{background-image:url('../assets/pip/pip-point-right.png')}
 .pip-art[data-pose="wonder"]{background-image:url('../assets/pip/pip-wonder.png')}
-.pip-avatar .pip-art{background-image:url('../assets/pip/pip-face-happy.png')}
-.pip-avatar .pip-art[data-pose="celebrate"]{background-image:url('../assets/pip/pip-face-wow.png')}
-.pip-avatar .pip-art[data-pose="oops"]{background-image:url('../assets/pip/pip-face-oops.png')}
-.pip-avatar .pip-art[data-pose="spyglass"]{background-image:url('../assets/pip/pip-spyglass.png')}
+.pip-avatar .pip-art[data-outfit="hat"]{background-image:url('../assets/pip/pip-face-happy.png')}
+.pip-avatar .pip-art[data-outfit="hat"][data-pose="celebrate"]{background-image:url('../assets/pip/pip-face-wow.png')}
+.pip-avatar .pip-art[data-outfit="hat"][data-pose="oops"]{background-image:url('../assets/pip/pip-face-oops.png')}
+.pip-avatar .pip-art[data-outfit="hat"][data-pose="spyglass"]{background-image:url('../assets/pip/pip-spyglass.png')}
+.outfit-pip .pip-art[data-outfit="hat"]{background-image:url('../assets/pip/pip-outfit-1-explorer.png')}
+.pip-art[data-outfit="scarf"]{background-image:url('../assets/pip/pip-outfit-2-scout.png')}
+.pip-art[data-outfit="binoculars"]{background-image:url('../assets/pip/pip-outfit-3-pathfinder.png')}
+.pip-art[data-outfit="backpack"]{background-image:url('../assets/pip/pip-outfit-4-navigator.png')}
+.pip-art[data-outfit="captain"]{background-image:url('../assets/pip/pip-outfit-5-captain.png')}
+.pip-art[data-outfit="crown"]{background-image:url('../assets/pip/pip-outfit-6-legend.png')}
 .explorer-info{flex:1;min-width:0}
 .explorer-info h2{margin:4px 0 8px;font-size:22px;line-height:1.1}
 .explorer-card .eyebrow{color:#b5651d!important}
