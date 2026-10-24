@@ -7,7 +7,9 @@
   "structure": "one block-final word per language; the block-review unit uses it as its final GeoWords, and Challenge reuses the review words of sections 1-5",
   "languages": "EN and RU lists are independent",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
-  "challengeExtra": "extra words used only in Challenge GeoWords (Svetlana, 2026-10-23): CONTINENTALITY, EVAPOTRANSPIRATION, PRECIPITATION / МЕЖЛЕДНИКОВЬЕ, ГЛУБОКОВОДЬЕ. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge"
+  "challengeExtra": "extra words used only in Challenge GeoWords (Svetlana, 2026-10-23): CONTINENTALITY, EVAPOTRANSPIRATION, PRECIPITATION / МЕЖЛЕДНИКОВЬЕ, ГЛУБОКОВОДЬЕ. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
  },
  "units": [
   {
@@ -34,12 +36,12 @@
      {
       "answer": "ПУТЕШЕСТВЕННИК",
       "role": "block-final",
-      "definition": "Человек, который путешествует по разным странам и местам.",
+      "definition": "Человек, который ездит, ходит или плывёт по разным странам, чтобы увидеть новые места.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "5125a5f40d308eed"
+       "date": "2026-10-24",
+       "contentSha256": "5162c815477e07d3"
       }
      }
     ]
@@ -67,12 +69,12 @@
      {
       "answer": "EVAPOTRANSPIRATION",
       "role": "challenge",
-      "definition": "Water rising into the air from the land: it evaporates from soil, lakes and rivers and is given off by plants through their leaves.",
+      "definition": "Water rising into the air from the land: it dries up from soil, lakes and rivers and is given off by plants through tiny holes in their leaves.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "292c3f9755b8d8d7"
+       "date": "2026-10-24",
+       "contentSha256": "c69d0adb51703b8d"
       }
      },
      {
@@ -91,23 +93,23 @@
      {
       "answer": "МЕЖЛЕДНИКОВЬЕ",
       "role": "challenge",
-      "definition": "Тёплый период между двумя ледниковыми периодами, когда ледники отступают. Сейчас на Земле как раз межледниковье.",
+      "definition": "Тёплая эпоха, разделяющая два великих похолодания в истории Земли; сейчас на планете как раз такая эпоха.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "60587ad76318ffd8"
+       "date": "2026-10-24",
+       "contentSha256": "32579b1d5dee2fc4"
       }
      },
      {
       "answer": "ГЛУБОКОВОДЬЕ",
       "role": "challenge",
-      "definition": "Участок моря, озера или реки с большой глубиной, далеко от мелей и берега.",
+      "definition": "Участок моря, озера или реки, где очень далеко до дна, вдали от мелей и берега.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "32a733d68f179ba3"
+       "date": "2026-10-24",
+       "contentSha256": "45636e8d628b5c24"
       }
      }
     ]
