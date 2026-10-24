@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.6.5-pip-graphics-batch-1";
+const CACHE="geowords-v0.6.6-pip-graphics-batch-2";
 const CORE=[
   "./",
   "./index.html",
@@ -14,6 +14,11 @@ const CORE=[
   "./assets/pip/pip-oops.png",
   "./assets/pip/pip-spyglass.png",
   "./assets/pip/pip-cheer.png",
+  "./assets/pip/pip-point-right.png",
+  "./assets/pip/pip-wonder.png",
+  "./assets/pip/pip-face-happy.png",
+  "./assets/pip/pip-face-oops.png",
+  "./assets/pip/pip-face-wow.png",
   "./graphics/index.html",
   "./graphics/gallery.css",
   "./graphics/gallery.js",

@@ -103,16 +103,24 @@
       "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
       "description": "Показывает лапой вправо (от зрителя), мордочкой к зрителю; не зеркальное отражение — рюкзак и платок на своих местах",
       "priority": "MVP",
-      "status": "planned",
-      "path": "assets/pip/pip-point-right.png"
+      "status": "ready",
+      "path": "assets/pip/pip-point-right.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "72c0468fb80e536e012b67cdb589f518484194af994d818f3a9727d3dfe81052",
+      "visualReview": "awaiting_phone_review"
     },
     {
       "file": "pip-wonder.png",
       "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
       "description": "Удивлённо поднял брови, лапа у подбородка",
       "priority": "MVP",
-      "status": "planned",
-      "path": "assets/pip/pip-wonder.png"
+      "status": "ready",
+      "path": "assets/pip/pip-wonder.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "2af62be46d6f3249805df4d9a30afe75036bfae6ef9f0a47e9dac0ace166c145",
+      "visualReview": "awaiting_phone_review"
     },
     {
       "file": "pip-sleep.png",
@@ -135,24 +143,36 @@
       "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
       "description": "Улыбка",
       "priority": "MVP",
-      "status": "planned",
-      "path": "assets/pip/pip-face-happy.png"
+      "status": "ready",
+      "path": "assets/pip/pip-face-happy.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "9b90ac3ccaff3f261b7e6a5439b324169e6a99560f46d3282f2a5690b44d0992",
+      "visualReview": "awaiting_phone_review"
     },
     {
       "file": "pip-face-oops.png",
       "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
       "description": "Смущённая улыбка",
       "priority": "MVP",
-      "status": "planned",
-      "path": "assets/pip/pip-face-oops.png"
+      "status": "ready",
+      "path": "assets/pip/pip-face-oops.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "10fedd9619668346e1c9c64a30bd64a0f1b1a3961f611da8001d25946249e48a",
+      "visualReview": "awaiting_phone_review"
     },
     {
       "file": "pip-face-wow.png",
       "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
       "description": "Восторг",
       "priority": "MVP",
-      "status": "planned",
-      "path": "assets/pip/pip-face-wow.png"
+      "status": "ready",
+      "path": "assets/pip/pip-face-wow.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "901d3e8a48ba51551a0349e9fe1ff37cbf27d18b814a0d88f3993ae68aa71e7a",
+      "visualReview": "awaiting_phone_review"
     },
     {
       "file": "pip-outfit-1-explorer.png",
