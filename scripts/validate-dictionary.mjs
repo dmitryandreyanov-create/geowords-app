@@ -15,14 +15,26 @@ const RELEASE = {
   },
 };
 const STATUSES = new Set(["approved", "draft"]);
-if (!fs.existsSync(dir)) { console.log("No data/dictionary directory: nothing to validate."); process.exit(0); }
+// Release packages are required: a missing directory or file fails.
+if (!fs.existsSync(dir)) { console.error(`Dictionary validation failed:\n- missing directory ${dir}`); process.exit(1); }
 const errors = [];
 const sortKeys = v => Array.isArray(v) ? v.map(sortKeys)
   : v && typeof v === "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, sortKeys(v[k])])) : v;
 // Same serialisation as Python json.dumps(..., ensure_ascii=False, sort_keys=True)
 const pyJson = v => JSON.stringify(sortKeys(v)).replace(/":/g, '": ').replace(/,"/g, ', "');
 const LETTERS = { en: /^[A-Z]+$/, ru: /^[А-ЯЁ]+$/ };
+// The answer must not appear in its own definition (Svetlana, 2026-10-24): Ё = Е, any letter case;
+// English also catches -s/-es plurals, Russian catches case endings (the stem without its final vowel, ь or й, + up to 3 letters).
+const answerInDefinition = (answer, definition, lang) => {
+  const norm = s => s.toUpperCase().replace(/Ё/g, "Е");
+  const a = norm(answer), text = norm(definition);
+  const L = lang === "ru" ? "А-Я" : "A-Z";
+  const stem = lang === "ru" ? a.replace(/[АЕИОУЫЭЮЯЬЙ]$/, "") : a;
+  const tail = lang === "ru" ? `[${L}]{0,3}` : "(?:S|ES)?";
+  return new RegExp(`(^|[^${L}])${stem}${tail}(?![${L}])`).test(text);
+};
 let count = 0;
+for (const file of Object.keys(RELEASE)) if (!fs.existsSync(path.join(dir, file))) errors.push(`${file}: required release package is missing`);
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
   const j = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
   const release = RELEASE[file];
@@ -60,6 +72,7 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
         const key = (w.answer || "").replace(/Ё/g, "Е");
         if (seen.has(key)) errors.push(`${file}: ${lang} answer ${w.answer} is used twice`); seen.add(key);
         if (!w.definition?.trim()) errors.push(`${file}: ${w.answer} has no definition`);
+        if (answerInDefinition(w.answer, w.definition || "", lang)) errors.push(`${file}: ${w.answer} appears in its own definition`);
         if (w.approval?.status === "approved") {
           const sha = crypto.createHash("sha256").update(pyJson({ answer: w.answer, definition: w.definition }), "utf8").digest("hex").slice(0, 16);
           if (sha !== w.approval.contentSha256) errors.push(`${file}: ${w.answer} changed after approval — needs re-approval`);

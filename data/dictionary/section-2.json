@@ -12,7 +12,9 @@
   "yo": "answers are shown with Ё; where the player types a word, Е and Ё are equal",
   "uniqueAfterLetters": "EN only, estimate: letters revealed before only one word in a 370k English word list fits",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition} (JSON, sorted keys, UTF-8). Any change needs re-approval.",
-  "checked": "checked by Svetlana 2026-10-23: six Nile cataracts, Ganges source in the Himalayas, Danube as part of the Roman frontier, flood terms (паводок/половодье/наводнение), CHANNEL vs RIVERBED, CATARACT vs WATERFALL, HYDROPOWER vs HYDROELECTRICITY, ESTUARY at school level"
+  "checked": "checked by Svetlana 2026-10-23: six Nile cataracts, Ganges source in the Himalayas, Danube as part of the Roman frontier, flood terms (паводок/половодье/наводнение), CHANNEL vs RIVERBED, CATARACT vs WATERFALL, HYDROPOWER vs HYDROELECTRICITY, ESTUARY at school level",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
  },
  "units": [
   {
@@ -26,14 +28,14 @@
      {
       "answer": "FLOODPLAIN",
       "role": "final",
-      "definition": "Flat land beside a river that is covered with water when the river floods.",
+      "definition": "Flat land beside a river that is covered with water when the river overflows its banks.",
       "uniqueAfterLetters": 8,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "564cc124997442af"
+       "date": "2026-10-24",
+       "contentSha256": "59fad5520bf5cdbb"
       }
      },
      {
@@ -65,14 +67,14 @@
      {
       "answer": "RAINFOREST",
       "role": "review",
-      "definition": "A thick forest that gets a great deal of rain, like the Amazon.",
+      "definition": "A thick, very wet tropical woodland, like the Amazon.",
       "uniqueAfterLetters": 8,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "c9b3e4d79d0f0a44"
+       "date": "2026-10-24",
+       "contentSha256": "01ef9fff1a27c9cf"
       }
      },
      {
@@ -91,25 +93,25 @@
      {
       "answer": "CATARACT",
       "role": "review",
-      "definition": "A rocky stretch of a river with rapids that make navigation difficult. The Nile is traditionally divided into six major cataracts.",
+      "definition": "A rocky stretch of a river with rapids that make navigation difficult. The Nile traditionally has six of them.",
       "uniqueAfterLetters": 6,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "e02a5c3371bb4d16"
+       "date": "2026-10-24",
+       "contentSha256": "ebe9f152c3248dab"
       }
      },
      {
       "answer": "EMBANKMENT",
       "role": "review",
-      "definition": "A raised bank of earth built along a river, often to help prevent flooding.",
+      "definition": "A raised ridge of earth built along a river, often to help prevent flooding.",
       "uniqueAfterLetters": 10,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "7270ff12dacbd16b"
+       "date": "2026-10-24",
+       "contentSha256": "bb720cae36f5ef7b"
       }
      }
     ],
@@ -117,13 +119,13 @@
      {
       "answer": "МУТНОСТЬ",
       "role": "final",
-      "definition": "Степень непрозрачности воды из-за мелких частиц песка, глины и других веществ.",
+      "definition": "Насколько вода в реке непрозрачна из-за мелких частиц песка и глины, которые она несёт.",
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "a0adcfda1df0eb23"
+       "date": "2026-10-24",
+       "contentSha256": "58286994f333963c"
       }
      },
      {
@@ -165,23 +167,23 @@
      {
       "answer": "ПАВОДОК",
       "role": "review",
-      "definition": "Обычно кратковременный подъём уровня воды в реке, вызванный дождями или таянием снега.",
+      "definition": "Обычно кратковременный подъём уровня реки, вызванный дождями или таянием снега.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "adcaec26cb576dbe"
+       "date": "2026-10-24",
+       "contentSha256": "84d6e86ae3f09987"
       }
      },
      {
       "answer": "НАВОДНЕНИЕ",
       "role": "review",
-      "definition": "Затопление территории водой, которое может причинить вред людям, зданиям и природе.",
+      "definition": "Затопление местности при разливе реки, которое может причинить вред людям, зданиям и природе.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "5f8b841fa0dddcf7"
+       "date": "2026-10-24",
+       "contentSha256": "5794f957a037d7ab"
       }
      },
      {
@@ -222,27 +224,27 @@
      {
       "answer": "HINDUISM",
       "role": "review",
-      "definition": "A religion that developed in India. Many Hindus consider the Ganges a sacred river.",
+      "definition": "A religion that developed in India; its followers consider the Ganges a sacred river.",
       "uniqueAfterLetters": 7,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "3535e0d010802605"
+       "date": "2026-10-24",
+       "contentSha256": "4c7dffd566e451b9"
       }
      },
      {
       "answer": "HIMALAYAS",
       "role": "review",
-      "definition": "The mountain range containing Earth’s highest peaks. The Ganges begins in the Himalayas.",
+      "definition": "The mountain range with Earth's highest peaks, including Everest. The Ganges begins high in these mountains.",
       "uniqueAfterLetters": 9,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "66b31813e64352c1"
+       "date": "2026-10-24",
+       "contentSha256": "662ed67068a215d4"
       }
      },
      {
@@ -310,13 +312,13 @@
      {
       "answer": "ИНДУИЗМ",
       "role": "review",
-      "definition": "Религия, возникшая в Индии; индуисты считают Ганг священной рекой.",
+      "definition": "Религия, возникшая в Индии; её последователи считают Ганг священной рекой.",
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "d031e66a1f6e13ad"
+       "date": "2026-10-24",
+       "contentSha256": "b2bf204269bd7c44"
       }
      },
      {
@@ -367,12 +369,12 @@
      {
       "answer": "ВОДОХРАНИЛИЩЕ",
       "role": "review",
-      "definition": "Искусственный водоём для накопления и хранения воды, часто созданный с помощью плотины.",
+      "definition": "Искусственное озеро, созданное с помощью плотины, чтобы делать запасы на засушливое время.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "3ae534f612300499"
+       "date": "2026-10-24",
+       "contentSha256": "6004b8cf6f654b00"
       }
      }
     ]
@@ -488,12 +490,12 @@
      {
       "answer": "СУДОХОДСТВО",
       "role": "review",
-      "definition": "Движение судов по рекам, озёрам, морям и другим водным путям.",
+      "definition": "Перевозка людей и грузов на кораблях по рекам, озёрам и морям.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "cbc28f094062a03b"
+       "date": "2026-10-24",
+       "contentSha256": "74c7cd59093b3d14"
       }
      },
      {
@@ -510,12 +512,12 @@
      {
       "answer": "ЛЕДОХОД",
       "role": "review",
-      "definition": "Движение льдин по течению реки во время вскрытия или разрушения ледяного покрова.",
+      "definition": "Движение льдин по течению реки весной, когда тает и ломается её зимний покров.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "96e58743f380c4e6"
+       "date": "2026-10-24",
+       "contentSha256": "979f42d2713b9dcd"
       }
      },
      {
@@ -532,23 +534,23 @@
      {
       "answer": "ВОДОРАЗДЕЛ",
       "role": "review",
-      "definition": "Граница между речными бассейнами, по разные стороны которой вода стекает в разные стороны.",
+      "definition": "Граница между бассейнами рек: дожди и талый снег с одной её стороны стекают в одну реку, с другой — в другую.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "128d0fced5f9c876"
+       "date": "2026-10-24",
+       "contentSha256": "7e8edace38717429"
       }
      },
      {
       "answer": "ПОЛОВОДЬЕ",
       "role": "review",
-      "definition": "Ежегодно повторяющийся сезонный подъём уровня воды в реке, часто вызванный таянием снега или дождями.",
+      "definition": "Ежегодно повторяющийся сезонный подъём уровня реки, часто вызванный таянием снега или дождями.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "fa8bd8185f971d96"
+       "date": "2026-10-24",
+       "contentSha256": "af1eae2badc3505a"
       }
      }
     ]
@@ -565,14 +567,14 @@
      {
       "answer": "ATMOSPHERE",
       "role": "section-final",
-      "definition": "The layer of gases surrounding Earth. Water evaporates into the atmosphere and later returns to the surface as rain or snow.",
+      "definition": "The layer of gases surrounding Earth. Water evaporates into it and later falls back as rain or snow.",
       "uniqueAfterLetters": 9,
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "2f7c9232133a4859"
+       "date": "2026-10-24",
+       "contentSha256": "ff66d9404c15ad7e"
       }
      }
     ],
@@ -580,13 +582,13 @@
      {
       "answer": "АТМОСФЕРА",
       "role": "section-final",
-      "definition": "Газовая оболочка Земли. Вода испаряется, попадает в атмосферу и возвращается на поверхность в виде дождя или снега.",
+      "definition": "Газовая оболочка Земли. Испарившаяся вода поднимается в неё и возвращается на поверхность дождём или снегом.",
       "fromWorkbook": true,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "4f7ca93f6a0b491b"
+       "date": "2026-10-24",
+       "contentSha256": "8dfcbde4a098e8ee"
       }
      }
     ]
