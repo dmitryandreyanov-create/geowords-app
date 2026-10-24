@@ -35,7 +35,9 @@ jobs:
           node scripts/test-validate-dictionary.mjs
 
       - name: Validate map data and assets
-        run: node scripts/validate-maps.mjs
+        run: |
+          node scripts/validate-maps.mjs
+          node scripts/test-validate-maps.mjs
 
       - name: Validate teaching content and approvals
         run: |
