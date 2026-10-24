@@ -93,7 +93,7 @@
     {
      "id": "antarctica",
      "x": 64.36,
-     "y": 93,
+     "y": 97.3,
      "letter": "E"
     }
    ],
@@ -152,8 +152,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "c84320226273edcb"
+    "date": "2026-10-24",
+    "contentSha256": "71a60528244f9a8f"
    }
   },
   {
@@ -235,7 +235,7 @@
     {
      "id": "antarctica",
      "x": 56.55,
-     "y": 93,
+     "y": 98,
      "letter": "Т"
     }
    ],
@@ -289,8 +289,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "4842fdc43f109d5e"
+    "date": "2026-10-24",
+    "contentSha256": "5743b3d5f1b530eb"
    }
   },
   {
@@ -385,7 +385,7 @@
     {
      "id": "antarctica",
      "x": 74.73,
-     "y": 93,
+     "y": 97.3,
      "letter": "S"
     }
    ],
@@ -449,8 +449,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "da8f7355fb519086"
+    "date": "2026-10-24",
+    "contentSha256": "b68e9a5774566d56"
    }
   },
   {
@@ -533,7 +533,7 @@
     {
      "id": "antarctica",
      "x": 74.27,
-     "y": 93,
+     "y": 97.3,
      "letter": "З"
     },
     {
@@ -620,8 +620,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "114d9dda30e0c175"
+    "date": "2026-10-24",
+    "contentSha256": "0460c41a572396b1"
    }
   },
   {
@@ -709,7 +709,7 @@
     {
      "id": "antarctica",
      "x": 70.45,
-     "y": 93,
+     "y": 97.3,
      "letter": "G"
     }
    ],
@@ -752,7 +752,7 @@
     {
      "markerId": "red-sea",
      "position": 5,
-     "text": "Find the fifth letter in the saltiest sea connected to the ocean."
+     "text": "Find the fifth letter in a sea known for its unusually salty water."
     },
     {
      "markerId": "andes",
@@ -768,8 +768,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "3f46f2352cc76e37"
+    "date": "2026-10-24",
+    "contentSha256": "f0bb5dc4bf6a59d9"
    }
   },
   {
@@ -827,7 +827,7 @@
     {
      "id": "antarctica",
      "x": 62.18,
-     "y": 93,
+     "y": 97.3,
      "letter": "К"
     },
     {
@@ -899,14 +899,14 @@
     {
      "markerId": "red-sea",
      "position": 8,
-     "text": "Найди восьмую букву в самом солёном море Мирового океана."
+     "text": "Найди восьмую букву в море, которое славится очень солёной водой."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "1aa37324f06e041e"
+    "date": "2026-10-24",
+    "contentSha256": "e6809d419661bbda"
    }
   },
   {
@@ -1054,7 +1054,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "ecd7c1d663664652"
+    "contentSha256": "b8e07f14c6aa2f43"
    }
   },
   {
@@ -1202,7 +1202,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "b7128c9e1c52db4e"
+    "contentSha256": "c8a6de4606ef9fb3"
    }
   }
  ]
