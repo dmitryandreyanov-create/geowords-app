@@ -176,7 +176,8 @@ const COURSE2=[
    {id:'s2-u3-l3',title:{ru:'Все реки раздела',en:'All the rivers of the section'},plan:R2['u3-l3']}]}
 ];
 // Units with content approved by the author. Units 2-4 are built from approved data but their lessons are not approved yet.
-const READY_UNITS=[1];
+// Unit 1 is approved; units 2-4 and the section final are drafts the author reviews in the app (24.10.2026).
+const READY_UNITS=[1,2,3,4,'S'];
 const STEPS=[];
 COURSE.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`u${u.n}-final`,kind:'final',unit:u.n})});
 STEPS.push({id:'s1-final',kind:'section',unit:'S'});
@@ -268,8 +269,8 @@ function home(){
     return `<div class="stop-row"><button type="button" class="${cls}" data-step="${s.id}" style="left:${pos}%" aria-label="${esc(titleOf(s))}"><span class="disc">${disc}</span></button>
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
-  const body=COURSE.map(u=>`<div class="unit-head"><span class="eyebrow">${x.unit} ${u.n}${READY_UNITS.includes(u.n)?'':' · '+x.soon}</span><h3>${x.units[u.n-1][0]}</h3><p>${x.units[u.n-1][1]}</p></div>`+
-     STEPS.filter(s=>!s.sec&&s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section} · ${x.soon}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'))+
+  const body=COURSE.map(u=>`<div class="unit-head"><span class="eyebrow">${x.unit} ${u.n}${u.n===1?'':' · '+x.draft}</span><h3>${x.units[u.n-1][0]}</h3><p>${x.units[u.n-1][1]}</p></div>`+
+     STEPS.filter(s=>!s.sec&&s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'))+
      `<div class="section-card s2"><img src="${IMG.stamp2}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(2)} · ${x.draft}</span><h2>${L()==='ru'?'Реки мира':'Rivers of the world'}</h2></div></div>`+
      COURSE2.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(2)} · ${x.unit} ${u.n}</span><h3>${esc(D.s2.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===2&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.sectionN(2)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s2-final'));
