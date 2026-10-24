@@ -1,0 +1,758 @@
+{
+ "section": "continents-and-oceans",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "each unit: 1 final word (the unit GeoWords puzzle) + 6 review words (Review / Challenge); section-final = the whole section GeoWords",
+  "languages": "EN and RU lists are independent: a row is not a translation; progress is stored per language",
+  "definition": "shown only after the word is solved, in the language of the chosen dictionary",
+  "yo": "answers are shown with Ё (the map letter is Ё); where the player types a word, Е and Ё are equal",
+  "shortWords": "important short terms (ШИРОТА, АЗИМУТ...) are kept on purpose",
+  "repeats": "HEMISPHERE / ПОЛУШАРИЕ also appears in section facts: deliberate repetition",
+  "uniqueAfterLetters": "EN only: letters revealed (best order) before only one word in a 370k English word list fits; higher = harder",
+  "mechanics": "GeoWords mechanics (letters on map objects, revealed out of order) are in docs/app-mechanics.md; this file is vocabulary only",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition} (JSON, sorted keys, UTF-8). Any change needs re-approval.",
+  "review": "definitions are an editorial version; final scientific check before release",
+  "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
+ },
+ "sources": {
+  "PANGAEA": "USGS: about 300–200 million years ago; break-up began about 225–200 million years ago"
+ },
+ "units": [
+  {
+   "id": "unit-1-directions-hemispheres",
+   "title": {
+    "en": "Cardinal directions and hemispheres",
+    "ru": "Стороны света и полушария"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "ZENITH",
+      "role": "final",
+      "definition": "The point in the sky directly above an observer.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f65433f5fce0a1c1"
+      }
+     },
+     {
+      "answer": "MERIDIAN",
+      "role": "review",
+      "definition": "An imaginary line connecting the North Pole and the South Pole.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "78a0dd3f13faf27b"
+      }
+     },
+     {
+      "answer": "LATITUDE",
+      "role": "review",
+      "definition": "The angular distance of a place north or south of the Equator, measured in degrees.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "fb19b1bbf8c5d968"
+      }
+     },
+     {
+      "answer": "LONGITUDE",
+      "role": "review",
+      "definition": "The angular distance of a place east or west of the Prime Meridian, measured in degrees.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "76225ac0cb9144bc"
+      }
+     },
+     {
+      "answer": "PARALLEL",
+      "role": "review",
+      "definition": "An imaginary circle around Earth that stays the same distance from the Equator all the way round.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "9f182a8a492220b5"
+      }
+     },
+     {
+      "answer": "HEMISPHERE",
+      "role": "review",
+      "definition": "Half of Earth, divided by the Equator or the Prime Meridian and the opposite meridian.",
+      "uniqueAfterLetters": 10,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "58d25a18dd112fab"
+      }
+     },
+     {
+      "answer": "BEARINGS",
+      "role": "review",
+      "definition": "Directions to places or objects, usually measured clockwise in degrees from north.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "057264228921ace3"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ЗЕНИТ",
+      "role": "final",
+      "definition": "Точка на небе прямо над головой наблюдателя.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ed904eaaac58706f"
+      }
+     },
+     {
+      "answer": "МЕРИДИАН",
+      "role": "review",
+      "definition": "Воображаемая линия на поверхности Земли, соединяющая Северный и Южный полюсы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "71556f3e0a5d90ae"
+      }
+     },
+     {
+      "answer": "ШИРОТА",
+      "role": "review",
+      "definition": "Географическая координата, показывающая, на сколько градусов место находится к северу или югу от экватора.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "fb12a232a3a3dd65"
+      }
+     },
+     {
+      "answer": "ДОЛГОТА",
+      "role": "review",
+      "definition": "Географическая координата, показывающая положение места к востоку или западу от нулевого меридиана в градусах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "945e1a5a150c0667"
+      }
+     },
+     {
+      "answer": "ПАРАЛЛЕЛЬ",
+      "role": "review",
+      "definition": "Воображаемая окружность на поверхности Земли, которая везде проходит на одном расстоянии от экватора.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "e802967758d56f96"
+      }
+     },
+     {
+      "answer": "ПОЛУШАРИЕ",
+      "role": "review",
+      "definition": "Половина земного шара. Экватор делит Землю на северную и южную половины, а нулевой и противоположный ему меридианы — на восточную и западную.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "97b343f87d25a6f6"
+      }
+     },
+     {
+      "answer": "АЗИМУТ",
+      "role": "review",
+      "definition": "Угол, отсчитываемый по часовой стрелке от направления на север до направления на выбранный объект.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e69fccad310cec8a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-continents",
+   "title": {
+    "en": "Continents",
+    "ru": "Континенты"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "PANGAEA",
+      "role": "final",
+      "definition": "A supercontinent that joined almost all of Earth's land about 300 million years ago and began breaking apart around 200 million years ago.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "4d08d77584e94d96"
+      }
+     },
+     {
+      "answer": "LANDMASS",
+      "role": "review",
+      "definition": "A very large continuous area of the Earth's surface not covered by water, such as a continent.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "5a9a7c4f140a3035"
+      }
+     },
+     {
+      "answer": "PENINSULA",
+      "role": "review",
+      "definition": "Land almost surrounded by water but joined to a larger area of land.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "4c6b9db1a7ae3aca"
+      }
+     },
+     {
+      "answer": "ISTHMUS",
+      "role": "review",
+      "definition": "A narrow strip of land that joins two larger areas of land.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "de974d932ba3d971"
+      }
+     },
+     {
+      "answer": "MAINLAND",
+      "role": "review",
+      "definition": "The largest connected part of a country or continent, as opposed to its islands.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "9e32f1dfb6557353"
+      }
+     },
+     {
+      "answer": "TECTONICS",
+      "role": "review",
+      "definition": "The study of the huge plates of the Earth's crust and how they slowly move the continents.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b7200c7bee37b753"
+      }
+     },
+     {
+      "answer": "LOWLANDS",
+      "role": "review",
+      "definition": "Wide, flat areas close to sea level.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "48ba86e38e0d8e4d"
+      },
+      "uniqueAfterLetters": 7
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПАНГЕЯ",
+      "role": "final",
+      "definition": "Древний суперконтинент, объединявший почти всю сушу Земли около 300 миллионов лет назад. Примерно 200 миллионов лет назад он начал распадаться.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "33a6ee589ebfc3c0"
+      }
+     },
+     {
+      "answer": "МАТЕРИК",
+      "role": "review",
+      "definition": "Очень большой участок суши, окружённый морями и океанами; то же, что континент.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e1fab836a26e8cfe"
+      }
+     },
+     {
+      "answer": "ПОЛУОСТРОВ",
+      "role": "review",
+      "definition": "Часть суши, почти со всех сторон окружённая водой и соединённая с материком.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "80d7567ac161746e"
+      }
+     },
+     {
+      "answer": "ПЕРЕШЕЕК",
+      "role": "review",
+      "definition": "Узкая полоса суши, которая соединяет две большие части суши.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ebca14768a342496"
+      }
+     },
+     {
+      "answer": "ТЕКТОНИКА",
+      "role": "review",
+      "definition": "Наука о движении огромных плит земной коры, из-за которого медленно двигаются материки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b1edfbe89910e102"
+      }
+     },
+     {
+      "answer": "ГОНДВАНА",
+      "role": "review",
+      "definition": "Древний южный сверхматерик; из него позже образовались Африка, Южная Америка, Австралия, Антарктида и Индия.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "1f8347a6ef3bb26a"
+      }
+     },
+     {
+      "answer": "РАВНИНА",
+      "role": "review",
+      "definition": "Большой ровный или слегка холмистый участок суши.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "235a7c72a1a7c06f"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-oceans",
+   "title": {
+    "en": "Oceans",
+    "ru": "Океаны"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "SALINITY",
+      "role": "final",
+      "definition": "How much salt is dissolved in water.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e1dd1a924d73cd23"
+      }
+     },
+     {
+      "answer": "PLANKTON",
+      "role": "review",
+      "definition": "Mostly tiny plants and animals that drift in ocean water.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "02a1810e20bb88d0"
+      }
+     },
+     {
+      "answer": "ABYSSAL",
+      "role": "review",
+      "definition": "Belonging to the deep ocean floor, far below the surface.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "c48007156df7365b"
+      }
+     },
+     {
+      "answer": "ICEBERG",
+      "role": "review",
+      "definition": "A huge frozen chunk that has broken off a glacier and floats in the ocean.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "1f05c1f854b879fc"
+      }
+     },
+     {
+      "answer": "BRACKISH",
+      "role": "review",
+      "definition": "Slightly salty, like water where a river meets the sea.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3d7a543f48fb760a"
+      }
+     },
+     {
+      "answer": "SEAFLOOR",
+      "role": "review",
+      "definition": "The bottom of an ocean.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "91eec66813805268"
+      }
+     },
+     {
+      "answer": "CURRENTS",
+      "role": "review",
+      "definition": "Steady flows of water moving through the ocean like rivers.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3f0d90d5aeb499c3"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "СОЛЁНОСТЬ",
+      "role": "final",
+      "definition": "Сколько растворённых минеральных веществ содержится в воде; в морской воде их больше, чем в речной.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "efa3085fffca262d"
+      }
+     },
+     {
+      "answer": "ПЛАНКТОН",
+      "role": "review",
+      "definition": "В основном крошечные растения и животные, которые дрейфуют в толще воды.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "7d7617d28a599855"
+      }
+     },
+     {
+      "answer": "АЙСБЕРГ",
+      "role": "review",
+      "definition": "Огромная глыба льда, которая откололась от ледника и плавает в море.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b8ab5c1cd702bb9f"
+      }
+     },
+     {
+      "answer": "ЦУНАМИ",
+      "role": "review",
+      "definition": "Серия длинных волн, возникающих из-за резкого смещения большого объёма воды, чаще всего при подводном землетрясении.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "2af10a43ff248616"
+      }
+     },
+     {
+      "answer": "АКВАТОРИЯ",
+      "role": "review",
+      "definition": "Часть моря или океана в определённых границах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e1b095c9eafa3919"
+      }
+     },
+     {
+      "answer": "ШЕЛЬФ",
+      "role": "review",
+      "definition": "Мелководное подводное продолжение материка вдоль берега.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "fa4e83505f1e9252"
+      }
+     },
+     {
+      "answer": "ТЕЧЕНИЕ",
+      "role": "review",
+      "definition": "Постоянный поток воды в океане, как река в море.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "6f11598e6c1d746a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-4-neighbours-records",
+   "title": {
+    "en": "Neighbours and records",
+    "ru": "Соседи и рекорды"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "ARCHIPELAGO",
+      "role": "final",
+      "definition": "A group of islands lying close together.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "31e6014545250d8e"
+      }
+     },
+     {
+      "answer": "PERMAFROST",
+      "role": "review",
+      "definition": "Ground that stays at or below 0°C (32°F) for at least two consecutive years.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "463e78d1e9222ab8"
+      }
+     },
+     {
+      "answer": "MONSOON",
+      "role": "review",
+      "definition": "A seasonal wind that brings heavy rain, especially in South Asia.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "cf819d283036bdd3"
+      }
+     },
+     {
+      "answer": "RAINFOREST",
+      "role": "review",
+      "definition": "A thick, very wet tropical woodland, like the Amazon.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "01ef9fff1a27c9cf"
+      }
+     },
+     {
+      "answer": "GLACIER",
+      "role": "review",
+      "definition": "A huge, slowly moving mass of ice on land.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "543e2c480c7de2f1"
+      }
+     },
+     {
+      "answer": "SAVANNA",
+      "role": "review",
+      "definition": "Grassland with scattered trees in a hot climate with a dry season, as in much of Africa.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "8b3866213e753edb"
+      }
+     },
+     {
+      "answer": "BLIZZARD",
+      "role": "review",
+      "definition": "A severe snowstorm with strong wind, common in Antarctica.",
+      "uniqueAfterLetters": 5,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "4d04536498185f87"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "АРХИПЕЛАГ",
+      "role": "final",
+      "definition": "Группа островов, расположенных близко друг к другу.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "04a10ec00373c5a8"
+      }
+     },
+     {
+      "answer": "МЕРЗЛОТА",
+      "role": "review",
+      "definition": "Грунт, температура которого остаётся не выше 0 °C не менее двух лет подряд; такой грунт лежит на севере Сибири и Канады.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "ff0f4359dacecac9"
+      }
+     },
+     {
+      "answer": "МУССОН",
+      "role": "review",
+      "definition": "Сезонный ветер, который приносит сильные дожди, особенно в Южной Азии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "249204572ec6ccfd"
+      }
+     },
+     {
+      "answer": "СЕЛЬВА",
+      "role": "review",
+      "definition": "Влажный тропический лес в Южной Америке, в бассейне Амазонки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a275db5993cc2eca"
+      }
+     },
+     {
+      "answer": "ЛЕДНИК",
+      "role": "review",
+      "definition": "Огромная масса многолетней замёрзшей воды на суше, которая медленно движется.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "f9b65e2eba43293c"
+      }
+     },
+     {
+      "answer": "САВАННА",
+      "role": "review",
+      "definition": "Травянистая равнина с редкими деревьями в жарком климате с сухим сезоном, как во многих районах Африки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3ddc39ce3f43d582"
+      }
+     },
+     {
+      "answer": "МЕТЕЛЬ",
+      "role": "review",
+      "definition": "Сильный ветер со снегом; в Антарктиде такая непогода бывает очень часто.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "3dd7b1c7131ae6ee"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "en": "Section final",
+    "ru": "Итог раздела"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CONTINENT",
+      "role": "section-final",
+      "definition": "One of the seven very large areas of land on Earth.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "817792e08b566a16"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "КОНТИНЕНТ",
+      "role": "section-final",
+      "definition": "Один из семи очень больших участков суши на Земле.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "f38278f9a3c457e3"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
