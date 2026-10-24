@@ -39,13 +39,13 @@
     "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
     "./assets/layers/world-river-nile.webp"
    ],
-   "needsZoom": false,
+   "needsZoom": true,
    "minSeparation": 16.5,
    "markers": [
     {
      "id": "atlantic-ocean",
-     "x": 28.91,
-     "y": 8.91,
+     "x": 33,
+     "y": 23.5,
      "letter": "L"
     },
     {
@@ -69,7 +69,7 @@
     {
      "id": "antarctica",
      "x": 64.36,
-     "y": 93,
+     "y": 97.3,
      "letter": "S"
     },
     {
@@ -147,9 +147,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "f6950c688b220352"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "dffb503853cfc9f5"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-3-unit-1-ru",
@@ -279,7 +280,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "f658c96b6ff26590"
+    "contentSha256": "f708fd56d2a6e578"
    }
   },
   {
@@ -312,7 +313,7 @@
     "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
     "./assets/layers/world-river-nile.webp"
    ],
-   "needsZoom": false,
+   "needsZoom": true,
    "minSeparation": 15.5,
    "markers": [
     {
@@ -336,7 +337,7 @@
     {
      "id": "antarctica",
      "x": 64.36,
-     "y": 93,
+     "y": 97.3,
      "letter": "T"
     },
     {
@@ -431,9 +432,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "a8c67aced402dd22"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "dbbe4676c8f517b0"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-3-unit-2-ru",
@@ -465,7 +467,7 @@
     "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
     "./assets/layers/world-river-nile.webp"
    ],
-   "needsZoom": false,
+   "needsZoom": true,
    "minSeparation": 13.6,
    "markers": [
     {
@@ -525,7 +527,7 @@
     {
      "id": "antarctica",
      "x": 74.82,
-     "y": 93,
+     "y": 97.3,
      "letter": "Н"
     },
     {
@@ -606,9 +608,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "20ee886e0857e90f"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "a14c400f2b74b24a"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-3-unit-3-en",
@@ -771,7 +774,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "898c9fe2eb610e23"
+    "contentSha256": "c1c9a535eb7cdb25"
    }
   },
   {
@@ -858,7 +861,7 @@
     {
      "id": "antarctica",
      "x": 70.45,
-     "y": 93,
+     "y": 97.3,
      "letter": "С"
     },
     {
@@ -956,9 +959,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "8e425b45fae3f4f8"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "9d05a431af9435c4"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-3-final-en",
@@ -1110,7 +1114,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "8fbc39bcdc163eaa"
+    "contentSha256": "2496139460ffaa00"
    }
   },
   {
@@ -1241,7 +1245,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "5d9574ad6832c969"
+    "contentSha256": "1d1e3d0008f57bf4"
    }
   }
  ]

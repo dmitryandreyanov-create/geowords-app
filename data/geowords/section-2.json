@@ -36,7 +36,7 @@
     "./assets/layers/world-river-danube.webp",
     "./assets/layers/world-river-volga.webp"
    ],
-   "needsZoom": false,
+   "needsZoom": true,
    "minSeparation": 14.9,
    "markers": [
     {
@@ -60,7 +60,7 @@
     {
      "id": "antarctica",
      "x": 72.55,
-     "y": 93,
+     "y": 97.3,
      "letter": "O"
     },
     {
@@ -155,9 +155,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "b3c2f244d1df6489"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "61b1aa137e1fa37c"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-2-unit-1-ru",
@@ -186,7 +187,7 @@
     "./assets/layers/world-river-danube.webp",
     "./assets/layers/world-river-volga.webp"
    ],
-   "needsZoom": false,
+   "needsZoom": true,
    "minSeparation": 13.6,
    "markers": [
     {
@@ -198,7 +199,7 @@
     {
      "id": "antarctica",
      "x": 71.18,
-     "y": 93,
+     "y": 97.3,
      "letter": "У"
     },
     {
@@ -283,9 +284,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "07160ad761c3aeec"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "3cfc22fb9d4210bb"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-2-unit-2-en",
@@ -374,7 +376,7 @@
     {
      "id": "antarctica",
      "x": 64.36,
-     "y": 93,
+     "y": 97.3,
      "letter": "N"
     }
    ],
@@ -433,9 +435,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "e2c05c1f7cbd7b7c"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "bdc46f6973670c79"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-2-unit-2-ru",
@@ -562,7 +565,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "097fa46d1a2ace6e"
+    "contentSha256": "535256b821510c34"
    }
   },
   {
@@ -690,7 +693,7 @@
     {
      "markerId": "huang-he-river",
      "position": 4,
-     "text": "Find the fourth letter on the river that carries the most sediment."
+     "text": "Find the fourth letter on the river often called the muddiest in the world."
     },
     {
      "markerId": "yangtze-river",
@@ -700,7 +703,7 @@
     {
      "markerId": "danube-river",
      "position": 1,
-     "text": "Find the first letter on the river that flows through the most countries."
+     "text": "Find the first letter on the river that flows past the most countries."
     },
     {
      "markerId": "australia",
@@ -711,8 +714,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "0a3c9a94e342f8c4"
+    "date": "2026-10-24",
+    "contentSha256": "3ccc6cc719b1fd99"
    }
   },
   {
@@ -797,7 +800,7 @@
     {
      "markerId": "danube-river",
      "position": 2,
-     "text": "Найди вторую букву на реке, которая течёт через больше всего стран."
+     "text": "Найди вторую букву на реке, которая течёт через наибольшее число стран."
     },
     {
      "markerId": "amazon-river",
@@ -828,8 +831,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "34e215911cfac6cd"
+    "date": "2026-10-24",
+    "contentSha256": "6ad7810048f13dda"
    }
   },
   {
@@ -979,7 +982,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "9c67c30ee6b6813b"
+    "contentSha256": "8742afd462246201"
    }
   },
   {
@@ -1118,7 +1121,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "7834bfdb26be2294"
+    "contentSha256": "0a0aca7d5d5d4956"
    }
   }
  ]

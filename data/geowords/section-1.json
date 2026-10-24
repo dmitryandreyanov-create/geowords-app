@@ -75,29 +75,29 @@
     {
      "markerId": "west",
      "position": 5,
-     "text": "Find the fifth letter in the west."
+     "text": "Find the fifth letter in the far west."
     },
     {
      "markerId": "east",
      "position": 3,
-     "text": "Find the third letter in the east."
+     "text": "Find the third letter in the far east."
     },
     {
      "markerId": "north",
      "position": 1,
-     "text": "Find the first letter in the north."
+     "text": "Find the first letter in the far north."
     },
     {
      "markerId": "south",
      "position": 6,
-     "text": "Find the sixth letter in the south."
+     "text": "Find the sixth letter in the far south."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "8c3cbdec0f7a634f"
+    "date": "2026-10-24",
+    "contentSha256": "d5e1f4480f3b9798"
    }
   },
   {
@@ -153,29 +153,29 @@
     {
      "markerId": "west",
      "position": 2,
-     "text": "Найди вторую букву на западе."
+     "text": "Найди вторую букву на крайнем западе."
     },
     {
      "markerId": "south",
      "position": 5,
-     "text": "Найди пятую букву на юге."
+     "text": "Найди пятую букву на крайнем юге."
     },
     {
      "markerId": "north",
      "position": 3,
-     "text": "Найди третью букву на севере."
+     "text": "Найди третью букву на крайнем севере."
     },
     {
      "markerId": "east",
      "position": 1,
-     "text": "Найди первую букву на востоке."
+     "text": "Найди первую букву на крайнем востоке."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "1cc7f4077f779bb5"
+    "date": "2026-10-24",
+    "contentSha256": "107b4636c1fcc8c9"
    }
   },
   {
@@ -213,7 +213,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "N"
     },
     {
@@ -281,9 +281,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "b45612c097ee0ddd"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "2e3754f1ebba9bc2"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-1-unit-2-ru",
@@ -326,7 +328,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "Г"
     },
     {
@@ -377,9 +379,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "83849184cf666beb"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "d3f63e731963d9cd"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-1-unit-3-en",
@@ -496,7 +500,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "0798813080a40538"
+    "contentSha256": "2e7f27ee42a10742"
    }
   },
   {
@@ -625,7 +629,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "287fb8015cf6715d"
+    "contentSha256": "077a1d270498dc14"
    }
   },
   {
@@ -675,7 +679,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "I"
     },
     {
@@ -775,9 +779,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "200c4389f32dd121"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "c2c5754752f06547"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-1-unit-4-ru",
@@ -850,7 +856,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "Г"
     }
    ],
@@ -904,9 +910,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "0635d544800482df"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "7e29b1a857b55c33"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-1-final-en",
@@ -931,7 +939,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "C"
     },
     {
@@ -1033,9 +1041,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "84b3f8c5588200c0"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "39a7c784405a98db"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
   {
    "id": "section-1-final-ru",
@@ -1084,7 +1094,7 @@
     {
      "id": "antarctica",
      "x": 75.3,
-     "y": 93,
+     "y": 97.3,
      "letter": "И"
     },
     {
@@ -1162,9 +1172,11 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "4ede1396b583fa3a"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "d18bd72438d76278"
+   },
+   "needsZoom": true,
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   }
  ]
 }
