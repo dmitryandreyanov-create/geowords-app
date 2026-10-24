@@ -6,7 +6,7 @@
   1817
  ],
  "coordinateSystem": "label and tapArea in % of the world map; inset.label/tapArea in % of the inset image; inset.placement in % of the world map (x, y = top-left, w = width)",
- "tapRule": "if a tap falls inside several tapAreas, the item with the nearest label wins",
+ "tapRule": "touch tolerance is applied by the app in screen pixels (>= 44 CSS px, recomputed on zoom/pan); if a tap matches several items, the one with the nearest label in screen distance wins",
  "insets": {
   "bering": {
    "image": "./assets/world-inset-bering.webp",
@@ -286,7 +286,7 @@
     "en": "Strait of Gibraltar",
     "ru": "Гибралтарский пролив"
    },
-   "tapNote": "widened: strait narrower than a fingertip at world scale",
+   "tapNote": "minimum map-space circle (~4.4% of map width); not finger-sized on its own — the app must add screen-space touch tolerance (>= 44 CSS px)",
    "label": {
     "x": 44.97,
     "y": 36.21
@@ -400,7 +400,7 @@
     "en": "English Channel",
     "ru": "Ла-Манш"
    },
-   "tapNote": "widened: strait narrower than a fingertip at world scale",
+   "tapNote": "minimum map-space circle (~4.4% of map width); not finger-sized on its own — the app must add screen-space touch tolerance (>= 44 CSS px)",
    "label": {
     "x": 45.45,
     "y": 28.07
@@ -514,7 +514,7 @@
     "en": "Strait of Malacca",
     "ru": "Малаккский пролив"
    },
-   "tapNote": "widened: strait narrower than a fingertip at world scale",
+   "tapNote": "minimum map-space circle (~4.4% of map width); not finger-sized on its own — the app must add screen-space touch tolerance (>= 44 CSS px)",
    "label": {
     "x": 73.97,
     "y": 52.17
@@ -965,7 +965,7 @@
     "en": "Bab-el-Mandeb Strait",
     "ru": "Баб-эль-Мандебский пролив"
    },
-   "tapNote": "widened: strait narrower than a fingertip at world scale",
+   "tapNote": "minimum map-space circle (~4.4% of map width); not finger-sized on its own — the app must add screen-space touch tolerance (>= 44 CSS px)",
    "label": {
     "x": 58.67,
     "y": 48.93
@@ -1993,7 +1993,7 @@
     "en": "Strait of Magellan",
     "ru": "Магелланов пролив"
    },
-   "tapNote": "widened: strait narrower than a fingertip at world scale",
+   "tapNote": "minimum map-space circle (~4.4% of map width); not finger-sized on its own — the app must add screen-space touch tolerance (>= 44 CSS px)",
    "label": {
     "x": 27.03,
     "y": 85.14

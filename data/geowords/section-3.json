@@ -1,0 +1,1252 @@
+{
+ "section": "mountains-of-the-world",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters inside the drawn mountain ranges (on the line for the Mid-Atlantic Ridge), plus continents, oceans and rivers already learned; unit 3 names ranges by approved undisputed records; the disputed \"Elbrus is the highest in Europe\" is never used",
+  "answerWord": "phrases never contain the answer: for MOUNTAINTOP the clues avoid \"Mountains\" (\"in the Atlas\", \"in the Urals\", records via \"range\")",
+  "spacing": "as section 2: circles far apart, continent circles far from a range on the same continent, no callout arrows",
+  "needsZoom": "as section 2: show the pinch-zoom hint again for these puzzles",
+  "approval": "same as section-1.json"
+ },
+ "puzzles": [
+  {
+   "id": "section-3-unit-1-en",
+   "section": "mountains-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "LANDSLIDE",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 16.5,
+   "markers": [
+    {
+     "id": "atlantic-ocean",
+     "x": 33,
+     "y": 23.5,
+     "letter": "L"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "A"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 14.69,
+     "letter": "N"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "D"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 97.3,
+     "letter": "S"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "L"
+    },
+    {
+     "id": "nile-river",
+     "x": 55.91,
+     "y": 55.12,
+     "letter": "I"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "D"
+    },
+    {
+     "id": "andes",
+     "x": 27,
+     "y": 85.64,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "himalayas",
+     "position": 2,
+     "text": "Find the second letter in the Himalayas."
+    },
+    {
+     "markerId": "ural",
+     "position": 6,
+     "text": "Find the sixth letter in the Urals."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 3,
+     "text": "Find the third letter in the North American Cordillera."
+    },
+    {
+     "markerId": "nile-river",
+     "position": 7,
+     "text": "Find the seventh letter on the Nile."
+    },
+    {
+     "markerId": "andes",
+     "position": 9,
+     "text": "Find the ninth letter in the Andes."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "australia",
+     "position": 8,
+     "text": "Find the eighth letter in Australia."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 5,
+     "text": "Find the fifth letter in Antarctica."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Atlantic Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "dffb503853cfc9f5"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
+  },
+  {
+   "id": "section-3-unit-1-ru",
+   "section": "mountains-of-the-world",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ОПОЛЗЕНЬ",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": false,
+   "minSeparation": 16.5,
+   "markers": [
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "О"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "П"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "О"
+    },
+    {
+     "id": "cordillera",
+     "x": 18.55,
+     "y": 41.91,
+     "letter": "Л"
+    },
+    {
+     "id": "africa",
+     "x": 45.73,
+     "y": 49.5,
+     "letter": "З"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "Е"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 96.8,
+     "y": 20.46,
+     "letter": "Н"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 3.2,
+     "y": 4.5,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "africa",
+     "position": 5,
+     "text": "Найди пятую букву в Африке."
+    },
+    {
+     "markerId": "andes",
+     "position": 3,
+     "text": "Найди третью букву в Андах."
+    },
+    {
+     "markerId": "australia",
+     "position": 6,
+     "text": "Найди шестую букву в Австралии."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "ural",
+     "position": 2,
+     "text": "Найди вторую букву на Урале."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 7,
+     "text": "Найди седьмую букву в Тихом океане."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 1,
+     "text": "Найди первую букву в Гималаях."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 4,
+     "text": "Найди четвёртую букву в Кордильерах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f708fd56d2a6e578"
+   }
+  },
+  {
+   "id": "section-3-unit-2-en",
+   "section": "mountains-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "WEATHERING",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 15.5,
+   "markers": [
+    {
+     "id": "appalachians",
+     "x": 22.18,
+     "y": 36.8,
+     "letter": "W"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 87.82,
+     "y": 74.75,
+     "letter": "E"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 96.8,
+     "y": 20.46,
+     "letter": "A"
+    },
+    {
+     "id": "antarctica",
+     "x": 64.36,
+     "y": 97.3,
+     "letter": "T"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.26,
+     "letter": "H"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 3.2,
+     "y": 4.5,
+     "letter": "E"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "R"
+    },
+    {
+     "id": "europe",
+     "x": 58.82,
+     "y": 18.15,
+     "letter": "I"
+    },
+    {
+     "id": "atlas",
+     "x": 44.18,
+     "y": 38.61,
+     "letter": "N"
+    },
+    {
+     "id": "east-africa",
+     "x": 57.82,
+     "y": 51.98,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "arctic-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 4,
+     "text": "Find the fourth letter in Antarctica."
+    },
+    {
+     "markerId": "andes",
+     "position": 7,
+     "text": "Find the seventh letter in the Andes."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 5,
+     "text": "Find the fifth letter in the Himalayas."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "europe",
+     "position": 8,
+     "text": "Find the eighth letter in Europe."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 10,
+     "text": "Find the tenth letter in the mountains of East Africa."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 2,
+     "text": "Find the second letter in the Great Dividing Range."
+    },
+    {
+     "markerId": "atlas",
+     "position": 9,
+     "text": "Find the ninth letter in the Atlas."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 1,
+     "text": "Find the first letter in the Appalachians."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "dbbe4676c8f517b0"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
+  },
+  {
+   "id": "section-3-unit-2-ru",
+   "section": "mountains-of-the-world",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ВЫВЕТРИВАНИЕ",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 13.6,
+   "markers": [
+    {
+     "id": "indian-ocean",
+     "x": 54.82,
+     "y": 86.63,
+     "letter": "В"
+    },
+    {
+     "id": "appalachians",
+     "x": 22.18,
+     "y": 36.8,
+     "letter": "Ы"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "В"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 70.3,
+     "letter": "Е"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "Т"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 86.55,
+     "y": 63.04,
+     "letter": "Р"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "И"
+    },
+    {
+     "id": "east-africa",
+     "x": 57.91,
+     "y": 51.65,
+     "letter": "В"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.26,
+     "letter": "А"
+    },
+    {
+     "id": "antarctica",
+     "x": 74.82,
+     "y": 97.3,
+     "letter": "Н"
+    },
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "И"
+    },
+    {
+     "id": "europe",
+     "x": 51.36,
+     "y": 16.5,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "appalachians",
+     "position": 2,
+     "text": "Найди вторую букву в Аппалачах."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Восточной Африки."
+    },
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Найди пятую букву в Андах."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 3,
+     "text": "Найди третью букву в Кордильерах."
+    },
+    {
+     "markerId": "ural",
+     "position": 7,
+     "text": "Найди седьмую букву на Урале."
+    },
+    {
+     "markerId": "europe",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Европе."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 9,
+     "text": "Найди девятую букву в Гималаях."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 6,
+     "text": "Найди шестую букву на Большом Водораздельном хребте."
+    },
+    {
+     "markerId": "atlas",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Атласских горах."
+    },
+    {
+     "markerId": "indian-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Индийском океане."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тихом океане."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 10,
+     "text": "Найди десятую букву в Антарктиде."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "a14c400f2b74b24a"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
+  },
+  {
+   "id": "section-3-unit-3-en",
+   "section": "mountains-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MOUNTAINTOP",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 5,
+   "markers": [
+    {
+     "id": "great-dividing-range",
+     "x": 87.82,
+     "y": 74.75,
+     "letter": "M"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "O"
+    },
+    {
+     "id": "andes",
+     "x": 26.82,
+     "y": 71.78,
+     "letter": "U"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "N"
+    },
+    {
+     "id": "caucasus",
+     "x": 58.45,
+     "y": 32.18,
+     "letter": "T"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
+     "letter": "A"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "I"
+    },
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "N"
+    },
+    {
+     "id": "appalachians",
+     "x": 23.09,
+     "y": 34.98,
+     "letter": "T"
+    },
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "O"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.64,
+     "y": 56.44,
+     "letter": "P"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pyrenees",
+     "position": 8,
+     "text": "Find the eighth letter in the Pyrenees."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 5,
+     "text": "Find the fifth letter in the Caucasus."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 7,
+     "text": "Find the seventh letter in the range with the world's highest peak."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 2,
+     "text": "Find the second letter in the North American Cordillera."
+    },
+    {
+     "markerId": "ural",
+     "position": 4,
+     "text": "Find the fourth letter in the Urals."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 6,
+     "text": "Find the sixth letter on the Mid-Atlantic Ridge."
+    },
+    {
+     "markerId": "andes",
+     "position": 3,
+     "text": "Find the third letter in the longest range on land."
+    },
+    {
+     "markerId": "atlas",
+     "position": 10,
+     "text": "Find the tenth letter in the Atlas."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 1,
+     "text": "Find the first letter in the Great Dividing Range."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 11,
+     "text": "Find the eleventh letter in the range with Africa's highest peak."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 9,
+     "text": "Find the ninth letter in the Appalachians."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "c1c9a535eb7cdb25"
+   }
+  },
+  {
+   "id": "section-3-unit-3-ru",
+   "section": "mountains-of-the-world",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ЗЕМЛЕТРЯСЕНИЕ",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 5,
+   "markers": [
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "З"
+    },
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "Е"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "М"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.64,
+     "y": 56.44,
+     "letter": "Л"
+    },
+    {
+     "id": "andes",
+     "x": 26.91,
+     "y": 70.96,
+     "letter": "Е"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "Т"
+    },
+    {
+     "id": "appalachians",
+     "x": 23.09,
+     "y": 34.98,
+     "letter": "Р"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 88.91,
+     "y": 69.64,
+     "letter": "Я"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.45,
+     "y": 97.3,
+     "letter": "С"
+    },
+    {
+     "id": "caucasus",
+     "x": 58.45,
+     "y": 32.18,
+     "letter": "Е"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 96.8,
+     "y": 4.5,
+     "letter": "Н"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
+     "letter": "И"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "caucasus",
+     "position": 10,
+     "text": "Найди десятую букву на Кавказе."
+    },
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Найди пятую букву в самой длинной горной цепи на суше."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву в Антарктиде."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Срединно-Атлантическом хребте."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 6,
+     "text": "Найди шестую букву в Кордильерах."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 3,
+     "text": "Найди третью букву в горах с самой высокой вершиной мира."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 7,
+     "text": "Найди седьмую букву в Аппалачах."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 4,
+     "text": "Найди четвёртую букву в горах с самой высокой вершиной Африки."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 2,
+     "text": "Найди вторую букву в Пиренеях."
+    },
+    {
+     "markerId": "ural",
+     "position": 13,
+     "text": "Найди тринадцатую букву на Урале."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 8,
+     "text": "Найди восьмую букву на Большом Водораздельном хребте."
+    },
+    {
+     "markerId": "atlas",
+     "position": 1,
+     "text": "Найди первую букву в Атласских горах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "9d05a431af9435c4"
+   },
+   "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
+  },
+  {
+   "id": "section-3-final-en",
+   "section": "mountains-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "OROGENESIS",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": false,
+   "minSeparation": 11.8,
+   "markers": [
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "O"
+    },
+    {
+     "id": "east-africa",
+     "x": 54.55,
+     "y": 56.44,
+     "letter": "R"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 87.82,
+     "y": 74.75,
+     "letter": "O"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.01,
+     "y": 85.83,
+     "letter": "G"
+    },
+    {
+     "id": "andes",
+     "x": 26.82,
+     "y": 71.78,
+     "letter": "E"
+    },
+    {
+     "id": "appalachians",
+     "x": 23.09,
+     "y": 34.98,
+     "letter": "N"
+    },
+    {
+     "id": "ural",
+     "x": 64.91,
+     "y": 14.52,
+     "letter": "E"
+    },
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 38.94,
+     "letter": "S"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "I"
+    },
+    {
+     "id": "caucasus",
+     "x": 57.73,
+     "y": 31.52,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "ural",
+     "position": 7,
+     "text": "Find the seventh letter in the Urals."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 4,
+     "text": "Find the fourth letter on the Mid-Atlantic Ridge."
+    },
+    {
+     "markerId": "appalachians",
+     "position": 6,
+     "text": "Find the sixth letter in the Appalachians."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 9,
+     "text": "Find the ninth letter in the Himalayas."
+    },
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Find the fifth letter in the Andes."
+    },
+    {
+     "markerId": "atlas",
+     "position": 8,
+     "text": "Find the eighth letter in the Atlas."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 3,
+     "text": "Find the third letter in the Great Dividing Range."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 1,
+     "text": "Find the first letter in the North American Cordillera."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 10,
+     "text": "Find the tenth letter in the Caucasus."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 2,
+     "text": "Find the second letter in the mountains of East Africa."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "2496139460ffaa00"
+   }
+  },
+  {
+   "id": "section-3-final-ru",
+   "section": "mountains-of-the-world",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ОРОГЕНЕЗ",
+   "map": "./assets/world-base-plain.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-mountain-ural.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-appalachians.webp",
+    "./assets/layers/world-mountain-east-africa.webp",
+    "./assets/layers/world-mountain-great-dividing-range.webp",
+    "./assets/layers/world-mountain-atlas.webp",
+    "./assets/layers/world-mountain-caucasus.webp",
+    "./assets/layers/world-mountain-pyrenees.webp",
+    "./assets/layers/world-mountain-mid-atlantic-ridge.webp",
+    "./assets/layers/world-river-nile.webp"
+   ],
+   "needsZoom": true,
+   "minSeparation": 5,
+   "markers": [
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.26,
+     "letter": "О"
+    },
+    {
+     "id": "atlas",
+     "x": 44.09,
+     "y": 39.93,
+     "letter": "Р"
+    },
+    {
+     "id": "pyrenees",
+     "x": 46.79,
+     "y": 32.25,
+     "letter": "О"
+    },
+    {
+     "id": "great-dividing-range",
+     "x": 87.82,
+     "y": 74.75,
+     "letter": "Г"
+    },
+    {
+     "id": "appalachians",
+     "x": 22.82,
+     "y": 35.15,
+     "letter": "Е"
+    },
+    {
+     "id": "east-africa",
+     "x": 57.91,
+     "y": 51.65,
+     "letter": "Н"
+    },
+    {
+     "id": "andes",
+     "x": 26.91,
+     "y": 72.94,
+     "letter": "Е"
+    },
+    {
+     "id": "mid-atlantic-ridge",
+     "x": 46.55,
+     "y": 86.2,
+     "letter": "З"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "appalachians",
+     "position": 5,
+     "text": "Найди пятую букву в Аппалачах."
+    },
+    {
+     "markerId": "atlas",
+     "position": 2,
+     "text": "Найди вторую букву в Атласских горах."
+    },
+    {
+     "markerId": "great-dividing-range",
+     "position": 4,
+     "text": "Найди четвёртую букву на Большом Водораздельном хребте."
+    },
+    {
+     "markerId": "mid-atlantic-ridge",
+     "position": 8,
+     "text": "Найди восьмую букву на Срединно-Атлантическом хребте."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 3,
+     "text": "Найди третью букву в Пиренеях."
+    },
+    {
+     "markerId": "andes",
+     "position": 7,
+     "text": "Найди седьмую букву в Андах."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 1,
+     "text": "Найди первую букву в Гималаях."
+    },
+    {
+     "markerId": "east-africa",
+     "position": 6,
+     "text": "Найди шестую букву в горах Восточной Африки."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "1d1e3d0008f57bf4"
+   }
+  }
+ ]
+}

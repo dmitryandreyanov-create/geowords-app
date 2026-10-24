@@ -1,0 +1,588 @@
+{
+ "section": "continents-and-oceans",
+ "use": "building blocks for app-generated review GeoWords (rules in docs/app-mechanics.md, decided 2026-10-23)",
+ "template": {
+  "en": "Find the {ordinal} letter {place}.",
+  "ru": "Найди {ordinal} букву {place}."
+ },
+ "ordinals": {
+  "en": [
+   "first",
+   "second",
+   "third",
+   "fourth",
+   "fifth",
+   "sixth",
+   "seventh",
+   "eighth",
+   "ninth",
+   "tenth",
+   "eleventh",
+   "twelfth"
+  ],
+  "ru": [
+   "первую",
+   "вторую",
+   "третью",
+   "четвёртую",
+   "пятую",
+   "шестую",
+   "седьмую",
+   "восьмую",
+   "девятую",
+   "десятую",
+   "одиннадцатую",
+   "двенадцатую"
+  ]
+ },
+ "rules": [
+  "use only objects with learnedInUnit <= the unit the child has finished; record/relation phrases only from their learnedInUnit",
+  "one letter per object; if there are fewer objects than letters, the word waits for a later unit",
+  "never use a phrase that contains the answer word (e.g. no \"continent\" phrases for CONTINENT)",
+  "only approved undisputed facts appear here; disputed facts (Southern Ocean coldest, Atlantic saltiest) are deliberately absent",
+  "reveal order: no neighbouring positions in a row; first letter late; last letters not early (same checks as validate-geowords.mjs)",
+  "bare directions (\"in the west\", \"on the Equator\"...) are used only in unit 1 (onlyInUnit: 1); after unit 1 a direction is always tied to a continent: \"in the west of Africa\" (decided by Svetlana 2026-10-23)",
+  "parts exist only where the two opposite points are far enough apart on a phone (>= 7% of map width) and well inside the land",
+  "a continent part never appears with its whole continent — not in one puzzle and not anywhere in the same unit (see continentModeByUnit); two parts of one continent in one puzzle only as an opposite pair (oppositeOf)"
+ ],
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-10-23",
+  "scope": "rules and phrases; review puzzles are spot-checked"
+ },
+ "objects": [
+  {
+   "id": "north",
+   "learnedInUnit": 1,
+   "x": 57.78,
+   "y": 7.75,
+   "place": {
+    "en": "in the far north",
+    "ru": "на крайнем севере"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "south",
+   "learnedInUnit": 1,
+   "x": 67.5,
+   "y": 92.25,
+   "place": {
+    "en": "in the far south",
+    "ru": "на крайнем юге"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "east",
+   "learnedInUnit": 1,
+   "x": 94.44,
+   "y": 62.45,
+   "place": {
+    "en": "in the far east",
+    "ru": "на крайнем востоке"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "west",
+   "learnedInUnit": 1,
+   "x": 4.44,
+   "y": 46.16,
+   "place": {
+    "en": "in the far west",
+    "ru": "на крайнем западе"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "equator",
+   "learnedInUnit": 1,
+   "x": 39.72,
+   "y": 55.34,
+   "place": {
+    "en": "on the Equator",
+    "ru": "на экваторе"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "prime-meridian",
+   "learnedInUnit": 1,
+   "x": 46.67,
+   "y": 29.39,
+   "place": {
+    "en": "on the Prime Meridian",
+    "ru": "на нулевом меридиане"
+   },
+   "onlyInUnit": 1
+  },
+  {
+   "id": "asia",
+   "learnedInUnit": 2,
+   "x": 71.85,
+   "y": 28.29,
+   "place": {
+    "en": "in Asia",
+    "ru": "в Азии"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the largest continent",
+    "ru": "на самом большом континенте"
+   }
+  },
+  {
+   "id": "africa",
+   "learnedInUnit": 2,
+   "x": 53.94,
+   "y": 52.28,
+   "place": {
+    "en": "in Africa",
+    "ru": "в Африке"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the hottest continent",
+    "ru": "на самом жарком континенте"
+   }
+  },
+  {
+   "id": "north-america",
+   "learnedInUnit": 2,
+   "x": 18.12,
+   "y": 30.99,
+   "place": {
+    "en": "in North America",
+    "ru": "в Северной Америке"
+   }
+  },
+  {
+   "id": "south-america",
+   "learnedInUnit": 2,
+   "x": 30.85,
+   "y": 62.8,
+   "place": {
+    "en": "in South America",
+    "ru": "в Южной Америке"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the wettest continent",
+    "ru": "на самом влажном континенте"
+   }
+  },
+  {
+   "id": "antarctica",
+   "learnedInUnit": 2,
+   "x": 75.3,
+   "y": 93.0,
+   "place": {
+    "en": "in Antarctica",
+    "ru": "в Антарктиде"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the coldest continent",
+    "ru": "на самом холодном континенте"
+   }
+  },
+  {
+   "id": "europe",
+   "learnedInUnit": 2,
+   "x": 58.18,
+   "y": 23.5,
+   "place": {
+    "en": "in Europe",
+    "ru": "в Европе"
+   }
+  },
+  {
+   "id": "australia",
+   "learnedInUnit": 2,
+   "x": 83.36,
+   "y": 67.25,
+   "place": {
+    "en": "in Australia",
+    "ru": "в Австралии"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "on the smallest continent",
+    "ru": "на самом маленьком континенте"
+   }
+  },
+  {
+   "id": "pacific-ocean",
+   "learnedInUnit": 3,
+   "x": 12.52,
+   "y": 67.14,
+   "place": {
+    "en": "in the Pacific Ocean",
+    "ru": "в Тихом океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the largest ocean",
+    "ru": "в самом большом океане"
+   }
+  },
+  {
+   "id": "atlantic-ocean",
+   "learnedInUnit": 3,
+   "x": 42.73,
+   "y": 74.3,
+   "place": {
+    "en": "in the Atlantic Ocean",
+    "ru": "в Атлантическом океане"
+   }
+  },
+  {
+   "id": "indian-ocean",
+   "learnedInUnit": 3,
+   "x": 68.88,
+   "y": 72.76,
+   "place": {
+    "en": "in the Indian Ocean",
+    "ru": "в Индийском океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the warmest ocean",
+    "ru": "в самом тёплом океане"
+   }
+  },
+  {
+   "id": "arctic-ocean",
+   "learnedInUnit": 3,
+   "x": 85.3,
+   "y": 4.5,
+   "place": {
+    "en": "in the Arctic Ocean",
+    "ru": "в Северном Ледовитом океане"
+   },
+   "record": {
+    "learnedInUnit": 4,
+    "en": "in the smallest ocean",
+    "ru": "в самом маленьком океане"
+   }
+  },
+  {
+   "id": "southern-ocean",
+   "learnedInUnit": 3,
+   "x": 54.24,
+   "y": 93.0,
+   "place": {
+    "en": "in the Southern Ocean",
+    "ru": "в Южном океане"
+   },
+   "relation": {
+    "learnedInUnit": 3,
+    "en": "in the ocean around Antarctica",
+    "ru": "в океане вокруг Антарктиды"
+   }
+  },
+  {
+   "id": "asia-north",
+   "learnedInUnit": 2,
+   "partOf": "asia",
+   "oppositeOf": "asia-south",
+   "x": 74.27,
+   "y": 8.75,
+   "place": {
+    "en": "in the north of Asia",
+    "ru": "на севере Азии"
+   }
+  },
+  {
+   "id": "asia-south",
+   "learnedInUnit": 2,
+   "partOf": "asia",
+   "oppositeOf": "asia-north",
+   "x": 74.82,
+   "y": 45.87,
+   "place": {
+    "en": "in the south of Asia",
+    "ru": "на юге Азии"
+   }
+  },
+  {
+   "id": "asia-east",
+   "learnedInUnit": 2,
+   "partOf": "asia",
+   "oppositeOf": "asia-west",
+   "x": 95.45,
+   "y": 15.02,
+   "place": {
+    "en": "in the east of Asia",
+    "ru": "на востоке Азии"
+   }
+  },
+  {
+   "id": "asia-west",
+   "learnedInUnit": 2,
+   "partOf": "asia",
+   "oppositeOf": "asia-east",
+   "x": 57.82,
+   "y": 35.48,
+   "place": {
+    "en": "in the west of Asia",
+    "ru": "на западе Азии"
+   }
+  },
+  {
+   "id": "africa-north",
+   "learnedInUnit": 2,
+   "partOf": "africa",
+   "oppositeOf": "africa-south",
+   "x": 48.18,
+   "y": 37.95,
+   "place": {
+    "en": "in the north of Africa",
+    "ru": "на севере Африки"
+   }
+  },
+  {
+   "id": "africa-south",
+   "learnedInUnit": 2,
+   "partOf": "africa",
+   "oppositeOf": "africa-north",
+   "x": 52.82,
+   "y": 70.96,
+   "place": {
+    "en": "in the south of Africa",
+    "ru": "на юге Африки"
+   }
+  },
+  {
+   "id": "africa-east",
+   "learnedInUnit": 2,
+   "partOf": "africa",
+   "oppositeOf": "africa-west",
+   "x": 58.64,
+   "y": 52.15,
+   "place": {
+    "en": "in the east of Africa",
+    "ru": "на востоке Африки"
+   }
+  },
+  {
+   "id": "africa-west",
+   "learnedInUnit": 2,
+   "partOf": "africa",
+   "oppositeOf": "africa-east",
+   "x": 43.27,
+   "y": 47.85,
+   "place": {
+    "en": "in the west of Africa",
+    "ru": "на западе Африки"
+   }
+  },
+  {
+   "id": "north-america-north",
+   "learnedInUnit": 2,
+   "partOf": "north-america",
+   "oppositeOf": "north-america-south",
+   "x": 15.64,
+   "y": 16.67,
+   "place": {
+    "en": "in the north of North America",
+    "ru": "на севере Северной Америки"
+   }
+  },
+  {
+   "id": "north-america-south",
+   "learnedInUnit": 2,
+   "partOf": "north-america",
+   "oppositeOf": "north-america-north",
+   "x": 18.18,
+   "y": 42.24,
+   "place": {
+    "en": "in the south of North America",
+    "ru": "на юге Северной Америки"
+   }
+  },
+  {
+   "id": "north-america-east",
+   "learnedInUnit": 2,
+   "partOf": "north-america",
+   "oppositeOf": "north-america-west",
+   "x": 28.73,
+   "y": 25.25,
+   "place": {
+    "en": "in the east of North America",
+    "ru": "на востоке Северной Америки"
+   }
+  },
+  {
+   "id": "north-america-west",
+   "learnedInUnit": 2,
+   "partOf": "north-america",
+   "oppositeOf": "north-america-east",
+   "x": 3.2,
+   "y": 19.31,
+   "place": {
+    "en": "in the west of North America",
+    "ru": "на западе Северной Америки"
+   }
+  },
+  {
+   "id": "south-america-north",
+   "learnedInUnit": 2,
+   "partOf": "south-america",
+   "oppositeOf": "south-america-south",
+   "x": 28.73,
+   "y": 52.31,
+   "place": {
+    "en": "in the north of South America",
+    "ru": "на севере Южной Америки"
+   }
+  },
+  {
+   "id": "south-america-south",
+   "learnedInUnit": 2,
+   "partOf": "south-america",
+   "oppositeOf": "south-america-north",
+   "x": 27.45,
+   "y": 76.07,
+   "place": {
+    "en": "in the south of South America",
+    "ru": "на юге Южной Америки"
+   }
+  },
+  {
+   "id": "south-america-east",
+   "learnedInUnit": 2,
+   "partOf": "south-america",
+   "oppositeOf": "south-america-west",
+   "x": 35.36,
+   "y": 59.41,
+   "place": {
+    "en": "in the east of South America",
+    "ru": "на востоке Южной Америки"
+   }
+  },
+  {
+   "id": "south-america-west",
+   "learnedInUnit": 2,
+   "partOf": "south-america",
+   "oppositeOf": "south-america-east",
+   "x": 26.09,
+   "y": 59.74,
+   "place": {
+    "en": "in the west of South America",
+    "ru": "на западе Южной Америки"
+   }
+  },
+  {
+   "id": "europe-north",
+   "learnedInUnit": 2,
+   "partOf": "europe",
+   "oppositeOf": "europe-south",
+   "x": 54.82,
+   "y": 16.83,
+   "place": {
+    "en": "in the north of Europe",
+    "ru": "на севере Европы"
+   }
+  },
+  {
+   "id": "europe-south",
+   "learnedInUnit": 2,
+   "partOf": "europe",
+   "oppositeOf": "europe-north",
+   "x": 53.18,
+   "y": 31.19,
+   "place": {
+    "en": "in the south of Europe",
+    "ru": "на юге Европы"
+   }
+  },
+  {
+   "id": "europe-east",
+   "learnedInUnit": 2,
+   "partOf": "europe",
+   "oppositeOf": "europe-west",
+   "x": 61.82,
+   "y": 23.76,
+   "place": {
+    "en": "in the east of Europe",
+    "ru": "на востоке Европы"
+   }
+  },
+  {
+   "id": "europe-west",
+   "learnedInUnit": 2,
+   "partOf": "europe",
+   "oppositeOf": "europe-east",
+   "x": 47.64,
+   "y": 29.54,
+   "place": {
+    "en": "in the west of Europe",
+    "ru": "на западе Европы"
+   }
+  },
+  {
+   "id": "australia-east",
+   "learnedInUnit": 2,
+   "partOf": "australia",
+   "oppositeOf": "australia-west",
+   "x": 87.91,
+   "y": 69.31,
+   "place": {
+    "en": "in the east of Australia",
+    "ru": "на востоке Австралии"
+   }
+  },
+  {
+   "id": "australia-west",
+   "learnedInUnit": 2,
+   "partOf": "australia",
+   "oppositeOf": "australia-east",
+   "x": 79.55,
+   "y": 68.48,
+   "place": {
+    "en": "in the west of Australia",
+    "ru": "на западе Австралии"
+   }
+  }
+ ],
+ "continentModeByUnit": {
+  "rule": "unit-wide: within one unit a continent is used EITHER whole (\"in Africa\") OR in parts (\"in the west of Africa\"), never both, across all puzzles of that unit (final + review). A continent the unit final uses whole stays whole for the whole unit; for the others the app picks one mode per unit and keeps it (decided by Svetlana 2026-10-23)",
+  "wholeFromFinals": {
+   "1": [],
+   "2": [
+    "africa",
+    "antarctica",
+    "asia",
+    "australia",
+    "europe",
+    "north-america",
+    "south-america"
+   ],
+   "3": [
+    "africa",
+    "asia",
+    "australia",
+    "south-america"
+   ],
+   "4": [
+    "africa",
+    "antarctica",
+    "asia",
+    "australia",
+    "europe",
+    "north-america",
+    "south-america"
+   ],
+   "section-final": [
+    "africa",
+    "antarctica",
+    "asia",
+    "north-america",
+    "south-america"
+   ]
+  }
+ }
+}

@@ -1,0 +1,237 @@
+{
+ "section": "seas-of-the-world",
+ "use": "introduction cards (exercise type 0), one fact per sea; ids match data/maps/world-waters.json; no intro card for this section",
+ "nameNote": "gulf-of-mexico is disputed only by its NAME: show the caveat popup and keep it out of True/False about the name; the map label and GeoWords place clues keep \"Gulf of Mexico\" (decided by Svetlana, 2026-10-23)",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
+ "items": [
+  {
+   "id": "mediterranean-sea",
+   "order": 1,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Mediterranean Sea",
+    "ru": "Средиземное море"
+   },
+   "fact": {
+    "en": "The Mediterranean Sea is surrounded by three continents: Europe, Africa and Asia.",
+    "ru": "Средиземное море окружают три континента: Европа, Африка и Азия."
+   },
+   "source": "map data",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "87bda5b555c7b7a6"
+   }
+  },
+  {
+   "id": "black-sea",
+   "order": 2,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Black Sea",
+    "ru": "Чёрное море"
+   },
+   "fact": {
+    "en": "Below about 150 meters the Black Sea has no oxygen, and no fish can live there.",
+    "ru": "Глубже примерно 150 метров в Чёрном море нет кислорода, и там не может жить ни одна рыба."
+   },
+   "source": "Alfred Wegener Institute (no free oxygen below 150 m, no higher life forms)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "19915b4c761dae45"
+   }
+  },
+  {
+   "id": "red-sea",
+   "order": 3,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Red Sea",
+    "ru": "Красное море"
+   },
+   "fact": {
+    "en": "No permanent rivers flow into the Red Sea, and the hot sun evaporates a lot of water, so it is one of the saltiest seas in the world.",
+    "ru": "В Красное море не впадает ни одна постоянная река, а жаркое солнце испаряет много воды, поэтому оно одно из самых солёных морей мира."
+   },
+   "source": "National Academies (no river inflow, evaporation ~200 cm/yr, salinity 40-41)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "a544bf690c964f70"
+   }
+  },
+  {
+   "id": "caspian-sea",
+   "order": 4,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Caspian Sea",
+    "ru": "Каспийское море"
+   },
+   "fact": {
+    "en": "The Caspian Sea is not connected to the ocean. It is often called the largest lake on Earth.",
+    "ru": "Каспийское море не соединено с океаном. Его часто называют самым большим озером на Земле."
+   },
+   "source": "Guinness World Records: largest lake (about 371,000 km²; the area changes with the water level)",
+   "disputed": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "14b4454ddda3f6d1"
+   },
+   "caveat": {
+    "en": "Scientists argue whether it is a lake or a sea.",
+    "ru": "Учёные спорят, озеро это или море."
+   }
+  },
+  {
+   "id": "arabian-sea",
+   "order": 5,
+   "kind": "sea",
+   "unit": 2,
+   "name": {
+    "en": "Arabian Sea",
+    "ru": "Аравийское море"
+   },
+   "fact": {
+    "en": "The Arabian Sea lies between the Arabian Peninsula and India.",
+    "ru": "Аравийское море лежит между Аравийским полуостровом и Индией."
+   },
+   "source": "map data",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "c501744e38e237ff"
+   }
+  },
+  {
+   "id": "bay-of-bengal",
+   "order": 6,
+   "kind": "sea",
+   "unit": 2,
+   "name": {
+    "en": "Bay of Bengal",
+    "ru": "Бенгальский залив"
+   },
+   "fact": {
+    "en": "The Bay of Bengal is the largest bay in the world.",
+    "ru": "Бенгальский залив — самый большой залив в мире."
+   },
+   "source": "Guinness World Records: largest bay (2,172,000 km²)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d4c5bc61a1bd4507"
+   }
+  },
+  {
+   "id": "coral-sea",
+   "order": 7,
+   "kind": "sea",
+   "unit": 2,
+   "name": {
+    "en": "Coral Sea",
+    "ru": "Коралловое море"
+   },
+   "fact": {
+    "en": "The Great Barrier Reef, the largest coral reef system in the world, is in the Coral Sea.",
+    "ru": "В Коралловом море находится Большой Барьерный риф — самая большая система коралловых рифов в мире."
+   },
+   "source": "WorldAtlas: Great Barrier Reef",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "f43b91f51637d73f"
+   }
+  },
+  {
+   "id": "caribbean-sea",
+   "order": 8,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Caribbean Sea",
+    "ru": "Карибское море"
+   },
+   "fact": {
+    "en": "There are many islands in the Caribbean Sea; the largest of them is Cuba.",
+    "ru": "В Карибском море много островов, самый большой из них — Куба."
+   },
+   "source": "general reference",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d008b55877987e38"
+   }
+  },
+  {
+   "id": "gulf-of-mexico",
+   "order": 9,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Gulf of Mexico",
+    "ru": "Мексиканский залив"
+   },
+   "fact": {
+    "en": "The Gulf of Mexico washes the shores of the United States, Mexico and Cuba.",
+    "ru": "Мексиканский залив омывает берега США, Мексики и Кубы."
+   },
+   "source": "map data; naming: U.S. Board on Geographic Names, Feb 2025 (Wisconsin State Cartographer's Office)",
+   "disputed": true,
+   "caveat": {
+    "en": "Since 2025 the U.S. government has officially called it the Gulf of America. Mexico and most other countries still call it the Gulf of Mexico.",
+    "ru": "С 2025 года правительство США официально называет его Американским заливом. Мексика и большинство других стран по-прежнему называют его Мексиканским."
+   },
+   "disputedReason": "name",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "835de5d82393ac90"
+   }
+  },
+  {
+   "id": "hudson-bay",
+   "order": 10,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Hudson Bay",
+    "ru": "Гудзонов залив"
+   },
+   "fact": {
+    "en": "In winter Hudson Bay is covered with ice, and polar bears hunt seals on it.",
+    "ru": "Зимой Гудзонов залив покрывается льдом, и белые медведи охотятся на нём на тюленей."
+   },
+   "source": "Polar Bears International",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "65f046355b91f992"
+   }
+  }
+ ]
+}
