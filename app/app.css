@@ -192,3 +192,11 @@ h1,h2,h3,p{margin:0}
 .nuance img{width:26px;height:26px}
 .gw-head{display:grid;gap:4px}
 .sheet .intro-pip img{width:80px;flex:0 0 80px}
+
+/* section 2: rivers highlighted along their course */
+.hl-river{fill:none;stroke:var(--fox);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hl-river.pulse{animation:shapepulse 1.4s ease-in-out infinite}
+.hl-river.good{stroke:#4cc46a}
+.hl-river.bad{stroke:#e5533d}
+.hl-river.sel{stroke:#2878ff}
+.section-card.s2{margin-top:28px}

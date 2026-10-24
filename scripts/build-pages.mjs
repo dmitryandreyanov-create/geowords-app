@@ -25,6 +25,9 @@ const named=[
   'app/index.html','app/app.css','app/app.js',
   'data/content/section-1-facts.json','data/content/section-1-records.json','data/content/section-1-relations.json',
   'data/geowords/section-1.json','data/dictionary/section-1.json','data/geowords/clue-templates.json',
+  // Section 2 «Rivers of the world» (draft lessons) and the data it reads.
+  'data/content/section-2-facts.json','data/content/section-2-records.json','data/geowords/section-2.json','data/dictionary/section-2.json',
+  'data/review/block-1.json','data/content/section-4-facts.json','assets/intro/rivers-intro-en.webp','assets/intro/rivers-intro-ru.webp',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),

@@ -37,9 +37,11 @@ try{
     return {page,context};
   }
   const ru=await makePage('ru');
+  // Units 2–4 are open as drafts for the author's review (PR #43) and are labelled so on the trail.
+  assert.match(await ru.page.locator('.path').innerText(),/черновик уроков/i);
   await ru.page.locator('[data-step="u2-l1"]').click();
-  assert.match(await ru.page.locator('.sheet').innerText(),/ещё готовится/);
-  await ru.page.locator('.sheet button').click();
+  assert.equal(await ru.page.locator('.sheet [data-a="go"]').count(),1,'unit 2 opens after the unit 1 final');
+  await ru.page.locator('.sheet [data-a="no"]').click();
   await ru.page.locator('[data-step="u1-final"]').click();
   assert.equal(await ru.page.locator('.sheet [data-a="practice"]').count(),1,
     'approved short RU review words are available after unit 1');
@@ -73,7 +75,7 @@ try{
   await en.page.waitForSelector('.gw-clue');
   assert.equal(await en.page.evaluate(()=>window.__gwPuzzle.answer),'ZENITH');
   await en.context.close();
-  console.log('PASS Expedition: two RU review words rotate, no EN unit-1 shortcut, units 2–4 remain locked');
+  console.log('PASS Expedition: two RU review words rotate, no EN unit-1 shortcut, units 2–4 open as drafts');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));
