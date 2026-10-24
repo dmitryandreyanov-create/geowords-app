@@ -25,6 +25,14 @@ const RELEASE = {
     section: "mountains-of-the-world",
     ids: ["himalayas", "ural", "cordillera", "andes", "appalachians", "east-africa", "great-dividing-range", "atlas", "caucasus", "pyrenees", "mid-atlantic-ridge"],
   },
+  "section-4-records.json": {
+    section: "seas-of-the-world",
+    ids: ["red-sea-saltiest", "bay-of-bengal-largest-bay", "caspian-largest-inland", "coral-sea-largest-reef"],
+  },
+  "section-4-facts.json": {
+    section: "seas-of-the-world",
+    ids: ["mediterranean-sea", "black-sea", "red-sea", "caspian-sea", "arabian-sea", "bay-of-bengal", "coral-sea", "caribbean-sea", "gulf-of-mexico", "hudson-bay"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",
