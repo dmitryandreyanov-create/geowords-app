@@ -11,7 +11,7 @@ const dir = process.env.DICTIONARY_DIR || path.join(process.cwd(), "data/diction
 const RELEASE = {
   "block-1.json": {
     section: "world-1",
-    units: ["block-final", "challenge-extra"],
+    units: ["challenge-extra", "block-final"],
   },
   "section-5.json": {
     section: "straits-and-canals",
@@ -63,7 +63,7 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
   const unitIds = units.map(u => u?.id);
   if (new Set(unitIds).size !== unitIds.length) errors.push(`${file}: duplicate unit ids`);
   if (release) {
-    if (j.section !== release.section) errors.push(`${file}: section must be "${release.section}"`);
+    if ((j.section ?? j.block) !== release.section) errors.push(`${file}: section must be "${release.section}"`);
     if (unitIds.join() !== release.units.join()) errors.push(`${file}: units must be ${release.units.join(", ")} (found ${unitIds.join(", ") || "none"})`);
   }
   for (const lang of ["en", "ru"]) {

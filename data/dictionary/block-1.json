@@ -13,41 +13,6 @@
  },
  "units": [
   {
-   "id": "block-final",
-   "title": {
-    "en": "Block final",
-    "ru": "Итог блока"
-   },
-   "words": {
-    "en": [
-     {
-      "answer": "CARTOGRAPHER",
-      "role": "block-final",
-      "definition": "A person who makes maps.",
-      "approval": {
-       "status": "approved",
-       "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "eef46ab03392ffa4"
-      }
-     }
-    ],
-    "ru": [
-     {
-      "answer": "ПУТЕШЕСТВЕННИК",
-      "role": "block-final",
-      "definition": "Человек, который ездит, ходит или плывёт по разным странам, чтобы увидеть новые места.",
-      "approval": {
-       "status": "approved",
-       "by": "Svetlana",
-       "date": "2026-10-24",
-       "contentSha256": "5162c815477e07d3"
-      }
-     }
-    ]
-   }
-  },
-  {
    "id": "challenge-extra",
    "title": {
     "en": "Challenge words",
@@ -110,6 +75,41 @@
        "by": "Svetlana",
        "date": "2026-10-24",
        "contentSha256": "45636e8d628b5c24"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "en": "Block final",
+    "ru": "Итог блока"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CARTOGRAPHER",
+      "role": "block-final",
+      "definition": "A person who makes maps.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "eef46ab03392ffa4"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПУТЕШЕСТВЕННИК",
+      "role": "block-final",
+      "definition": "Человек, который ездит, ходит или плывёт по разным странам, чтобы увидеть новые места.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "5162c815477e07d3"
       }
      }
     ]
