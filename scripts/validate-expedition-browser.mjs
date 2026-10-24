@@ -66,6 +66,37 @@ try{
   assert.equal(await ru.page.evaluate(()=>window.__gwPuzzle.answer),'ЗЕНИТ',
     'explicit final replay still uses the approved authored puzzle');
   await ru.context.close();
+  // Actual final completion (not a prefilled done flag) must unlock the first lesson of unit 2.
+  const flow=await makePage('ru');
+  await flow.page.evaluate(()=>{
+    const s=JSON.parse(localStorage.getItem('geowords_expedition_v1'));
+    delete s.done['u1-final'];
+    localStorage.setItem('geowords_expedition_v1',JSON.stringify(s));
+  });
+  await flow.page.reload();
+  await flow.page.locator('[data-step="u1-final"]').click();
+  await flow.page.locator('.sheet [data-a="go"]').click();
+  await flow.page.waitForSelector('.gw-clue');
+  const final=await flow.page.evaluate(()=>window.__gwPuzzle);
+  assert.equal(final.answer,'ЗЕНИТ');
+  assert.equal(final.stepId,'u1-final');
+  for(let i=0;i<final.clues.length;i++){
+    const c=final.clues[i];
+    await flow.page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());
+    await flow.page.waitForFunction(count=>document.querySelectorAll('.mk.done').length>=count,i+1);
+    if(i<final.clues.length-1)await flow.page.waitForTimeout(370);
+  }
+  await flow.page.locator('.screen.done [data-a="next"]').waitFor({timeout:8000});
+  assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
+  await flow.page.reload();
+  await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.24-u2-b/);
+  await flow.page.locator('[data-a="continue-unit-2"]').click();
+  assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
+  await flow.page.locator('.sheet [data-a="go"]').click();
+  await flow.page.waitForFunction(()=>window.__gwTask?.k==='introObj'&&window.__gwTask?.id==='asia');
+  assert.equal(await flow.page.evaluate(()=>window.__gwTask.id),'asia');
+  await flow.context.close();
   const en=await makePage('en');
   await en.page.locator('[data-step="u1-final"]').click();
   assert.equal(await en.page.locator('.sheet [data-a="practice"]').count(),0,
@@ -75,7 +106,7 @@ try{
   await en.page.waitForSelector('.gw-clue');
   assert.equal(await en.page.evaluate(()=>window.__gwPuzzle.answer),'ZENITH');
   await en.context.close();
-  console.log('PASS Expedition: two RU review words rotate, no EN unit-1 shortcut, units 2–4 open as drafts');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

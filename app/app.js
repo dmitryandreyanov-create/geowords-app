@@ -5,6 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
+const BUILD='2026.10.24-u2-b';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -274,16 +275,19 @@ function home(){
      `<div class="section-card s2"><img src="${IMG.stamp2}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(2)} · ${x.draft}</span><h2>${L()==='ru'?'Реки мира':'Rivers of the world'}</h2></div></div>`+
      COURSE2.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(2)} · ${x.unit} ${u.n}</span><h3>${esc(D.s2.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===2&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.sectionN(2)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s2-final'));
+  const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
+    `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
    <div class="topbar"><span class="chip"><img src="${IMG.streak}" alt="">${S.streak}</span><span class="chip"><span class="star">★</span>${S.xp}</span><span class="grow"></span>
     <button type="button" class="iconbtn" id="gear" aria-label="${x.settings}">⚙</button></div>
    <div class="section-card"><img src="${IMG.stamp}" alt=""><div class="t"><span class="eyebrow">${x.section}</span><h2>${x.sectionName}</h2>
      <div class="bar"><i style="width:${Math.round(doneCount/S1.length*100)}%"></i></div></div></div>
-   <div class="path"><svg class="trail" preserveAspectRatio="none"></svg>${body}</div>
-   <p class="rotate-hint">${x.tester}</p></section>`);
+   ${jump}<div class="path"><svg class="trail" preserveAspectRatio="none"></svg>${body}</div>
+   <p class="rotate-hint">${x.tester} · ${BUILD}</p></section>`);
   drawTrail();
   app.querySelectorAll('.stop[data-step]').forEach(b=>b.addEventListener('click',()=>openStep(b.dataset.step)));
   app.querySelector('#gear').addEventListener('click',settings);
+  app.querySelector('[data-a=continue-unit-2]')?.addEventListener('click',()=>openStep('u2-l1'));
   const c=app.querySelector('.stop.current');if(c)c.scrollIntoView({block:'center'});
 }
 function drawTrail(){const path=app.querySelector('.path');if(!path)return;const svg=path.querySelector('svg.trail');const r=path.getBoundingClientRect();
