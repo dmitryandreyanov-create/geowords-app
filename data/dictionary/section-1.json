@@ -17,7 +17,8 @@
   "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)",
   "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms",
-  "reserve": "reserve words (role \"reserve\", unit 1 only for now): short words for \"Play again\" when no review word fits the places learned so far; at most reserveMaxLetters letters (unit 1 has 6 places: Equator, Prime Meridian, far N/S/E/W). Approved by Svetlana 2026-10-24"
+  "reserve": "reserve words (role \"reserve\", unit 1 only for now): short words for \"Play again\" when no review word fits the places learned so far; at most reserveMaxLetters letters (unit 1 has 6 places: Equator, Prime Meridian, far N/S/E/W). Approved by Svetlana 2026-10-24; unit 2: ПАССАТЫ (RU, ≤ 7 letters = 7 continents)",
+  "practiceExtra": "unit practice (6 GeoWords before the unit final) may use short approved words from later units of the same section; practiceExtra lists them per unit and language, used right after the unit's own words (approved by Svetlana 2026-10-24)"
  },
  "sources": {
   "PANGAEA": "USGS: about 300–200 million years ago; break-up began about 225–200 million years ago"
@@ -506,7 +507,31 @@
        "date": "2026-10-23",
        "contentSha256": "235a7c72a1a7c06f"
       }
+     },
+     {
+      "answer": "ПАССАТЫ",
+      "role": "reserve",
+      "definition": "Постоянные ветры, которые круглый год дуют от тропических широт к экватору, с востока на запад.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "ab8c6ff69ce1f427"
+      }
      }
+    ]
+   },
+   "reserveMaxLetters": 7,
+   "practiceExtra": {
+    "ru": [
+     "АЙСБЕРГ",
+     "САВАННА"
+    ],
+    "en": [
+     "ICEBERG",
+     "SAVANNA",
+     "MONSOON",
+     "GLACIER"
     ]
    }
   },

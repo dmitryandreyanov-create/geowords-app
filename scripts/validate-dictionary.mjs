@@ -85,6 +85,12 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       if (!words.length && !challengeOnly) errors.push(`${file}: ${u.id} has no ${lang} words`);
       // Reserve words ("Play again" when no review word fits the learned places): only beside a unit final,
       // and never longer than the unit's reserveMaxLetters.
+      // practiceExtra: short approved words of later units used in this unit's practice; each must exist and fit reserveMaxLetters.
+      for (const a of u.practiceExtra?.[lang] || []) {
+        const later = units.slice(units.indexOf(u) + 1).flatMap(v => v.words?.[lang] || []).find(w => w.answer === a && (w.role === "review" || w.role === "reserve"));
+        if (!later) errors.push(`${file}: ${u.id} ${lang} practiceExtra ${a} is not a review or reserve word of a later unit`);
+        else if (!Number.isInteger(u.reserveMaxLetters) || [...a].length > u.reserveMaxLetters) errors.push(`${file}: ${u.id} ${lang} practiceExtra ${a} is longer than reserveMaxLetters`);
+      }
       const reserves = words.filter(w => w.role === "reserve");
       if (reserves.length) {
         if (finals !== 1) errors.push(`${file}: ${u.id} ${lang} reserve words need a unit with a final word`);
