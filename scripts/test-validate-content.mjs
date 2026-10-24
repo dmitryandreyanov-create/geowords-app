@@ -25,6 +25,8 @@ const cases = {
   "disputed missing": edit(d => { delete card(d, "europe").disputed; }),
   "disputed without caveat": edit(d => { delete card(d, "europe").caveat; }),
   "wrong section": edit(d => { d.section = "rivers"; }),
+  "changing record without a year": edit(d => { card(d, "asia").category = "changing"; }),
+  "unknown record category": edit(d => { card(d, "asia").category = "maybe"; }),
   "disputed mark removed, old approval kept": edit(d => { card(d, "atlantic-ocean").disputed = false; }),
 };
 const script = "scripts/validate-content.mjs";
