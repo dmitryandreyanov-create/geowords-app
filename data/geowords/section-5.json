@@ -98,7 +98,7 @@
     {
      "id": "antarctica",
      "x": 59.55,
-     "y": 93,
+     "y": 97.3,
      "letter": "R"
     }
    ],
@@ -157,8 +157,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "cb0dc05985f1282c"
+    "date": "2026-10-24",
+    "contentSha256": "0f26c3d766b6272e"
    }
   },
   {
@@ -237,7 +237,7 @@
     {
      "id": "antarctica",
      "x": 70.45,
-     "y": 93,
+     "y": 97.3,
      "letter": "И"
     },
     {
@@ -297,8 +297,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "55c15f366a4fc0a6"
+    "date": "2026-10-24",
+    "contentSha256": "a0e5adafec76f6c1"
    }
   },
   {
@@ -344,7 +344,7 @@
     {
      "id": "antarctica",
      "x": 70.64,
-     "y": 93,
+     "y": 97.3,
      "letter": "H"
     },
     {
@@ -451,8 +451,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "171e094d31eb0692"
+    "date": "2026-10-24",
+    "contentSha256": "8f71670de5309ecb"
    }
   },
   {
@@ -516,7 +516,7 @@
     {
      "id": "antarctica",
      "x": 70.64,
-     "y": 93,
+     "y": 97.3,
      "letter": "В"
     },
     {
@@ -617,8 +617,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "eee38ba902ae3f9f"
+    "date": "2026-10-24",
+    "contentSha256": "7f1f27fda4521c53"
    }
   },
   {
@@ -746,7 +746,7 @@
     {
      "markerId": "strait-of-malacca",
      "position": 7,
-     "text": "Find the seventh letter in the strait that carries the most oil."
+     "text": "Find the seventh letter in the strait that connects the Indian and Pacific Oceans."
     },
     {
      "markerId": "himalayas",
@@ -756,7 +756,7 @@
     {
      "markerId": "strait-of-hormuz",
      "position": 9,
-     "text": "Find the ninth letter in the strait that carries a fifth of the world's oil."
+     "text": "Find the ninth letter in the strait that connects the Persian Gulf with the Gulf of Oman."
     },
     {
      "markerId": "mozambique-channel",
@@ -782,8 +782,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ff3a183b1205c492"
+    "date": "2026-10-24",
+    "contentSha256": "e089e683911cc955"
    }
   },
   {
@@ -828,7 +828,7 @@
     {
      "id": "antarctica",
      "x": 63.55,
-     "y": 93,
+     "y": 97.3,
      "letter": "Р"
     },
     {
@@ -879,7 +879,7 @@
     {
      "markerId": "strait-of-hormuz",
      "position": 3,
-     "text": "Найди третью букву в проливе, через который идёт пятая часть мировой нефти."
+     "text": "Найди третью букву в проливе, который соединяет Персидский и Оманский заливы."
     },
     {
      "markerId": "australia",
@@ -894,7 +894,7 @@
     {
      "markerId": "strait-of-malacca",
      "position": 4,
-     "text": "Найди четвёртую букву в проливе, через который перевозят больше всего нефти."
+     "text": "Найди четвёртую букву в проливе, который соединяет Индийский и Тихий океаны."
     },
     {
      "markerId": "bab-el-mandeb",
@@ -925,8 +925,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "8de3d9afc1ea50a3"
+    "date": "2026-10-24",
+    "contentSha256": "e48e2c11a71e26ff"
    }
   },
   {
@@ -1008,7 +1008,7 @@
     {
      "id": "antarctica",
      "x": 70.64,
-     "y": 93,
+     "y": 97.3,
      "letter": "A"
     },
     {
@@ -1145,8 +1145,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "e5e42d7d31b3626c"
+    "date": "2026-10-24",
+    "contentSha256": "5cbc220a789eae48"
    }
   },
   {
@@ -1234,7 +1234,7 @@
     {
      "id": "antarctica",
      "x": 85.91,
-     "y": 93,
+     "y": 97.3,
      "letter": "Т"
     },
     {
@@ -1310,8 +1310,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "31f2c0857cc414a6"
+    "date": "2026-10-24",
+    "contentSha256": "92cd9ad1bcf0acd4"
    }
   }
  ]
