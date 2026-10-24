@@ -44,8 +44,8 @@
    "markers": [
     {
      "id": "atlantic-ocean",
-     "x": 28.91,
-     "y": 8.91,
+     "x": 33,
+     "y": 23.5,
      "letter": "L"
     },
     {
@@ -148,7 +148,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-24",
-    "contentSha256": "95e5d8fbf620bcf0"
+    "contentSha256": "dffb503853cfc9f5"
    },
    "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
