@@ -1,4 +1,4 @@
-/* GeoWords «Экспедиция» — section 1 «Continents and oceans»: four units, lessons, unit-final GeoWords,
+/* GeoWords «Экспедиция» — section 1 «Continents and oceans» and section 2 «Rivers of the world» (draft lessons): units, lessons, unit-final GeoWords,
    review GeoWords built by the approved rules, and the section final with a passport stamp.
    Content comes only from approved data in /data (facts, records, relations, dictionary, GeoWords
    puzzles, clue templates, the continents/oceans map). Progress is kept on this device (localStorage). */
@@ -13,7 +13,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -34,7 +34,9 @@ const T={
   settings:'Настройки',lang:'Слова',reset:'Сбросить прогресс',unlock:'Открыть все шаги (для теста)',
   rotate:'↻ Поверни телефон — карта станет вдвое больше',zoomHint:'Буквы стоят близко — разведи два пальца, чтобы увеличить карту.',
   pipStart:'Капитан, прокладываем маршрут! Ищи букву по подсказке.',pipOk:l=>`Есть «${l}»! Отмечаю точку на маршруте.`,pipBad:'Не та точка. Прочитай подсказку ещё раз.',pipHint:'Сверимся с картой — нужная буква мигает.',
-  practiceTag:'Повторение · собрано по правилам',sectionFinal:'Итог раздела: GeoWords',
+  practiceTag:'Повторение · собрано по правилам',sectionFinal:'Итог раздела: GeoWords',sectionN:n=>'Раздел '+n,draft:'черновик уроков',
+  whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
+  allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
   tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
@@ -52,7 +54,9 @@ const T={
   settings:'Settings',lang:'Words',reset:'Reset progress',unlock:'Unlock every step (testing)',
   rotate:'↻ Turn your phone — the map gets twice as big',zoomHint:'The letters are close together — spread two fingers to zoom in.',
   pipStart:'Captain, let’s plot our route! Read the clue and find the letter.',pipOk:l=>`Got “${l}”! Marking it on our route.`,pipBad:'Not that spot. Read the clue again.',pipHint:'Let’s check the map — the right letter is blinking.',
-  practiceTag:'Review · built by the rules',sectionFinal:'Section final: GeoWords',
+  practiceTag:'Review · built by the rules',sectionFinal:'Section final: GeoWords',sectionN:n=>'Section '+n,draft:'draft lessons',
+  whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
+  allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
   units:[['Cardinal directions','North, south, west, east, the Equator'],['Continents','7 continents'],['Oceans','5 oceans'],['Neighbours and records','Which oceans wash which continent, records, hemispheres']],
   tester:'Test build: progress is stored only on this device.',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
 };
@@ -60,8 +64,10 @@ const T={
 const ACC_RU={north:'север',south:'юг',east:'восток',west:'запад',equator:'экватор','prime-meridian':'нулевой меридиан',
   n:'Северное полушарие',s:'Южное полушарие',e:'Восточное полушарие',w:'Западное полушарие',
   asia:'Азию',africa:'Африку','north-america':'Северную Америку','south-america':'Южную Америку',antarctica:'Антарктиду',europe:'Европу',australia:'Австралию',
-  'pacific-ocean':'Тихий океан','atlantic-ocean':'Атлантический океан','indian-ocean':'Индийский океан','arctic-ocean':'Северный Ледовитый океан','southern-ocean':'Южный океан'};
-const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian',n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere'};
+  'pacific-ocean':'Тихий океан','atlantic-ocean':'Атлантический океан','indian-ocean':'Индийский океан','arctic-ocean':'Северный Ледовитый океан','southern-ocean':'Южный океан',
+  nile:'Нил',amazon:'Амазонку',mississippi:'Миссисипи',yangtze:'Янцзы','huang-he':'Хуанхэ',ganges:'Ганг',indus:'Инд',danube:'Дунай',volga:'Волгу'};
+const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian',n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere',
+  nile:'the Nile',amazon:'the Amazon',mississippi:'the Mississippi',yangtze:'the Yangtze','huang-he':'the Huang He',ganges:'the Ganges',indus:'the Indus',danube:'the Danube',volga:'the Volga'};
 
 /* ---------- state ---------- */
 const blank={lang:null,done:{},xp:0,streak:0,lastDay:'',unlockAll:false,introSeen:false,learned:[],recent:[]};
@@ -91,12 +97,29 @@ async function loadData(){
     lines:{equator:{id:'equator',name:line('equator').name,layer:'world-line-equator',fact:sentence('north',{ru:'Экватор',en:'Equator'}),y:place('equator').y},
            'prime-meridian':{id:'prime-meridian',name:line('prime-meridian').name,layer:'world-line-prime-meridian',fact:sentence('east',{ru:'Нулевой меридиан',en:'Prime Meridian'}),x:place('prime-meridian').x}},
     hemis:map.hemispheres};
+  // Section 2 «Rivers of the world»: approved facts, records, dictionary, GeoWords, river geometry; mouths from the block review relations.
+  const [f2,r2,g2,d2,rmap,rev,f4]=await Promise.all(['data/content/section-2-facts.json','data/content/section-2-records.json','data/geowords/section-2.json',
+    'data/dictionary/section-2.json','data/maps/world-rivers.json','data/review/block-1.json','data/content/section-4-facts.json'].map(get));
+  const rel=(id,r)=>{const x=rev.relations.find(q=>q.subject===id&&q.relation===r&&q.use==='yes');return x&&x.object};
+  const rivers={};for(const it of rmap.rivers){const f=f2.items.find(i=>i.id===it.id);
+    rivers[it.id]={id:it.id,kind:'river',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,path:it.path,layer:it.layer.png.split('/').pop().replace('.webp',''),
+      fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,continent:rel(it.id,'onContinent'),mouth:rel(it.id,'flowsInto')}}
+  const waterName=id=>(objs[id]&&objs[id].name)||(f4.items.find(i=>i.id===id)||{}).name;
+  D.s2={facts:f2,records:r2.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g2,dict:d2,rivers,waterName,intro:f2.intro};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
-const nm=id=>(O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
+const nm=id=>(D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
 const acc=id=>L()==='ru'?ACC_RU[id]:(ACC_EN[id]||nm(id));
 const CONT=['asia','africa','north-america','south-america','antarctica','europe','australia'];
+const RIVERS=['nile','amazon','mississippi','yangtze','huang-he','ganges','indus','danube','volga'];
+const R=id=>D.s2.rivers[id];
+const riverPath=r=>r.path.map(l=>'M'+l.map(q=>q[0]+' '+q[1]).join('L')).join('');
+// distance in screen px from a tap (in % of the map) to the drawn river
+function riverPx(r,x,y,W,H){let best=Infinity;for(const l of r.path)for(let i=1;i<l.length;i++){const ax=l[i-1][0]*W/100,ay=l[i-1][1]*H/100,bx=l[i][0]*W/100,by=l[i][1]*H/100,px=x*W/100,py=y*H/100;
+  const dx=bx-ax,dy=by-ay,q=dx*dx+dy*dy;let u=q?((px-ax)*dx+(py-ay)*dy)/q:0;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(px-ax-u*dx,py-ay-u*dy))}return best}
+const nearestRiver=(x,y,sz,max)=>{let hit=null,d=max;for(const id of RIVERS){const v=riverPx(R(id),x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit};
+const riverLayers=()=>[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer)];
 const OCEANS=['pacific-ocean','atlantic-ocean','indian-ocean','arctic-ocean','southern-ocean'];
 
 /* ---------- course: units, lessons (order of new objects), finals ---------- */
@@ -126,13 +149,43 @@ const COURSE=[
    {id:'u4-l2',title:{ru:'Рекорды',en:'Records'},plan:recordLesson},
    {id:'u4-l3',title:{ru:'Экватор и полушария',en:'The Equator and hemispheres'},plan:mixLesson}]}
 ];
+// Section 2 «Rivers of the world» — lesson plan from the roadmap (draft for Svetlana's approval, 24.10.2026).
+const rv=k=>id=>({k,id});
+const some=(ids,n)=>shuffle([...ids]).slice(0,n);
+const R2={
+ 'u1-l1':()=>[rv('introRiver')('nile'),rv('introRiver')('amazon'),rv('findRiver')('nile'),rv('whatRiver')('amazon'),rv('riverCont')('nile'),
+   rv('findRiver')('amazon'),rv('riverCont')('amazon'),rv('whatRiver')('nile'),{k:'findObj',id:'africa'},{k:'findObj',id:'south-america'}],
+ 'u1-l2':()=>[rv('introRiver')('mississippi'),rv('findRiver')('mississippi'),rv('whatRiver')('mississippi'),rv('riverCont')('mississippi'),
+   rv('riverMouth')('nile'),rv('riverMouth')('amazon'),rv('riverMouth')('mississippi'),rv('findRiver')('nile'),rv('findRiver')('amazon'),rv('whatRiver')(some(['nile','amazon','mississippi'],1)[0])],
+ 'u2-l1':()=>[rv('introRiver')('yangtze'),rv('introRiver')('huang-he'),rv('findRiver')('yangtze'),rv('whatRiver')('huang-he'),rv('riverMouth')('yangtze'),
+   rv('findRiver')('huang-he'),rv('riverMouth')('huang-he'),rv('whatRiver')('yangtze'),...some(['nile','amazon','mississippi'],2).map(rv('findRiver'))],
+ 'u2-l2':()=>[rv('introRiver')('ganges'),rv('introRiver')('indus'),rv('findRiver')('ganges'),rv('whatRiver')('indus'),rv('riverMouth')('ganges'),
+   rv('findRiver')('indus'),rv('riverMouth')('indus'),rv('whatRiver')('ganges'),...some(['yangtze','huang-he'],2).map(rv('findRiver'))],
+ 'u2-l3':()=>[{k:'allAsia'},...shuffle(['yangtze','huang-he','ganges','indus'].map(rv('findRiver'))),...some(['yangtze','huang-he','ganges','indus'],2).map(rv('riverMouth')),
+   ...some(['yangtze','huang-he','ganges','indus'],2).map(rv('whatRiver'))],
+ 'u3-l1':()=>[rv('introRiver')('danube'),rv('introRiver')('volga'),rv('findRiver')('danube'),rv('whatRiver')('volga'),rv('riverCont')('danube'),
+   rv('findRiver')('volga'),rv('riverMouth')('danube'),rv('riverMouth')('volga'),...some(['nile','amazon','mississippi','yangtze','huang-he','ganges','indus'],2).map(rv('findRiver'))],
+ 'u3-l2':()=>D.s2.records.flatMap(r=>[{k:'introRiverRec',rec:r.id},{k:'findRiver',id:r.object,rec:r.id}]),
+ 'u3-l3':()=>shuffle([...some(RIVERS,4).map(rv('findRiver')),...some(RIVERS,3).map(rv('whatRiver')),rv('riverCont')(some(RIVERS,1)[0]),...some(RIVERS,2).map(rv('riverMouth'))])
+};
+const COURSE2=[
+ {n:1,lessons:[{id:'s2-u1-l1',title:{ru:'Нил и Амазонка',en:'The Nile and the Amazon'},plan:R2['u1-l1']},{id:'s2-u1-l2',title:{ru:'Миссисипи и устья рек',en:'The Mississippi and river mouths'},plan:R2['u1-l2']}]},
+ {n:2,lessons:[{id:'s2-u2-l1',title:{ru:'Янцзы и Хуанхэ',en:'The Yangtze and the Huang He'},plan:R2['u2-l1']},{id:'s2-u2-l2',title:{ru:'Ганг и Инд',en:'The Ganges and the Indus'},plan:R2['u2-l2']},
+   {id:'s2-u2-l3',title:{ru:'Все реки Азии',en:'All the rivers of Asia'},plan:R2['u2-l3']}]},
+ {n:3,lessons:[{id:'s2-u3-l1',title:{ru:'Дунай и Волга',en:'The Danube and the Volga'},plan:R2['u3-l1']},{id:'s2-u3-l2',title:{ru:'Рекорды рек',en:'River records'},plan:R2['u3-l2']},
+   {id:'s2-u3-l3',title:{ru:'Все реки раздела',en:'All the rivers of the section'},plan:R2['u3-l3']}]}
+];
 // Units with content approved by the author. Units 2-4 are built from approved data but their lessons are not approved yet.
 const READY_UNITS=[1];
 const STEPS=[];
 COURSE.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`u${u.n}-final`,kind:'final',unit:u.n})});
 STEPS.push({id:'s1-final',kind:'section',unit:'S'});
+COURSE2.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:2,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`s2-u${u.n}-final`,sec:2,kind:'final',unit:u.n})});
+STEPS.push({id:'s2-final',sec:2,kind:'section',unit:'S'});
+// Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
+const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
-const ready=s=>READY_UNITS.includes(s.unit);
+const ready=s=>s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll)return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
 const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='final'?t().final:t().sectionFinal;
@@ -185,6 +238,7 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   return {btn,
     addLayer(id){const i=document.createElement('img');i.src=IMG.layer(id);i.alt='';i.className='hl';world.insertBefore(i,shapes);return i},
     shape(o,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',areaPath(o));p.setAttribute('class',cls||'hl-shape');p.dataset.id=o.id;shapes.appendChild(p);return p},
+    line(d,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('class',cls||'hl-river');shapes.appendChild(p);return p},
     clearShapes(){shapes.innerHTML=''},
     dot(sx,sy,ok){const d=document.createElement('div');d.className='tapdot '+(ok?'ok':'bad');d.style.left=sx+'px';d.style.top=sy+'px';mapEl.appendChild(d);setTimeout(()=>d.remove(),1300)},
     route(id){route.push(id);place()}};
@@ -205,7 +259,7 @@ function welcome(){
 }
 
 function home(){
-  const x=t(),doneCount=STEPS.filter(s=>S.done[s.id]).length;
+  const x=t(),S1=STEPS.filter(s=>!s.sec),doneCount=S1.filter(s=>S.done[s.id]).length;
   const cur=STEPS.find(s=>!S.done[s.id]&&unlocked(s.id));
   const zig=[50,70,34,62,40,66];let k=0;
   const stopHtml=s=>{const done=!!S.done[s.id],open=unlocked(s.id),isCur=cur&&cur.id===s.id,pos=zig[k++%zig.length];
@@ -215,12 +269,15 @@ function home(){
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
   const body=COURSE.map(u=>`<div class="unit-head"><span class="eyebrow">${x.unit} ${u.n}${READY_UNITS.includes(u.n)?'':' · '+x.soon}</span><h3>${x.units[u.n-1][0]}</h3><p>${x.units[u.n-1][1]}</p></div>`+
-     STEPS.filter(s=>s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section} · ${x.soon}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'));
+     STEPS.filter(s=>!s.sec&&s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section} · ${x.soon}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'))+
+     `<div class="section-card s2"><img src="${IMG.stamp2}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(2)} · ${x.draft}</span><h2>${L()==='ru'?'Реки мира':'Rivers of the world'}</h2></div></div>`+
+     COURSE2.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(2)} · ${x.unit} ${u.n}</span><h3>${esc(D.s2.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===2&&s.unit===u.n).map(stopHtml).join('')).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(2)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s2-final'));
   h(`<section class="screen home">
    <div class="topbar"><span class="chip"><img src="${IMG.streak}" alt="">${S.streak}</span><span class="chip"><span class="star">★</span>${S.xp}</span><span class="grow"></span>
     <button type="button" class="iconbtn" id="gear" aria-label="${x.settings}">⚙</button></div>
    <div class="section-card"><img src="${IMG.stamp}" alt=""><div class="t"><span class="eyebrow">${x.section}</span><h2>${x.sectionName}</h2>
-     <div class="bar"><i style="width:${Math.round(doneCount/STEPS.length*100)}%"></i></div></div></div>
+     <div class="bar"><i style="width:${Math.round(doneCount/S1.length*100)}%"></i></div></div></div>
    <div class="path"><svg class="trail" preserveAspectRatio="none"></svg>${body}</div>
    <p class="rotate-hint">${x.tester}</p></section>`);
   drawTrail();
@@ -235,14 +292,14 @@ function drawTrail(){const path=app.querySelector('.path');if(!path)return;const
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const head=st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
+  const head=st.sec===2?(st.unit==='S'?x.sectionN(2):`${x.sectionN(2)} · ${x.unit} ${st.unit} · ${D.s2.dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:x.finalDesc;
   let buttons;
-  if(st.kind!=='lesson'&&S.done[id])buttons=`<button type="button" class="btn" data-a="practice">${x.practice}</button><div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn ghost" data-a="go">${x.finalAgain}</button></div>`;
+  if(st.kind!=='lesson'&&S.done[id]&&!st.sec)buttons=`<button type="button" class="btn" data-a="practice">${x.practice}</button><div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn ghost" data-a="go">${x.finalAgain}</button></div>`;
   else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?x.again:x.start}</button></div>`;
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
-  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else lesson(st)};
+  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else if(!S.introSeen2&&id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)};
   const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{const p=practicePuzzle(Math.max(...READY_UNITS.filter(u=>u<=(st.unit==='S'?4:st.unit))));s.remove();
     if(p)geowords(p);else{const m=sheet(`<h3>${x.practice}</h3><p>${x.practiceNone}</p><button type="button" class="btn sand">OK</button>`);m.querySelector('button').onclick=()=>m.remove()}};
 }
@@ -268,6 +325,14 @@ function unitIntro(next){
   app.querySelector('.fb .btn').onclick=()=>{S.introSeen=true;save();next()};
 }
 
+function riversIntro(next){
+  const x=t(),lang=L(),I=D.s2.intro;
+  h(`<section class="screen lesson"><div class="task"><span class="kind">${x.sectionN(2)} · ${x.riversIntro}</span>
+   <img src="${A+I.image[lang].replace(/^\.\//,'')}" alt="" style="width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.4)">
+   <div class="card"><div class="intro-pip"><img src="${IMG.map}" alt=""><p>${I.terms.map(q=>`<b>${esc(q[lang])}</b>`).join(' · ')}</p></div></div></div>
+   <div class="fb idle"><button type="button" class="btn">${x.start}</button></div></section>`);
+  app.querySelector('.fb .btn').onclick=()=>{S.introSeen2=true;save();next()};
+}
 function nextBtns(id){const n=nextStep(id),x=t();
   return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
 function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').onclick=home;
@@ -314,6 +379,37 @@ function lesson(step){
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:[...learnedLayers(),'world-line-equator','world-line-prime-meridian','world-line-antimeridian'],onTap:(px,py,sx,sy)=>{if(locked)return;locked=true;
         const eq=D.lines.equator.y,pm=D.lines['prime-meridian'].x,am=96.67;const ok={n:py<eq,s:py>eq,e:px>pm&&px<am,w:px<pm||px>am}[q.h];
         m.dot(sx,sy,ok);m.addLayer('world-hemisphere-'+q.h);answered(q,ok);feedback(ok,ok?x.right:x.hemiWrong,ok?D.hemis[q.h].name[lang]:'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+    // ---- section 2: rivers (all nine rivers are drawn; the asked one is highlighted along its course) ----
+    if(q.k==='introRiver'||q.k==='introRiverRec'){const rec=q.rec&&D.s2.records.find(r=>r.id===q.rec);const r=R(rec?rec.object:q.id);
+      frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(r.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:r.fact(lang))}</p>${rec?'':nuanceBtn(r)}</div><div class="mapslot"></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');if(!rec)wireNuance(r);
+      return gotIt(()=>learn(r.id))}
+    if(q.k==='findRiver'){const r=R(q.id);const rec=q.rec&&D.s2.records.find(x=>x.id===q.rec);frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+      let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
+        const hit=nearestRiver(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.line(riverPath(r),ok?'hl-river good':'hl-river pulse');
+        if(hit&&!ok)m.line(riverPath(R(hit)),'hl-river bad');answered(q,ok);
+        feedback(ok,ok?x.right:(hit?x.wrongIs(R(hit).name[lang]):x.miss),ok?(rec?'':r.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+    if(q.k==='whatRiver'){const r=R(q.id);const opts=pick(RIVERS,q.id,4);
+      frame(x.what,`<p class="q">${x.whatRiver}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(R(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');
+      return choices(q,q.id,()=>r.name[lang],()=>r.fact(lang))}
+    if(q.k==='riverCont'){const r=R(q.id);const opts=pick(CONT,r.continent,4);
+      frame(x.onCont,`<p class="q">${x.riverCont(esc(r.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(O(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');
+      return choices(q,r.continent,()=>O(r.continent).name[lang],()=>'')}
+    if(q.k==='riverMouth'){const r=R(q.id);const all=[...new Set(RIVERS.map(id=>R(id).mouth))];const opts=pick(all,r.mouth,4);
+      frame(x.mouth,`<p class="q">${x.riverMouth(esc(r.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(D.s2.waterName(c)[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');
+      return choices(q,r.mouth,()=>D.s2.waterName(r.mouth)[lang],()=>'')}
+    if(q.k==='allAsia'){const want=RIVERS.filter(id=>R(id).continent==='asia');const sel=new Set();
+      frame(x.find,`<p class="q">${x.allAsia}</p><div class="mapslot"></div><p class="rotate-hint">${x.allHint}</p>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),onTap:(px,py,sx,sy,sz)=>{const hit=nearestRiver(px,py,sz,26);if(!hit)return;
+        if(sel.has(hit))sel.delete(hit);else sel.add(hit);redraw()}});
+      function redraw(){m.clearShapes();sel.forEach(id=>m.line(riverPath(R(id)),'hl-river sel'));const b=app.querySelector('.fb .btn');if(b)b.disabled=!sel.size}
+      const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;redraw();
+      fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
+        m.clearShapes();want.forEach(id=>m.line(riverPath(R(id)),'hl-river good'));answered(q,ok);
+        feedback(ok,ok?x.allOk:x.allBad,want.map(id=>R(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
     if(q.k==='findObj'){const o=O(q.id);const r=q.rec&&D.records.find(r=>r.id===q.rec);frame(r?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:learnedLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=[...CONT,...OCEANS].map(O).find(c=>inside(c,px,py));
@@ -347,12 +443,12 @@ function lesson(step){
 }
 
 /* ---------- GeoWords: approved finals and review puzzles built by the approved rules ---------- */
-function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-final';
-  const P=D.geo.puzzles.find(p=>p.role===role&&p.language===L()&&p.approval?.status==='approved'&&(role==='section-final'||p.unit===st.unit));
-  const unitIdx=st.kind==='section'?D.dict.units.length-1:st.unit-1;
-  const w=D.dict.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
+function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-final';const G=st.sec===2?D.s2.geo:D.geo,DI=st.sec===2?D.s2.dict:D.dict;
+  const P=G.puzzles.find(p=>p.role===role&&p.language===L()&&p.approval?.status==='approved'&&(role==='section-final'||p.unit===st.unit));
+  const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
+  const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,stamp:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Reveal order (docs/app-mechanics.md, rule 5): neighbours never one after another; first letter late; last letters not early.
 function revealOrder(n){const long=n>=7,endN=n<=8?2:3;
   for(let tries=0;tries<20000;tries++){const o=shuffle([...Array(n)].map((_,i)=>i+1));let ok=true;
@@ -409,7 +505,7 @@ function geowords(P){
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=(P.kind==='practice'?10:20)+Math.max(0,6-wrong);
     if(P.stepId)S.done[P.stepId]=true;S.xp+=xp;bumpStreak();save();
     const section=P.kind==='section';
-    h(`<section class="screen done">${section?`<img class="medal" src="${IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
+    h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
      <h2>${P.kind==='practice'?x.practiceDone:section?x.sectionDone:x.unitDone}</h2>
      <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
