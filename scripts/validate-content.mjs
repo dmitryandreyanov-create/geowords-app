@@ -45,6 +45,11 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       if (!it[k]?.[lang]?.trim()) errors.push(`${file}: ${id} missing ${k}.${lang}`);
     if (it.disputed && !(it.caveat?.en?.trim() && it.caveat?.ru?.trim())) errors.push(`${file}: ${id} is disputed but has no EN/RU caveat`);
     if (typeof it.disputed !== "boolean") errors.push(`${file}: ${id} disputed must be true or false`);
+    // Record categories (Svetlana, 2026-10-24): changing records carry a year and are never used in GeoWords clues.
+    if ("category" in it) {
+      if (!["stable", "conditional", "changing"].includes(it.category)) errors.push(`${file}: ${id} unknown record category "${it.category}"`);
+      if (it.category === "changing" && !(it.asOf && it.clueUse === false)) errors.push(`${file}: ${id} is a changing record: needs asOf and clueUse: false`);
+    }
     const a = it.approval;
     if (a && !STATUSES.has(a.status)) errors.push(`${file}: ${id} unknown approval status "${a.status}"`);
     if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
