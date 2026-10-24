@@ -9,6 +9,8 @@ const src = path.join(process.cwd(), "data/dictionary/section-1.json");
 const base = JSON.parse(fs.readFileSync(src, "utf8"));
 const run = data => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "gw-dictionary-"));
+  // the other release packages stay as they are; only section 1 is broken
+  for (const f of fs.readdirSync(path.dirname(src))) fs.copyFileSync(path.join(path.dirname(src), f), path.join(dir, f));
   fs.writeFileSync(path.join(dir, "section-1.json"), JSON.stringify(data));
   const r = spawnSync(process.execPath, ["scripts/validate-dictionary.mjs"], { env: { ...process.env, DICTIONARY_DIR: dir }, encoding: "utf8" });
   fs.rmSync(dir, { recursive: true, force: true });
