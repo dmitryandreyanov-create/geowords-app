@@ -841,10 +841,11 @@
       "path": "assets/graphics/intro-continents-oceans.png",
       "width": 1600,
       "height": 1000,
-      "sha256": "0294b785f5c62ce794e710c62d4ac2b0678ac6da37aaf01229e1e13ced58024b",
+      "sha256": "5f34ceeb0206205f9f070ac8a9fc985613846a1dc5466f56e7cab06ce147453a",
       "visualReview": "awaiting_phone_review",
       "transparent": false,
-      "editorialReview": "pending"
+      "editorialReview": "pending",
+      "source": "assets/graphics/intro-continents-oceans.svg (approved world base, continent layers and Equator/Prime Meridian layers from main; rendered to PNG)"
     },
     {
       "file": "intro-seas.png",
