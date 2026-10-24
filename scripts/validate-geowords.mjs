@@ -9,6 +9,7 @@ const dir = process.env.GEOWORDS_DIR || path.join(process.cwd(), "data/geowords"
 const mapsDir = process.env.MAPS_DIR || path.join(process.cwd(), "data/maps");
 // Release packages: file -> the exact puzzle ids it must contain (each with a complete approval).
 const RELEASE = {
+  "section-5.json": ["section-5-unit-1-en", "section-5-unit-1-ru", "section-5-unit-2-en", "section-5-unit-2-ru", "section-5-unit-3-en", "section-5-unit-3-ru", "section-5-final-en", "section-5-final-ru"],
   "section-4.json": ["section-4-unit-1-en", "section-4-unit-1-ru", "section-4-unit-2-en", "section-4-unit-2-ru", "section-4-unit-3-en", "section-4-unit-3-ru", "section-4-final-en", "section-4-final-ru"],
   "section-3.json": ["section-3-unit-1-en", "section-3-unit-1-ru", "section-3-unit-2-en", "section-3-unit-2-ru", "section-3-unit-3-en", "section-3-unit-3-ru", "section-3-final-en", "section-3-final-ru"],
   "section-2.json": ["section-2-unit-1-en", "section-2-unit-1-ru", "section-2-unit-2-en", "section-2-unit-2-ru", "section-2-unit-3-en", "section-2-unit-3-ru", "section-2-final-en", "section-2-final-ru"],
@@ -40,6 +41,9 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     const id = p.id, word = [...(p.answer || "")], n = word.length, err = m => errors.push(`${file}: ${id} ${m}`);
     const markers = Object.fromEntries((p.markers || []).map(m => [m.id, m]));
     if (Object.keys(markers).length !== n) err(`has ${Object.keys(markers).length} markers for ${n} letters`);
+    for (const m of p.markers || []) if (m.inset && !(p.showInsets || []).includes(m.inset)) err(`marker ${m.id} is in inset ${m.inset}, which showInsets does not list`);
+    for (const pair of [["suez-canal", "bosporus"], ["suez-canal", "dardanelles"], ["strait-of-hormuz", "gulf-of-oman"], ["drake-passage", "strait-of-magellan"]])
+      if (pair.every(k => markers[k])) err(`has ${pair.join(" and ")} together (never in one puzzle)`);
     for (const m of p.markers || []) if (!(m.x >= 0 && m.x <= 100 && m.y >= 0 && m.y <= 100)) err(`marker ${m.id} is off the map`);
     const order = (p.clues || []).map(c => c.position);
     if ([...order].sort((a, b) => a - b).join() !== word.map((_, i) => i + 1).join()) err("clue positions must use 1..n once each");

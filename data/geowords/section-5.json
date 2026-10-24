@@ -1,0 +1,1318 @@
+{
+ "section": "straits-and-canals",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the 14 straits and canals of data/maps/world-straits.json (at their label point: tap areas are 4.4%-wide circles, only the label point is on the strait), plus continents, oceans and mountains already learned; unit 3 names straits by approved records",
+  "insets": "Bering Strait, Bosporus and Dardanelles are answered inside their magnifier insets: such a marker has `inset` (inset id in world-straits.json) and x/y in % of the inset image. `showInsets` lists the magnifiers this puzzle shows; other magnifiers are hidden in the puzzle",
+  "neverTogether": "Suez Canal with Bosporus/Dardanelles (the Suez circle sits under the Turkish-straits magnifier); Strait of Hormuz with Gulf of Oman; Drake Passage with Strait of Magellan (Svetlana, 2026-10-23)",
+  "spacing": "as sections 2-4: circles exactly on the object, no callout arrows",
+  "needsZoom": "true for every puzzle here: straits are tiny points on a phone map",
+  "approval": "same as section-1.json"
+ },
+ "puzzles": [
+  {
+   "id": "section-5-unit-1-en",
+   "section": "straits-and-canals",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "LOCKKEEPER",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "L"
+    },
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "O"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "C"
+    },
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "K"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 3.2,
+     "y": 4.5,
+     "letter": "K"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "E"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "E"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "P"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 96.8,
+     "y": 20.46,
+     "letter": "E"
+    },
+    {
+     "id": "antarctica",
+     "x": 59.55,
+     "y": 97.3,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "english-channel",
+     "position": 6,
+     "text": "Find the sixth letter in the English Channel."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 2,
+     "text": "Find the second letter in the Himalayas."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 9,
+     "text": "Find the ninth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "andes",
+     "position": 7,
+     "text": "Find the seventh letter in the Andes."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 10,
+     "text": "Find the tenth letter in Antarctica."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Find the third letter in Australia."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 8,
+     "text": "Find the eighth letter in the Strait of Gibraltar."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 1,
+     "text": "Find the first letter in the Panama Canal."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 4,
+     "text": "Find the fourth letter in the Suez Canal."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "0f26c3d766b6272e"
+   }
+  },
+  {
+   "id": "section-5-unit-1-ru",
+   "section": "straits-and-canals",
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ШЛЮЗОВЩИК",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "himalayas",
+     "x": 72.82,
+     "y": 40.92,
+     "letter": "Ш"
+    },
+    {
+     "id": "australia",
+     "x": 88,
+     "y": 69.47,
+     "letter": "Л"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "Ю"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 3.2,
+     "y": 4.5,
+     "letter": "З"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "О"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "В"
+    },
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "Щ"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.45,
+     "y": 97.3,
+     "letter": "И"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 3.2,
+     "y": 83.83,
+     "letter": "К"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "panama-canal",
+     "position": 3,
+     "text": "Найди третью букву в Панамском канале."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 6,
+     "text": "Найди шестую букву в проливе Ла-Манш."
+    },
+    {
+     "markerId": "australia",
+     "position": 2,
+     "text": "Найди вторую букву в Австралии."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 9,
+     "text": "Найди девятую букву в Тихом океане."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 7,
+     "text": "Найди седьмую букву в Суэцком канале."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 5,
+     "text": "Найди пятую букву в Гибралтарском проливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 8,
+     "text": "Найди восьмую букву в Антарктиде."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 1,
+     "text": "Найди первую букву в Гималаях."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "a0e5adafec76f6c1"
+   }
+  },
+  {
+   "id": "section-5-unit-2-en",
+   "section": "straits-and-canals",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CHOKEPOINT",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 5.4,
+   "markers": [
+    {
+     "id": "bosporus",
+     "inset": "turkish-straits",
+     "x": 73.04,
+     "y": 21.25,
+     "letter": "C"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.64,
+     "y": 97.3,
+     "letter": "H"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "O"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "K"
+    },
+    {
+     "id": "andes",
+     "x": 27.36,
+     "y": 85.81,
+     "letter": "E"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "P"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "O"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "I"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "N"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "T"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Find the third letter in Australia."
+    },
+    {
+     "markerId": "andes",
+     "position": 5,
+     "text": "Find the fifth letter in the Andes."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 2,
+     "text": "Find the second letter in Antarctica."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 8,
+     "text": "Find the eighth letter in the English Channel."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 10,
+     "text": "Find the tenth letter in the Strait of Hormuz."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 4,
+     "text": "Find the fourth letter in the Mozambique Channel."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 6,
+     "text": "Find the sixth letter in the Strait of Malacca."
+    },
+    {
+     "markerId": "bosporus",
+     "position": 1,
+     "text": "Find the first letter in the Bosporus."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 7,
+     "text": "Find the seventh letter in the Bab-el-Mandeb."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 9,
+     "text": "Find the ninth letter in the Panama Canal."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "8f71670de5309ecb"
+   }
+  },
+  {
+   "id": "section-5-unit-2-ru",
+   "section": "straits-and-canals",
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГОЛОВОНОГИЕ",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "turkish-straits"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 5.8,
+   "markers": [
+    {
+     "id": "bosporus",
+     "inset": "turkish-straits",
+     "x": 73.04,
+     "y": 21.25,
+     "letter": "Г"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "О"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "Л"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "О"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.64,
+     "y": 97.3,
+     "letter": "В"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "О"
+    },
+    {
+     "id": "gulf-of-oman",
+     "x": 63.44,
+     "y": 43,
+     "letter": "Н"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "О"
+    },
+    {
+     "id": "pacific-ocean",
+     "x": 13.27,
+     "y": 87.29,
+     "letter": "Г"
+    },
+    {
+     "id": "cordillera",
+     "x": 3.2,
+     "y": 11.72,
+     "letter": "И"
+    },
+    {
+     "id": "dardanelles",
+     "inset": "turkish-straits",
+     "x": 16.3,
+     "y": 69.61,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "strait-of-malacca",
+     "position": 2,
+     "text": "Найди вторую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 5,
+     "text": "Найди пятую букву в Антарктиде."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 8,
+     "text": "Найди восьмую букву в Мозамбикском проливе."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 6,
+     "text": "Найди шестую букву в Гибралтарском проливе."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 4,
+     "text": "Найди четвёртую букву в Баб-эль-Мандебском проливе."
+    },
+    {
+     "markerId": "dardanelles",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Дарданеллах."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Найди третью букву в Австралии."
+    },
+    {
+     "markerId": "cordillera",
+     "position": 10,
+     "text": "Найди десятую букву в Кордильерах."
+    },
+    {
+     "markerId": "gulf-of-oman",
+     "position": 7,
+     "text": "Найди седьмую букву в Оманском заливе."
+    },
+    {
+     "markerId": "pacific-ocean",
+     "position": 9,
+     "text": "Найди девятую букву в Тихом океане."
+    },
+    {
+     "markerId": "bosporus",
+     "position": 1,
+     "text": "Найди первую букву в Босфоре."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "7f1f27fda4521c53"
+   }
+  },
+  {
+   "id": "section-5-unit-3-en",
+   "section": "straits-and-canals",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CHRONOMETER",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 6.8,
+   "markers": [
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "C"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "H"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "R"
+    },
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "O"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "N"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 76.18,
+     "y": 4.5,
+     "letter": "O"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "M"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "E"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "T"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "E"
+    },
+    {
+     "id": "himalayas",
+     "x": 70,
+     "y": 40.26,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "bering-strait",
+     "position": 8,
+     "text": "Find the eighth letter in the narrowest gap between Asia and North America."
+    },
+    {
+     "markerId": "australia",
+     "position": 3,
+     "text": "Find the third letter in Australia."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 10,
+     "text": "Find the tenth letter in the Panama Canal."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 7,
+     "text": "Find the seventh letter in the strait that connects the Indian and Pacific Oceans."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 11,
+     "text": "Find the eleventh letter in the range with the world's highest peak."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 9,
+     "text": "Find the ninth letter in the strait that connects the Persian Gulf with the Gulf of Oman."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 2,
+     "text": "Find the second letter in the Mozambique Channel."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 4,
+     "text": "Find the fourth letter in the Suez Canal."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 1,
+     "text": "Find the first letter in the Drake Passage."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 5,
+     "text": "Find the fifth letter in the narrowest gap between Europe and Africa."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "e089e683911cc955"
+   }
+  },
+  {
+   "id": "section-5-unit-3-ru",
+   "section": "straits-and-canals",
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ХРОНОМЕТР",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "strait-of-magellan",
+     "x": 27.03,
+     "y": 85.14,
+     "letter": "Х"
+    },
+    {
+     "id": "antarctica",
+     "x": 63.55,
+     "y": 97.3,
+     "letter": "Р"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "О"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "Н"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "О"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "М"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "Е"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "Т"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "Р"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 3,
+     "text": "Найди третью букву в проливе, который соединяет Персидский и Оманский заливы."
+    },
+    {
+     "markerId": "australia",
+     "position": 5,
+     "text": "Найди пятую букву в Австралии."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 2,
+     "text": "Найди вторую букву в Антарктиде."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 4,
+     "text": "Найди четвёртую букву в проливе, который соединяет Индийский и Тихий океаны."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 7,
+     "text": "Найди седьмую букву в Баб-эль-Мандебском проливе."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 9,
+     "text": "Найди девятую букву в проливе Ла-Манш."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 6,
+     "text": "Найди шестую букву в самом узком месте между Европой и Африкой."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 8,
+     "text": "Найди восьмую букву в самом узком месте между Азией и Северной Америкой."
+    },
+    {
+     "markerId": "strait-of-magellan",
+     "position": 1,
+     "text": "Найди первую букву в Магеллановом проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "e48e2c11a71e26ff"
+   }
+  },
+  {
+   "id": "section-5-final-en",
+   "section": "straits-and-canals",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "CIRCUMNAVIGATION",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "C"
+    },
+    {
+     "id": "australia",
+     "x": 87.18,
+     "y": 73.27,
+     "letter": "I"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "R"
+    },
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "C"
+    },
+    {
+     "id": "drake-passage",
+     "x": 28.89,
+     "y": 89.19,
+     "letter": "U"
+    },
+    {
+     "id": "himalayas",
+     "x": 70,
+     "y": 40.26,
+     "letter": "M"
+    },
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "N"
+    },
+    {
+     "id": "antarctica",
+     "x": 70.64,
+     "y": 97.3,
+     "letter": "A"
+    },
+    {
+     "id": "africa",
+     "x": 50.45,
+     "y": 55.12,
+     "letter": "V"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "I"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "G"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 76.18,
+     "y": 4.5,
+     "letter": "A"
+    },
+    {
+     "id": "andes",
+     "x": 27.64,
+     "y": 69.64,
+     "letter": "T"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "I"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "O"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "australia",
+     "position": 2,
+     "text": "Find the second letter in Australia."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 4,
+     "text": "Find the fourth letter in the Suez Canal."
+    },
+    {
+     "markerId": "andes",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Andes."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 8,
+     "text": "Find the eighth letter in Antarctica."
+    },
+    {
+     "markerId": "drake-passage",
+     "position": 5,
+     "text": "Find the fifth letter in the Drake Passage."
+    },
+    {
+     "markerId": "africa",
+     "position": 9,
+     "text": "Find the ninth letter in Africa."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 7,
+     "text": "Find the seventh letter in the Bering Strait."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 12,
+     "text": "Find the twelfth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "mozambique-channel",
+     "position": 3,
+     "text": "Find the third letter in the Mozambique Channel."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 10,
+     "text": "Find the tenth letter in the English Channel."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 14,
+     "text": "Find the fourteenth letter in the Panama Canal."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 11,
+     "text": "Find the eleventh letter in the Strait of Malacca."
+    },
+    {
+     "markerId": "himalayas",
+     "position": 6,
+     "text": "Find the sixth letter in the Himalayas."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 15,
+     "text": "Find the fifteenth letter in the Bab-el-Mandeb."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 1,
+     "text": "Find the first letter in the Strait of Gibraltar."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 16,
+     "text": "Find the sixteenth letter in the Strait of Hormuz."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "5cbc220a789eae48"
+   }
+  },
+  {
+   "id": "section-5-final-ru",
+   "section": "straits-and-canals",
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "КРУГОСВЕТКА",
+   "map": "./assets/world-base.webp",
+   "mapAspect": "2200 / 1211",
+   "layers": [
+    "./assets/layers/world-continent-asia.webp",
+    "./assets/layers/world-continent-africa.webp",
+    "./assets/layers/world-continent-north-america.webp",
+    "./assets/layers/world-continent-south-america.webp",
+    "./assets/layers/world-continent-antarctica.webp",
+    "./assets/layers/world-continent-europe.webp",
+    "./assets/layers/world-continent-australia.webp",
+    "./assets/layers/world-river-amazon.webp",
+    "./assets/layers/world-river-mississippi.webp",
+    "./assets/layers/world-river-nile.webp",
+    "./assets/layers/world-mountain-andes.webp",
+    "./assets/layers/world-mountain-cordillera.webp",
+    "./assets/layers/world-mountain-himalayas.webp",
+    "./assets/layers/world-canal-panama-canal.webp",
+    "./assets/layers/world-canal-suez-canal.webp"
+   ],
+   "showInsets": [
+    "bering"
+   ],
+   "needsZoom": true,
+   "needsZoomReason": "straits are tiny points on a phone map; Bering, Bosporus and Dardanelles are answered in magnifier insets",
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "bering-strait",
+     "inset": "bering",
+     "x": 52.75,
+     "y": 46.01,
+     "letter": "К"
+    },
+    {
+     "id": "strait-of-gibraltar",
+     "x": 44.97,
+     "y": 36.21,
+     "letter": "Р"
+    },
+    {
+     "id": "strait-of-hormuz",
+     "x": 62.35,
+     "y": 41.63,
+     "letter": "У"
+    },
+    {
+     "id": "bab-el-mandeb",
+     "x": 58.67,
+     "y": 48.93,
+     "letter": "Г"
+    },
+    {
+     "id": "strait-of-magellan",
+     "x": 27.03,
+     "y": 85.14,
+     "letter": "О"
+    },
+    {
+     "id": "strait-of-malacca",
+     "x": 73.97,
+     "y": 52.17,
+     "letter": "С"
+    },
+    {
+     "id": "suez-canal",
+     "x": 55.66,
+     "y": 39.52,
+     "letter": "В"
+    },
+    {
+     "id": "mozambique-channel",
+     "x": 57.58,
+     "y": 66.21,
+     "letter": "Е"
+    },
+    {
+     "id": "antarctica",
+     "x": 85.91,
+     "y": 97.3,
+     "letter": "Т"
+    },
+    {
+     "id": "english-channel",
+     "x": 45.45,
+     "y": 28.07,
+     "letter": "К"
+    },
+    {
+     "id": "panama-canal",
+     "x": 24.53,
+     "y": 50.75,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "mozambique-channel",
+     "position": 8,
+     "text": "Найди восьмую букву в Мозамбикском проливе."
+    },
+    {
+     "markerId": "strait-of-hormuz",
+     "position": 3,
+     "text": "Найди третью букву в Ормузском проливе."
+    },
+    {
+     "markerId": "strait-of-malacca",
+     "position": 6,
+     "text": "Найди шестую букву в Малаккском проливе."
+    },
+    {
+     "markerId": "panama-canal",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Панамском канале."
+    },
+    {
+     "markerId": "strait-of-gibraltar",
+     "position": 2,
+     "text": "Найди вторую букву в Гибралтарском проливе."
+    },
+    {
+     "markerId": "bab-el-mandeb",
+     "position": 4,
+     "text": "Найди четвёртую букву в Баб-эль-Мандебском проливе."
+    },
+    {
+     "markerId": "suez-canal",
+     "position": 7,
+     "text": "Найди седьмую букву в Суэцком канале."
+    },
+    {
+     "markerId": "english-channel",
+     "position": 10,
+     "text": "Найди десятую букву в проливе Ла-Манш."
+    },
+    {
+     "markerId": "strait-of-magellan",
+     "position": 5,
+     "text": "Найди пятую букву в Магеллановом проливе."
+    },
+    {
+     "markerId": "bering-strait",
+     "position": 1,
+     "text": "Найди первую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "antarctica",
+     "position": 9,
+     "text": "Найди девятую букву в Антарктиде."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "92cd9ad1bcf0acd4"
+   }
+  }
+ ]
+}
