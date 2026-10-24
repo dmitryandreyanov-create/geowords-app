@@ -2,7 +2,7 @@
  "section": "seas-of-the-world",
  "use": "introduction cards (exercise type 0), one fact per sea; ids match data/maps/world-waters.json; no intro card for this section",
  "nameNote": "gulf-of-mexico is disputed only by its NAME: show the caveat popup and keep it out of True/False about the name; the map label and GeoWords place clues keep \"Gulf of Mexico\" (decided by Svetlana, 2026-10-23)",
- "approvalRule": "same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "mediterranean-sea",
@@ -23,7 +23,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "ae02c27514003e32"
+    "contentSha256": "87bda5b555c7b7a6"
    }
   },
   {
@@ -36,16 +36,16 @@
     "ru": "Чёрное море"
    },
    "fact": {
-    "en": "Below about 150 metres the Black Sea has no oxygen, and no fish can live there.",
-    "ru": "Глубже 150 метров в Чёрном море нет кислорода, и там не может жить ни одна рыба."
+    "en": "Below about 150 meters the Black Sea has no oxygen, and no fish can live there.",
+    "ru": "Глубже примерно 150 метров в Чёрном море нет кислорода, и там не может жить ни одна рыба."
    },
    "source": "Alfred Wegener Institute (no free oxygen below 150 m, no higher life forms)",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "7091317479f82bbc"
+    "date": "2026-10-24",
+    "contentSha256": "19915b4c761dae45"
    }
   },
   {
@@ -58,16 +58,16 @@
     "ru": "Красное море"
    },
    "fact": {
-    "en": "No rivers flow into the Red Sea, and the hot sun evaporates a lot of water, so it is one of the saltiest seas in the world.",
-    "ru": "В Красное море не впадает ни одна река, а жаркое солнце испаряет много воды, поэтому оно одно из самых солёных морей мира."
+    "en": "No permanent rivers flow into the Red Sea, and the hot sun evaporates a lot of water, so it is one of the saltiest seas in the world.",
+    "ru": "В Красное море не впадает ни одна постоянная река, а жаркое солнце испаряет много воды, поэтому оно одно из самых солёных морей мира."
    },
    "source": "National Academies (no river inflow, evaporation ~200 cm/yr, salinity 40-41)",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ae70ebed2dc6bc45"
+    "date": "2026-10-24",
+    "contentSha256": "a544bf690c964f70"
    }
   },
   {
@@ -83,13 +83,17 @@
     "en": "The Caspian Sea is not connected to the ocean. It is often called the largest lake on Earth.",
     "ru": "Каспийское море не соединено с океаном. Его часто называют самым большим озером на Земле."
    },
-   "source": "Guinness World Records: largest lake (371,000 km²)",
-   "disputed": false,
+   "source": "Guinness World Records: largest lake (about 371,000 km²; the area changes with the water level)",
+   "disputed": true,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "70f438b9681f3074"
+    "date": "2026-10-24",
+    "contentSha256": "14b4454ddda3f6d1"
+   },
+   "caveat": {
+    "en": "Scientists argue whether it is a lake or a sea.",
+    "ru": "Учёные спорят, озеро это или море."
    }
   },
   {
@@ -111,7 +115,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "c61e0e7ec5c5f942"
+    "contentSha256": "c501744e38e237ff"
    }
   },
   {
@@ -133,7 +137,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "b42e7d0694f1ae1c"
+    "contentSha256": "d4c5bc61a1bd4507"
    }
   },
   {
@@ -155,7 +159,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "3b93730e193b658a"
+    "contentSha256": "f43b91f51637d73f"
    }
   },
   {
@@ -177,7 +181,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "8f56b400f4cd54e7"
+    "contentSha256": "d008b55877987e38"
    }
   },
   {
@@ -204,7 +208,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "ab8cc67110c4399f"
+    "contentSha256": "835de5d82393ac90"
    }
   },
   {
@@ -226,7 +230,7 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "024aa3cc68866bb6"
+    "contentSha256": "65f046355b91f992"
    }
   }
  ]

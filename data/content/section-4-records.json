@@ -1,7 +1,7 @@
 {
  "section": "seas-of-the-world",
  "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues",
- "approvalRule": "same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "red-sea-saltiest",
@@ -14,8 +14,8 @@
     "ru": "Красное море"
    },
    "fact": {
-    "en": "The Red Sea is the saltiest large sea connected to the ocean.",
-    "ru": "Красное море — самое солёное из крупных морей Мирового океана."
+    "en": "The Red Sea is one of the saltiest seas connected to the ocean.",
+    "ru": "Красное море — одно из самых солёных морей Мирового океана."
    },
    "figure": {
     "value": "40-41",
@@ -26,9 +26,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "94a2af51427dd465"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "ac3dcb81d1576e91"
+   },
+   "category": "conditional"
   },
   {
    "id": "bay-of-bengal-largest-bay",
@@ -54,8 +55,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "b42e7d0694f1ae1c"
-   }
+    "contentSha256": "da0a734dc7c5a758"
+   },
+   "category": "stable"
   },
   {
    "id": "caspian-largest-inland",
@@ -81,8 +83,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "34d967bd03215d48"
-   }
+    "contentSha256": "a1ccc31fbe75de53"
+   },
+   "category": "stable"
   },
   {
    "id": "coral-sea-largest-reef",
@@ -108,8 +111,10 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "120c54d314cd67ac"
-   }
+    "contentSha256": "4dcd121cb19e184c"
+   },
+   "category": "stable"
   }
- ]
+ ],
+ "categoryRule": "record category (Svetlana, 2026-10-24): stable — may be used in GeoWords clues; conditional — only with its criterion in the wording (\"often called…\"); changing — only with a year (asOf) and never in clues"
 }
