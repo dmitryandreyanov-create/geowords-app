@@ -30,6 +30,7 @@ const T={
   next:'Дальше',check:'Понятно',right:'Верно!',wrongIs:n=>`Это ${n}.`,miss:'Мимо. Вот где это.',tryLine:'Мимо линии. Вот она.',hemiWrong:'Это другое полушарие. Вот нужное.',
   neutral:'Это место не относят ни к одному океану. Попробуй ещё раз.',washedOk:'Все океаны найдены!',washedBad:'Не совсем. Вот правильные океаны.',
   nuance:'Есть нюанс',lessonDone:'Урок пройден!',xp:'Очки',acc:'Точность',time:'Время',home:'На карту пути',
+  practiceStep:'Практика: 6 слов GeoWords',practiceDesc:'Шесть слов-загадок подряд на пройденных местах карты. После них открывается итог юнита.',nextWord:(i,n)=>`Следующее слово · ${i} из ${n}`,practiceAll:'Практика пройдена!',nextPractice:'К практике',practiceAgain:'Пройти практику ещё раз',wordOf:(i,n)=>`Слово ${i} из ${n}`,
   unitDone:'Юнит пройден!',sectionDone:'Раздел пройден!',stampGot:'Штамп в паспорт путешественника',practiceDone:'Слово собрано!',wordDef:'Слово-загадка',mistakes:'Ошибок',
   quitT:'Выйти из урока?',quitP:'Прогресс этого урока не сохранится.',quit:'Выйти',stay:'Продолжить',
   settings:'Настройки',lang:'Слова',reset:'Сбросить прогресс',unlock:'Открыть все шаги (для теста)',
@@ -50,6 +51,7 @@ const T={
   next:'Next',check:'Got it',right:'Correct!',wrongIs:n=>`That is ${n}.`,miss:'Missed. Here it is.',tryLine:'Not on the line. Here it is.',hemiWrong:'That is the other hemisphere. Here is the right one.',
   neutral:'This place belongs to no ocean. Try again.',washedOk:'All oceans found!',washedBad:'Not quite. Here are the right oceans.',
   nuance:'There is a nuance',lessonDone:'Lesson complete!',xp:'Points',acc:'Accuracy',time:'Time',home:'Back to the trail',
+  practiceStep:'Practice: 6 GeoWords',practiceDesc:'Six mystery words in a row on the places you have learned. Then the unit final opens.',nextWord:(i,n)=>`Next word · ${i} of ${n}`,practiceAll:'Practice complete!',nextPractice:'To the practice',practiceAgain:'Play the practice again',wordOf:(i,n)=>`Word ${i} of ${n}`,
   unitDone:'Unit complete!',sectionDone:'Section complete!',stampGot:'A stamp in your explorer passport',practiceDone:'Word solved!',wordDef:'Mystery word',mistakes:'Mistakes',
   quitT:'Leave the lesson?',quitP:'Progress in this lesson will be lost.',quit:'Leave',stay:'Keep going',
   settings:'Settings',lang:'Words',reset:'Reset progress',unlock:'Unlock every step (testing)',
@@ -180,9 +182,11 @@ const COURSE2=[
 // Unit 1 is approved; units 2-4 and the section final are drafts the author reviews in the app (24.10.2026).
 const READY_UNITS=[1,2,3,4,'S'];
 const STEPS=[];
-COURSE.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`u${u.n}-final`,kind:'final',unit:u.n})});
+COURSE.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`u${u.n}-practice`,kind:'practice',unit:u.n});STEPS.push({id:`u${u.n}-final`,kind:'final',unit:u.n})});
 STEPS.push({id:'s1-final',kind:'section',unit:'S'});
-COURSE2.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:2,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));STEPS.push({id:`s2-u${u.n}-final`,sec:2,kind:'final',unit:u.n})});
+COURSE2.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:2,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`s2-u${u.n}-practice`,sec:2,kind:'practice',unit:u.n});STEPS.push({id:`s2-u${u.n}-final`,sec:2,kind:'final',unit:u.n})});
 STEPS.push({id:'s2-final',sec:2,kind:'section',unit:'S'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
@@ -190,7 +194,7 @@ const stepOf=id=>STEPS.find(s=>s.id===id);
 const ready=s=>s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll)return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
-const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='final'?t().final:t().sectionFinal;
+const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:t().sectionFinal;
 
 /* ---------- small helpers ---------- */
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -265,8 +269,8 @@ function home(){
   const cur=STEPS.find(s=>!S.done[s.id]&&unlocked(s.id));
   const zig=[50,70,34,62,40,66];let k=0;
   const stopHtml=s=>{const done=!!S.done[s.id],open=unlocked(s.id),isCur=cur&&cur.id===s.id,pos=zig[k++%zig.length];
-    const cls=['stop',s.kind!=='lesson'?'final':'',done?'done':'',!open?'locked':'',isCur?'current':''].join(' ');
-    const disc=s.kind==='lesson'?(done?'':s.n):`<img src="${s.kind==='section'?IMG.medalSection:IMG.medal}" alt="">`;
+    const cls=['stop',s.kind==='practice'?'practice':s.kind!=='lesson'?'final':'',done?'done':'',!open?'locked':'',isCur?'current':''].join(' ');
+    const disc=s.kind==='lesson'?(done?'':s.n):s.kind==='practice'?(done?'':'6'):`<img src="${s.kind==='section'?IMG.medalSection:IMG.medal}" alt="">`;
     return `<div class="stop-row"><button type="button" class="${cls}" data-step="${s.id}" style="left:${pos}%" aria-label="${esc(titleOf(s))}"><span class="disc">${disc}</span></button>
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
@@ -306,17 +310,17 @@ function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
   const head=st.sec===2?(st.unit==='S'?x.sectionN(2):`${x.sectionN(2)} · ${x.unit} ${st.unit} · ${D.s2.dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
-  const desc=st.kind==='lesson'?x.lessonDesc:x.finalDesc;
+  const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:x.finalDesc;
   let buttons;
-  if(st.kind!=='lesson'&&S.done[id]&&!st.sec){
+  if(st.kind!=='lesson'&&st.kind!=='practice'&&S.done[id]&&!st.sec){
     const hasNew=canReview(st);
     buttons=(hasNew?`<button type="button" class="btn" data-a="practice">${x.practice}</button>`:
       `<p class="rotate-hint">${x.practiceNone}</p>`)+
       `<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn ${hasNew?'ghost':''}" data-a="go">${x.finalAgain}</button></div>`;
-  }else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?x.again:x.start}</button></div>`;
+  }else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?(st.kind==='practice'?x.practiceAgain:x.again):x.start}</button></div>`;
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
-  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else if(!S.introSeen2&&id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)};
+  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else if(!S.introSeen2&&id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)};
   const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{s.remove();startPractice(st)};
 }
 
@@ -350,9 +354,9 @@ function riversIntro(next){
   app.querySelector('.fb .btn').onclick=()=>{S.introSeen2=true;save();next()};
 }
 function nextBtns(id){const n=nextStep(id),x=t();
-  return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
+  return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:n.kind==='practice'?x.nextPractice:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
 function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').onclick=home;
-  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?lesson(n):geowords(finalPuzzle(n))}
+  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?lesson(n):n.kind==='practice'?runPractice(n):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
   const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
@@ -506,10 +510,47 @@ function practicePuzzle(unit){
   return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,
     layers:unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator']}}
 
+/* ---------- mandatory unit practice: 6 GeoWords on learned places (Svetlana, 24.10.2026) ---------- */
+const fold=s=>s.toUpperCase().replace(/Ё/g,'Е');
+const ON_RU={nile:'на Ниле',amazon:'на Амазонке',mississippi:'на Миссисипи',yangtze:'на Янцзы','huang-he':'на Хуанхэ',ganges:'на Ганге',indus:'на Инде',danube:'на Дунае',volga:'на Волге'};
+const ON_EN={nile:'on the Nile',amazon:'on the Amazon',mississippi:'on the Mississippi',yangtze:'on the Yangtze','huang-he':'on the Yellow River',ganges:'on the Ganges',indus:'on the Indus',danube:'on the Danube',volga:'on the Volga'};
+function placesFor(st){
+  if(!st.sec)return knownPlaces(st.unit);
+  const tpl=D.tpl.objects,out=RIVERS.filter(id=>R(id).unit<=st.unit).map(id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}));
+  for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}
+  return out}
+const layersFor=st=>st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
+// Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
+function practiceWords(st){const lang=L(),places=placesFor(st);
+  const DI=st.sec===2?D.s2.dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
+  const byLen=a=>a.sort((x,y)=>[...y.answer].length-[...x.answer].length);
+  const all=DI.units.flatMap(u=>u.words[lang]),U=DI.units[st.unit-1];
+  // this unit's own review words and reserve words, then its approved practiceExtra (short words of later units), then earlier units (longest first)
+  const groups=[shuffle(U.words[lang].filter(w=>w.role==='review'&&ok(w))),shuffle(U.words[lang].filter(w=>w.role==='reserve'&&ok(w))),
+    (U.practiceExtra?.[lang]||[]).map(a=>all.find(w=>w.answer===a)).filter(w=>w&&ok(w))];
+  for(let u=st.unit-2;u>=0;u--)groups.push(byLen(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w)))));
+  if(st.sec===2)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
+  groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
+  const out=[];for(const g of groups)for(const w of g)if(out.length<6&&!out.some(o=>o.answer===w.answer))out.push(w);
+  return out}
+function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
+  const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
+  const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
+  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>far(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
+  if(!chosen)chosen=shuffle([...usable]).slice(0,n);if(chosen.length<n)return null;
+  const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
+  const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
+  const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
+  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers}}
+function runPractice(st){const words=practiceWords(st),places=placesFor(st),layers=layersFor(st);let i=0;
+  const go=()=>{let P=buildPuzzle(words[i],places,layers);while(!P&&i<words.length-1){i++;P=buildPuzzle(words[i],places,layers)}if(!P){S.done[st.id]=true;save();return home()}P.stepId=st.id;P.seq={i,total:words.length,next:()=>{i++;go()}};geowords(P)};
+  if(!words.length){S.done[st.id]=true;save();return home()}
+  go()}
+
 function geowords(P){
   window.__gwPuzzle=P;// read by the automated play-through test
   const x=t();let step=0,wrong=0,here=0;const t0=Date.now();
-  const tag=P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:x.final;
+  const tag=P.seq?x.practiceStep+' · '+x.wordOf(P.seq.i+1,P.seq.total):P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:x.final;
   h(`<section class="screen lesson gw"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i></i></div></div>
    <div class="gw-head"><span class="kind">${esc(tag)}</span><p class="gw-clue" aria-live="polite"></p></div><div class="mapslot"></div><p class="rotate-hint">${P.needsZoom?x.zoomHint:x.rotate}</p>
    <div class="slots">${[...P.answer].map(()=>'<div class="slot"></div>').join('')}</div>
@@ -528,8 +569,16 @@ function geowords(P){
     pip(IMG.yes,x.pipOk(k.letter));step++;
     if(step===P.clues.length){app.querySelector('.l-bar i').style.width='100%';setTimeout(finish,800)}else setTimeout(clue,350)}
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=(P.kind==='practice'?10:20)+Math.max(0,6-wrong);
-    if(P.stepId)S.done[P.stepId]=true;S.xp+=xp;bumpStreak();save();
+    const last=!P.seq||P.seq.i+1>=P.seq.total;
+    if(P.stepId&&last)S.done[P.stepId]=true;S.xp+=xp;bumpStreak();save();
     const section=P.kind==='section';
+    if(P.seq){const {i,total}=P.seq;
+      h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?x.practiceAll:x.practiceDone}</h2>
+       <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
+       <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
+       ${last?nextBtns(P.stepId):`<button type="button" class="btn" data-a="nextword">${x.nextWord(i+2,total)}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button>`}</section>`);
+      if(last)wireNext(P.stepId);else{app.querySelector('[data-a=home]').onclick=home;app.querySelector('[data-a=nextword]').onclick=()=>P.seq.next()}
+      return}
     h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
      <h2>${P.kind==='practice'?x.practiceDone:section?x.sectionDone:x.unitDone}</h2>
      <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
