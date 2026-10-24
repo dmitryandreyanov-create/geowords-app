@@ -50,9 +50,9 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
       errors.push(`${file}: ${id} is in a release package but has no complete approval (status, by, date, contentSha256)`);
     if (it.approval?.status === "approved") {
-      const payload = pyJson({ fact: it.fact, caveat: it.caveat ?? null, name: it.name });
+      const payload = pyJson({ id: it.id, fact: it.fact, caveat: it.caveat ?? null, disputed: it.disputed, name: it.name });
       const sha = crypto.createHash("sha256").update(payload, "utf8").digest("hex").slice(0, 16);
-      if (sha !== it.approval.contentSha256) errors.push(`${file}: ${id} text changed after approval — needs re-approval`);
+      if (sha !== it.approval.contentSha256) errors.push(`${file}: ${id} text or disputed mark changed after approval — needs re-approval`);
     }
   }
 }

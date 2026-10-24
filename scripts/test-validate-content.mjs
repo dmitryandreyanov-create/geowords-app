@@ -25,6 +25,7 @@ const cases = {
   "disputed missing": edit(d => { delete card(d, "europe").disputed; }),
   "disputed without caveat": edit(d => { delete card(d, "europe").caveat; }),
   "wrong section": edit(d => { d.section = "rivers"; }),
+  "disputed mark removed, old approval kept": edit(d => { card(d, "atlantic-ocean").disputed = false; }),
 };
 const script = "scripts/validate-content.mjs";
 const runRaw = setup => {
