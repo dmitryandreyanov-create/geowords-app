@@ -302,6 +302,19 @@ try{
  for(const img of await gp.locator('article img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert(await img.evaluate(im=>im.naturalWidth>0&&im.naturalHeight>0))}
  assert(await gp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'graphics gallery fits phone');
  await gp.locator('#background').click();assert(await gp.locator('body').evaluate(el=>el.classList.contains('teal')));
+ // Separate cosmetic fixture: old saved keys must render painted outfits and survive reload.
+ const wardrobeContext=await browser.newContext({viewport:{width:360,height:800}}),wp=await wardrobeContext.newPage();
+ wp.on('pageerror',e=>errors.push(e.message));await wp.goto(url+'/release/');
+ await wp.evaluate(()=>localStorage.setItem('geowords_fun_v1',JSON.stringify({xp:2200,outfit:'captain'})));await wp.reload();
+ assert.equal(await wp.locator('.explorer-pip .pip-art').getAttribute('data-outfit'),'captain');
+ await wp.locator('#passportBtn').click();
+ for(const [key,file] of [['hat','1-explorer'],['scarf','2-scout'],['binoculars','3-pathfinder'],['backpack','4-navigator'],['captain','5-captain'],['crown','6-legend']]){
+  const choice=wp.locator(`button.outfit[data-outfit="${key}"]`);assert(await choice.isEnabled());
+  assert((await choice.locator('.pip-art').evaluate(el=>getComputedStyle(el).backgroundImage)).includes(`game/pip-outfit-${file}.webp`));
+  await choice.click();assert.equal(await wp.locator('.explorer-pip .pip-art').getAttribute('data-outfit'),key);
+ }
+ await wp.reload();assert.equal(await wp.locator('.explorer-pip .pip-art').getAttribute('data-outfit'),'crown');
+ assert.equal(await wp.evaluate(()=>JSON.parse(localStorage.getItem('geowords_fun_v1')).xp),2200);await wardrobeContext.close();
  await gp.goto(url+'/release/');
  await gp.locator('#riversBtn').click();
  for(let step=0;step<3;step++){

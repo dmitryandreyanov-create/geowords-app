@@ -12,7 +12,7 @@ const RANKS=[
   {xp:1400,name:"Captain",icon:"⚓",outfit:"captain"},
   {xp:2200,name:"Legendary Explorer",icon:"🏆",outfit:"crown"}
 ];
-const OUTFITS={hat:"Explorer hat",scarf:"Trail scarf",binoculars:"Binoculars",backpack:"Backpack",captain:"Captain's cap",crown:"Golden crown"};
+const OUTFITS={hat:"Map Reader",scarf:"Trail Scout",binoculars:"Pathfinder",backpack:"Navigator",captain:"Captain",crown:"Legendary Explorer"};
 const SAY={
   start:["Let's explore! Read the clue and find the letter.","Ready, explorer? Where is our first letter?","Adventure time! I'll follow your lead."],
   correct:["Yes! Great map reading!","You found it!","Nice one, explorer!","Spot on!","Brilliant!"],
@@ -77,42 +77,12 @@ function speak(text){
   try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang="en-US";u.rate=.9;u.pitch=1.05;speechSynthesis.speak(u)}catch{}
 }
 
-/* ---------- Pip the explorer fox: watercolour SVG with outfits ---------- */
-let pipSeq=0;
-const ACCESSORY={
-  hat:`<path d="M20 30 Q50 6 80 30 L82 34 Q50 24 18 34Z" fill="#4c8f3a"/><rect x="18" y="31" width="64" height="5" rx="2.5" fill="#3a7230"/><circle cx="66" cy="22" r="4" fill="#ffd34d" stroke="#c99a1d" stroke-width="1.2"/>`,
-  scarf:`<path d="M24 78 Q50 92 76 78 L77 86 Q50 99 23 86Z" fill="#e2483d"/><path d="M62 86 L70 99 L60 99 L56 88Z" fill="#c8362d"/><path d="M30 82 L34 86 M42 86 L45 90 M56 87 L58 91" stroke="#ffd2cc" stroke-width="2"/>`,
-  binoculars:`<rect x="35" y="80" width="11" height="14" rx="4" fill="#33414d"/><rect x="54" y="80" width="11" height="14" rx="4" fill="#33414d"/><rect x="44" y="83" width="12" height="6" rx="2" fill="#4b5b68"/><circle cx="40.5" cy="92" r="3" fill="#8fd3ff"/><circle cx="59.5" cy="92" r="3" fill="#8fd3ff"/><path d="M30 70 Q50 84 70 70" stroke="#6b4a2b" stroke-width="2" fill="none"/>`,
-  backpack:`<path d="M27 66 Q31 84 36 96 M73 66 Q69 84 64 96" stroke="#8a5a2b" stroke-width="5" fill="none" stroke-linecap="round"/><circle cx="34" cy="86" r="3" fill="#ffd34d"/><circle cx="66" cy="86" r="3" fill="#ffd34d"/>`,
-  captain:`<path d="M22 33 Q50 14 78 33 L80 37 L20 37Z" fill="#fff"/><rect x="19" y="33" width="62" height="7" rx="3" fill="#1f3b70"/><path d="M28 40 Q50 48 72 40 L70 44 Q50 52 30 44Z" fill="#14284d"/><circle cx="50" cy="28" r="5" fill="#ffd34d" stroke="#c99a1d" stroke-width="1.2"/><path d="M47 28 L53 28 M50 25 L50 31" stroke="#1f3b70" stroke-width="1.4"/>`,
-  crown:`<path d="M24 34 L28 12 L39 26 L50 8 L61 26 L72 12 L76 34Z" fill="#ffcf3a" stroke="#d29b12" stroke-width="2" stroke-linejoin="round"/><circle cx="50" cy="22" r="3.5" fill="#e2483d"/><circle cx="35" cy="28" r="2.6" fill="#3d9be2"/><circle cx="65" cy="28" r="2.6" fill="#4cc46a"/>`
-};
-function pipSVG(outfit=state.outfit){
-  // Approved painted design for the base outfit. Other unlocked costumes keep
-  // their existing renderer until matching illustrated outfits are approved.
-  if(outfit==='hat')return '<span class="pip-art" aria-hidden="true"></span>';
-  const id="pipwc"+(++pipSeq);
-  const head=outfit==="hat"||outfit==="captain"||outfit==="crown";
-  const acc=ACCESSORY[outfit]||ACCESSORY.hat;
-  return `<svg viewBox="0 0 100 104" aria-hidden="true"><defs>
-   <filter id="${id}" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="7" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" result="d"/><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="1" seed="3" result="g"/><feColorMatrix in="g" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -.9 .5" result="grain"/><feComposite in="grain" in2="d" operator="in" result="grainIn"/><feBlend in="d" in2="grainIn" mode="multiply"/></filter></defs>
- <ellipse cx="50" cy="98" rx="26" ry="5" fill="rgba(0,0,0,.12)"/>
- <g filter="url(#${id})">
- <path d="M22 30 L30 8 L42 26Z" fill="#ec8a40"/><path d="M78 30 L70 8 L58 26Z" fill="#ec8a40"/>
- <path d="M27 26 L31 14 L37 24Z" fill="#ffd9b8"/><path d="M73 26 L69 14 L63 24Z" fill="#ffd9b8"/>
- <ellipse cx="50" cy="52" rx="32" ry="30" fill="#f39a4f"/><ellipse cx="42" cy="40" rx="16" ry="10" fill="#f7b072" opacity=".6"/>
- <path d="M50 50 C30 52 22 66 30 78 C38 88 62 88 70 78 C78 66 70 52 50 50Z" fill="#fff4e8"/>
- ${head?"":acc}
- </g>
- <g class="pip-eyes"><ellipse cx="38" cy="50" rx="4.2" ry="5.2" fill="#2a2a35"/><ellipse cx="62" cy="50" rx="4.2" ry="5.2" fill="#2a2a35"/>
- <circle cx="39.5" cy="48" r="1.4" fill="#fff"/><circle cx="63.5" cy="48" r="1.4" fill="#fff"/></g>
- <ellipse cx="50" cy="63" rx="5" ry="3.6" fill="#2a2a35"/>
- <path d="M43 69 Q50 75 57 69" stroke="#2a2a35" stroke-width="2.4" fill="none" stroke-linecap="round"/>
- <circle cx="28" cy="62" r="4" fill="#ff9f9f" opacity=".55"/><circle cx="72" cy="62" r="4" fill="#ff9f9f" opacity=".55"/>
- ${head?`<g filter="url(#${id})">${acc}</g>`:""}
-</svg>`;
+/* Painted wardrobe; saved outfit keys remain compatible with earlier progress. */
+function pipArt(outfit=state.outfit){
+  const key=Object.hasOwn(OUTFITS,outfit)?outfit:'hat';
+  return `<span class="pip-art" data-outfit="${key}" aria-hidden="true"></span>`;
 }
-function refreshPips(){document.querySelectorAll("[data-pip]").forEach(el=>{el.innerHTML=pipSVG()})}
+function refreshPips(){document.querySelectorAll("[data-pip]").forEach(el=>{el.innerHTML=pipArt()})}
 
 /* ---------- small UI helpers ---------- */
 function toast(text){
@@ -187,7 +157,7 @@ function ensureGuide(){
   const card=document.querySelector("#gameScreen .clue-card");if(!card||$("pipGuide"))return;
   const wrap=document.createElement("div");wrap.id="pipGuide";wrap.className="pip-guide";
   wrap.innerHTML=`<button class="pip-avatar" type="button" data-pip aria-label="Pip the explorer fox"></button><div class="pip-bubble" aria-live="polite"></div>`;
-  card.appendChild(wrap);wrap.querySelector(".pip-avatar").innerHTML=pipSVG();
+  card.appendChild(wrap);wrap.querySelector(".pip-avatar").innerHTML=pipArt();
   wrap.querySelector(".pip-avatar").addEventListener("click",useHint);
   const combo=document.createElement("div");combo.id="comboChip";combo.className="combo-chip";card.appendChild(combo);
   if(canSpeak()){
@@ -304,7 +274,7 @@ function openMap(){
       const st=s.n>=s.goal?"done":s.current?"here":"locked";
       return `<li class="stop ${st}"><span class="stop-dot">${st==="done"?"✓":st==="here"?`<span class="stop-pip" data-pip></span>`:i+1}</span><span class="stop-label">${st==="locked"?"?":esc(s.label)}</span>${s.goal>1&&st!=="locked"?`<span class="stop-count">${Math.min(s.n,s.goal)}/${s.goal}</span>`:""}</li>`}).join("")}</ol></section>`}).join("");
   const m=modal("Expedition Map",`<p class="sheet-sub">Every finished step lights up the trail. Pip waits where you are now.</p>${html}`,"wide");
-  m.body.querySelectorAll("[data-pip]").forEach(el=>{el.innerHTML=pipSVG()});
+  m.body.querySelectorAll("[data-pip]").forEach(el=>{el.innerHTML=pipArt()});
 }
 
 /* ---------- passport + wardrobe ---------- */
@@ -314,7 +284,7 @@ function openPassport(){
   const open=unlocked();
   const wardrobe=Object.keys(OUTFITS).map(o=>{
     const ok=open.includes(o),need=RANKS.find(r=>r.outfit===o);
-    return `<button class="outfit ${state.outfit===o?"on":""}" type="button" data-outfit="${o}" ${ok?"":"disabled"} aria-pressed="${state.outfit===o}"><span class="outfit-pip">${pipSVG(o)}</span><span>${ok?OUTFITS[o]:"🔒 "+need.name}</span></button>`}).join("");
+    return `<button class="outfit ${state.outfit===o?"on":""}" type="button" data-outfit="${o}" ${ok?"":"disabled"} aria-pressed="${state.outfit===o}"><span class="outfit-pip">${pipArt(o)}</span><span>${ok?OUTFITS[o]:"🔒 "+need.name}</span></button>`}).join("");
   const m=modal("Explorer Passport",`<p class="sheet-sub">${rankFor(state.xp).icon} ${rankFor(state.xp).name} · ⭐ ${state.stars} ${state.stars===1?"star":"stars"} · 🔥 ${state.streak} ${state.streak===1?"day":"days"} in a row · ❄️ ${state.freezes} ${state.freezes===1?"freeze":"freezes"}</p>
    <h3 class="sheet-h3">Settings</h3>
    <div class="settings"><div class="setting"><span>Who is playing?</span><div class="seg" role="group" aria-label="Mode">${[["kid","Child"],["adult","Adult"]].map(([v,t])=>`<button type="button" data-mode="${v}" aria-pressed="${state.mode===v}" class="${state.mode===v?"on":""}">${t}</button>`).join("")}</div></div>
@@ -350,7 +320,7 @@ function huntPool(){
 const huntText=t=>String(t).replace(/^The\s+\w+\s+letter\s+is\s+/i,"Find the letter ");
 function openHunt(){
   const pool=huntPool();
-  if(!pool.length){modal("Speed Hunt",`<div class="hunt-locked"><span data-pip class="hunt-pip"></span><p>Solve your first puzzle, then come back! Speed Hunt uses maps you have already explored.</p></div>`).body.querySelectorAll("[data-pip]").forEach(e=>{e.innerHTML=pipSVG()});return}
+  if(!pool.length){modal("Speed Hunt",`<div class="hunt-locked"><span data-pip class="hunt-pip"></span><p>Solve your first puzzle, then come back! Speed Hunt uses maps you have already explored.</p></div>`).body.querySelectorAll("[data-pip]").forEach(e=>{e.innerHTML=pipArt()});return}
   const m=modal("Speed Hunt",`<div class="hunt-top"><span class="hunt-time" id="huntTime">60</span><span class="hunt-score">Found: <b id="huntScore">0</b></span><span class="hunt-best">Best: ${state.huntBest}</span></div>
     <p class="hunt-clue" id="huntClue">Get ready…</p><div class="hunt-map" id="huntMap"><img id="huntImg" alt="Map"><svg class="hunt-arrows" id="huntArrows" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg><div id="huntMarkers"></div></div>
     <button class="hunt-start primary" type="button" id="huntStart">Start: 60 seconds!</button>`,"wide hunt-sheet");
@@ -426,7 +396,7 @@ function renderHomeCard(){
     home.insertBefore(card,home.firstChild);
     $("passportBtn").addEventListener("click",openPassport);$("mapBtn").addEventListener("click",openMap);
     $("cardsBtn").addEventListener("click",openCards);$("huntBtn").addEventListener("click",openHunt);
-    card.querySelector("[data-pip]").innerHTML=pipSVG();
+    card.querySelector("[data-pip]").innerHTML=pipArt();
   }
   const r=rankFor(state.xp),n=nextRank(state.xp);
   $("rankName").textContent=r.icon+" "+r.name;
@@ -452,7 +422,7 @@ function showFinish(stars,gained,rankUp){
    <div class="fun-gain">+${gained} XP${word.hintUsed?" · telescope used":""}${word.mistakes===0?" · perfect!":""}</div>
    ${rankUp?`<div class="rank-up">🎉 New rank: ${rankUp.icon} ${rankUp.name}!</div>`:""}
    <div class="finish-pip"><span data-pip></span><span>${pick(stars===3?SAY.finish3:stars===2?SAY.finish2:SAY.finish1)}</span></div>`;
-  box.querySelector("[data-pip]").innerHTML=pipSVG();
+  box.querySelector("[data-pip]").innerHTML=pipArt();
   const medal=card.querySelector(".big-medal");medal?medal.after(box):card.prepend(box);
 }
 

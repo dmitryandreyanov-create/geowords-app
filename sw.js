@@ -1,4 +1,4 @@
-const CACHE="geowords-v0.6.7-pip-webp";
+const CACHE="geowords-v0.6.8-pip-webp";
 const CORE=[
   "./",
   "./index.html",
@@ -18,6 +18,12 @@ const CORE=[
   "./assets/pip/game/pip-face-happy.webp",
   "./assets/pip/game/pip-face-oops.webp",
   "./assets/pip/game/pip-face-wow.webp",
+  "./assets/pip/game/pip-outfit-1-explorer.webp",
+  "./assets/pip/game/pip-outfit-2-scout.webp",
+  "./assets/pip/game/pip-outfit-3-pathfinder.webp",
+  "./assets/pip/game/pip-outfit-4-navigator.webp",
+  "./assets/pip/game/pip-outfit-5-captain.webp",
+  "./assets/pip/game/pip-outfit-6-legend.webp",
   "./graphics/index.html",
   "./graphics/gallery.css",
   "./graphics/gallery.js",
