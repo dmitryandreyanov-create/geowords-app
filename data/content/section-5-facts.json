@@ -1,0 +1,315 @@
+{
+ "section": "straits-and-canals",
+ "use": "introduction cards (exercise type 0), one fact per object; ids match data/maps/world-straits.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
+ "items": [
+  {
+   "id": "suez-canal",
+   "order": 1,
+   "kind": "canal",
+   "unit": 1,
+   "name": {
+    "en": "Suez Canal",
+    "ru": "Суэцкий канал"
+   },
+   "fact": {
+    "en": "The Suez Canal, opened in 1869, connects the Mediterranean Sea and the Red Sea.",
+    "ru": "Суэцкий канал, открытый в 1869 году, соединяет Средиземное и Красное моря."
+   },
+   "source": "general reference",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "c10f87a0b1b34398"
+   }
+  },
+  {
+   "id": "panama-canal",
+   "order": 2,
+   "kind": "canal",
+   "unit": 1,
+   "name": {
+    "en": "Panama Canal",
+    "ru": "Панамский канал"
+   },
+   "fact": {
+    "en": "The Panama Canal (1914) connects the Atlantic and Pacific Oceans. Its locks lift ships 26 meters up to Gatun Lake.",
+    "ru": "Панамский канал (1914) соединяет Атлантический и Тихий океаны. Шлюзы поднимают суда на 26 метров, до озера Гатун."
+   },
+   "source": "Wikipedia: Panama Canal",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "48e6d25bef9a3ae5"
+   }
+  },
+  {
+   "id": "strait-of-gibraltar",
+   "order": 3,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Strait of Gibraltar",
+    "ru": "Гибралтарский пролив"
+   },
+   "fact": {
+    "en": "At its narrowest point, only about 13 km separate Europe and Africa.",
+    "ru": "В самом узком месте Европу и Африку разделяют всего около 13 км."
+   },
+   "source": "Britannica: Strait of Gibraltar (8 miles, 13 km)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "145740293c65d5da"
+   }
+  },
+  {
+   "id": "english-channel",
+   "order": 4,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "English Channel",
+    "ru": "Ла-Манш"
+   },
+   "fact": {
+    "en": "The English Channel separates Great Britain from France. A tunnel runs beneath it.",
+    "ru": "Ла-Манш отделяет Великобританию от Франции. Под ним проложен тоннель."
+   },
+   "source": "general reference",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "2d5e30dc8a38a1f9"
+   }
+  },
+  {
+   "id": "bosporus",
+   "order": 5,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Bosporus",
+    "ru": "Босфор"
+   },
+   "fact": {
+    "en": "The Bosporus separates Europe and Asia. The city of Istanbul stands on both of its shores.",
+    "ru": "Босфор разделяет Европу и Азию. Стамбул стоит на обоих его берегах."
+   },
+   "source": "general reference",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "35f4193d1685f070"
+   }
+  },
+  {
+   "id": "dardanelles",
+   "order": 6,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Dardanelles",
+    "ru": "Дарданеллы"
+   },
+   "fact": {
+    "en": "The Dardanelles connect the Sea of Marmara and the Aegean Sea. In ancient times they were called the Hellespont.",
+    "ru": "Дарданеллы соединяют Мраморное и Эгейское моря. В древности их называли Геллеспонтом."
+   },
+   "source": "general reference",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "fa5a0dc2a6d0ed1a"
+   }
+  },
+  {
+   "id": "bab-el-mandeb",
+   "order": 7,
+   "kind": "strait",
+   "unit": 2,
+   "name": {
+    "en": "Bab-el-Mandeb",
+    "ru": "Баб-эль-Мандебский пролив"
+   },
+   "fact": {
+    "en": "The Bab-el-Mandeb connects the Red Sea with the Gulf of Aden and the Indian Ocean.",
+    "ru": "Баб-эль-Мандеб соединяет Красное море с Аденским заливом и Индийским океаном."
+   },
+   "source": "Britannica",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0bd79551a19fdb45"
+   }
+  },
+  {
+   "id": "strait-of-hormuz",
+   "order": 8,
+   "kind": "strait",
+   "unit": 2,
+   "name": {
+    "en": "Strait of Hormuz",
+    "ru": "Ормузский пролив"
+   },
+   "fact": {
+    "en": "The Strait of Hormuz connects the Persian Gulf with the Gulf of Oman. It is one of the most important routes for shipping oil.",
+    "ru": "Ормузский пролив соединяет Персидский и Оманский заливы. Это один из важнейших путей перевозки нефти."
+   },
+   "source": "EIA: World Oil Transit Chokepoints",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "0bdc17a85357bf7a"
+   }
+  },
+  {
+   "id": "gulf-of-oman",
+   "order": 9,
+   "kind": "gulf",
+   "unit": 2,
+   "name": {
+    "en": "Gulf of Oman",
+    "ru": "Оманский залив"
+   },
+   "fact": {
+    "en": "The Gulf of Oman connects the Arabian Sea with the Strait of Hormuz.",
+    "ru": "Оманский залив соединяет Аравийское море с Ормузским проливом."
+   },
+   "source": "map data",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d1b96d2ec5782cb5"
+   }
+  },
+  {
+   "id": "strait-of-malacca",
+   "order": 10,
+   "kind": "strait",
+   "unit": 2,
+   "name": {
+    "en": "Strait of Malacca",
+    "ru": "Малаккский пролив"
+   },
+   "fact": {
+    "en": "The Strait of Malacca is one of the world's busiest shipping routes between the Indian and Pacific Oceans.",
+    "ru": "Малаккский пролив — один из самых оживлённых морских путей мира между Индийским и Тихим океанами."
+   },
+   "source": "EIA: World Oil Transit Chokepoints",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "a1a2b54bee806d00"
+   }
+  },
+  {
+   "id": "mozambique-channel",
+   "order": 11,
+   "kind": "strait",
+   "unit": 2,
+   "name": {
+    "en": "Mozambique Channel",
+    "ru": "Мозамбикский пролив"
+   },
+   "fact": {
+    "en": "The Mozambique Channel separates the island of Madagascar from Africa.",
+    "ru": "Мозамбикский пролив отделяет остров Мадагаскар от Африки."
+   },
+   "source": "map data",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "b78d0cee5308b99a"
+   }
+  },
+  {
+   "id": "bering-strait",
+   "order": 12,
+   "kind": "strait",
+   "unit": 3,
+   "name": {
+    "en": "Bering Strait",
+    "ru": "Берингов пролив"
+   },
+   "fact": {
+    "en": "At its narrowest point, Asia and North America are only about 82 km apart.",
+    "ru": "В самом узком месте Азию и Северную Америку разделяют около 82 км."
+   },
+   "source": "Wikipedia: Bering Strait (82 km)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "0b8b7eb99d15a59f"
+   }
+  },
+  {
+   "id": "drake-passage",
+   "order": 13,
+   "kind": "strait",
+   "unit": 3,
+   "name": {
+    "en": "Drake Passage",
+    "ru": "Пролив Дрейка"
+   },
+   "fact": {
+    "en": "The Drake Passage, between South America and Antarctica, is one of the most dangerous stretches of sea in the world.",
+    "ru": "Пролив Дрейка между Южной Америкой и Антарктидой — одно из самых опасных морских мест мира."
+   },
+   "source": "National Geographic (\"one of the most treacherous bodies of water in the world\")",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "72281dabc8dcac20"
+   }
+  },
+  {
+   "id": "strait-of-magellan",
+   "order": 14,
+   "kind": "strait",
+   "unit": 3,
+   "name": {
+    "en": "Strait of Magellan",
+    "ru": "Магелланов пролив"
+   },
+   "fact": {
+    "en": "Magellan sailed through this strait in 1520 during the first voyage around the world.",
+    "ru": "Магеллан прошёл этим проливом в 1520 году во время первого кругосветного плавания."
+   },
+   "source": "National Geographic (Magellan expedition 1519-1522)",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "5b8ea6c15026b223"
+   }
+  }
+ ]
+}

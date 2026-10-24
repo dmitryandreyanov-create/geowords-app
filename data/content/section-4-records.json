@@ -1,0 +1,120 @@
+{
+ "section": "seas-of-the-world",
+ "use": "unit 3 records: record cards, True/False, Pairs and GeoWords clues",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
+ "items": [
+  {
+   "id": "red-sea-saltiest",
+   "order": 1,
+   "object": "red-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Red Sea",
+    "ru": "Красное море"
+   },
+   "fact": {
+    "en": "The Red Sea is one of the saltiest seas connected to the ocean.",
+    "ru": "Красное море — одно из самых солёных морей Мирового океана."
+   },
+   "figure": {
+    "value": "40-41",
+    "unit": "psu (‰)"
+   },
+   "source": "National Academies (\"the most saline large body of ocean water\")",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "ac3dcb81d1576e91"
+   },
+   "category": "conditional"
+  },
+  {
+   "id": "bay-of-bengal-largest-bay",
+   "order": 2,
+   "object": "bay-of-bengal",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Bay of Bengal",
+    "ru": "Бенгальский залив"
+   },
+   "fact": {
+    "en": "The Bay of Bengal is the largest bay in the world.",
+    "ru": "Бенгальский залив — самый большой залив в мире."
+   },
+   "figure": {
+    "value": 2172000,
+    "unit": "km²"
+   },
+   "source": "Guinness World Records",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "da0a734dc7c5a758"
+   },
+   "category": "stable"
+  },
+  {
+   "id": "caspian-largest-inland",
+   "order": 3,
+   "object": "caspian-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Caspian Sea",
+    "ru": "Каспийское море"
+   },
+   "fact": {
+    "en": "The Caspian Sea is the largest inland body of water in the world.",
+    "ru": "Каспийское море — самый большой внутренний водоём в мире."
+   },
+   "figure": {
+    "value": 371000,
+    "unit": "km²"
+   },
+   "source": "Guinness World Records",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a1ccc31fbe75de53"
+   },
+   "category": "stable"
+  },
+  {
+   "id": "coral-sea-largest-reef",
+   "order": 4,
+   "object": "coral-sea",
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Coral Sea",
+    "ru": "Коралловое море"
+   },
+   "fact": {
+    "en": "The Coral Sea is home to the largest coral reef system in the world.",
+    "ru": "В Коралловом море находится самая большая система коралловых рифов в мире."
+   },
+   "figure": {
+    "value": 2300,
+    "unit": "km long (Great Barrier Reef)"
+   },
+   "source": "WorldAtlas",
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "4dcd121cb19e184c"
+   },
+   "category": "stable"
+  }
+ ],
+ "categoryRule": "record category (Svetlana, 2026-10-24): stable — may be used in GeoWords clues; conditional — only with its criterion in the wording (\"often called…\"); changing — only with a year (asOf) and never in clues"
+}

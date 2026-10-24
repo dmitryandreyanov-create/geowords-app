@@ -1,0 +1,416 @@
+{
+ "section": "continents-and-oceans",
+ "use": "introduction cards (exercise type 0), one fact per object",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
+ "disputedRule": "disputed facts show a \"nuance\" popup with caveat and are excluded from single-answer exercises (True/False, Pairs); see docs/app-mechanics.md. The mark belongs to the card's fact, not to the object: a disputed fact is not used in single-answer exercises, but the object itself (find, recognise, name Europe) is used as usual.",
+ "items": [
+  {
+   "id": "north",
+   "order": 1,
+   "kind": "direction",
+   "name": {
+    "en": "North",
+    "ru": "Север"
+   },
+   "fact": {
+    "en": "North points toward the North Pole. The Equator divides the Earth into the Northern and Southern Hemispheres.",
+    "ru": "Север — направление к Северному полюсу. Экватор делит Землю на Северное и Южное полушария."
+   },
+   "source": {
+    "note": "reworded by Svetlana 2026-10-24 (review #19): each direction has its own fact; hemispheres divided by the Prime Meridian and the 180° meridian"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "d342a7cef3064e8b"
+   }
+  },
+  {
+   "id": "south",
+   "order": 2,
+   "kind": "direction",
+   "name": {
+    "en": "South",
+    "ru": "Юг"
+   },
+   "fact": {
+    "en": "South points toward the South Pole. On most maps, south is at the bottom.",
+    "ru": "Юг — направление к Южному полюсу. На большинстве карт юг внизу."
+   },
+   "source": {
+    "note": "reworded by Svetlana 2026-10-24 (review #19): each direction has its own fact; hemispheres divided by the Prime Meridian and the 180° meridian"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "061e7b5857de50e8"
+   }
+  },
+  {
+   "id": "east",
+   "order": 3,
+   "kind": "direction",
+   "name": {
+    "en": "East",
+    "ru": "Восток"
+   },
+   "fact": {
+    "en": "The Sun rises in the east. The Prime Meridian and the 180° meridian divide the Earth into the Eastern and Western Hemispheres.",
+    "ru": "На востоке восходит Солнце. Нулевой меридиан и меридиан 180° делят Землю на Восточное и Западное полушария."
+   },
+   "source": {
+    "note": "reworded by Svetlana 2026-10-24 (review #19): each direction has its own fact; hemispheres divided by the Prime Meridian and the 180° meridian"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "cf8e4aab7c7bd626"
+   }
+  },
+  {
+   "id": "west",
+   "order": 4,
+   "kind": "direction",
+   "name": {
+    "en": "West",
+    "ru": "Запад"
+   },
+   "fact": {
+    "en": "The Sun sets in the west. On most maps, west is on the left.",
+    "ru": "На западе заходит Солнце. На большинстве карт запад слева."
+   },
+   "source": {
+    "note": "reworded by Svetlana 2026-10-24 (review #19): each direction has its own fact; hemispheres divided by the Prime Meridian and the 180° meridian"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "71cf372b1541002f"
+   }
+  },
+  {
+   "id": "asia",
+   "order": 5,
+   "kind": "continent",
+   "name": {
+    "en": "Asia",
+    "ru": "Азия"
+   },
+   "fact": {
+    "en": "Asia is the largest continent.",
+    "ru": "Азия — самый большой континент."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 8,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "dfbd94f06e336f4f"
+   }
+  },
+  {
+   "id": "africa",
+   "order": 6,
+   "kind": "continent",
+   "name": {
+    "en": "Africa",
+    "ru": "Африка"
+   },
+   "fact": {
+    "en": "Africa is the hottest continent.",
+    "ru": "Африка — самый жаркий континент."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 8,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "378427c416c15c24"
+   }
+  },
+  {
+   "id": "north-america",
+   "order": 7,
+   "kind": "continent",
+   "name": {
+    "en": "North America",
+    "ru": "Северная Америка"
+   },
+   "fact": {
+    "en": "Greenland, the largest island in the world, is part of North America.",
+    "ru": "Гренландия — самый большой остров в мире — относится к Северной Америке."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 16,
+    "note": "adapted wording"
+   },
+   "disputed": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "52473ae9966d2f04"
+   },
+   "caveat": {
+    "en": "Greenland is called the largest island because Australia is counted as a continent, not an island.",
+    "ru": "Гренландию называют самым большим островом, потому что Австралию считают материком, а не островом."
+   }
+  },
+  {
+   "id": "south-america",
+   "order": 8,
+   "kind": "continent",
+   "name": {
+    "en": "South America",
+    "ru": "Южная Америка"
+   },
+   "fact": {
+    "en": "South America is the wettest continent.",
+    "ru": "Южная Америка — самый влажный континент."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 18,
+    "note": "workbook wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "da0ff50e1e39adad"
+   }
+  },
+  {
+   "id": "antarctica",
+   "order": 9,
+   "kind": "continent",
+   "name": {
+    "en": "Antarctica",
+    "ru": "Антарктида"
+   },
+   "fact": {
+    "en": "Antarctica is the coldest continent.",
+    "ru": "Антарктида — самый холодный континент."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 8,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "be5007d33396f9c9"
+   }
+  },
+  {
+   "id": "europe",
+   "order": 10,
+   "kind": "continent",
+   "name": {
+    "en": "Europe",
+    "ru": "Европа"
+   },
+   "fact": {
+    "en": "Sometimes Europe and Asia are counted as one continent. Together, they are called Eurasia.",
+    "ru": "Иногда Европу и Азию считают одним материком — Евразией."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 6,
+    "note": "workbook wording"
+   },
+   "disputed": true,
+   "caveat": {
+    "en": "In this app there are 7 continents. In Russian school textbooks Europe and Asia are counted as one continent, Eurasia, so there are 6.",
+    "ru": "В этом приложении 7 континентов. В российских учебниках Европу и Азию считают одним материком — Евразией, поэтому материков 6."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "a037a7b91980d684"
+   }
+  },
+  {
+   "id": "australia",
+   "order": 11,
+   "kind": "continent",
+   "name": {
+    "en": "Australia",
+    "ru": "Австралия"
+   },
+   "fact": {
+    "en": "Australia is the smallest continent.",
+    "ru": "Австралия — самый маленький континент."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 8,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "970cce47cbea93d5"
+   }
+  },
+  {
+   "id": "pacific-ocean",
+   "order": 12,
+   "kind": "ocean",
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The Pacific Ocean is the deepest ocean.",
+    "ru": "Тихий океан — самый глубокий океан."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 10,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "b806a3854a712a6e"
+   }
+  },
+  {
+   "id": "atlantic-ocean",
+   "order": 13,
+   "kind": "ocean",
+   "name": {
+    "en": "Atlantic Ocean",
+    "ru": "Атлантический океан"
+   },
+   "fact": {
+    "en": "The Atlantic Ocean is the saltiest ocean.",
+    "ru": "Атлантический океан — самый солёный океан."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 10,
+    "note": "adapted wording"
+   },
+   "disputed": true,
+   "caveat": {
+    "en": "The Atlantic is considered the saltiest of the five oceans based on its average salinity. However, salinity varies from place to place, and some areas may be saltier or less salty than others.",
+    "ru": "Атлантический океан считают самым солёным из пяти океанов по средней солёности. Но солёность в разных местах разная: в одних местах вода солонее, в других — менее солёная."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-24",
+    "contentSha256": "a4a228f2ea1553fd"
+   }
+  },
+  {
+   "id": "indian-ocean",
+   "order": 14,
+   "kind": "ocean",
+   "name": {
+    "en": "Indian Ocean",
+    "ru": "Индийский океан"
+   },
+   "fact": {
+    "en": "The Indian Ocean is the warmest ocean.",
+    "ru": "Индийский океан — самый тёплый океан."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 10,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "d40a49d44a7f0344"
+   }
+  },
+  {
+   "id": "arctic-ocean",
+   "order": 15,
+   "kind": "ocean",
+   "name": {
+    "en": "Arctic Ocean",
+    "ru": "Северный Ледовитый океан"
+   },
+   "fact": {
+    "en": "The Arctic Ocean is the smallest ocean.",
+    "ru": "Северный Ледовитый океан — самый маленький океан."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 10,
+    "note": "adapted wording"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "081cf4d5ac580845"
+   }
+  },
+  {
+   "id": "southern-ocean",
+   "order": 16,
+   "kind": "ocean",
+   "name": {
+    "en": "Southern Ocean",
+    "ru": "Южный океан"
+   },
+   "fact": {
+    "en": "The Southern Ocean is the coldest ocean.",
+    "ru": "Южный океан — самый холодный океан."
+   },
+   "source": {
+    "book": "Level 1 Oceans & Continents.pdf",
+    "pdfPage": 10,
+    "note": "adapted wording"
+   },
+   "disputed": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-23",
+    "contentSha256": "e03ffec66294e498"
+   },
+   "caveat": {
+    "en": "The Southern Ocean is often considered the coldest ocean because of its extremely cold surface waters. However, the Arctic Ocean is also very cold, and the answer depends on how ocean temperatures are measured and compared.",
+    "ru": "Южный океан часто считают самым холодным из-за очень холодной воды у поверхности. Но Северный Ледовитый океан тоже очень холодный, и ответ зависит от того, как измерять и сравнивать температуру океанов."
+   }
+  }
+ ]
+}

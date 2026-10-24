@@ -1,0 +1,110 @@
+{
+ "block": "world-1",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "challenge": {
+  "parts": [
+   "speed-hunt",
+   "geowords"
+  ],
+  "geowords": "app-generated from the review words of sections 1-5 and the challenge-extra words; rules and the approved spot-check sample in data/geowords/challenge-block-1-sample.json"
+ },
+ "speedHunt": {
+  "durationSeconds": 60,
+  "prompt": {
+   "en": "Find:",
+   "ru": "Найди:",
+   "object": "the object name as on the map (name.en / name.ru in data/maps), shown under the prompt; no records or facts in Speed Hunt"
+  },
+  "order": "random, no object repeats within a round",
+  "correct": "+1 and the next object at once",
+  "wrong": "the right place lights up for 0.5 s; no penalty except time; the object goes into the spaced-repetition queue",
+  "skip": "allowed",
+  "hit": "a tap counts if it is inside the object tap area or within 22 CSS px of it and no other object in the pool is closer; when several are near, the nearest object wins",
+  "excluded": {
+   "ids": [
+    "bering-strait",
+    "bosporus",
+    "dardanelles"
+   ],
+   "why": "answered in magnifier insets; no time to open a magnifier in 60 s"
+  },
+  "score": "objects found in the round + personal best",
+  "stars": {
+   "thresholds": [
+    10,
+    15,
+    20
+   ],
+   "provisional": true,
+   "note": "tune after testing with children"
+  },
+  "pool": {
+   "continents-oceans": [
+    "asia",
+    "africa",
+    "north-america",
+    "south-america",
+    "antarctica",
+    "europe",
+    "australia",
+    "pacific-ocean",
+    "atlantic-ocean",
+    "indian-ocean",
+    "arctic-ocean",
+    "southern-ocean"
+   ],
+   "rivers": [
+    "nile",
+    "amazon",
+    "mississippi",
+    "yangtze",
+    "huang-he",
+    "ganges",
+    "indus",
+    "danube",
+    "volga"
+   ],
+   "mountains": [
+    "himalayas",
+    "ural",
+    "cordillera",
+    "andes",
+    "appalachians",
+    "east-africa",
+    "great-dividing-range",
+    "atlas",
+    "caucasus",
+    "pyrenees",
+    "mid-atlantic-ridge"
+   ],
+   "seas": [
+    "arabian-sea",
+    "hudson-bay",
+    "red-sea",
+    "black-sea",
+    "coral-sea",
+    "caribbean-sea",
+    "caspian-sea",
+    "gulf-of-mexico",
+    "bay-of-bengal",
+    "mediterranean-sea"
+   ],
+   "straits-and-canals": [
+    "drake-passage",
+    "panama-canal",
+    "strait-of-gibraltar",
+    "english-channel",
+    "strait-of-malacca",
+    "bab-el-mandeb",
+    "suez-canal",
+    "mozambique-channel",
+    "strait-of-hormuz",
+    "gulf-of-oman",
+    "strait-of-magellan"
+   ]
+  },
+  "poolSize": 53
+ }
+}

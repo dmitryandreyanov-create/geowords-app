@@ -1,0 +1,119 @@
+{
+ "block": "world-1",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "one block-final word per language; the block-review unit uses it as its final GeoWords, and Challenge reuses the review words of sections 1-5",
+  "languages": "EN and RU lists are independent",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "challengeExtra": "extra words used only in Challenge GeoWords (Svetlana, 2026-10-23): CONTINENTALITY, EVAPOTRANSPIRATION, PRECIPITATION / МЕЖЛЕДНИКОВЬЕ, ГЛУБОКОВОДЬЕ. Words repeated across sections (RAINFOREST, SHIPWRECK, КОРАБЛЕКРУШЕНИЕ) are used once in Challenge",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
+ },
+ "units": [
+  {
+   "id": "challenge-extra",
+   "title": {
+    "en": "Challenge words",
+    "ru": "Слова Challenge"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CONTINENTALITY",
+      "role": "challenge",
+      "definition": "How strongly the climate of a place is affected by being far from the ocean: the farther inland, the bigger the difference between summer and winter temperatures.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a7cb932497c676ba"
+      }
+     },
+     {
+      "answer": "EVAPOTRANSPIRATION",
+      "role": "challenge",
+      "definition": "Water rising into the air from the land: it dries up from soil, lakes and rivers and is given off by plants through tiny holes in their leaves.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "c69d0adb51703b8d"
+      }
+     },
+     {
+      "answer": "PRECIPITATION",
+      "role": "challenge",
+      "definition": "Water that falls from clouds to the ground as rain, snow, sleet or hail.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "49b14575b2fc97dd"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "МЕЖЛЕДНИКОВЬЕ",
+      "role": "challenge",
+      "definition": "Тёплая эпоха, разделяющая два великих похолодания в истории Земли; сейчас на планете как раз такая эпоха.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "32579b1d5dee2fc4"
+      }
+     },
+     {
+      "answer": "ГЛУБОКОВОДЬЕ",
+      "role": "challenge",
+      "definition": "Участок моря, озера или реки, где очень далеко до дна, вдали от мелей и берега.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "45636e8d628b5c24"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "en": "Block final",
+    "ru": "Итог блока"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CARTOGRAPHER",
+      "role": "block-final",
+      "definition": "A person who makes maps.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "eef46ab03392ffa4"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПУТЕШЕСТВЕННИК",
+      "role": "block-final",
+      "definition": "Человек, который ездит, ходит или плывёт по разным странам, чтобы увидеть новые места.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "5162c815477e07d3"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

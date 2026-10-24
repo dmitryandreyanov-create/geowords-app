@@ -1,0 +1,586 @@
+{
+ "section": "mountains-of-the-world",
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-23",
+ "rules": {
+  "structure": "3 units x (1 final + 6 review) + section final; units follow the workbook order of the 11 ranges (4 + 4 + 3); intro card (summit, slope, foot) before the section",
+  "languages": "EN and RU lists are independent; the workbook has no Russian words",
+  "fromWorkbook": "all 11 English workbook words are used (definitions from the workbook, some refined by Svetlana)",
+  "notes": "SNOWLINE kept (Merriam-Webster spells \"snow line\"; the definition says so). WATERSHED in its American sense (drainage basin). FRONTIER kept by Svetlana. ПОДВОДНЫЙ replaced with БАТИСКАФ; ОБЛЕДЕНЕНИЕ -> ОЛЕДЕНЕНИЕ",
+  "checked": "Kilimanjaro is a volcanic massif of stratovolcanoes; the Pyrenees form much of the France-Spain border (Andorra lies in the range); the Mid-Atlantic Ridge is mostly underwater, above sea level in Iceland and some islands",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
+ },
+ "units": [
+  {
+   "id": "unit-1-himalayas-ural-cordillera-andes",
+   "title": {
+    "en": "Himalayas, Ural, Cordillera, Andes",
+    "ru": "Гималаи, Урал, Кордильеры, Анды"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "LANDSLIDE",
+      "role": "final",
+      "definition": "A large amount of rock and soil moving down a slope.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ee4ec368e4be6c0b"
+      }
+     },
+     {
+      "answer": "GRANITE",
+      "role": "review",
+      "definition": "A hard rock that forms when hot melted rock (magma) cools slowly deep underground.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "0d27fcc36c1558aa"
+      }
+     },
+     {
+      "answer": "ELEVATION",
+      "role": "review",
+      "definition": "The height of a place above sea level.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "54b682c606556641"
+      }
+     },
+     {
+      "answer": "FOOTHILLS",
+      "role": "review",
+      "definition": "Low, rolling land at the base of a range.",
+      "uniqueAfterLetters": 8,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "a050cf2e8f7c0d63"
+      }
+     },
+     {
+      "answer": "AVALANCHE",
+      "role": "review",
+      "definition": "A large mass of snow and ice moving quickly down a mountain.",
+      "uniqueAfterLetters": 6,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "84734b26b61a4475"
+      }
+     },
+     {
+      "answer": "SNOWLINE",
+      "role": "review",
+      "definition": "The lowest level on a mountain above which the ground stays white all year round (also written as two words).",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "079fb113a049f9e2"
+      }
+     },
+     {
+      "answer": "MOUNTAINEER",
+      "role": "review",
+      "definition": "A person who climbs high peaks.",
+      "uniqueAfterLetters": 11,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "e2ba43e9842e57a5"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ОПОЛЗЕНЬ",
+      "role": "final",
+      "definition": "Смещение масс земли и горных пород вниз по склону под действием силы тяжести.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "0457f59946db0bfe"
+      }
+     },
+     {
+      "answer": "ПРЕДГОРЬЕ",
+      "role": "review",
+      "definition": "Возвышенная местность у подножия хребта.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "a229d44de6572e38"
+      }
+     },
+     {
+      "answer": "АЛЬПИНИСТ",
+      "role": "review",
+      "definition": "Человек, который поднимается на горные вершины.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "8c18a0d2a6839e7b"
+      }
+     },
+     {
+      "answer": "СНЕЖНИК",
+      "role": "review",
+      "definition": "Белое пятно слежавшегося зимнего покрова, которое лежит в горах дольше обычного, иногда круглый год.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "42e0e27b9035a22f"
+      }
+     },
+     {
+      "answer": "ВЫСОТОМЕР",
+      "role": "review",
+      "definition": "Прибор, показывающий, на сколько метров над уровнем моря поднялся самолёт или альпинист.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "1d989092ce4dc976"
+      }
+     },
+     {
+      "answer": "КАМНЕПАД",
+      "role": "review",
+      "definition": "Обрушение обломков горных пород с крутого склона или скалы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "63a363d2da32e7bd"
+      }
+     },
+     {
+      "answer": "НАГОРЬЕ",
+      "role": "review",
+      "definition": "Обширная возвышенная территория, где хребты чередуются с равнинами и плато.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "fc456e49320baf80"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-appalachians-east-africa-great-dividing-range-atlas",
+   "title": {
+    "en": "Appalachians, East Africa, Great Dividing Range, Atlas",
+    "ru": "Аппалачи, горы Восточной Африки, Большой Водораздельный хребет, Атлас"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "WEATHERING",
+      "role": "final",
+      "definition": "The breaking down of rocks into smaller pieces, or the changing of their minerals by water and air, without moving them to another place.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "a36a7f91a70a645b"
+      }
+     },
+     {
+      "answer": "ESCARPMENT",
+      "role": "review",
+      "definition": "A steep slope or cliff that separates two areas of land at different heights.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "827ceb3d5958285f"
+      }
+     },
+     {
+      "answer": "TIMBERLINE",
+      "role": "review",
+      "definition": "The upper boundary of an area where trees can grow on a mountain.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "46c453b9ed76678a"
+      }
+     },
+     {
+      "answer": "VOLCANO",
+      "role": "review",
+      "definition": "A mountain formed by lava and ash from deep inside the Earth; Kilimanjaro in East Africa is one.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "d27ec4aa1bdee854"
+      }
+     },
+     {
+      "answer": "PLATEAU",
+      "role": "review",
+      "definition": "A large area of high, fairly flat land.",
+      "uniqueAfterLetters": 6,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "0595df6f23e6a715"
+      }
+     },
+     {
+      "answer": "EROSION",
+      "role": "review",
+      "definition": "The wearing away of rock and soil by water, wind or ice.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "ef0f359406f2ba33"
+      }
+     },
+     {
+      "answer": "WATERSHED",
+      "role": "review",
+      "definition": "An area of land where all the rain and snow drain into the same river or lake.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "046946d1aa221b57"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ВЫВЕТРИВАНИЕ",
+      "role": "final",
+      "definition": "Медленное разрушение горных пород под действием солнца, воды, мороза и живых организмов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "4b60e0872f5c8727"
+      }
+     },
+     {
+      "answer": "ПЛОСКОГОРЬЕ",
+      "role": "review",
+      "definition": "Высокая равнина с ровной или слегка холмистой поверхностью.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "7038861534e07ea9"
+      }
+     },
+     {
+      "answer": "СТРАТОВУЛКАН",
+      "role": "review",
+      "definition": "Конусообразная огнедышащая гора из чередующихся слоёв застывшей лавы и пепла; такие горы образуют массив Килиманджаро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "ccedefc66dac61e4"
+      }
+     },
+     {
+      "answer": "КРИВОЛЕСЬЕ",
+      "role": "review",
+      "definition": "Низкорослые, изогнутые ветром и морозом деревья у верхней границы древесной растительности в горах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "7675eff975eda632"
+      }
+     },
+     {
+      "answer": "КРУТИЗНА",
+      "role": "review",
+      "definition": "Степень наклона склона.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "f1c5fa37854e19e1"
+      }
+     },
+     {
+      "answer": "ПЕРЕВАЛ",
+      "role": "review",
+      "definition": "Понижение в горном хребте, через которое удобнее всего перейти горы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "50ef2c151b2b9c5f"
+      }
+     },
+     {
+      "answer": "ОЛЕДЕНЕНИЕ",
+      "role": "review",
+      "definition": "Процесс, при котором огромные массы замёрзшей воды надолго покрывают сушу.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "c18297783dfb2e19"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-caucasus-pyrenees-mid-atlantic-ridge-records",
+   "title": {
+    "en": "Caucasus, Pyrenees, Mid-Atlantic Ridge and records",
+    "ru": "Кавказ, Пиренеи, Срединно-Атлантический хребет и рекорды"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "MOUNTAINTOP",
+      "role": "final",
+      "definition": "The very highest point of a peak, where climbers aim to stand.",
+      "uniqueAfterLetters": 9,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "13a16b843c6ed739"
+      }
+     },
+     {
+      "answer": "ROCKFALL",
+      "role": "review",
+      "definition": "Loose stones and boulders tumbling down a steep slope or cliff.",
+      "uniqueAfterLetters": 7,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "85b4e1d236aa1166"
+      }
+     },
+     {
+      "answer": "UNDERWATER",
+      "role": "review",
+      "definition": "Below the surface of the water; the Mid-Atlantic Ridge is a mountain range hidden mostly beneath the ocean.",
+      "uniqueAfterLetters": 9,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "892056b45386fcca"
+      }
+     },
+     {
+      "answer": "EARTHQUAKE",
+      "role": "review",
+      "definition": "A sudden shaking of the ground caused by movements deep inside the Earth.",
+      "uniqueAfterLetters": 10,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "293ce05d618e28a1"
+      }
+     },
+     {
+      "answer": "FRONTIER",
+      "role": "review",
+      "definition": "A border between two countries; the Pyrenees form much of the border between France and Spain.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "572e16c57bf51332"
+      }
+     },
+     {
+      "answer": "HIGHLANDS",
+      "role": "review",
+      "definition": "A region of hills and mountains, such as northern Scotland.",
+      "uniqueAfterLetters": 7,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "a86e09bec58cbd08"
+      }
+     },
+     {
+      "answer": "PRECIPICE",
+      "role": "review",
+      "definition": "A very steep, almost vertical cliff.",
+      "uniqueAfterLetters": 8,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "3fc1ffee62998f84"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ЗЕМЛЕТРЯСЕНИЕ",
+      "role": "final",
+      "definition": "Внезапные толчки и колебания почвы, вызванные движениями в глубине планеты.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "a7e3d25f5402ab07"
+      }
+     },
+     {
+      "answer": "БАТИСКАФ",
+      "role": "review",
+      "definition": "Аппарат для погружения на большие глубины; на таких аппаратах учёные исследуют подводные хребты.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "eda9df8f26c8ec9b"
+      }
+     },
+     {
+      "answer": "ГРАНИЦА",
+      "role": "review",
+      "definition": "Линия, разделяющая территории государств; Пиренеи отделяют Францию от Испании.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "00b594fdfefa15ae"
+      }
+     },
+     {
+      "answer": "ПРОПАСТЬ",
+      "role": "review",
+      "definition": "Очень глубокая расщелина или обрыв с отвесными стенами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "b2f4be7f5cd0b110"
+      }
+     },
+     {
+      "answer": "ВОСХОЖДЕНИЕ",
+      "role": "review",
+      "definition": "Подъём на горную вершину.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "df24ccd9ba247c13"
+      }
+     },
+     {
+      "answer": "ЛЕДОРУБ",
+      "role": "review",
+      "definition": "Инструмент альпиниста с клювом и штычком для подъёма по крутым замёрзшим склонам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-24",
+       "contentSha256": "0a1f238892e3090c"
+      }
+     },
+     {
+      "answer": "СЕЙСМОГРАФ",
+      "role": "review",
+      "definition": "Прибор, который регистрирует колебания грунта, например при землетрясениях.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "71d93c9f6c2aa9a6"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "en": "Section final",
+    "ru": "Итог раздела"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "OROGENESIS",
+      "role": "section-final",
+      "definition": "The process by which mountains are formed.",
+      "uniqueAfterLetters": 10,
+      "fromWorkbook": true,
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "64ac4bbe814ac2cb"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ОРОГЕНЕЗ",
+      "role": "section-final",
+      "definition": "Процесс образования гор (горообразование).",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-23",
+       "contentSha256": "e175c7d0599a3276"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -130,8 +130,29 @@ jobs:
       - name: Play full L1 phone trial at phone width
         run: node scripts/validate-l1-phone-browser.mjs
 
+      - name: Validate dictionary
+        run: |
+          node scripts/validate-dictionary.mjs
+          node scripts/test-validate-dictionary.mjs
+
       - name: Validate map data and assets
-        run: node scripts/validate-maps.mjs
+        run: |
+          node scripts/validate-maps.mjs
+          node scripts/test-validate-maps.mjs
+
+      - name: Validate teaching content and approvals
+        run: |
+          node scripts/validate-content.mjs
+          node scripts/test-validate-content.mjs
+
+      - name: Validate GeoWords puzzles
+        run: |
+          node scripts/validate-geowords.mjs
+          node scripts/test-validate-geowords.mjs
+          node scripts/validate-challenge.mjs
+          node scripts/test-validate-challenge.mjs
+          node scripts/validate-review.mjs
+          node scripts/test-validate-review.mjs
 
   deploy:
     if: github.event_name != 'pull_request' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/gpt/unified-geowords-engine')
