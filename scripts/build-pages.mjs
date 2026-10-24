@@ -13,6 +13,8 @@ const named=[
   'engine/geowords.js','engine/semantic.js',
   'game/fun.js','game/fun.css',
   'assets/pip/pip-poses-v1.png',
+  'graphics/index.html','graphics/gallery.css','graphics/gallery.js','data/graphics-manifest.json',
+  ...JSON.parse(fs.readFileSync(path.join(root,'data/graphics-manifest.json'),'utf8')).assets.filter(a=>a.status==='ready').map(a=>a.path),
   'data/l1-phone.js','engine/l1-phone.js',
   'assets/l1-trial/l1-clean-map-1.webp','assets/l1-trial/l1-clean-map-2.webp',
   'assets/icon-180.png','assets/icon-192.png','assets/icon-512.png',

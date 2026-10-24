@@ -203,7 +203,7 @@ function say(text,mood){
   g.classList.remove("happy","sad","hint","pop");void g.offsetWidth;
   g.classList.add("pop");if(mood)g.classList.add(mood);
   const art=g.querySelector('.pip-art');
-  if(art)art.dataset.pose=mood==='happy'?'celebrate':mood==='sad'?'encourage':mood==='hint'?'map':'greet';
+  if(art)art.dataset.pose=mood==='happy'?'celebrate':mood==='sad'?'oops':mood==='hint'?'spyglass':'greet';
 }
 const clueObserver=new MutationObserver(()=>{
   const t=$("clueText")?.textContent;

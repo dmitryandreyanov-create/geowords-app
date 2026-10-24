@@ -296,6 +296,12 @@ try{
  const game=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
  await game.addInitScript(()=>{const later=window.setTimeout;window.setTimeout=(fn,ms,...args)=>later(fn,ms<=1500?10:ms,...args)});
  const gp=await game.newPage();gp.on('pageerror',e=>errors.push(e.message));await gp.goto(url+'/release/');
+ await gp.locator('a[href="./graphics/"]').click();await gp.waitForSelector('article img');
+ assert.equal(await gp.locator('article img').count(),8);assert.match(await gp.locator('#progress').innerText(),/8 из 76/);
+ for(const img of await gp.locator('article img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(im=>im.decode());assert(await img.evaluate(im=>im.naturalWidth>0&&im.naturalHeight>0))}
+ assert(await gp.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'graphics gallery fits phone');
+ await gp.locator('#background').click();assert(await gp.locator('body').evaluate(el=>el.classList.contains('teal')));
+ await gp.goto(url+'/release/');
  await gp.locator('#riversBtn').click();
  for(let step=0;step<3;step++){
   for(let word=0;word<7;word++){

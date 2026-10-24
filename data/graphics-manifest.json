@@ -1,0 +1,646 @@
+{
+  "version": 1,
+  "style": "GeoWords Expedition — approved Pip reference",
+  "assets": [
+    {
+      "file": "pip-sheet.png",
+      "group": "A. Пип: опорный лист",
+      "description": "Пип в базовом костюме спереди, в три четверти и сзади, нейтральная поза. Опора для всех остальных рисунков, чтобы персонаж не «плыл»",
+      "priority": "MVP",
+      "status": "ready",
+      "path": "assets/pip/pip-sheet.png",
+      "width": 2048,
+      "height": 1024,
+      "sha256": "7e5b41d950411fe4a3c4b91d134bc0f79e89ffa1aa3a5e826a39133033568c26",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-hello.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Машет лапой, улыбается (левая верхняя на листе)",
+      "priority": "готово",
+      "status": "ready",
+      "path": "assets/pip/pip-hello.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "abc0d702802c174f49ab6a5f1b06512b6ca51e9dbc335b57892d6428e4ee9ab6",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-yes.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Прыжок с поднятыми лапами, глаза зажмурены от радости (правая верхняя)",
+      "priority": "готово",
+      "status": "ready",
+      "path": "assets/pip/pip-yes.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "f1e9a9cab0195955c9d2feccd22ce81c9b3d081941b1e96f778e2d7d24f0a10f",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-map.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Читает развёрнутую карту (левая нижняя)",
+      "priority": "готово",
+      "status": "ready",
+      "path": "assets/pip/pip-map.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "0719196f637ccf459828140b90ede5bb7770fc8d07acddc27e4bafa800e3018e",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-point-left.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Показывает лапой влево (от зрителя), ободряющая улыбка (правая нижняя)",
+      "priority": "готово",
+      "status": "ready",
+      "path": "assets/pip/pip-point-left.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "20a02d542dcca9e0f58be5fcb356039d749c810b52aabf8c9a40cfa3110b1165",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-oops.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Почёсывает затылок под панамой, смущённая улыбка «ой, не туда»",
+      "priority": "MVP",
+      "status": "ready",
+      "path": "assets/pip/pip-oops.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "9f2c5f8ce4427da89df5b8eb48db6a253658b3df379b4051ccde82a1d4a6eef7",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-spyglass.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Смотрит в подзорную трубу",
+      "priority": "MVP",
+      "status": "ready",
+      "path": "assets/pip/pip-spyglass.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "7ea769bb3949d99f439a3154c255a2bb262b756c629d180fa883554cb38989d1",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-cheer.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Подбрасывает панаму, вокруг конфетти",
+      "priority": "MVP",
+      "status": "ready",
+      "path": "assets/pip/pip-cheer.png",
+      "width": 1024,
+      "height": 1024,
+      "sha256": "636f18293d41322bf7f19b1315ef0900bf315361b474f168b55ad976d719b009",
+      "visualReview": "awaiting_phone_review"
+    },
+    {
+      "file": "pip-point-right.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Показывает лапой вправо (от зрителя), мордочкой к зрителю; не зеркальное отражение — рюкзак и платок на своих местах",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-point-right.png"
+    },
+    {
+      "file": "pip-wonder.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Удивлённо поднял брови, лапа у подбородка",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-wonder.png"
+    },
+    {
+      "file": "pip-sleep.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Спит в спальном мешке у маленькой палатки, панама на носу",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-sleep.png"
+    },
+    {
+      "file": "pip-wave-bye.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Машет на прощание, уходя с рюкзаком",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-wave-bye.png"
+    },
+    {
+      "file": "pip-face-happy.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Улыбка",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-face-happy.png"
+    },
+    {
+      "file": "pip-face-oops.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Смущённая улыбка",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-face-oops.png"
+    },
+    {
+      "file": "pip-face-wow.png",
+      "group": "B. Пип: позы и эмоции (базовый костюм: панама, платок, рюкзак), 1024×1024",
+      "description": "Восторг",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-face-wow.png"
+    },
+    {
+      "file": "pip-outfit-1-explorer.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Читатель карт",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-1-explorer.png"
+    },
+    {
+      "file": "pip-outfit-2-scout.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Следопыт",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-2-scout.png"
+    },
+    {
+      "file": "pip-outfit-3-pathfinder.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Первопроходец",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-3-pathfinder.png"
+    },
+    {
+      "file": "pip-outfit-4-navigator.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Штурман",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-4-navigator.png"
+    },
+    {
+      "file": "pip-outfit-5-captain.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Капитан",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-5-captain.png"
+    },
+    {
+      "file": "pip-outfit-6-legend.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Легендарный путешественник",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/pip/pip-outfit-6-legend.png"
+    },
+    {
+      "file": "rank-1-map.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Свёрнутая карта",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-1-map.png"
+    },
+    {
+      "file": "rank-2-boot.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Походный ботинок",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-2-boot.png"
+    },
+    {
+      "file": "rank-3-compass.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Компас",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-3-compass.png"
+    },
+    {
+      "file": "rank-4-sail.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Парусник",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-4-sail.png"
+    },
+    {
+      "file": "rank-5-anchor.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Якорь",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-5-anchor.png"
+    },
+    {
+      "file": "rank-6-globe.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Золотой глобус",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/rank-6-globe.png"
+    },
+    {
+      "file": "pip-gear-continents.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Материки и океаны",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-gear-continents.png"
+    },
+    {
+      "file": "pip-gear-rivers.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Реки мира",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-gear-rivers.png"
+    },
+    {
+      "file": "pip-gear-mountains.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Горы",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-gear-mountains.png"
+    },
+    {
+      "file": "pip-gear-seas.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Моря",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-gear-seas.png"
+    },
+    {
+      "file": "pip-gear-straits.png",
+      "group": "C. Костюмы Пипа по званиям, 1024×1024",
+      "description": "Проливы и каналы",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/pip/pip-gear-straits.png"
+    },
+    {
+      "file": "stamp-continents.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Материки и океаны",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-continents.png"
+    },
+    {
+      "file": "stamp-rivers.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Реки мира",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-rivers.png"
+    },
+    {
+      "file": "stamp-mountains.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Горы",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-mountains.png"
+    },
+    {
+      "file": "stamp-seas.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Моря",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-seas.png"
+    },
+    {
+      "file": "stamp-straits.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Проливы и каналы",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-straits.png"
+    },
+    {
+      "file": "stamp-block-world.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Итог блока «Мир»",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-block-world.png"
+    },
+    {
+      "file": "stamp-challenge.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "Challenge (Speed Hunt)",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/stamp-challenge.png"
+    },
+    {
+      "file": "stamp-ink-texture.png",
+      "group": "D. Штампы паспорта (за пройденный раздел), 512×512",
+      "description": "—",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/stamp-ink-texture.png"
+    },
+    {
+      "file": "passport-cover.png",
+      "group": "E. Паспорт путешественника",
+      "description": "Закрытый паспорт: тёмно-бирюзовая обложка с потёртостями, золотой глобус-эмблема, место под надпись пустое",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/passport-cover.png"
+    },
+    {
+      "file": "passport-page.png",
+      "group": "E. Паспорт путешественника",
+      "description": "Разворот паспорта: бумага с водяным узором из меридианов и роз ветров, без штампов",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/passport-page.png"
+    },
+    {
+      "file": "medal-unit.png",
+      "group": "F. Медали за итог юнита, 512×512",
+      "description": "Круглая медаль на ленте, в центре компас; металл золотой",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/medal-unit.png"
+    },
+    {
+      "file": "medal-unit-silver.png",
+      "group": "F. Медали за итог юнита, 512×512",
+      "description": "То же, серебро (слово собрано с подсказкой)",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/medal-unit-silver.png"
+    },
+    {
+      "file": "medal-section.png",
+      "group": "F. Медали за итог юнита, 512×512",
+      "description": "Большая медаль с лавровым венком (итог раздела)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/medal-section.png"
+    },
+    {
+      "file": "path-lesson.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Круглая деревянная табличка-остановка (пустая, без цифр)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-lesson.png"
+    },
+    {
+      "file": "path-lesson-done.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Та же табличка с флажком",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-lesson-done.png"
+    },
+    {
+      "file": "path-lesson-locked.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Табличка, перевязанная верёвкой",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-lesson-locked.png"
+    },
+    {
+      "file": "path-unit-final.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Флаг на флагштоке (итог юнита)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-unit-final.png"
+    },
+    {
+      "file": "path-section-final.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Сундук с открытой крышкой (итог раздела)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-section-final.png"
+    },
+    {
+      "file": "path-challenge.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Песочные часы (Challenge)",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/path-challenge.png"
+    },
+    {
+      "file": "path-pip-boat.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Пип в маленькой лодке под парусом, вид сбоку (метка «ты здесь»)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-pip-boat.png"
+    },
+    {
+      "file": "path-trail-dot.png",
+      "group": "G. Главная: путь уроков по карте",
+      "description": "Капля оранжевых чернил для пунктира маршрута",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/path-trail-dot.png"
+    },
+    {
+      "file": "icon-star.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Звезда (звёзды за слово)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-star.png"
+    },
+    {
+      "file": "icon-xp.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Золотая монета с компасом (очки опыта)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-xp.png"
+    },
+    {
+      "file": "icon-streak.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Походный костёр (серия дней)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-streak.png"
+    },
+    {
+      "file": "icon-freeze.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Костёр под ледяным колпаком (заморозка серии)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-freeze.png"
+    },
+    {
+      "file": "icon-hint.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Подзорная труба",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-hint.png"
+    },
+    {
+      "file": "icon-nuance.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Лупа над листком (Есть нюанс)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-nuance.png"
+    },
+    {
+      "file": "icon-sound.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Ракушка-рупор (звук / прочитать вслух)",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/icon-sound.png"
+    },
+    {
+      "file": "icon-goal.png",
+      "group": "H. Иконки интерфейса, 128×128, одна линейка",
+      "description": "Флажок на холме (дневная цель)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/icon-goal.png"
+    },
+    {
+      "file": "scene-welcome.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пип с рюкзаком стоит на краю большой развёрнутой карты мира, рассвет",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/scene-welcome.png"
+    },
+    {
+      "file": "scene-rank-up.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пип на вершине холма поднимает флаг, внизу облака",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/scene-rank-up.png"
+    },
+    {
+      "file": "scene-streak.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пип у костра под звёздами",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/scene-streak.png"
+    },
+    {
+      "file": "scene-parents.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пип с паспортом и тремя маленькими рюкзаками (семья)",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/scene-parents.png"
+    },
+    {
+      "file": "scene-offline.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пип держит карту, у которой оторвался угол",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/scene-offline.png"
+    },
+    {
+      "file": "intro-continents-oceans.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Материки и океаны, стороны света (север сверху, экватор, нулевой меридиан) — схема без подписей",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/intro-continents-oceans.png"
+    },
+    {
+      "file": "intro-seas.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Что такое море и залив — схема берега без подписей",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/intro-seas.png"
+    },
+    {
+      "file": "intro-straits.png",
+      "group": "I. Сцены (со своим фоном), 1600×1000",
+      "description": "Пролив и канал — схема без подписей",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/intro-straits.png"
+    },
+    {
+      "file": "avatar-owl.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Сова в очках-гогглах",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-owl.png"
+    },
+    {
+      "file": "avatar-turtle.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Черепаха с картой",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-turtle.png"
+    },
+    {
+      "file": "avatar-penguin.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Пингвин в шарфе",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-penguin.png"
+    },
+    {
+      "file": "avatar-whale.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Кит в капитанской фуражке",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-whale.png"
+    },
+    {
+      "file": "avatar-goat.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Горный козёл с ледорубом",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-goat.png"
+    },
+    {
+      "file": "avatar-camel.png",
+      "group": "J. Аватары детей (профили), 512×512, круглый кадр",
+      "description": "Верблюд с флягой",
+      "priority": "потом",
+      "status": "planned",
+      "path": "assets/graphics/avatar-camel.png"
+    },
+    {
+      "file": "app-icon.png",
+      "group": "K. Иконка приложения",
+      "description": "Голова Пипа в зелёной панаме на бирюзовом круге с меридианами, без текста; заполняет квадрат без прозрачности",
+      "priority": "MVP",
+      "status": "planned",
+      "path": "assets/graphics/app-icon.png"
+    }
+  ]
+}

@@ -121,6 +121,9 @@ jobs:
       - name: Validate explicit Pages release manifest
         run: node scripts/build-pages.mjs
 
+      - name: Validate delivered graphics
+        run: node scripts/validate-graphics.mjs
+
       - name: Browser regression at phone width
         run: npm run test:browser
 
