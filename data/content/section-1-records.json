@@ -1,7 +1,7 @@
 {
  "section": "continents-and-oceans",
  "use": "unit 4 «Соседи и рекорды»: record cards and True/False, Pairs; figures are rounded for children, exact values in figure",
- "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {name, fact, caveat} (JSON, sorted keys, UTF-8), same as section-1-facts.json",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged).",
  "items": [
   {
    "id": "asia-largest",
@@ -27,8 +27,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "a16231606c662511"
-   }
+    "contentSha256": "4271f0eca2c1b881"
+   },
+   "category": "stable"
   },
   {
    "id": "australia-smallest",
@@ -54,8 +55,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "901179089de936c0"
-   }
+    "contentSha256": "b4ff27462c9c446d"
+   },
+   "category": "stable"
   },
   {
    "id": "antarctica-coldest",
@@ -68,8 +70,8 @@
     "ru": "Антарктида"
    },
    "fact": {
-    "en": "The lowest temperature ever recorded on Earth, −89.2 °C, was measured at Vostok Station in Antarctica on 21 July 1983.",
-    "ru": "Самая низкая температура на Земле, −89,2 °C, была измерена на станции «Восток» в Антарктиде 21 июля 1983 года."
+    "en": "The lowest temperature ever measured by a weather station on Earth, −89.2 °C, was recorded at Vostok Station in Antarctica on 21 July 1983.",
+    "ru": "Самая низкая температура на Земле, измеренная метеостанцией, — −89,2 °C: её зафиксировали на станции «Восток» в Антарктиде 21 июля 1983 года."
    },
    "figure": {
     "value": -89.2,
@@ -80,9 +82,10 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "cefba24b203c9ccf"
-   }
+    "date": "2026-10-24",
+    "contentSha256": "f5cf3ac1ef7e6081"
+   },
+   "category": "stable"
   },
   {
    "id": "pacific-largest",
@@ -108,8 +111,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "bca97fb1f22a7123"
-   }
+    "contentSha256": "801947105ea2e5bc"
+   },
+   "category": "stable"
   },
   {
    "id": "pacific-deepest",
@@ -135,8 +139,9 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "a5cc5e58660b2fbb"
-   }
+    "contentSha256": "d079b1faf9a74264"
+   },
+   "category": "stable"
   },
   {
    "id": "arctic-smallest-shallowest",
@@ -163,8 +168,10 @@
     "status": "approved",
     "by": "Svetlana",
     "date": "2026-10-23",
-    "contentSha256": "a42aeb6f5dd825f9"
-   }
+    "contentSha256": "c4d71a949f090520"
+   },
+   "category": "stable"
   }
- ]
+ ],
+ "categoryRule": "record category (Svetlana, 2026-10-24): stable — may be used in GeoWords clues; conditional — only with its criterion in the wording (\"often called…\"); changing — only with a year (asOf) and never in clues"
 }
