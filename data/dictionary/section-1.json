@@ -14,7 +14,9 @@
   "mechanics": "GeoWords mechanics (letters on map objects, revealed out of order) are in docs/app-mechanics.md; this file is vocabulary only",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition} (JSON, sorted keys, UTF-8). Any change needs re-approval.",
   "review": "definitions are an editorial version; final scientific check before release",
-  "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)"
+  "unit1": "unit 1 final is a short word (ЗЕНИТ 5 / ZENITH 6 letters): one letter per place — Equator, north, south, east, west (+ Prime Meridian in EN), as in the workbook; HEMISPHERE / ПОЛУШАРИЕ moved to review, replacing CARDINAL / ОРИЕНТИР (approved 2026-10-23)",
+  "workbookAnswers": "answers from the printed GeoWords workbooks are used in the app deliberately (Svetlana, 2026-10-24)",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); validate-dictionary.mjs checks the exact word and its forms"
  },
  "sources": {
   "PANGAEA": "USGS: about 300–200 million years ago; break-up began about 225–200 million years ago"
@@ -79,13 +81,13 @@
      {
       "answer": "PARALLEL",
       "role": "review",
-      "definition": "An imaginary circle around Earth, parallel to the Equator.",
+      "definition": "An imaginary circle around Earth that stays the same distance from the Equator all the way round.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "5d02b403876c44a3"
+       "date": "2026-10-24",
+       "contentSha256": "9f182a8a492220b5"
       }
      },
      {
@@ -161,23 +163,23 @@
      {
       "answer": "ПАРАЛЛЕЛЬ",
       "role": "review",
-      "definition": "Воображаемая окружность на поверхности Земли, параллельная экватору.",
+      "definition": "Воображаемая окружность на поверхности Земли, которая везде проходит на одном расстоянии от экватора.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "065c76c6b15ec8cf"
+       "date": "2026-10-24",
+       "contentSha256": "e802967758d56f96"
       }
      },
      {
       "answer": "ПОЛУШАРИЕ",
       "role": "review",
-      "definition": "Половина земного шара. Экватор делит Землю на Северное и Южное полушария, а нулевой и противоположный ему меридианы — на Восточное и Западное.",
+      "definition": "Половина земного шара. Экватор делит Землю на северную и южную половины, а нулевой и противоположный ему меридианы — на восточную и западную.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "7d83529c966a8a54"
+       "date": "2026-10-24",
+       "contentSha256": "97b343f87d25a6f6"
       }
      },
      {
@@ -217,13 +219,13 @@
      {
       "answer": "LANDMASS",
       "role": "review",
-      "definition": "A large continuous area of land, such as a continent.",
+      "definition": "A very large continuous area of the Earth's surface not covered by water, such as a continent.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "22bab3f3596e9958"
+       "date": "2026-10-24",
+       "contentSha256": "5a9a7c4f140a3035"
       }
      },
      {
@@ -253,13 +255,13 @@
      {
       "answer": "MAINLAND",
       "role": "review",
-      "definition": "The main part of a country or continent, not its islands.",
+      "definition": "The largest connected part of a country or continent, as opposed to its islands.",
       "uniqueAfterLetters": 7,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "45979c07fb4bdd49"
+       "date": "2026-10-24",
+       "contentSha256": "9e32f1dfb6557353"
       }
      },
      {
@@ -277,13 +279,14 @@
      {
       "answer": "LOWLANDS",
       "role": "review",
-      "definition": "Wide areas of flat land that lie low, close to sea level.",
+      "definition": "Wide, flat areas close to sea level.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "bfe70818319a0ae6"
-      }
+       "date": "2026-10-24",
+       "contentSha256": "48ba86e38e0d8e4d"
+      },
+      "uniqueAfterLetters": 7
      }
     ],
     "ru": [
@@ -390,13 +393,13 @@
      {
       "answer": "PLANKTON",
       "role": "review",
-      "definition": "Tiny plants and animals that drift in ocean water.",
+      "definition": "Mostly tiny plants and animals that drift in ocean water.",
       "uniqueAfterLetters": 6,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "5b276f60730f038b"
+       "date": "2026-10-24",
+       "contentSha256": "02a1810e20bb88d0"
       }
      },
      {
@@ -414,13 +417,13 @@
      {
       "answer": "ICEBERG",
       "role": "review",
-      "definition": "A huge block of ice that has broken off a glacier and floats in the sea.",
+      "definition": "A huge frozen chunk that has broken off a glacier and floats in the ocean.",
       "uniqueAfterLetters": 5,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "6852220645aed05c"
+       "date": "2026-10-24",
+       "contentSha256": "1f05c1f854b879fc"
       }
      },
      {
@@ -438,13 +441,13 @@
      {
       "answer": "SEAFLOOR",
       "role": "review",
-      "definition": "The bottom of the sea or ocean.",
+      "definition": "The bottom of an ocean.",
       "uniqueAfterLetters": 8,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "301f53c80ab37209"
+       "date": "2026-10-24",
+       "contentSha256": "91eec66813805268"
       }
      },
      {
@@ -464,23 +467,23 @@
      {
       "answer": "СОЛЁНОСТЬ",
       "role": "final",
-      "definition": "Сколько соли растворено в воде.",
+      "definition": "Сколько растворённых минеральных веществ содержится в воде; в морской воде их больше, чем в речной.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "31809408faafff7c"
+       "date": "2026-10-24",
+       "contentSha256": "efa3085fffca262d"
       }
      },
      {
       "answer": "ПЛАНКТОН",
       "role": "review",
-      "definition": "Крошечные растения и животные, которые дрейфуют в толще воды.",
+      "definition": "В основном крошечные растения и животные, которые дрейфуют в толще воды.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "c3f18b62ea05bfdc"
+       "date": "2026-10-24",
+       "contentSha256": "7d7617d28a599855"
       }
      },
      {
@@ -497,12 +500,12 @@
      {
       "answer": "ЦУНАМИ",
       "role": "review",
-      "definition": "Очень высокая волна, которую вызывает подводное землетрясение.",
+      "definition": "Серия длинных волн, возникающих из-за резкого смещения большого объёма воды, чаще всего при подводном землетрясении.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "1a501506203876f8"
+       "date": "2026-10-24",
+       "contentSha256": "2af10a43ff248616"
       }
      },
      {
@@ -588,13 +591,13 @@
      {
       "answer": "RAINFOREST",
       "role": "review",
-      "definition": "A thick forest that gets a great deal of rain, like the Amazon.",
+      "definition": "A thick, very wet tropical woodland, like the Amazon.",
       "uniqueAfterLetters": 6,
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "c9b3e4d79d0f0a44"
+       "date": "2026-10-24",
+       "contentSha256": "01ef9fff1a27c9cf"
       }
      },
      {
@@ -649,12 +652,12 @@
      {
       "answer": "МЕРЗЛОТА",
       "role": "review",
-      "definition": "Многолетняя мерзлота — грунт, температура которого остаётся не выше 0 °C не менее двух лет подряд.",
+      "definition": "Грунт, температура которого остаётся не выше 0 °C не менее двух лет подряд; такой грунт лежит на севере Сибири и Канады.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "35a24a5aaea044f2"
+       "date": "2026-10-24",
+       "contentSha256": "ff0f4359dacecac9"
       }
      },
      {
@@ -682,12 +685,12 @@
      {
       "answer": "ЛЕДНИК",
       "role": "review",
-      "definition": "Огромная масса льда на суше, которая медленно движется.",
+      "definition": "Огромная масса многолетней замёрзшей воды на суше, которая медленно движется.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "25c1da98e602dc01"
+       "date": "2026-10-24",
+       "contentSha256": "f9b65e2eba43293c"
       }
      },
      {
@@ -704,12 +707,12 @@
      {
       "answer": "МЕТЕЛЬ",
       "role": "review",
-      "definition": "Сильный ветер со снегом; в Антарктиде метели бывают очень часто.",
+      "definition": "Сильный ветер со снегом; в Антарктиде такая непогода бывает очень часто.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
-       "date": "2026-10-23",
-       "contentSha256": "62d7f2d451ff4acf"
+       "date": "2026-10-24",
+       "contentSha256": "3dd7b1c7131ae6ee"
       }
      }
     ]
