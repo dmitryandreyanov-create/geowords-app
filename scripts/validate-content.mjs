@@ -17,13 +17,15 @@ const RELEASE = {
   },
 };
 const STATUSES = new Set(["approved", "draft"]);
-if (!fs.existsSync(dir)) { console.log("No data/content directory: nothing to validate."); process.exit(0); }
+// Release packages are required: a missing directory or file fails.
+if (!fs.existsSync(dir)) { console.error(`Content validation failed:\n- missing directory ${dir}`); process.exit(1); }
 const errors = [];
 const sortKeys = v => Array.isArray(v) ? v.map(sortKeys)
   : v && typeof v === "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, sortKeys(v[k])])) : v;
 // Same serialisation as Python json.dumps(..., ensure_ascii=False, sort_keys=True)
 const pyJson = v => JSON.stringify(sortKeys(v)).replace(/":/g, '": ').replace(/,"/g, ', "');
 let count = 0;
+for (const file of Object.keys(RELEASE)) if (!fs.existsSync(path.join(dir, file))) errors.push(`${file}: required release package is missing`);
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
   const j = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
   const seen = new Set();
