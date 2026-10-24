@@ -8,6 +8,8 @@ const src = path.join(process.cwd(), "data/content/section-1-facts.json");
 const base = JSON.parse(fs.readFileSync(src, "utf8"));
 const run = data => {
   const dir = fs.mkdtempSync(path.join(os.tmpdir(), "gw-content-"));
+  // the other content packages stay as they are; only section 1 facts are broken
+  for (const f of fs.readdirSync(path.dirname(src))) fs.copyFileSync(path.join(path.dirname(src), f), path.join(dir, f));
   fs.writeFileSync(path.join(dir, "section-1-facts.json"), JSON.stringify(data));
   const r = spawnSync(process.execPath, ["scripts/validate-content.mjs"], { env: { ...process.env, CONTENT_DIR: dir }, encoding: "utf8" });
   fs.rmSync(dir, { recursive: true, force: true });
