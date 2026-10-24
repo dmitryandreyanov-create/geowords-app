@@ -58,8 +58,8 @@
    "x": 57.78,
    "y": 7.75,
    "place": {
-    "en": "in the north",
-    "ru": "на севере"
+    "en": "in the far north",
+    "ru": "на крайнем севере"
    },
    "onlyInUnit": 1
   },
@@ -69,8 +69,8 @@
    "x": 67.5,
    "y": 92.25,
    "place": {
-    "en": "in the south",
-    "ru": "на юге"
+    "en": "in the far south",
+    "ru": "на крайнем юге"
    },
    "onlyInUnit": 1
   },
@@ -80,8 +80,8 @@
    "x": 94.44,
    "y": 62.45,
    "place": {
-    "en": "in the east",
-    "ru": "на востоке"
+    "en": "in the far east",
+    "ru": "на крайнем востоке"
    },
    "onlyInUnit": 1
   },
@@ -91,8 +91,8 @@
    "x": 4.44,
    "y": 46.16,
    "place": {
-    "en": "in the west",
-    "ru": "на западе"
+    "en": "in the far west",
+    "ru": "на крайнем западе"
    },
    "onlyInUnit": 1
   },
