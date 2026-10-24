@@ -17,13 +17,15 @@ const RELEASE = {
   },
 };
 const STATUSES = new Set(["approved", "draft"]);
-if (!fs.existsSync(dir)) { console.log("No data/content directory: nothing to validate."); process.exit(0); }
+// Release packages are required: a missing directory or file fails.
+if (!fs.existsSync(dir)) { console.error(`Content validation failed:\n- missing directory ${dir}`); process.exit(1); }
 const errors = [];
 const sortKeys = v => Array.isArray(v) ? v.map(sortKeys)
   : v && typeof v === "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, sortKeys(v[k])])) : v;
 // Same serialisation as Python json.dumps(..., ensure_ascii=False, sort_keys=True)
 const pyJson = v => JSON.stringify(sortKeys(v)).replace(/":/g, '": ').replace(/,"/g, ', "');
 let count = 0;
+for (const file of Object.keys(RELEASE)) if (!fs.existsSync(path.join(dir, file))) errors.push(`${file}: required release package is missing`);
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
   const j = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8"));
   const seen = new Set();
@@ -34,7 +36,7 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     for (const id of release.ids) if (!ids.includes(id)) errors.push(`${file}: missing card ${id}`);
     for (const id of ids) if (!release.ids.includes(id)) errors.push(`${file}: unexpected card ${id}`);
   }
-  if (!Array.isArray(j.items) || !j.items.length) errors.push(`${file}: no items`);
+  if (release && (!Array.isArray(j.items) || !j.items.length)) errors.push(`${file}: no items`);
   for (const it of j.items || []) {
     count++;
     const id = it.id || "(no id)";
@@ -43,14 +45,19 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       if (!it[k]?.[lang]?.trim()) errors.push(`${file}: ${id} missing ${k}.${lang}`);
     if (it.disputed && !(it.caveat?.en?.trim() && it.caveat?.ru?.trim())) errors.push(`${file}: ${id} is disputed but has no EN/RU caveat`);
     if (typeof it.disputed !== "boolean") errors.push(`${file}: ${id} disputed must be true or false`);
+    // Record categories (Svetlana, 2026-10-24): changing records carry a year and are never used in GeoWords clues.
+    if ("category" in it) {
+      if (!["stable", "conditional", "changing"].includes(it.category)) errors.push(`${file}: ${id} unknown record category "${it.category}"`);
+      if (it.category === "changing" && !(it.asOf && it.clueUse === false)) errors.push(`${file}: ${id} is a changing record: needs asOf and clueUse: false`);
+    }
     const a = it.approval;
     if (a && !STATUSES.has(a.status)) errors.push(`${file}: ${id} unknown approval status "${a.status}"`);
     if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
       errors.push(`${file}: ${id} is in a release package but has no complete approval (status, by, date, contentSha256)`);
     if (it.approval?.status === "approved") {
-      const payload = pyJson({ fact: it.fact, caveat: it.caveat ?? null, name: it.name });
+      const payload = pyJson({ id: it.id, fact: it.fact, caveat: it.caveat ?? null, disputed: it.disputed, name: it.name });
       const sha = crypto.createHash("sha256").update(payload, "utf8").digest("hex").slice(0, 16);
-      if (sha !== it.approval.contentSha256) errors.push(`${file}: ${id} text changed after approval — needs re-approval`);
+      if (sha !== it.approval.contentSha256) errors.push(`${file}: ${id} text or disputed mark changed after approval — needs re-approval`);
     }
   }
 }
