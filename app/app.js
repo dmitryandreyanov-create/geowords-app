@@ -181,7 +181,10 @@ const ST=id=>D.s5.straits[id];
 const straitLayers=()=>[...CONT.map(id=>O(id).layer),'world-canal-suez-canal','world-canal-panama-canal'];
 const straitInsets=()=>Object.keys(D.s5.insets);
 // world taps never answer an inset-only strait; `max` is the screen tolerance around a strait outline
-function nearestStrait(x,y,sz,max){let hit=null,d=max;for(const id of STRAITS){const o=ST(id);if(o.inset)continue;const v=inside(o,x,y)?0:edgePx(o,x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit}
+// tapRule of world-straits.json: when several straits match (the Hormuz circle covers the whole Gulf of Oman), the nearest label on screen wins
+function nearestStrait(x,y,sz,max){const lab=o=>Math.hypot((o.x-x)/100*sz.W,(o.y-y)/100*sz.H);
+  const hits=STRAITS.map(ST).filter(o=>!o.inset&&(inside(o,x,y)||edgePx(o,x,y,sz.W,sz.H)<=max));
+  return hits.length?hits.sort((a,b)=>lab(a)-lab(b))[0].id:null}
 function nearInsetOnly(x,y,sz){return STRAITS.some(id=>ST(id).inset&&(inside(ST(id),x,y)||edgePx(ST(id),x,y,sz.W,sz.H)<=30))}
 const SEAS=['mediterranean-sea','black-sea','red-sea','caspian-sea','arabian-sea','bay-of-bengal','coral-sea','caribbean-sea','gulf-of-mexico','hudson-bay'];
 const W=id=>D.s4.seas[id];
