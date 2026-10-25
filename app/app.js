@@ -137,8 +137,9 @@ async function loadData(){
     'data/dictionary/section-4.json','data/maps/world-waters.json'].map(get));
   const seas={};for(const it of wmap.waters){const f=f4.items.find(i=>i.id===it.id);const io=rev.relations.find(q=>q.subject===it.id&&q.relation==='inOcean');
     seas[it.id]={id:it.id,kind:'sea',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],
-      fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,ocean:io&&io.object,oceanUse:io&&io.use}}
-  D.s4={facts:f4,records:r4.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g4,dict:d4,seas,intro:null};
+      fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,ocean:io&&io.object,oceanUse:io&&io.use,card:io&&io.requiresCard}}
+  const card=rev.cards.find(c=>c.id==='card-map-convention-med-black-atlantic'&&c.approval?.status==='approved');
+  D.s4={card,facts:f4,records:r4.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g4,dict:d4,seas,intro:null};
   D.s3={facts:f3,records:r3.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g3,dict:d3,mtns,intro:f3.intro};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
@@ -242,12 +243,12 @@ const COURSE3=[
  {n:3,lessons:[{id:'s3-u3-l1',title:{ru:'Кавказ и Пиренеи',en:'The Caucasus and the Pyrenees'},plan:R3['u3-l1']},{id:'s3-u3-l2',title:{ru:'Хребет на дне океана и рекорды',en:'A ridge on the ocean floor and records'},plan:R3['u3-l2']},
    {id:'s3-u3-l3',title:{ru:'Все горы раздела',en:'All the mountains of the section'},plan:R3['u3-l3']}]}
 ];
-// Section 4 «Seas of the world» — lesson plan from the roadmap (draft, 25.10.2026). The Mediterranean / Black Sea → Atlantic question waits for the
-// convention card (child text not approved yet), Hudson Bay's ocean is disputed: neither is asked.
+// Section 4 «Seas of the world» — lesson plan from the roadmap (draft, 25.10.2026). The Mediterranean / Black Sea → Atlantic question comes right
+// after the approved convention card (Svetlana, 25.10.2026); Hudson Bay's ocean is disputed and never asked.
 const se=k=>id=>({k,id});
 const R4={
  'u1-l1':()=>[se('introSea')('mediterranean-sea'),se('introSea')('black-sea'),se('findSea')('mediterranean-sea'),se('whatSea')('black-sea'),
-   se('findSea')('black-sea'),se('whatSea')('mediterranean-sea'),{k:'findObj',id:'europe'},{k:'findObj',id:'africa'},{k:'findObj',id:'asia'},se('findSea')('mediterranean-sea')],
+   se('findSea')('black-sea'),se('whatSea')('mediterranean-sea'),{k:'seaCard'},se('seaOcean')('mediterranean-sea'),se('seaOcean')('black-sea'),{k:'findObj',id:'europe'}],
  'u1-l2':()=>[se('introSea')('red-sea'),se('introSea')('caspian-sea'),se('findSea')('red-sea'),se('whatSea')('caspian-sea'),se('seaOcean')('red-sea'),
    se('findSea')('caspian-sea'),se('seaOcean')('caspian-sea'),se('whatSea')('red-sea'),...some(['mediterranean-sea','black-sea'],2).map(se('findSea'))],
  'u2-l1':()=>[se('introSea')('arabian-sea'),se('introSea')('bay-of-bengal'),se('findSea')('arabian-sea'),se('whatSea')('bay-of-bengal'),se('seaOcean')('arabian-sea'),
@@ -258,7 +259,7 @@ const R4={
    se('findSea')('gulf-of-mexico'),se('seaOcean')('gulf-of-mexico'),se('whatSea')('caribbean-sea'),...some(['red-sea','arabian-sea','bay-of-bengal','coral-sea'],2).map(se('findSea'))],
  'u3-l2':()=>[se('introSea')('hudson-bay'),se('findSea')('hudson-bay'),se('whatSea')('hudson-bay'),
    ...D.s4.records.flatMap(r=>[{k:'introSeaRec',rec:r.id},{k:'findSea',id:r.object,rec:r.id}])],
- 'u3-l3':()=>shuffle([...some(SEAS,4).map(se('findSea')),...some(SEAS,3).map(se('whatSea')),...some(SEAS.filter(id=>W(id).oceanUse==='yes'),3).map(se('seaOcean'))])
+ 'u3-l3':()=>shuffle([...some(SEAS,4).map(se('findSea')),...some(SEAS,3).map(se('whatSea')),...some(SEAS.filter(id=>W(id).oceanUse==='yes'||(W(id).oceanUse==='after-card'&&S.learned.includes(W(id).card))),3).map(se('seaOcean'))])
 };
 const COURSE4=[
  {n:1,lessons:[{id:'s4-u1-l1',title:{ru:'Средиземное и Чёрное',en:'The Mediterranean and the Black Sea'},plan:R4['u1-l1']},{id:'s4-u1-l2',title:{ru:'Красное и Каспийское',en:'The Red Sea and the Caspian'},plan:R4['u1-l2']}]},
@@ -549,6 +550,10 @@ function lesson(step){
       frame(x.what,`<p class="q">${x.whatSea}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(W(c).name[lang])}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(o,'hl-shape pulse');
       return choices(q,q.id,()=>o.name[lang],()=>o.disputed?'':o.fact(lang))}
+    if(q.k==='seaCard'){const c=D.s4.card;if(!c){done++;return next()}
+      frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${IMG.map}" alt=""><h3>${esc(W('mediterranean-sea').name[lang])} · ${esc(W('black-sea').name[lang])}</h3></div><p>${esc(c.text[lang])}</p></div><div class="mapslot"></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(O('atlantic-ocean'),'hl-shape sel');m.shape(W('mediterranean-sea'),'hl-shape pulse');m.shape(W('black-sea'),'hl-shape pulse');
+      return gotIt(()=>learn(c.id))}
     if(q.k==='seaOcean'){const o=W(q.id);const right=o.ocean||'none';const opts=right==='none'?[...pick(OCEANS,'indian-ocean',3),'none']:pick(OCEANS,right,4);
       const label=c=>c==='none'?x.seaNone:O(c).name[lang];
       frame(x.ocean,`<p class="q">${x.seaOcean(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(label(c))}</button>`).join('')}</div>`);
