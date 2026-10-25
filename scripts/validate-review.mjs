@@ -31,6 +31,14 @@ for (const [file, lessons] of Object.entries(RELEASE)) {
   if (ids.join() !== lessons.join()) err(`lessons must be ${lessons.join(", ")} (found ${ids.join(", ") || "none"})`);
   for (const l of j.lessons || []) if (l.tasks && l.tasks.reduce((s, t) => s + (t.count || 0), 0) !== 10) err(`${l.id} must have 10 tasks`);
   const cards = new Set((j.cards || []).map(c => c.id));
+  // A card a child sees needs approved EN and RU text; any later edit needs re-approval.
+  for (const c of j.cards || []) {
+    if (c.for !== "child") continue;
+    for (const lang of ["en", "ru"]) if (!c.text?.[lang]?.trim()) err(`${c.id}: missing text.${lang}`);
+    const sha = crypto.createHash("sha256").update(pyJson({ id: c.id, text: c.text }), "utf8").digest("hex").slice(0, 16);
+    if (!(c.approval?.status === "approved" && c.approval.by && c.approval.date)) err(`${c.id}: no complete approval`);
+    else if (sha !== c.approval.contentSha256) err(`${c.id}: changed after approval — needs re-approval`);
+  }
   const ok = new Set();
   for (const r of j.relations || []) {
     const name = `${r.relation} ${JSON.stringify(r.subject)}`;
