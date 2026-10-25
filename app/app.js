@@ -223,6 +223,7 @@ const COURSE=[
 ];
 // Section 2 «Rivers of the world» — lesson plan from the roadmap (draft for Svetlana's approval, 24.10.2026).
 const rv=k=>id=>({k,id});
+const pickKind=a=>a[Math.floor(Math.random()*a.length)];
 const some=(ids,n)=>shuffle([...ids]).slice(0,n);
 const R2={
  'u1-l1':()=>[rv('introRiver')('nile'),rv('introRiver')('amazon'),rv('findRiver')('nile'),rv('whatRiver')('amazon'),rv('riverCont')('nile'),
@@ -238,7 +239,8 @@ const R2={
  'u3-l1':()=>[rv('introRiver')('danube'),rv('introRiver')('volga'),rv('findRiver')('danube'),rv('whatRiver')('volga'),rv('riverCont')('danube'),
    rv('findRiver')('volga'),rv('riverMouth')('danube'),rv('riverMouth')('volga'),...some(['nile','amazon','mississippi','yangtze','huang-he','ganges','indus'],2).map(rv('findRiver'))],
  'u3-l2':()=>D.s2.records.flatMap(r=>[{k:'introRiverRec',rec:r.id},{k:'findRiver',id:r.object,rec:r.id}]),
- 'u3-l3':()=>shuffle([...some(RIVERS,4).map(rv('findRiver')),...some(RIVERS,3).map(rv('whatRiver')),rv('riverCont')(some(RIVERS,1)[0]),...some(RIVERS,2).map(rv('riverMouth'))])
+ // the section review asks about every river once (Svetlana, 25.10.2026: every learned object is practised)
+ 'u3-l3':()=>shuffle(RIVERS.map(id=>({k:pickKind(['findRiver','findRiver','whatRiver','riverCont','riverMouth']),id})))
 };
 const COURSE2=[
  {n:1,lessons:[{id:'s2-u1-l1',title:{ru:'Нил и Амазонка',en:'The Nile and the Amazon'},plan:R2['u1-l1']},{id:'s2-u1-l2',title:{ru:'Миссисипи и устья рек',en:'The Mississippi and river mouths'},plan:R2['u1-l2']}]},
@@ -262,8 +264,7 @@ const R3={
    mt('mtnCont')('pyrenees'),mt('whatMtn')('caucasus'),...some(['himalayas','ural','cordillera','andes','appalachians','east-africa','great-dividing-range','atlas'],3).map(mt('findMtn'))],
  'u3-l2':()=>[mt('introMtn')('mid-atlantic-ridge'),mt('findMtn')('mid-atlantic-ridge'),mt('mtnOcean')('mid-atlantic-ridge'),
    ...D.s3.records.flatMap(r=>[{k:'introMtnRec',rec:r.id},{k:'findMtn',id:r.object,rec:r.id}])],
- 'u3-l3':()=>shuffle([...some(MTNS,4).map(mt('findMtn')),...some(MTNS,3).map(mt('whatMtn')),
-   ...some(MTNS.filter(id=>M(id).continent),2).map(mt('mtnCont')),mt('mtnOcean')('mid-atlantic-ridge')])
+ 'u3-l3':()=>shuffle(MTNS.map(id=>({k:pickKind(['findMtn','findMtn','whatMtn',...(M(id).continent?['mtnCont']:[]),...(M(id).ocean?['mtnOcean']:[]),...(M(id).border?['mtnBorder']:[])]),id})))
 };
 const COURSE3=[
  {n:1,lessons:[{id:'s3-u1-l1',title:{ru:'Гималаи и Урал',en:'The Himalayas and the Urals'},plan:R3['u1-l1']},{id:'s3-u1-l2',title:{ru:'Кордильеры и Анды',en:'The Cordillera and the Andes'},plan:R3['u1-l2']}]},
@@ -287,7 +288,7 @@ const R4={
    se('findSea')('gulf-of-mexico'),se('seaOcean')('gulf-of-mexico'),se('whatSea')('caribbean-sea'),...some(['red-sea','arabian-sea','bay-of-bengal','coral-sea'],2).map(se('findSea'))],
  'u3-l2':()=>[se('introSea')('hudson-bay'),se('findSea')('hudson-bay'),se('whatSea')('hudson-bay'),
    ...D.s4.records.flatMap(r=>[{k:'introSeaRec',rec:r.id},{k:'findSea',id:r.object,rec:r.id}])],
- 'u3-l3':()=>shuffle([...some(SEAS,4).map(se('findSea')),...some(SEAS,3).map(se('whatSea')),...some(SEAS.filter(id=>W(id).oceanUse==='yes'||(W(id).oceanUse==='after-card'&&S.learned.includes(W(id).card))),3).map(se('seaOcean'))])
+ 'u3-l3':()=>shuffle(SEAS.map(id=>({k:pickKind(['findSea','findSea','whatSea',...(W(id).oceanUse==='yes'||(W(id).oceanUse==='after-card'&&S.learned.includes(W(id).card))?['seaOcean']:[])]),id})))
 };
 const COURSE4=[
  {n:1,lessons:[{id:'s4-u1-l1',title:{ru:'Средиземное и Чёрное',en:'The Mediterranean and the Black Sea'},plan:R4['u1-l1']},{id:'s4-u1-l2',title:{ru:'Красное и Каспийское',en:'The Red Sea and the Caspian'},plan:R4['u1-l2']}]},
@@ -313,8 +314,7 @@ const R5={
    sk('findStrait')('drake-passage'),sk('separates')('drake-passage'),sk('findStrait')('strait-of-magellan'),sk('connects')('strait-of-magellan'),sk('whatStrait')('drake-passage')],
  'u3-l2':()=>[...D.s5.records.flatMap(r=>[{k:'introStraitRec',rec:r.id},{k:'findStrait',id:r.object,rec:r.id}]),sk('connects')('bering-strait'),
    ...some(STRAITS.filter(id=>ST(id).connects&&id!=='bering-strait'),5).map(sk('connects'))],
- 'u3-l3':()=>shuffle([...some(STRAITS,4).map(sk('findStrait')),...some(STRAITS,2).map(sk('whatStrait')),...some(STRAITS.filter(id=>ST(id).connects),2).map(sk('connects')),
-   ...some(STRAITS.filter(id=>ST(id).separates),2).map(sk('separates'))])
+ 'u3-l3':()=>shuffle(STRAITS.map(id=>({k:pickKind(['findStrait','findStrait','whatStrait',...(ST(id).connects?['connects']:[]),...(ST(id).separates?['separates']:[])]),id})))
 };
 const COURSE5=[
  {n:1,lessons:[{id:'s5-u1-l1',title:{ru:'Суэцкий и Панамский каналы',en:'The Suez and Panama Canals'},plan:R5['u1-l1']},{id:'s5-u1-l2',title:{ru:'Гибралтар и Ла-Манш',en:'Gibraltar and the English Channel'},plan:R5['u1-l2']},
@@ -846,11 +846,12 @@ function containers(id){
   if(D.s3&&D.s3.mtns[id]){const o=M(id);return [o.continent,o.ocean,...(o.border||[]),...(id==='caucasus'?['europe','asia']:[])].filter(Boolean)}
   const r=id.endsWith('-river')&&D.s2&&D.s2.rivers[id.slice(0,-6)];return r?[r.continent].filter(Boolean):[]}
 const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id);
-function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
+function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
   const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
   // current section first, then earlier sections, continents / oceans last (places without pri — section 1 — are all equal)
-  const order_=()=>[0,1,2].flatMap(k=>shuffle(usable.filter(p=>(p.pri||0)===k)));
+  // continents / oceans last; otherwise the places used least so far in this practice first, so every learned object turns up across the six words
+  const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||((usage[a.id]||0)-(usage[b.id]||0))||((a.pri||0)-(b.pri||0)));
   for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>far(p,q)&&!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
   for(let k=0;k<300&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
@@ -859,7 +860,7 @@ function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=let
   return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
-  for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers);if(P)puzzles.push(P)}
+  const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers)usage[k.id]=(usage[k.id]||0)+1}}
   if(!puzzles.length){S.done[st.id]=true;save();return home()}
   let i=0;const go=()=>{const P=puzzles[i];P.stepId=st.id;P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};
   go()}
