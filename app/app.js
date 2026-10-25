@@ -251,7 +251,7 @@ const COURSE2=[
 const mt=k=>id=>({k,id});
 const R3={
  'u1-l1':()=>[mt('introMtn')('himalayas'),mt('introMtn')('ural'),mt('findMtn')('himalayas'),mt('whatMtn')('ural'),mt('mtnCont')('himalayas'),
-   mt('findMtn')('ural'),mt('mtnBorder')('ural'),mt('whatMtn')('himalayas'),{k:'findObj',id:'asia'},{k:'findObj',id:'europe'}],
+   mt('findMtn')('ural'),mt('mtnBorder')('ural'),mt('whatMtn')('himalayas'),...some(RIVERS,2).map(rv('findRiver'))],
  'u1-l2':()=>[mt('introMtn')('cordillera'),mt('introMtn')('andes'),mt('findMtn')('cordillera'),mt('whatMtn')('andes'),mt('mtnCont')('cordillera'),
    mt('findMtn')('andes'),mt('mtnCont')('andes'),mt('whatMtn')('cordillera'),...some(['himalayas','ural'],2).map(mt('findMtn'))],
  'u2-l1':()=>[mt('introMtn')('appalachians'),mt('introMtn')('atlas'),mt('findMtn')('appalachians'),mt('whatMtn')('atlas'),mt('mtnCont')('appalachians'),
@@ -276,7 +276,7 @@ const COURSE3=[
 const se=k=>id=>({k,id});
 const R4={
  'u1-l1':()=>[se('introSea')('mediterranean-sea'),se('introSea')('black-sea'),se('findSea')('mediterranean-sea'),se('whatSea')('black-sea'),
-   se('findSea')('black-sea'),se('whatSea')('mediterranean-sea'),{k:'seaCard'},se('seaOcean')('mediterranean-sea'),se('seaOcean')('black-sea'),{k:'findObj',id:'europe'}],
+   se('findSea')('black-sea'),se('whatSea')('mediterranean-sea'),{k:'seaCard'},se('seaOcean')('mediterranean-sea'),se('seaOcean')('black-sea'),mt('findMtn')(some(MTNS,1)[0])],
  'u1-l2':()=>[se('introSea')('red-sea'),se('introSea')('caspian-sea'),se('findSea')('red-sea'),se('whatSea')('caspian-sea'),se('seaOcean')('red-sea'),
    se('findSea')('caspian-sea'),se('seaOcean')('caspian-sea'),se('whatSea')('red-sea'),...some(['mediterranean-sea','black-sea'],2).map(se('findSea'))],
  'u2-l1':()=>[se('introSea')('arabian-sea'),se('introSea')('bay-of-bengal'),se('findSea')('arabian-sea'),se('whatSea')('bay-of-bengal'),se('seaOcean')('arabian-sea'),
@@ -813,18 +813,18 @@ const SEA_RU={'mediterranean-sea':'в Средиземном море','black-se
   'bay-of-bengal':'в Бенгальском заливе','coral-sea':'в Коралловом море','caribbean-sea':'в Карибском море','gulf-of-mexico':'в Мексиканском заливе','hudson-bay':'в Гудзоновом заливе'};
 const SEA_EN={'mediterranean-sea':'in the Mediterranean Sea','black-sea':'in the Black Sea','red-sea':'in the Red Sea','caspian-sea':'in the Caspian Sea','arabian-sea':'in the Arabian Sea',
   'bay-of-bengal':'in the Bay of Bengal','coral-sea':'in the Coral Sea','caribbean-sea':'in the Caribbean Sea','gulf-of-mexico':'in the Gulf of Mexico','hudson-bay':'in Hudson Bay'};
+// Practice places from section 2 on: the current section's learned objects first, then everything from earlier sections (rivers, mountains,
+// seas, straits); continents and oceans only fill in when a long word needs more places (Svetlana, 25.10.2026: practise rivers and mountains, not continents).
+const placeOf={2:id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}),3:id=>({id,x:M(id).x,y:M(id).y,place:{ru:IN_RU[id],en:IN_EN[id]}}),
+  4:id=>({id,x:W(id).x,y:W(id).y,place:{ru:SEA_RU[id],en:SEA_EN[id]}}),5:id=>({id,x:ST(id).x,y:ST(id).y,place:{ru:STR_RU[id],en:STR_EN[id]}})};
+const secIds={2:()=>RIVERS.map(id=>[id,R(id).unit]),3:()=>MTNS.map(id=>[id,M(id).unit]),4:()=>SEAS.map(id=>[id,W(id).unit]),5:()=>STRAITS.filter(id=>!ST(id).inset).map(id=>[id,ST(id).unit])};
 function placesFor(st){
   if(!st.sec)return knownPlaces(st.unit);
-  if(st.sec===5){const tpl=D.tpl.objects,out=STRAITS.filter(id=>ST(id).unit<=st.unit&&!ST(id).inset).map(id=>({id,x:ST(id).x,y:ST(id).y,place:{ru:STR_RU[id],en:STR_EN[id]}}));
-    for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
-  if(st.sec===4){const tpl=D.tpl.objects,out=SEAS.filter(id=>W(id).unit<=st.unit).map(id=>({id,x:W(id).x,y:W(id).y,place:{ru:SEA_RU[id],en:SEA_EN[id]}}));
-    for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
-  if(st.sec===3){const tpl=D.tpl.objects,out=MTNS.filter(id=>M(id).unit<=st.unit).map(id=>({id,x:M(id).x,y:M(id).y,place:{ru:IN_RU[id],en:IN_EN[id]}}));
-    for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
-  const tpl=D.tpl.objects,out=RIVERS.filter(id=>R(id).unit<=st.unit).map(id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}));
-  for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}
+  const out=secIds[st.sec]().filter(([,u])=>u<=st.unit).map(([id])=>({...placeOf[st.sec](id),pri:0}));
+  for(let k=2;k<st.sec;k++)for(const [id] of secIds[k]())out.push({...placeOf[k](id),pri:1});
+  const tpl=D.tpl.objects;for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place,pri:2})}
   return out}
-const layersFor=st=>st.sec===5?straitLayers():st.sec===4?seaLayers():st.sec===3?mtnLayers():st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
+const layersFor=st=>st.sec?[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...(st.sec>=3?MTNS.map(id=>M(id).layer):[]),...(st.sec===5?['world-canal-suez-canal','world-canal-panama-canal']:[])]:st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
 // Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
 function practiceWords(st){const lang=L(),places=placesFor(st);
   const DI=st.sec?SD(st).dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
@@ -849,8 +849,10 @@ const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a
 function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
   const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
-  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>far(p,q)&&!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
-  for(let k=0;k<300&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}if(!chosen)return null;
+  // current section first, then earlier sections, continents / oceans last (places without pri — section 1 — are all equal)
+  const order_=()=>[0,1,2].flatMap(k=>shuffle(usable.filter(p=>(p.pri||0)===k)));
+  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>far(p,q)&&!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
+  for(let k=0;k<300&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
