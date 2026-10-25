@@ -31,6 +31,8 @@ const named=[
   // Section 3 «Mountains of the world» (draft lessons).
   'data/content/section-3-facts.json','data/content/section-3-records.json','data/geowords/section-3.json','data/dictionary/section-3.json',
   'assets/intro/mountains-intro-en.webp','assets/intro/mountains-intro-ru.webp',
+  // Section 4 «Seas of the world» (draft lessons).
+  'data/content/section-4-records.json','data/geowords/section-4.json','data/dictionary/section-4.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
