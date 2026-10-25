@@ -17,6 +17,8 @@ const edit = f => { const d = structuredClone(base); f(d); return d; };
 const rel = (d, subject, relation) => d.relations.find(r => JSON.stringify(r.subject) === JSON.stringify(subject) && r.relation === relation);
 const cases = {
   "package missing": null,
+  "card text edited after approval": edit(d => { d.cards[0].text.ru += " "; }),
+  "card without Russian text": edit(d => { delete d.cards[0].text.ru; }),
   "lesson removed": edit(d => { d.lessons.splice(2, 1); }),
   "relation removed under a true/false pair": edit(d => { d.relations = d.relations.filter(r => !(r.subject === "volga" && r.relation === "flowsInto")); }),
   "neutral relation turned into an answer": edit(d => { const r = rel(d, "hudson-bay", "inOcean"); r.use = "yes"; }),
