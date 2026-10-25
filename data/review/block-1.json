@@ -836,8 +836,18 @@
  "cards": [
   {
    "id": "card-map-convention-med-black-atlantic",
-   "for": "developer",
-   "describes": "shows on the map that the Mediterranean and Black Seas are counted as part of the Atlantic Ocean in this app; must be shown before any after-card relation is asked. Child-facing EN/RU text to be approved by Svetlana before release."
+   "for": "child",
+   "describes": "shown on the map (Atlantic Ocean, Mediterranean and Black Seas, the straits highlighted) before any after-card relation is asked",
+   "text": {
+    "en": "The Mediterranean and Black Seas are almost completely surrounded by land. The Mediterranean joins the Atlantic Ocean through the Strait of Gibraltar, and the Black Sea joins the Mediterranean through the Bosporus, the Sea of Marmara and the Dardanelles. That is why both seas are counted as part of the Atlantic Ocean.",
+    "ru": "Средиземное и Чёрное моря почти со всех сторон окружены сушей. Средиземное море соединяется с Атлантическим океаном через Гибралтарский пролив, а Чёрное — со Средиземным через Босфор, Мраморное море и Дарданеллы. Поэтому оба моря относят к Атлантическому океану."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-25",
+    "contentSha256": "c088cdea6dbdad76"
+   }
   }
  ]
 }
