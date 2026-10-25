@@ -86,7 +86,8 @@ const ACC_RU={north:'север',south:'юг',east:'восток',west:'запа
   himalayas:'Гималаи',ural:'Уральские горы',cordillera:'Североамериканские Кордильеры',andes:'Анды',appalachians:'Аппалачи','east-africa':'горы Восточной Африки',
   'great-dividing-range':'Большой Водораздельный хребет',atlas:'Атласские горы',caucasus:'Кавказские горы',pyrenees:'Пиренеи','mid-atlantic-ridge':'Срединно-Атлантический хребет',
   nile:'Нил',amazon:'Амазонку',mississippi:'Миссисипи',yangtze:'Янцзы','huang-he':'Хуанхэ',ganges:'Ганг',indus:'Инд',danube:'Дунай',volga:'Волгу'};
-const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian',n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere',
+const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian','pacific-ocean':'the Pacific Ocean','atlantic-ocean':'the Atlantic Ocean','indian-ocean':'the Indian Ocean','arctic-ocean':'the Arctic Ocean','southern-ocean':'the Southern Ocean',
+  n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere',
   'suez-canal':'the Suez Canal','panama-canal':'the Panama Canal','strait-of-gibraltar':'the Strait of Gibraltar','english-channel':'the English Channel',bosporus:'the Bosporus',dardanelles:'the Dardanelles',
   'bab-el-mandeb':'the Bab-el-Mandeb Strait','strait-of-hormuz':'the Strait of Hormuz','gulf-of-oman':'the Gulf of Oman','strait-of-malacca':'the Strait of Malacca','mozambique-channel':'the Mozambique Channel',
   'bering-strait':'the Bering Strait','drake-passage':'the Drake Passage','strait-of-magellan':'the Strait of Magellan',
@@ -163,6 +164,8 @@ const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
 const nm=id=>(D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
 const acc=id=>L()==='ru'?(ACC_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
+// a name inside a sentence («That is the Atlantic Ocean.»): English takes the article, Russian the plain name
+const nameIn=id=>L()==='ru'?nm(id):(ACC_EN[id]||nm(id));
 const CONT=['asia','africa','north-america','south-america','antarctica','europe','australia'];
 const RIVERS=['nile','amazon','mississippi','yangtze','huang-he','ganges','indus','danube','volga'];
 const R=id=>D.s2.rivers[id];
@@ -593,7 +596,7 @@ function lesson(step){
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestRiver(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.line(riverPath(r),ok?'hl-river good':'hl-river pulse');
         if(hit&&!ok)m.line(riverPath(R(hit)),'hl-river bad');answered(q,ok);
-        feedback(ok,ok?x.right:(hit?x.wrongIs(R(hit).name[lang]):x.miss),ok?(rec?'':r.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+        feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':r.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
     if(q.k==='whatRiver'){const r=R(q.id);const opts=pick(RIVERS,q.id,4);
       frame(x.what,`<p class="q">${x.whatRiver}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(R(c).name[lang])}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');
@@ -626,7 +629,7 @@ function lesson(step){
     if(q.k==='findStrait'){const o=ST(q.id);const rec=q.rec&&D.s5.records.find(r=>r.id===q.rec);
       frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>${o.inset?`<p class="rotate-hint">${x.magHint}</p>`:''}`);
       let locked=false;const done_=(ok,hit,sx,sy)=>{locked=true;m.dot(sx,sy,ok);showStrait(m,o,ok?'hl-shape good':'hl-shape pulse');if(hit&&!ok)showStrait(m,ST(hit),'hl-shape bad');answered(q,ok);
-        feedback(ok,ok?x.right:(hit?x.wrongIs(ST(hit).name[lang]):x.miss),ok?(rec?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)};
+        feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)};
       const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),insets:o.inset?[o.inset.id]:[],
         onTap:(px,py,sx,sy,sz)=>{if(locked)return;const hit=nearestStrait(px,py,sz,22);
           if(!hit&&nearInsetOnly(px,py,sz)){const fb=app.querySelector('.fb');fb.className='fb bad';fb.innerHTML=`<div class="msg"><img src="${IMG.spy}" alt=""><div><p>${esc(x.openMag)}</p></div></div>`;return}
@@ -651,7 +654,7 @@ function lesson(step){
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestSea(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape good':'hl-shape pulse');
         if(hit&&!ok)m.shape(W(hit),'hl-shape bad');answered(q,ok);
-        feedback(ok,ok?x.right:(hit?x.wrongIs(W(hit).name[lang]):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+        feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
     if(q.k==='whatSea'){const o=W(q.id);const opts=pick(SEAS,q.id,4);
       frame(x.what,`<p class="q">${x.whatSea}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(W(c).name[lang])}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(o,'hl-shape pulse');
@@ -683,7 +686,7 @@ function lesson(step){
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestMtn(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape good':'hl-shape pulse');
         if(hit&&!ok)m.shape(M(hit),'hl-shape bad');answered(q,ok);
-        feedback(ok,ok?x.right:(hit?x.wrongIs(M(hit).name[lang]):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+        feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
     if(q.k==='whatMtn'){const o=M(q.id);const opts=pick(MTNS,q.id,4);
       frame(x.what,`<p class="q">${x.whatMtn}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(M(c).name[lang])}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');
@@ -713,11 +716,12 @@ function lesson(step){
     if(q.k==='findObj'){const o=O(q.id);const r=q.rec&&D.records.find(r=>r.id===q.rec);frame(r?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:learnedLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=[...CONT,...OCEANS].map(O).find(c=>inside(c,px,py));
-        let ok=hit?hit.id===o.id:edgePx(o,px,py,sz.W,sz.H)<=22;
+        // a tap on the coast counts for the asked continent / ocean even if it lands just across the shoreline (finger size, coarse outlines)
+        let ok=hit?hit.id===o.id||(hit.kind!==o.kind&&edgePx(o,px,py,sz.W,sz.H)<=22):edgePx(o,px,py,sz.W,sz.H)<=22;
         if(!ok&&!hit&&o.kind==='ocean'&&!CONT.some(c=>inside(O(c),px,py))){m.dot(sx,sy,false);const fb=app.querySelector('.fb');fb.className='fb bad';
           fb.innerHTML=`<div class="msg"><img src="${IMG.faceOops}" alt=""><div><p>${esc(x.neutral)}</p></div></div>`;return}
         locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape':'hl-shape pulse');answered(q,ok);
-        feedback(ok,ok?x.right:(hit?x.wrongIs(hit.name[lang]):x.miss),ok?(r?r.fact[lang]:(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+        feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit.id)):x.miss),ok?(r?r.fact[lang]:(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
     if(q.k==='whatObj'){const o=O(q.id);frame(x.what,`<p class="q">${o.kind==='ocean'?x.whatOcean:x.whatCont}</p><div class="mapslot"></div>
       <div class="choices">${q.from.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(O(c).name[lang])}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:learnedLayers(),zoom:false});m.shape(o,'hl-shape pulse');
