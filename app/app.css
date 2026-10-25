@@ -203,3 +203,5 @@ h1,h2,h3,p{margin:0}
 
 /* mandatory unit practice stop */
 .stop.practice .disc{font-weight:800;font-size:20px}
+
+.hl-shape.bad{fill:rgba(229,83,61,.4);stroke:#e5533d}

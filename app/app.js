@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -39,6 +39,8 @@ const T={
   practiceTag:'Повторение · собрано по правилам',sectionFinal:'Итог раздела: GeoWords',sectionN:n=>'Раздел '+n,draft:'черновик уроков',
   whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
   allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
+  whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
+  allAfrica:'Нажми на все горы Африки',allAfricaOk:'Все горы Африки найдены!',allAfricaBad:'Не совсем. Вот горы Африки.',and:' и ',ocean:'Океан',border:'Граница',
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
   tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
@@ -60,6 +62,8 @@ const T={
   practiceTag:'Review · built by the rules',sectionFinal:'Section final: GeoWords',sectionN:n=>'Section '+n,draft:'draft lessons',
   whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
   allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
+  whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
+  allAfrica:'Tap all the mountains of Africa',allAfricaOk:'All the mountains of Africa found!',allAfricaBad:'Not quite. Here are the mountains of Africa.',and:' and ',ocean:'Ocean',border:'Border',
   units:[['Cardinal directions','North, south, west, east, the Equator'],['Continents','7 continents'],['Oceans','5 oceans'],['Neighbours and records','Which oceans wash which continent, records, hemispheres']],
   tester:'Test build: progress is stored only on this device.',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
 };
@@ -68,8 +72,12 @@ const ACC_RU={north:'север',south:'юг',east:'восток',west:'запа
   n:'Северное полушарие',s:'Южное полушарие',e:'Восточное полушарие',w:'Западное полушарие',
   asia:'Азию',africa:'Африку','north-america':'Северную Америку','south-america':'Южную Америку',antarctica:'Антарктиду',europe:'Европу',australia:'Австралию',
   'pacific-ocean':'Тихий океан','atlantic-ocean':'Атлантический океан','indian-ocean':'Индийский океан','arctic-ocean':'Северный Ледовитый океан','southern-ocean':'Южный океан',
+  himalayas:'Гималаи',ural:'Уральские горы',cordillera:'Североамериканские Кордильеры',andes:'Анды',appalachians:'Аппалачи','east-africa':'горы Восточной Африки',
+  'great-dividing-range':'Большой Водораздельный хребет',atlas:'Атласские горы',caucasus:'Кавказские горы',pyrenees:'Пиренеи','mid-atlantic-ridge':'Срединно-Атлантический хребет',
   nile:'Нил',amazon:'Амазонку',mississippi:'Миссисипи',yangtze:'Янцзы','huang-he':'Хуанхэ',ganges:'Ганг',indus:'Инд',danube:'Дунай',volga:'Волгу'};
 const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian',n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere',
+  himalayas:'the Himalayas',ural:'the Ural Mountains',cordillera:'the North American Cordillera',andes:'the Andes',appalachians:'the Appalachian Mountains','east-africa':'the mountains of East Africa',
+  'great-dividing-range':'the Great Dividing Range',atlas:'the Atlas Mountains',caucasus:'the Caucasus Mountains',pyrenees:'the Pyrenees','mid-atlantic-ridge':'the Mid-Atlantic Ridge',
   nile:'the Nile',amazon:'the Amazon',mississippi:'the Mississippi',yangtze:'the Yangtze','huang-he':'the Huang He',ganges:'the Ganges',indus:'the Indus',danube:'the Danube',volga:'the Volga'};
 
 /* ---------- state ---------- */
@@ -109,10 +117,18 @@ async function loadData(){
       fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,continent:rel(it.id,'onContinent'),mouth:rel(it.id,'flowsInto')}}
   const waterName=id=>(objs[id]&&objs[id].name)||(f4.items.find(i=>i.id===id)||{}).name;
   D.s2={facts:f2,records:r2.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g2,dict:d2,rivers,waterName,intro:f2.intro};
+  // Section 3 «Mountains of the world»: approved facts, records, dictionary, GeoWords, range outlines; continent / ocean / border from the block review relations.
+  const [f3,r3,g3,d3,mmap]=await Promise.all(['data/content/section-3-facts.json','data/content/section-3-records.json','data/geowords/section-3.json',
+    'data/dictionary/section-3.json','data/maps/world-mountains.json'].map(get));
+  const relAny=(id,r)=>{const x=rev.relations.find(q=>q.subject===id&&q.relation===r&&q.use!=='no');return x&&x.object};
+  const mtns={};for(const it of mmap.mountains){const f=f3.items.find(i=>i.id===it.id);
+    mtns[it.id]={id:it.id,kind:'mountain',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],layer:it.layer.png.split('/').pop().replace('.webp',''),
+      fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,continent:rel(it.id,'onContinent'),ocean:rel(it.id,'onOceanFloor'),border:relAny(it.id,'onBorderOf')}}
+  D.s3={facts:f3,records:r3.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g3,dict:d3,mtns,intro:f3.intro};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
-const nm=id=>(D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
+const nm=id=>(D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
 const acc=id=>L()==='ru'?ACC_RU[id]:(ACC_EN[id]||nm(id));
 const CONT=['asia','africa','north-america','south-america','antarctica','europe','australia'];
 const RIVERS=['nile','amazon','mississippi','yangtze','huang-he','ganges','indus','danube','volga'];
@@ -123,6 +139,11 @@ function riverPx(r,x,y,W,H){let best=Infinity;for(const l of r.path)for(let i=1;
   const dx=bx-ax,dy=by-ay,q=dx*dx+dy*dy;let u=q?((px-ax)*dx+(py-ay)*dy)/q:0;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(px-ax-u*dx,py-ay-u*dy))}return best}
 const nearestRiver=(x,y,sz,max)=>{let hit=null,d=max;for(const id of RIVERS){const v=riverPx(R(id),x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit};
 const riverLayers=()=>[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer)];
+const MTNS=['himalayas','ural','cordillera','andes','appalachians','east-africa','great-dividing-range','atlas','caucasus','pyrenees','mid-atlantic-ridge'];
+const M=id=>D.s3.mtns[id];
+const mtnLayers=()=>[...CONT.map(id=>O(id).layer),...MTNS.map(id=>M(id).layer)];
+// the range under the tap, else the nearest outline within `max` screen px
+function nearestMtn(x,y,sz,max){for(const id of MTNS)if(inside(M(id),x,y))return id;let hit=null,d=max;for(const id of MTNS){const v=edgePx(M(id),x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit}
 const OCEANS=['pacific-ocean','atlantic-ocean','indian-ocean','arctic-ocean','southern-ocean'];
 
 /* ---------- course: units, lessons (order of new objects), finals ---------- */
@@ -178,6 +199,30 @@ const COURSE2=[
  {n:3,lessons:[{id:'s2-u3-l1',title:{ru:'Дунай и Волга',en:'The Danube and the Volga'},plan:R2['u3-l1']},{id:'s2-u3-l2',title:{ru:'Рекорды рек',en:'River records'},plan:R2['u3-l2']},
    {id:'s2-u3-l3',title:{ru:'Все реки раздела',en:'All the rivers of the section'},plan:R2['u3-l3']}]}
 ];
+// Section 3 «Mountains of the world» — lesson plan from the roadmap (draft for Svetlana's approval, 25.10.2026).
+const mt=k=>id=>({k,id});
+const R3={
+ 'u1-l1':()=>[mt('introMtn')('himalayas'),mt('introMtn')('ural'),mt('findMtn')('himalayas'),mt('whatMtn')('ural'),mt('mtnCont')('himalayas'),
+   mt('findMtn')('ural'),mt('mtnBorder')('ural'),mt('whatMtn')('himalayas'),{k:'findObj',id:'asia'},{k:'findObj',id:'europe'}],
+ 'u1-l2':()=>[mt('introMtn')('cordillera'),mt('introMtn')('andes'),mt('findMtn')('cordillera'),mt('whatMtn')('andes'),mt('mtnCont')('cordillera'),
+   mt('findMtn')('andes'),mt('mtnCont')('andes'),mt('whatMtn')('cordillera'),...some(['himalayas','ural'],2).map(mt('findMtn'))],
+ 'u2-l1':()=>[mt('introMtn')('appalachians'),mt('introMtn')('atlas'),mt('findMtn')('appalachians'),mt('whatMtn')('atlas'),mt('mtnCont')('appalachians'),
+   mt('findMtn')('atlas'),mt('mtnCont')('atlas'),mt('whatMtn')('appalachians'),...some(['himalayas','ural','cordillera','andes'],2).map(mt('findMtn'))],
+ 'u2-l2':()=>[mt('introMtn')('east-africa'),mt('introMtn')('great-dividing-range'),mt('findMtn')('east-africa'),mt('whatMtn')('great-dividing-range'),
+   mt('mtnCont')('east-africa'),mt('findMtn')('great-dividing-range'),mt('mtnCont')('great-dividing-range'),{k:'allAfrica'},mt('whatMtn')('east-africa'),...some(['appalachians','atlas'],1).map(mt('findMtn'))],
+ 'u3-l1':()=>[mt('introMtn')('caucasus'),mt('introMtn')('pyrenees'),mt('findMtn')('caucasus'),mt('whatMtn')('pyrenees'),mt('findMtn')('pyrenees'),
+   mt('mtnCont')('pyrenees'),mt('whatMtn')('caucasus'),...some(['himalayas','ural','cordillera','andes','appalachians','east-africa','great-dividing-range','atlas'],3).map(mt('findMtn'))],
+ 'u3-l2':()=>[mt('introMtn')('mid-atlantic-ridge'),mt('findMtn')('mid-atlantic-ridge'),mt('mtnOcean')('mid-atlantic-ridge'),
+   ...D.s3.records.flatMap(r=>[{k:'introMtnRec',rec:r.id},{k:'findMtn',id:r.object,rec:r.id}])],
+ 'u3-l3':()=>shuffle([...some(MTNS,4).map(mt('findMtn')),...some(MTNS,3).map(mt('whatMtn')),
+   ...some(MTNS.filter(id=>M(id).continent),2).map(mt('mtnCont')),mt('mtnOcean')('mid-atlantic-ridge')])
+};
+const COURSE3=[
+ {n:1,lessons:[{id:'s3-u1-l1',title:{ru:'Гималаи и Урал',en:'The Himalayas and the Urals'},plan:R3['u1-l1']},{id:'s3-u1-l2',title:{ru:'Кордильеры и Анды',en:'The Cordillera and the Andes'},plan:R3['u1-l2']}]},
+ {n:2,lessons:[{id:'s3-u2-l1',title:{ru:'Аппалачи и Атлас',en:'The Appalachians and the Atlas'},plan:R3['u2-l1']},{id:'s3-u2-l2',title:{ru:'Восточная Африка и Австралия',en:'East Africa and Australia'},plan:R3['u2-l2']}]},
+ {n:3,lessons:[{id:'s3-u3-l1',title:{ru:'Кавказ и Пиренеи',en:'The Caucasus and the Pyrenees'},plan:R3['u3-l1']},{id:'s3-u3-l2',title:{ru:'Хребет на дне океана и рекорды',en:'A ridge on the ocean floor and records'},plan:R3['u3-l2']},
+   {id:'s3-u3-l3',title:{ru:'Все горы раздела',en:'All the mountains of the section'},plan:R3['u3-l3']}]}
+];
 // Units with content approved by the author. Units 2-4 are built from approved data but their lessons are not approved yet.
 // Unit 1 is approved; units 2-4 and the section final are drafts the author reviews in the app (24.10.2026).
 const READY_UNITS=[1,2,3,4,'S'];
@@ -188,10 +233,15 @@ STEPS.push({id:'s1-final',kind:'section',unit:'S'});
 COURSE2.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:2,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`s2-u${u.n}-practice`,sec:2,kind:'practice',unit:u.n});STEPS.push({id:`s2-u${u.n}-final`,sec:2,kind:'final',unit:u.n})});
 STEPS.push({id:'s2-final',sec:2,kind:'section',unit:'S'});
+COURSE3.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:3,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`s3-u${u.n}-practice`,sec:3,kind:'practice',unit:u.n});STEPS.push({id:`s3-u${u.n}-final`,sec:3,kind:'final',unit:u.n})});
+STEPS.push({id:'s3-final',sec:3,kind:'section',unit:'S'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
-const ready=s=>s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const READY_S3=[1,2,3,'S'];
+const ready=s=>s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const SD=st=>D['s'+st.sec];// data of section 2 / 3
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
 const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:t().sectionFinal;
@@ -278,7 +328,10 @@ function home(){
      STEPS.filter(s=>!s.sec&&s.unit===u.n).map(stopHtml).join('')).join('')+`<div class="unit-head"><span class="eyebrow">${x.section}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s1-final'))+
      `<div class="section-card s2"><img src="${IMG.stamp2}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(2)} · ${x.draft}</span><h2>${L()==='ru'?'Реки мира':'Rivers of the world'}</h2></div></div>`+
      COURSE2.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(2)} · ${x.unit} ${u.n}</span><h3>${esc(D.s2.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===2&&s.unit===u.n).map(stopHtml).join('')).join('')+
-     `<div class="unit-head"><span class="eyebrow">${x.sectionN(2)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s2-final'));
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(2)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s2-final'))+
+     `<div class="section-card s2"><img src="${IMG.stamp3}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(3)} · ${x.draft}</span><h2>${L()==='ru'?'Горы мира':'Mountains of the world'}</h2></div></div>`+
+     COURSE3.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(3)} · ${x.unit} ${u.n}</span><h3>${esc(D.s3.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===3&&s.unit===u.n).map(stopHtml).join('')).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(3)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s3-final'));
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -309,7 +362,7 @@ function startPractice(st){
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const head=st.sec===2?(st.unit==='S'?x.sectionN(2):`${x.sectionN(2)} · ${x.unit} ${st.unit} · ${D.s2.dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
+  const head=st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:x.finalDesc;
   let buttons;
   if(st.kind!=='lesson'&&st.kind!=='practice'&&S.done[id]&&!st.sec){
@@ -346,10 +399,10 @@ function unitIntro(next){
 }
 
 // The rivers intro card (source · channel · mouth) opens the first rivers lesson every time, however the lesson is started.
-function startLesson(st){if(st.id==='s2-u1-l1')riversIntro(()=>lesson(st));else lesson(st)}
-function riversIntro(next){
-  const x=t(),lang=L(),I=D.s2.intro;
-  h(`<section class="screen lesson"><div class="task"><span class="kind">${x.sectionN(2)} · ${x.riversIntro}</span>
+function startLesson(st){if(st.id==='s2-u1-l1')riversIntro(()=>lesson(st));else if(st.id==='s3-u1-l1')riversIntro(()=>lesson(st),3);else lesson(st)}
+function riversIntro(next,sec=2){
+  const x=t(),lang=L(),I=D['s'+sec].intro;
+  h(`<section class="screen lesson"><div class="task"><span class="kind">${x.sectionN(sec)} · ${x.riversIntro}</span>
    <img src="${A+I.image[lang].replace(/^\.\//,'')}" alt="" style="width:100%;border-radius:16px;box-shadow:0 10px 24px rgba(0,0,0,.4)">
    <div class="card"><div class="intro-pip"><img src="${IMG.map}" alt=""><p>${I.terms.map(q=>`<b>${esc(q[lang])}</b>`).join(' · ')}</p></div></div></div>
    <div class="fb idle"><button type="button" class="btn">${x.start}</button></div></section>`);
@@ -432,6 +485,42 @@ function lesson(step){
       fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
         m.clearShapes();want.forEach(id=>m.line(riverPath(R(id)),'hl-river good'));answered(q,ok);
         feedback(ok,ok?x.allOk:x.allBad,want.map(id=>R(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
+    // ---- section 3: mountains (all ranges drawn; the asked one is outlined) ----
+    if(q.k==='introMtn'||q.k==='introMtnRec'){const rec=q.rec&&D.s3.records.find(r=>r.id===q.rec);const o=M(rec?rec.object:q.id);
+      frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');if(!rec)wireNuance(o);
+      return gotIt(()=>learn(o.id))}
+    if(q.k==='findMtn'){const o=M(q.id);const rec=q.rec&&D.s3.records.find(r=>r.id===q.rec);frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+      let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
+        const hit=nearestMtn(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape good':'hl-shape pulse');
+        if(hit&&!ok)m.shape(M(hit),'hl-shape bad');answered(q,ok);
+        feedback(ok,ok?x.right:(hit?x.wrongIs(M(hit).name[lang]):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
+    if(q.k==='whatMtn'){const o=M(q.id);const opts=pick(MTNS,q.id,4);
+      frame(x.what,`<p class="q">${x.whatMtn}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(M(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');
+      return choices(q,q.id,()=>o.name[lang],()=>o.disputed?'':o.fact(lang))}
+    if(q.k==='mtnCont'){const o=M(q.id);const opts=pick(CONT,o.continent,4);
+      frame(x.onCont,`<p class="q">${x.mtnCont(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(O(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');
+      return choices(q,o.continent,()=>O(o.continent).name[lang],()=>'')}
+    if(q.k==='mtnBorder'){const o=M(q.id);const pairs=[o.border,['asia','africa'],['europe','africa'],['north-america','south-america']];const key=p=>p.join('+');
+      const nameOf=p=>p.map(c=>O(c).name[lang]).join(x.and);
+      frame(x.border,`<p class="q">${x.mtnBorder(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${shuffle([...pairs]).map(p=>`<button type="button" class="choice" data-o="${key(p)}">${esc(nameOf(p))}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');
+      return choices(q,key(o.border),()=>nameOf(o.border),()=>'')}
+    if(q.k==='mtnOcean'){const o=M(q.id);const opts=pick(OCEANS,o.ocean,4);
+      frame(x.ocean,`<p class="q">${x.mtnOcean(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(O(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');
+      return choices(q,o.ocean,()=>O(o.ocean).name[lang],()=>'')}
+    if(q.k==='allAfrica'){const want=MTNS.filter(id=>M(id).continent==='africa');const sel=new Set();
+      frame(x.find,`<p class="q">${x.allAfrica}</p><div class="mapslot"></div><p class="rotate-hint">${x.allHint.replace(/реки|rivers/,L()==='ru'?'горы':'mountains')}</p>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),onTap:(px,py,sx,sy,sz)=>{const hit=nearestMtn(px,py,sz,26);if(!hit)return;
+        if(sel.has(hit))sel.delete(hit);else sel.add(hit);redraw()}});
+      function redraw(){m.clearShapes();sel.forEach(id=>m.shape(M(id),'hl-shape sel'));const b=app.querySelector('.fb .btn');if(b)b.disabled=!sel.size}
+      const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;redraw();
+      fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
+        m.clearShapes();want.forEach(id=>m.shape(M(id),'hl-shape good'));answered(q,ok);
+        feedback(ok,ok?x.allAfricaOk:x.allAfricaBad,want.map(id=>M(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
     if(q.k==='findObj'){const o=O(q.id);const r=q.rec&&D.records.find(r=>r.id===q.rec);frame(r?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:learnedLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=[...CONT,...OCEANS].map(O).find(c=>inside(c,px,py));
@@ -465,12 +554,12 @@ function lesson(step){
 }
 
 /* ---------- GeoWords: approved finals and review puzzles built by the approved rules ---------- */
-function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-final';const G=st.sec===2?D.s2.geo:D.geo,DI=st.sec===2?D.s2.dict:D.dict;
+function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-final';const G=st.sec?SD(st).geo:D.geo,DI=st.sec?SD(st).dict:D.dict;
   const P=G.puzzles.find(p=>p.role===role&&p.language===L()&&p.approval?.status==='approved'&&(role==='section-final'||p.unit===st.unit));
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,stamp:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,stamp:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Reveal order (docs/app-mechanics.md, rule 5): neighbours never one after another; first letter late; last letters not early.
 function revealOrder(n){const long=n>=7,endN=n<=8?2:3;
   for(let tries=0;tries<20000;tries++){const o=shuffle([...Array(n)].map((_,i)=>i+1));let ok=true;
@@ -516,22 +605,29 @@ function practicePuzzle(unit){
 const fold=s=>s.toUpperCase().replace(/Ё/g,'Е');
 const ON_RU={nile:'на Ниле',amazon:'на Амазонке',mississippi:'на Миссисипи',yangtze:'на Янцзы','huang-he':'на Хуанхэ',ganges:'на Ганге',indus:'на Инде',danube:'на Дунае',volga:'на Волге'};
 const ON_EN={nile:'on the Nile',amazon:'on the Amazon',mississippi:'on the Mississippi',yangtze:'on the Yangtze','huang-he':'on the Yellow River',ganges:'on the Ganges',indus:'on the Indus',danube:'on the Danube',volga:'on the Volga'};
+// place phrases exactly as in the approved section-3 GeoWords clues
+const IN_RU={himalayas:'в Гималаях',ural:'на Урале',cordillera:'в Кордильерах',andes:'в Андах',appalachians:'в Аппалачах','east-africa':'в горах Восточной Африки','great-dividing-range':'на Большом Водораздельном хребте',
+  atlas:'в Атласских горах',caucasus:'на Кавказе',pyrenees:'в Пиренеях','mid-atlantic-ridge':'на Срединно-Атлантическом хребте'};
+const IN_EN={himalayas:'in the Himalayas',ural:'in the Urals',cordillera:'in the North American Cordillera',andes:'in the Andes',appalachians:'in the Appalachians','east-africa':'in the mountains of East Africa',
+  'great-dividing-range':'in the Great Dividing Range',atlas:'in the Atlas',caucasus:'in the Caucasus',pyrenees:'in the Pyrenees','mid-atlantic-ridge':'on the Mid-Atlantic Ridge'};
 function placesFor(st){
   if(!st.sec)return knownPlaces(st.unit);
+  if(st.sec===3){const tpl=D.tpl.objects,out=MTNS.filter(id=>M(id).unit<=st.unit).map(id=>({id,x:M(id).x,y:M(id).y,place:{ru:IN_RU[id],en:IN_EN[id]}}));
+    for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
   const tpl=D.tpl.objects,out=RIVERS.filter(id=>R(id).unit<=st.unit).map(id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}));
   for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}
   return out}
-const layersFor=st=>st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
+const layersFor=st=>st.sec===3?mtnLayers():st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
 // Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
 function practiceWords(st){const lang=L(),places=placesFor(st);
-  const DI=st.sec===2?D.s2.dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
+  const DI=st.sec?SD(st).dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
   const byLen=a=>a.sort((x,y)=>[...y.answer].length-[...x.answer].length);
   const all=DI.units.flatMap(u=>u.words[lang]),U=DI.units[st.unit-1];
   // this unit's own review words and reserve words, then its approved practiceExtra (short words of later units), then earlier units (longest first)
   const groups=[shuffle(U.words[lang].filter(w=>w.role==='review'&&ok(w))),shuffle(U.words[lang].filter(w=>w.role==='reserve'&&ok(w))),
     (U.practiceExtra?.[lang]||[]).map(a=>all.find(w=>w.answer===a)).filter(w=>w&&ok(w))];
   for(let u=st.unit-2;u>=0;u--)groups.push(byLen(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w)))));
-  if(st.sec===2)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
+  if(st.sec)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
   groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
   const out=[];for(const g of groups)for(const w of g)if(out.length<6&&!out.some(o=>o.answer===w.answer))out.push(w);
   return out}
