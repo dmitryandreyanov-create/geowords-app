@@ -627,7 +627,7 @@ function lesson(step){
       frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>${o.inset?`<p class="rotate-hint">${x.magHint}</p>`:''}`);
       let locked=false;const done_=(ok,hit,sx,sy)=>{locked=true;m.dot(sx,sy,ok);showStrait(m,o,ok?'hl-shape good':'hl-shape pulse');if(hit&&!ok)showStrait(m,ST(hit),'hl-shape bad');answered(q,ok);
         feedback(ok,ok?x.right:(hit?x.wrongIs(ST(hit).name[lang]):x.miss),ok?(rec?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)};
-      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),insets:straitInsets(),
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),insets:o.inset?[o.inset.id]:[],
         onTap:(px,py,sx,sy,sz)=>{if(locked)return;const hit=nearestStrait(px,py,sz,22);
           if(!hit&&nearInsetOnly(px,py,sz)){const fb=app.querySelector('.fb');fb.className='fb bad';fb.innerHTML=`<div class="msg"><img src="${IMG.spy}" alt=""><div><p>${esc(x.openMag)}</p></div></div>`;return}
           done_(hit===q.id,hit,sx,sy)},
