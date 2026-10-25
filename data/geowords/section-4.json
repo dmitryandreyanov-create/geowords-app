@@ -37,9 +37,9 @@
    "minSeparation": 5.5,
    "markers": [
     {
-     "id": "arctic-ocean",
-     "x": 96.8,
-     "y": 4.5,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "L"
     },
     {
@@ -134,9 +134,9 @@
      "text": "Find the third letter in the Black Sea."
     },
     {
-     "markerId": "arctic-ocean",
+     "markerId": "mississippi-source",
      "position": 1,
-     "text": "Find the first letter in the Arctic Ocean."
+     "text": "Find the first letter at the source of the Mississippi."
     },
     {
      "markerId": "mediterranean-sea",
@@ -152,8 +152,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "71a60528244f9a8f"
+    "date": "2026-10-25",
+    "contentSha256": "122a45ac9c00a859"
    }
   },
   {
