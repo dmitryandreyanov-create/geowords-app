@@ -67,6 +67,29 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     }
   }
 }
+// River ends (Svetlana, 2026-10-25): a letter «at the mouth» of a river always comes with the letter «at the source» of the same river
+// (except rivers without an agreed source point — the Nile and the Amazon), a source never comes alone, and neither comes with «on» that river.
+// Source and mouth letters sit on the approved points of data/maps/world-rivers.json.
+{
+  const rivers = Object.fromEntries((fs.existsSync(path.join(mapsDir, "world-rivers.json")) ? JSON.parse(fs.readFileSync(path.join(mapsDir, "world-rivers.json"), "utf8")).rivers : []).map(r => [r.id, r]));
+  for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
+    for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+      const ids = new Set((p.markers || []).map(m => m.id)), err = m => errors.push(`${file}: ${p.id} ${m}`);
+      for (const m of p.markers || []) {
+        const end = /-(mouth|source)$/.exec(m.id);
+        if (!end) continue;
+        const r = m.id.slice(0, -end[0].length), river = rivers[r];
+        if (ids.has(`${r}-river`)) err(`has «on» and «at the ${end[1]}» of ${r} together`);
+        if (!river) continue;
+        if (end[1] === "source" && !river.source) err(`${m.id}: ${r} has no agreed source point`);
+        if (end[1] === "mouth" && river.source && !ids.has(`${r}-source`)) err(`${m.id} needs the source of ${r} in the same puzzle`);
+        if (end[1] === "source" && !ids.has(`${r}-mouth`)) err(`${m.id} needs the mouth of ${r} in the same puzzle`);
+        const pt = river[end[1]];
+        if (pt && Math.hypot(pt.x - m.x, pt.y - m.y) > (end[1] === "mouth" ? 0.6 : 0.3)) err(`${m.id} is not on the approved ${end[1]} point of ${r}`);
+      }
+    }
+  }
+}
 // Placement rules (Svetlana, 2026-10-23): a sea's circle sits at the centre of the sea (its label point, within 1.5% of map
 // width), and no letter lies inside another object of the same puzzle (checked here for seas and straits, whose tap
 // areas are in data/maps; the generator also checks continents, oceans, rivers and mountains).

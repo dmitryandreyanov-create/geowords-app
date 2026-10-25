@@ -130,7 +130,7 @@ async function loadData(){
     'data/dictionary/section-2.json','data/maps/world-rivers.json','data/review/block-1.json','data/content/section-4-facts.json'].map(get));
   const rel=(id,r)=>{const x=rev.relations.find(q=>q.subject===id&&q.relation===r&&q.use==='yes');return x&&x.object};
   const rivers={};for(const it of rmap.rivers){const f=f2.items.find(i=>i.id===it.id);
-    rivers[it.id]={id:it.id,kind:'river',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,path:it.path,layer:it.layer.png.split('/').pop().replace('.webp',''),
+    rivers[it.id]={id:it.id,kind:'river',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,path:it.path,mouthPt:it.mouth||null,sourcePt:it.source||null,layer:it.layer.png.split('/').pop().replace('.webp',''),
       fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,continent:rel(it.id,'onContinent'),mouth:rel(it.id,'flowsInto')}}
   const waterName=id=>(objs[id]&&objs[id].name)||(f4.items.find(i=>i.id===id)||{}).name;
   D.s2={facts:f2,records:r2.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g2,dict:d2,rivers,waterName,intro:f2.intro};
@@ -818,10 +818,20 @@ const SEA_EN={'mediterranean-sea':'in the Mediterranean Sea','black-sea':'in the
 const placeOf={2:id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}),3:id=>({id,x:M(id).x,y:M(id).y,place:{ru:IN_RU[id],en:IN_EN[id]}}),
   4:id=>({id,x:W(id).x,y:W(id).y,place:{ru:SEA_RU[id],en:SEA_EN[id]}}),5:id=>({id,x:ST(id).x,y:ST(id).y,place:{ru:STR_RU[id],en:STR_EN[id]}})};
 const secIds={2:()=>RIVERS.map(id=>[id,R(id).unit]),3:()=>MTNS.map(id=>[id,M(id).unit]),4:()=>SEAS.map(id=>[id,W(id).unit]),5:()=>STRAITS.filter(id=>!ST(id).inset).map(id=>[id,ST(id).unit])};
+// River ends (Svetlana, 25.10.2026): «at the mouth» always comes with «at the source» of the same river (the Nile and the Amazon: mouth only),
+// never with «on» that river. A river is one group: at most its «on» letter, or its mouth (+ source).
+const MOUTH_RU={nile:'в устье Нила',amazon:'в устье Амазонки',mississippi:'в устье Миссисипи',yangtze:'в устье Янцзы','huang-he':'в устье Хуанхэ',ganges:'в устье Ганга',indus:'в устье Инда',danube:'в устье Дуная',volga:'в устье Волги'};
+const SOURCE_RU={mississippi:'в истоке Миссисипи',yangtze:'в истоке Янцзы','huang-he':'в истоке Хуанхэ',ganges:'в истоке Ганга',indus:'в истоке Инда',danube:'в истоке Дуная',volga:'в истоке Волги'};
+const riverEnds=(id,pri)=>{const r=R(id),out=[];if(!r.mouthPt)return out;
+  const mouth={id:id+'-mouth',group:id,x:r.mouthPt.x,y:r.mouthPt.y,place:{ru:MOUTH_RU[id],en:'at the mouth of '+ON_EN[id].replace(/^on /,'')},pri};
+  if(r.sourcePt){const source={id:id+'-source',group:id,x:r.sourcePt.x,y:r.sourcePt.y,place:{ru:SOURCE_RU[id],en:'at the source of '+ON_EN[id].replace(/^on /,'')},pri};
+    mouth.pair=source;source.pair=mouth;out.push(mouth,source)}else out.push(mouth);
+  return out};
 function placesFor(st){
   if(!st.sec)return knownPlaces(st.unit);
   const out=secIds[st.sec]().filter(([,u])=>u<=st.unit).map(([id])=>({...placeOf[st.sec](id),pri:0}));
   for(let k=2;k<st.sec;k++)for(const [id] of secIds[k]())out.push({...placeOf[k](id),pri:1});
+  for(const p of [...out])if(p.id.endsWith('-river')){p.group=p.id.slice(0,-6);out.push(...riverEnds(p.group,p.pri))}
   const tpl=D.tpl.objects;for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place,pri:2})}
   return out}
 const layersFor=st=>st.sec?[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...(st.sec>=3?MTNS.map(id=>M(id).layer):[]),...(st.sec===5?['world-canal-suez-canal','world-canal-panama-canal']:[])]:st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
@@ -844,23 +854,32 @@ function containers(id){
   if(D.s5&&D.s5.straits[id]){const o=ST(id);return [o.ocean,...(o.connects||[]),...(o.separates||[])].filter(Boolean)}
   if(D.s4&&D.s4.seas[id]){const o=W(id);return id==='hudson-bay'?['arctic-ocean','atlantic-ocean']:[o.ocean].filter(Boolean)}
   if(D.s3&&D.s3.mtns[id]){const o=M(id);return [o.continent,o.ocean,...(o.border||[]),...(id==='caucasus'?['europe','asia']:[])].filter(Boolean)}
-  const r=id.endsWith('-river')&&D.s2&&D.s2.rivers[id.slice(0,-6)];return r?[r.continent].filter(Boolean):[]}
-const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id);
+  const m=/-(river|mouth|source)$/.exec(id),r=m&&D.s2&&D.s2.rivers[id.slice(0,-m[0].length)];return r?[r.continent,...(m[1]==='mouth'?[r.mouth]:[])].filter(Boolean):[]}
+// a letter that falls inside another object of the same puzzle (a river end on a continent, a mouth in a sea…) would fit two clues
+const areaOf=id=>(D.s5&&D.s5.straits[id]&&!ST(id).inset&&ST(id))||(D.s4&&D.s4.seas[id])||(D.s3&&D.s3.mtns[id])||(O(id)&&O(id).tapArea&&O(id))||null;
+const inArea=(p,q)=>{const o=areaOf(q.id);return !!(o&&q.id!==p.id&&inside(o,p.x,p.y))};
+const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id)||inArea(a,b)||inArea(b,a);
 function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
   const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
   // current section first, then earlier sections, continents / oceans last (places without pri — section 1 — are all equal)
   // continents / oceans last; otherwise the places used least so far in this practice first, so every learned object turns up across the six words
-  const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||((usage[a.id]||0)-(usage[b.id]||0))||((a.pri||0)-(b.pri||0)));
-  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>far(p,q)&&!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
-  for(let k=0;k<300&&!chosen;k++){const pick=[];for(const p of order_())if(pick.length<n&&pick.every(q=>!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}if(!chosen)return null;
+  const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||((usage[a.group||a.id]||0)-(usage[b.group||b.id]||0))||((a.pri||0)-(b.pri||0)));
+  // a river group gives one «on» letter or its mouth (+ its source, always together); ends of a river are taken as a pair
+  const okWith=(p,pick,sep)=>pick.every(q=>(!sep||far(p,q))&&!nested(p,q)&&!(p.group&&q.group===p.group));
+  const greedy=sep=>{const pick=[];for(const p of order_()){if(pick.length>=n||pick.includes(p))continue;
+      if(p.pair){if(pick.length+2>n||!usable.includes(p.pair)||!okWith(p,pick,sep)||!okWith(p.pair,pick,sep)||(sep&&!far(p,p.pair)))continue;pick.push(p,p.pair)}
+      else if(okWith(p,pick,sep))pick.push(p)}
+    return pick.length===n?pick:null};
+  for(let k=0;k<80&&!chosen;k++)chosen=greedy(true);
+  for(let k=0;k<300&&!chosen;k++)chosen=greedy(false);if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
   return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
-  const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers)usage[k.id]=(usage[k.id]||0)+1}}
+  const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers){const key=k.id.replace(/-(river|mouth|source)$/,'');usage[key]=(usage[key]||0)+1}}}
   if(!puzzles.length){S.done[st.id]=true;save();return home()}
   let i=0;const go=()=>{const P=puzzles[i];P.stepId=st.id;P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};
   go()}
