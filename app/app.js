@@ -631,11 +631,17 @@ function practiceWords(st){const lang=L(),places=placesFor(st);
   groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
   const out=[];for(const g of groups)for(const w of g)if(out.length<6&&!out.some(o=>o.answer===w.answer))out.push(w);
   return out}
+// Never put a letter on an object and on the object that contains it in one puzzle: a range or a river and its continent,
+// the Mid-Atlantic Ridge and the Atlantic, the Urals / Caucasus and Europe or Asia ("in the Atlantic" would fit two letters).
+function containers(id){
+  if(D.s3&&D.s3.mtns[id]){const o=M(id);return [o.continent,o.ocean,...(o.border||[]),...(id==='caucasus'?['europe','asia']:[])].filter(Boolean)}
+  const r=id.endsWith('-river')&&D.s2&&D.s2.rivers[id.slice(0,-6)];return r?[r.continent].filter(Boolean):[]}
+const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id);
 function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
   const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
-  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>far(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
-  if(!chosen)chosen=shuffle([...usable]).slice(0,n);if(chosen.length<n)return null;
+  for(let k=0;k<80&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>far(p,q)&&!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}
+  for(let k=0;k<300&&!chosen;k++){const pick=[];for(const p of shuffle([...usable]))if(pick.length<n&&pick.every(q=>!nested(p,q)))pick.push(p);if(pick.length===n)chosen=pick}if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
