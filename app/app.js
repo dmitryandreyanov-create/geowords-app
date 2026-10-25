@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -39,6 +39,8 @@ const T={
   practiceTag:'Повторение · собрано по правилам',sectionFinal:'Итог раздела: GeoWords',sectionN:n=>'Раздел '+n,draft:'черновик уроков',
   whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
   allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
+  whatStrait:'Что это за пролив или канал?',connectsQ:n=>`Что соединяет <b>${n}</b>?`,separatesQ:n=>`Что разделяет <b>${n}</b>?`,connectsT:'Что соединяет',separatesT:'Что разделяет',
+  openMag:'Он маленький — открой лупу 🔍 на карте',magHint:'Маленькие проливы — под лупой 🔍',
   whatSea:'Что это за море или залив?',seaOcean:n=>`<b>${n}</b> — часть какого океана?`,seaNone:'Ни какого: это внутренний водоём',
   allIndian:'Нажми на все моря и заливы Индийского океана',allIndianHint:'Отметь моря и заливы и нажми «Проверить».',allIndianOk:'Все моря и заливы Индийского океана найдены!',allIndianBad:'Не совсем. Вот моря и заливы Индийского океана.',
   whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
@@ -64,6 +66,8 @@ const T={
   practiceTag:'Review · built by the rules',sectionFinal:'Section final: GeoWords',sectionN:n=>'Section '+n,draft:'draft lessons',
   whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
   allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
+  whatStrait:'Which strait or canal is this?',connectsQ:n=>`What does <b>${n}</b> connect?`,separatesQ:n=>`What does <b>${n}</b> separate?`,connectsT:'What it connects',separatesT:'What it separates',
+  openMag:'It is tiny — open the magnifier 🔍 on the map',magHint:'Tiny straits are under the magnifier 🔍',
   whatSea:'Which sea or bay is this?',seaOcean:n=>`Which ocean is <b>${n}</b> part of?`,seaNone:'None: it is an inland body of water',
   allIndian:'Tap every sea and bay of the Indian Ocean',allIndianHint:'Mark the seas and bays, then tap “Check”.',allIndianOk:'All the seas and bays of the Indian Ocean found!',allIndianBad:'Not quite. Here are the seas and bays of the Indian Ocean.',
   whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
@@ -76,12 +80,16 @@ const ACC_RU={north:'север',south:'юг',east:'восток',west:'запа
   n:'Северное полушарие',s:'Южное полушарие',e:'Восточное полушарие',w:'Западное полушарие',
   asia:'Азию',africa:'Африку','north-america':'Северную Америку','south-america':'Южную Америку',antarctica:'Антарктиду',europe:'Европу',australia:'Австралию',
   'pacific-ocean':'Тихий океан','atlantic-ocean':'Атлантический океан','indian-ocean':'Индийский океан','arctic-ocean':'Северный Ледовитый океан','southern-ocean':'Южный океан',
+  'english-channel':'пролив Ла-Манш',
   'mediterranean-sea':'Средиземное море','black-sea':'Чёрное море','red-sea':'Красное море','caspian-sea':'Каспийское море','arabian-sea':'Аравийское море','bay-of-bengal':'Бенгальский залив',
   'coral-sea':'Коралловое море','caribbean-sea':'Карибское море','gulf-of-mexico':'Мексиканский залив','hudson-bay':'Гудзонов залив',
   himalayas:'Гималаи',ural:'Уральские горы',cordillera:'Североамериканские Кордильеры',andes:'Анды',appalachians:'Аппалачи','east-africa':'горы Восточной Африки',
   'great-dividing-range':'Большой Водораздельный хребет',atlas:'Атласские горы',caucasus:'Кавказские горы',pyrenees:'Пиренеи','mid-atlantic-ridge':'Срединно-Атлантический хребет',
   nile:'Нил',amazon:'Амазонку',mississippi:'Миссисипи',yangtze:'Янцзы','huang-he':'Хуанхэ',ganges:'Ганг',indus:'Инд',danube:'Дунай',volga:'Волгу'};
 const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the Equator','prime-meridian':'the Prime Meridian',n:'the Northern Hemisphere',s:'the Southern Hemisphere',e:'the Eastern Hemisphere',w:'the Western Hemisphere',
+  'suez-canal':'the Suez Canal','panama-canal':'the Panama Canal','strait-of-gibraltar':'the Strait of Gibraltar','english-channel':'the English Channel',bosporus:'the Bosporus',dardanelles:'the Dardanelles',
+  'bab-el-mandeb':'the Bab-el-Mandeb Strait','strait-of-hormuz':'the Strait of Hormuz','gulf-of-oman':'the Gulf of Oman','strait-of-malacca':'the Strait of Malacca','mozambique-channel':'the Mozambique Channel',
+  'bering-strait':'the Bering Strait','drake-passage':'the Drake Passage','strait-of-magellan':'the Strait of Magellan',
   'mediterranean-sea':'the Mediterranean Sea','black-sea':'the Black Sea','red-sea':'the Red Sea','caspian-sea':'the Caspian Sea','arabian-sea':'the Arabian Sea','bay-of-bengal':'the Bay of Bengal',
   'coral-sea':'the Coral Sea','caribbean-sea':'the Caribbean Sea','gulf-of-mexico':'the Gulf of Mexico','hudson-bay':'Hudson Bay',
   himalayas:'the Himalayas',ural:'the Ural Mountains',cordillera:'the North American Cordillera',andes:'the Andes',appalachians:'the Appalachian Mountains','east-africa':'the mountains of East Africa',
@@ -139,13 +147,22 @@ async function loadData(){
     seas[it.id]={id:it.id,kind:'sea',name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],
       fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,ocean:io&&io.object,oceanUse:io&&io.use,card:io&&io.requiresCard}}
   const card=rev.cards.find(c=>c.id==='card-map-convention-med-black-atlantic'&&c.approval?.status==='approved');
+  // Section 5 «Straits and canals»: approved facts, records, dictionary, GeoWords, strait outlines and the two magnifier insets.
+  const [f5,r5,g5,d5,smap]=await Promise.all(['data/content/section-5-facts.json','data/content/section-5-records.json','data/geowords/section-5.json',
+    'data/dictionary/section-5.json','data/maps/world-straits.json'].map(get));
+  const straits={};for(const it of smap.items){const f=f5.items.find(i=>i.id===it.id);
+    straits[it.id]={id:it.id,kind:it.kind,name:it.name,unit:f.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],inset:it.inset||null,
+      layer:it.layer?it.layer.png.split('/').pop().replace('.webp',''):null,fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat,
+      connects:rel(it.id,'connects'),separates:rel(it.id,'separates'),ocean:rel(it.id,'inOcean')}}
+  const insets={};for(const [id,v] of Object.entries(smap.insets))insets[id]={id,image:A+v.image.replace(/^\.\//,''),magnifier:v.magnifier,aspect:id==='bering'?1012/502:1012/476};
+  D.s5={facts:f5,records:r5.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g5,dict:d5,straits,insets,intro:null};
   D.s4={card,facts:f4,records:r4.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g4,dict:d4,seas,intro:null};
   D.s3={facts:f3,records:r3.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g3,dict:d3,mtns,intro:f3.intro};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
-const nm=id=>(D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
-const acc=id=>L()==='ru'?ACC_RU[id]:(ACC_EN[id]||nm(id));
+const nm=id=>(D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
+const acc=id=>L()==='ru'?(ACC_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
 const CONT=['asia','africa','north-america','south-america','antarctica','europe','australia'];
 const RIVERS=['nile','amazon','mississippi','yangtze','huang-he','ganges','indus','danube','volga'];
 const R=id=>D.s2.rivers[id];
@@ -155,6 +172,14 @@ function riverPx(r,x,y,W,H){let best=Infinity;for(const l of r.path)for(let i=1;
   const dx=bx-ax,dy=by-ay,q=dx*dx+dy*dy;let u=q?((px-ax)*dx+(py-ay)*dy)/q:0;u=Math.max(0,Math.min(1,u));best=Math.min(best,Math.hypot(px-ax-u*dx,py-ay-u*dy))}return best}
 const nearestRiver=(x,y,sz,max)=>{let hit=null,d=max;for(const id of RIVERS){const v=riverPx(R(id),x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit};
 const riverLayers=()=>[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer)];
+const STRAITS=['suez-canal','panama-canal','strait-of-gibraltar','english-channel','bosporus','dardanelles','bab-el-mandeb','strait-of-hormuz','gulf-of-oman',
+  'strait-of-malacca','mozambique-channel','bering-strait','drake-passage','strait-of-magellan'];
+const ST=id=>D.s5.straits[id];
+const straitLayers=()=>[...CONT.map(id=>O(id).layer),'world-canal-suez-canal','world-canal-panama-canal'];
+const straitInsets=()=>Object.keys(D.s5.insets);
+// world taps never answer an inset-only strait; `max` is the screen tolerance around a strait outline
+function nearestStrait(x,y,sz,max){let hit=null,d=max;for(const id of STRAITS){const o=ST(id);if(o.inset)continue;const v=inside(o,x,y)?0:edgePx(o,x,y,sz.W,sz.H);if(v<=d){d=v;hit=id}}return hit}
+function nearInsetOnly(x,y,sz){return STRAITS.some(id=>ST(id).inset&&(inside(ST(id),x,y)||edgePx(ST(id),x,y,sz.W,sz.H)<=30))}
 const SEAS=['mediterranean-sea','black-sea','red-sea','caspian-sea','arabian-sea','bay-of-bengal','coral-sea','caribbean-sea','gulf-of-mexico','hudson-bay'];
 const W=id=>D.s4.seas[id];
 const seaLayers=()=>CONT.map(id=>O(id).layer);
@@ -267,6 +292,34 @@ const COURSE4=[
  {n:3,lessons:[{id:'s4-u3-l1',title:{ru:'Карибское море и Мексиканский залив',en:'The Caribbean and the Gulf of Mexico'},plan:R4['u3-l1']},{id:'s4-u3-l2',title:{ru:'Гудзонов залив и рекорды',en:'Hudson Bay and records'},plan:R4['u3-l2']},
    {id:'s4-u3-l3',title:{ru:'Все моря раздела',en:'All the seas of the section'},plan:R4['u3-l3']}]}
 ];
+// Section 5 «Straits and canals» — lesson plan from the roadmap (draft, 25.10.2026). The Bosporus, the Dardanelles and the Bering Strait are
+// answered under the magnifier 🔍; Hormuz has no approved «connects» relation, so only find / name questions are asked for it.
+const sk=k=>id=>({k,id});
+const R5={
+ 'u1-l1':()=>[sk('introStrait')('suez-canal'),sk('introStrait')('panama-canal'),sk('findStrait')('suez-canal'),sk('whatStrait')('panama-canal'),sk('connects')('suez-canal'),
+   sk('findStrait')('panama-canal'),sk('connects')('panama-canal'),sk('separates')('suez-canal'),sk('whatStrait')('suez-canal'),{k:'findSea',id:'red-sea'}],
+ 'u1-l2':()=>[sk('introStrait')('strait-of-gibraltar'),sk('introStrait')('english-channel'),sk('findStrait')('strait-of-gibraltar'),sk('whatStrait')('english-channel'),
+   sk('connects')('strait-of-gibraltar'),sk('separates')('strait-of-gibraltar'),sk('findStrait')('english-channel'),{k:'seaOcean',id:'mediterranean-sea'},...some(['suez-canal','panama-canal'],2).map(sk('findStrait'))],
+ 'u1-l3':()=>[sk('introStrait')('bosporus'),sk('introStrait')('dardanelles'),sk('findStrait')('bosporus'),sk('whatStrait')('dardanelles'),sk('separates')('bosporus'),
+   sk('findStrait')('dardanelles'),sk('separates')('dardanelles'),sk('whatStrait')('bosporus'),...some(['suez-canal','panama-canal','strait-of-gibraltar','english-channel'],2).map(sk('findStrait'))],
+ 'u2-l1':()=>[sk('introStrait')('bab-el-mandeb'),sk('introStrait')('strait-of-hormuz'),sk('introStrait')('gulf-of-oman'),sk('findStrait')('bab-el-mandeb'),sk('whatStrait')('strait-of-hormuz'),
+   sk('connects')('bab-el-mandeb'),sk('findStrait')('strait-of-hormuz'),sk('findStrait')('gulf-of-oman'),sk('separates')('bab-el-mandeb'),sk('whatStrait')('gulf-of-oman')],
+ 'u2-l2':()=>[sk('introStrait')('strait-of-malacca'),sk('introStrait')('mozambique-channel'),sk('findStrait')('strait-of-malacca'),sk('whatStrait')('mozambique-channel'),
+   sk('connects')('strait-of-malacca'),sk('findStrait')('mozambique-channel'),sk('whatStrait')('strait-of-malacca'),...some(['bab-el-mandeb','strait-of-hormuz','gulf-of-oman'],3).map(sk('findStrait'))],
+ 'u3-l1':()=>[sk('introStrait')('bering-strait'),sk('introStrait')('drake-passage'),sk('introStrait')('strait-of-magellan'),sk('findStrait')('bering-strait'),sk('separates')('bering-strait'),
+   sk('findStrait')('drake-passage'),sk('separates')('drake-passage'),sk('findStrait')('strait-of-magellan'),sk('connects')('strait-of-magellan'),sk('whatStrait')('drake-passage')],
+ 'u3-l2':()=>[...D.s5.records.flatMap(r=>[{k:'introStraitRec',rec:r.id},{k:'findStrait',id:r.object,rec:r.id}]),sk('connects')('bering-strait'),
+   ...some(STRAITS.filter(id=>ST(id).connects&&id!=='bering-strait'),5).map(sk('connects'))],
+ 'u3-l3':()=>shuffle([...some(STRAITS,4).map(sk('findStrait')),...some(STRAITS,2).map(sk('whatStrait')),...some(STRAITS.filter(id=>ST(id).connects),2).map(sk('connects')),
+   ...some(STRAITS.filter(id=>ST(id).separates),2).map(sk('separates'))])
+};
+const COURSE5=[
+ {n:1,lessons:[{id:'s5-u1-l1',title:{ru:'Суэцкий и Панамский каналы',en:'The Suez and Panama Canals'},plan:R5['u1-l1']},{id:'s5-u1-l2',title:{ru:'Гибралтар и Ла-Манш',en:'Gibraltar and the English Channel'},plan:R5['u1-l2']},
+   {id:'s5-u1-l3',title:{ru:'Босфор и Дарданеллы',en:'The Bosporus and the Dardanelles'},plan:R5['u1-l3']}]},
+ {n:2,lessons:[{id:'s5-u2-l1',title:{ru:'Баб-эль-Мандеб, Ормуз и Оманский залив',en:'Bab-el-Mandeb, Hormuz and the Gulf of Oman'},plan:R5['u2-l1']},{id:'s5-u2-l2',title:{ru:'Малаккский и Мозамбикский проливы',en:'The Malacca Strait and the Mozambique Channel'},plan:R5['u2-l2']}]},
+ {n:3,lessons:[{id:'s5-u3-l1',title:{ru:'Берингов, Дрейка, Магелланов',en:'Bering, Drake and Magellan'},plan:R5['u3-l1']},{id:'s5-u3-l2',title:{ru:'Рекорды и что соединяют проливы',en:'Records and what straits connect'},plan:R5['u3-l2']},
+   {id:'s5-u3-l3',title:{ru:'Все проливы раздела',en:'All the straits of the section'},plan:R5['u3-l3']}]}
+];
 // Units with content approved by the author. Units 2-4 are built from approved data but their lessons are not approved yet.
 // Unit 1 is approved; units 2-4 and the section final are drafts the author reviews in the app (24.10.2026).
 const READY_UNITS=[1,2,3,4,'S'];
@@ -283,12 +336,16 @@ STEPS.push({id:'s3-final',sec:3,kind:'section',unit:'S'});
 COURSE4.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:4,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`s4-u${u.n}-practice`,sec:4,kind:'practice',unit:u.n});STEPS.push({id:`s4-u${u.n}-final`,sec:4,kind:'final',unit:u.n})});
 STEPS.push({id:'s4-final',sec:4,kind:'section',unit:'S'});
+COURSE5.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:5,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`s5-u${u.n}-practice`,sec:5,kind:'practice',unit:u.n});STEPS.push({id:`s5-u${u.n}-final`,sec:5,kind:'final',unit:u.n})});
+STEPS.push({id:'s5-final',sec:5,kind:'section',unit:'S'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
 const READY_S3=[1,2,3,'S'];
 const READY_S4=[1,2,3,'S'];
-const ready=s=>s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const READY_S5=[1,2,3,'S'];
+const ready=s=>s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];// data of section 2 / 3
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
@@ -310,18 +367,34 @@ const areaPath=o=>[...o.tapArea,...o.holes].map(p=>'M'+p.map(q=>q[0]+' '+q[1]).j
 const learnedLayers=()=>CONT.filter(id=>S.learned.includes(id)).map(id=>O(id).layer);
 
 /* ---------- map widget: base + layers + highlight shapes, markers in screen space, pinch/zoom ---------- */
-function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true}){
+function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true,insets=[],onInsetTap}){
   host.innerHTML=`<div class="mapbox"><div class="map"><div class="world"><img src="${IMG.base}" alt="" draggable="false">${layers.map(l=>`<img src="${IMG.layer(l)}" alt="" draggable="false">`).join('')}
    <svg class="shapes" viewBox="0 0 100 100" preserveAspectRatio="none"></svg></div></div>
    ${trail?'<svg class="trailsvg" preserveAspectRatio="none"><polyline points=""/></svg>':''}<div class="marks"></div></div>
    ${zoom?`<div class="zoom"><button type="button" data-z="-" aria-label="−">−</button><button type="button" data-z="+" aria-label="+">+</button></div>`:''}`;
   const box=host.querySelector('.mapbox'),mapEl=host.querySelector('.map'),world=host.querySelector('.world'),marks=host.querySelector('.marks'),shapes=host.querySelector('.shapes');
   const poly=host.querySelector('.trailsvg polyline');let sc=1,tx=0,ty=0,route=[];const btn={};
+  // magnifier insets (Bosporus / Dardanelles, Bering): a 🔍 at each magnifier point opens the inset over the map; inset markers live there
+  const pops={};
+  const openInset=id=>{for(const k in pops)pops[k].hidden=k!==id;return pops[id]};
+  for(const id of insets){const I=D.s5.insets[id];
+    for(const g of I.magnifier){const b=document.createElement('button');b.type='button';b.className='mk mag';b.innerHTML='<span>🔍</span>';b.setAttribute('aria-label','🔍');
+      b.addEventListener('click',e=>{e.stopPropagation();openInset(id)});marks.appendChild(b);btn['mag-'+id+'-'+g.x]={el:b,m:{x:g.x,y:g.y}}}
+    const pop=document.createElement('div');pop.className='inset-pop';pop.hidden=true;pop.style.aspectRatio=String(I.aspect);
+    pop.innerHTML=`<img src="${I.image}" alt="" draggable="false"><svg class="shapes" viewBox="0 0 100 100" preserveAspectRatio="none"></svg><div class="imarks"></div><button type="button" class="inset-x" aria-label="✕">✕</button>`;
+    pop.querySelector('.inset-x').addEventListener('click',e=>{e.stopPropagation();pop.hidden=true});
+    pop.addEventListener('click',e=>{if(e.target.closest('.inset-x')||e.target.closest('.mk'))return;e.stopPropagation();if(!onInsetTap)return;const r=pop.getBoundingClientRect(),bb=box.getBoundingClientRect();
+      onInsetTap(id,(e.clientX-r.left)/r.width*100,(e.clientY-r.top)/r.height*100,e.clientX-bb.left,e.clientY-bb.top,{W:r.width,H:r.height})});
+    pop.addEventListener('pointerdown',e=>e.stopPropagation());box.appendChild(pop);pops[id]=pop}
+  for(const m of markers.filter(m=>m.inset)){const pop=pops[m.inset];if(!pop)continue;const b=document.createElement('button');b.type='button';b.className='mk'+(m.cls?' '+m.cls:'');b.dataset.id=m.id;
+    b.innerHTML=`<span>${esc(m.label||'')}</span>`;b.setAttribute('aria-label',m.aria||m.label||m.id);b.style.left=m.x+'%';b.style.top=m.y+'%';
+    b.addEventListener('click',e=>{e.stopPropagation();onMarker&&onMarker(m.id,b)});pop.querySelector('.imarks').appendChild(b);btn[m.id]={el:b,m,inset:true}}
+  markers=markers.filter(m=>!m.inset);
   for(const m of markers){const b=document.createElement('button');b.type='button';b.className='mk'+(m.cls?' '+m.cls:'');b.dataset.id=m.id;
     b.innerHTML=`<span>${esc(m.label||'')}</span>`;b.setAttribute('aria-label',m.aria||m.label||m.id);marks.appendChild(b);btn[m.id]={el:b,m}}
   const W=()=>mapEl.clientWidth,H=()=>mapEl.clientHeight;const toScreen=(x,y)=>[tx+x/100*W()*sc,ty+y/100*H()*sc];
-  function place(){for(const {el,m} of Object.values(btn)){const [x,y]=toScreen(m.x,m.y);el.style.left=x+'px';el.style.top=y+'px';el.hidden=x<-8||y<-8||x>W()+8||y>H()+8}
-    if(poly){poly.parentNode.setAttribute('viewBox',`0 0 ${W()} ${H()}`);poly.setAttribute('points',route.map(id=>toScreen(btn[id].m.x,btn[id].m.y).join(',')).join(' '))}}
+  function place(){for(const {el,m,inset} of Object.values(btn)){if(inset)continue;const [x,y]=toScreen(m.x,m.y);el.style.left=x+'px';el.style.top=y+'px';el.hidden=x<-8||y<-8||x>W()+8||y>H()+8}
+    if(poly){poly.parentNode.setAttribute('viewBox',`0 0 ${W()} ${H()}`);poly.setAttribute('points',route.filter(id=>!btn[id].inset).map(id=>toScreen(btn[id].m.x,btn[id].m.y).join(',')).join(' '))}}
   function apply(){sc=Math.min(4,Math.max(1,sc));tx=Math.min(0,Math.max(W()-W()*sc,tx));ty=Math.min(0,Math.max(H()-H()*sc,ty));world.style.transform=`translate(${tx}px,${ty}px) scale(${sc})`;place()}
   function zoomAt(f,cx,cy){const n=Math.min(4,Math.max(1,sc*f));tx=cx-(cx-tx)*n/sc;ty=cy-(cy-ty)*n/sc;sc=n;apply()}
   host.querySelector('.zoom')?.addEventListener('click',e=>{const z=e.target.closest('button');if(z)zoomAt(z.dataset.z==='+'?1.6:1/1.6,W()/2,H()/2)});
@@ -343,7 +416,10 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
     addLayer(id){const i=document.createElement('img');i.src=IMG.layer(id);i.alt='';i.className='hl';world.insertBefore(i,shapes);return i},
     shape(o,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',areaPath(o));p.setAttribute('class',cls||'hl-shape');p.dataset.id=o.id;shapes.appendChild(p);return p},
     line(d,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('class',cls||'hl-river');shapes.appendChild(p);return p},
-    clearShapes(){shapes.innerHTML=''},
+    openInset,
+    insetShape(id,polys,cls){const sv=pops[id]&&pops[id].querySelector('svg');if(!sv)return;const p=document.createElementNS('http://www.w3.org/2000/svg','path');
+      p.setAttribute('d',polys.map(q=>'M'+q.map(v=>v[0]+' '+v[1]).join('L')+'Z').join(''));p.setAttribute('class',cls||'hl-shape');sv.appendChild(p);return p},
+    clearShapes(){shapes.innerHTML='';for(const k in pops)pops[k].querySelector('svg').innerHTML=''},
     dot(sx,sy,ok){const d=document.createElement('div');d.className='tapdot '+(ok?'ok':'bad');d.style.left=sx+'px';d.style.top=sy+'px';mapEl.appendChild(d);setTimeout(()=>d.remove(),1300)},
     route(id){route.push(id);place()}};
 }
@@ -382,7 +458,10 @@ function home(){
      `<div class="unit-head"><span class="eyebrow">${x.sectionN(3)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s3-final'))+
      `<div class="section-card s2"><img src="${IMG.stamp4}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(4)} · ${x.draft}</span><h2>${L()==='ru'?'Моря мира':'Seas of the world'}</h2></div></div>`+
      COURSE4.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(4)} · ${x.unit} ${u.n}</span><h3>${esc(D.s4.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===4&&s.unit===u.n).map(stopHtml).join('')).join('')+
-     `<div class="unit-head"><span class="eyebrow">${x.sectionN(4)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s4-final'));
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(4)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s4-final'))+
+     `<div class="section-card s2"><img src="${IMG.stamp5}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(5)} · ${x.draft}</span><h2>${L()==='ru'?'Проливы и каналы':'Straits and canals'}</h2></div></div>`+
+     COURSE5.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(5)} · ${x.unit} ${u.n}</span><h3>${esc(D.s5.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===5&&s.unit===u.n).map(stopHtml).join('')).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(5)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s5-final'));
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -536,6 +615,33 @@ function lesson(step){
       fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
         m.clearShapes();want.forEach(id=>m.line(riverPath(R(id)),'hl-river good'));answered(q,ok);
         feedback(ok,ok?x.allOk:x.allBad,want.map(id=>R(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
+    // ---- section 5: straits and canals (tiny ones under the magnifier 🔍) ----
+    const sOpts=(right,pool,label)=>{const key=v=>[v].flat().join('+');const seen=new Set([key(right)]);const out=[right];
+      for(const v of shuffle([...pool]))if(out.length<4&&!seen.has(key(v))){seen.add(key(v));out.push(v)}return {opts:shuffle(out),key,label}};
+    const showStrait=(m,o,cls)=>{if(o.inset){m.openInset(o.inset.id);m.insetShape(o.inset.id,o.inset.tapArea,cls)}else{m.shape(o,cls);if(o.layer)m.addLayer(o.layer)}};
+    if(q.k==='introStrait'||q.k==='introStraitRec'){const rec=q.rec&&D.s5.records.find(r=>r.id===q.rec);const o=ST(rec?rec.object:q.id);
+      frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),zoom:false,insets:o.inset?[o.inset.id]:[]});showStrait(m,o,'hl-shape pulse');if(!rec)wireNuance(o);
+      return gotIt(()=>learn(o.id))}
+    if(q.k==='findStrait'){const o=ST(q.id);const rec=q.rec&&D.s5.records.find(r=>r.id===q.rec);
+      frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>${o.inset?`<p class="rotate-hint">${x.magHint}</p>`:''}`);
+      let locked=false;const done_=(ok,hit,sx,sy)=>{locked=true;m.dot(sx,sy,ok);showStrait(m,o,ok?'hl-shape good':'hl-shape pulse');if(hit&&!ok)showStrait(m,ST(hit),'hl-shape bad');answered(q,ok);
+        feedback(ok,ok?x.right:(hit?x.wrongIs(ST(hit).name[lang]):x.miss),ok?(rec?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)};
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),insets:o.inset?[o.inset.id]:[],
+        onTap:(px,py,sx,sy,sz)=>{if(locked)return;const hit=nearestStrait(px,py,sz,22);
+          if(!hit&&nearInsetOnly(px,py,sz)){const fb=app.querySelector('.fb');fb.className='fb bad';fb.innerHTML=`<div class="msg"><img src="${IMG.spy}" alt=""><div><p>${esc(x.openMag)}</p></div></div>`;return}
+          done_(hit===q.id,hit,sx,sy)},
+        onInsetTap:(ins,px,py,sx,sy,sz)=>{if(locked)return;const list=STRAITS.filter(id=>ST(id).inset&&ST(id).inset.id===ins);
+          const hit=list.find(id=>ST(id).inset.tapArea.some(pl=>inPoly(px,py,pl)))||null;done_(hit===q.id,hit,sx,sy)}});return}
+    if(q.k==='whatStrait'){const o=ST(q.id);const opts=pick(STRAITS,q.id,4);
+      frame(x.what,`<p class="q">${x.whatStrait}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(ST(c).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),zoom:false,insets:o.inset?[o.inset.id]:[]});showStrait(m,o,'hl-shape pulse');
+      return choices(q,q.id,()=>o.name[lang],()=>o.fact(lang))}
+    if(q.k==='connects'||q.k==='separates'){const o=ST(q.id);const right=o[q.k];const nameOf=v=>v.map(id=>(O(id)||W(id)).name[lang]).join(x.and);
+      const pool=STRAITS.map(id=>ST(id)[q.k]).filter(Boolean);const {opts,key}=sOpts(right,pool);
+      frame(q.k==='connects'?x.connectsT:x.separatesT,`<p class="q">${(q.k==='connects'?x.connectsQ:x.separatesQ)(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(v=>`<button type="button" class="choice" data-o="${key(v)}">${esc(nameOf(v))}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),zoom:false,insets:o.inset?[o.inset.id]:[]});showStrait(m,o,'hl-shape pulse');
+      return choices(q,key(right),()=>nameOf(right),()=>'')}
     // ---- section 4: seas (outlined when asked; the base map shows land and water) ----
     if(q.k==='introSea'||q.k==='introSeaRec'){const rec=q.rec&&D.s4.records.find(r=>r.id===q.rec);const o=W(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
@@ -642,7 +748,7 @@ function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-fi
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,stamp:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],stamp:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Reveal order (docs/app-mechanics.md, rule 5): neighbours never one after another; first letter late; last letters not early.
 function revealOrder(n){const long=n>=7,endN=n<=8?2:3;
   for(let tries=0;tries<20000;tries++){const o=shuffle([...Array(n)].map((_,i)=>i+1));let ok=true;
@@ -693,12 +799,20 @@ const IN_RU={himalayas:'в Гималаях',ural:'на Урале',cordillera:'
   atlas:'в Атласских горах',caucasus:'на Кавказе',pyrenees:'в Пиренеях','mid-atlantic-ridge':'на Срединно-Атлантическом хребте'};
 const IN_EN={himalayas:'in the Himalayas',ural:'in the Urals',cordillera:'in the North American Cordillera',andes:'in the Andes',appalachians:'in the Appalachians','east-africa':'in the mountains of East Africa',
   'great-dividing-range':'in the Great Dividing Range',atlas:'in the Atlas',caucasus:'in the Caucasus',pyrenees:'in the Pyrenees','mid-atlantic-ridge':'on the Mid-Atlantic Ridge'};
+const STR_RU={'suez-canal':'в Суэцком канале','panama-canal':'в Панамском канале','strait-of-gibraltar':'в Гибралтарском проливе','english-channel':'в проливе Ла-Манш',
+  'bab-el-mandeb':'в Баб-эль-Мандебском проливе','strait-of-hormuz':'в Ормузском проливе','gulf-of-oman':'в Оманском заливе','strait-of-malacca':'в Малаккском проливе',
+  'mozambique-channel':'в Мозамбикском проливе','drake-passage':'в проливе Дрейка','strait-of-magellan':'в Магеллановом проливе'};
+const STR_EN={'suez-canal':'in the Suez Canal','panama-canal':'in the Panama Canal','strait-of-gibraltar':'in the Strait of Gibraltar','english-channel':'in the English Channel',
+  'bab-el-mandeb':'in the Bab-el-Mandeb','strait-of-hormuz':'in the Strait of Hormuz','gulf-of-oman':'in the Gulf of Oman','strait-of-malacca':'in the Strait of Malacca',
+  'mozambique-channel':'in the Mozambique Channel','drake-passage':'in the Drake Passage','strait-of-magellan':'in the Strait of Magellan'};
 const SEA_RU={'mediterranean-sea':'в Средиземном море','black-sea':'в Чёрном море','red-sea':'в Красном море','caspian-sea':'в Каспийском море','arabian-sea':'в Аравийском море',
   'bay-of-bengal':'в Бенгальском заливе','coral-sea':'в Коралловом море','caribbean-sea':'в Карибском море','gulf-of-mexico':'в Мексиканском заливе','hudson-bay':'в Гудзоновом заливе'};
 const SEA_EN={'mediterranean-sea':'in the Mediterranean Sea','black-sea':'in the Black Sea','red-sea':'in the Red Sea','caspian-sea':'in the Caspian Sea','arabian-sea':'in the Arabian Sea',
   'bay-of-bengal':'in the Bay of Bengal','coral-sea':'in the Coral Sea','caribbean-sea':'in the Caribbean Sea','gulf-of-mexico':'in the Gulf of Mexico','hudson-bay':'in Hudson Bay'};
 function placesFor(st){
   if(!st.sec)return knownPlaces(st.unit);
+  if(st.sec===5){const tpl=D.tpl.objects,out=STRAITS.filter(id=>ST(id).unit<=st.unit&&!ST(id).inset).map(id=>({id,x:ST(id).x,y:ST(id).y,place:{ru:STR_RU[id],en:STR_EN[id]}}));
+    for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
   if(st.sec===4){const tpl=D.tpl.objects,out=SEAS.filter(id=>W(id).unit<=st.unit).map(id=>({id,x:W(id).x,y:W(id).y,place:{ru:SEA_RU[id],en:SEA_EN[id]}}));
     for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}return out}
   if(st.sec===3){const tpl=D.tpl.objects,out=MTNS.filter(id=>M(id).unit<=st.unit).map(id=>({id,x:M(id).x,y:M(id).y,place:{ru:IN_RU[id],en:IN_EN[id]}}));
@@ -706,7 +820,7 @@ function placesFor(st){
   const tpl=D.tpl.objects,out=RIVERS.filter(id=>R(id).unit<=st.unit).map(id=>({id:id+'-river',x:R(id).x,y:R(id).y,place:{ru:ON_RU[id],en:ON_EN[id]}}));
   for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place})}
   return out}
-const layersFor=st=>st.sec===4?seaLayers():st.sec===3?mtnLayers():st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
+const layersFor=st=>st.sec===5?straitLayers():st.sec===4?seaLayers():st.sec===3?mtnLayers():st.sec?riverLayers():st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
 // Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
 function practiceWords(st){const lang=L(),places=placesFor(st);
   const DI=st.sec?SD(st).dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
@@ -723,6 +837,7 @@ function practiceWords(st){const lang=L(),places=placesFor(st);
 // Never put a letter on an object and on the object that contains it in one puzzle: a range or a river and its continent,
 // the Mid-Atlantic Ridge and the Atlantic, the Urals / Caucasus and Europe or Asia ("in the Atlantic" would fit two letters).
 function containers(id){
+  if(D.s5&&D.s5.straits[id]){const o=ST(id);return [o.ocean,...(o.connects||[]),...(o.separates||[])].filter(Boolean)}
   if(D.s4&&D.s4.seas[id]){const o=W(id);return id==='hudson-bay'?['arctic-ocean','atlantic-ocean']:[o.ocean].filter(Boolean)}
   if(D.s3&&D.s3.mtns[id]){const o=M(id);return [o.continent,o.ocean,...(o.border||[]),...(id==='caucasus'?['europe','asia']:[])].filter(Boolean)}
   const r=id.endsWith('-river')&&D.s2&&D.s2.rivers[id.slice(0,-6)];return r?[r.continent].filter(Boolean):[]}
@@ -754,14 +869,15 @@ function geowords(P){
   app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
   const slots=[...app.querySelectorAll('.slot')];
-  const m=mapWidget(app.querySelector('.mapslot'),{layers:P.layers,trail:true,markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter})),onMarker:choose});
+  const m=mapWidget(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose});
   const pip=(img,txt)=>{app.querySelector('.gw-pip img').src=img;app.querySelector('.bubble').textContent=txt};
   function clue(){const c=P.clues[step];app.querySelector('.gw-clue').innerHTML=esc(c.text).replace(/(\S+ букву|the \S+ letter)/,'<b>$1</b>');
+    if(P.markers.find(k=>k.id===c.markerId)?.inset)pip(IMG.spy,x.magHint);
     app.querySelector('.l-bar i').style.width=(step/P.clues.length*100)+'%'}
   function choose(id,el){if(step>=P.clues.length||el.classList.contains('done'))return;const c=P.clues[step];
     if(id!==c.markerId){wrong++;here++;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');
       if(here>=3){m.btn[c.markerId].el.classList.add('pulse');pip(IMG.spy,x.pipHint)}else pip(IMG.left,x.pipBad);return}
-    here=0;el.classList.remove('pulse');el.classList.add('done');m.route(id);const k=P.markers.find(q=>q.id===id);const s=slots[c.position-1];s.textContent=k.letter;s.classList.add('new');
+    here=0;el.classList.remove('pulse');el.classList.add('done');m.route(id);if(m.btn[id]&&m.btn[id].inset)setTimeout(()=>m.openInset(null),600);const k=P.markers.find(q=>q.id===id);const s=slots[c.position-1];s.textContent=k.letter;s.classList.add('new');
     pip(IMG.yes,x.pipOk(k.letter));step++;
     if(step===P.clues.length){app.querySelector('.l-bar i').style.width='100%';setTimeout(finish,800)}else setTimeout(clue,350)}
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=(P.kind==='practice'?10:20)+Math.max(0,6-wrong);

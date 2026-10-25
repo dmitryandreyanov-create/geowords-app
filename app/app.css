@@ -205,3 +205,15 @@ h1,h2,h3,p{margin:0}
 .stop.practice .disc{font-weight:800;font-size:20px}
 
 .hl-shape.bad{fill:rgba(229,83,61,.4);stroke:#e5533d}
+
+/* section 5: magnifier insets for tiny straits */
+.mk.mag{width:36px;height:36px;margin:-46px 0 0 -18px;z-index:1}/* sits just above its point, so nearby letters stay tappable */
+.mk.mag span{width:30px;height:30px;background:#fff8e6;font-size:15px;box-shadow:0 0 0 2px var(--brass),0 2px 6px rgba(0,0,0,.5)}
+.mk.mag::after{content:'';position:absolute;left:50%;bottom:-8px;width:2px;height:10px;background:var(--brass);transform:translateX(-50%)}
+.inset-pop{position:absolute;left:8%;width:84%;top:50%;transform:translateY(-50%);z-index:5;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px var(--brass),0 14px 30px rgba(0,0,0,.55);background:#cfe3e6}
+.inset-pop[hidden]{display:none}
+.inset-pop img{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.inset-pop .shapes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.inset-pop .imarks{position:absolute;inset:0}
+.inset-pop .imarks .mk{pointer-events:auto}
+.inset-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(15,46,51,.85);color:#fff;font-size:18px;z-index:2}
