@@ -167,8 +167,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "b7bec7cc68796d30"
+    "date": "2026-10-25",
+    "contentSha256": "a77b066cb1a04861"
    }
   },
   {
@@ -311,8 +311,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "e6f49a2df5205ae7"
+    "date": "2026-10-25",
+    "contentSha256": "91fb525df6ffb1f6"
    }
   },
   {
@@ -477,8 +477,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ffcccc73b11a9df4"
+    "date": "2026-10-25",
+    "contentSha256": "52208d57353a7289"
    }
   },
   {
@@ -599,8 +599,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "7905963650f6fc49"
+    "date": "2026-10-25",
+    "contentSha256": "896bf64503684d45"
    }
   },
   {
@@ -669,7 +669,7 @@
     },
     {
      "id": "indus-river",
-     "x": 66.0,
+     "x": 66,
      "y": 40.63,
      "letter": "F"
     },
@@ -765,8 +765,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "1ed28479e2c882f3"
+    "date": "2026-10-25",
+    "contentSha256": "1a53f000ddaf3cb8"
    }
   },
   {
@@ -1100,8 +1100,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "5576b38e6c1373c8"
+    "date": "2026-10-25",
+    "contentSha256": "17bfe104f9f8b780"
    }
   },
   {
@@ -1366,8 +1366,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "335660e2e6244667"
+    "date": "2026-10-25",
+    "contentSha256": "cf069cad69b62aa4"
    }
   },
   {
@@ -2362,8 +2362,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ba24aa6482e30840"
+    "date": "2026-10-25",
+    "contentSha256": "7e7ff5efa6c736a5"
    }
   },
   {
@@ -2484,8 +2484,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "761f43769a9fc47a"
+    "date": "2026-10-25",
+    "contentSha256": "a756f169b0521d9c"
    }
   },
   {
@@ -2835,8 +2835,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "79f25508d6dd14f4"
+    "date": "2026-10-25",
+    "contentSha256": "79953ef42130ce89"
    }
   },
   {
@@ -3198,8 +3198,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "9c28643e8fa9868a"
+    "date": "2026-10-25",
+    "contentSha256": "fa59fec4712e58d4"
    }
   },
   {
@@ -3864,8 +3864,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "bd9b8c0cf09aad39"
+    "date": "2026-10-25",
+    "contentSha256": "55d8ca638df097c8"
    }
   },
   {
