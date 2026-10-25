@@ -713,7 +713,7 @@ function practiceWords(st){const lang=L(),places=placesFor(st);
   for(let u=st.unit-2;u>=0;u--)groups.push(byLen(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w)))));
   if(st.sec)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
   groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
-  const out=[];for(const g of groups)for(const w of g)if(out.length<6&&!out.some(o=>o.answer===w.answer))out.push(w);
+  const out=[];for(const g of groups)for(const w of g)if(!out.some(o=>o.answer===w.answer))out.push(w);// all candidates in order; runPractice keeps the first six that build
   return out}
 // Never put a letter on an object and on the object that contains it in one puzzle: a range or a river and its continent,
 // the Mid-Atlantic Ridge and the Atlantic, the Urals / Caucasus and Europe or Asia ("in the Atlantic" would fit two letters).
@@ -731,9 +731,11 @@ function buildPuzzle(w,places,layers){const lang=L(),letters=[...w.answer],n=let
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
   return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers}}
-function runPractice(st){const words=practiceWords(st),places=placesFor(st),layers=layersFor(st);let i=0;
-  const go=()=>{let P=buildPuzzle(words[i],places,layers);while(!P&&i<words.length-1){i++;P=buildPuzzle(words[i],places,layers)}if(!P){S.done[st.id]=true;save();return home()}P.stepId=st.id;P.seq={i,total:words.length,next:()=>{i++;go()}};geowords(P)};
-  if(!words.length){S.done[st.id]=true;save();return home()}
+function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
+  // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
+  for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers);if(P)puzzles.push(P)}
+  if(!puzzles.length){S.done[st.id]=true;save();return home()}
+  let i=0;const go=()=>{const P=puzzles[i];P.stepId=st.id;P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};
   go()}
 
 function geowords(P){
