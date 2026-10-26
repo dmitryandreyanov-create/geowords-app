@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-challenge/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-challenge2/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -212,17 +212,31 @@ try{
     await rv.page.waitForFunction(id=>window.__gwHunt.target!==id,id);scored++;
     assert.equal(await rv.page.evaluate(()=>window.__gwHunt.score),scored,'a tap on '+id+' scores')}
   assert.equal(scored,4);
-  // Challenge GeoWords: after the minute, 3 approved sample words from three different sections, each with its definition
+  // Challenge GeoWords: after the minute, 3 app-generated words from three different sections, each with its definition
   await rv.page.locator('[data-a="cw"]').click({timeout:70000});
-  const sample=JSON.parse(fs.readFileSync("data/geowords/challenge-block-1-sample.json")).puzzles;const cwSecs=[];
   for(let w=0;w<3;w++){await rv.page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n&&window.__gwPuzzle.kind==='challenge',w);
-    const p=await rv.page.evaluate(()=>window.__gwPuzzle),src=sample.find(s=>s.answer===p.answer&&s.language==='ru');
-    assert(src&&src.approval.status==='approved','challenge word comes from the approved sample');assert.equal(p.seq.total,3);
-    assert.deepEqual(p.clues.map(c=>c.text),src.clues.map(c=>c.text),'clues exactly as approved');cwSecs.push(src.section);
+    const p=await rv.page.evaluate(()=>window.__gwPuzzle);assert.equal(p.seq.total,3);
     for(const c of p.clues){await rv.page.locator('.mk[data-id="'+c.markerId+'"]').first().evaluate(e=>e.click());await rv.page.waitForTimeout(370)}
     await rv.page.locator('.screen.done').waitFor({timeout:8000});assert.match(await rv.page.locator('.screen.done .defn').innerText(),/\S/,'definition shown');
     if(w<2)await rv.page.locator('[data-a="nextword"]').click()}
-  assert.equal(new Set(cwSecs).size,3,"three different sections");
+  // generator rules (data/geowords/challenge-block-1-sample.json): 40 rounds checked without playing them
+  const tpl=JSON.parse(fs.readFileSync('data/geowords/clue-templates.json'));
+  const never=[['suez-canal','bosporus'],['suez-canal','dardanelles'],['strait-of-hormuz','gulf-of-oman'],['drake-passage','strait-of-magellan'],['antarctica','southern-ocean']];
+  const rounds=await rv.page.evaluate(()=>[...Array(40)].map(()=>window.__gwChallengeRound()));const cwSec={};let cwRecs=0,cwLetters=0;
+  for(const round of rounds){assert.equal(round.length,3);assert.equal(new Set(round.map(p=>p.section)).size,3,'three different sections');
+    for(const P of round){const n=[...P.answer].length,ids=P.markers.map(m=>m.id.replace(/-(river|mouth|source)$/,''));cwSec[P.section]=1;
+      assert.equal(P.markers.length,n);assert.equal(P.clues.length,n);
+      for(const c of P.clues){const ord=tpl.ordinals.ru[c.position-1];assert(c.text.startsWith('Найди '+ord+' букву '),c.text);
+        assert(!c.text.toUpperCase().replace(/Ё/g,'Е').includes(P.answer.replace(/Ё/g,'Е')),'answer inside a clue: '+c.text)}
+      for(let a=0;a<n;a++)for(let b=a+1;b<n;b++){const A=P.markers[a],B=P.markers[b];
+        assert(Math.hypot(A.x-B.x,(A.y-B.y)*.55)>=5.4,'letters too close: '+A.id+' '+B.id);assert(ids[a]!==ids[b],'one object twice: '+ids[a])}
+      for(const [a,b] of never)assert(!(ids.includes(a)&&ids.includes(b)),'never together: '+a+' + '+b);
+      if(n>=15){assert(!P.markers.some(m=>/-(mouth|source)$/.test(m.id)),'15+: rivers only «on»');
+        for(const [a,b] of [['ganges','indus'],['yangtze','huang-he']])assert(!(ids.includes(a)&&ids.includes(b)))}
+      if(ids.includes('mediterranean-sea'))assert(!P.clues.some(c=>/солёной/.test(c.text)),'salty Red Sea phrase next to the Mediterranean');
+      cwLetters+=n;cwRecs+=P.clues.filter(c=>/самом|самой|самым|самая/.test(c.text)).length}}
+  assert.equal(Object.keys(cwSec).length,6,'all five sections and the challenge-extra words come up');
+  assert(cwRecs/cwLetters>.05&&cwRecs/cwLetters<.4,"some, not most, places named by a record ("+(cwRecs/cwLetters).toFixed(2)+")");
   assert.match(await rv.page.locator('.screen.done').innerText(),/Challenge пройден/);
   await rv.context.close();
   console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords');
