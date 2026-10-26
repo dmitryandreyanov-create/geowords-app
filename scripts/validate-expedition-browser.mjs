@@ -129,7 +129,76 @@ try{
   await en.page.waitForSelector('.gw-clue');
   assert.equal(await en.page.evaluate(()=>window.__gwPuzzle.answer),'ZENITH');
   await en.context.close();
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final');
+  // Block 1 review (data/review/block-1.json): lessons «Land», «Water», «Connections», the block final and the Speed Hunt challenge.
+  const rv=await makePage('ru');
+  await rv.page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('geowords_expedition_v1'));s.unlockAll=true;localStorage.setItem('geowords_expedition_v1',JSON.stringify(s))});
+  await rv.page.reload();await rv.page.waitForSelector('[data-step="b-l1"]');
+  const openStep=async id=>{await rv.page.goto(base+'/app/');await rv.page.locator('[data-step="'+id+'"]').click();await rv.page.locator('.sheet [data-a="go"]').click()};
+  const waitTask=async k=>rv.page.waitForFunction(k=>window.__gwTask?.k===k,k);
+  const tapUntilNext=async()=>{const box=await rv.page.locator('.task .map').boundingBox();
+    for(const [fx,fy] of [[.5,.5],[.3,.4],[.7,.3],[.2,.2],[.55,.75]]){await rv.page.mouse.click(box.x+box.width*fx,box.y+box.height*fy);if(await rv.page.locator('.fb .btn').count())break}};
+  await openStep('b-l2');
+  const plan=await rv.page.evaluate(()=>window.__gwPlan.map(q=>q.k));
+  assert.equal(plan.length,10,'review lesson: about ten tasks');
+  assert.equal(plan.filter(k=>/^find/.test(k)).length,4);assert.equal(plan.filter(k=>/^what/.test(k)).length,3);
+  assert.deepEqual(plan.slice(7),['label','write','write']);
+  for(let i=0;i<7;i++){await rv.page.waitForFunction(()=>window.__gwTask);const q=await rv.page.evaluate(()=>window.__gwTask);
+    if(await rv.page.locator('.choice').count())await rv.page.locator('.choice').first().click();else await tapUntilNext();
+    await rv.page.locator('.fb .btn').click()}
+  await waitTask('label');
+  for(const id of await rv.page.$$eval('.lchip',b=>b.map(x=>x.dataset.o))){await rv.page.locator('.lchip[data-o="'+id+'"]').click();await rv.page.locator('.mk[data-id="'+id+'"]').evaluate(e=>e.click())}
+  await rv.page.locator('.fb .btn').click();await rv.page.locator('.fb.ok').waitFor();await rv.page.locator('.fb .btn').click();
+  await waitTask('write');
+  for(const i of (await rv.page.$$eval('.wtile[data-i]',b=>b.map(x=>+x.dataset.i))).sort((a,b)=>a-b))await rv.page.locator('.wtile[data-i="'+i+'"]').click();
+  await rv.page.locator('.fb.ok').waitFor();
+  await openStep('b-l3');
+  const plan3=await rv.page.evaluate(()=>window.__gwPlan);
+  assert.deepEqual(plan3.map(q=>q.k),['pairs','pairs','pairs','pairs','allAsia','allIndian','allAfrica','tf','tf','seaOcean']);
+  assert.equal(plan3.at(-1).id,'caspian-sea','trap: the Caspian Sea belongs to no ocean');
+  for(const id of await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s))){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
+  await rv.page.locator('.fb.ok').waitFor();
+  // Lesson 4 «Records»: 4 true/false, 3 pairs of 3, 2 find-by-clue, 1 what-is-it-by-clue; every record once; the clue never names the place
+  await openStep('b-l4');
+  const plan4=await rv.page.evaluate(()=>window.__gwPlan);const recs=JSON.parse(fs.readFileSync('data/review/block-1.json')).records.items;
+  const count=f=>plan4.filter(f).length;
+  assert.equal(plan4.length,10);assert.equal(count(q=>q.k==='recTf'),4);assert.equal(count(q=>q.k==='recPairs'),3);
+  assert.equal(count(q=>/^find/.test(q.k)&&q.clue),2);assert.equal(count(q=>q.k==='recWhat'),1);
+  const used=plan4.flatMap(q=>q.recs||[q.rec||recs.find(r=>r.clue===q.clue||r.clue.ru===q.clue?.ru)?.id]);
+  assert.equal(new Set(used).size,16,'16 different records in one lesson');
+  for(const q of plan4.filter(q=>q.k==='recPairs'))assert.equal(new Set(q.recs.map(id=>recs.find(r=>r.id===id).object)).size,3,'one record per place in a pairs task');
+  const tfSides=plan4.filter(q=>q.k==='recTf').map(q=>q.side);assert(!tfSides.some((v,i)=>i>=2&&v===tfSides[i-1]&&v===tfSides[i-2]));
+  for(let i=0;i<10;i++){await rv.page.waitForFunction(()=>window.__gwTask);const q=await rv.page.evaluate(()=>window.__gwTask);
+    if(q.k==='recTf'){const r=recs.find(r=>r.id===q.rec);assert.equal(await rv.page.locator('.task .card .q').innerText(),r[q.side].ru);
+      await rv.page.locator('.tfrow [data-o="'+q.side+'"]').click();await rv.page.locator('.fb.ok').waitFor();
+      if(q.side==='false')assert.match(await rv.page.locator('.fb').innerText(),new RegExp(r.true.ru.slice(0,12)),'after a false statement the true one is shown')}
+    else if(q.k==='recPairs'){assert.equal(await rv.page.locator('.pairs.rec .pbtn[data-r]').count(),3);
+      for(const id of q.recs){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
+      await rv.page.locator('.fb.ok').waitFor()}
+    else if(q.k==='recWhat'){assert.equal(await rv.page.locator('.task .card .q').innerText(),q.clue.ru);
+      await rv.page.locator('.choice[data-o="'+q.id+'"]').click();await rv.page.locator('.fb.ok').waitFor();
+      assert.match(await rv.page.locator('.fb').innerText(),new RegExp(q.say.ru.slice(0,12)))}
+    else{assert.equal(await rv.page.locator('.task .card .q').innerText(),q.clue.ru,'find by the clue, not by the name');await tapUntilNext()}
+    await rv.page.locator('.fb .btn').click()}
+  await openStep('b-final');await rv.page.waitForSelector('.gw-clue');
+  const bf=await rv.page.evaluate(()=>window.__gwPuzzle);
+  assert.equal(bf.answer,'ПУТЕШЕСТВЕННИК');assert.equal(bf.kind,'block');
+  for(const c of bf.clues){await rv.page.locator('.mk[data-id="'+c.markerId+'"]').first().evaluate(e=>e.click());await rv.page.waitForTimeout(370)}
+  await rv.page.locator('.screen.done [data-a="next"]').waitFor({timeout:8000});
+  assert.match(await rv.page.locator('.screen.done').innerText(),/Блок пройден/);
+  await rv.page.locator('.screen.done [data-a="next"]').click();await rv.page.waitForSelector('.hunt-name');
+  // Speed Hunt: a tap on the label point of a continent or ocean scores; skipping moves on without a point
+  const labels=Object.fromEntries(JSON.parse(fs.readFileSync('data/maps/world-continents-oceans.json')).items.map(i=>[i.id,i.label]));
+  // a point on the drawn river counts for the river, not for the continent under it
+  for(const r of JSON.parse(fs.readFileSync('data/maps/world-rivers.json')).rivers){const l=r.path[0];const [x,y]=l[Math.floor(l.length/2)];labels[r.id]={x,y}}
+  let scored=0;
+  for(let n=0;n<80&&scored<4;n++){const id=await rv.page.evaluate(()=>window.__gwHunt.target);
+    if(!labels[id]){await rv.page.locator('[data-a="skip"]').click();continue}
+    const box=await rv.page.locator('.task .map').boundingBox();await rv.page.mouse.click(box.x+box.width*labels[id].x/100,box.y+box.height*labels[id].y/100);
+    await rv.page.waitForFunction(id=>window.__gwHunt.target!==id,id);scored++;
+    assert.equal(await rv.page.evaluate(()=>window.__gwHunt.score),scored,'a tap on '+id+' scores')}
+  assert.equal(scored,4);
+  await rv.context.close();
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final and Speed Hunt');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

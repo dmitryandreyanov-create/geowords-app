@@ -57,6 +57,19 @@ for (const [file, lessons] of Object.entries(RELEASE)) {
     else if (sha !== p.approval.contentSha256) err(`${p.id}: changed after approval — needs re-approval`);
   }
   if (!(j.trueFalse?.pairs || []).length) err("no true/false pairs");
+  // Lesson 4 «Records»: a nameless clue plus a true and a false statement per record, all approved by hash.
+  const recIds = new Set();
+  for (const r of j.records?.items || []) {
+    if (recIds.has(r.id)) err(`${r.id}: duplicate record id`);
+    recIds.add(r.id);
+    if (!known.has(r.object)) err(`${r.id}: unknown object ${r.object}`);
+    for (const side of ["clue", "true", "false"]) for (const lang of ["en", "ru"]) if (!r[side]?.[lang]?.trim()) err(`${r.id}: missing ${side}.${lang}`);
+    const sha = crypto.createHash("sha256").update(pyJson({ id: r.id, object: r.object, clue: r.clue, true: r.true, false: r.false }), "utf8").digest("hex").slice(0, 16);
+    if (!(r.approval?.status === "approved" && r.approval.by && r.approval.date)) err(`${r.id}: no complete approval`);
+    else if (sha !== r.approval.contentSha256) err(`${r.id}: changed after approval — needs re-approval`);
+  }
+  // the lesson needs 4 true/false, 3 pairs of 3, 2 find and 1 what-is-it, each from a different record
+  if (recIds.size < 16) err(`lesson-4-records needs at least 16 records (found ${recIds.size})`);
 }
 if (errors.length) { console.error("Review unit validation failed:\n" + errors.map(e => "- " + e).join("\n")); process.exit(1); }
-console.log("Review unit validation passed: lessons, relations and true/false approvals valid.");
+console.log("Review unit validation passed: lessons, relations, true/false and record approvals valid.");

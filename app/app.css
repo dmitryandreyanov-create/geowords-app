@@ -220,3 +220,34 @@ h1,h2,h3,p{margin:0}
 .inset-pop .imarks{position:absolute;inset:0}
 .inset-pop .imarks .mk{pointer-events:auto}
 .inset-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(15,46,51,.85);color:#fff;font-size:18px;z-index:2}
+/* ---------- block review: label the map, write the name, pairs, true / false; Speed Hunt ---------- */
+.lchips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lchip{font-size:15px;padding:10px 8px;display:flex;align-items:center;gap:8px;text-align:left}
+.lchip .n{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--fox);color:#1d1206;font-size:13px}
+.lchip.sel{border-color:var(--fox);background:#3a3a2a}
+.lchip.used{opacity:.55}
+.mk.set span{background:var(--sand);color:var(--ink)}
+.wslots{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px}
+.wword{display:flex;gap:3px}
+.wslot{width:24px;height:36px;display:grid;place-items:center;font-size:20px;font-weight:800;background:rgba(255,255,255,.08);border-bottom:3px solid var(--brass);border-radius:6px 6px 2px 2px;color:var(--sand)}
+.wslot.good{border-color:var(--ok);color:#8fe3a4}.wslot.bad{border-color:var(--bad);color:#ffb2a6}
+.wgap{width:10px;display:grid;place-items:center;font-size:20px;color:var(--sand)}
+.wtiles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.wtile{min-width:44px;height:48px;border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;background:var(--deck);font-size:20px;font-weight:800;cursor:pointer}
+.wtile[disabled]{opacity:.3;cursor:default}
+.wtile.back{background:transparent}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pcol{display:grid;gap:8px;align-content:start}
+.pbtn{font-size:15px;padding:8px 6px;height:64px}
+.pbtn.sel{border-color:var(--fox);background:#3a3a2a}
+.tfrow{grid-template-columns:1fr 1fr}
+.hunt .l-top{align-items:center}
+.hunt-sec{min-width:44px;text-align:right;font-variant-numeric:tabular-nums}
+.hunt-row{display:flex;gap:10px;align-items:center}
+.hunt-row .chip{flex:none}
+.hunt-row .btn{padding:10px 16px;font-size:16px}
+.hunt-stars{font-size:40px;color:var(--brass);letter-spacing:6px;margin:0}
+.hunt-stars span{color:rgba(255,255,255,.18)}
+/* lesson 4 «Records»: the clue column is wider and its buttons grow with the text */
+.pairs.rec{grid-template-columns:2fr 3fr}
+.pairs.rec .pbtn{height:auto;min-height:64px;font-size:14px;line-height:1.25}
