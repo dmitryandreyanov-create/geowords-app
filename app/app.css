@@ -205,6 +205,7 @@ h1,h2,h3,p{margin:0}
 
 /* mandatory unit practice stop */
 .stop.practice .disc{font-weight:800;font-size:20px}
+.stop.practice .disc .abc{font-size:15px;letter-spacing:.5px}/* word-puzzle step, not a lesson number */
 
 .hl-shape.bad{fill:rgba(229,83,61,.4);stroke:#e5533d}
 

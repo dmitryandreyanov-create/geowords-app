@@ -450,7 +450,7 @@ function home(){
   const zig=[50,70,34,62,40,66];let k=0;
   const stopHtml=s=>{const done=!!S.done[s.id],open=unlocked(s.id),isCur=cur&&cur.id===s.id,pos=zig[k++%zig.length];
     const cls=['stop',s.kind==='practice'?'practice':s.kind!=='lesson'?'final':'',done?'done':'',!open?'locked':'',isCur?'current':''].join(' ');
-    const disc=s.kind==='lesson'?(done?'':s.n):s.kind==='practice'?(done?'':'6'):`<img src="${s.kind==='section'?IMG.medalSection:IMG.medal}" alt="">`;
+    const disc=s.kind==='lesson'?(done?'':s.n):s.kind==='practice'?(done?'':`<span class="abc">${L()==='ru'?'АБВ':'ABC'}</span>`):`<img src="${s.kind==='section'?IMG.medalSection:IMG.medal}" alt="">`;
     return `<div class="stop-row"><button type="button" class="${cls}" data-step="${s.id}" style="left:${pos}%" aria-label="${esc(titleOf(s))}"><span class="disc">${disc}</span></button>
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
