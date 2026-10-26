@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-block1b';
+const BUILD='2026.10.26-block1c';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -745,7 +745,8 @@ function lesson(step){
       app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
       return}
     // rows: {s: id, left, right, key}; a right-hand button matches when its row has the same key (two rivers may flow into one sea)
-    const pairsUI=(hint,rows,cls)=>{const left=shuffle([...rows]),right=shuffle([...rows]),keyOf=s=>rows.find(r=>r.s===s).key;let sel=null,mistakes=0,matched=0;
+    // the right column never puts an answer opposite its own pair (Svetlana, 26.10.2026: otherwise there is nothing to think about)
+    const pairsUI=(hint,rows,cls)=>{const left=shuffle([...rows]);let right,tries=0;do right=shuffle([...rows]);while(tries++<200&&right.some((r,i)=>r.key===left[i].key));const keyOf=s=>rows.find(r=>r.s===s).key;let sel=null,mistakes=0,matched=0;
       frame(x.pairs,`<p class="q">${x.pairsQ}</p><p class="rotate-hint" style="margin:0">${hint}</p><div class="pairs ${cls}"><div class="pcol">${left.map(r=>`<button type="button" class="choice pbtn" data-s="${r.s}">${esc(r.left)}</button>`).join('')}</div>
         <div class="pcol">${right.map(r=>`<button type="button" class="choice pbtn" data-r="${r.s}">${esc(r.right)}</button>`).join('')}</div></div>`);
       app.querySelectorAll('.pbtn').forEach(b=>b.onclick=()=>{if(b.disabled)return;
