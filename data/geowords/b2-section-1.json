@@ -94,7 +94,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "fd4c13a7364abd5e"
    }
   },
   {
@@ -171,7 +174,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "c6fc0693fc902d35"
    }
   },
   {
@@ -270,7 +276,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "1e905db6d832e5cb"
    }
   },
   {
@@ -380,7 +389,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "bb4b7d9f1c295ed8"
    }
   },
   {
@@ -523,7 +535,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "256eadb8cecfec2f"
    }
   },
   {
@@ -644,7 +659,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "388a2e1bafb90def"
    }
   },
   {
@@ -776,7 +794,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "268f850139c8a5f4"
    }
   },
   {
@@ -908,7 +929,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "c4579a6c3db0e521"
    }
   }
  ]

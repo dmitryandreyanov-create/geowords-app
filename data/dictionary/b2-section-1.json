@@ -11,7 +11,7 @@
   "length": "letters only on learned objects of the Europe map: up to 6 after unit 1, 13 after unit 2, 20 after unit 3",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "ЛЕДНИК and ПОЛИС stay drafts (same root in the definition: «льда», «политических»); HELLAS, POLIS, PHOENICIANS: EN wording waiting for Svetlana"
+  "draft": "all words approved by Svetlana 2026-10-26 («Утверждаю все»): ЛЕДНИК and ПОЛИС reworded without the same root; EN definitions of HELLAS, POLIS, PHOENICIANS"
  },
  "units": [
   {
@@ -280,10 +280,12 @@
      {
       "answer": "ПОЛИС",
       "role": "review",
-      "definition": "Город-государство Древней Греции. Горный рельеф и островное положение способствовали развитию отдельных политических центров.",
+      "definition": "Город-государство Древней Греции. Горы и море разделяли города, и каждый жил по своим законам.",
       "approval": {
-       "status": "draft",
-       "note": "«политических» — тот же корень, что ПОЛИС; ждём замену от Svetlana"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "c7ae74396f84b515"
       }
      }
     ],
@@ -370,8 +372,10 @@
       "role": "review",
       "definition": "The historical name of ancient Greece, which lay on the Balkan Peninsula and the islands of the Aegean Sea.",
       "approval": {
-       "status": "draft",
-       "note": "EN wording by Claude from Svetlana's RU text; waiting for Svetlana"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "049d2120f46d0f9b"
       }
      },
      {
@@ -379,8 +383,10 @@
       "role": "review",
       "definition": "A city-state of ancient Greece. Mountains and islands kept the cities apart, so each grew into its own small state.",
       "approval": {
-       "status": "draft",
-       "note": "EN wording by Claude from Svetlana's RU text; waiting for Svetlana"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "e0ddb25d66b4b494"
       }
      }
     ]
@@ -441,9 +447,12 @@
      {
       "answer": "ЛЕДНИК",
       "role": "review",
-      "definition": "Большая масса льда на суше, образованная из снега и медленно движущаяся под собственной тяжестью.",
+      "definition": "Огромная масса многолетнего снега и замёрзшей воды на суше, которая медленно сползает вниз.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "7e4621fa94fcf270"
       }
      },
      {
@@ -563,8 +572,10 @@
       "role": "review",
       "definition": "Seafarers of the eastern Mediterranean who founded trading settlements in many parts of the Mediterranean.",
       "approval": {
-       "status": "draft",
-       "note": "EN wording by Claude from Svetlana's RU text; waiting for Svetlana"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "ce825e59fed6ae05"
       }
      }
     ]

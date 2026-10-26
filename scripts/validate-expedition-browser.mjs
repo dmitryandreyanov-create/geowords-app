@@ -282,6 +282,15 @@ try{
         for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
         if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
       assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="e1-u1-l1"]')}
+    // approved finals (Svetlana, 26.10.2026): each plays on the Europe map exactly as approved
+    const eGeo=JSON.parse(fs.readFileSync('data/geowords/b2-section-1.json')).puzzles;
+    for(const [step,id] of [['e1-u1-final','b2-section-1-unit-1-ru'],['e1-u2-final','b2-section-1-unit-2-ru'],['e1-u3-final','b2-section-1-unit-3-ru'],['e1-final','b2-section-1-final-ru']]){
+      const want=eGeo.find(p=>p.id===id);if(want?.approval?.status!=='approved')continue;
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-blank.webp'),'final on the Europe map');
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e1-u1-l1"]')}
     // a draft final waits for approval: it does not open, and the trail goes on past it
     await page.locator('[data-step="e1-u1-final"]').click();
     if(!JSON.parse(fs.readFileSync('data/geowords/b2-section-1.json')).puzzles.some(p=>p.id==='b2-section-1-unit-1-ru'&&p.approval.status==='approved')){
@@ -290,7 +299,7 @@ try{
       await page.reload();await page.waitForSelector('[data-step="e1-u2-l1"]');
       assert.equal(await page.locator('[data-step="e1-u2-l1"]').evaluate(el=>el.classList.contains('locked')),false,'unit 2 opens past the draft unit 1 final')}
     await context.close()}
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» lessons and unit practice; draft finals are skipped');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» lessons, unit practice and finals');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));
