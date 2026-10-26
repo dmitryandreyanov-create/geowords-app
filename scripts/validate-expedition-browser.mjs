@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-block1c/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-challenge/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -212,8 +212,20 @@ try{
     await rv.page.waitForFunction(id=>window.__gwHunt.target!==id,id);scored++;
     assert.equal(await rv.page.evaluate(()=>window.__gwHunt.score),scored,'a tap on '+id+' scores')}
   assert.equal(scored,4);
+  // Challenge GeoWords: after the minute, 3 approved sample words from three different sections, each with its definition
+  await rv.page.locator('[data-a="cw"]').click({timeout:70000});
+  const sample=JSON.parse(fs.readFileSync("data/geowords/challenge-block-1-sample.json")).puzzles;const cwSecs=[];
+  for(let w=0;w<3;w++){await rv.page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n&&window.__gwPuzzle.kind==='challenge',w);
+    const p=await rv.page.evaluate(()=>window.__gwPuzzle),src=sample.find(s=>s.answer===p.answer&&s.language==='ru');
+    assert(src&&src.approval.status==='approved','challenge word comes from the approved sample');assert.equal(p.seq.total,3);
+    assert.deepEqual(p.clues.map(c=>c.text),src.clues.map(c=>c.text),'clues exactly as approved');cwSecs.push(src.section);
+    for(const c of p.clues){await rv.page.locator('.mk[data-id="'+c.markerId+'"]').first().evaluate(e=>e.click());await rv.page.waitForTimeout(370)}
+    await rv.page.locator('.screen.done').waitFor({timeout:8000});assert.match(await rv.page.locator('.screen.done .defn').innerText(),/\S/,'definition shown');
+    if(w<2)await rv.page.locator('[data-a="nextword"]').click()}
+  assert.equal(new Set(cwSecs).size,3,"three different sections");
+  assert.match(await rv.page.locator('.screen.done').innerText(),/Challenge пройден/);
   await rv.context.close();
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final and Speed Hunt');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

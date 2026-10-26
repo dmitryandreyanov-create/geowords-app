@@ -149,7 +149,8 @@ h1,h2,h3,p{margin:0}
 .tile b{font-size:22px}
 .medal{width:150px;animation:medal .7s cubic-bezier(.2,1.6,.4,1)}
 @keyframes medal{from{transform:scale(1.8) rotate(-20deg);opacity:0}}
-.word-big{font-size:34px;font-weight:800;letter-spacing:.08em;color:var(--sand)}
+/* long words (13–18 letters in Challenge) shrink to fit one line on a phone */
+.word-big{font-size:min(34px,calc((min(100vw,520px) - 40px) / var(--n,8) / .85));white-space:nowrap;font-weight:800;letter-spacing:.08em;color:var(--sand)}
 .defn{color:var(--muted);font-size:17px;max-width:30ch}
 
 /* GeoWords */

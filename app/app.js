@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-block1c';
+const BUILD='2026.10.26-challenge';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -48,7 +48,7 @@ const T={
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
   tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',
   blockN:'Блок 1 · Мир',blockName:'Повторение блока',blockFinal:'Итог блока: GeoWords',blockDone:'Блок пройден!',nextBlockFinal:'К итогу блока',
-  challenge:'Challenge: Speed Hunt',huntDesc:'60 секунд: найди на карте как можно больше объектов блока. Ошибка стоит только времени.',toChallenge:'К Challenge',
+  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше объектов блока, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на объектах всего блока.',toCw:'К словам GeoWords',cwAll:'Challenge пройден!',toChallenge:'К Challenge',
   huntFind:'Найди:',huntSkip:'Пропустить',huntScore:'Найдено',huntBest:'Рекорд',huntDone:'Время вышло!',huntAgain:'Ещё раз',huntSec:s=>s+' с',
   label:'Подпиши карту',labelQ:'Выбери название, потом нажми на его точку на карте',write:'Напиши название',writeQ:'Как называется этот объект?',
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
@@ -82,7 +82,7 @@ const T={
   units:[['Cardinal directions','North, south, west, east, the Equator'],['Continents','7 continents'],['Oceans','5 oceans'],['Neighbours and records','Which oceans wash which continent, records, hemispheres']],
   tester:'Test build: progress is stored only on this device.',
   blockN:'Block 1 · The world',blockName:'Block review',blockFinal:'Block final: GeoWords',blockDone:'Block complete!',nextBlockFinal:'To the block final',
-  challenge:'Challenge: Speed Hunt',huntDesc:'60 seconds: find as many places of the block as you can. A mistake only costs time.',toChallenge:'To the Challenge',
+  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Two parts. Speed Hunt: in 60 seconds find as many places of the block as you can; a mistake only costs time. Then 3 GeoWords with letters on places from the whole block.',toCw:'To the GeoWords',cwAll:'Challenge complete!',toChallenge:'To the Challenge',
   huntFind:'Find:',huntSkip:'Skip',huntScore:'Found',huntBest:'Best',huntDone:'Time is up!',huntAgain:'Play again',huntSec:s=>s+' s',
   label:'Label the map',labelQ:'Choose a name, then tap its point on the map',write:'Write the name',writeQ:'What is this place called?',
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
@@ -174,8 +174,8 @@ async function loadData(){
   D.s4={card,facts:f4,records:r4.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g4,dict:d4,seas,intro:null};
   D.s3={facts:f3,records:r3.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g3,dict:d3,mtns,intro:f3.intro};
   // Block 1 review: approved review unit (lessons, relations, true/false pairs), the block-final GeoWords and its dictionary, the Challenge rules.
-  const [gb,db,ch]=await Promise.all(['data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json'].map(get));
-  D.b={rev,geo:gb,dict:db,challenge:ch};
+  const [gb,db,ch,cs]=await Promise.all(['data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json','data/geowords/challenge-block-1-sample.json'].map(get));
+  D.b={rev,geo:gb,dict:db,challenge:ch,cw:cs.puzzles.filter(p=>p.approval?.status==='approved')};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
@@ -1025,7 +1025,7 @@ function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles
 function geowords(P){
   window.__gwPuzzle=P;// read by the automated play-through test
   const x=t();let step=0,wrong=0,here=0;const t0=Date.now();
-  const tag=P.seq?x.practiceStep+' · '+x.wordOf(P.seq.i+1,P.seq.total):P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:P.kind==='block'?x.blockFinal:x.final;
+  const tag=P.seq?(P.kind==='challenge'?x.cwTag:x.practiceStep)+' · '+x.wordOf(P.seq.i+1,P.seq.total):P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:P.kind==='block'?x.blockFinal:x.final;
   h(`<section class="screen lesson gw"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i></i></div></div>
    <div class="gw-head"><span class="kind">${esc(tag)}</span><p class="gw-clue" aria-live="polite"></p></div><div class="mapslot"></div><p class="rotate-hint">${P.needsZoom?x.zoomHint:x.rotate}</p>
    <div class="slots">${[...P.answer].map(()=>'<div class="slot"></div>').join('')}</div>
@@ -1049,20 +1049,32 @@ function geowords(P){
     if(P.stepId&&last)S.done[P.stepId]=true;S.xp+=xp;bumpStreak();save();
     const section=P.kind==='section'||P.kind==='block';
     if(P.seq){const {i,total}=P.seq;
-      h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?x.practiceAll:x.practiceDone}</h2>
-       <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
+      h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?(P.kind==='challenge'?x.cwAll:x.practiceAll):x.practiceDone}</h2>
+       <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
        <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
        ${last?nextBtns(P.stepId):`<button type="button" class="btn" data-a="nextword">${x.nextWord(i+2,total)}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button>`}</section>`);
       if(last)wireNext(P.stepId);else{app.querySelector('[data-a=home]').onclick=home;app.querySelector('[data-a=nextword]').onclick=()=>P.seq.next()}
       return}
     h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
      <h2>${P.kind==='practice'?x.practiceDone:P.kind==='block'?x.blockDone:section?x.sectionDone:x.unitDone}</h2>
-     <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
+     <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
      ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}${P.stepId&&P.kind==='final'&&!stepOf(P.stepId).sec&&canReview(stepOf(P.stepId))?`<button type="button" class="btn ghost" data-a="practice">${x.practice}</button>`:''}${P.stepId?nextBtns(P.stepId):`<button type="button" class="btn" data-a="home">${x.home}</button>`}</section>`);
     if(P.stepId){wireNext(P.stepId);const b=app.querySelector('[data-a=practice]');if(b)b.onclick=()=>startPractice(stepOf(P.stepId))}else app.querySelector('[data-a=home]').onclick=home}
   clue();
 }
+
+/* ---------- Challenge GeoWords: 3 words from the approved spot-check sample (data/geowords/challenge-block-1-sample.json) ----------
+   Each puzzle is played exactly as approved (letters, clues, insets). Words from three different sections; the last round's words are not repeated.
+   The app-generated Challenge GeoWords (data/challenge/block-1.json) will replace the sample later without changing this screen. */
+function defOf(answer){const lang=L();for(const d of [D.dict,D.s2.dict,D.s3.dict,D.s4.dict,D.s5.dict,D.b.dict])for(const u of d.units||[]){const w=(u.words[lang]||[]).find(w=>w.answer===answer);if(w)return w.definition}return ''}
+function challengeWords(st){const recent=S.recentCw||[],mine=shuffle(D.b.cw.filter(p=>p.language===L()));
+  const fresh=[...mine.filter(p=>!recent.includes(p.answer)),...mine.filter(p=>recent.includes(p.answer))],picked=[];
+  for(const p of fresh)if(picked.length<3&&!picked.some(q=>q.section===p.section))picked.push(p);
+  S.recentCw=picked.map(p=>p.answer);save();
+  const puzzles=picked.map(P=>({kind:'challenge',stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:defOf(P.answer),needsZoom:!!P.needsZoom,insets:P.showInsets||[]}));
+  let i=0;const go=()=>{const P=puzzles[i];P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};go()}
 
 /* ---------- Challenge: Speed Hunt (data/challenge/block-1.json, approved 23.10.2026) ---------- */
 // 60 s; random order without repeats; a tap counts inside the object or within 22 CSS px of it when no other pool object is closer;
@@ -1073,7 +1085,7 @@ function speedHunt(st){
   const x=t(),lang=L(),cfg=D.b.challenge.speedHunt,all=Object.values(cfg.pool).flat().filter(id=>!cfg.excluded.ids.includes(id));
   const order=shuffle([...all]);let i=0,score=0,over=false,busy=false;const end=Date.now()+cfg.durationSeconds*1000;
   h(`<section class="screen lesson hunt"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i style="width:100%"></i></div><b class="hunt-sec"></b></div>
-   <div class="task"><span class="kind">${x.challenge}</span><p class="q">${x.huntFind} <b class="hunt-name"></b></p><div class="mapslot"></div>
+   <div class="task"><span class="kind">${x.huntTag}</span><p class="q">${x.huntFind} <b class="hunt-name"></b></p><div class="mapslot"></div>
    <div class="row hunt-row"><span class="chip"><span class="star">★</span><b class="hunt-score">0</b></span><button type="button" class="btn ghost" data-a="skip">${x.huntSkip}</button></div></div></section>`);
   const layers=[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...MTNS.map(id=>M(id).layer),'world-canal-suez-canal','world-canal-panama-canal'];
   const show=()=>{if(i>=order.length)return finish();window.__gwHunt={target:order[i],score};app.querySelector('.hunt-name').textContent=anyObj(order[i]).name[lang]};
@@ -1094,8 +1106,8 @@ function speedHunt(st){
     h(`<section class="screen done"><img class="medal" src="${IMG.stampChallenge}" alt="" style="transform:rotate(-8deg)"><h2>${x.huntDone}</h2>
      <p class="hunt-stars" aria-label="${stars}/3">${'★'.repeat(stars)}<span>${'★'.repeat(3-stars)}</span></p>
      <div class="tiles"><div class="tile"><small>${x.huntScore}</small><b>${score}</b></div><div class="tile"><small>${x.huntBest}</small><b>${best}${rec?' ✦':''}</b></div><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div></div>
-     <button type="button" class="btn" data-a="again">${x.huntAgain}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button></section>`);
-    app.querySelector('[data-a=again]').onclick=()=>speedHunt(st);app.querySelector('[data-a=home]').onclick=home}
+     ${D.b.cw.length?`<button type="button" class="btn" data-a="cw">${x.toCw}</button>`:''}<button type="button" class="btn ghost" data-a="again">${x.huntAgain}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button></section>`);
+    app.querySelector('[data-a=again]').onclick=()=>speedHunt(st);app.querySelector('[data-a=home]').onclick=home;const cw=app.querySelector('[data-a=cw]');if(cw)cw.onclick=()=>challengeWords(st)}
   show();
 }
 
