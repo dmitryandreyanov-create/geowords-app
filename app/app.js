@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -46,7 +46,14 @@ const T={
   whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
   allAfrica:'Нажми на все горы Африки',allAfricaOk:'Все горы Африки найдены!',allAfricaBad:'Не совсем. Вот горы Африки.',and:' и ',ocean:'Океан',border:'Граница',
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
-  tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
+  tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',
+  blockN:'Блок 1 · Мир',blockName:'Повторение блока',blockFinal:'Итог блока: GeoWords',blockDone:'Блок пройден!',nextBlockFinal:'К итогу блока',
+  challenge:'Challenge: Speed Hunt',huntDesc:'60 секунд: найди на карте как можно больше объектов блока. Ошибка стоит только времени.',toChallenge:'К Challenge',
+  huntFind:'Найди:',huntSkip:'Пропустить',huntScore:'Найдено',huntBest:'Рекорд',huntDone:'Время вышло!',huntAgain:'Ещё раз',huntSec:s=>s+' с',
+  label:'Подпиши карту',labelQ:'Выбери название, потом нажми на его точку на карте',write:'Напиши название',writeQ:'Как называется этот объект?',
+  labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
+  pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет'},
+  recordsLater:'Урок «Рекорды» появится, когда будут утверждены короткие утверждения о рекордах.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
   locked:'Finish the previous step first',start:'Start',later:'Later',again:'Play the lesson again',finalAgain:'Final word again',practice:'Play again — new word',
@@ -73,7 +80,14 @@ const T={
   whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
   allAfrica:'Tap all the mountains of Africa',allAfricaOk:'All the mountains of Africa found!',allAfricaBad:'Not quite. Here are the mountains of Africa.',and:' and ',ocean:'Ocean',border:'Border',
   units:[['Cardinal directions','North, south, west, east, the Equator'],['Continents','7 continents'],['Oceans','5 oceans'],['Neighbours and records','Which oceans wash which continent, records, hemispheres']],
-  tester:'Test build: progress is stored only on this device.',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
+  tester:'Test build: progress is stored only on this device.',
+  blockN:'Block 1 · The world',blockName:'Block review',blockFinal:'Block final: GeoWords',blockDone:'Block complete!',nextBlockFinal:'To the block final',
+  challenge:'Challenge: Speed Hunt',huntDesc:'60 seconds: find as many places of the block as you can. A mistake only costs time.',toChallenge:'To the Challenge',
+  huntFind:'Find:',huntSkip:'Skip',huntScore:'Found',huntBest:'Best',huntDone:'Time is up!',huntAgain:'Play again',huntSec:s=>s+' s',
+  label:'Label the map',labelQ:'Choose a name, then tap its point on the map',write:'Write the name',writeQ:'What is this place called?',
+  labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
+  pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates'},
+  recordsLater:'The Records lesson opens once the short record statements are approved.',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
 const ACC_RU={north:'север',south:'юг',east:'восток',west:'запад',equator:'экватор','prime-meridian':'нулевой меридиан',
@@ -98,7 +112,7 @@ const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the E
   nile:'the Nile',amazon:'the Amazon',mississippi:'the Mississippi',yangtze:'the Yangtze','huang-he':'the Huang He',ganges:'the Ganges',indus:'the Indus',danube:'the Danube',volga:'the Volga'};
 
 /* ---------- state ---------- */
-const blank={lang:null,done:{},xp:0,streak:0,lastDay:'',unlockAll:false,introSeen:false,learned:[],recent:[]};
+const blank={lang:null,done:{},xp:0,streak:0,lastDay:'',unlockAll:false,introSeen:false,learned:[],recent:[],weak:{},hunt:0};
 let S=load();
 function load(){try{return Object.assign({},blank,JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){return {...blank}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
@@ -159,6 +173,9 @@ async function loadData(){
   D.s5={facts:f5,records:r5.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g5,dict:d5,straits,insets,intro:null};
   D.s4={card,facts:f4,records:r4.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g4,dict:d4,seas,intro:null};
   D.s3={facts:f3,records:r3.items.filter(r=>!r.disputed&&r.category!=='changing'),geo:g3,dict:d3,mtns,intro:f3.intro};
+  // Block 1 review: approved review unit (lessons, relations, true/false pairs), the block-final GeoWords and its dictionary, the Challenge rules.
+  const [gb,db,ch]=await Promise.all(['data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json'].map(get));
+  D.b={rev,geo:gb,dict:db,challenge:ch};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
@@ -345,17 +362,44 @@ STEPS.push({id:'s4-final',sec:4,kind:'section',unit:'S'});
 COURSE5.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:5,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`s5-u${u.n}-practice`,sec:5,kind:'practice',unit:u.n});STEPS.push({id:`s5-u${u.n}-final`,sec:5,kind:'final',unit:u.n})});
 STEPS.push({id:'s5-final',sec:5,kind:'section',unit:'S'});
+// Block 1 review (data/review/block-1.json, approved 23.10.2026): no new objects; about 60% of the asked objects are the child's weakest
+// (S.weak counts mistakes per object). Lessons «Land», «Water», «Connections»; then the block-final GeoWords and the Challenge (Speed Hunt).
+// Lesson 4 «Records» waits for approved short record statements (true and false), see recordsLater.
+const kindOf=id=>CONT.includes(id)?'continent':OCEANS.includes(id)?'ocean':RIVERS.includes(id)?'river':MTNS.includes(id)?'mountain':SEAS.includes(id)?'sea':'strait';
+const anyObj=id=>({continent:O,ocean:O,river:R,mountain:M,sea:W,strait:ST})[kindOf(id)](id);
+function weakPick(pool,n){const w=id=>S.weak[id]||0;const weak=shuffle(pool.filter(id=>w(id)>0)).sort((a,b)=>w(b)-w(a)).slice(0,Math.round(n*.6));
+  return shuffle([...weak,...shuffle(pool.filter(id=>!weak.includes(id))).slice(0,n-weak.length)])}
+const findTask=id=>({k:{continent:'findObj',ocean:'findObj',river:'findRiver',mountain:'findMtn',sea:'findSea',strait:'findStrait'}[kindOf(id)],id});
+const whatTask=id=>{const k=kindOf(id);return k==='continent'||k==='ocean'?{k:'whatObj',id,from:pick(k==='ocean'?OCEANS:CONT,id,4)}:{k:{river:'whatRiver',mountain:'whatMtn',sea:'whatSea',strait:'whatStrait'}[k],id}};
+// names a child can build from letter tiles: one or two words, at most 12 letters (spaces and hyphens are given)
+const writable=id=>{const n=anyObj(id).name[L()];return n.split(/\s+/).length<=2&&n.replace(/[\s-]/g,'').length<=12&&!(anyObj(id).inset)};
+const reviewObjLesson=groups=>()=>{const pool=groups.flatMap(([,ids])=>ids);
+  const f=weakPick(pool,4),w=weakPick(pool.filter(id=>!f.includes(id)),3);
+  return [...shuffle([...f.map(findTask),...w.map(whatTask)]),{k:'label',kinds:groups.map(([k])=>k)},...weakPick(pool.filter(writable),2).map(id=>({k:'write',id}))]};
+// true / false: one statement of a pair per lesson; never more than two identical answers in a row
+function tfTasks(n){const ok=p=>{const r=D.b.rev.relations.find(q=>q.subject===p.subject&&q.relation===p.relation);return p.approval?.status==='approved'&&(!r||r.use==='yes'||(r.use==='after-card'&&S.learned.includes(r.requiresCard)))};
+  const ps=shuffle(D.b.rev.trueFalse.pairs.filter(ok)).slice(0,n);let sides;
+  do sides=ps.map(()=>Math.random()<.5?'true':'false');while(sides.some((v,i)=>i>=2&&v===sides[i-1]&&v===sides[i-2]));
+  return ps.map((p,i)=>({k:'tf',pair:p.id,side:sides[i]}))}
+const reviewRelLesson=()=>[...['flowsInto','inOcean','onContinent','separates'].map(rel=>({k:'pairs',rel})),
+  {k:'allAsia',all:true},{k:'allIndian',all:true},{k:'allAfrica',all:true},...tfTasks(2),{k:'seaOcean',id:'caspian-sea'}];
+const COURSE_B=[{id:'b-l1',title:{ru:'Суша',en:'Land'},plan:reviewObjLesson([['continent',CONT],['mountain',MTNS],['river',RIVERS]])},
+  {id:'b-l2',title:{ru:'Вода',en:'Water'},plan:reviewObjLesson([['ocean',OCEANS],['sea',SEAS],['strait',STRAITS]])},
+  {id:'b-l3',title:{ru:'Связи',en:'Connections'},plan:reviewRelLesson}];
+COURSE_B.forEach((l,i)=>STEPS.push({id:l.id,sec:6,kind:'lesson',unit:'B',n:i+1,title:l.title,plan:l.plan}));
+STEPS.push({id:'b-final',sec:6,kind:'block',unit:'B'});
+STEPS.push({id:'b-challenge',sec:6,kind:'challenge',unit:'B'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
 const READY_S3=[1,2,3,'S'];
 const READY_S4=[1,2,3,'S'];
 const READY_S5=[1,2,3,'S'];
-const ready=s=>s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const ready=s=>s.sec===6?true:s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];// data of section 2 / 3
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
 const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
-const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:t().sectionFinal;
+const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:s.kind==='block'?t().blockFinal:s.kind==='challenge'?t().challenge:t().sectionFinal;
 
 /* ---------- small helpers ---------- */
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
@@ -450,7 +494,7 @@ function home(){
   const zig=[50,70,34,62,40,66];let k=0;
   const stopHtml=s=>{const done=!!S.done[s.id],open=unlocked(s.id),isCur=cur&&cur.id===s.id,pos=zig[k++%zig.length];
     const cls=['stop',s.kind==='practice'?'practice':s.kind!=='lesson'?'final':'',done?'done':'',!open?'locked':'',isCur?'current':''].join(' ');
-    const disc=s.kind==='lesson'?(done?'':s.n):s.kind==='practice'?(done?'':`<span class="abc">${L()==='ru'?'АБВ':'ABC'}</span>`):`<img src="${s.kind==='section'?IMG.medalSection:IMG.medal}" alt="">`;
+    const disc=s.kind==='lesson'?(done?'':s.n):s.kind==='practice'?(done?'':`<span class="abc">${L()==='ru'?'АБВ':'ABC'}</span>`):`<img src="${s.kind==='challenge'?IMG.stampChallenge:s.kind==='section'||s.kind==='block'?IMG.medalSection:IMG.medal}" alt="">`;
     return `<div class="stop-row"><button type="button" class="${cls}" data-step="${s.id}" style="left:${pos}%" aria-label="${esc(titleOf(s))}"><span class="disc">${disc}</span></button>
       ${isCur?`<img class="boat" src="${IMG.boat}" alt="" style="left:calc(${pos}% ${pos>50?'- 128px':'+ 46px'})">`:''}
       <span class="stop-label" style="left:${pos}%"><span>${esc(titleOf(s))}</span></span></div>`};
@@ -467,7 +511,11 @@ function home(){
      `<div class="unit-head"><span class="eyebrow">${x.sectionN(4)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s4-final'))+
      `<div class="section-card s2"><img src="${IMG.stamp5}" alt=""><div class="t"><span class="eyebrow">${x.sectionN(5)} · ${x.draft}</span><h2>${L()==='ru'?'Проливы и каналы':'Straits and canals'}</h2></div></div>`+
      COURSE5.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(5)} · ${x.unit} ${u.n}</span><h3>${esc(D.s5.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===5&&s.unit===u.n).map(stopHtml).join('')).join('')+
-     `<div class="unit-head"><span class="eyebrow">${x.sectionN(5)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s5-final'));
+     `<div class="unit-head"><span class="eyebrow">${x.sectionN(5)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s5-final'))+
+     `<div class="section-card s2"><img src="${IMG.stampBlock}" alt=""><div class="t"><span class="eyebrow">${x.blockN} · ${x.draft}</span><h2>${x.blockName}</h2></div></div>`+
+     STEPS.filter(s=>s.sec===6&&s.kind==='lesson').map(stopHtml).join('')+`<p class="rotate-hint">${x.recordsLater}</p>`+
+     `<div class="unit-head"><span class="eyebrow">${x.blockN}</span><h3>${x.blockFinal}</h3></div>`+stopHtml(stepOf('b-final'))+
+     `<div class="unit-head"><span class="eyebrow">${x.blockN}</span><h3>${x.challenge}</h3></div>`+stopHtml(stepOf('b-challenge'));
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -498,8 +546,8 @@ function startPractice(st){
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const head=st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
-  const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:x.finalDesc;
+  const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
+  const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?x.huntDesc:x.finalDesc;
   let buttons;
   if(st.kind!=='lesson'&&st.kind!=='practice'&&S.done[id]&&!st.sec){
     const hasNew=canReview(st);
@@ -509,7 +557,7 @@ function openStep(id){
   }else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?(st.kind==='practice'?x.practiceAgain:x.again):x.start}</button></div>`;
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
-  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else startLesson(st)};
+  s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind==='challenge')speedHunt(st);else if(st.kind==='block')geowords(blockPuzzle(st));else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else startLesson(st)};
   const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{s.remove();startPractice(st)};
 }
 
@@ -545,12 +593,12 @@ function riversIntro(next,sec=2){
   app.querySelector('.fb .btn').onclick=()=>{S.introSeen2=true;save();next()};
 }
 function nextBtns(id){const n=nextStep(id),x=t();
-  return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:n.kind==='practice'?x.nextPractice:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
+  return (n?`<button type="button" class="btn" data-a="next">${n.kind==='lesson'?x.nextLesson:n.kind==='practice'?x.nextPractice:n.kind==='block'?x.nextBlockFinal:n.kind==='challenge'?x.toChallenge:x.nextFinal}</button>`:'')+`<button type="button" class="btn ${n?'ghost':''}" data-a="home">${x.home}</button>`}
 function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').onclick=home;
-  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?startLesson(n):n.kind==='practice'?runPractice(n):geowords(finalPuzzle(n))}
+  const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?startLesson(n):n.kind==='practice'?runPractice(n):n.kind==='challenge'?speedHunt(n):n.kind==='block'?geowords(blockPuzzle(n)):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
-  const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
+  const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));window.__gwPlan=queue.map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
   function exitAsk(){const s=sheet(`<h3>${x.quitT}</h3><p>${x.quitP}</p><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()}
   function frame(kind,body){h(`<section class="screen lesson"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i style="width:${done/total*100}%"></i></div></div>
@@ -559,7 +607,8 @@ function lesson(step){
     fb.innerHTML=`<div class="msg"><img src="${face}" alt=""><div><b>${esc(title)}</b>${text?`<p>${esc(text)}</p>`:''}</div></div><button type="button" class="btn">${x.next}</button>`;
     const b=fb.querySelector('.btn');b.focus({preventScroll:true});b.onclick=onNext}
   function gotIt(after){const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn">${x.check}</button>`;fb.querySelector('.btn').onclick=()=>{after&&after();done++;next()}}
-  function answered(task,ok){if(ok)done++;else{wrong++;queue.push({...task,retry:true})}app.querySelector('.l-bar i').style.width=(done/total*100)+'%'}
+  function answered(task,ok){if(task.id){S.weak[task.id]=Math.max(0,(S.weak[task.id]||0)+(ok?-1:1));if(!S.weak[task.id])delete S.weak[task.id]}
+    if(ok)done++;else{wrong++;queue.push({...task,retry:true})}app.querySelector('.l-bar i').style.width=(done/total*100)+'%'}
   function next(){const task=queue.shift();if(!task)return finish();render(task)}
   const nuanceBtn=o=>o&&o.disputed&&o.caveat?`<button type="button" class="nuance"><img src="${IMG.nuance}" alt="">${x.nuance}</button>`:'';
   function wireNuance(o){const b=app.querySelector('.nuance');if(b)b.onclick=()=>{const s=sheet(`<div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.nuance}</h3></div><p>${esc(o.caveat[lang])}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove()}}
@@ -648,6 +697,59 @@ function lesson(step){
       frame(q.k==='connects'?x.connectsT:x.separatesT,`<p class="q">${(q.k==='connects'?x.connectsQ:x.separatesQ)(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(v=>`<button type="button" class="choice" data-o="${key(v)}">${esc(nameOf(v))}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),zoom:false,insets:o.inset?[o.inset.id]:[]});showStrait(m,o,'hl-shape pulse');
       return choices(q,key(right),()=>nameOf(right),()=>'')}
+    // ---- block review: label the map, write the name, pairs, true / false (data/review/block-1.json) ----
+    const kindLayers=k=>({continent:CONT.map(id=>O(id).layer),ocean:CONT.map(id=>O(id).layer),river:riverLayers(),mountain:mtnLayers(),sea:seaLayers(),strait:straitLayers()})[k];
+    const showAny=(m,id,cls)=>{const k=kindOf(id),o=anyObj(id);if(k==='river')m.line(riverPath(o),cls.replace('hl-shape','hl-river'));else if(k==='strait')showStrait(m,o,cls);else m.shape(o,cls)};
+    if(q.k==='label'){const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=10;let kind,items;
+      for(const k of shuffle([...q.kinds])){const ids=({continent:CONT,ocean:OCEANS,river:RIVERS,mountain:MTNS,sea:SEAS,strait:STRAITS})[k].filter(id=>!anyObj(id).inset);
+        for(let tries=0;tries<40&&!items;tries++){const pick_=[];for(const id of shuffle([...ids]))if(pick_.length<4&&pick_.every(p=>far(anyObj(p),anyObj(id))))pick_.push(id);if(pick_.length===4){kind=k;items=pick_}}
+        if(items)break}
+      if(!items){done++;return next()}
+      const names=shuffle([...items]);const placed={};let sel=null;
+      frame(x.label,`<p class="q">${x.labelQ}</p><div class="mapslot"></div><div class="lchips">${names.map((id,i)=>`<button type="button" class="choice lchip" data-o="${id}"><span class="n">${i+1}</span>${esc(anyObj(id).name[lang])}</button>`).join('')}</div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:kindLayers(kind),markers:items.map(id=>({id,x:anyObj(id).x,y:anyObj(id).y,label:'?',aria:'?'})),
+        onMarker:(id,el)=>{if(checked)return;if(!sel){if(placed[id]){delete placed[id];redraw()}return}for(const k in placed)if(placed[k]===sel)delete placed[k];placed[id]=sel;sel=null;redraw()}});
+      let checked=false;const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;
+      function redraw(){for(const id of items){const b=m.btn[id].el;b.querySelector('span').textContent=placed[id]?names.indexOf(placed[id])+1:'?';b.classList.toggle('set',!!placed[id])}
+        app.querySelectorAll('.lchip').forEach(c=>{c.classList.toggle('sel',c.dataset.o===sel);c.classList.toggle('used',Object.values(placed).includes(c.dataset.o))});
+        fb.querySelector('.btn').disabled=Object.keys(placed).length<items.length}
+      app.querySelectorAll('.lchip').forEach(c=>c.onclick=()=>{if(checked)return;sel=sel===c.dataset.o?null:c.dataset.o;redraw()});
+      fb.querySelector('.btn').onclick=()=>{checked=true;const ok=items.every(id=>placed[id]===id);
+        for(const id of items){const b=m.btn[id].el;b.classList.remove('set');b.classList.add(placed[id]===id?'good':'bad');b.querySelector('span').textContent=names.indexOf(id)+1}
+        app.querySelectorAll('.lchip').forEach(c=>c.disabled=true);answered(q,ok);
+        feedback(ok,ok?x.right:x.labelBad,ok?'':names.map((id,i)=>(i+1)+' — '+anyObj(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};
+      return}
+    if(q.k==='write'){const o=anyObj(q.id),name=o.name[lang],chars=[...name],sep=c=>/[\s-]/.test(c);const letters=chars.filter(c=>!sep(c));const typed=[];
+      frame(x.write,`<p class="q">${x.writeQ}</p><div class="mapslot"></div><div class="wslots">${name.split(/(\s+)/).filter(Boolean).map(w=>/^\s+$/.test(w)?'':`<span class="wword">${[...w].map(c=>c==='-'?'<span class="wgap">-</span>':'<span class="wslot"></span>').join('')}</span>`).join('')}</div>
+        <div class="wtiles">${shuffle(letters.map((c,i)=>({c:c.toUpperCase(),i}))).map(t=>`<button type="button" class="wtile" data-i="${t.i}">${esc(t.c)}</button>`).join('')}<button type="button" class="wtile back" aria-label="⌫">⌫</button></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:kindLayers(kindOf(q.id)),zoom:false,insets:o.inset?[o.inset.id]:[]});showAny(m,q.id,'hl-shape pulse');
+      const slots=[...app.querySelectorAll('.wslot')];
+      const draw=()=>slots.forEach((s_,i)=>s_.textContent=typed[i]?typed[i].c:'');
+      app.querySelectorAll('.wtile[data-i]').forEach(b=>b.onclick=()=>{if(typed.length>=letters.length)return;typed.push({c:b.textContent,b});b.disabled=true;draw();
+        if(typed.length===letters.length){const ok=fold(typed.map(t=>t.c).join(''))===fold(letters.join(''));app.querySelectorAll('.wtile').forEach(t=>t.disabled=true);
+          slots.forEach((s_,i)=>{s_.textContent=letters[i].toUpperCase();s_.classList.add(ok?'good':'bad')});answered(q,ok);
+          feedback(ok,ok?x.right:x.wrongIs(name),ok?(o.disputed?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});
+      app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
+      return}
+    if(q.k==='pairs'){const rels=D.b.rev.relations.filter(r=>r.relation===q.rel&&typeof r.subject==='string'&&r.object&&(r.use==='yes'||(r.use==='after-card'&&S.learned.includes(r.requiresCard))));
+      const key=v=>[v].flat().join('+'),nameOf=v=>[v].flat().map(id=>anyObj(id)?anyObj(id).name[lang]:D.s2.waterName(id)[lang]).join(x.and);
+      const chosen=[];for(const r of shuffle(rels))if(chosen.length<4&&!chosen.some(c=>key(c.object)===key(r.object)))chosen.push(r);
+      const left=shuffle([...chosen]),right=shuffle([...chosen]);let sel=null,mistakes=0,matched=0;
+      frame(x.pairs,`<p class="q">${x.pairsQ}</p><p class="rotate-hint" style="margin:0">${x.pairsT[q.rel]}</p><div class="pairs"><div class="pcol">${left.map(r=>`<button type="button" class="choice pbtn" data-s="${r.subject}">${esc(nameOf(r.subject))}</button>`).join('')}</div>
+        <div class="pcol">${right.map(r=>`<button type="button" class="choice pbtn" data-r="${r.subject}">${esc(nameOf(r.object))}</button>`).join('')}</div></div>`);
+      app.querySelectorAll('.pbtn').forEach(b=>b.onclick=()=>{if(b.disabled)return;
+        if(b.dataset.s){app.querySelectorAll('.pbtn[data-s]').forEach(c=>c.classList.toggle('sel',c===b&&!b.classList.contains('sel')));sel=b.classList.contains('sel')?b.dataset.s:null;return}
+        if(!sel)return;const subj=sel,lb=app.querySelector(`.pbtn[data-s="${subj}"]`),ok=key(chosen.find(r=>r.subject===subj).object)===key(chosen.find(r=>r.subject===b.dataset.r).object);
+        if(ok){lb.classList.remove('sel');[lb,b].forEach(c=>{c.classList.add('right');c.disabled=true});sel=null;matched++;
+          if(matched===chosen.length){answered(q,mistakes===0);feedback(mistakes===0,x.pairsOk,'',mistakes===0?IMG.faceHappy:IMG.faceOops,next)}}
+        else{mistakes++;b.classList.add('wrong');setTimeout(()=>b.classList.remove('wrong'),500)}});
+      return}
+    if(q.k==='tf'){const p=D.b.rev.trueFalse.pairs.find(v=>v.id===q.pair),truth=q.side==='true',subj=[p.subject].flat()[0];
+      frame(x.tf,`<div class="card"><p class="q" style="margin:0">${esc(p[q.side][lang])}</p></div><div class="mapslot"></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:kindLayers(kindOf(subj)),zoom:false,insets:anyObj(subj).inset?[anyObj(subj).inset.id]:[]});showAny(m,subj,'hl-shape pulse');
+      app.querySelectorAll('.tfrow .choice').forEach(b=>b.onclick=()=>{const ok=(b.dataset.o==='true')===truth;app.querySelectorAll('.tfrow .choice').forEach(c=>{c.disabled=true;if((c.dataset.o==='true')===truth)c.classList.add('right')});
+        if(!ok)b.classList.add('wrong');answered({...q,id:subj},ok);feedback(ok,ok?x.right:x.tfRight,truth?'':p.true[lang],ok?IMG.faceHappy:IMG.faceOops,next)});
+      return}
     // ---- section 4: seas (outlined when asked; the base map shows land and water) ----
     if(q.k==='introSea'||q.k==='introSeaRec'){const rec=q.rec&&D.s4.records.find(r=>r.id===q.rec);const o=W(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
@@ -671,7 +773,7 @@ function lesson(step){
       frame(x.ocean,`<p class="q">${x.seaOcean(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(label(c))}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(o,'hl-shape pulse');
       return choices(q,right,()=>label(right),()=>'')}
-    if(q.k==='allIndian'){const want=SEAS.filter(id=>W(id).ocean==='indian-ocean'&&W(id).unit<=2);const sel=new Set();
+    if(q.k==='allIndian'){const want=SEAS.filter(id=>W(id).ocean==='indian-ocean'&&(q.all||W(id).unit<=2));const sel=new Set();
       frame(x.find,`<p class="q">${x.allIndian}</p><div class="mapslot"></div><p class="rotate-hint">${x.allIndianHint}</p>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),onTap:(px,py,sx,sy,sz)=>{const hit=nearestSea(px,py,sz,26);if(!hit)return;
         if(sel.has(hit))sel.delete(hit);else sel.add(hit);redraw()}});
@@ -756,6 +858,11 @@ function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-fi
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
     layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],stamp:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+// Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
+function blockPuzzle(st){const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
+  const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
+  return {kind:'block',stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],stamp:IMG.stampBlock}}
 // Reveal order (docs/app-mechanics.md, rule 5): neighbours never one after another; first letter late; last letters not early.
 function revealOrder(n){const long=n>=7,endN=n<=8?2:3;
   for(let tries=0;tries<20000;tries++){const o=shuffle([...Array(n)].map((_,i)=>i+1));let ok=true;
@@ -890,7 +997,7 @@ function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles
 function geowords(P){
   window.__gwPuzzle=P;// read by the automated play-through test
   const x=t();let step=0,wrong=0,here=0;const t0=Date.now();
-  const tag=P.seq?x.practiceStep+' · '+x.wordOf(P.seq.i+1,P.seq.total):P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:x.final;
+  const tag=P.seq?x.practiceStep+' · '+x.wordOf(P.seq.i+1,P.seq.total):P.kind==='practice'?x.practiceTag:P.kind==='section'?x.sectionFinal:P.kind==='block'?x.blockFinal:x.final;
   h(`<section class="screen lesson gw"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i></i></div></div>
    <div class="gw-head"><span class="kind">${esc(tag)}</span><p class="gw-clue" aria-live="polite"></p></div><div class="mapslot"></div><p class="rotate-hint">${P.needsZoom?x.zoomHint:x.rotate}</p>
    <div class="slots">${[...P.answer].map(()=>'<div class="slot"></div>').join('')}</div>
@@ -912,7 +1019,7 @@ function geowords(P){
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=(P.kind==='practice'?10:20)+Math.max(0,6-wrong);
     const last=!P.seq||P.seq.i+1>=P.seq.total;
     if(P.stepId&&last)S.done[P.stepId]=true;S.xp+=xp;bumpStreak();save();
-    const section=P.kind==='section';
+    const section=P.kind==='section'||P.kind==='block';
     if(P.seq){const {i,total}=P.seq;
       h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?x.practiceAll:x.practiceDone}</h2>
        <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
@@ -921,12 +1028,47 @@ function geowords(P){
       if(last)wireNext(P.stepId);else{app.querySelector('[data-a=home]').onclick=home;app.querySelector('[data-a=nextword]').onclick=()=>P.seq.next()}
       return}
     h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
-     <h2>${P.kind==='practice'?x.practiceDone:section?x.sectionDone:x.unitDone}</h2>
+     <h2>${P.kind==='practice'?x.practiceDone:P.kind==='block'?x.blockDone:section?x.sectionDone:x.unitDone}</h2>
      <p class="eyebrow">${x.wordDef}</p><p class="word-big">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
      ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}${P.stepId&&P.kind==='final'&&!stepOf(P.stepId).sec&&canReview(stepOf(P.stepId))?`<button type="button" class="btn ghost" data-a="practice">${x.practice}</button>`:''}${P.stepId?nextBtns(P.stepId):`<button type="button" class="btn" data-a="home">${x.home}</button>`}</section>`);
     if(P.stepId){wireNext(P.stepId);const b=app.querySelector('[data-a=practice]');if(b)b.onclick=()=>startPractice(stepOf(P.stepId))}else app.querySelector('[data-a=home]').onclick=home}
   clue();
+}
+
+/* ---------- Challenge: Speed Hunt (data/challenge/block-1.json, approved 23.10.2026) ---------- */
+// 60 s; random order without repeats; a tap counts inside the object or within 22 CSS px of it when no other pool object is closer;
+// a mistake lights the right place for 0.5 s and sends the object to the weak list; skipping is allowed; score + personal best + provisional stars.
+// a river counts as «inside» within 8 px of its line, so a tap on the drawn river is not lost to the continent under it
+function huntPx(id,px,py,sz){if(kindOf(id)==='river')return Math.max(0,riverPx(R(id),px,py,sz.W,sz.H)-8);const o=anyObj(id);return inside(o,px,py)?0:edgePx(o,px,py,sz.W,sz.H)}
+function speedHunt(st){
+  const x=t(),lang=L(),cfg=D.b.challenge.speedHunt,all=Object.values(cfg.pool).flat().filter(id=>!cfg.excluded.ids.includes(id));
+  const order=shuffle([...all]);let i=0,score=0,over=false,busy=false;const end=Date.now()+cfg.durationSeconds*1000;
+  h(`<section class="screen lesson hunt"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i style="width:100%"></i></div><b class="hunt-sec"></b></div>
+   <div class="task"><span class="kind">${x.challenge}</span><p class="q">${x.huntFind} <b class="hunt-name"></b></p><div class="mapslot"></div>
+   <div class="row hunt-row"><span class="chip"><span class="star">★</span><b class="hunt-score">0</b></span><button type="button" class="btn ghost" data-a="skip">${x.huntSkip}</button></div></div></section>`);
+  const layers=[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...MTNS.map(id=>M(id).layer),'world-canal-suez-canal','world-canal-panama-canal'];
+  const show=()=>{if(i>=order.length)return finish();window.__gwHunt={target:order[i],score};app.querySelector('.hunt-name').textContent=anyObj(order[i]).name[lang]};
+  const m=mapWidget(app.querySelector('.mapslot'),{layers,onTap:(px,py,sx,sy,sz)=>{if(over||busy)return;const id=order[i],d=huntPx(id,px,py,sz);
+    const ok=d<=22&&!all.some(o=>o!==id&&huntPx(o,px,py,sz)<d);m.dot(sx,sy,ok);
+    if(ok){score++;app.querySelector('.hunt-score').textContent=score;S.weak[id]=Math.max(0,(S.weak[id]||0)-1);i++;return show()}
+    S.weak[id]=(S.weak[id]||0)+1;busy=true;const k=kindOf(id);if(k==='river')m.line(riverPath(R(id)),'hl-river good');else m.shape(anyObj(id),'hl-shape good');
+    setTimeout(()=>{busy=false;m.clearShapes();i++;if(!over)show()},500)}});
+  app.querySelector('[data-a=skip]').onclick=()=>{if(over||busy)return;i++;show()};
+  const bar=app.querySelector('.l-bar i'),secEl=app.querySelector('.hunt-sec');
+  const tick=setInterval(()=>{if(!document.body.contains(bar)){clearInterval(tick);return}const left=Math.max(0,end-Date.now());
+    bar.style.width=(left/cfg.durationSeconds/10)+'%';secEl.textContent=x.huntSec(Math.ceil(left/1000));if(!left)finish()},200);
+  app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
+    s.querySelector('[data-a=q]').onclick=()=>{s.remove();over=true;clearInterval(tick);save();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
+  function finish(){if(over)return;over=true;clearInterval(tick);const best=Math.max(S.hunt||0,score),rec=score>(S.hunt||0)&&score>0;S.hunt=best;
+    const stars=cfg.stars.thresholds.filter(v=>score>=v).length,xp=10+score;S.done[st.id]=true;S.xp+=xp;bumpStreak();save();
+    document.querySelectorAll('.sheet-back').forEach(b=>b.remove());window.__gwHunt={target:null,score,done:true};
+    h(`<section class="screen done"><img class="medal" src="${IMG.stampChallenge}" alt="" style="transform:rotate(-8deg)"><h2>${x.huntDone}</h2>
+     <p class="hunt-stars" aria-label="${stars}/3">${'★'.repeat(stars)}<span>${'★'.repeat(3-stars)}</span></p>
+     <div class="tiles"><div class="tile"><small>${x.huntScore}</small><b>${score}</b></div><div class="tile"><small>${x.huntBest}</small><b>${best}${rec?' ✦':''}</b></div><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div></div>
+     <button type="button" class="btn" data-a="again">${x.huntAgain}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button></section>`);
+    app.querySelector('[data-a=again]').onclick=()=>speedHunt(st);app.querySelector('[data-a=home]').onclick=home}
+  show();
 }
 
 /* ---------- boot ---------- */
