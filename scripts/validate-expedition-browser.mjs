@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-challenge3/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-europe1/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -242,7 +242,37 @@ try{
   assert.equal(Object.keys(cwSec).length,6,'all five sections and the challenge-extra words come up');
   assert(cwRecs/cwLetters>.05&&cwRecs/cwLetters<.4,"some, not most, places named by a record ("+(cwRecs/cwLetters).toFixed(2)+")");
   await rv.context.close();
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords');
+  // Block 2 «Europe», section 1: every lesson played through on the Europe base map with right answers (tap on the label point / pick the name)
+  {const context=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
+    await context.addInitScript(()=>{if(sessionStorage.getItem('fixture'))return;sessionStorage.setItem('fixture','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:'ru',done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))});
+    const page=await context.newPage();await page.goto(base+'/app/');await page.waitForSelector('[data-step="e1-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),/Европа на карте/);
+    const eMap=JSON.parse(fs.readFileSync('data/maps/europe-overview.json')),eFacts=JSON.parse(fs.readFileSync('data/content/b2-section-1-facts.json'));
+    const lab=Object.fromEntries(eMap.items.map(i=>[i.id,i.label]));
+    const tapAt=async(pt)=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['e1-u1-l1','e1-u1-l2','e1-u2-l1','e1-u2-l2','e1-u2-l3','e1-u3-l1','e1-u3-l2','e1-u3-l3','e1-u3-l4'];const kinds=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<40;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        if(q.k!=='introEurope'&&q.k!=='introEuRec'&&q.k!=='allPen'){
+          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-blank.webp'),'Europe base map: '+src)}
+        if(q.k==='introEurope'||q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),eFacts.items.find(i=>i.id===q.id).fact.ru);
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){await tapAt(lab[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='whatEu'){await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else if(q.k==='allPen'){for(const it of eMap.items.filter(i=>i.kind==='peninsula'))await tapAt(it.label);
+          await page.locator('.fb .btn').click();assert.equal(await page.locator('.fb.ok').count(),1,'all peninsulas found');await page.locator('.fb .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e1-u1-l1"]')}
+    for(const k of ['introEurope','introEu','introEuRec','findEu','whatEu','allPen'])assert(kinds.has(k),'task kind played: '+k);
+    // nested and neighbouring objects: inside the Barents Sea counts for the Arctic Ocean; the Kola Peninsula never counts for Scandinavia
+    const judged=await page.evaluate(([b,k])=>{const sz={W:360,H:262};return [window.__gwEuOk('arctic-ocean',b.x,b.y,sz),window.__gwEuOk('scandinavian-peninsula',k.x,k.y,sz),window.__gwEuHit(k.x,k.y,sz)]},[lab['barents-sea'],lab['kola-peninsula']]);
+    assert.deepEqual(judged,[true,false,'kola-peninsula']);
+    await context.close()}
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» lessons');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

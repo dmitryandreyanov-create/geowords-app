@@ -41,6 +41,16 @@ const RELEASE = {
     section: "straits-and-canals",
     ids: ["suez-canal", "panama-canal", "strait-of-gibraltar", "english-channel", "bosporus", "dardanelles", "bab-el-mandeb", "strait-of-hormuz", "gulf-of-oman", "strait-of-malacca", "mozambique-channel", "bering-strait", "drake-passage", "strait-of-magellan"],
   },
+  "b2-section-1-facts.json": {
+    section: "europe-on-the-map",
+    ids: ["europe-intro", "atlantic-ocean", "arctic-ocean", "mediterranean-sea", "ural-mountains", "ural-river", "caspian-sea",
+      "scandinavian-peninsula", "kola-peninsula", "jutland", "iberian-peninsula", "apennine-peninsula", "balkan-peninsula", "crimean-peninsula",
+      "great-britain", "ireland", "iceland", "sicily", "baltic-sea", "north-sea", "barents-sea"],
+  },
+  "b2-section-1-records.json": {
+    section: "europe-on-the-map",
+    ids: ["scandinavian-largest-peninsula", "great-britain-largest-island", "sicily-largest-mediterranean-island"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",
