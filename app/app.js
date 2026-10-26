@@ -53,7 +53,7 @@ const T={
   label:'Подпиши карту',labelQ:'Выбери название, потом нажми на его точку на карте',write:'Напиши название',writeQ:'Как называется этот объект?',
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
   pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет'},
-  recordsLater:'Урок «Рекорды» появится, когда будут утверждены короткие утверждения о рекордах.',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
+  recFind:'Найди его на карте.',recWhatQ:'Что это? Выбери название.',recPairsT:'Место и его рекорд',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
   locked:'Finish the previous step first',start:'Start',later:'Later',again:'Play the lesson again',finalAgain:'Final word again',practice:'Play again — new word',
@@ -87,7 +87,7 @@ const T={
   label:'Label the map',labelQ:'Choose a name, then tap its point on the map',write:'Write the name',writeQ:'What is this place called?',
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
   pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates'},
-  recordsLater:'The Records lesson opens once the short record statements are approved.',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
+  recFind:'Find it on the map.',recWhatQ:'What is it? Pick the name.',recPairsT:'A place and its record',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
 const ACC_RU={north:'север',south:'юг',east:'восток',west:'запад',equator:'экватор','prime-meridian':'нулевой меридиан',
@@ -363,8 +363,7 @@ COURSE5.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:5,kind:'les
   STEPS.push({id:`s5-u${u.n}-practice`,sec:5,kind:'practice',unit:u.n});STEPS.push({id:`s5-u${u.n}-final`,sec:5,kind:'final',unit:u.n})});
 STEPS.push({id:'s5-final',sec:5,kind:'section',unit:'S'});
 // Block 1 review (data/review/block-1.json, approved 23.10.2026): no new objects; about 60% of the asked objects are the child's weakest
-// (S.weak counts mistakes per object). Lessons «Land», «Water», «Connections»; then the block-final GeoWords and the Challenge (Speed Hunt).
-// Lesson 4 «Records» waits for approved short record statements (true and false), see recordsLater.
+// (S.weak counts mistakes per object). Lessons «Land», «Water», «Connections», «Records»; then the block-final GeoWords and the Challenge (Speed Hunt).
 const kindOf=id=>CONT.includes(id)?'continent':OCEANS.includes(id)?'ocean':RIVERS.includes(id)?'river':MTNS.includes(id)?'mountain':SEAS.includes(id)?'sea':'strait';
 const anyObj=id=>({continent:O,ocean:O,river:R,mountain:M,sea:W,strait:ST})[kindOf(id)](id);
 function weakPick(pool,n){const w=id=>S.weak[id]||0;const weak=shuffle(pool.filter(id=>w(id)>0)).sort((a,b)=>w(b)-w(a)).slice(0,Math.round(n*.6));
@@ -383,9 +382,22 @@ function tfTasks(n){const ok=p=>{const r=D.b.rev.relations.find(q=>q.subject===p
   return ps.map((p,i)=>({k:'tf',pair:p.id,side:sides[i]}))}
 const reviewRelLesson=()=>[...['flowsInto','inOcean','onContinent','separates'].map(rel=>({k:'pairs',rel})),
   {k:'allAsia',all:true},{k:'allIndian',all:true},{k:'allAfrica',all:true},...tfTasks(2),{k:'seaOcean',id:'caspian-sea'}];
+// Lesson 4 «Records» (records.items, approved 26.10.2026): 4 true/false, 3 pairs of 3 (place ↔ nameless clue), 2 «find it by the clue»,
+// 1 «what is it by the clue». Each record at most once per lesson; records about the child's weakest places come first.
+function recordsLesson(){const w=r=>S.weak[r.object]||0;
+  const order=shuffle(D.b.rev.records.items.filter(r=>r.approval?.status==='approved')).sort((a,b)=>w(b)-w(a));
+  const tf=order.splice(0,4),find=order.splice(0,2),what=order.splice(0,1),groups=[];
+  for(let g=0;g<3;g++){const grp=[];for(const r of [...order])if(grp.length<3&&!grp.some(p=>p.object===r.object)){grp.push(r);order.splice(order.indexOf(r),1)}groups.push(grp)}
+  const rec=r=>({id:r.object,clue:r.clue,say:r.true});
+  const plan=shuffle([...tf.map(r=>({k:'recTf',rec:r.id,id:r.object})),...groups.map(g=>({k:'recPairs',recs:g.map(r=>r.id)})),
+    ...find.map(r=>({...findTask(r.object),...rec(r)})),...what.map(r=>({k:'recWhat',rec:r.id,...rec(r)}))]);
+  // sides in lesson order: never three identical answers in a row
+  let sides;do sides=tf.map(()=>Math.random()<.5?'true':'false');while(sides.some((v,i)=>i>=2&&v===sides[i-1]&&v===sides[i-2]));
+  plan.filter(q=>q.k==='recTf').forEach((q,i)=>q.side=sides[i]);return plan}
 const COURSE_B=[{id:'b-l1',title:{ru:'Суша',en:'Land'},plan:reviewObjLesson([['continent',CONT],['mountain',MTNS],['river',RIVERS]])},
   {id:'b-l2',title:{ru:'Вода',en:'Water'},plan:reviewObjLesson([['ocean',OCEANS],['sea',SEAS],['strait',STRAITS]])},
-  {id:'b-l3',title:{ru:'Связи',en:'Connections'},plan:reviewRelLesson}];
+  {id:'b-l3',title:{ru:'Связи',en:'Connections'},plan:reviewRelLesson},
+  {id:'b-l4',title:{ru:'Рекорды',en:'Records'},plan:recordsLesson}];
 COURSE_B.forEach((l,i)=>STEPS.push({id:l.id,sec:6,kind:'lesson',unit:'B',n:i+1,title:l.title,plan:l.plan}));
 STEPS.push({id:'b-final',sec:6,kind:'block',unit:'B'});
 STEPS.push({id:'b-challenge',sec:6,kind:'challenge',unit:'B'});
@@ -513,7 +525,7 @@ function home(){
      COURSE5.map(u=>`<div class="unit-head"><span class="eyebrow">${x.sectionN(5)} · ${x.unit} ${u.n}</span><h3>${esc(D.s5.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===5&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.sectionN(5)}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('s5-final'))+
      `<div class="section-card s2"><img src="${IMG.stampBlock}" alt=""><div class="t"><span class="eyebrow">${x.blockN} · ${x.draft}</span><h2>${x.blockName}</h2></div></div>`+
-     STEPS.filter(s=>s.sec===6&&s.kind==='lesson').map(stopHtml).join('')+`<p class="rotate-hint">${x.recordsLater}</p>`+
+     STEPS.filter(s=>s.sec===6&&s.kind==='lesson').map(stopHtml).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.blockN}</span><h3>${x.blockFinal}</h3></div>`+stopHtml(stepOf('b-final'))+
      `<div class="unit-head"><span class="eyebrow">${x.blockN}</span><h3>${x.challenge}</h3></div>`+stopHtml(stepOf('b-challenge'));
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
@@ -603,7 +615,8 @@ function lesson(step){
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()}
   function frame(kind,body){h(`<section class="screen lesson"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i style="width:${done/total*100}%"></i></div></div>
      <div class="task"><span class="kind">${kind}</span>${body}</div><div class="fb idle"></div></section>`);app.querySelector('.l-x').onclick=exitAsk}
-  function feedback(ok,title,text,face,onNext){const fb=app.querySelector('.fb');fb.className='fb '+(ok?'ok':'bad');
+  let cur=null;const tapQ=q=>q.clue?`<div class="card"><p class="q" style="margin:0">${esc(q.clue[lang])}</p></div><p class="rotate-hint" style="margin:0">${x.recFind}</p>`:`<p class="q">${x.tap(acc(q.id))}</p>`;
+  function feedback(ok,title,text,face,onNext){if(ok&&cur&&cur.say)text=cur.say[lang];const fb=app.querySelector('.fb');fb.className='fb '+(ok?'ok':'bad');
     fb.innerHTML=`<div class="msg"><img src="${face}" alt=""><div><b>${esc(title)}</b>${text?`<p>${esc(text)}</p>`:''}</div></div><button type="button" class="btn">${x.next}</button>`;
     const b=fb.querySelector('.btn');b.focus({preventScroll:true});b.onclick=onNext}
   function gotIt(after){const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn">${x.check}</button>`;fb.querySelector('.btn').onclick=()=>{after&&after();done++;next()}}
@@ -613,7 +626,7 @@ function lesson(step){
   const nuanceBtn=o=>o&&o.disputed&&o.caveat?`<button type="button" class="nuance"><img src="${IMG.nuance}" alt="">${x.nuance}</button>`:'';
   function wireNuance(o){const b=app.querySelector('.nuance');if(b)b.onclick=()=>{const s=sheet(`<div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.nuance}</h3></div><p>${esc(o.caveat[lang])}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove()}}
   function render(q){
-    window.__gwTask=q;// read by the automated play-through test
+    window.__gwTask=q;cur=q;// read by the automated play-through test
     if(q.k==='intro'){const d=dir(q.dir);frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${q.dir==='west'?IMG.left:q.dir==='east'?IMG.right:IMG.hello}" alt=""><h3>${esc(d.name[lang])}</h3></div><p>${esc(d.fact(lang))}</p></div><div class="mapslot"></div>`);
       mapWidget(app.querySelector('.mapslot'),{markers:[{id:d.id,x:d.x,y:d.y,cls:'dir pulse',label:{north:'↑',south:'↓',east:'→',west:'←'}[d.id]}],zoom:false});return gotIt(()=>learn(q.dir))}
     if(q.k==='introLine'){const ln=D.lines[q.line];frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${IMG.map}" alt=""><h3>${esc(ln.name[lang])}</h3></div><p>${esc(ln.fact(lang))}</p></div><div class="mapslot"></div>`);
@@ -644,7 +657,7 @@ function lesson(step){
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(r.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:r.fact(lang))}</p>${rec?'':nuanceBtn(r)}</div><div class="mapslot"></div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),zoom:false});m.line(riverPath(r),'hl-river pulse');if(!rec)wireNuance(r);
       return gotIt(()=>learn(r.id))}
-    if(q.k==='findRiver'){const r=R(q.id);const rec=q.rec&&D.s2.records.find(x=>x.id===q.rec);frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+    if(q.k==='findRiver'){const r=R(q.id);const rec=q.rec&&D.s2.records.find(x=>x.id===q.rec);frame(rec||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:riverLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestRiver(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.line(riverPath(r),ok?'hl-river good':'hl-river pulse');
         if(hit&&!ok)m.line(riverPath(R(hit)),'hl-river bad');answered(q,ok);
@@ -679,7 +692,7 @@ function lesson(step){
       const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),zoom:false,insets:o.inset?[o.inset.id]:[]});showStrait(m,o,'hl-shape pulse');if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
     if(q.k==='findStrait'){const o=ST(q.id);const rec=q.rec&&D.s5.records.find(r=>r.id===q.rec);
-      frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>${o.inset?`<p class="rotate-hint">${x.magHint}</p>`:''}`);
+      frame(rec||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>${o.inset?`<p class="rotate-hint">${x.magHint}</p>`:''}`);
       let locked=false;const done_=(ok,hit,sx,sy)=>{locked=true;m.dot(sx,sy,ok);showStrait(m,o,ok?'hl-shape good':'hl-shape pulse');if(hit&&!ok)showStrait(m,ST(hit),'hl-shape bad');answered(q,ok);
         feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)};
       const m=mapWidget(app.querySelector('.mapslot'),{layers:straitLayers(),insets:o.inset?[o.inset.id]:[],
@@ -731,19 +744,31 @@ function lesson(step){
           feedback(ok,ok?x.right:x.wrongIs(name),ok?(o.disputed?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});
       app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
       return}
+    // rows: {s: id, left, right, key}; a right-hand button matches when its row has the same key (two rivers may flow into one sea)
+    const pairsUI=(hint,rows,cls)=>{const left=shuffle([...rows]),right=shuffle([...rows]),keyOf=s=>rows.find(r=>r.s===s).key;let sel=null,mistakes=0,matched=0;
+      frame(x.pairs,`<p class="q">${x.pairsQ}</p><p class="rotate-hint" style="margin:0">${hint}</p><div class="pairs ${cls}"><div class="pcol">${left.map(r=>`<button type="button" class="choice pbtn" data-s="${r.s}">${esc(r.left)}</button>`).join('')}</div>
+        <div class="pcol">${right.map(r=>`<button type="button" class="choice pbtn" data-r="${r.s}">${esc(r.right)}</button>`).join('')}</div></div>`);
+      app.querySelectorAll('.pbtn').forEach(b=>b.onclick=()=>{if(b.disabled)return;
+        if(b.dataset.s){app.querySelectorAll('.pbtn[data-s]').forEach(c=>c.classList.toggle('sel',c===b&&!b.classList.contains('sel')));sel=b.classList.contains('sel')?b.dataset.s:null;return}
+        if(!sel)return;const subj=sel,lb=app.querySelector(`.pbtn[data-s="${subj}"]`),ok=keyOf(subj)===keyOf(b.dataset.r);
+        if(ok){lb.classList.remove('sel');[lb,b].forEach(c=>{c.classList.add('right');c.disabled=true});sel=null;matched++;
+          if(matched===rows.length){answered(q,mistakes===0);feedback(mistakes===0,x.pairsOk,'',mistakes===0?IMG.faceHappy:IMG.faceOops,next)}}
+        else{mistakes++;b.classList.add('wrong');setTimeout(()=>b.classList.remove('wrong'),500)}})};
     if(q.k==='pairs'){const rels=D.b.rev.relations.filter(r=>r.relation===q.rel&&typeof r.subject==='string'&&r.object&&(r.use==='yes'||(r.use==='after-card'&&S.learned.includes(r.requiresCard))));
       const key=v=>[v].flat().join('+'),nameOf=v=>[v].flat().map(id=>anyObj(id)?anyObj(id).name[lang]:D.s2.waterName(id)[lang]).join(x.and);
       const chosen=[];for(const r of shuffle(rels))if(chosen.length<4&&!chosen.some(c=>key(c.object)===key(r.object)))chosen.push(r);
-      const left=shuffle([...chosen]),right=shuffle([...chosen]);let sel=null,mistakes=0,matched=0;
-      frame(x.pairs,`<p class="q">${x.pairsQ}</p><p class="rotate-hint" style="margin:0">${x.pairsT[q.rel]}</p><div class="pairs"><div class="pcol">${left.map(r=>`<button type="button" class="choice pbtn" data-s="${r.subject}">${esc(nameOf(r.subject))}</button>`).join('')}</div>
-        <div class="pcol">${right.map(r=>`<button type="button" class="choice pbtn" data-r="${r.subject}">${esc(nameOf(r.object))}</button>`).join('')}</div></div>`);
-      app.querySelectorAll('.pbtn').forEach(b=>b.onclick=()=>{if(b.disabled)return;
-        if(b.dataset.s){app.querySelectorAll('.pbtn[data-s]').forEach(c=>c.classList.toggle('sel',c===b&&!b.classList.contains('sel')));sel=b.classList.contains('sel')?b.dataset.s:null;return}
-        if(!sel)return;const subj=sel,lb=app.querySelector(`.pbtn[data-s="${subj}"]`),ok=key(chosen.find(r=>r.subject===subj).object)===key(chosen.find(r=>r.subject===b.dataset.r).object);
-        if(ok){lb.classList.remove('sel');[lb,b].forEach(c=>{c.classList.add('right');c.disabled=true});sel=null;matched++;
-          if(matched===chosen.length){answered(q,mistakes===0);feedback(mistakes===0,x.pairsOk,'',mistakes===0?IMG.faceHappy:IMG.faceOops,next)}}
-        else{mistakes++;b.classList.add('wrong');setTimeout(()=>b.classList.remove('wrong'),500)}});
+      pairsUI(x.pairsT[q.rel],chosen.map(r=>({s:r.subject,left:nameOf(r.subject),right:nameOf(r.object),key:key(r.object)})),'');return}
+    // ---- lesson 4 «Records»: approved record texts only (records.items); the map never gives the answer away ----
+    const recOf=id=>D.b.rev.records.items.find(r=>r.id===id);
+    if(q.k==='recPairs'){pairsUI(x.recPairsT,q.recs.map(recOf).map(r=>({s:r.id,left:anyObj(r.object).name[lang],right:r.clue[lang],key:r.object})),'rec');return}
+    if(q.k==='recTf'){const r=recOf(q.rec),truth=q.side==='true';
+      frame(x.tf,`<div class="card"><div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.record}</h3></div><p class="q" style="margin:0">${esc(r[q.side][lang])}</p></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
+      app.querySelectorAll('.tfrow .choice').forEach(b=>b.onclick=()=>{const ok=(b.dataset.o==='true')===truth;app.querySelectorAll('.tfrow .choice').forEach(c=>{c.disabled=true;if((c.dataset.o==='true')===truth)c.classList.add('right')});
+        if(!ok)b.classList.add('wrong');answered(q,ok);feedback(ok,ok?x.right:x.tfRight,truth&&ok?'':r.true[lang],ok?IMG.faceHappy:IMG.faceOops,next)});
       return}
+    if(q.k==='recWhat'){const k=kindOf(q.id),opts=pick({continent:CONT,ocean:OCEANS,river:RIVERS,mountain:MTNS,sea:SEAS,strait:STRAITS}[k],q.id,4);
+      frame(x.what,`<div class="card"><div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.record}</h3></div><p class="q" style="margin:0">${esc(q.clue[lang])}</p></div><p class="rotate-hint" style="margin:0">${x.recWhatQ}</p><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(anyObj(c).name[lang])}</button>`).join('')}</div>`);
+      return choices(q,q.id,()=>anyObj(q.id).name[lang],()=>q.say[lang])}
     if(q.k==='tf'){const p=D.b.rev.trueFalse.pairs.find(v=>v.id===q.pair),truth=q.side==='true',subj=[p.subject].flat()[0];
       frame(x.tf,`<div class="card"><p class="q" style="margin:0">${esc(p[q.side][lang])}</p></div><div class="mapslot"></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:kindLayers(kindOf(subj)),zoom:false,insets:anyObj(subj).inset?[anyObj(subj).inset.id]:[]});showAny(m,subj,'hl-shape pulse');
@@ -755,7 +780,7 @@ function lesson(step){
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(o,'hl-shape pulse');if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
-    if(q.k==='findSea'){const o=W(q.id);const rec=q.rec&&D.s4.records.find(r=>r.id===q.rec);frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+    if(q.k==='findSea'){const o=W(q.id);const rec=q.rec&&D.s4.records.find(r=>r.id===q.rec);frame(rec||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestSea(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape good':'hl-shape pulse');
         if(hit&&!ok)m.shape(W(hit),'hl-shape bad');answered(q,ok);
@@ -787,7 +812,7 @@ function lesson(step){
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),zoom:false});m.shape(o,'hl-shape pulse');if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
-    if(q.k==='findMtn'){const o=M(q.id);const rec=q.rec&&D.s3.records.find(r=>r.id===q.rec);frame(rec?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+    if(q.k==='findMtn'){const o=M(q.id);const rec=q.rec&&D.s3.records.find(r=>r.id===q.rec);frame(rec||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:mtnLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=nearestMtn(px,py,sz,22);const ok=hit===q.id;locked=true;m.dot(sx,sy,ok);m.shape(o,ok?'hl-shape good':'hl-shape pulse');
         if(hit&&!ok)m.shape(M(hit),'hl-shape bad');answered(q,ok);
@@ -818,7 +843,7 @@ function lesson(step){
       fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
         m.clearShapes();want.forEach(id=>m.shape(M(id),'hl-shape good'));answered(q,ok);
         feedback(ok,ok?x.allAfricaOk:x.allAfricaBad,want.map(id=>M(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
-    if(q.k==='findObj'){const o=O(q.id);const r=q.rec&&D.records.find(r=>r.id===q.rec);frame(r?x.record:x.find,`<p class="q">${x.tap(acc(q.id))}</p><div class="mapslot"></div>`);
+    if(q.k==='findObj'){const o=O(q.id);const r=q.rec&&D.records.find(r=>r.id===q.rec);frame(r||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>`);
       let locked=false;const m=mapWidget(app.querySelector('.mapslot'),{layers:learnedLayers(),onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const hit=[...CONT,...OCEANS].map(O).find(c=>inside(c,px,py));
         // a tap on the coast counts for the asked continent / ocean even if it lands just across the shoreline (finger size, coarse outlines)

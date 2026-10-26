@@ -27,6 +27,12 @@ const cases = {
   "true/false text changed after approval": edit(d => { d.trueFalse.pairs[0].true.ru += "!"; }),
   "true/false pair without approval": edit(d => { delete d.trueFalse.pairs[1].approval; }),
   "true/false missing a language": edit(d => { delete d.trueFalse.pairs[2].false.en; }),
+  "record clue edited after approval": edit(d => { d.records.items[0].clue.ru += " "; }),
+  "record false statement edited after approval": edit(d => { d.records.items[11].false.en = d.records.items[11].false.en.replace("K2", "К2"); }),
+  "record without approval": edit(d => { delete d.records.items[3].approval; }),
+  "record on an unknown object": edit(d => { d.records.items[5].object = "atlantis"; }),
+  "record missing a language": edit(d => { delete d.records.items[7].true.en; }),
+  "too few records for lesson 4": edit(d => { d.records.items.splice(10); }),
 };
 const failed = [];
 if (run(base) !== 0) failed.push("unchanged data should pass");

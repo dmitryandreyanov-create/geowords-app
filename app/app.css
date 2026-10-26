@@ -248,3 +248,6 @@ h1,h2,h3,p{margin:0}
 .hunt-row .btn{padding:10px 16px;font-size:16px}
 .hunt-stars{font-size:40px;color:var(--brass);letter-spacing:6px;margin:0}
 .hunt-stars span{color:rgba(255,255,255,.18)}
+/* lesson 4 «Records»: the clue column is wider and its buttons grow with the text */
+.pairs.rec{grid-template-columns:2fr 3fr}
+.pairs.rec .pbtn{height:auto;min-height:64px;font-size:14px;line-height:1.25}

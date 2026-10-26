@@ -157,6 +157,28 @@ try{
   assert.equal(plan3.at(-1).id,'caspian-sea','trap: the Caspian Sea belongs to no ocean');
   for(const id of await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s))){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
   await rv.page.locator('.fb.ok').waitFor();
+  // Lesson 4 «Records»: 4 true/false, 3 pairs of 3, 2 find-by-clue, 1 what-is-it-by-clue; every record once; the clue never names the place
+  await openStep('b-l4');
+  const plan4=await rv.page.evaluate(()=>window.__gwPlan);const recs=JSON.parse(fs.readFileSync('data/review/block-1.json')).records.items;
+  const count=f=>plan4.filter(f).length;
+  assert.equal(plan4.length,10);assert.equal(count(q=>q.k==='recTf'),4);assert.equal(count(q=>q.k==='recPairs'),3);
+  assert.equal(count(q=>/^find/.test(q.k)&&q.clue),2);assert.equal(count(q=>q.k==='recWhat'),1);
+  const used=plan4.flatMap(q=>q.recs||[q.rec||recs.find(r=>r.clue===q.clue||r.clue.ru===q.clue?.ru)?.id]);
+  assert.equal(new Set(used).size,16,'16 different records in one lesson');
+  for(const q of plan4.filter(q=>q.k==='recPairs'))assert.equal(new Set(q.recs.map(id=>recs.find(r=>r.id===id).object)).size,3,'one record per place in a pairs task');
+  const tfSides=plan4.filter(q=>q.k==='recTf').map(q=>q.side);assert(!tfSides.some((v,i)=>i>=2&&v===tfSides[i-1]&&v===tfSides[i-2]));
+  for(let i=0;i<10;i++){await rv.page.waitForFunction(()=>window.__gwTask);const q=await rv.page.evaluate(()=>window.__gwTask);
+    if(q.k==='recTf'){const r=recs.find(r=>r.id===q.rec);assert.equal(await rv.page.locator('.task .card .q').innerText(),r[q.side].ru);
+      await rv.page.locator('.tfrow [data-o="'+q.side+'"]').click();await rv.page.locator('.fb.ok').waitFor();
+      if(q.side==='false')assert.match(await rv.page.locator('.fb').innerText(),new RegExp(r.true.ru.slice(0,12)),'after a false statement the true one is shown')}
+    else if(q.k==='recPairs'){assert.equal(await rv.page.locator('.pairs.rec .pbtn[data-r]').count(),3);
+      for(const id of q.recs){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
+      await rv.page.locator('.fb.ok').waitFor()}
+    else if(q.k==='recWhat'){assert.equal(await rv.page.locator('.task .card .q').innerText(),q.clue.ru);
+      await rv.page.locator('.choice[data-o="'+q.id+'"]').click();await rv.page.locator('.fb.ok').waitFor();
+      assert.match(await rv.page.locator('.fb').innerText(),new RegExp(q.say.ru.slice(0,12)))}
+    else{assert.equal(await rv.page.locator('.task .card .q').innerText(),q.clue.ru,'find by the clue, not by the name');await tapUntilNext()}
+    await rv.page.locator('.fb .btn').click()}
   await openStep('b-final');await rv.page.waitForSelector('.gw-clue');
   const bf=await rv.page.evaluate(()=>window.__gwPuzzle);
   assert.equal(bf.answer,'ПУТЕШЕСТВЕННИК');assert.equal(bf.kind,'block');
@@ -176,7 +198,7 @@ try{
     assert.equal(await rv.page.evaluate(()=>window.__gwHunt.score),scored,'a tap on '+id+' scores')}
   assert.equal(scored,4);
   await rv.context.close();
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons, block final and Speed Hunt');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final and Speed Hunt');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

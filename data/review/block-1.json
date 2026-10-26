@@ -12,7 +12,8 @@
   "records": "only approved undisputed records; a false statement repeats the record with another object of the same kind",
   "relations": "use = yes: any exercise; after-card: only after the convention card has been shown; only-border-question: Ural only in the border question; no: never in single-answer exercises",
   "trueFalseTexts": "relation statements in trueFalse.pairs (approved 2026-10-23)",
-  "approval": "each true/false pair: approval.contentSha256 = first 16 hex of sha256 over {id, subject, relation, true, false} (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged)"
+  "approval": "each true/false pair: approval.contentSha256 = first 16 hex of sha256 over {id, subject, relation, true, false} (scheme extended 2026-10-24 with Svetlana's consent; texts unchanged)",
+  "recordTexts": "lesson 4 record clues (no object name) and true/false statements in records.items (approved by Svetlana 2026-10-26); approval.contentSha256 = first 16 hex of sha256 over {id, object, clue, true, false}"
  },
  "lessons": [
   {
@@ -849,5 +850,498 @@
     "contentSha256": "c088cdea6dbdad76"
    }
   }
- ]
+ ],
+ "records": {
+  "rules": [
+   "a clue never names its object; it is the answer to a pairs, find or what-is-it task",
+   "true/false: one statement of a record per lesson, same answer-mix rules as trueFalse",
+   "a record is used at most once per lesson"
+  ],
+  "items": [
+   {
+    "id": "asia-largest",
+    "object": "asia",
+    "clue": {
+     "ru": "Самый большой континент",
+     "en": "The largest continent"
+    },
+    "true": {
+     "ru": "Азия — самый большой континент.",
+     "en": "Asia is the largest continent."
+    },
+    "false": {
+     "ru": "Африка — крупнейший материк Земли по площади суши.",
+     "en": "Africa is the largest continent by area."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "c042c68f286063ee"
+    }
+   },
+   {
+    "id": "australia-smallest",
+    "object": "australia",
+    "clue": {
+     "ru": "Самый маленький континент",
+     "en": "The smallest continent"
+    },
+    "true": {
+     "ru": "Австралия — самый маленький континент.",
+     "en": "Australia is the smallest continent."
+    },
+    "false": {
+     "ru": "Антарктида — самый маленький материк Земли.",
+     "en": "Antarctica is the smallest continent on Earth."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "349ff69c07ee068b"
+    }
+   },
+   {
+    "id": "antarctica-coldest",
+    "object": "antarctica",
+    "clue": {
+     "ru": "Континент, где измерили самую низкую температуру на Земле",
+     "en": "The continent where the lowest temperature on Earth was measured"
+    },
+    "true": {
+     "ru": "Самую низкую температуру на Земле измерили в Антарктиде.",
+     "en": "The lowest temperature on Earth was measured in Antarctica."
+    },
+    "false": {
+     "ru": "Самая низкая температура воздуха на Земле была измерена в Гренландии.",
+     "en": "The lowest air temperature on Earth was measured in Greenland."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "c4cb4fc19f964c8c"
+    }
+   },
+   {
+    "id": "pacific-largest",
+    "object": "pacific-ocean",
+    "clue": {
+     "ru": "Самый большой океан",
+     "en": "The largest ocean"
+    },
+    "true": {
+     "ru": "Тихий океан — самый большой.",
+     "en": "The Pacific is the largest ocean."
+    },
+    "false": {
+     "ru": "Атлантический океан занимает наибольшую площадь среди океанов.",
+     "en": "The Atlantic Ocean is the largest ocean by surface area."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "9c00fd001f9d2055"
+    }
+   },
+   {
+    "id": "pacific-deepest",
+    "object": "pacific-ocean",
+    "clue": {
+     "ru": "Океан, где находится самое глубокое место — Марианская впадина",
+     "en": "The ocean that contains the Mariana Trench, home to the deepest known point in the ocean"
+    },
+    "true": {
+     "ru": "Марианская впадина, самое глубокое место океана, находится в Тихом океане.",
+     "en": "The Mariana Trench, the deepest place in the ocean, is in the Pacific."
+    },
+    "false": {
+     "ru": "Самая глубокая точка Мирового океана находится в жёлобе Пуэрто-Рико.",
+     "en": "The deepest point of the World Ocean is in the Puerto Rico Trench."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "1298297e25a5ef39"
+    }
+   },
+   {
+    "id": "arctic-smallest-shallowest",
+    "object": "arctic-ocean",
+    "clue": {
+     "ru": "Самый маленький и самый мелкий океан",
+     "en": "The smallest and shallowest ocean"
+    },
+    "true": {
+     "ru": "Северный Ледовитый — самый маленький и самый мелкий океан.",
+     "en": "The Arctic is the smallest and shallowest ocean."
+    },
+    "false": {
+     "ru": "Южный океан — самый маленький и мелководный океан Земли.",
+     "en": "The Southern Ocean is the smallest and shallowest ocean on Earth."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "e3b5d3821e8a0763"
+    }
+   },
+   {
+    "id": "amazon-most-water",
+    "object": "amazon",
+    "clue": {
+     "ru": "Самая полноводная река мира",
+     "en": "The river with the greatest water discharge in the world"
+    },
+    "true": {
+     "ru": "Амазонка — самая полноводная река мира.",
+     "en": "The Amazon carries the most water of any river."
+    },
+    "false": {
+     "ru": "Конго переносит больше воды, чем любая другая река мира.",
+     "en": "The Congo carries more water than any other river in the world."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "31c9c6a265ece91e"
+    }
+   },
+   {
+    "id": "volga-longest-europe",
+    "object": "volga",
+    "clue": {
+     "ru": "Самая длинная река Европы",
+     "en": "The longest river in Europe"
+    },
+    "true": {
+     "ru": "Волга — самая длинная река Европы.",
+     "en": "The Volga is the longest river in Europe."
+    },
+    "false": {
+     "ru": "Дунай — самая длинная река Европы.",
+     "en": "The Danube is the longest river in Europe."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "303042210ea695d9"
+    }
+   },
+   {
+    "id": "yangtze-longest-asia",
+    "object": "yangtze",
+    "clue": {
+     "ru": "Самая длинная река Азии",
+     "en": "The longest river in Asia"
+    },
+    "true": {
+     "ru": "Янцзы — самая длинная река Азии.",
+     "en": "The Yangtze is the longest river in Asia."
+    },
+    "false": {
+     "ru": "Хуанхэ — самая длинная река Азии.",
+     "en": "The Yellow River is the longest river in Asia."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "f8c748617486e3fb"
+    }
+   },
+   {
+    "id": "danube-most-countries",
+    "object": "danube",
+    "clue": {
+     "ru": "Река, которая течёт по территории или по границам большего числа стран, чем любая другая",
+     "en": "The river that flows through or forms the borders of the most countries"
+    },
+    "true": {
+     "ru": "Дунай течёт по территории или по границам большего числа стран, чем любая другая река.",
+     "en": "The Danube flows through or along the borders of more countries than any other river."
+    },
+    "false": {
+     "ru": "Рейн проходит по территории или границам большего числа стран, чем любая другая река мира.",
+     "en": "The Rhine flows through or along the borders of more countries than any other river in the world."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "ed969c8ddc6c248f"
+    }
+   },
+   {
+    "id": "huang-he-muddiest",
+    "object": "huang-he",
+    "clue": {
+     "ru": "Река, которую часто называют самой мутной рекой мира",
+     "en": "The river often called the muddiest in the world"
+    },
+    "true": {
+     "ru": "Хуанхэ часто называют самой мутной рекой мира.",
+     "en": "The Yellow River is often called the muddiest river in the world."
+    },
+    "false": {
+     "ru": "Янцзы часто называют самой мутной рекой мира.",
+     "en": "The Yangtze is often called the muddiest river in the world."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "2ed9727fe7ce1d8d"
+    }
+   },
+   {
+    "id": "everest-highest",
+    "object": "himalayas",
+    "clue": {
+     "ru": "Горы, где находится самая высокая гора мира над уровнем моря",
+     "en": "The mountains with the highest mountain in the world above sea level"
+    },
+    "true": {
+     "ru": "Эверест, самая высокая гора мира над уровнем моря, находится в Гималаях.",
+     "en": "Mount Everest, the highest mountain in the world above sea level, is in the Himalayas."
+    },
+    "false": {
+     "ru": "K2 — самая высокая гора Земли над уровнем моря.",
+     "en": "K2 is the highest mountain on Earth above sea level."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "51c9a1d6b48315b3"
+    }
+   },
+   {
+    "id": "andes-longest-continental",
+    "object": "andes",
+    "clue": {
+     "ru": "Самая длинная горная цепь на суше",
+     "en": "The longest mountain range on land"
+    },
+    "true": {
+     "ru": "Анды — самая длинная горная цепь на суше.",
+     "en": "The Andes are the longest mountain range on land."
+    },
+    "false": {
+     "ru": "Скалистые горы — самая длинная горная цепь на суше.",
+     "en": "The Rocky Mountains are the longest mountain range on land."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "004137c23fffb6da"
+    }
+   },
+   {
+    "id": "mid-ocean-ridge-longest",
+    "object": "mid-atlantic-ridge",
+    "clue": {
+     "ru": "Хребет на дне океана, часть самой длинной горной цепи на Земле",
+     "en": "A ridge on the ocean floor, part of the longest mountain range on Earth"
+    },
+    "true": {
+     "ru": "Срединно-Атлантический хребет — часть самой длинной горной цепи на Земле.",
+     "en": "The Mid-Atlantic Ridge is part of the longest mountain range on Earth."
+    },
+    "false": {
+     "ru": "Срединно-Атлантический хребет является частью горной системы, протянувшейся исключительно по Атлантическому океану.",
+     "en": "The Mid-Atlantic Ridge is part of a mountain system found only in the Atlantic Ocean."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "72d54b1dbb310aa1"
+    }
+   },
+   {
+    "id": "kilimanjaro-highest-africa",
+    "object": "east-africa",
+    "clue": {
+     "ru": "Горы, где находится самая высокая гора Африки",
+     "en": "The mountains that include Africa's highest peak"
+    },
+    "true": {
+     "ru": "Килиманджаро, самая высокая гора Африки, — вулканический массив в Восточной Африке.",
+     "en": "Mount Kilimanjaro, Africa's highest mountain, is a volcanic massif in East Africa."
+    },
+    "false": {
+     "ru": "Гора Кения — самая высокая вершина Африки.",
+     "en": "Mount Kenya is the highest mountain in Africa."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "150f317d48460028"
+    }
+   },
+   {
+    "id": "aconcagua-highest-south-america",
+    "object": "andes",
+    "clue": {
+     "ru": "Горы, где находится самая высокая гора Южной Америки",
+     "en": "The mountain range that includes South America's highest peak"
+    },
+    "true": {
+     "ru": "Аконкагуа, самая высокая гора Южной Америки, находится в Андах.",
+     "en": "Aconcagua, the highest mountain in South America, is in the Andes."
+    },
+    "false": {
+     "ru": "Охос-дель-Саладо — самая высокая вершина Южной Америки.",
+     "en": "Ojos del Salado is the highest mountain in South America."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "e9c87f94412b586f"
+    }
+   },
+   {
+    "id": "red-sea-saltiest",
+    "object": "red-sea",
+    "clue": {
+     "ru": "Одно из самых солёных морей Мирового океана",
+     "en": "One of the saltiest seas connected to the ocean"
+    },
+    "true": {
+     "ru": "Красное море — одно из самых солёных морей Мирового океана.",
+     "en": "The Red Sea is one of the saltiest seas connected to the ocean."
+    },
+    "false": {
+     "ru": "Красное море менее солёное, чем Балтийское море.",
+     "en": "The Red Sea is less salty than the Baltic Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "f63cc0986240eda8"
+    }
+   },
+   {
+    "id": "bay-of-bengal-largest-bay",
+    "object": "bay-of-bengal",
+    "clue": {
+     "ru": "Самый большой залив в мире",
+     "en": "The largest bay in the world"
+    },
+    "true": {
+     "ru": "Бенгальский залив — самый большой залив в мире.",
+     "en": "The Bay of Bengal is the largest bay in the world."
+    },
+    "false": {
+     "ru": "Мексиканский залив — крупнейший залив мира по площади.",
+     "en": "The Gulf of Mexico is the largest bay in the world by area."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "00a680b320b575b4"
+    }
+   },
+   {
+    "id": "caspian-largest-inland",
+    "object": "caspian-sea",
+    "clue": {
+     "ru": "Самый большой внутренний водоём в мире",
+     "en": "The world's largest inland body of water by surface area"
+    },
+    "true": {
+     "ru": "Каспийское море — самый большой внутренний водоём в мире.",
+     "en": "The Caspian Sea is the largest inland body of water in the world."
+    },
+    "false": {
+     "ru": "Озеро Верхнее — крупнейший внутренний водоём Земли по площади.",
+     "en": "Lake Superior is the largest inland body of water on Earth by area."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "24544b5f8a2ce14d"
+    }
+   },
+   {
+    "id": "coral-sea-largest-reef",
+    "object": "coral-sea",
+    "clue": {
+     "ru": "Море, где находится самая большая система коралловых рифов в мире",
+     "en": "The sea with the largest coral reef system in the world"
+    },
+    "true": {
+     "ru": "В Коралловом море находится самая большая система коралловых рифов в мире.",
+     "en": "The Coral Sea is home to the largest coral reef system in the world."
+    },
+    "false": {
+     "ru": "Самая большая система коралловых рифов мира находится в Карибском море.",
+     "en": "The largest coral reef system in the world is in the Caribbean Sea."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "5837546df53637fc"
+    }
+   },
+   {
+    "id": "gibraltar-narrowest-europe-africa",
+    "object": "strait-of-gibraltar",
+    "clue": {
+     "ru": "Самое узкое место между Европой и Африкой",
+     "en": "The strait that separates Europe and Africa"
+    },
+    "true": {
+     "ru": "Гибралтарский пролив — самое узкое место между Европой и Африкой.",
+     "en": "The Strait of Gibraltar is the narrowest gap between Europe and Africa."
+    },
+    "false": {
+     "ru": "Пролив Босфор разделяет Европу и Африку.",
+     "en": "The Bosporus separates Europe and Africa."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "5fdbc4c38b1eec59"
+    }
+   },
+   {
+    "id": "bering-narrowest-asia-america",
+    "object": "bering-strait",
+    "clue": {
+     "ru": "Самое узкое место между Азией и Северной Америкой",
+     "en": "The strait that separates Asia and North America"
+    },
+    "true": {
+     "ru": "Берингов пролив — самое узкое место между Азией и Северной Америкой.",
+     "en": "The Bering Strait is the narrowest gap between Asia and North America."
+    },
+    "false": {
+     "ru": "Пролив Дрейка отделяет Азию от Северной Америки.",
+     "en": "The Drake Passage separates Asia from North America."
+    },
+    "approval": {
+     "status": "approved",
+     "by": "Svetlana",
+     "date": "2026-10-26",
+     "contentSha256": "502ae5645571668f"
+    }
+   }
+  ]
+ }
 }
