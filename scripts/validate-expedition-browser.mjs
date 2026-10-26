@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-block1b/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-block1c/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -155,6 +155,9 @@ try{
   const plan3=await rv.page.evaluate(()=>window.__gwPlan);
   assert.deepEqual(plan3.map(q=>q.k),['pairs','pairs','pairs','pairs','allAsia','allIndian','allAfrica','tf','tf','seaOcean']);
   assert.equal(plan3.at(-1).id,'caspian-sea','trap: the Caspian Sea belongs to no ocean');
+  const noRowAligned=async()=>{const L=await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s)),R=await rv.page.$$eval('.pbtn[data-r]',b=>b.map(x=>x.dataset.r));
+    assert(L.every((id,i)=>id!==R[i]),'pairs: no answer stands opposite its own pair ('+L+' | '+R+')')};
+  await noRowAligned();
   for(const id of await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s))){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
   await rv.page.locator('.fb.ok').waitFor();
   for(let i=1;i<4;i++){await rv.page.locator('.fb .btn').click();await waitTask('pairs');
@@ -183,7 +186,7 @@ try{
     if(q.k==='recTf'){const r=recs.find(r=>r.id===q.rec);assert.equal(await rv.page.locator('.task .card .q').innerText(),r[q.side].ru);
       await rv.page.locator('.tfrow [data-o="'+q.side+'"]').click();await rv.page.locator('.fb.ok').waitFor();
       if(q.side==='false')assert.match(await rv.page.locator('.fb').innerText(),new RegExp(r.true.ru.slice(0,12)),'after a false statement the true one is shown')}
-    else if(q.k==='recPairs'){assert.equal(await rv.page.locator('.pairs.rec .pbtn[data-r]').count(),3);
+    else if(q.k==='recPairs'){assert.equal(await rv.page.locator('.pairs.rec .pbtn[data-r]').count(),3);await noRowAligned();
       for(const id of q.recs){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
       await rv.page.locator('.fb.ok').waitFor()}
     else if(q.k==='recWhat'){assert.equal(await rv.page.locator('.task .card .q').innerText(),q.clue.ru);
