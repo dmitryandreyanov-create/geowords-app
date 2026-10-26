@@ -642,7 +642,7 @@ function startPractice(st){
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec===7?`${x.euSec} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`:st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
+  const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec===7?(st.unit==='S'?x.euSec:`${x.euSec} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?x.huntDesc:x.finalDesc;
   let buttons;
   if(st.kind!=='lesson'&&st.kind!=='practice'&&S.done[id]&&!st.sec){
