@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-europe1/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-europe2/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -271,8 +271,26 @@ try{
     // nested and neighbouring objects: inside the Barents Sea counts for the Arctic Ocean; the Kola Peninsula never counts for Scandinavia
     const judged=await page.evaluate(([b,k])=>{const sz={W:360,H:262};return [window.__gwEuOk('arctic-ocean',b.x,b.y,sz),window.__gwEuOk('scandinavian-peninsula',k.x,k.y,sz),window.__gwEuHit(k.x,k.y,sz)]},[lab['barents-sea'],lab['kola-peninsula']]);
     assert.deepEqual(judged,[true,false,'kola-peninsula']);
+    // unit practice: six Europe GeoWords per unit, letters only on learned Europe objects, never an object with the one containing it
+    const unitOf=Object.fromEntries(eMap.items.map(i=>[i.id,i.unit]));
+    const IN={'north-sea':'atlantic-ocean','baltic-sea':'atlantic-ocean','barents-sea':'arctic-ocean','great-britain':'atlantic-ocean',ireland:'atlantic-ocean',iceland:'atlantic-ocean',sicily:'mediterranean-sea'};
+    for(const u of [1,2,3]){await page.locator(`[data-step="e1-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six Europe practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-blank.webp'),'practice on the Europe map');
+        for(const m of p.markers){assert(unitOf[m.id]<=u,`${p.answer}: ${m.id} is learned by unit ${u}`);assert(!p.markers.some(q=>IN[m.id]===q.id),`${p.answer}: ${m.id} with its container`)}
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="e1-u1-l1"]')}
+    // a draft final waits for approval: it does not open, and the trail goes on past it
+    await page.locator('[data-step="e1-u1-final"]').click();
+    if(!JSON.parse(fs.readFileSync('data/geowords/b2-section-1.json')).puzzles.some(p=>p.id==='b2-section-1-unit-1-ru'&&p.approval.status==='approved')){
+      assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft Europe final does not open');await page.locator('.sheet button').click();
+      await page.evaluate(()=>{const s=JSON.parse(localStorage.getItem('geowords_expedition_v1'));s.unlockAll=false;s.done={'e1-u1-l1':true,'e1-u1-l2':true,'e1-u1-practice':true};localStorage.setItem('geowords_expedition_v1',JSON.stringify(s))});
+      await page.reload();await page.waitForSelector('[data-step="e1-u2-l1"]');
+      assert.equal(await page.locator('[data-step="e1-u2-l1"]').evaluate(el=>el.classList.contains('locked')),false,'unit 2 opens past the draft unit 1 final')}
     await context.close()}
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» lessons');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» lessons and unit practice; draft finals are skipped');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));
