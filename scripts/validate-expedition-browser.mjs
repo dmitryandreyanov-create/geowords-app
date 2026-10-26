@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-block1/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-block1b/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -157,6 +157,18 @@ try{
   assert.equal(plan3.at(-1).id,'caspian-sea','trap: the Caspian Sea belongs to no ocean');
   for(const id of await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s))){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
   await rv.page.locator('.fb.ok').waitFor();
+  for(let i=1;i<4;i++){await rv.page.locator('.fb .btn').click();await waitTask('pairs');
+    for(const id of await rv.page.$$eval('.pbtn[data-s]',b=>b.map(x=>x.dataset.s))){await rv.page.locator('.pbtn[data-s="'+id+'"]').click();await rv.page.locator('.pbtn[data-r="'+id+'"]').click()}
+    await rv.page.locator('.fb.ok').waitFor()}
+  await rv.page.locator('.fb .btn').click();await waitTask('allAsia');await tapUntilNext();await rv.page.locator('.fb .btn').click();
+  if(await rv.page.locator('.fb .btn').count())await rv.page.locator('.fb .btn').click();
+  // the block review counts the Gulf of Oman (section 5) among the seas and bays of the Indian Ocean
+  await waitTask('allIndian');
+  const wl=Object.fromEntries([...JSON.parse(fs.readFileSync('data/maps/world-waters.json')).waters,...JSON.parse(fs.readFileSync('data/maps/world-straits.json')).items].map(i=>[i.id,i.label]));
+  for(const id of ['red-sea','arabian-sea','bay-of-bengal','gulf-of-oman']){const box=await rv.page.locator('.task .map').boundingBox();
+    await rv.page.mouse.click(box.x+box.width*wl[id].x/100,box.y+box.height*wl[id].y/100)}
+  await rv.page.locator('.fb .btn').click();await rv.page.locator('.fb.ok').waitFor();
+  assert.match(await rv.page.locator('.fb').innerText(),/Оманский залив/);
   // Lesson 4 «Records»: 4 true/false, 3 pairs of 3, 2 find-by-clue, 1 what-is-it-by-clue; every record once; the clue never names the place
   await openStep('b-l4');
   const plan4=await rv.page.evaluate(()=>window.__gwPlan);const recs=JSON.parse(fs.readFileSync('data/review/block-1.json')).records.items;

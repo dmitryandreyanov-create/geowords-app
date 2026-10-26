@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-block1';
+const BUILD='2026.10.26-block1b';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -798,15 +798,17 @@ function lesson(step){
       frame(x.ocean,`<p class="q">${x.seaOcean(esc(o.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(label(c))}</button>`).join('')}</div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),zoom:false});m.shape(o,'hl-shape pulse');
       return choices(q,right,()=>label(right),()=>'')}
-    if(q.k==='allIndian'){const want=SEAS.filter(id=>W(id).ocean==='indian-ocean'&&(q.all||W(id).unit<=2));const sel=new Set();
+    // in the block review the Gulf of Oman (section 5) counts too (Svetlana, 26.10.2026); a tap inside its small outline picks it over the Arabian Sea
+    if(q.k==='allIndian'){const gulfs=q.all?['gulf-of-oman']:[],want=[...SEAS.filter(id=>W(id).ocean==='indian-ocean'&&(q.all||W(id).unit<=2)),...gulfs];const sel=new Set();
       frame(x.find,`<p class="q">${x.allIndian}</p><div class="mapslot"></div><p class="rotate-hint">${x.allIndianHint}</p>`);
-      const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),onTap:(px,py,sx,sy,sz)=>{const hit=nearestSea(px,py,sz,26);if(!hit)return;
+      const m=mapWidget(app.querySelector('.mapslot'),{layers:seaLayers(),onTap:(px,py,sx,sy,sz)=>{
+        const hit=gulfs.find(id=>inside(ST(id),px,py))||nearestSea(px,py,sz,26)||gulfs.find(id=>edgePx(ST(id),px,py,sz.W,sz.H)<=22);if(!hit)return;
         if(sel.has(hit))sel.delete(hit);else sel.add(hit);redraw()}});
-      function redraw(){m.clearShapes();sel.forEach(id=>m.shape(W(id),'hl-shape sel'));const b=app.querySelector('.fb .btn');if(b)b.disabled=!sel.size}
+      function redraw(){m.clearShapes();sel.forEach(id=>m.shape(anyObj(id),'hl-shape sel'));const b=app.querySelector('.fb .btn');if(b)b.disabled=!sel.size}
       const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;redraw();
       fb.querySelector('.btn').onclick=()=>{const ok=want.every(id=>sel.has(id))&&[...sel].every(id=>want.includes(id));
-        m.clearShapes();want.forEach(id=>m.shape(W(id),'hl-shape good'));answered(q,ok);
-        feedback(ok,ok?x.allIndianOk:x.allIndianBad,want.map(id=>W(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
+        m.clearShapes();want.forEach(id=>m.shape(anyObj(id),'hl-shape good'));answered(q,ok);
+        feedback(ok,ok?x.allIndianOk:x.allIndianBad,want.map(id=>anyObj(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
     // ---- section 3: mountains (all ranges drawn; the asked one is outlined) ----
     if(q.k==='introMtn'||q.k==='introMtnRec'){const rec=q.rec&&D.s3.records.find(r=>r.id===q.rec);const o=M(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
