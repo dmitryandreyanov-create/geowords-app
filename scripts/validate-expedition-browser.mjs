@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-europe2/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.26-europe3/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -271,6 +271,9 @@ try{
     // nested and neighbouring objects: inside the Barents Sea counts for the Arctic Ocean; the Kola Peninsula never counts for Scandinavia
     const judged=await page.evaluate(([b,k])=>{const sz={W:360,H:262};return [window.__gwEuOk('arctic-ocean',b.x,b.y,sz),window.__gwEuOk('scandinavian-peninsula',k.x,k.y,sz),window.__gwEuHit(k.x,k.y,sz)]},[lab['barents-sea'],lab['kola-peninsula']]);
     assert.deepEqual(judged,[true,false,'kola-peninsula']);
+    // land on a phone (Svetlana, 26.10.2026): a tap in the sea just off Jutland is Jutland; off the coast of Sweden it is not
+    const coast=await page.evaluate(()=>{const sz={W:360,H:262};return [window.__gwEuOk('jutland',46.6,52.63,sz),window.__gwEuOk('baltic-sea',46.6,52.63,sz),window.__gwEuOk('jutland',44.0,47.3,sz)]});
+    assert.deepEqual(coast,[true,true,false]);
     // unit practice: six Europe GeoWords per unit, letters only on learned Europe objects, never an object with the one containing it
     const unitOf=Object.fromEntries(eMap.items.map(i=>[i.id,i.unit]));
     const IN={'north-sea':'atlantic-ocean','baltic-sea':'atlantic-ocean','barents-sea':'arctic-ocean','great-britain':'atlantic-ocean',ireland:'atlantic-ocean',iceland:'atlantic-ocean',sicily:'mediterranean-sea'};
