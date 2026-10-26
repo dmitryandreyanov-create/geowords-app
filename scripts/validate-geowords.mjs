@@ -99,8 +99,10 @@ const seas = Object.fromEntries(readMap("world-waters.json", "waters").map(w => 
 const areas = Object.fromEntries([...Object.values(seas), ...readMap("world-straits.json", "items").filter(s => !s.inset)].map(o => [o.id, o.tapArea]));
 const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
 const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+// World-map checks run only on puzzles drawn on the world map: Europe puzzles reuse ids such as mediterranean-sea on another map.
+const onWorld = p => !p.map || p.map.endsWith("world-base.webp");
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
-  for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+  for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(onWorld)) {
     const ms = (p.markers || []).filter(m => !m.inset);
     for (const m of ms) {
       if (seas[m.id] && near(m, seas[m.id].label) > 1.5) errors.push(`${file}: ${p.id} circle for ${m.id} is not at the centre of the sea`);
@@ -112,11 +114,34 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
 // Runs when the continents and oceans map is present (it arrives with PR #21).
 const coItems = Object.fromEntries(readMap("world-continents-oceans.json", "items").map(o => [o.id, o]));
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
-  for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+  for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(onWorld)) {
     for (const m of (p.markers || []).filter(m => !m.inset && coItems[m.id])) {
       const o = coItems[m.id];
       if (!polys(o.tapArea).some(pl => inPoly(m.x, m.y, pl)) || polys(o.holes || []).some(pl => inPoly(m.x, m.y, pl)))
         errors.push(`${file}: ${p.id} letter for ${m.id} is not inside ${m.id}`);
+    }
+  }
+}
+// Europe map (block 2): letters only on objects of data/maps/europe-overview.json, each inside its own object (the Ural River: within
+// 1% of its line), never inside another object of the puzzle, never with the object that contains it, spacing >= 4.5 on the 2200×1600 map.
+{
+  const eu = Object.fromEntries(readMap("europe-overview.json", "items").map(o => [o.id, o]));
+  const EU_IN = { "north-sea": ["atlantic-ocean"], "baltic-sea": ["atlantic-ocean"], "barents-sea": ["arctic-ocean"], "great-britain": ["atlantic-ocean"],
+    ireland: ["atlantic-ocean"], iceland: ["atlantic-ocean"], sicily: ["mediterranean-sea"] };
+  const inObj = (o, m) => polys(o.tapArea).some(pl => inPoly(m.x, m.y, pl)) && !polys(o.holes || []).some(pl => inPoly(m.x, m.y, pl));
+  const segDist = (m, [a, b]) => { const dx = b[0] - a[0], dy = b[1] - a[1], t = Math.max(0, Math.min(1, ((m.x - a[0]) * dx + (m.y - a[1]) * dy) / (dx * dx + dy * dy || 1)));
+    return Math.hypot(a[0] + t * dx - m.x, a[1] + t * dy - m.y); };
+  for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
+    for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(p => p.map?.endsWith("europe-blank.webp"))) {
+      const err = m => errors.push(`${file}: ${p.id} ${m}`), ms = p.markers || [];
+      for (const m of ms) {
+        const o = eu[m.id];
+        if (!o) { err(`letter on ${m.id}, which is not on the Europe map`); continue; }
+        if (o.path ? Math.min(...o.path.flatMap(l => l.slice(1).map((q, i) => segDist(m, [l[i], q])))) > 1 : !inObj(o, m)) err(`letter for ${m.id} is not on ${m.id}`);
+        for (const q of ms) if (q !== m && eu[q.id]?.tapArea && inObj(eu[q.id], m)) err(`letter on ${m.id} lies inside ${q.id}`);
+        for (const q of ms) if ((EU_IN[m.id] || []).includes(q.id)) err(`has ${m.id} with ${q.id}, which contains it`);
+        for (const q of ms) if (m.id < q.id && Math.hypot(m.x - q.x, (m.y - q.y) * 1600 / 2200) < 4.5) err(`letters on ${m.id} and ${q.id} are too close`);
+      }
     }
   }
 }

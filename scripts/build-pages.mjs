@@ -38,7 +38,7 @@ const named=[
   // Block 1 review: block final GeoWords, its dictionary and the Challenge rules.
   'data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json','data/geowords/challenge-block-1-sample.json',
   // Block 2 «Europe», section 1 «Europe on the map» (lessons); its outlines are data/maps/europe-overview.json (below).
-  'data/content/b2-section-1-facts.json','data/content/b2-section-1-records.json',
+  'data/content/b2-section-1-facts.json','data/content/b2-section-1-records.json','data/dictionary/b2-section-1.json','data/geowords/b2-section-1.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),

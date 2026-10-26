@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-europe1';
+const BUILD='2026.10.26-europe2';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -54,7 +54,7 @@ const T={
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
   pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет'},
   recFind:'Найди его на карте.',recWhatQ:'Что это? Выбери название.',recPairsT:'Место и его рекорд',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.',
-  block2:'Блок 2 · Европа',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Слова GeoWords для итогов этого раздела появятся после утверждения.',
+  block2:'Блок 2 · Европа',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',
   allPen:'Нажми на все полуострова',allPenHint:'Отметь полуострова и нажми «Проверить».',allPenOk:'Все полуострова найдены!',allPenBad:'Не совсем. Вот полуострова Европы.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
@@ -90,7 +90,7 @@ const T={
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
   pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates'},
   recFind:'Find it on the map.',recWhatQ:'What is it? Pick the name.',recPairsT:'A place and its record',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.',
-  block2:'Block 2 · Europe',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The GeoWords for this section’s finals will appear once they are approved.',
+  block2:'Block 2 · Europe',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',
   allPen:'Tap every peninsula',allPenHint:'Mark the peninsulas, then tap “Check”.',allPenOk:'All the peninsulas found!',allPenBad:'Not quite. Here are the peninsulas of Europe.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
@@ -189,13 +189,14 @@ async function loadData(){
   const [gb,db,ch,cs]=await Promise.all(['data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json','data/geowords/challenge-block-1-sample.json'].map(get));
   D.b={rev,geo:gb,dict:db,challenge:ch,cw:cs.puzzles.filter(p=>p.approval?.status==='approved')};
   // Block 2 «Europe», section 1 «Europe on the map» (approved by Svetlana 26.10.2026): facts, records and outlines on the Europe base map.
-  const [ef,er,emap]=await Promise.all(['data/content/b2-section-1-facts.json','data/content/b2-section-1-records.json','data/maps/europe-overview.json'].map(get));
+  const [ef,er,emap,ed,eg]=await Promise.all(['data/content/b2-section-1-facts.json','data/content/b2-section-1-records.json','data/maps/europe-overview.json',
+    'data/dictionary/b2-section-1.json','data/geowords/b2-section-1.json'].map(get));
   const eu={};for(const it of emap.items){const f=ef.items.find(i=>i.id===it.id);if(f?.approval?.status!=='approved')continue;
     eu[it.id]={id:it.id,kind:it.kind,name:it.name,unit:it.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea||[],holes:it.holes||[],soft:it.softArea||[],path:it.path||null,
       fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat}}
   for(const o of Object.values(eu))o.area=o.tapArea.reduce((a,p)=>a+Math.abs(p.reduce((s,q,i)=>{const r=p[(i+1)%p.length];return s+q[0]*r[1]-r[0]*q[1]},0))/2,0);
   D.s7={facts:ef,records:er.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu,
-    intro:ef.items.find(i=>i.id==='europe-intro'&&i.approval?.status==='approved'),dict:{units:ef.units}};
+    intro:ef.items.find(i=>i.id==='europe-intro'&&i.approval?.status==='approved'),dict:ed,geo:eg};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
@@ -453,17 +454,22 @@ const COURSE7=[
  {n:3,lessons:[{id:'e1-u3-l1',title:{ru:'Острова',en:'Islands'},plan:R7['u3-l1']},{id:'e1-u3-l2',title:{ru:'Балтийское, Северное, Баренцево',en:'The Baltic, North and Barents Seas'},plan:R7['u3-l2']},
    {id:'e1-u3-l3',title:{ru:'Рекорды',en:'Records'},plan:R7['u3-l3']},{id:'e1-u3-l4',title:{ru:'Все объекты раздела',en:'All the places of the section'},plan:R7['u3-l4']}]}
 ];
-COURSE7.forEach(u=>u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:7,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan})));
+COURSE7.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:7,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`e1-u${u.n}-practice`,sec:7,kind:'practice',unit:u.n});STEPS.push({id:`e1-u${u.n}-final`,sec:7,kind:'final',unit:u.n})});
+STEPS.push({id:'e1-final',sec:7,kind:'section',unit:'S'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
 const READY_S3=[1,2,3,'S'];
 const READY_S4=[1,2,3,'S'];
 const READY_S5=[1,2,3,'S'];
-const ready=s=>s.sec===6||s.sec===7?true:s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+// Europe finals open once Svetlana has approved the puzzle in the chosen language
+const euFinal=s=>D.s7.geo.puzzles.find(p=>p.language===L()&&p.approval?.status==='approved'&&(s.kind==='section'?p.role==='section-final':p.role==='unit-final'&&p.unit===s.unit));
+const ready=s=>s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];// data of section 2 / 3
-function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;const i=STEPS.findIndex(s=>s.id===id);return i===0||!!S.done[STEPS[i-1].id]}
-const nextStep=id=>{const i=STEPS.findIndex(s=>s.id===id);const n=STEPS[i+1];return n&&unlocked(n.id)?n:null};
+// a step waiting for approval (a Europe final) is skipped: the trail goes on past it
+function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;let i=STEPS.findIndex(s=>s.id===id)-1;while(i>=0&&!ready(STEPS[i]))i--;return i<0||!!S.done[STEPS[i].id]}
+const nextStep=id=>{let i=STEPS.findIndex(s=>s.id===id)+1;while(STEPS[i]&&!ready(STEPS[i]))i++;const n=STEPS[i];return n&&unlocked(n.id)?n:null};
 const titleOf=s=>s.kind==='lesson'?t().lessonN(s.n)+' · '+s.title[L()]:s.kind==='practice'?t().practiceStep:s.kind==='final'?t().final:s.kind==='block'?t().blockFinal:s.kind==='challenge'?t().challenge:t().sectionFinal;
 
 /* ---------- small helpers ---------- */
@@ -604,7 +610,8 @@ function home(){
      `<div class="unit-head"><span class="eyebrow">${x.blockN}</span><h3>${x.challenge}</h3></div>`+stopHtml(stepOf('b-challenge'))+
      `<div class="section-card s2"><img src="${IMG.euCard}" alt=""><div class="t"><span class="eyebrow">${x.euSec}</span><h2>${x.euName}</h2></div></div>`+
      COURSE7.map(u=>`<div class="unit-head"><span class="eyebrow">${x.block2} · ${x.unit} ${u.n}</span><h3>${esc(D.s7.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===7&&s.unit===u.n).map(stopHtml).join('')).join('')+
-     `<p class="rotate-hint">${x.euSoon}</p>`;
+     `<div class="unit-head"><span class="eyebrow">${x.euSec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('e1-final'))+
+     (STEPS.some(s=>s.sec===7&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:'');
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -991,7 +998,7 @@ function finalPuzzle(st){const role=st.kind==='section'?'section-final':'unit-fi
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],stamp:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec===7,stamp:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
 function blockPuzzle(st){const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
@@ -1071,14 +1078,31 @@ const riverEnds=(id,pri)=>{const r=R(id),out=[];if(!r.mouthPt)return out;
   if(r.sourcePt){const source={id:id+'-source',group:id,x:r.sourcePt.x,y:r.sourcePt.y,place:{ru:SOURCE_RU[id],en:'at the source of '+ON_EN[id].replace(/^on /,'')},pri};
     mouth.pair=source;source.pair=mouth;out.push(mouth,source)}else out.push(mouth);
   return out};
+// Block 2 «Europe» (data/geowords/b2-section-1.json rules): letters only on the learned objects of the Europe map, at the label point
+// (the Ural River: on its line); an object never shares a puzzle with the one that contains it (Svetlana, 26.10.2026: the Mediterranean
+// and the Atlantic are separate areas on this map and may share a puzzle).
+const EU_PLACE={'atlantic-ocean':['в Атлантическом океане','in the Atlantic Ocean'],'arctic-ocean':['в Северном Ледовитом океане','in the Arctic Ocean'],
+  'mediterranean-sea':['в Средиземном море','in the Mediterranean Sea'],'ural-mountains':['в Уральских горах','in the Ural Mountains'],'ural-river':['на реке Урал','on the Ural River'],
+  'caspian-sea':['в Каспийском море','in the Caspian Sea'],'scandinavian-peninsula':['на Скандинавском полуострове','on the Scandinavian Peninsula'],
+  'kola-peninsula':['на Кольском полуострове','on the Kola Peninsula'],jutland:['на полуострове Ютландия','on the Jutland Peninsula'],
+  'iberian-peninsula':['на Пиренейском полуострове','on the Iberian Peninsula'],'apennine-peninsula':['на Апеннинском полуострове','on the Apennine Peninsula'],
+  'balkan-peninsula':['на Балканском полуострове','on the Balkan Peninsula'],'crimean-peninsula':['на Крымском полуострове','on the Crimean Peninsula'],
+  'great-britain':['на острове Великобритания','on the island of Great Britain'],ireland:['на острове Ирландия','on the island of Ireland'],
+  iceland:['на острове Исландия','on the island of Iceland'],sicily:['на острове Сицилия','on the island of Sicily'],'baltic-sea':['в Балтийском море','in the Baltic Sea'],
+  'north-sea':['в Северном море','in the North Sea'],'barents-sea':['в Баренцевом море','in the Barents Sea']};
+const EU_IN={'north-sea':['atlantic-ocean'],'baltic-sea':['atlantic-ocean'],'barents-sea':['arctic-ocean'],'great-britain':['atlantic-ocean'],ireland:['atlantic-ocean'],
+  iceland:['atlantic-ocean'],sicily:['mediterranean-sea']};
+const EU_PT={'ural-river':{x:81.4,y:57.08}};
+const euNested=(a,b)=>(EU_IN[a.id]||[]).includes(b.id)||(EU_IN[b.id]||[]).includes(a.id)||inside(E(b.id),a.x,a.y)||inside(E(a.id),b.x,b.y);
 function placesFor(st){
   if(!st.sec)return knownPlaces(st.unit);
+  if(st.sec===7)return EU().filter(id=>E(id).unit<=st.unit).map(id=>({id,...(EU_PT[id]||{x:E(id).x,y:E(id).y}),place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:0,eu:true}));
   const out=secIds[st.sec]().filter(([,u])=>u<=st.unit).map(([id])=>({...placeOf[st.sec](id),pri:0}));
   for(let k=2;k<st.sec;k++)for(const [id] of secIds[k]())out.push({...placeOf[k](id),pri:1});
   for(const p of [...out])if(p.id.endsWith('-river')){p.group=p.id.slice(0,-6);out.push(...riverEnds(p.group,p.pri))}
   const tpl=D.tpl.objects;for(const id of [...CONT,...OCEANS]){const o=O(id),tp=tpl.find(p=>p.id===id);out.push({id,x:o.x,y:o.y,place:tp.place,pri:2})}
   return out}
-const layersFor=st=>st.sec?[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...(st.sec>=3?MTNS.map(id=>M(id).layer):[]),...(st.sec===5?['world-canal-suez-canal','world-canal-panama-canal']:[])]:st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
+const layersFor=st=>st.sec===7?[]:st.sec?[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...(st.sec>=3?MTNS.map(id=>M(id).layer):[]),...(st.sec===5?['world-canal-suez-canal','world-canal-panama-canal']:[])]:st.unit===1?['world-line-equator','world-line-prime-meridian']:[...CONT.map(id=>O(id).layer),'world-line-equator'];
 // Six words: this unit's review words first, then earlier units', then the short reserve words — only words that fit the learned places.
 function practiceWords(st){const lang=L(),places=placesFor(st);
   const DI=st.sec?SD(st).dict:D.dict,ok=w=>w.approval?.status==='approved'&&[...w.answer].length<=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer))).length;
@@ -1088,8 +1112,9 @@ function practiceWords(st){const lang=L(),places=placesFor(st);
   const groups=[shuffle(U.words[lang].filter(w=>w.role==='review'&&ok(w))),shuffle(U.words[lang].filter(w=>w.role==='reserve'&&ok(w))),
     (U.practiceExtra?.[lang]||[]).map(a=>all.find(w=>w.answer===a)).filter(w=>w&&ok(w))];
   for(let u=st.unit-2;u>=0;u--)groups.push(byLen(shuffle(DI.units[u].words[lang].filter(w=>w.role==='review'&&ok(w)))));
-  if(st.sec)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
-  groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
+  // block 1 words fill in for block 1 sections only (the Europe map has none of their places)
+  if(st.sec&&st.sec<7)for(let u=3;u>=0;u--)groups.push(shuffle(D.dict.units[u].words[lang].filter(w=>w.role==='review'&&ok(w))));
+  if(st.sec!==7)groups.push(shuffle(D.dict.units[0].words[lang].filter(w=>w.role==='reserve'&&ok(w))));
   const out=[];for(const g of groups)for(const w of g)if(!out.some(o=>o.answer===w.answer))out.push(w);// all candidates in order; runPractice keeps the first six that build
   return out}
 // Never put a letter on an object and on the object that contains it in one puzzle: a range or a river and its continent,
@@ -1105,12 +1130,12 @@ const inArea=(p,q)=>{const o=areaOf(q.id);return !!(o&&q.id!==p.id&&inside(o,p.x
 const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id)||inArea(a,b)||inArea(b,a);
 function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
-  const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=4.5;let chosen=null;
+  const eu=places.some(p=>p.eu),far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*(eu?1600/2200:.55))>=4.5;let chosen=null;
   // current section first, then earlier sections, continents / oceans last (places without pri — section 1 — are all equal)
   // continents / oceans last; otherwise the places used least so far in this practice first, so every learned object turns up across the six words
   const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||((usage[a.group||a.id]||0)-(usage[b.group||b.id]||0))||((a.pri||0)-(b.pri||0)));
   // a river group gives one «on» letter or its mouth (+ its source, always together); ends of a river are taken as a pair
-  const okWith=(p,pick,sep)=>pick.every(q=>(!sep||far(p,q))&&!nested(p,q)&&!(p.group&&q.group===p.group));
+  const okWith=(p,pick,sep)=>pick.every(q=>(!sep||far(p,q))&&!(eu?euNested:nested)(p,q)&&!(p.group&&q.group===p.group));
   const greedy=sep=>{const pick=[];for(const p of order_()){if(pick.length>=n||pick.includes(p))continue;
       if(p.pair){if(pick.length+2>n||!usable.includes(p.pair)||!okWith(p,pick,sep)||!okWith(p.pair,pick,sep)||(sep&&!far(p,p.pair)))continue;pick.push(p,p.pair)}
       else if(okWith(p,pick,sep))pick.push(p)}
@@ -1120,7 +1145,7 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answ
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
-  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers}}
+  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers,eu}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
   const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers){const key=k.id.replace(/-(river|mouth|source)$/,'');usage[key]=(usage[key]||0)+1}}}
@@ -1139,7 +1164,8 @@ function geowords(P){
   app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
   const slots=[...app.querySelectorAll('.slot')];
-  const m=mapWidget(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose});
+  const m=(P.eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose});
+  if(P.eu)app.querySelector('.gw .mapbox').style.aspectRatio='2200/1600';
   const pip=(img,txt)=>{app.querySelector('.gw-pip img').src=img;app.querySelector('.bubble').textContent=txt};
   function clue(){const c=P.clues[step];app.querySelector('.gw-clue').innerHTML=esc(c.text).replace(/(\S+ букву|the \S+ letter)/,'<b>$1</b>');
     if(P.markers.find(k=>k.id===c.markerId)?.inset)pip(IMG.spy,x.magHint);

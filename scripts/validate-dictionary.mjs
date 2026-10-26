@@ -1,4 +1,4 @@
-// Validates data/dictionary/*.json: unit shape (1 final + 6 review per language), single-word answers,
+// Validates data/dictionary/*.json: unit shape (1 final + at least 6 review per language; block 2 units have extra words Svetlana added 26.10.2026), single-word answers,
 // no duplicate answers per language, definitions present, and that each approval still matches its text.
 // Release packages listed in RELEASE are checked fail-closed: all expected units in both languages,
 // one section-final unit, and a complete approval on every word.
@@ -80,8 +80,8 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       const reviews = words.filter(w => w.role === "review").length;
       const sectionFinal = words.filter(w => w.role === "section-final" || w.role === "block-final").length;
       const challengeOnly = (u.words?.en || []).concat(u.words?.ru || []).every(w => w.role === "challenge");
-      if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
-        errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final / block-final)`);
+      if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews < 6)
+        errors.push(`${file}: ${u.id} ${lang} must have 1 final + at least 6 review words (or one section-final / block-final)`);
       if (!words.length && !challengeOnly) errors.push(`${file}: ${u.id} has no ${lang} words`);
       // Reserve words ("Play again" when no review word fits the learned places): only beside a unit final,
       // and never longer than the unit's reserveMaxLetters.
