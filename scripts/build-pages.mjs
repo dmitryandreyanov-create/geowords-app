@@ -35,6 +35,8 @@ const named=[
   'data/content/section-4-records.json','data/geowords/section-4.json','data/dictionary/section-4.json',
   // Section 5 «Straits and canals» (draft lessons).
   'data/content/section-5-facts.json','data/content/section-5-records.json','data/geowords/section-5.json','data/dictionary/section-5.json',
+  // Block 1 review: block final GeoWords, its dictionary and the Challenge rules.
+  'data/geowords/block-1.json','data/dictionary/block-1.json','data/challenge/block-1.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
