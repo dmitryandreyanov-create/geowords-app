@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-challenge2';
+const BUILD='2026.10.26-challenge3';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -48,7 +48,7 @@ const T={
   units:[['Стороны света','Север, юг, запад, восток, экватор'],['Континенты','7 континентов'],['Океаны','5 океанов'],['Соседи и рекорды','Кто кого омывает, рекорды, полушария']],
   tester:'Тестовая сборка: прогресс хранится только на этом устройстве.',
   blockN:'Блок 1 · Мир',blockName:'Повторение блока',blockFinal:'Итог блока: GeoWords',blockDone:'Блок пройден!',nextBlockFinal:'К итогу блока',
-  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше объектов блока, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на объектах всего блока.',toCw:'К словам GeoWords',cwAll:'Challenge пройден!',toChallenge:'К Challenge',
+  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше объектов блока, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на объектах всего блока.',toCw:'К словам GeoWords',cwDirect:'Сразу к словам GeoWords',cwAll:'Challenge пройден!',toChallenge:'К Challenge',
   huntFind:'Найди:',huntSkip:'Пропустить',huntScore:'Найдено',huntBest:'Рекорд',huntDone:'Время вышло!',huntAgain:'Ещё раз',huntSec:s=>s+' с',
   label:'Подпиши карту',labelQ:'Выбери название, потом нажми на его точку на карте',write:'Напиши название',writeQ:'Как называется этот объект?',
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
@@ -82,7 +82,7 @@ const T={
   units:[['Cardinal directions','North, south, west, east, the Equator'],['Continents','7 continents'],['Oceans','5 oceans'],['Neighbours and records','Which oceans wash which continent, records, hemispheres']],
   tester:'Test build: progress is stored only on this device.',
   blockN:'Block 1 · The world',blockName:'Block review',blockFinal:'Block final: GeoWords',blockDone:'Block complete!',nextBlockFinal:'To the block final',
-  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Two parts. Speed Hunt: in 60 seconds find as many places of the block as you can; a mistake only costs time. Then 3 GeoWords with letters on places from the whole block.',toCw:'To the GeoWords',cwAll:'Challenge complete!',toChallenge:'To the Challenge',
+  challenge:'Challenge',huntTag:'Challenge · Speed Hunt',cwTag:'Challenge · GeoWords',huntDesc:'Two parts. Speed Hunt: in 60 seconds find as many places of the block as you can; a mistake only costs time. Then 3 GeoWords with letters on places from the whole block.',toCw:'To the GeoWords',cwDirect:'Straight to the GeoWords',cwAll:'Challenge complete!',toChallenge:'To the Challenge',
   huntFind:'Find:',huntSkip:'Skip',huntScore:'Found',huntBest:'Best',huntDone:'Time is up!',huntAgain:'Play again',huntSec:s=>s+' s',
   label:'Label the map',labelQ:'Choose a name, then tap its point on the map',write:'Write the name',writeQ:'What is this place called?',
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
@@ -567,10 +567,13 @@ function openStep(id){
       `<p class="rotate-hint">${x.practiceNone}</p>`)+
       `<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn ${hasNew?'ghost':''}" data-a="go">${x.finalAgain}</button></div>`;
   }else buttons=`<div class="row"><button type="button" class="btn ghost" data-a="no">${x.later}</button><button type="button" class="btn" data-a="go">${S.done[id]?(st.kind==='practice'?x.practiceAgain:x.again):x.start}</button></div>`;
+  // Challenge: the GeoWords part can also be opened without the Speed Hunt minute (Svetlana could not find it, 26.10.2026)
+  if(st.kind==='challenge')buttons+=`<button type="button" class="btn ghost" data-a="cw">${x.cwDirect}</button>`;
   const s=sheet(`<span class="eyebrow" style="color:#a0742b">${esc(head)}</span><h3>${esc(titleOf(st))}</h3><p>${desc}</p>${buttons}`);
   s.querySelector('[data-a=no]').onclick=()=>s.remove();
   s.querySelector('[data-a=go]').onclick=()=>{s.remove();if(st.kind==='practice')runPractice(st);else if(st.kind==='challenge')speedHunt(st);else if(st.kind==='block')geowords(blockPuzzle(st));else if(st.kind!=='lesson')geowords(finalPuzzle(st));else if(!S.introSeen&&id==='u1-l1')unitIntro(()=>lesson(st));else startLesson(st)};
   const pr=s.querySelector('[data-a=practice]');if(pr)pr.onclick=()=>{s.remove();startPractice(st)};
+  const cw=s.querySelector('[data-a=cw]');if(cw)cw.onclick=()=>{s.remove();challengeWords(st)};
 }
 
 function settings(){
