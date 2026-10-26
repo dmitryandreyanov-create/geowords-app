@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-challenge';
+const BUILD='2026.10.26-challenge2';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -1064,16 +1064,70 @@ function geowords(P){
   clue();
 }
 
-/* ---------- Challenge GeoWords: 3 words from the approved spot-check sample (data/geowords/challenge-block-1-sample.json) ----------
-   Each puzzle is played exactly as approved (letters, clues, insets). Words from three different sections; the last round's words are not repeated.
-   The app-generated Challenge GeoWords (data/challenge/block-1.json) will replace the sample later without changing this screen. */
+/* ---------- Challenge GeoWords: 3 app-generated words (rules: data/geowords/challenge-block-1-sample.json, approved 23–25.10.2026) ----------
+   Words: approved review words of sections 1–5 and the challenge-extra words, each once; three words from three different sections.
+   Places: about half of the letters on the word's own section (a third for 15+ letters), the rest on other sections of the block;
+   about 30% of the places named by an approved record phrase, taken word for word from approved GeoWords clues (changing records never appear there).
+   If a word cannot be laid out by the rules, the next one is tried; if fewer than three build, the approved sample puzzles fill in. */
 function defOf(answer){const lang=L();for(const d of [D.dict,D.s2.dict,D.s3.dict,D.s4.dict,D.s5.dict,D.b.dict])for(const u of d.units||[]){const w=(u.words[lang]||[]).find(w=>w.answer===answer);if(w)return w.definition}return ''}
-function challengeWords(st){const recent=S.recentCw||[],mine=shuffle(D.b.cw.filter(p=>p.language===L()));
-  const fresh=[...mine.filter(p=>!recent.includes(p.answer)),...mine.filter(p=>recent.includes(p.answer))],picked=[];
-  for(const p of fresh)if(picked.length<3&&!picked.some(q=>q.section===p.section))picked.push(p);
-  S.recentCw=picked.map(p=>p.answer);save();
-  const puzzles=picked.map(P=>({kind:'challenge',stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:defOf(P.answer),needsZoom:!!P.needsZoom,insets:P.showInsets||[]}));
+const CW_SECTIONS=['continents-oceans','rivers','mountains','seas','straits'];
+function challengeCandidates(){const lang=L(),out=[];
+  [D.dict,D.s2.dict,D.s3.dict,D.s4.dict,D.s5.dict].forEach((d,k)=>{for(const u of d.units)for(const w of u.words[lang]||[])
+    if(w.role==='review'&&w.approval?.status==='approved'&&!out.some(o=>o.answer===w.answer))out.push({...w,section:CW_SECTIONS[k]})});
+  for(const w of D.b.dict.units.find(u=>u.id==='challenge-extra').words[lang]||[])if(w.approval?.status==='approved'&&!out.some(o=>o.answer===w.answer))out.push({...w,section:'extra'});
+  return out}
+// record phrases: every place phrase of an approved clue that is not the object's plain name phrase
+function recordPhrases(){if(D.b.recPh)return D.b.recPh;const bank={};
+  for(const P of [D.s2.geo,D.s3.geo,D.s4.geo,D.s5.geo,D.b.geo,{puzzles:D.b.cw}].flatMap(g=>g.puzzles))if(P.approval?.status==='approved')for(const c of P.clues){
+    const m=/^Найди \S+ букву (.*)\.$/.exec(c.text)||/^Find the \S+ letter (.*)\.$/.exec(c.text);if(!m)continue;
+    const b=bank[c.markerId]||(bank[c.markerId]={ru:new Set(),en:new Set()});b[P.language].add(m[1])}
+  return D.b.recPh=bank}
+const CW_NEVER=[['suez-canal','bosporus'],['suez-canal','dardanelles'],['strait-of-hormuz','gulf-of-oman'],['drake-passage','strait-of-magellan'],['antarctica','southern-ocean']];
+const CW_NEVER_LONG=[['ganges','indus'],['yangtze','huang-he']];
+function challengePlaces(){const lang=L(),bank=recordPhrases(),out=[];
+  const secOf={2:'rivers',3:'mountains',4:'seas',5:'straits'};
+  for(let k=2;k<=5;k++)for(const [id] of secIds[k]())out.push({...placeOf[k](id),sec:secOf[k]});
+  for(const p of [...out])if(p.id.endsWith('-river')){p.group=p.id.slice(0,-6);out.push(...riverEnds(p.group,0).map(e=>({...e,sec:'rivers'})))}
+  for(const id of [...CONT,...OCEANS]){const o=O(id),tp=D.tpl.objects.find(q=>q.id===id);out.push({id,x:o.x,y:o.y,place:tp.place,rec:tp.record?.place||tp.record||null,sec:'continents-oceans'})}
+  for(const p of out){if(p.rec&&!p.rec[lang])p.rec=null;if(p.rec)continue;
+    const alt=[...(bank[p.id]?.[lang]||[])].filter(t=>t!==p.place[lang]);if(alt.length)p.rec={[lang]:alt[Math.floor(Math.random()*alt.length)]}}
+  return out}
+function buildChallenge(w,places){const lang=L(),letters=[...w.answer],n=letters.length,long=n>=15;const order=revealOrder(n);if(!order)return null;
+  const has=t=>fold(t).includes(fold(w.answer));
+  const usable=places.filter(p=>!has(p.place[lang])&&!(long&&/-(mouth|source)$/.test(p.id)));
+  const quota=w.section==='extra'?0:Math.round(n/(long?3:2));
+  const key=p=>p.group||p.id,fixed=p=>p.sec==='seas'||p.sec==='straits';
+  const never=[...CW_NEVER,...(long?CW_NEVER_LONG:[])];
+  const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*.55)>=5.4;
+  const okWith=(p,pick)=>pick.every(q=>far(p,q)&&!nested(p,q)&&!(p.group&&q.group===p.group)&&!never.some(([a,b])=>(key(p)===a&&key(q)===b)||(key(p)===b&&key(q)===a)))
+    &&!(long&&fixed(p)&&pick.filter(fixed).length>=3);
+  const add=(p,pick)=>{if(p.pair){if(pick.length+2>n||!usable.includes(p.pair)||!okWith(p,pick)||!okWith(p.pair,[...pick,p])||!far(p,p.pair))return false;pick.push(p,p.pair);return true}
+    if(okWith(p,pick)){pick.push(p);return true}return false};
+  let chosen=null;
+  for(let k=0;k<200&&!chosen;k++){const pick=[],own=shuffle(usable.filter(p=>p.sec===w.section)),other=shuffle(usable.filter(p=>p.sec!==w.section));
+    for(const p of own)if(pick.length<quota&&!pick.includes(p))add(p,pick);
+    for(const p of other)if(pick.length<n&&!pick.includes(p))add(p,pick);
+    if(pick.length===n)chosen=pick}
+  if(!chosen)return null;
+  // about 30% record phrases; the Red Sea «unusually salty» phrase never next to the Mediterranean
+  const med=chosen.some(p=>p.id==='mediterranean-sea');
+  const markers=chosen.map((p,i)=>{const rec=p.rec&&p.rec[lang]&&!has(p.rec[lang])&&!(med&&p.id==='red-sea')&&Math.random()<.3;
+    return {id:p.id,x:p.x,y:p.y,letter:letters[i],place:rec?p.rec[lang]:p.place[lang]}});
+  const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];if(ord.length<n)return null;
+  const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
+  return {kind:'challenge',section:w.section,answer:w.answer,markers,clues,definition:w.definition,needsZoom:true,insets:[],
+    layers:[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...MTNS.map(id=>M(id).layer),'world-canal-suez-canal','world-canal-panama-canal']}}
+function challengeRound(){const recent=S.recentCw||[],places=challengePlaces(),puzzles=[];
+  const words=shuffle(challengeCandidates());const ordered=[...words.filter(w=>!recent.includes(w.answer)),...words.filter(w=>recent.includes(w.answer))];
+  // sections drawn evenly (the few challenge-extra words would almost never come up if words were drawn one by one)
+  for(const sec of shuffle([...CW_SECTIONS,'extra']))for(const w of ordered.filter(w=>w.section===sec)){if(puzzles.length===3||puzzles.some(p=>p.section===sec))break;const P=buildChallenge(w,places);if(P)puzzles.push(P)}
+  // fallback: approved sample puzzles, played exactly as approved
+  for(const P of shuffle(D.b.cw.filter(p=>p.language===L())))if(puzzles.length<3&&!puzzles.some(q=>q.section===P.section||q.answer===P.answer))
+    puzzles.push({kind:'challenge',section:P.section,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
+      layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:defOf(P.answer),needsZoom:!!P.needsZoom,insets:P.showInsets||[]});
+  S.recentCw=puzzles.map(p=>p.answer);save();return puzzles}
+window.__gwChallengeRound=()=>challengeRound();// read by the automated rules test
+function challengeWords(st){const puzzles=challengeRound();puzzles.forEach(P=>P.stepId=st.id);
   let i=0;const go=()=>{const P=puzzles[i];P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};go()}
 
 /* ---------- Challenge: Speed Hunt (data/challenge/block-1.json, approved 23.10.2026) ---------- */
