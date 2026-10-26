@@ -1,0 +1,98 @@
+{
+ "section": "europe-on-the-map",
+ "block": 2,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "scandinavian-largest-peninsula",
+   "order": 1,
+   "object": "scandinavian-peninsula",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Scandinavian Peninsula",
+    "ru": "Скандинавский полуостров"
+   },
+   "fact": {
+    "en": "The Scandinavian Peninsula is the largest peninsula in Europe.",
+    "ru": "Скандинавский полуостров — самый большой полуостров Европы."
+   },
+   "figure": {
+    "value": 750000,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "a1ff940ce9a12ce3"
+   }
+  },
+  {
+   "id": "great-britain-largest-island",
+   "order": 2,
+   "object": "great-britain",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Great Britain",
+    "ru": "Великобритания"
+   },
+   "fact": {
+    "en": "Great Britain is the largest island in Europe.",
+    "ru": "Великобритания — самый большой остров Европы."
+   },
+   "figure": {
+    "value": 209331,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "3019c7781577227e"
+   }
+  },
+  {
+   "id": "sicily-largest-mediterranean-island",
+   "order": 3,
+   "object": "sicily",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Sicily",
+    "ru": "Сицилия"
+   },
+   "fact": {
+    "en": "Sicily is the largest island in the Mediterranean Sea.",
+    "ru": "Сицилия — самый большой остров Средиземного моря."
+   },
+   "figure": {
+    "value": 25711,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "590c5a315046c34e"
+   }
+  }
+ ]
+}

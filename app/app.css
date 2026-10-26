@@ -252,3 +252,6 @@ h1,h2,h3,p{margin:0}
 /* lesson 4 «Records»: the clue column is wider and its buttons grow with the text */
 .pairs.rec{grid-template-columns:2fr 3fr}
 .pairs.rec .pbtn{height:auto;min-height:64px;font-size:14px;line-height:1.25}
+/* block 2: the Ural Mountains and the Ural River are not on the blank Europe base, so they are always drawn */
+.eu-mtn{fill:rgba(120,78,36,.32);stroke:rgba(90,56,24,.55);stroke-width:1.2;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}
+.eu-river{fill:none;stroke:#2f7fa8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
