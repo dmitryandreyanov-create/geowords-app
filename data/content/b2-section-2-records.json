@@ -1,0 +1,85 @@
+{
+ "section": "rivers-of-europe",
+ "block": 2,
+ "use": "unit 4 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "volga-largest-delta",
+   "order": 1,
+   "object": "volga",
+   "kind": "record",
+   "unit": 4,
+   "name": {
+    "en": "Volga",
+    "ru": "Волга"
+   },
+   "fact": {
+    "en": "The Volga has the largest delta in Europe.",
+    "ru": "У Волги самая большая дельта в Европе."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "loire-longest-france",
+   "order": 2,
+   "object": "loire",
+   "kind": "record",
+   "unit": 4,
+   "name": {
+    "en": "Loire",
+    "ru": "Луара"
+   },
+   "fact": {
+    "en": "The Loire is the longest river in France, about 1,000 km long.",
+    "ru": "Луара — самая длинная река Франции, около 1000 км."
+   },
+   "figure": {
+    "value": 1006,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tagus-longest-iberia",
+   "order": 3,
+   "object": "tagus",
+   "kind": "record",
+   "unit": 4,
+   "name": {
+    "en": "Tagus",
+    "ru": "Тахо"
+   },
+   "fact": {
+    "en": "The Tagus is the longest river of the Iberian Peninsula, about 1,000 km long.",
+    "ru": "Тахо — самая длинная река Пиренейского полуострова, около 1000 км."
+   },
+   "figure": {
+    "value": 1007,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
