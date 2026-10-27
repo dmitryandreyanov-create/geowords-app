@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.26-europe2';
+const BUILD='2026.10.26-europe3';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -498,9 +498,15 @@ function euHit(x,y,sz,pool=EU()){const os=pool.map(E);
   const inn=os.filter(o=>!o.path&&inside(o,x,y)).sort((a,b)=>a.area-b.area);if(inn.length)return inn[0].id;
   let hit=null,d=22;for(const o of os){const v=euDist(o,x,y,sz);if(v<=d){d=v;hit=o.id}}return hit}
 // right: inside the asked object (or its soft area: the Norwegian Sea for the Atlantic), or within 22 px of it when the tap is not inside
-// another object of the section — objects that contain the asked one (the Arctic Ocean around the Barents Sea) do not count against it
-function euOk(id,x,y,sz){const o=E(id);if(euDist(o,x,y,sz)===0||inSoft(o,x,y))return true;if(euDist(o,x,y,sz)>22)return false;
-  return !EU().some(k=>k!==id&&euDist(E(k),x,y,sz)===0&&!(E(k).tapArea.length&&inside(E(k),o.x,o.y)))}
+// another object of the section — objects that contain the asked one (the Arctic Ocean around the Barents Sea) do not count against it.
+// For land (a peninsula, an island, the Urals) the sea around it never counts against it: a finger that lands just off the coast of
+// Jutland is a tap on Jutland, unless other land is nearer (Svetlana, 26.10.2026: a tap on Jutland was judged «the Baltic Sea»).
+const EU_LAND=['peninsula','island','mountain'];
+function euOk(id,x,y,sz){const o=E(id),d=euDist(o,x,y,sz);if(d===0||inSoft(o,x,y))return true;if(d>22)return false;
+  const land=EU_LAND.includes(o.kind);
+  return !EU().some(k=>{if(k===id)return false;const q=E(k),v=euDist(q,x,y,sz);
+    if(land&&!EU_LAND.includes(q.kind))return false;
+    return land?v<d:v===0&&!(q.tapArea.length&&inside(q,o.x,o.y))})}
 // answer options of the same family: unit 1 (oceans, sea, the Urals and the Caspian), peninsulas, islands, the seas and oceans of the section
 const euFamily=id=>{const o=E(id);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
 const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-river')):m.shape(o,cls);
