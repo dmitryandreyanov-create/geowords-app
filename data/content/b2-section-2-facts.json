@@ -3,7 +3,8 @@
  "block": 2,
  "use": "introduction cards, one fact per river; ids match data/maps/europe-rivers.json; the Ural River comes from section 1 and is only reviewed",
  "decisions": [
-  "The Dniester is not drawn on assets/europe-rivers.webp and is left out of the section."
+  "Svetlana (27.10.2026): added the Dniester, the Tiber and the Guadiana; the Dniester and the Guadiana were drawn onto europe-rivers.webp.",
+  "Svetlana (27.10.2026): new wording for the Rhine, Oder, Rhône, Tagus and Douro."
  ],
  "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
  "units": [
@@ -104,8 +105,30 @@
    }
   },
   {
-   "id": "danube",
+   "id": "dniester",
    "order": 4,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Dniester",
+    "ru": "Днестр"
+   },
+   "fact": {
+    "en": "The Dniester rises in the Carpathians, flows through Ukraine and Moldova and reaches the Black Sea through the Dniester Estuary.",
+    "ru": "Днестр начинается в Карпатах, течёт по Украине и Молдове и впадает в Чёрное море через Днестровский лиман."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "danube",
+   "order": 5,
    "kind": "river",
    "unit": 1,
    "name": {
@@ -127,7 +150,7 @@
   },
   {
    "id": "rhine",
-   "order": 5,
+   "order": 6,
    "kind": "river",
    "unit": 2,
    "name": {
@@ -135,8 +158,8 @@
     "ru": "Рейн"
    },
    "fact": {
-    "en": "The Rhine rises in the Alps in Switzerland and flows into the North Sea. It is one of Europe's busiest rivers for ships.",
-    "ru": "Рейн начинается в Альпах, в Швейцарии, и впадает в Северное море. По нему ходит очень много судов."
+    "en": "The Rhine rises in the Swiss Alps and flows into the North Sea. It is one of Europe's most important waterways.",
+    "ru": "Рейн берёт начало в Швейцарских Альпах и впадает в Северное море. Это одна из важнейших судоходных рек Европы."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
@@ -149,7 +172,7 @@
   },
   {
    "id": "elbe",
-   "order": 6,
+   "order": 7,
    "kind": "river",
    "unit": 2,
    "name": {
@@ -171,7 +194,7 @@
   },
   {
    "id": "oder",
-   "order": 7,
+   "order": 8,
    "kind": "river",
    "unit": 2,
    "name": {
@@ -179,8 +202,8 @@
     "ru": "Одер"
    },
    "fact": {
-    "en": "The Oder flows into the Baltic Sea. For a long stretch it forms the border between Germany and Poland.",
-    "ru": "Одер впадает в Балтийское море. На длинном участке по нему идёт граница Германии и Польши."
+    "en": "The Oder reaches the Baltic Sea through a system of lagoons and channels. It forms part of the border between Germany and Poland.",
+    "ru": "Одер впадает в Балтийское море через систему лагун и проливов. На значительном участке он образует границу Германии и Польши."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
@@ -193,7 +216,7 @@
   },
   {
    "id": "vistula",
-   "order": 8,
+   "order": 9,
    "kind": "river",
    "unit": 2,
    "name": {
@@ -215,7 +238,7 @@
   },
   {
    "id": "thames",
-   "order": 9,
+   "order": 10,
    "kind": "river",
    "unit": 3,
    "name": {
@@ -237,7 +260,7 @@
   },
   {
    "id": "seine",
-   "order": 10,
+   "order": 11,
    "kind": "river",
    "unit": 3,
    "name": {
@@ -259,7 +282,7 @@
   },
   {
    "id": "loire",
-   "order": 11,
+   "order": 12,
    "kind": "river",
    "unit": 3,
    "name": {
@@ -281,7 +304,7 @@
   },
   {
    "id": "rhone",
-   "order": 12,
+   "order": 13,
    "kind": "river",
    "unit": 3,
    "name": {
@@ -289,8 +312,8 @@
     "ru": "Рона"
    },
    "fact": {
-    "en": "The Rhône starts from a glacier in the Alps, flows through Lake Geneva and into the Mediterranean Sea.",
-    "ru": "Рона начинается из ледника в Альпах, протекает через Женевское озеро и впадает в Средиземное море."
+    "en": "The Rhône rises near the Rhône Glacier in the Swiss Alps, flows through Lake Geneva and empties into the Mediterranean Sea.",
+    "ru": "Рона берёт начало у Ронского ледника в Швейцарских Альпах, проходит через Женевское озеро и впадает в Средиземное море."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
@@ -303,7 +326,7 @@
   },
   {
    "id": "po",
-   "order": 13,
+   "order": 14,
    "kind": "river",
    "unit": 4,
    "name": {
@@ -324,8 +347,30 @@
    }
   },
   {
+   "id": "tiber",
+   "order": 15,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Tiber",
+    "ru": "Тибр"
+   },
+   "fact": {
+    "en": "Ancient Rome grew up on the banks of the Tiber. The river flows through Rome into the Tyrrhenian Sea.",
+    "ru": "На берегах Тибра вырос Древний Рим. Река течёт через Рим и впадает в Тирренское море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
    "id": "tagus",
-   "order": 14,
+   "order": 16,
    "kind": "river",
    "unit": 4,
    "name": {
@@ -333,8 +378,8 @@
     "ru": "Тахо"
    },
    "fact": {
-    "en": "The Tagus curves around old Toledo and flows into the Atlantic Ocean at Lisbon.",
-    "ru": "Тахо огибает старинный Толедо и впадает в Атлантический океан у Лиссабона."
+    "en": "The Tagus curves around the historic city of Toledo and reaches the Atlantic Ocean through a wide estuary near Lisbon.",
+    "ru": "Тахо огибает исторический город Толедо и впадает в Атлантический океан через широкий эстуарий у Лиссабона."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
@@ -347,7 +392,7 @@
   },
   {
    "id": "douro",
-   "order": 15,
+   "order": 17,
    "kind": "river",
    "unit": 4,
    "name": {
@@ -355,8 +400,30 @@
     "ru": "Дуэро"
    },
    "fact": {
-    "en": "The Douro flows from Spain into Portugal. The city of Porto stands at its mouth.",
-    "ru": "Дуэро течёт из Испании в Португалию. В её устье стоит город Порту."
+    "en": "The Douro flows from Spain into Portugal and empties into the Atlantic Ocean at Porto.",
+    "ru": "Дуэро течёт из Испании в Португалию и впадает в Атлантический океан у города Порту."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "guadiana",
+   "order": 18,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Guadiana",
+    "ru": "Гвадиана"
+   },
+   "fact": {
+    "en": "In its lower course the Guadiana forms the border between Spain and Portugal. The river flows into the Atlantic Ocean.",
+    "ru": "На нижнем участке Гвадиана служит границей Испании и Португалии. Река впадает в Атлантический океан."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
@@ -369,7 +436,7 @@
   },
   {
    "id": "ebro",
-   "order": 16,
+   "order": 19,
    "kind": "river",
    "unit": 4,
    "name": {
@@ -391,7 +458,7 @@
   },
   {
    "id": "guadalquivir",
-   "order": 17,
+   "order": 20,
    "kind": "river",
    "unit": 4,
    "name": {
