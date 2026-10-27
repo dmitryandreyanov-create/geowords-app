@@ -46,6 +46,11 @@ RIVERS = [
  ('guadalquivir', 4, ['Guadalquivir'], (-7, -2, 36, 38.5), 'Guadalquivir', 'Гвадалквивир'),
 ]
 feats = json.load(open(NE / 'ne_10m_rivers_lake_centerlines.geojson'))['features']
+from shapely.geometry import Point
+from shapely import affinity
+# label: the point of the river's longest line (between 15% and 85% of its length) farthest from every other river of the section,
+# measured in screen proportions (y * 1600/2200), so a tap on the label is never ambiguous on a phone (the Rhône's middle is 2 px from the Loire)
+def squash(g): return affinity.scale(g, 1, 1600 / 2200, origin=(0, 0))
 items = []
 for i, (id_, unit, names, (a, b, c, d), en, ru) in enumerate(RIVERS, 1):
     gs = [shape(f['geometry']) for f in feats if f['properties'].get('name') in names]
@@ -54,17 +59,21 @@ for i, (id_, unit, names, (a, b, c, d), en, ru) in enumerate(RIVERS, 1):
     if line.geom_type == 'MultiLineString': line = linemerge(line)
     line = line.simplify(0.08)
     lines = [l for l in getattr(line, 'geoms', [line]) if l.length > 0.2]
-    mid = max(lines, key=lambda l: l.length).interpolate(0.5, normalized=True)
-    items.append({'id': id_, 'order': i, 'kind': 'river', 'unit': unit, 'name': {'en': en, 'ru': ru},
-                  'label': {'x': round(mid.x, 2), 'y': round(mid.y, 2)},
+    items.append({'_lines': lines,'id': id_, 'order': i, 'kind': 'river', 'unit': unit, 'name': {'en': en, 'ru': ru},
                   'path': [[[round(x, 2), round(y, 2)] for x, y in l.coords] for l in lines]})
 
+for it in items:
+    others = unary_union([squash(l) for o in items if o is not it for l in o['_lines']])
+    longest = max(it['_lines'], key=lambda l: l.length)
+    best = max((longest.interpolate(t / 100, normalized=True) for t in range(15, 86)), key=lambda q: others.distance(squash(q)))
+    it['label'] = {'x': round(best.x, 2), 'y': round(best.y, 2)}
+items = [{k: it[k] for k in ('id', 'order', 'kind', 'unit', 'name', 'label', 'path')} for it in items]
 out = {
   'map': './assets/europe-rivers.webp',
   'mapAspect': '11 / 8',
   'level': 'Rivers of Europe (block 2, section 2)',
   'coordinateSystem': 'label and path in % of image width/height from top-left; same for all four europe-*.webp (shared base)',
-  'source': 'Natural Earth 1:10m rivers and lake centerlines, projected like europe-overview.json; label = middle of the longest line',
+  'source': 'Natural Earth 1:10m rivers and lake centerlines, projected like europe-overview.json; label = the point of the longest line farthest from the other rivers',
   'notes': ['Built by tools/build_europe_rivers.py.', 'The Ural River is learned in section 1 (europe-overview.json) and only reviewed here.',
             'The Dniester and the Guadiana were drawn onto europe-rivers.webp from these lines by tools/draw_europe_rivers.py (Svetlana asked for them, 27.10.2026).'],
   'items': items,

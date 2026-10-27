@@ -1,0 +1,662 @@
+{
+ "section": "rivers-of-europe",
+ "block": 2,
+ "source": "Svetlana's list (27.10.2026) and the doc https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+ "rules": {
+  "structure": "4 units x (1 final + at least 6 review words) + section final; practice draws 6 of each unit's review words",
+  "places": "letters on the learned rivers of the section and on every object of section 1 (europe-overview.json)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "RU words approved by Svetlana 27.10.2026 («Согласна»); ВОЛГОГРАД reworded without the root «Волг»; EN definitions are translations awaiting her approval; ВАРЯГИ reworded: «из варяг в греки» repeats the answer"
+ },
+ "units": [
+  {
+   "id": "unit-1-great-rivers-of-eastern-europe",
+   "title": {
+    "ru": "Великие реки Восточной Европы",
+    "en": "Great rivers of Eastern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ВАРЯГИ",
+      "role": "final",
+      "definition": "Скандинавские воины и купцы, ходившие по Днепру в Византию.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ВИНДОБОНА",
+      "role": "review",
+      "definition": "Римская Вена на Дунае.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "e8406b55375c7dca"
+      }
+     },
+     {
+      "answer": "РЕГЕНСБУРГ",
+      "role": "review",
+      "definition": "Средневековый город на Дунае.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "e52c55628a168ebf"
+      }
+     },
+     {
+      "answer": "БУДАПЕШТ",
+      "role": "review",
+      "definition": "Город на двух берегах Дуная.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "d53ec91d3f34d4c4"
+      }
+     },
+     {
+      "answer": "ЛИМЕС",
+      "role": "review",
+      "definition": "Укреплённая граница Римской империи вдоль Рейна и Дуная.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "5a8ef1911ea8e288"
+      }
+     },
+     {
+      "answer": "АСТРАХАНЬ",
+      "role": "review",
+      "definition": "Город в дельте Волги.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "3fe4bc13cffdda1a"
+      }
+     },
+     {
+      "answer": "ВОЛГОГРАД",
+      "role": "review",
+      "definition": "Большой город на самой длинной реке Европы, раньше назывался Сталинградом.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "VARANGIANS",
+      "role": "final",
+      "definition": "Scandinavian warriors and merchants who sailed down the Dnieper to Constantinople.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "VINDOBONA",
+      "role": "review",
+      "definition": "Roman Vienna on the Danube.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "REGENSBURG",
+      "role": "review",
+      "definition": "A medieval city on the Danube.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BUDAPEST",
+      "role": "review",
+      "definition": "A city on both banks of the Danube.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LIMES",
+      "role": "review",
+      "definition": "The fortified border of the Roman Empire along the Rhine and the Danube.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ASTRAKHAN",
+      "role": "review",
+      "definition": "A city in the Volga delta.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "VOLGOGRAD",
+      "role": "review",
+      "definition": "A large city on the longest river in Europe, once called Stalingrad.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-rivers-of-central-europe",
+   "title": {
+    "ru": "Реки Центральной Европы",
+    "en": "Rivers of Central Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГАНЗА",
+      "role": "final",
+      "definition": "Союз торговых городов Северной Европы, в него входили порты на Эльбе, Одере и Висле.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "e9b6ded61ece5220"
+      }
+     },
+     {
+      "answer": "ЛОРЕЛЕЯ",
+      "role": "review",
+      "definition": "Легендарная скала на Рейне.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "d2cbdd9f7d260b16"
+      }
+     },
+     {
+      "answer": "РОТТЕРДАМ",
+      "role": "review",
+      "definition": "Порт в дельте Рейна и Мааса.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "4b3066bc4160db19"
+      }
+     },
+     {
+      "answer": "ГАМБУРГ",
+      "role": "review",
+      "definition": "Порт на Эльбе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "608179a95e9172ee"
+      }
+     },
+     {
+      "answer": "ВЛТАВА",
+      "role": "review",
+      "definition": "Приток Эльбы, река Праги.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "d0ef3b79a1855106"
+      }
+     },
+     {
+      "answer": "МОЗЕЛЬ",
+      "role": "review",
+      "definition": "Приток Рейна.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "8b7c1c9742cbb455"
+      }
+     },
+     {
+      "answer": "МАЙН",
+      "role": "review",
+      "definition": "Приток Рейна.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "3346c52e70e9dd41"
+      }
+     },
+     {
+      "answer": "КОБЛЕНЦ",
+      "role": "review",
+      "definition": "Место слияния Рейна и Мозеля.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "84c01864d86c12c1"
+      }
+     },
+     {
+      "answer": "НИБЕЛУНГИ",
+      "role": "review",
+      "definition": "Герои германского эпоса, связанного с Рейном.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "2abf4e41d60e754c"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "HANSA",
+      "role": "final",
+      "definition": "A league of trading cities of northern Europe, with ports on the Elbe, the Oder and the Vistula.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LORELEI",
+      "role": "review",
+      "definition": "A legendary rock on the Rhine.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ROTTERDAM",
+      "role": "review",
+      "definition": "A port in the delta of the Rhine and the Meuse.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HAMBURG",
+      "role": "review",
+      "definition": "A port on the Elbe.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "VLTAVA",
+      "role": "review",
+      "definition": "A tributary of the Elbe, the river of Prague.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MOSELLE",
+      "role": "review",
+      "definition": "A tributary of the Rhine.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAIN",
+      "role": "review",
+      "definition": "A tributary of the Rhine.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KOBLENZ",
+      "role": "review",
+      "definition": "The place where the Rhine and the Moselle meet.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NIBELUNGS",
+      "role": "review",
+      "definition": "Heroes of a Germanic epic linked to the Rhine.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-rivers-of-western-europe",
+   "title": {
+    "ru": "Реки Западной Европы",
+    "en": "Rivers of Western Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ЛОНДИНИУМ",
+      "role": "final",
+      "definition": "Римский Лондон на Темзе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "8bc1d34022de5eb5"
+      }
+     },
+     {
+      "answer": "ЛУТЕЦИЯ",
+      "role": "review",
+      "definition": "Древний Париж на Сене.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "4d35a55e360f5397"
+      }
+     },
+     {
+      "answer": "ОКСФОРД",
+      "role": "review",
+      "definition": "Исторический город на Темзе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "5e95db16386910df"
+      }
+     },
+     {
+      "answer": "АВИНЬОН",
+      "role": "review",
+      "definition": "Исторический город на Роне.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "acf05a276b3918db"
+      }
+     },
+     {
+      "answer": "КАМАРГ",
+      "role": "review",
+      "definition": "Природная область в дельте Роны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "581f2c3860e7a62e"
+      }
+     },
+     {
+      "answer": "ГАРОННА",
+      "role": "review",
+      "definition": "Река юго-запада Франции.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "8a2af916d7214ae2"
+      }
+     },
+     {
+      "answer": "ЛИОН",
+      "role": "review",
+      "definition": "Город у слияния Роны и Соны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "c6c3618f081aa99a"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "LONDINIUM",
+      "role": "final",
+      "definition": "Roman London on the Thames.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LUTETIA",
+      "role": "review",
+      "definition": "Ancient Paris on the Seine.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "OXFORD",
+      "role": "review",
+      "definition": "A historic city on the Thames.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "AVIGNON",
+      "role": "review",
+      "definition": "A historic city on the Rhône.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CAMARGUE",
+      "role": "review",
+      "definition": "A natural area in the Rhône delta.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "GARONNE",
+      "role": "review",
+      "definition": "A river of south-western France.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LYON",
+      "role": "review",
+      "definition": "A city where the Rhône and the Saône meet.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-4-rivers-of-southern-europe",
+   "title": {
+    "ru": "Реки Южной Европы",
+    "en": "Rivers of Southern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РУБИКОН",
+      "role": "final",
+      "definition": "Река, которую перешёл Цезарь.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "f6199b3a54b2c39a"
+      }
+     },
+     {
+      "answer": "ПОРТВЕЙН",
+      "role": "review",
+      "definition": "Знаменитое вино из долины реки Дуэро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "f58269f317eaec4a"
+      }
+     },
+     {
+      "answer": "СЕВИЛЬЯ",
+      "role": "review",
+      "definition": "Исторический порт на Гвадалквивире.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "500ee78df2550bdd"
+      }
+     },
+     {
+      "answer": "ТОЛЕДО",
+      "role": "review",
+      "definition": "Город в излучине Тахо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "6da4c61bdce7c630"
+      }
+     },
+     {
+      "answer": "ЛИССАБОН",
+      "role": "review",
+      "definition": "Столица Португалии в устье Тахо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "486f78db524fe56b"
+      }
+     },
+     {
+      "answer": "РОМУЛ",
+      "role": "review",
+      "definition": "По легенде, основатель Рима на Тибре.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "c58ee41992b8182c"
+      }
+     },
+     {
+      "answer": "САРАГОСА",
+      "role": "review",
+      "definition": "Город на реке Эбро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "7c30a53e7f7ac286"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "RUBICON",
+      "role": "final",
+      "definition": "The river that Caesar crossed.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PORT",
+      "role": "review",
+      "definition": "A famous wine from the Douro valley.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SEVILLE",
+      "role": "review",
+      "definition": "A historic port on the Guadalquivir.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TOLEDO",
+      "role": "review",
+      "definition": "A city in a bend of the Tagus.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LISBON",
+      "role": "review",
+      "definition": "The capital of Portugal at the mouth of the Tagus.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ROMULUS",
+      "role": "review",
+      "definition": "The legendary founder of Rome on the Tiber.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ZARAGOZA",
+      "role": "review",
+      "definition": "A city on the Ebro.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "СУДОХОДСТВО",
+      "role": "section-final",
+      "definition": "Движение судов по рекам, морям и каналам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "e7c88ce9c0a8cafc"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "NAVIGATION",
+      "role": "section-final",
+      "definition": "The movement of ships on rivers, seas and canals.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

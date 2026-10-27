@@ -1,0 +1,1102 @@
+{
+ "section": "rivers-of-europe",
+ "block": 2,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the rivers of data/maps/europe-rivers.json learned by the end of the unit (section final: all 20), at the middle of the river's longest line, and on every object of data/maps/europe-overview.json (the Ural River: a point on its line); the newest unit's rivers first",
+  "nesting": "as section 1, and a river whose letter lies inside a peninsula or a sea never shares a puzzle with it",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b2-section-2-unit-1-en",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "VARANGIANS",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "iberian-peninsula",
+     "x": 26.26,
+     "y": 76.31,
+     "letter": "V"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "A"
+    },
+    {
+     "id": "great-britain",
+     "x": 35.18,
+     "y": 55.07,
+     "letter": "R"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "A"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "N"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "G"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "I"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "A"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "N"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 43.57,
+     "y": 27.01,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dniester",
+     "position": 7,
+     "text": "Find the seventh letter on the Dniester."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 4,
+     "text": "Find the fourth letter on the Dnieper."
+    },
+    {
+     "markerId": "don",
+     "position": 6,
+     "text": "Find the sixth letter on the Don."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 9,
+     "text": "Find the ninth letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "great-britain",
+     "position": 3,
+     "text": "Find the third letter on the island of Great Britain."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 10,
+     "text": "Find the tenth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 2,
+     "text": "Find the second letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "danube",
+     "position": 5,
+     "text": "Find the fifth letter on the Danube."
+    },
+    {
+     "markerId": "volga",
+     "position": 8,
+     "text": "Find the eighth letter on the Volga."
+    },
+    {
+     "markerId": "iberian-peninsula",
+     "position": 1,
+     "text": "Find the first letter on the Iberian Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-1-ru",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ВАРЯГИ",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "В"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "А"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "Р"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "Я"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "Г"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "И"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dniester",
+     "position": 4,
+     "text": "Найди четвёртую букву на Днестре."
+    },
+    {
+     "markerId": "volga",
+     "position": 2,
+     "text": "Найди вторую букву на Волге."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 5,
+     "text": "Найди пятую букву на Скандинавском полуострове."
+    },
+    {
+     "markerId": "don",
+     "position": 3,
+     "text": "Найди третью букву на Дону."
+    },
+    {
+     "markerId": "danube",
+     "position": 1,
+     "text": "Найди первую букву на Дунае."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 6,
+     "text": "Найди шестую букву на Днепре."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-2-en",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "HANSA",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "H"
+    },
+    {
+     "id": "elbe",
+     "x": 48.18,
+     "y": 64.05,
+     "letter": "A"
+    },
+    {
+     "id": "rhine",
+     "x": 41.96,
+     "y": 61.36,
+     "letter": "N"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "S"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dniester",
+     "position": 4,
+     "text": "Find the fourth letter on the Dniester."
+    },
+    {
+     "markerId": "elbe",
+     "position": 2,
+     "text": "Find the second letter on the Elbe."
+    },
+    {
+     "markerId": "vistula",
+     "position": 5,
+     "text": "Find the fifth letter on the Vistula."
+    },
+    {
+     "markerId": "rhine",
+     "position": 3,
+     "text": "Find the third letter on the Rhine."
+    },
+    {
+     "markerId": "danube",
+     "position": 1,
+     "text": "Find the first letter on the Danube."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-2-ru",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГАНЗА",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "elbe",
+     "x": 48.18,
+     "y": 64.05,
+     "letter": "Г"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "А"
+    },
+    {
+     "id": "rhine",
+     "x": 41.96,
+     "y": 61.36,
+     "letter": "Н"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "З"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "danube",
+     "position": 4,
+     "text": "Найди четвёртую букву на Дунае."
+    },
+    {
+     "markerId": "don",
+     "position": 2,
+     "text": "Найди вторую букву на Дону."
+    },
+    {
+     "markerId": "vistula",
+     "position": 5,
+     "text": "Найди пятую букву на Висле."
+    },
+    {
+     "markerId": "rhine",
+     "position": 3,
+     "text": "Найди третью букву на Рейне."
+    },
+    {
+     "markerId": "elbe",
+     "position": 1,
+     "text": "Найди первую букву на Эльбе."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-3-en",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "LONDINIUM",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "L"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "O"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "N"
+    },
+    {
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
+     "letter": "D"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "I"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "N"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "I"
+    },
+    {
+     "id": "oder",
+     "x": 49.66,
+     "y": 61.27,
+     "letter": "U"
+    },
+    {
+     "id": "rhone",
+     "x": 38.9,
+     "y": 71.11,
+     "letter": "M"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dniester",
+     "position": 2,
+     "text": "Find the second letter on the Dniester."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 6,
+     "text": "Find the sixth letter on the Dnieper."
+    },
+    {
+     "markerId": "loire",
+     "position": 4,
+     "text": "Find the fourth letter on the Loire."
+    },
+    {
+     "markerId": "oder",
+     "position": 8,
+     "text": "Find the eighth letter on the Oder."
+    },
+    {
+     "markerId": "thames",
+     "position": 3,
+     "text": "Find the third letter on the Thames."
+    },
+    {
+     "markerId": "rhone",
+     "position": 9,
+     "text": "Find the ninth letter on the Rhône."
+    },
+    {
+     "markerId": "danube",
+     "position": 5,
+     "text": "Find the fifth letter on the Danube."
+    },
+    {
+     "markerId": "don",
+     "position": 1,
+     "text": "Find the first letter on the Don."
+    },
+    {
+     "markerId": "volga",
+     "position": 7,
+     "text": "Find the seventh letter on the Volga."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-3-ru",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ЛОНДИНИУМ",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "Л"
+    },
+    {
+     "id": "rhine",
+     "x": 41.96,
+     "y": 61.36,
+     "letter": "О"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "Н"
+    },
+    {
+     "id": "rhone",
+     "x": 38.9,
+     "y": 71.11,
+     "letter": "Д"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "И"
+    },
+    {
+     "id": "elbe",
+     "x": 48.18,
+     "y": 64.05,
+     "letter": "Н"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "И"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "У"
+    },
+    {
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
+     "letter": "М"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "vistula",
+     "position": 5,
+     "text": "Найди пятую букву на Висле."
+    },
+    {
+     "markerId": "rhine",
+     "position": 2,
+     "text": "Найди вторую букву на Рейне."
+    },
+    {
+     "markerId": "rhone",
+     "position": 4,
+     "text": "Найди четвёртую букву на Роне."
+    },
+    {
+     "markerId": "don",
+     "position": 8,
+     "text": "Найди восьмую букву на Дону."
+    },
+    {
+     "markerId": "elbe",
+     "position": 6,
+     "text": "Найди шестую букву на Эльбе."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 3,
+     "text": "Найди третью букву на Днепре."
+    },
+    {
+     "markerId": "loire",
+     "position": 9,
+     "text": "Найди девятую букву на Луаре."
+    },
+    {
+     "markerId": "thames",
+     "position": 7,
+     "text": "Найди седьмую букву на Темзе."
+    },
+    {
+     "markerId": "dniester",
+     "position": 1,
+     "text": "Найди первую букву на Днестре."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-4-en",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 4,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "RUBICON",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "douro",
+     "x": 24.97,
+     "y": 73.09,
+     "letter": "R"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "U"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "B"
+    },
+    {
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
+     "letter": "I"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "C"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "O"
+    },
+    {
+     "id": "guadalquivir",
+     "x": 23.3,
+     "y": 80.9,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "tiber",
+     "position": 2,
+     "text": "Find the second letter on the Tiber."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 5,
+     "text": "Find the fifth letter on the Dnieper."
+    },
+    {
+     "markerId": "danube",
+     "position": 3,
+     "text": "Find the third letter on the Danube."
+    },
+    {
+     "markerId": "guadalquivir",
+     "position": 7,
+     "text": "Find the seventh letter on the Guadalquivir."
+    },
+    {
+     "markerId": "douro",
+     "position": 1,
+     "text": "Find the first letter on the Douro."
+    },
+    {
+     "markerId": "po",
+     "position": 4,
+     "text": "Find the fourth letter on the Po."
+    },
+    {
+     "markerId": "ebro",
+     "position": 6,
+     "text": "Find the sixth letter on the Ebro."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-unit-4-ru",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": 4,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "РУБИКОН",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "guadalquivir",
+     "x": 23.3,
+     "y": 80.9,
+     "letter": "Р"
+    },
+    {
+     "id": "rhine",
+     "x": 41.96,
+     "y": 61.36,
+     "letter": "У"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "Б"
+    },
+    {
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
+     "letter": "И"
+    },
+    {
+     "id": "douro",
+     "x": 24.97,
+     "y": 73.09,
+     "letter": "К"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "О"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "po",
+     "position": 4,
+     "text": "Найди четвёртую букву на реке По."
+    },
+    {
+     "markerId": "rhine",
+     "position": 2,
+     "text": "Найди вторую букву на Рейне."
+    },
+    {
+     "markerId": "douro",
+     "position": 5,
+     "text": "Найди пятую букву на Дуэро."
+    },
+    {
+     "markerId": "tiber",
+     "position": 7,
+     "text": "Найди седьмую букву на Тибре."
+    },
+    {
+     "markerId": "guadalquivir",
+     "position": 1,
+     "text": "Найди первую букву на Гвадалквивире."
+    },
+    {
+     "markerId": "ebro",
+     "position": 3,
+     "text": "Найди третью букву на Эбро."
+    },
+    {
+     "markerId": "dniester",
+     "position": 6,
+     "text": "Найди шестую букву на Днестре."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-final-en",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "NAVIGATION",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "rhine",
+     "x": 41.96,
+     "y": 61.36,
+     "letter": "N"
+    },
+    {
+     "id": "seine",
+     "x": 36.09,
+     "y": 62.31,
+     "letter": "A"
+    },
+    {
+     "id": "douro",
+     "x": 24.97,
+     "y": 73.09,
+     "letter": "V"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "I"
+    },
+    {
+     "id": "elbe",
+     "x": 48.18,
+     "y": 64.05,
+     "letter": "G"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "A"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "T"
+    },
+    {
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
+     "letter": "I"
+    },
+    {
+     "id": "guadiana",
+     "x": 21.07,
+     "y": 78.79,
+     "letter": "O"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "douro",
+     "position": 3,
+     "text": "Find the third letter on the Douro."
+    },
+    {
+     "markerId": "vistula",
+     "position": 7,
+     "text": "Find the seventh letter on the Vistula."
+    },
+    {
+     "markerId": "seine",
+     "position": 2,
+     "text": "Find the second letter on the Seine."
+    },
+    {
+     "markerId": "tiber",
+     "position": 4,
+     "text": "Find the fourth letter on the Tiber."
+    },
+    {
+     "markerId": "dniester",
+     "position": 10,
+     "text": "Find the tenth letter on the Dniester."
+    },
+    {
+     "markerId": "ebro",
+     "position": 6,
+     "text": "Find the sixth letter on the Ebro."
+    },
+    {
+     "markerId": "po",
+     "position": 8,
+     "text": "Find the eighth letter on the Po."
+    },
+    {
+     "markerId": "rhine",
+     "position": 1,
+     "text": "Find the first letter on the Rhine."
+    },
+    {
+     "markerId": "elbe",
+     "position": 5,
+     "text": "Find the fifth letter on the Elbe."
+    },
+    {
+     "markerId": "guadiana",
+     "position": 9,
+     "text": "Find the ninth letter on the Guadiana."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-2-final-ru",
+   "section": "rivers-of-europe",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "СУДОХОДСТВО",
+   "map": "./assets/europe-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
+     "letter": "С"
+    },
+    {
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
+     "letter": "У"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "Д"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "О"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "Х"
+    },
+    {
+     "id": "guadiana",
+     "x": 21.07,
+     "y": 78.79,
+     "letter": "О"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "Д"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "С"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "Т"
+    },
+    {
+     "id": "douro",
+     "x": 24.97,
+     "y": 73.09,
+     "letter": "В"
+    },
+    {
+     "id": "elbe",
+     "x": 48.18,
+     "y": 64.05,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "guadiana",
+     "position": 6,
+     "text": "Найди шестую букву на Гвадиане."
+    },
+    {
+     "markerId": "po",
+     "position": 2,
+     "text": "Найди вторую букву на реке По."
+    },
+    {
+     "markerId": "ebro",
+     "position": 4,
+     "text": "Найди четвёртую букву на Эбро."
+    },
+    {
+     "markerId": "volga",
+     "position": 9,
+     "text": "Найди девятую букву на Волге."
+    },
+    {
+     "markerId": "elbe",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Эльбе."
+    },
+    {
+     "markerId": "vistula",
+     "position": 7,
+     "text": "Найди седьмую букву на Висле."
+    },
+    {
+     "markerId": "tiber",
+     "position": 3,
+     "text": "Найди третью букву на Тибре."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 8,
+     "text": "Найди восьмую букву на Днепре."
+    },
+    {
+     "markerId": "douro",
+     "position": 10,
+     "text": "Найди десятую букву на Дуэро."
+    },
+    {
+     "markerId": "loire",
+     "position": 1,
+     "text": "Найди первую букву на Луаре."
+    },
+    {
+     "markerId": "thames",
+     "position": 5,
+     "text": "Найди пятую букву на Темзе."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

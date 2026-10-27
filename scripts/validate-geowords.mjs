@@ -126,14 +126,17 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
 // Europe map (block 2): letters only on objects of data/maps/europe-overview.json, each inside its own object (the Ural River: within
 // 1% of its line), never inside another object of the puzzle, never with the object that contains it, spacing >= 4.5 on the 2200×1600 map.
 {
-  const eu = Object.fromEntries(readMap("europe-overview.json", "items").map(o => [o.id, o]));
+  // section 2 «Rivers of Europe» (europe-rivers.webp): the rivers of europe-rivers.json join the section-1 objects
+  const eu1 = Object.fromEntries(readMap("europe-overview.json", "items").map(o => [o.id, o]));
+  const eu2 = { ...eu1, ...Object.fromEntries(readMap("europe-rivers.json", "items").map(o => [o.id, o])) };
   const EU_IN = { "north-sea": ["atlantic-ocean"], "baltic-sea": ["atlantic-ocean"], "barents-sea": ["arctic-ocean"], "great-britain": ["atlantic-ocean"],
     ireland: ["atlantic-ocean"], iceland: ["atlantic-ocean"], sicily: ["mediterranean-sea"] };
   const inObj = (o, m) => polys(o.tapArea).some(pl => inPoly(m.x, m.y, pl)) && !polys(o.holes || []).some(pl => inPoly(m.x, m.y, pl));
   const segDist = (m, [a, b]) => { const dx = b[0] - a[0], dy = b[1] - a[1], t = Math.max(0, Math.min(1, ((m.x - a[0]) * dx + (m.y - a[1]) * dy) / (dx * dx + dy * dy || 1)));
     return Math.hypot(a[0] + t * dx - m.x, a[1] + t * dy - m.y); };
   for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
-    for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(p => p.map?.endsWith("europe-blank.webp"))) {
+    for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(p => /europe-(blank|rivers)\.webp$/.test(p.map || ""))) {
+      const eu = p.map.endsWith("europe-rivers.webp") ? eu2 : eu1;
       const err = m => errors.push(`${file}: ${p.id} ${m}`), ms = p.markers || [];
       for (const m of ms) {
         const o = eu[m.id];

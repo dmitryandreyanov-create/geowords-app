@@ -47,6 +47,15 @@ const RELEASE = {
       "scandinavian-peninsula", "kola-peninsula", "jutland", "iberian-peninsula", "apennine-peninsula", "balkan-peninsula", "crimean-peninsula",
       "great-britain", "ireland", "iceland", "sicily", "baltic-sea", "north-sea", "barents-sea"],
   },
+  "b2-section-2-facts.json": {
+    section: "rivers-of-europe",
+    ids: ["volga", "don", "dnieper", "dniester", "danube", "rhine", "elbe", "oder", "vistula", "thames", "seine", "loire", "rhone",
+      "po", "tiber", "tagus", "douro", "guadiana", "ebro", "guadalquivir"],
+  },
+  "b2-section-2-records.json": {
+    section: "rivers-of-europe",
+    ids: ["volga-largest-delta", "loire-longest-france", "tagus-longest-iberia"],
+  },
   "b2-section-1-records.json": {
     section: "europe-on-the-map",
     ids: ["scandinavian-largest-peninsula", "great-britain-largest-island", "sicily-largest-mediterranean-island"],
