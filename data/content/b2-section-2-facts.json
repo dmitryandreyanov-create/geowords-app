@@ -1,0 +1,542 @@
+{
+ "section": "rivers-of-europe",
+ "block": 2,
+ "use": "introduction cards, one fact per river; ids match data/maps/europe-rivers.json; the Ural River comes from section 1 and is only reviewed",
+ "decisions": [
+  "Svetlana (27.10.2026): added the Dniester, the Tiber and the Guadiana; the Dniester and the Guadiana were drawn onto europe-rivers.webp.",
+  "Svetlana (27.10.2026): new wording for the Rhine, Oder, Rhône, Tagus and Douro."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Великие реки Восточной Европы",
+    "en": "Great rivers of Eastern Europe"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Реки Центральной Европы",
+    "en": "Rivers of Central Europe"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Реки Западной Европы",
+    "en": "Rivers of Western Europe"
+   }
+  },
+  {
+   "n": 4,
+   "title": {
+    "ru": "Реки Южной Европы",
+    "en": "Rivers of Southern Europe"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "volga",
+   "order": 1,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Volga",
+    "ru": "Волга"
+   },
+   "fact": {
+    "en": "The Volga flows through Russia into the Caspian Sea.",
+    "ru": "Волга течёт по России и впадает в Каспийское море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "aea72eee199d380c"
+   }
+  },
+  {
+   "id": "don",
+   "order": 2,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Don",
+    "ru": "Дон"
+   },
+   "fact": {
+    "en": "The Don flows into the Sea of Azov. The Volga–Don Canal links it to the Volga.",
+    "ru": "Дон впадает в Азовское море. С Волгой его соединяет Волго-Донской канал."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "7b494239b9f96014"
+   }
+  },
+  {
+   "id": "dnieper",
+   "order": 3,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Dnieper",
+    "ru": "Днепр"
+   },
+   "fact": {
+    "en": "The Dnieper flows through Russia, Belarus and Ukraine into the Black Sea.",
+    "ru": "Днепр течёт по России, Беларуси и Украине и впадает в Чёрное море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "017bee70315a2510"
+   }
+  },
+  {
+   "id": "dniester",
+   "order": 4,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Dniester",
+    "ru": "Днестр"
+   },
+   "fact": {
+    "en": "The Dniester rises in the Carpathians, flows through Ukraine and Moldova and reaches the Black Sea through the Dniester Estuary.",
+    "ru": "Днестр начинается в Карпатах, течёт по Украине и Молдове и впадает в Чёрное море через Днестровский лиман."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "ba782a92f5a71b0f"
+   }
+  },
+  {
+   "id": "danube",
+   "order": 5,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Danube",
+    "ru": "Дунай"
+   },
+   "fact": {
+    "en": "The Danube flows through four capitals: Vienna, Bratislava, Budapest and Belgrade.",
+    "ru": "Дунай протекает через четыре столицы: Вену, Братиславу, Будапешт и Белград."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "f29f1d5426bdd0f8"
+   }
+  },
+  {
+   "id": "rhine",
+   "order": 6,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Rhine",
+    "ru": "Рейн"
+   },
+   "fact": {
+    "en": "The Rhine rises in the Swiss Alps and flows into the North Sea. It is one of Europe's most important waterways.",
+    "ru": "Рейн берёт начало в Швейцарских Альпах и впадает в Северное море. Это одна из важнейших судоходных рек Европы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "5fbc1ae83db5a546"
+   }
+  },
+  {
+   "id": "elbe",
+   "order": 7,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Elbe",
+    "ru": "Эльба"
+   },
+   "fact": {
+    "en": "The Elbe rises in the mountains of Czechia and flows into the North Sea. The port of Hamburg stands on it.",
+    "ru": "Эльба начинается в горах Чехии и впадает в Северное море. На ней стоит порт Гамбург."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "fe2ce4d655be55f2"
+   }
+  },
+  {
+   "id": "oder",
+   "order": 8,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Oder",
+    "ru": "Одер"
+   },
+   "fact": {
+    "en": "The Oder reaches the Baltic Sea through a system of lagoons and channels. It forms part of the border between Germany and Poland.",
+    "ru": "Одер впадает в Балтийское море через систему лагун и проливов. На значительном участке он образует границу Германии и Польши."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "252ec7fbe1c23a26"
+   }
+  },
+  {
+   "id": "vistula",
+   "order": 9,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Vistula",
+    "ru": "Висла"
+   },
+   "fact": {
+    "en": "The Vistula is the longest river in Poland. It flows through Kraków and Warsaw into the Baltic Sea.",
+    "ru": "Висла — самая длинная река Польши. Она течёт через Краков и Варшаву в Балтийское море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "59acab6fc6bfe123"
+   }
+  },
+  {
+   "id": "thames",
+   "order": 10,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Thames",
+    "ru": "Темза"
+   },
+   "fact": {
+    "en": "The Thames is the longest river in England. It flows through London into the North Sea.",
+    "ru": "Темза — самая длинная река Англии. Она течёт через Лондон в Северное море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "0a183abeed5d5eb5"
+   }
+  },
+  {
+   "id": "seine",
+   "order": 11,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Seine",
+    "ru": "Сена"
+   },
+   "fact": {
+    "en": "The Seine flows through Paris into the English Channel.",
+    "ru": "Сена течёт через Париж и впадает в пролив Ла-Манш."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "0f239cbb27cd633b"
+   }
+  },
+  {
+   "id": "loire",
+   "order": 12,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Loire",
+    "ru": "Луара"
+   },
+   "fact": {
+    "en": "Old castles stand on the banks of the Loire. The river flows into the Atlantic Ocean.",
+    "ru": "На берегах Луары стоят старинные замки. Река впадает в Атлантический океан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "8ca4a78df34c8dcb"
+   }
+  },
+  {
+   "id": "rhone",
+   "order": 13,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Rhône",
+    "ru": "Рона"
+   },
+   "fact": {
+    "en": "The Rhône rises near the Rhône Glacier in the Swiss Alps, flows through Lake Geneva and empties into the Mediterranean Sea.",
+    "ru": "Рона берёт начало у Ронского ледника в Швейцарских Альпах, проходит через Женевское озеро и впадает в Средиземное море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "6dba6424a1d43801"
+   }
+  },
+  {
+   "id": "po",
+   "order": 14,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Po",
+    "ru": "По"
+   },
+   "fact": {
+    "en": "The Po is the longest river in Italy. It flows east from the Alps into the Adriatic Sea.",
+    "ru": "По — самая длинная река Италии. Она течёт с Альп на восток и впадает в Адриатическое море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "ca89ccf8c1951c60"
+   }
+  },
+  {
+   "id": "tiber",
+   "order": 15,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Tiber",
+    "ru": "Тибр"
+   },
+   "fact": {
+    "en": "Ancient Rome grew up on the banks of the Tiber. The river flows through Rome into the Tyrrhenian Sea.",
+    "ru": "На берегах Тибра вырос Древний Рим. Река течёт через Рим и впадает в Тирренское море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "1bf9081c6e0e047a"
+   }
+  },
+  {
+   "id": "tagus",
+   "order": 16,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Tagus",
+    "ru": "Тахо"
+   },
+   "fact": {
+    "en": "The Tagus curves around the historic city of Toledo and reaches the Atlantic Ocean through a wide estuary near Lisbon.",
+    "ru": "Тахо огибает исторический город Толедо и впадает в Атлантический океан через широкий эстуарий у Лиссабона."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "d459e9d47e6c4c57"
+   }
+  },
+  {
+   "id": "douro",
+   "order": 17,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Douro",
+    "ru": "Дуэро"
+   },
+   "fact": {
+    "en": "The Douro flows from Spain into Portugal and empties into the Atlantic Ocean at Porto.",
+    "ru": "Дуэро течёт из Испании в Португалию и впадает в Атлантический океан у города Порту."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "25bd8fa56eae4f53"
+   }
+  },
+  {
+   "id": "guadiana",
+   "order": 18,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Guadiana",
+    "ru": "Гвадиана"
+   },
+   "fact": {
+    "en": "In its lower course the Guadiana forms the border between Spain and Portugal. The river flows into the Atlantic Ocean.",
+    "ru": "На нижнем участке Гвадиана служит границей Испании и Португалии. Река впадает в Атлантический океан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "6038dd76f7e38f09"
+   }
+  },
+  {
+   "id": "ebro",
+   "order": 19,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Ebro",
+    "ru": "Эбро"
+   },
+   "fact": {
+    "en": "The Ebro flows across north-eastern Spain and forms a delta where it meets the Mediterranean Sea.",
+    "ru": "Эбро течёт по северо-востоку Испании и впадает в Средиземное море, образуя дельту."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "4bbf88a6e8b198e2"
+   }
+  },
+  {
+   "id": "guadalquivir",
+   "order": 20,
+   "kind": "river",
+   "unit": 4,
+   "name": {
+    "en": "Guadalquivir",
+    "ru": "Гвадалквивир"
+   },
+   "fact": {
+    "en": "The Guadalquivir flows across southern Spain. Sea ships sail up it as far as Seville.",
+    "ru": "Гвадалквивир течёт по югу Испании. Морские суда поднимаются по нему до Севильи."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
+    "note": "block 2 section 2 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "b6ec14524fc173db"
+   }
+  }
+ ]
+}
