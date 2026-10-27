@@ -1,13 +1,16 @@
 {
  "section": "rivers-of-europe",
  "block": 2,
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-27",
  "source": "Svetlana's list (27.10.2026) and the doc https://claude.ai/artifact/Gwso4KmCJxQSoEaDg6ouip",
  "rules": {
   "structure": "4 units x (1 final + at least 6 review words) + section final; practice draws 6 of each unit's review words",
   "places": "letters on the learned rivers of the section and on every object of section 1 (europe-overview.json)",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "RU words approved by Svetlana 27.10.2026 («Согласна»); ВОЛГОГРАД reworded without the root «Волг»; EN definitions are translations awaiting her approval; ВАРЯГИ reworded: «из варяг в греки» repeats the answer"
+  "draft": "all words approved by Svetlana 27.10.2026: RU list («Согласна»), then EN definitions and the reworded ВАРЯГИ / ВОЛГОГРАД («Утверждаю»)"
  },
  "units": [
   {
@@ -23,7 +26,10 @@
       "role": "final",
       "definition": "Скандинавские воины и купцы, ходившие по Днепру в Византию.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "fb97fd312f3de0b1"
       }
      },
      {
@@ -86,7 +92,10 @@
       "role": "review",
       "definition": "Большой город на самой длинной реке Европы, раньше назывался Сталинградом.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "9fca383efa5042ce"
       }
      }
     ],
@@ -96,7 +105,10 @@
       "role": "final",
       "definition": "Scandinavian warriors and merchants who sailed down the Dnieper to Constantinople.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "c2170bd90df20a93"
       }
      },
      {
@@ -104,7 +116,10 @@
       "role": "review",
       "definition": "Roman Vienna on the Danube.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "031bbea8a3dc45fd"
       }
      },
      {
@@ -112,7 +127,10 @@
       "role": "review",
       "definition": "A medieval city on the Danube.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "58875bbbf94b4603"
       }
      },
      {
@@ -120,7 +138,10 @@
       "role": "review",
       "definition": "A city on both banks of the Danube.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "44e90eb6cff4fac1"
       }
      },
      {
@@ -128,7 +149,10 @@
       "role": "review",
       "definition": "The fortified border of the Roman Empire along the Rhine and the Danube.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "694c3224badf4fc2"
       }
      },
      {
@@ -136,7 +160,10 @@
       "role": "review",
       "definition": "A city in the Volga delta.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "8c0703fd56115444"
       }
      },
      {
@@ -144,7 +171,10 @@
       "role": "review",
       "definition": "A large city on the longest river in Europe, once called Stalingrad.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "356afa400078df1c"
       }
      }
     ]
@@ -264,7 +294,10 @@
       "role": "final",
       "definition": "A league of trading cities of northern Europe, with ports on the Elbe, the Oder and the Vistula.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "976e5dbe19396286"
       }
      },
      {
@@ -272,7 +305,10 @@
       "role": "review",
       "definition": "A legendary rock on the Rhine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "e2c1001965c7a65c"
       }
      },
      {
@@ -280,7 +316,10 @@
       "role": "review",
       "definition": "A port in the delta of the Rhine and the Meuse.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "06b2b2ac1d7706dd"
       }
      },
      {
@@ -288,7 +327,10 @@
       "role": "review",
       "definition": "A port on the Elbe.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "7064e9d6e85813d1"
       }
      },
      {
@@ -296,7 +338,10 @@
       "role": "review",
       "definition": "A tributary of the Elbe, the river of Prague.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "49a66d9b9a5a3d51"
       }
      },
      {
@@ -304,7 +349,10 @@
       "role": "review",
       "definition": "A tributary of the Rhine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "5b947c528f2fc339"
       }
      },
      {
@@ -312,7 +360,10 @@
       "role": "review",
       "definition": "A tributary of the Rhine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "0c2b110a3c39d486"
       }
      },
      {
@@ -320,7 +371,10 @@
       "role": "review",
       "definition": "The place where the Rhine and the Moselle meet.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "53275fe369047ab5"
       }
      },
      {
@@ -328,7 +382,10 @@
       "role": "review",
       "definition": "Heroes of a Germanic epic linked to the Rhine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "4fd5bae844cfdd0c"
       }
      }
     ]
@@ -426,7 +483,10 @@
       "role": "final",
       "definition": "Roman London on the Thames.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "0262eec92b0ff15d"
       }
      },
      {
@@ -434,7 +494,10 @@
       "role": "review",
       "definition": "Ancient Paris on the Seine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "39029f472d2e85f0"
       }
      },
      {
@@ -442,7 +505,10 @@
       "role": "review",
       "definition": "A historic city on the Thames.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "034369eadae6e92f"
       }
      },
      {
@@ -450,7 +516,10 @@
       "role": "review",
       "definition": "A historic city on the Rhône.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "d014e1ad4a2c504a"
       }
      },
      {
@@ -458,7 +527,10 @@
       "role": "review",
       "definition": "A natural area in the Rhône delta.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "5ad830475667ab63"
       }
      },
      {
@@ -466,7 +538,10 @@
       "role": "review",
       "definition": "A river of south-western France.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "15fc6693e77e1d30"
       }
      },
      {
@@ -474,7 +549,10 @@
       "role": "review",
       "definition": "A city where the Rhône and the Saône meet.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "05b7f46ff21b9184"
       }
      }
     ]
@@ -572,7 +650,10 @@
       "role": "final",
       "definition": "The river that Caesar crossed.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "510325de8fe079ac"
       }
      },
      {
@@ -580,7 +661,10 @@
       "role": "review",
       "definition": "A famous wine from the Douro valley.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "8279fe59194759d0"
       }
      },
      {
@@ -588,7 +672,10 @@
       "role": "review",
       "definition": "A historic port on the Guadalquivir.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "1e0e1aba190e6bc6"
       }
      },
      {
@@ -596,7 +683,10 @@
       "role": "review",
       "definition": "A city in a bend of the Tagus.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "fab5ae665f80a020"
       }
      },
      {
@@ -604,7 +694,10 @@
       "role": "review",
       "definition": "The capital of Portugal at the mouth of the Tagus.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "d72311c66ee8d0f2"
       }
      },
      {
@@ -612,7 +705,10 @@
       "role": "review",
       "definition": "The legendary founder of Rome on the Tiber.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "30ee157f81ca9eba"
       }
      },
      {
@@ -620,7 +716,10 @@
       "role": "review",
       "definition": "A city on the Ebro.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "f7d2ee94e4c2dea9"
       }
      }
     ]
@@ -652,7 +751,10 @@
       "role": "section-final",
       "definition": "The movement of ships on rivers, seas and canals.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-27",
+       "contentSha256": "87d395d4ed3cb5da"
       }
      }
     ]

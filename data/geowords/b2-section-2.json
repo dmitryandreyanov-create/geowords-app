@@ -138,7 +138,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "6efcd596ff5fd0b7"
    }
   },
   {
@@ -226,7 +229,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "abe1420d95c6d3f0"
    }
   },
   {
@@ -303,7 +309,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "05c59d8f4839deb5"
    }
   },
   {
@@ -380,7 +389,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "aef638a44461c7c0"
    }
   },
   {
@@ -501,7 +513,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "6712790aa3860b82"
    }
   },
   {
@@ -622,7 +637,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "a40330327d7d794a"
    }
   },
   {
@@ -721,7 +739,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "b77fa5e55351a42d"
    }
   },
   {
@@ -820,7 +841,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "cdef0dec70755c14"
    }
   },
   {
@@ -952,7 +976,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "f28a41a5ccbd3340"
    }
   },
   {
@@ -1095,7 +1122,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-27",
+    "contentSha256": "020bccb0b33ea4a7"
    }
   }
  ]

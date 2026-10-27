@@ -1,4 +1,4 @@
-// Marks items of a content / dictionary file as approved by Svetlana with the hash the validators check.
+// Marks items of a content / dictionary / GeoWords file as approved by Svetlana with the hash the validators check.
 // usage: node tools/approve.mjs <file> <date> [ids-or-answers...]   (no ids: every item / word in the file)
 import fs from "node:fs";
 import crypto from "node:crypto";
@@ -12,6 +12,9 @@ const want = k => !only.length || only.includes(k);
 const j = JSON.parse(fs.readFileSync(file, "utf8"));
 let n = 0;
 for (const it of j.items || []) if (want(it.id)) { it.approval = approval(sha({ id: it.id, fact: it.fact, caveat: it.caveat ?? null, disputed: it.disputed, name: it.name })); n++; }
+// GeoWords puzzles: the approval covers what the child sees (validate-geowords.mjs)
+for (const p of j.puzzles || []) if (want(p.id)) { p.approval = approval(sha({ answer: p.answer, markers: p.markers, clues: p.clues, map: p.map, mapAspect: p.mapAspect,
+  layers: p.layers, language: p.language, showInsets: p.showInsets })); n++; }
 for (const u of j.units || []) for (const lang of ["en", "ru"]) for (const w of u.words?.[lang] || [])
   if (want(w.answer)) { w.approval = approval(sha({ answer: w.answer, definition: w.definition })); n++; }
 fs.writeFileSync(file, JSON.stringify(j, null, 1) + "\n");
