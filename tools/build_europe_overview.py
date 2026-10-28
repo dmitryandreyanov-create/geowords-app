@@ -136,7 +136,7 @@ for i, (id_, kind, unit, en, ru) in enumerate(ORDER, 1):
 
 out = {
   'map': './assets/europe-blank.webp',
-  'alsoValidFor': ['./assets/europe-capitals.webp', './assets/europe-rivers.webp', './assets/europe-mountains.webp'],
+  'alsoValidFor': ['./assets/europe-capitals.webp', './assets/europe-countries-rivers.webp', './assets/europe-rivers.webp', './assets/europe-mountains.webp'],
   'mapAspect': '11 / 8',
   'level': 'Europe on the map (block 2, section 1)',
   'coordinateSystem': 'label, tapArea, softArea and path in % of image width/height from top-left; same for all four europe-*.webp (shared base)',

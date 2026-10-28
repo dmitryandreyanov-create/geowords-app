@@ -3,8 +3,8 @@
  "block": 2,
  "rules": {
   "clues": "clues in reveal order; position = slot the letter fills",
-  "places": "letters at the centre of the countries of data/maps/europe-countries.json learned by the end of the unit (section final: all 13), never on a capital dot, first; then on the objects of data/maps/europe-overview.json except the Ural River (not drawn on the capitals map) and the Crimean Peninsula (never in country tasks, Svetlana 26.10.2026)",
-  "nesting": "as section 1, and a country never shares a puzzle with its island or peninsula (the United Kingdom / Great Britain, Ireland, Iceland, Norway and Sweden / the Scandinavian Peninsula, Denmark / Jutland, Spain and Portugal / the Iberian Peninsula); at most one of the Netherlands, Belgium and Luxembourg (Svetlana, 28.10.2026)",
+  "places": "letters at the centre of the countries of data/maps/europe-countries.json learned by the end of the unit (section final: all 13), never on a capital dot, and on the 20 rivers of data/maps/europe-rivers.json (at the middle of the river's longest line; Svetlana 28.10.2026: GeoWords must practise the rivers) first, mixed; then the other countries; the objects of data/maps/europe-overview.json only when needed, except the Ural River and the Crimean Peninsula (never in country tasks, Svetlana 26.10.2026). Map: europe-countries-rivers.webp = the capitals map with the rivers of section 2",
+  "nesting": "as section 1, and a river whose letter lies inside a country never shares a puzzle with it; a country never shares a puzzle with its island or peninsula (the United Kingdom / Great Britain, Ireland, Iceland, Norway and Sweden / the Scandinavian Peninsula, Denmark / Jutland, Spain and Portugal / the Iberian Peninsula); at most one of the Netherlands, Belgium and Luxembourg (Svetlana, 28.10.2026)",
   "spacing": "hypot(dx, dy * 1600/2200) >= 9 (% of map width): a letter marker is ~9% of the map wide on a phone (Svetlana, 28.10.2026)",
   "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
  },
@@ -17,7 +17,7 @@
    "role": "unit-final",
    "language": "en",
    "answer": "REVOLUTION",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -25,123 +25,120 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
-     "letter": "R"
-    },
-    {
-     "id": "france",
-     "x": 36.71,
-     "y": 66.39,
-     "letter": "E"
-    },
-    {
-     "id": "arctic-ocean",
-     "x": 43.57,
-     "y": 27.01,
-     "letter": "V"
-    },
-    {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
-     "letter": "O"
-    },
-    {
-     "id": "balkan-peninsula",
-     "x": 55.84,
-     "y": 81.15,
-     "letter": "L"
-    },
-    {
-     "id": "kola-peninsula",
-     "x": 64.33,
-     "y": 30.3,
-     "letter": "U"
-    },
-    {
      "id": "ireland-country",
      "x": 30.94,
      "y": 51.36,
-     "letter": "T"
+     "letter": "R"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "E"
     },
     {
      "id": "caspian-sea",
      "x": 88.77,
      "y": 80.74,
-     "letter": "I"
+     "letter": "V"
     },
     {
-     "id": "iberian-peninsula",
-     "x": 26.26,
-     "y": 76.31,
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
      "letter": "O"
     },
     {
-     "id": "jutland",
-     "x": 45.52,
-     "y": 52.1,
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "L"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "U"
+    },
+    {
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
+     "letter": "T"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "I"
+    },
+    {
+     "id": "france",
+     "x": 36.71,
+     "y": 66.39,
+     "letter": "O"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
      "letter": "N"
     }
    ],
    "clues": [
     {
-     "markerId": "balkan-peninsula",
-     "position": 5,
-     "text": "Find the fifth letter on the Balkan Peninsula."
+     "markerId": "volga",
+     "position": 6,
+     "text": "Find the sixth letter on the Volga."
     },
     {
-     "markerId": "arctic-ocean",
-     "position": 3,
-     "text": "Find the third letter in the Arctic Ocean."
+     "markerId": "tiber",
+     "position": 2,
+     "text": "Find the second letter on the Tiber."
     },
     {
-     "markerId": "ireland-country",
-     "position": 7,
-     "text": "Find the seventh letter in Ireland."
-    },
-    {
-     "markerId": "jutland",
-     "position": 10,
-     "text": "Find the tenth letter on the Jutland Peninsula."
+     "markerId": "vistula",
+     "position": 4,
+     "text": "Find the fourth letter on the Vistula."
     },
     {
      "markerId": "france",
-     "position": 2,
-     "text": "Find the second letter in France."
-    },
-    {
-     "markerId": "iberian-peninsula",
      "position": 9,
-     "text": "Find the ninth letter on the Iberian Peninsula."
+     "text": "Find the ninth letter in France."
     },
     {
-     "markerId": "kola-peninsula",
-     "position": 6,
-     "text": "Find the sixth letter on the Kola Peninsula."
+     "markerId": "ebro",
+     "position": 5,
+     "text": "Find the fifth letter on the Ebro."
+    },
+    {
+     "markerId": "tagus",
+     "position": 7,
+     "text": "Find the seventh letter on the Tagus."
     },
     {
      "markerId": "caspian-sea",
+     "position": 3,
+     "text": "Find the third letter in the Caspian Sea."
+    },
+    {
+     "markerId": "don",
      "position": 8,
-     "text": "Find the eighth letter in the Caspian Sea."
+     "text": "Find the eighth letter on the Don."
     },
     {
-     "markerId": "atlantic-ocean",
-     "position": 4,
-     "text": "Find the fourth letter in the Atlantic Ocean."
+     "markerId": "danube",
+     "position": 10,
+     "text": "Find the tenth letter on the Danube."
     },
     {
-     "markerId": "ural-mountains",
+     "markerId": "ireland-country",
      "position": 1,
-     "text": "Find the first letter in the Ural Mountains."
+     "text": "Find the first letter in Ireland."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "9f7d1171488b80bf"
+    "status": "draft"
    }
   },
   {
@@ -152,7 +149,7 @@
    "role": "unit-final",
    "language": "ru",
    "answer": "РЕВОЛЮЦИЯ",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -160,112 +157,109 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "united-kingdom",
-     "x": 35.18,
-     "y": 55.07,
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
      "letter": "Р"
     },
     {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
+     "id": "france",
+     "x": 36.71,
+     "y": 66.39,
      "letter": "Е"
     },
     {
-     "id": "iberian-peninsula",
-     "x": 26.26,
-     "y": 76.31,
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
      "letter": "В"
     },
     {
-     "id": "arctic-ocean",
-     "x": 43.57,
-     "y": 27.01,
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
      "letter": "О"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
      "letter": "Л"
     },
     {
-     "id": "mediterranean-sea",
-     "x": 50.38,
-     "y": 95.08,
+     "id": "ireland-country",
+     "x": 30.94,
+     "y": 51.36,
      "letter": "Ю"
     },
     {
-     "id": "kola-peninsula",
-     "x": 64.33,
-     "y": 30.3,
+     "id": "oder",
+     "x": 49.66,
+     "y": 61.27,
      "letter": "Ц"
     },
     {
-     "id": "apennine-peninsula",
-     "x": 44.69,
-     "y": 78.44,
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
      "letter": "И"
     },
     {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
      "letter": "Я"
     }
    ],
    "clues": [
     {
-     "markerId": "arctic-ocean",
-     "position": 4,
-     "text": "Найди четвёртую букву в Северном Ледовитом океане."
-    },
-    {
-     "markerId": "ural-mountains",
-     "position": 2,
-     "text": "Найди вторую букву в Уральских горах."
-    },
-    {
-     "markerId": "mediterranean-sea",
+     "markerId": "ireland-country",
      "position": 6,
-     "text": "Найди шестую букву в Средиземном море."
+     "text": "Найди шестую букву в Ирландии."
     },
     {
-     "markerId": "apennine-peninsula",
-     "position": 8,
-     "text": "Найди восьмую букву на Апеннинском полуострове."
+     "markerId": "tiber",
+     "position": 4,
+     "text": "Найди четвёртую букву на Тибре."
     },
     {
-     "markerId": "iberian-peninsula",
-     "position": 3,
-     "text": "Найди третью букву на Пиренейском полуострове."
+     "markerId": "france",
+     "position": 2,
+     "text": "Найди вторую букву во Франции."
     },
     {
-     "markerId": "kola-peninsula",
+     "markerId": "oder",
      "position": 7,
-     "text": "Найди седьмую букву на Кольском полуострове."
+     "text": "Найди седьмую букву на Одере."
     },
     {
-     "markerId": "atlantic-ocean",
+     "markerId": "tagus",
      "position": 5,
-     "text": "Найди пятую букву в Атлантическом океане."
+     "text": "Найди пятую букву на Тахо."
     },
     {
-     "markerId": "united-kingdom",
-     "position": 1,
-     "text": "Найди первую букву в Великобритании."
-    },
-    {
-     "markerId": "caspian-sea",
+     "markerId": "ebro",
      "position": 9,
-     "text": "Найди девятую букву в Каспийском море."
+     "text": "Найди девятую букву на Эбро."
+    },
+    {
+     "markerId": "danube",
+     "position": 1,
+     "text": "Найди первую букву на Дунае."
+    },
+    {
+     "markerId": "volga",
+     "position": 3,
+     "text": "Найди третью букву на Волге."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 8,
+     "text": "Найди восьмую букву на Днепре."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "6d939530c5185a4b"
+    "status": "draft"
    }
   },
   {
@@ -276,7 +270,7 @@
    "role": "unit-final",
    "language": "en",
    "answer": "CONQUISTADOR",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -284,145 +278,142 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
-     "letter": "C"
-    },
-    {
-     "id": "balkan-peninsula",
-     "x": 55.84,
-     "y": 81.15,
-     "letter": "O"
-    },
-    {
-     "id": "ireland-country",
-     "x": 30.94,
-     "y": 51.36,
-     "letter": "N"
-    },
-    {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
-     "letter": "Q"
-    },
-    {
-     "id": "scandinavian-peninsula",
-     "x": 49.37,
-     "y": 41.66,
-     "letter": "U"
-    },
-    {
-     "id": "apennine-peninsula",
-     "x": 44.69,
-     "y": 78.44,
-     "letter": "I"
-    },
-    {
      "id": "arctic-ocean",
      "x": 43.57,
      "y": 27.01,
-     "letter": "S"
+     "letter": "C"
     },
     {
-     "id": "portugal",
-     "x": 22.53,
-     "y": 74.16,
-     "letter": "T"
-    },
-    {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
-     "letter": "A"
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "O"
     },
     {
      "id": "netherlands",
      "x": 41.24,
      "y": 58.53,
+     "letter": "N"
+    },
+    {
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
+     "letter": "Q"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "U"
+    },
+    {
+     "id": "portugal",
+     "x": 22.53,
+     "y": 74.16,
+     "letter": "I"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "S"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "T"
+    },
+    {
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
+     "letter": "A"
+    },
+    {
+     "id": "ireland-country",
+     "x": 30.94,
+     "y": 51.36,
      "letter": "D"
     },
     {
-     "id": "mediterranean-sea",
-     "x": 50.38,
-     "y": 95.08,
+     "id": "atlantic-ocean",
+     "x": 16.9,
+     "y": 37.11,
      "letter": "O"
     },
     {
-     "id": "kola-peninsula",
-     "x": 64.33,
-     "y": 30.3,
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
      "letter": "R"
     }
    ],
    "clues": [
     {
-     "markerId": "balkan-peninsula",
-     "position": 2,
-     "text": "Find the second letter on the Balkan Peninsula."
-    },
-    {
-     "markerId": "arctic-ocean",
-     "position": 7,
-     "text": "Find the seventh letter in the Arctic Ocean."
-    },
-    {
-     "markerId": "caspian-sea",
+     "markerId": "vistula",
      "position": 4,
-     "text": "Find the fourth letter in the Caspian Sea."
+     "text": "Find the fourth letter on the Vistula."
     },
     {
-     "markerId": "portugal",
+     "markerId": "volga",
      "position": 8,
-     "text": "Find the eighth letter in Portugal."
+     "text": "Find the eighth letter on the Volga."
     },
     {
-     "markerId": "mediterranean-sea",
-     "position": 11,
-     "text": "Find the eleventh letter in the Mediterranean Sea."
-    },
-    {
-     "markerId": "ireland-country",
-     "position": 3,
-     "text": "Find the third letter in Ireland."
-    },
-    {
-     "markerId": "apennine-peninsula",
-     "position": 6,
-     "text": "Find the sixth letter on the Apennine Peninsula."
-    },
-    {
-     "markerId": "netherlands",
-     "position": 10,
-     "text": "Find the tenth letter in the Netherlands."
-    },
-    {
-     "markerId": "scandinavian-peninsula",
+     "markerId": "tiber",
      "position": 5,
-     "text": "Find the fifth letter on the Scandinavian Peninsula."
-    },
-    {
-     "markerId": "ural-mountains",
-     "position": 9,
-     "text": "Find the ninth letter in the Ural Mountains."
+     "text": "Find the fifth letter on the Tiber."
     },
     {
      "markerId": "atlantic-ocean",
-     "position": 1,
-     "text": "Find the first letter in the Atlantic Ocean."
+     "position": 11,
+     "text": "Find the eleventh letter in the Atlantic Ocean."
     },
     {
-     "markerId": "kola-peninsula",
+     "markerId": "portugal",
+     "position": 6,
+     "text": "Find the sixth letter in Portugal."
+    },
+    {
+     "markerId": "danube",
+     "position": 9,
+     "text": "Find the ninth letter on the Danube."
+    },
+    {
+     "markerId": "don",
+     "position": 2,
+     "text": "Find the second letter on the Don."
+    },
+    {
+     "markerId": "ebro",
+     "position": 7,
+     "text": "Find the seventh letter on the Ebro."
+    },
+    {
+     "markerId": "loire",
      "position": 12,
-     "text": "Find the twelfth letter on the Kola Peninsula."
+     "text": "Find the twelfth letter on the Loire."
+    },
+    {
+     "markerId": "ireland-country",
+     "position": 10,
+     "text": "Find the tenth letter in Ireland."
+    },
+    {
+     "markerId": "netherlands",
+     "position": 3,
+     "text": "Find the third letter in the Netherlands."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "0301c86b6a3f2e30"
+    "status": "draft"
    }
   },
   {
@@ -433,7 +424,7 @@
    "role": "unit-final",
    "language": "ru",
    "answer": "КОНКИСТАДОР",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -441,134 +432,131 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "sicily",
-     "x": 45.88,
-     "y": 90.03,
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
      "letter": "К"
-    },
-    {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
-     "letter": "О"
-    },
-    {
-     "id": "arctic-ocean",
-     "x": 43.57,
-     "y": 27.01,
-     "letter": "Н"
     },
     {
      "id": "ireland-country",
      "x": 30.94,
      "y": 51.36,
+     "letter": "О"
+    },
+    {
+     "id": "netherlands",
+     "x": 41.24,
+     "y": 58.53,
+     "letter": "Н"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
      "letter": "К"
     },
     {
-     "id": "scandinavian-peninsula",
-     "x": 49.37,
-     "y": 41.66,
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
      "letter": "И"
     },
     {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
      "letter": "С"
     },
     {
-     "id": "luxembourg-country",
-     "x": 40.76,
-     "y": 63.57,
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
      "letter": "Т"
     },
     {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
+     "id": "vistula",
+     "x": 54.56,
+     "y": 61.28,
      "letter": "А"
     },
     {
-     "id": "balkan-peninsula",
-     "x": 55.84,
-     "y": 81.15,
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
      "letter": "Д"
-    },
-    {
-     "id": "kola-peninsula",
-     "x": 64.33,
-     "y": 30.3,
-     "letter": "О"
     },
     {
      "id": "portugal",
      "x": 22.53,
      "y": 74.16,
+     "letter": "О"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
      "letter": "Р"
     }
    ],
    "clues": [
     {
-     "markerId": "luxembourg-country",
+     "markerId": "volga",
+     "position": 5,
+     "text": "Найди пятую букву на Волге."
+    },
+    {
+     "markerId": "vistula",
+     "position": 8,
+     "text": "Найди восьмую букву на Висле."
+    },
+    {
+     "markerId": "loire",
+     "position": 6,
+     "text": "Найди шестую букву на Луаре."
+    },
+    {
+     "markerId": "netherlands",
+     "position": 3,
+     "text": "Найди третью букву в Нидерландах."
+    },
+    {
+     "markerId": "danube",
+     "position": 9,
+     "text": "Найди девятую букву на Дунае."
+    },
+    {
+     "markerId": "ebro",
      "position": 7,
-     "text": "Найди седьмую букву в Люксембурге."
+     "text": "Найди седьмую букву на Эбро."
+    },
+    {
+     "markerId": "tiber",
+     "position": 4,
+     "text": "Найди четвёртую букву на Тибре."
     },
     {
      "markerId": "ireland-country",
-     "position": 4,
-     "text": "Найди четвёртую букву в Ирландии."
+     "position": 2,
+     "text": "Найди вторую букву в Ирландии."
     },
     {
-     "markerId": "caspian-sea",
-     "position": 8,
-     "text": "Найди восьмую букву в Каспийском море."
+     "markerId": "barents-sea",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Баренцевом море."
+    },
+    {
+     "markerId": "don",
+     "position": 1,
+     "text": "Найди первую букву на Дону."
     },
     {
      "markerId": "portugal",
-     "position": 11,
-     "text": "Найди одиннадцатую букву в Португалии."
-    },
-    {
-     "markerId": "ural-mountains",
-     "position": 6,
-     "text": "Найди шестую букву в Уральских горах."
-    },
-    {
-     "markerId": "arctic-ocean",
-     "position": 3,
-     "text": "Найди третью букву в Северном Ледовитом океане."
-    },
-    {
-     "markerId": "scandinavian-peninsula",
-     "position": 5,
-     "text": "Найди пятую букву на Скандинавском полуострове."
-    },
-    {
-     "markerId": "atlantic-ocean",
-     "position": 2,
-     "text": "Найди вторую букву в Атлантическом океане."
-    },
-    {
-     "markerId": "balkan-peninsula",
-     "position": 9,
-     "text": "Найди девятую букву на Балканском полуострове."
-    },
-    {
-     "markerId": "sicily",
-     "position": 1,
-     "text": "Найди первую букву на острове Сицилия."
-    },
-    {
-     "markerId": "kola-peninsula",
      "position": 10,
-     "text": "Найди десятую букву на Кольском полуострове."
+     "text": "Найди десятую букву в Португалии."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "d4a90417f12e71e5"
+    "status": "draft"
    }
   },
   {
@@ -579,7 +567,7 @@
    "role": "unit-final",
    "language": "en",
    "answer": "VIKINGS",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -587,15 +575,15 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "iceland-country",
-     "x": 32.86,
-     "y": 26.32,
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
      "letter": "V"
     },
     {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
+     "id": "finland",
+     "x": 58.49,
+     "y": 41.51,
      "letter": "I"
     },
     {
@@ -605,27 +593,27 @@
      "letter": "K"
     },
     {
-     "id": "france",
-     "x": 36.71,
-     "y": 66.39,
+     "id": "guadalquivir",
+     "x": 23.3,
+     "y": 80.9,
      "letter": "I"
     },
     {
-     "id": "sweden",
-     "x": 53.3,
-     "y": 37.05,
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
      "letter": "N"
     },
     {
-     "id": "ireland-country",
-     "x": 30.94,
-     "y": 51.36,
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
      "letter": "G"
     },
     {
-     "id": "portugal",
-     "x": 22.53,
-     "y": 74.16,
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
      "letter": "S"
     }
    ],
@@ -636,41 +624,38 @@
      "text": "Find the third letter in Denmark."
     },
     {
-     "markerId": "sweden",
+     "markerId": "loire",
      "position": 5,
-     "text": "Find the fifth letter in Sweden."
+     "text": "Find the fifth letter on the Loire."
     },
     {
-     "markerId": "caspian-sea",
+     "markerId": "finland",
      "position": 2,
-     "text": "Find the second letter in the Caspian Sea."
+     "text": "Find the second letter in Finland."
     },
     {
-     "markerId": "portugal",
+     "markerId": "volga",
      "position": 7,
-     "text": "Find the seventh letter in Portugal."
+     "text": "Find the seventh letter on the Volga."
     },
     {
-     "markerId": "france",
+     "markerId": "dniester",
+     "position": 1,
+     "text": "Find the first letter on the Dniester."
+    },
+    {
+     "markerId": "guadalquivir",
      "position": 4,
-     "text": "Find the fourth letter in France."
+     "text": "Find the fourth letter on the Guadalquivir."
     },
     {
      "markerId": "iceland-country",
-     "position": 1,
-     "text": "Find the first letter in Iceland."
-    },
-    {
-     "markerId": "ireland-country",
      "position": 6,
-     "text": "Find the sixth letter in Ireland."
+     "text": "Find the sixth letter in Iceland."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "55964c01833eb912"
+    "status": "draft"
    }
   },
   {
@@ -681,7 +666,7 @@
    "role": "unit-final",
    "language": "ru",
    "answer": "ВИКИНГИ",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -689,9 +674,9 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "ireland-country",
-     "x": 30.94,
-     "y": 51.36,
+     "id": "loire",
+     "x": 33.41,
+     "y": 65.26,
      "letter": "В"
     },
     {
@@ -701,46 +686,46 @@
      "letter": "И"
     },
     {
-     "id": "iceland-country",
-     "x": 32.86,
-     "y": 26.32,
-     "letter": "К"
-    },
-    {
-     "id": "balkan-peninsula",
-     "x": 55.84,
-     "y": 81.15,
-     "letter": "И"
-    },
-    {
-     "id": "france",
-     "x": 36.71,
-     "y": 66.39,
-     "letter": "Н"
-    },
-    {
      "id": "denmark",
      "x": 45.53,
      "y": 52.11,
+     "letter": "К"
+    },
+    {
+     "id": "guadalquivir",
+     "x": 23.3,
+     "y": 80.9,
+     "letter": "И"
+    },
+    {
+     "id": "tiber",
+     "x": 44.79,
+     "y": 80.58,
+     "letter": "Н"
+    },
+    {
+     "id": "dniester",
+     "x": 59.28,
+     "y": 68.82,
      "letter": "Г"
     },
     {
-     "id": "portugal",
-     "x": 22.53,
-     "y": 74.16,
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
      "letter": "И"
     }
    ],
    "clues": [
     {
-     "markerId": "iceland-country",
+     "markerId": "denmark",
      "position": 3,
-     "text": "Найди третью букву в Исландии."
+     "text": "Найди третью букву в Дании."
     },
     {
-     "markerId": "france",
+     "markerId": "tiber",
      "position": 5,
-     "text": "Найди пятую букву во Франции."
+     "text": "Найди пятую букву на Тибре."
     },
     {
      "markerId": "finland",
@@ -748,31 +733,28 @@
      "text": "Найди вторую букву в Финляндии."
     },
     {
-     "markerId": "denmark",
-     "position": 6,
-     "text": "Найди шестую букву в Дании."
-    },
-    {
-     "markerId": "balkan-peninsula",
-     "position": 4,
-     "text": "Найди четвёртую букву на Балканском полуострове."
-    },
-    {
-     "markerId": "ireland-country",
-     "position": 1,
-     "text": "Найди первую букву в Ирландии."
-    },
-    {
-     "markerId": "portugal",
+     "markerId": "iceland-country",
      "position": 7,
-     "text": "Найди седьмую букву в Португалии."
+     "text": "Найди седьмую букву в Исландии."
+    },
+    {
+     "markerId": "guadalquivir",
+     "position": 4,
+     "text": "Найди четвёртую букву на Гвадалквивире."
+    },
+    {
+     "markerId": "dniester",
+     "position": 6,
+     "text": "Найди шестую букву на Днестре."
+    },
+    {
+     "markerId": "loire",
+     "position": 1,
+     "text": "Найди первую букву на Луаре."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "9923b8b13d941e8d"
+    "status": "draft"
    }
   },
   {
@@ -783,7 +765,7 @@
    "role": "section-final",
    "language": "en",
    "answer": "EXPLORATION",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -791,134 +773,131 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "ireland-country",
-     "x": 30.94,
-     "y": 51.36,
+     "id": "oder",
+     "x": 49.66,
+     "y": 61.27,
      "letter": "E"
     },
     {
-     "id": "denmark",
-     "x": 45.53,
-     "y": 52.11,
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
      "letter": "X"
-    },
-    {
-     "id": "sweden",
-     "x": 53.3,
-     "y": 37.05,
-     "letter": "P"
-    },
-    {
-     "id": "sicily",
-     "x": 45.88,
-     "y": 90.03,
-     "letter": "L"
-    },
-    {
-     "id": "barents-sea",
-     "x": 62.81,
-     "y": 14.13,
-     "letter": "O"
-    },
-    {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
-     "letter": "R"
     },
     {
      "id": "iceland-country",
      "x": 32.86,
      "y": 26.32,
-     "letter": "A"
+     "letter": "P"
     },
     {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
-     "letter": "T"
+     "id": "ireland-country",
+     "x": 30.94,
+     "y": 51.36,
+     "letter": "L"
     },
     {
-     "id": "france",
-     "x": 36.71,
-     "y": 66.39,
-     "letter": "I"
-    },
-    {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
      "letter": "O"
     },
     {
-     "id": "portugal",
-     "x": 22.53,
-     "y": 74.16,
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
+     "letter": "R"
+    },
+    {
+     "id": "finland",
+     "x": 58.49,
+     "y": 41.51,
+     "letter": "A"
+    },
+    {
+     "id": "belgium",
+     "x": 39.73,
+     "y": 61.03,
+     "letter": "T"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "I"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "O"
+    },
+    {
+     "id": "norway",
+     "x": 47.19,
+     "y": 43.46,
      "letter": "N"
     }
    ],
    "clues": [
     {
-     "markerId": "sicily",
-     "position": 4,
-     "text": "Find the fourth letter on the island of Sicily."
-    },
-    {
      "markerId": "iceland-country",
-     "position": 7,
-     "text": "Find the seventh letter in Iceland."
-    },
-    {
-     "markerId": "denmark",
-     "position": 2,
-     "text": "Find the second letter in Denmark."
-    },
-    {
-     "markerId": "caspian-sea",
-     "position": 10,
-     "text": "Find the tenth letter in the Caspian Sea."
-    },
-    {
-     "markerId": "atlantic-ocean",
-     "position": 6,
-     "text": "Find the sixth letter in the Atlantic Ocean."
-    },
-    {
-     "markerId": "france",
-     "position": 9,
-     "text": "Find the ninth letter in France."
-    },
-    {
-     "markerId": "portugal",
-     "position": 11,
-     "text": "Find the eleventh letter in Portugal."
-    },
-    {
-     "markerId": "sweden",
      "position": 3,
-     "text": "Find the third letter in Sweden."
+     "text": "Find the third letter in Iceland."
+    },
+    {
+     "markerId": "finland",
+     "position": 7,
+     "text": "Find the seventh letter in Finland."
+    },
+    {
+     "markerId": "po",
+     "position": 5,
+     "text": "Find the fifth letter on the Po."
+    },
+    {
+     "markerId": "belgium",
+     "position": 8,
+     "text": "Find the eighth letter in Belgium."
+    },
+    {
+     "markerId": "danube",
+     "position": 2,
+     "text": "Find the second letter on the Danube."
+    },
+    {
+     "markerId": "norway",
+     "position": 11,
+     "text": "Find the eleventh letter in Norway."
     },
     {
      "markerId": "ireland-country",
+     "position": 4,
+     "text": "Find the fourth letter in Ireland."
+    },
+    {
+     "markerId": "volga",
+     "position": 9,
+     "text": "Find the ninth letter on the Volga."
+    },
+    {
+     "markerId": "tagus",
+     "position": 6,
+     "text": "Find the sixth letter on the Tagus."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 10,
+     "text": "Find the tenth letter on the Dnieper."
+    },
+    {
+     "markerId": "oder",
      "position": 1,
-     "text": "Find the first letter in Ireland."
-    },
-    {
-     "markerId": "ural-mountains",
-     "position": 8,
-     "text": "Find the eighth letter in the Ural Mountains."
-    },
-    {
-     "markerId": "barents-sea",
-     "position": 5,
-     "text": "Find the fifth letter in the Barents Sea."
+     "text": "Find the first letter on the Oder."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "8bbc22c6d398ecb3"
+    "status": "draft"
    }
   },
   {
@@ -929,7 +908,7 @@
    "role": "section-final",
    "language": "ru",
    "answer": "МОРЕПЛАВАНИЕ",
-   "map": "./assets/europe-capitals.webp",
+   "map": "./assets/europe-countries-rivers.webp",
    "mapAspect": "2200 / 1600",
    "layers": [],
    "showInsets": [],
@@ -937,40 +916,52 @@
    "minSeparation": 9,
    "markers": [
     {
-     "id": "france",
-     "x": 36.71,
-     "y": 66.39,
+     "id": "danube",
+     "x": 53.96,
+     "y": 76.51,
      "letter": "М"
     },
     {
-     "id": "denmark",
-     "x": 45.53,
-     "y": 52.11,
+     "id": "belgium",
+     "x": 39.73,
+     "y": 61.03,
      "letter": "О"
     },
     {
-     "id": "caspian-sea",
-     "x": 88.77,
-     "y": 80.74,
+     "id": "norway",
+     "x": 47.19,
+     "y": 43.46,
      "letter": "Р"
     },
     {
-     "id": "balkan-peninsula",
-     "x": 55.84,
-     "y": 81.15,
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
      "letter": "Е"
     },
     {
-     "id": "ural-mountains",
-     "x": 83.91,
-     "y": 44.04,
+     "id": "po",
+     "x": 43.02,
+     "y": 73.96,
      "letter": "П"
     },
     {
-     "id": "portugal",
-     "x": 22.53,
-     "y": 74.16,
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
      "letter": "Л"
+    },
+    {
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
+     "letter": "А"
+    },
+    {
+     "id": "finland",
+     "x": 58.49,
+     "y": 41.51,
+     "letter": "В"
     },
     {
      "id": "ireland-country",
@@ -979,103 +970,88 @@
      "letter": "А"
     },
     {
-     "id": "iceland-country",
-     "x": 32.86,
-     "y": 26.32,
-     "letter": "В"
-    },
-    {
-     "id": "sicily",
-     "x": 45.88,
-     "y": 90.03,
-     "letter": "А"
-    },
-    {
-     "id": "barents-sea",
-     "x": 62.81,
-     "y": 14.13,
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
      "letter": "Н"
     },
     {
-     "id": "finland",
-     "x": 58.49,
-     "y": 41.51,
+     "id": "oder",
+     "x": 49.66,
+     "y": 61.27,
      "letter": "И"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 16.9,
-     "y": 37.11,
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
      "letter": "Е"
     }
    ],
    "clues": [
     {
-     "markerId": "iceland-country",
-     "position": 8,
-     "text": "Найди восьмую букву в Исландии."
+     "markerId": "ireland-country",
+     "position": 9,
+     "text": "Найди девятую букву в Ирландии."
     },
     {
-     "markerId": "denmark",
-     "position": 2,
-     "text": "Найди вторую букву в Дании."
-    },
-    {
-     "markerId": "ural-mountains",
+     "markerId": "po",
      "position": 5,
-     "text": "Найди пятую букву в Уральских горах."
+     "text": "Найди пятую букву на реке По."
+    },
+    {
+     "markerId": "belgium",
+     "position": 2,
+     "text": "Найди вторую букву в Бельгии."
+    },
+    {
+     "markerId": "oder",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Одере."
     },
     {
      "markerId": "finland",
-     "position": 11,
-     "text": "Найди одиннадцатую букву в Финляндии."
+     "position": 8,
+     "text": "Найди восьмую букву в Финляндии."
     },
     {
-     "markerId": "balkan-peninsula",
-     "position": 4,
-     "text": "Найди четвёртую букву на Балканском полуострове."
-    },
-    {
-     "markerId": "sicily",
-     "position": 9,
-     "text": "Найди девятую букву на острове Сицилия."
-    },
-    {
-     "markerId": "atlantic-ocean",
-     "position": 12,
-     "text": "Найди двенадцатую букву в Атлантическом океане."
-    },
-    {
-     "markerId": "barents-sea",
-     "position": 10,
-     "text": "Найди десятую букву в Баренцевом море."
-    },
-    {
-     "markerId": "portugal",
-     "position": 6,
-     "text": "Найди шестую букву в Португалии."
-    },
-    {
-     "markerId": "france",
-     "position": 1,
-     "text": "Найди первую букву во Франции."
-    },
-    {
-     "markerId": "ireland-country",
-     "position": 7,
-     "text": "Найди седьмую букву в Ирландии."
-    },
-    {
-     "markerId": "caspian-sea",
+     "markerId": "norway",
      "position": 3,
-     "text": "Найди третью букву в Каспийском море."
+     "text": "Найди третью букву в Норвегии."
+    },
+    {
+     "markerId": "volga",
+     "position": 10,
+     "text": "Найди десятую букву на Волге."
+    },
+    {
+     "markerId": "ebro",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Эбро."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 6,
+     "text": "Найди шестую букву на Днепре."
+    },
+    {
+     "markerId": "danube",
+     "position": 1,
+     "text": "Найди первую букву на Дунае."
+    },
+    {
+     "markerId": "tagus",
+     "position": 7,
+     "text": "Найди седьмую букву на Тахо."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 4,
+     "text": "Найди четвёртую букву в Исландии."
     }
    ],
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "49c5ca4a1635469f"
+    "status": "draft"
    }
   }
  ]

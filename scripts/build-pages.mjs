@@ -51,7 +51,7 @@ const named=[
   ...fs.readdirSync(path.join(root,'assets/layers')).filter(f=>f.endsWith('.webp')).map(f=>`assets/layers/${f}`),
   'assets/world-base.webp','assets/world-base-plain.webp',
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
-  'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
+  'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){
