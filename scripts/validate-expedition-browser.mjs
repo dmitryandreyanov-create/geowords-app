@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.27-rivers2/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-rivers-tip/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -321,12 +321,15 @@ try{
         if(q.k==='introEu'||q.k==='introEuRec'){
           if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),(rFacts.items.find(i=>i.id===q.id)||eFacts.items.find(i=>i.id===q.id)).fact.ru);
           await page.locator('.fb .btn').click()}
+        else if(q.k==='tipEu'){const tip=rFacts.items.find(i=>i.id===q.id);assert.equal(id,'e2-u2-l2','the memory trick comes in «Oder and Vistula»');
+          assert.equal(await page.locator('.task .tip-phrase').innerText(),tip.name.ru);assert.equal((await page.locator('.task .mk.tip').allInnerTexts()).join(''),'РЭОВ','letters on the rivers, west to east');
+          await page.locator('.fb .btn').click()}
         else if(q.k==='findEu'){await tapAt(lab[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(q.k==='whatEu'){await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
       await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e2-u1-l1"]')}
-    for(const k of ['introEu','introEuRec','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
+    for(const k of ['introEu','introEuRec','tipEu','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
     for(const it of rMap.items)assert(seen.has(it.id),'river practised: '+it.id);
     // a tap between two rivers counts for the nearer one
     const near=await page.evaluate(([a,b])=>{window.__gwEuSec(8);const sz={W:360,H:262};return [window.__gwEuOk('tagus',a.x,a.y,sz),window.__gwEuOk('douro',a.x,a.y,sz),window.__gwEuHit(b.x,b.y,sz)]},[lab.tagus,lab.douro]);
