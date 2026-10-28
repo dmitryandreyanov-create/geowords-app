@@ -401,10 +401,16 @@ try{
         if(w<n-1)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
       assert.equal(words.size,n,'different words in unit '+u);await page.waitForSelector('[data-step="e3-u1-l1"]')}
     const mGeo=JSON.parse(fs.readFileSync('data/geowords/b2-section-3.json')).puzzles;
-    for(const step of ['e3-u1-final','e3-u2-final','e3-u3-final','e3-final'])if(!mGeo.some(p=>p.approval?.status==='approved'&&p.language==='ru')){
-      await page.locator(`[data-step="${step}"]`).click();assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft final does not open: '+step);await page.locator('.sheet button').click()}
+    for(const [step,id] of [['e3-u1-final','b2-section-3-unit-1-ru'],['e3-u2-final','b2-section-3-unit-2-ru'],['e3-u3-final','b2-section-3-unit-3-ru'],['e3-final','b2-section-3-final-ru']]){
+      const want=mGeo.find(p=>p.id===id);await page.locator(`[data-step="${step}"]`).click();
+      if(want?.approval?.status!=='approved'){assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft final does not open: '+step);await page.locator('.sheet button').click();continue}
+      await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-mountains.webp'),'final on the mountains map');
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e3-u1-l1"]')}
     await context.close()}
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» lessons and unit practice');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» lessons, unit practice and finals');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));

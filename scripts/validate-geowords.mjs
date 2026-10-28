@@ -9,6 +9,8 @@ const dir = process.env.GEOWORDS_DIR || path.join(process.cwd(), "data/geowords"
 const mapsDir = process.env.MAPS_DIR || path.join(process.cwd(), "data/maps");
 // Release packages: file -> the exact puzzle ids it must contain (each with a complete approval).
 const RELEASE = {
+  "b2-section-3.json": ["b2-section-3-final-en", "b2-section-3-final-ru", "b2-section-3-unit-1-en", "b2-section-3-unit-1-ru", "b2-section-3-unit-2-en", "b2-section-3-unit-2-ru",
+    "b2-section-3-unit-3-en", "b2-section-3-unit-3-ru"],
   "b2-section-2.json": ["b2-section-2-final-en", "b2-section-2-final-ru", "b2-section-2-unit-1-en", "b2-section-2-unit-1-ru", "b2-section-2-unit-2-en", "b2-section-2-unit-2-ru",
     "b2-section-2-unit-3-en", "b2-section-2-unit-3-ru", "b2-section-2-unit-4-en", "b2-section-2-unit-4-ru"],
   "b2-section-1.json": ["b2-section-1-final-en", "b2-section-1-final-ru", "b2-section-1-unit-1-en", "b2-section-1-unit-1-ru", "b2-section-1-unit-2-en", "b2-section-1-unit-2-ru", "b2-section-1-unit-3-en", "b2-section-1-unit-3-ru"],
