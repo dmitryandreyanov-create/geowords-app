@@ -1,0 +1,99 @@
+{
+ "section": "countries-west-and-north",
+ "block": 2,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "note": "Nuuk (Greenland) lies slightly further north than Reykjavik but Greenland is not independent; Reykjavik is further west than Lisbon but on an island.",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "reykjavik-northernmost-capital",
+   "order": 1,
+   "object": "iceland-country",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Iceland",
+    "ru": "Исландия"
+   },
+   "fact": {
+    "ru": "Рейкьявик — самая северная столица независимого государства в мире.",
+    "en": "Reykjavik is the northernmost capital of an independent country in the world."
+   },
+   "figure": {
+    "value": 64.15,
+    "unit": "°N"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/5GD3nuDQn15T1jvgCnTvrd"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "3fb928db8e146db3"
+   }
+  },
+  {
+   "id": "lisbon-westernmost-mainland-capital",
+   "order": 2,
+   "object": "portugal",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Portugal",
+    "ru": "Португалия"
+   },
+   "fact": {
+    "ru": "Лиссабон — самая западная столица независимого государства на европейском материке.",
+    "en": "Lisbon is the westernmost capital of an independent country on the European mainland."
+   },
+   "figure": {
+    "value": -9.14,
+    "unit": "°E"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/5GD3nuDQn15T1jvgCnTvrd"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "d685a21494f3b508"
+   }
+  },
+  {
+   "id": "france-largest-eu",
+   "order": 3,
+   "object": "france",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "France",
+    "ru": "Франция"
+   },
+   "fact": {
+    "ru": "Франция — самая большая по площади страна Европейского союза.",
+    "en": "France is the largest country in the European Union by area."
+   },
+   "figure": {
+    "value": 551695,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/5GD3nuDQn15T1jvgCnTvrd"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "deacad68f3a33ba7"
+   }
+  }
+ ]
+}
