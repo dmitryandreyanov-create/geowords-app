@@ -56,6 +56,14 @@ const RELEASE = {
     section: "rivers-of-europe",
     ids: ["volga-largest-delta", "loire-longest-france", "tagus-longest-iberia"],
   },
+  "b2-section-3-facts.json": {
+    section: "mountains-of-europe",
+    ids: ["pyrenees", "alps", "apennines", "carpathians", "balkan-mountains", "dinaric-alps", "scandinavian-mountains", "scottish-highlands", "caucasus"],
+  },
+  "b2-section-3-records.json": {
+    section: "mountains-of-europe",
+    ids: ["alps-highest-in-europe", "galdhopiggen-highest-northern-europe", "aneto-highest-pyrenees"],
+  },
   "b2-section-1-records.json": {
     section: "europe-on-the-map",
     ids: ["scandinavian-largest-peninsula", "great-britain-largest-island", "sicily-largest-mediterranean-island"],

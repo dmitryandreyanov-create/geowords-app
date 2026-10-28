@@ -41,6 +41,8 @@ const named=[
   'data/content/b2-section-1-facts.json','data/content/b2-section-1-records.json','data/dictionary/b2-section-1.json','data/geowords/b2-section-1.json',
   // Block 2 section 2 «Rivers of Europe»; its river lines are data/maps/europe-rivers.json (below).
   'data/content/b2-section-2-facts.json','data/content/b2-section-2-records.json','data/dictionary/b2-section-2.json','data/geowords/b2-section-2.json',
+  // Block 2 section 3 «Mountains of Europe»; its tap areas are data/maps/europe-mountains.json (below).
+  'data/content/b2-section-3-facts.json','data/content/b2-section-3-records.json','data/dictionary/b2-section-3.json','data/geowords/b2-section-3.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
