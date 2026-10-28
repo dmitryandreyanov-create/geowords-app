@@ -13,11 +13,17 @@
 // (data/maps/europe-countries.json, never on a capital dot) and on the objects of section 1 except the Ural River and the Crimean
 // Peninsula (Crimea never appears in country tasks, Svetlana 26.10.2026); spacing 9 (a letter
 // marker is ~9% of the map wide on a phone), at most one of the Netherlands, Belgium and Luxembourg; a country never with its island or peninsula.
-// Usage: node tools/build_b2_geowords.mjs [seed] [section 1|2|3|4]  — writes drafts; approved puzzles already in the file are kept as they are.
+// Section 5 «Countries and capitals: centre, south and east» (data/maps/europe-countries-5.json): letters at the centre of the countries
+// of section 5 learned by the end of the unit and of section 4; on the rivers of section 2, drawn over the capitals map («on the Danube»,
+// at the middle of the river's longest line); and on a river inside a country it crosses («on the Danube in Hungary»); the objects of
+// section 1 only when places run short. At least a third of the letters on rivers (Svetlana, 28.10.2026: rivers are not practised enough).
+// A country is named once per puzzle; a river letter «on the Danube» never shares a puzzle with a country the river crosses; one letter
+// per river; spacing 9 as in section 4.
+// Usage: node tools/build_b2_geowords.mjs [seed] [section 1|2|3|4|5]  — writes drafts; approved puzzles already in the file are kept as they are.
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/europe-overview.json", RIVERS = SEC === 4 ? "data/maps/europe-countries.json" : SEC === 3 ? "data/maps/europe-mountains.json" : "data/maps/europe-rivers.json";
+const MAP = "data/maps/europe-overview.json", RIVERS = SEC === 5 ? "data/maps/europe-rivers.json" : SEC === 4 ? "data/maps/europe-countries.json" : SEC === 3 ? "data/maps/europe-mountains.json" : "data/maps/europe-rivers.json";
 const DICT = `data/dictionary/b2-section-${SEC}.json`, OUT = `data/geowords/b2-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -57,7 +63,13 @@ export const PLACE = {
   portugal: ["в Португалии", "in Portugal"], norway: ["в Норвегии", "in Norway"], sweden: ["в Швеции", "in Sweden"], denmark: ["в Дании", "in Denmark"], finland: ["в Финляндии", "in Finland"],
   "iceland-country": ["в Исландии", "in Iceland"],
   douro: ["на Дуэро", "on the Douro"], guadiana: ["на Гвадиане", "on the Guadiana"], ebro: ["на Эбро", "on the Ebro"], guadalquivir: ["на Гвадалквивире", "on the Guadalquivir"],
+  germany: ["в Германии", "in Germany"], switzerland: ["в Швейцарии", "in Switzerland"], austria: ["в Австрии", "in Austria"], czechia: ["в Чехии", "in Czechia"],
+  poland: ["в Польше", "in Poland"], hungary: ["в Венгрии", "in Hungary"], italy: ["в Италии", "in Italy"], greece: ["в Греции", "in Greece"], serbia: ["в Сербии", "in Serbia"],
+  romania: ["в Румынии", "in Romania"], estonia: ["в Эстонии", "in Estonia"], latvia: ["в Латвии", "in Latvia"], lithuania: ["в Литве", "in Lithuania"],
+  belarus: ["в Беларуси", "in Belarus"], ukraine: ["в Украине", "in Ukraine"], russia: ["в России", "in Russia"],
 };
+// «on the Danube in Hungary»: the river phrase, then the country phrase
+export const placeOn = (river, country, li) => `${PLACE[river][li]} ${PLACE[country][li]}`;
 // An object and the object that contains it never share a puzzle ("in the Atlantic" would fit both letters).
 export const CONTAINERS = {
   "north-sea": ["atlantic-ocean"], "baltic-sea": ["atlantic-ocean"], "barents-sea": ["arctic-ocean"],
@@ -66,10 +78,11 @@ export const CONTAINERS = {
   "scottish-highlands": ["great-britain"],
   "united-kingdom": ["great-britain"], "ireland-country": ["ireland"], "iceland-country": ["iceland"], norway: ["scandinavian-peninsula"], sweden: ["scandinavian-peninsula"],
   denmark: ["jutland"], spain: ["iberian-peninsula"], portugal: ["iberian-peninsula"],
+  italy: ["apennine-peninsula", "sicily"], greece: ["balkan-peninsula"], serbia: ["balkan-peninsula"], russia: ["kola-peninsula", "ural-mountains"],
 };
 const BENELUX = ["netherlands", "belgium", "luxembourg-country"];
 const RIVER_POINT = { "ural-river": { x: 81.4, y: 57.08 } };// on the drawn line, next to its label
-const ASPECT = 1600 / 2200, SEP = SEC === 4 ? 9 : 4.5;
+const ASPECT = 1600 / 2200, SEP = SEC >= 4 ? 9 : 4.5;
 
 const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = JSON.parse(fs.readFileSync(RIVERS, "utf8")), dict = JSON.parse(fs.readFileSync(DICT, "utf8"));
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
@@ -121,6 +134,57 @@ function build(word, lang, unit, final, tries = 4000) {
   return { markers, clues };
 }
 
+// ---- section 5: countries, rivers and «a river in a country» ----
+const C5 = SEC === 5 ? JSON.parse(fs.readFileSync("data/maps/europe-countries-5.json", "utf8")) : null;
+const C4 = SEC === 5 ? JSON.parse(fs.readFileSync("data/maps/europe-countries.json", "utf8")) : null;
+const area5 = SEC === 5 ? Object.fromEntries([...map.items, ...C4.items, ...C5.items].filter(o => o.tapArea).map(o => [o.id, o])) : {};
+const in5 = (id, p) => { const o = area5[id]; return !!o && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl)); };
+function places5(unit) {
+  const out = [], learned = id => C4.items.some(o => o.id === id) || C5.items.some(o => o.id === id && o.unit <= unit);
+  for (const o of C5.items) if (o.unit <= unit) out.push({ id: o.id, kind: "country", country: o.id, unit: o.unit, x: o.label.x, y: o.label.y, place: PLACE[o.id] });
+  for (const o of C4.items) out.push({ id: o.id, kind: "country", country: o.id, unit: 0, x: o.label.x, y: o.label.y, place: PLACE[o.id] });
+  for (const r of rivers.items) {
+    const rc = C5.rivers.find(q => q.id === r.id);
+    out.push({ id: r.id, kind: "river", river: r.id, crosses: rc.crosses, unit: 0, x: r.label.x, y: r.label.y, place: PLACE[r.id] });
+    for (const q of rc.points) if (learned(q.country))
+      out.push({ id: `${r.id}@${q.country}`, kind: "river", river: r.id, country: q.country, unit: 0, x: q.x, y: q.y, place: [0, 1].map(li => placeOn(r.id, q.country, li)) });
+  }
+  for (const o of map.items) if (o.id !== "ural-river" && o.id !== "crimean-peninsula") out.push({ id: o.id, kind: "object", unit: -1, x: o.label.x, y: o.label.y, place: PLACE[o.id] });
+  return out;
+}
+const conflict5 = (a, b) => (a.river && a.river === b.river) || (a.country && a.country === b.country)
+  || (a.kind === "river" && !a.country && b.kind === "country" && a.crosses.includes(b.id)) || (b.kind === "river" && !b.country && a.kind === "country" && b.crosses.includes(a.id))
+  || (BENELUX.includes(a.country) && BENELUX.includes(b.country))
+  || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id)
+  || (a.kind !== "river" && in5(a.id, b)) || (b.kind !== "river" && in5(b.id, a));
+function build5(word, lang, unit, final, tries = 6000) {
+  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = Math.ceil(n / 3);
+  const usable = places5(unit).filter(p => !fold(p.place[li]).includes(fold(word)));
+  let best = null, bestScore = -1;
+  for (let k = 0; k < tries; k++) {
+    // rivers up to the quota first, then this unit's countries, other countries and rivers, and the section 1 objects last
+    const rank = p => p.unit === -1 ? 3 : p.kind === "country" && p.unit === unit ? 0 : 1;
+    const pool = shuffle([...usable]).sort((a, b) => rank(a) - rank(b));
+    const pick = [], ok = p => pick.every(q => far(p, q) && !conflict5(p, q));
+    for (const p of shuffle(usable.filter(p => p.kind === "river"))) if (pick.length < needR && ok(p)) pick.push(p);
+    for (const p of pool) if (pick.length < n && !pick.includes(p) && ok(p)) pick.push(p);
+    if (pick.length < n || pick.filter(p => p.kind === "river").length < needR) continue;
+    const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT))));
+    // a unit final is mostly about the unit's countries (their centre or a river in them); section 4 countries and section 1 objects fill in
+    const unitOf = c => C5.items.find(o => o.id === c)?.unit || 0;
+    const own = pick.filter(p => p.country && unitOf(p.country) === unit).length, units = new Set(pick.map(p => p.country && unitOf(p.country)).filter(Boolean)).size;
+    const inCountry = pick.filter(p => p.kind === "river" && p.country).length, filler = pick.filter(p => p.unit === -1).length, sec4 = pick.filter(p => p.country && !unitOf(p.country)).length;
+    const score = gap + (final ? units * 4 + pick.filter(p => p.country && unitOf(p.country)).length * 2 : own * 4) + inCountry * 1.5 - sec4 * 1.5 - filler * 3;
+    if (score > bestScore) { bestScore = score; best = shuffle(pick); }
+  }
+  if (!best) return null;
+  const order = revealOrder(n);
+  const markers = best.map((p, i) => ({ id: p.id, x: p.x, y: p.y, letter: letters[i] }));
+  const ord = tpl.ordinals[lang], t = tpl.template[lang], ph = Object.fromEntries(best.map(p => [p.id, p.place[li]]));
+  const clues = order.map(pos => ({ markerId: markers[pos - 1].id, position: pos, text: t.replace("{ordinal}", ord[pos - 1]).replace("{place}", ph[markers[pos - 1].id]) }));
+  return { markers, clues };
+}
+
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { puzzles: [] };
 const puzzles = [];
 for (const u of dict.units) {
@@ -130,14 +194,24 @@ for (const u of dict.units) {
     const id = `b2-section-${SEC}-${sectionFinal ? "final" : `unit-${unit}`}-${lang}`;
     const old = prev.puzzles.find(p => p.id === id);
     if (old?.approval?.status === "approved" && old.answer === w.answer) { puzzles.push(old); continue; }
-    const b = build(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
+    const b = (SEC === 5 ? build5 : build)(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
     if (!b) { console.error(`${id}: ${w.answer} cannot be laid out on the learned objects`); process.exitCode = 1; continue; }
     puzzles.push({ id, section: dict.section, block: 2, unit, role: sectionFinal ? "section-final" : "unit-final", language: lang, answer: w.answer,
-      map: SEC === 4 ? "./assets/europe-capitals.webp" : SEC === 3 ? "./assets/europe-mountains.webp" : SEC === 2 ? "./assets/europe-rivers.webp" : "./assets/europe-blank.webp", mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
+      map: SEC >= 4 ? "./assets/europe-capitals.webp" : SEC === 3 ? "./assets/europe-mountains.webp" : SEC === 2 ? "./assets/europe-rivers.webp" : "./assets/europe-blank.webp", mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
       approval: { status: "draft" } });
   }
 }
-const out = SEC === 4 ? {
+const out = SEC === 5 ? {
+  section: dict.section, block: 2,
+  rules: {
+    clues: "clues in reveal order; position = slot the letter fills",
+    places: "letters at the centre of the countries of data/maps/europe-countries-5.json learned by the end of the unit (section final: all 16) and of section 4; on the rivers of section 2 drawn over the capitals map (at the middle of the river's longest line, «on the Danube»); on a river inside a country it crosses (data/maps/europe-countries-5.json rivers[].points, «on the Danube in Hungary»); the objects of data/maps/europe-overview.json (not the Ural River or the Crimean Peninsula) only when places run short; at least a third of the letters on rivers (Svetlana, 28.10.2026)",
+    nesting: "a country is named once per puzzle (its centre or a river in it); one letter per river; a river letter «on the Danube» never shares a puzzle with a country the river crosses; a country never with its island or peninsula (Italy / the Apennine Peninsula, Sicily; Greece and Serbia / the Balkan Peninsula; Russia / the Kola Peninsula, the Ural Mountains; and section 4's); no letter inside the area of another place of the puzzle; at most one of the Netherlands, Belgium and Luxembourg",
+    spacing: "hypot(dx, dy * 1600/2200) >= 9 (% of map width), as in section 4",
+    approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
+  },
+  puzzles,
+} : SEC === 4 ? {
   section: dict.section, block: 2,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",

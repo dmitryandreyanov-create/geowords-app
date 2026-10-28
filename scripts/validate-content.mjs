@@ -64,6 +64,14 @@ const RELEASE = {
     section: "countries-west-and-north",
     ids: ["reykjavik-northernmost-capital", "lisbon-westernmost-mainland-capital", "france-largest-eu"],
   },
+  "b2-section-5-facts.json": {
+    section: "countries-centre-south-and-east",
+    ids: ["germany", "switzerland", "austria", "czechia", "poland", "hungary", "italy", "greece", "serbia", "romania", "estonia", "latvia", "lithuania", "belarus", "ukraine", "russia"],
+  },
+  "b2-section-5-records.json": {
+    section: "countries-centre-south-and-east",
+    ids: ["russia-largest-country", "vatican-smallest-country", "germany-most-populous-eu"],
+  },
   "b2-section-3-facts.json": {
     section: "mountains-of-europe",
     ids: ["pyrenees", "alps", "apennines", "carpathians", "balkan-mountains", "dinaric-alps", "scandinavian-mountains", "scottish-highlands", "caucasus"],

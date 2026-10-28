@@ -1,0 +1,1025 @@
+{
+ "section": "countries-centre-south-and-east",
+ "block": 2,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters at the centre of the countries of data/maps/europe-countries-5.json learned by the end of the unit (section final: all 16) and of section 4; on the rivers of section 2 drawn over the capitals map (at the middle of the river's longest line, «on the Danube»); on a river inside a country it crosses (data/maps/europe-countries-5.json rivers[].points, «on the Danube in Hungary»); the objects of data/maps/europe-overview.json (not the Ural River or the Crimean Peninsula) only when places run short; at least a third of the letters on rivers (Svetlana, 28.10.2026)",
+  "nesting": "a country is named once per puzzle (its centre or a river in it); one letter per river; a river letter «on the Danube» never shares a puzzle with a country the river crosses; a country never with its island or peninsula (Italy / the Apennine Peninsula, Sicily; Greece and Serbia / the Balkan Peninsula; Russia / the Kola Peninsula, the Ural Mountains; and section 4's); no letter inside the area of another place of the puzzle; at most one of the Netherlands, Belgium and Luxembourg",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 9 (% of map width), as in section 4",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b2-section-5-unit-1-en",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "REFORMATION",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "R"
+    },
+    {
+     "id": "switzerland",
+     "x": 41.43,
+     "y": 69.54,
+     "letter": "E"
+    },
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "F"
+    },
+    {
+     "id": "norway",
+     "x": 47.19,
+     "y": 43.46,
+     "letter": "O"
+    },
+    {
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
+     "letter": "R"
+    },
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "M"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "A"
+    },
+    {
+     "id": "danube@hungary",
+     "x": 52.26,
+     "y": 71.88,
+     "letter": "T"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "I"
+    },
+    {
+     "id": "guadiana",
+     "x": 21.07,
+     "y": 78.79,
+     "letter": "O"
+    },
+    {
+     "id": "finland",
+     "x": 58.49,
+     "y": 41.51,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "ebro",
+     "position": 7,
+     "text": "Find the seventh letter on the Ebro."
+    },
+    {
+     "markerId": "norway",
+     "position": 4,
+     "text": "Find the fourth letter in Norway."
+    },
+    {
+     "markerId": "switzerland",
+     "position": 2,
+     "text": "Find the second letter in Switzerland."
+    },
+    {
+     "markerId": "volga",
+     "position": 9,
+     "text": "Find the ninth letter on the Volga."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 3,
+     "text": "Find the third letter on the Dnieper."
+    },
+    {
+     "markerId": "guadiana",
+     "position": 10,
+     "text": "Find the tenth letter on the Guadiana."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 6,
+     "text": "Find the sixth letter on the Elbe in Germany."
+    },
+    {
+     "markerId": "danube@hungary",
+     "position": 8,
+     "text": "Find the eighth letter on the Danube in Hungary."
+    },
+    {
+     "markerId": "thames",
+     "position": 1,
+     "text": "Find the first letter on the Thames."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 5,
+     "text": "Find the fifth letter in Iceland."
+    },
+    {
+     "markerId": "finland",
+     "position": 11,
+     "text": "Find the eleventh letter in Finland."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-unit-1-ru",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "РЕФОРМАЦИЯ",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "Р"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "Е"
+    },
+    {
+     "id": "norway",
+     "x": 47.19,
+     "y": 43.46,
+     "letter": "Ф"
+    },
+    {
+     "id": "finland",
+     "x": 58.49,
+     "y": 41.51,
+     "letter": "О"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "Р"
+    },
+    {
+     "id": "danube@hungary",
+     "x": 52.26,
+     "y": 71.88,
+     "letter": "М"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "А"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "Ц"
+    },
+    {
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
+     "letter": "И"
+    },
+    {
+     "id": "switzerland",
+     "x": 41.43,
+     "y": 69.54,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "don",
+     "position": 7,
+     "text": "Найди седьмую букву на Дону."
+    },
+    {
+     "markerId": "thames",
+     "position": 5,
+     "text": "Найди пятую букву на Темзе."
+    },
+    {
+     "markerId": "norway",
+     "position": 3,
+     "text": "Найди третью букву в Норвегии."
+    },
+    {
+     "markerId": "danube@hungary",
+     "position": 6,
+     "text": "Найди шестую букву на Дунае в Венгрии."
+    },
+    {
+     "markerId": "volga",
+     "position": 8,
+     "text": "Найди восьмую букву на Волге."
+    },
+    {
+     "markerId": "switzerland",
+     "position": 10,
+     "text": "Найди десятую букву в Швейцарии."
+    },
+    {
+     "markerId": "finland",
+     "position": 4,
+     "text": "Найди четвёртую букву в Финляндии."
+    },
+    {
+     "markerId": "ebro",
+     "position": 2,
+     "text": "Найди вторую букву на Эбро."
+    },
+    {
+     "markerId": "tagus",
+     "position": 9,
+     "text": "Найди девятую букву на Тахо."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 1,
+     "text": "Найди первую букву на Эльбе в Германии."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-unit-2-en",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "GLADIATOR",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "danube@romania",
+     "x": 61.3,
+     "y": 76.36,
+     "letter": "G"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "L"
+    },
+    {
+     "id": "italy",
+     "x": 43.27,
+     "y": 73.71,
+     "letter": "A"
+    },
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "D"
+    },
+    {
+     "id": "don",
+     "x": 71.51,
+     "y": 61.84,
+     "letter": "I"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "A"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "T"
+    },
+    {
+     "id": "tagus",
+     "x": 21.28,
+     "y": 75.46,
+     "letter": "O"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "volga",
+     "position": 2,
+     "text": "Find the second letter on the Volga."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 4,
+     "text": "Find the fourth letter on the Elbe in Germany."
+    },
+    {
+     "markerId": "ebro",
+     "position": 6,
+     "text": "Find the sixth letter on the Ebro."
+    },
+    {
+     "markerId": "tagus",
+     "position": 8,
+     "text": "Find the eighth letter on the Tagus."
+    },
+    {
+     "markerId": "don",
+     "position": 5,
+     "text": "Find the fifth letter on the Don."
+    },
+    {
+     "markerId": "italy",
+     "position": 3,
+     "text": "Find the third letter in Italy."
+    },
+    {
+     "markerId": "greece",
+     "position": 9,
+     "text": "Find the ninth letter in Greece."
+    },
+    {
+     "markerId": "thames",
+     "position": 7,
+     "text": "Find the seventh letter on the Thames."
+    },
+    {
+     "markerId": "danube@romania",
+     "position": 1,
+     "text": "Find the first letter on the Danube in Romania."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-unit-2-ru",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГЛАДИАТОР",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "dnieper",
+     "x": 62.73,
+     "y": 60.58,
+     "letter": "Г"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "Л"
+    },
+    {
+     "id": "italy",
+     "x": 43.27,
+     "y": 73.71,
+     "letter": "А"
+    },
+    {
+     "id": "seine",
+     "x": 36.09,
+     "y": 62.31,
+     "letter": "Д"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "И"
+    },
+    {
+     "id": "danube@romania",
+     "x": 61.3,
+     "y": 76.36,
+     "letter": "А"
+    },
+    {
+     "id": "guadiana",
+     "x": 21.07,
+     "y": 78.79,
+     "letter": "Т"
+    },
+    {
+     "id": "oder@poland",
+     "x": 50.5,
+     "y": 62.96,
+     "letter": "О"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "Р"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "seine",
+     "position": 4,
+     "text": "Найди четвёртую букву на Сене."
+    },
+    {
+     "markerId": "danube@romania",
+     "position": 6,
+     "text": "Найди шестую букву на Дунае в Румынии."
+    },
+    {
+     "markerId": "ebro",
+     "position": 2,
+     "text": "Найди вторую букву на Эбро."
+    },
+    {
+     "markerId": "guadiana",
+     "position": 7,
+     "text": "Найди седьмую букву на Гвадиане."
+    },
+    {
+     "markerId": "volga",
+     "position": 5,
+     "text": "Найди пятую букву на Волге."
+    },
+    {
+     "markerId": "oder@poland",
+     "position": 8,
+     "text": "Найди восьмую букву на Одере в Польше."
+    },
+    {
+     "markerId": "dnieper",
+     "position": 1,
+     "text": "Найди первую букву на Днепре."
+    },
+    {
+     "markerId": "greece",
+     "position": 9,
+     "text": "Найди девятую букву в Греции."
+    },
+    {
+     "markerId": "italy",
+     "position": 3,
+     "text": "Найди третью букву в Италии."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-unit-3-en",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CYRILLIC",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "douro",
+     "x": 24.97,
+     "y": 73.09,
+     "letter": "C"
+    },
+    {
+     "id": "latvia",
+     "x": 58.8,
+     "y": 52.3,
+     "letter": "Y"
+    },
+    {
+     "id": "dnieper@ukraine",
+     "x": 66.84,
+     "y": 67.41,
+     "letter": "R"
+    },
+    {
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
+     "letter": "I"
+    },
+    {
+     "id": "russia",
+     "x": 73.46,
+     "y": 46.94,
+     "letter": "L"
+    },
+    {
+     "id": "ireland-country",
+     "x": 30.94,
+     "y": 51.36,
+     "letter": "L"
+    },
+    {
+     "id": "danube@serbia",
+     "x": 53.46,
+     "y": 75.97,
+     "letter": "I"
+    },
+    {
+     "id": "rhine@germany",
+     "x": 42.29,
+     "y": 63.21,
+     "letter": "C"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dnieper@ukraine",
+     "position": 3,
+     "text": "Find the third letter on the Dnieper in Ukraine."
+    },
+    {
+     "markerId": "russia",
+     "position": 5,
+     "text": "Find the fifth letter in Russia."
+    },
+    {
+     "markerId": "latvia",
+     "position": 2,
+     "text": "Find the second letter in Latvia."
+    },
+    {
+     "markerId": "rhine@germany",
+     "position": 8,
+     "text": "Find the eighth letter on the Rhine in Germany."
+    },
+    {
+     "markerId": "ireland-country",
+     "position": 6,
+     "text": "Find the sixth letter in Ireland."
+    },
+    {
+     "markerId": "douro",
+     "position": 1,
+     "text": "Find the first letter on the Douro."
+    },
+    {
+     "markerId": "danube@serbia",
+     "position": 7,
+     "text": "Find the seventh letter on the Danube in Serbia."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 4,
+     "text": "Find the fourth letter in Iceland."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-unit-3-ru",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "КИРИЛЛИЦА",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "К"
+    },
+    {
+     "id": "estonia",
+     "x": 58.52,
+     "y": 48.46,
+     "letter": "И"
+    },
+    {
+     "id": "dnieper@ukraine",
+     "x": 66.84,
+     "y": 67.41,
+     "letter": "Р"
+    },
+    {
+     "id": "russia",
+     "x": 73.46,
+     "y": 46.94,
+     "letter": "И"
+    },
+    {
+     "id": "guadiana",
+     "x": 21.07,
+     "y": 78.79,
+     "letter": "Л"
+    },
+    {
+     "id": "danube@hungary",
+     "x": 52.26,
+     "y": 71.88,
+     "letter": "Л"
+    },
+    {
+     "id": "ebro",
+     "x": 31.64,
+     "y": 77.56,
+     "letter": "И"
+    },
+    {
+     "id": "switzerland",
+     "x": 41.43,
+     "y": 69.54,
+     "letter": "Ц"
+    },
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "danube@hungary",
+     "position": 6,
+     "text": "Найди шестую букву на Дунае в Венгрии."
+    },
+    {
+     "markerId": "russia",
+     "position": 4,
+     "text": "Найди четвёртую букву в России."
+    },
+    {
+     "markerId": "estonia",
+     "position": 2,
+     "text": "Найди вторую букву в Эстонии."
+    },
+    {
+     "markerId": "ebro",
+     "position": 7,
+     "text": "Найди седьмую букву на Эбро."
+    },
+    {
+     "markerId": "guadiana",
+     "position": 5,
+     "text": "Найди пятую букву на Гвадиане."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 9,
+     "text": "Найди девятую букву на Эльбе в Германии."
+    },
+    {
+     "markerId": "thames",
+     "position": 1,
+     "text": "Найди первую букву на Темзе."
+    },
+    {
+     "markerId": "dnieper@ukraine",
+     "position": 3,
+     "text": "Найди третью букву на Днепре в Украине."
+    },
+    {
+     "markerId": "switzerland",
+     "position": 8,
+     "text": "Найди восьмую букву в Швейцарии."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-final-en",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "RENAISSANCE",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "guadalquivir",
+     "x": 23.3,
+     "y": 80.9,
+     "letter": "R"
+    },
+    {
+     "id": "dnieper@ukraine",
+     "x": 66.84,
+     "y": 67.41,
+     "letter": "E"
+    },
+    {
+     "id": "danube@hungary",
+     "x": 52.26,
+     "y": 71.88,
+     "letter": "N"
+    },
+    {
+     "id": "russia",
+     "x": 73.46,
+     "y": 46.94,
+     "letter": "A"
+    },
+    {
+     "id": "estonia",
+     "x": 58.52,
+     "y": 48.46,
+     "letter": "I"
+    },
+    {
+     "id": "sweden",
+     "x": 53.3,
+     "y": 37.05,
+     "letter": "S"
+    },
+    {
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
+     "letter": "S"
+    },
+    {
+     "id": "switzerland",
+     "x": 41.43,
+     "y": 69.54,
+     "letter": "A"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "N"
+    },
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "C"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "estonia",
+     "position": 5,
+     "text": "Find the fifth letter in Estonia."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 7,
+     "text": "Find the seventh letter in Iceland."
+    },
+    {
+     "markerId": "dnieper@ukraine",
+     "position": 2,
+     "text": "Find the second letter on the Dnieper in Ukraine."
+    },
+    {
+     "markerId": "switzerland",
+     "position": 8,
+     "text": "Find the eighth letter in Switzerland."
+    },
+    {
+     "markerId": "sweden",
+     "position": 6,
+     "text": "Find the sixth letter in Sweden."
+    },
+    {
+     "markerId": "greece",
+     "position": 9,
+     "text": "Find the ninth letter in Greece."
+    },
+    {
+     "markerId": "russia",
+     "position": 4,
+     "text": "Find the fourth letter in Russia."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 10,
+     "text": "Find the tenth letter on the Elbe in Germany."
+    },
+    {
+     "markerId": "guadalquivir",
+     "position": 1,
+     "text": "Find the first letter on the Guadalquivir."
+    },
+    {
+     "markerId": "thames",
+     "position": 11,
+     "text": "Find the eleventh letter on the Thames."
+    },
+    {
+     "markerId": "danube@hungary",
+     "position": 3,
+     "text": "Find the third letter on the Danube in Hungary."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-section-5-final-ru",
+   "section": "countries-centre-south-and-east",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "РЕНЕССАНС",
+   "map": "./assets/europe-capitals.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "switzerland",
+     "x": 41.43,
+     "y": 69.54,
+     "letter": "Р"
+    },
+    {
+     "id": "elbe@germany",
+     "x": 46.87,
+     "y": 59.31,
+     "letter": "Е"
+    },
+    {
+     "id": "danube@hungary",
+     "x": 52.26,
+     "y": 71.88,
+     "letter": "Н"
+    },
+    {
+     "id": "douro@spain",
+     "x": 27.58,
+     "y": 74.53,
+     "letter": "Е"
+    },
+    {
+     "id": "ukraine",
+     "x": 64.9,
+     "y": 66.73,
+     "letter": "С"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "С"
+    },
+    {
+     "id": "russia",
+     "x": 73.46,
+     "y": 46.94,
+     "letter": "А"
+    },
+    {
+     "id": "estonia",
+     "x": 58.52,
+     "y": 48.46,
+     "letter": "Н"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "С"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "greece",
+     "position": 6,
+     "text": "Найди шестую букву в Греции."
+    },
+    {
+     "markerId": "douro@spain",
+     "position": 4,
+     "text": "Найди четвёртую букву на Дуэро в Испании."
+    },
+    {
+     "markerId": "elbe@germany",
+     "position": 2,
+     "text": "Найди вторую букву на Эльбе в Германии."
+    },
+    {
+     "markerId": "thames",
+     "position": 9,
+     "text": "Найди девятую букву на Темзе."
+    },
+    {
+     "markerId": "danube@hungary",
+     "position": 3,
+     "text": "Найди третью букву на Дунае в Венгрии."
+    },
+    {
+     "markerId": "russia",
+     "position": 7,
+     "text": "Найди седьмую букву в России."
+    },
+    {
+     "markerId": "ukraine",
+     "position": 5,
+     "text": "Найди пятую букву в Украине."
+    },
+    {
+     "markerId": "estonia",
+     "position": 8,
+     "text": "Найди восьмую букву в Эстонии."
+    },
+    {
+     "markerId": "switzerland",
+     "position": 1,
+     "text": "Найди первую букву в Швейцарии."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
