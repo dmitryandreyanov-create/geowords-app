@@ -441,9 +441,33 @@ try{
       const wrong=await page.evaluate(([nl,be,lu,br])=>{window.__gwEuSec(10);const sz={W:360,H:262};
         return [window.__gwEuOk('belgium',nl.x,nl.y,sz),window.__gwEuOk('netherlands',be.x,be.y,sz),window.__gwEuOk('luxembourg-country',be.x,be.y,sz),window.__gwCapHit(br.x,br.y,sz)]},
         [lab.netherlands,lab.belgium,lab['luxembourg-country'],cap.belgium]);
-      assert.deepEqual(wrong,[false,false,false,'brussels'])}
+      assert.deepEqual(wrong,[false,false,false,'brussels']);
+      // unit practice and finals: letters at least 9% of the map width apart (Svetlana, 28.10.2026), one Benelux country at most,
+      // never Crimea or the Ural River, a country never with the island or peninsula of the same name
+      const benelux=['netherlands','belgium','luxembourg-country'],same={'united-kingdom':'great-britain','ireland-country':'ireland','iceland-country':'iceland'};
+      const checkLetters=(p,what)=>{const ids=p.markers.map(m=>m.id);
+        assert(ids.filter(id=>benelux.includes(id)).length<=1,what+': one Benelux country at most');
+        for(const id of ids){assert(id!=='ural-river'&&id!=='crimean-peninsula',what+': '+id);assert(!ids.includes(same[id]),what+': '+id+' with '+same[id])}
+        for(const a of p.markers)for(const b of p.markers)if(a!==b)assert(Math.hypot(a.x-b.x,(a.y-b.y)*1600/2200)>=9-1e-6,what+': '+a.id+' and '+b.id+' too close')};
+      const cDict=JSON.parse(fs.readFileSync('data/dictionary/b2-section-4.json'));
+      for(const u of [1,2,3]){const n=Math.min(6,cDict.units[u-1].words.ru.filter(w=>w.role==='review'&&w.approval.status==='approved').length);
+        await page.locator(`[data-step="e4-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();
+        for(let w=0;w<n;w++){await page.waitForFunction(k=>window.__gwPuzzle?.seq?.i===k,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+          const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-capitals.webp'),'practice on the capitals map');
+          checkLetters(p,'practice '+p.answer);
+          for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+          if(w<n-1)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+        await page.waitForSelector('[data-step="e4-u1-l1"]')}
+      const cGeo=JSON.parse(fs.readFileSync('data/geowords/b2-section-4.json')).puzzles;
+      for(const [step,id] of [['e4-u1-final','b2-section-4-unit-1-ru'],['e4-u2-final','b2-section-4-unit-2-ru'],['e4-u3-final','b2-section-4-unit-3-ru'],['e4-final','b2-section-4-final-ru']]){
+        const want=cGeo.find(p=>p.id===id);checkLetters(want,id);await page.locator(`[data-step="${step}"]`).click();
+        if(want.approval?.status!=='approved'){assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft final does not open: '+step);await page.locator('.sheet button').click();continue}
+        await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+        const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e4-u1-l1"]')}}
     await context.close()}
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» lessons, unit practice and finals');
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» and section 4 «Countries and capitals: west and north» lessons, unit practice and finals');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));
