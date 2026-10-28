@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.28-rivers-tip';
+const BUILD='2026.10.28-mountains';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euMountains:A+'assets/europe-mountains.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -54,7 +54,7 @@ const T={
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
   pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет'},
   recFind:'Найди его на карте.',recWhatQ:'Что это? Выбери название.',recPairsT:'Место и его рекорд',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.',
-  block2:'Блок 2 · Европа',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',
+  block2:'Блок 2 · Европа',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',eu3Name:'Горы Европы',eu3Sec:'Блок 2 · Раздел 3',
   allPen:'Нажми на все полуострова',allPenHint:'Отметь полуострова и нажми «Проверить».',allPenOk:'Все полуострова найдены!',allPenBad:'Не совсем. Вот полуострова Европы.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
@@ -90,7 +90,7 @@ const T={
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
   pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates'},
   recFind:'Find it on the map.',recWhatQ:'What is it? Pick the name.',recPairsT:'A place and its record',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.',
-  block2:'Block 2 · Europe',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',
+  block2:'Block 2 · Europe',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',eu3Name:'Mountains of Europe',eu3Sec:'Block 2 · Section 3',
   allPen:'Tap every peninsula',allPenHint:'Mark the peninsulas, then tap “Check”.',allPenOk:'All the peninsulas found!',allPenBad:'Not quite. Here are the peninsulas of Europe.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
@@ -121,7 +121,9 @@ const ACC_EN={north:'north',south:'south',east:'east',west:'west',equator:'the E
   nile:'the Nile',amazon:'the Amazon',mississippi:'the Mississippi',yangtze:'the Yangtze','huang-he':'the Huang He',ganges:'the Ganges',indus:'the Indus',danube:'the Danube',volga:'the Volga',don:'the Don',dnieper:'the Dnieper',dniester:'the Dniester',rhine:'the Rhine',elbe:'the Elbe',oder:'the Oder',vistula:'the Vistula',thames:'the Thames',seine:'the Seine',loire:'the Loire',rhone:'the Rhône',po:'the Po',tiber:'the Tiber',tagus:'the Tagus',douro:'the Douro',guadiana:'the Guadiana',ebro:'the Ebro',guadalquivir:'the Guadalquivir',
   'ural-mountains':'the Ural Mountains','ural-river':'the Ural River','scandinavian-peninsula':'the Scandinavian Peninsula','kola-peninsula':'the Kola Peninsula',jutland:'Jutland',
   'iberian-peninsula':'the Iberian Peninsula','apennine-peninsula':'the Apennine Peninsula','balkan-peninsula':'the Balkan Peninsula','crimean-peninsula':'the Crimean Peninsula',
-  'great-britain':'Great Britain',ireland:'Ireland',iceland:'Iceland',sicily:'Sicily','baltic-sea':'the Baltic Sea','north-sea':'the North Sea','barents-sea':'the Barents Sea'};
+  'great-britain':'Great Britain',ireland:'Ireland',iceland:'Iceland',sicily:'Sicily','baltic-sea':'the Baltic Sea','north-sea':'the North Sea','barents-sea':'the Barents Sea',
+  alps:'the Alps',apennines:'the Apennines',carpathians:'the Carpathians','balkan-mountains':'the Balkan Mountains','dinaric-alps':'the Dinaric Alps',
+  'scandinavian-mountains':'the Scandinavian Mountains','scottish-highlands':'the Scottish Highlands'};
 
 /* ---------- state ---------- */
 const blank={lang:null,done:{},xp:0,streak:0,lastDay:'',unlockAll:false,introSeen:false,learned:[],recent:[],weak:{},hunt:0};
@@ -204,10 +206,18 @@ async function loadData(){
     ev[it.id]={id:it.id,kind:'river',name:it.name,unit:it.unit,x:it.label.x,y:it.label.y,tapArea:[],holes:[],soft:[],path:it.path,area:0,
       fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat}}
   D.s8={facts:e2f,records:e2r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:ev,intro:null,dict:e2d,geo:e2g};
+  // Block 2 section 3 «Mountains of Europe»: tap areas of the ranges drawn on the Europe mountains map; the Ural Mountains are section 1's.
+  const [e3f,e3r,e3m,e3d,e3g]=await Promise.all(['data/content/b2-section-3-facts.json','data/content/b2-section-3-records.json','data/maps/europe-mountains.json',
+    'data/dictionary/b2-section-3.json','data/geowords/b2-section-3.json'].map(get));
+  const em={};for(const it of e3m.items){const f=e3f.items.find(i=>i.id===it.id);if(f?.approval?.status!=='approved')continue;
+    em[it.id]={id:it.id,kind:'mountain',name:it.name,unit:it.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],soft:[],path:null,
+      fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat}}
+  for(const o of Object.values(em))o.area=o.tapArea.reduce((a,p)=>a+Math.abs(p.reduce((s,q,i)=>{const r=p[(i+1)%p.length];return s+q[0]*r[1]-r[0]*q[1]},0))/2,0);
+  D.s9={facts:e3f,records:e3r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:em,intro:null,dict:e3d,geo:e3g};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
-const nm=id=>(D.s7&&D.s7.eu[id]?D.s7.eu[id].name:D.s8&&D.s8.eu[id]?D.s8.eu[id].name:D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
+const nm=id=>(D.s7&&D.s7.eu[id]?D.s7.eu[id].name:D.s8&&D.s8.eu[id]?D.s8.eu[id].name:D.s9&&D.s9.eu[id]?D.s9.eu[id].name:D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
 const acc=id=>L()==='ru'?(ACC_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
 // a name inside a sentence («That is the Atlantic Ocean.»): English takes the article, Russian the plain name
 const nameIn=id=>L()==='ru'?(IN_SENT_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
@@ -433,12 +443,14 @@ STEPS.push({id:'b-challenge',sec:6,kind:'challenge',unit:'B'});
 // come once their words are approved. All objects sit on the Europe base map; the Ural River and the Ural Mountains are always drawn on it.
 const EU_IDS=['atlantic-ocean','arctic-ocean','mediterranean-sea','ural-mountains','ural-river','caspian-sea','scandinavian-peninsula','kola-peninsula','jutland',
   'iberian-peninsula','apennine-peninsula','balkan-peninsula','crimean-peninsula','great-britain','ireland','iceland','sicily','baltic-sea','north-sea','barents-sea'];
-// the Europe section being played (7: Europe on the map, 8: Rivers of Europe); set when a lesson, practice or final starts
+// the Europe section being played (7: Europe on the map, 8: Rivers of Europe, 9: Mountains of Europe); set when a lesson, practice or final starts
 let EUSEC=7;
-const E=id=>D.s7.eu[id]||D.s8.eu[id];
+const E=id=>D.s7.eu[id]||D.s8.eu[id]||D.s9.eu[id];
 const EU8_IDS=['volga','don','dnieper','dniester','danube','rhine','elbe','oder','vistula','thames','seine','loire','rhone','po','tiber','tagus','douro','guadiana','ebro','guadalquivir'];
 // section 2 judges a tap against its rivers and the Ural River (drawn on the rivers map too)
-const EU=()=>EUSEC===8?[...EU8_IDS,'ural-river'].filter(id=>E(id)):EU_IDS.filter(id=>D.s7.eu[id]);
+const EU9_IDS=['pyrenees','alps','apennines','carpathians','balkan-mountains','dinaric-alps','scandinavian-mountains','scottish-highlands','caucasus'];
+// section 3 judges a tap against its ranges and the Ural Mountains (drawn on the mountains map too)
+const EU=()=>EUSEC===9?[...EU9_IDS,'ural-mountains'].filter(id=>E(id)):EUSEC===8?[...EU8_IDS,'ural-river'].filter(id=>E(id)):EU_IDS.filter(id=>D.s7.eu[id]);
 const EUD=()=>D['s'+EUSEC];
 const eu=k=>id=>({k,id});
 const R7={
@@ -496,6 +508,28 @@ const COURSE8=[
 COURSE8.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:8,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`e2-u${u.n}-practice`,sec:8,kind:'practice',unit:u.n});STEPS.push({id:`e2-u${u.n}-final`,sec:8,kind:'final',unit:u.n})});
 STEPS.push({id:'e2-final',sec:8,kind:'section',unit:'S'});
+// Block 2 section 3 «Mountains of Europe»: 9 ranges in 3 units, the Ural Mountains reviewed; the Caucasus is disputed (Svetlana, 26.10.2026).
+const U9=n=>EU9_IDS.filter(id=>E(id)&&E(id).unit===n);
+const R9={
+ 'u1-l1':riv(['pyrenees','alps'],()=>[]),
+ 'u1-l2':riv(['apennines'],()=>[...['pyrenees','alps'].map(eu('findEu')),...some(['pyrenees','alps'],1).map(eu('whatEu'))]),
+ 'u2-l1':riv(['carpathians','balkan-mountains'],()=>some(U9(1),2).map(eu('findEu'))),
+ 'u2-l2':riv(['dinaric-alps'],()=>[...['carpathians','balkan-mountains'].map(eu('findEu')),...some(U9(1),1).map(eu('whatEu'))]),
+ 'u3-l1':riv(['scandinavian-mountains','scottish-highlands'],()=>[eu('findEu')('ural-mountains'),...some(U9(2),1).map(eu('findEu'))]),
+ 'u3-l2':riv(['caucasus'],()=>[...some(['scandinavian-mountains','scottish-highlands'],2).map(eu('whatEu')),...some([...U9(1),...U9(2)],2).map(eu('findEu'))]),
+ 'u3-l3':()=>[...D.s9.records.flatMap(r=>[{k:'introEuRec',rec:r.id},{k:'findEu',id:r.object,rec:r.id}]),...some(EU9_IDS.filter(id=>E(id)&&!D.s9.records.some(r=>r.object===id)),4).map(eu('findEu'))],
+ 'u3-l4':()=>shuffle(EU().map(id=>({k:pickKind(['findEu','findEu','whatEu']),id})))
+};
+const COURSE9=[
+ {n:1,lessons:[{id:'e3-u1-l1',title:{ru:'Пиренеи и Альпы',en:'The Pyrenees and the Alps'},plan:R9['u1-l1']},{id:'e3-u1-l2',title:{ru:'Апеннины',en:'The Apennines'},plan:R9['u1-l2']}]},
+ {n:2,lessons:[{id:'e3-u2-l1',title:{ru:'Карпаты и Балканские горы',en:'The Carpathians and the Balkan Mountains'},plan:R9['u2-l1']},{id:'e3-u2-l2',title:{ru:'Динарское нагорье',en:'The Dinaric Alps'},plan:R9['u2-l2']}]},
+ {n:3,lessons:[{id:'e3-u3-l1',title:{ru:'Скандинавские горы, Шотландское нагорье и Урал',en:'The Scandinavian Mountains, the Scottish Highlands and the Urals'},plan:R9['u3-l1']},
+   {id:'e3-u3-l2',title:{ru:'Кавказ',en:'The Caucasus'},plan:R9['u3-l2']},
+   {id:'e3-u3-l3',title:{ru:'Рекорды',en:'Records'},plan:R9['u3-l3']},{id:'e3-u3-l4',title:{ru:'Все горы раздела',en:'All the mountains of the section'},plan:R9['u3-l4']}]}
+];
+COURSE9.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:9,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`e3-u${u.n}-practice`,sec:9,kind:'practice',unit:u.n});STEPS.push({id:`e3-u${u.n}-final`,sec:9,kind:'final',unit:u.n})});
+STEPS.push({id:'e3-final',sec:9,kind:'section',unit:'S'});
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
@@ -504,10 +538,12 @@ const READY_S4=[1,2,3,'S'];
 const READY_S5=[1,2,3,'S'];
 // Europe finals open once Svetlana has approved the puzzle in the chosen language
 const euFinal=s=>SD(s).geo.puzzles.find(p=>p.language===L()&&p.approval?.status==='approved'&&(s.kind==='section'?p.role==='section-final':p.role==='unit-final'&&p.unit===s.unit));
-const ready=s=>s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const ready=s=>s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===9?ready9(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];
 // section 2 of Europe: a lesson once its rivers are approved, practice once the unit has approved words, finals once Svetlana approved the puzzle
-const ready8=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s8.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU8_IDS.every(id=>D.s8.eu[id]);// data of section 2 / 3
+const ready8=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s8.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU8_IDS.every(id=>D.s8.eu[id]);
+// section 3 of Europe: the same, with its ranges
+const ready9=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s9.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU9_IDS.every(id=>D.s9.eu[id]);
 // a step waiting for approval (a Europe final) is skipped: the trail goes on past it
 function unlocked(id){const st=stepOf(id);if(!ready(st))return false;if(S.unlockAll||S.done[id])return true;let i=STEPS.findIndex(s=>s.id===id)-1;while(i>=0&&!ready(STEPS[i]))i--;return i<0||!!S.done[STEPS[i].id]}
 const nextStep=id=>{let i=STEPS.findIndex(s=>s.id===id)+1;while(STEPS[i]&&!ready(STEPS[i]))i++;const n=STEPS[i];return n&&unlocked(n.id)?n:null};
@@ -552,9 +588,9 @@ function euOk(id,x,y,sz){const o=E(id);if(EUSEC===8&&o.path){const r=riverPx(o,x
     if(land&&!EU_LAND.includes(q.kind))return false;
     return land||o.path?v<d:v===0&&!(q.tapArea.length&&inside(q,o.x,o.y))})}
 // answer options of the same family: unit 1 (oceans, sea, the Urals and the Caspian), peninsulas, islands, the seas and oceans of the section
-const euFamily=id=>{const o=E(id);if(EUSEC===8)return EU().filter(k=>E(k).unit<=o.unit);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
+const euFamily=id=>{const o=E(id);if(EUSEC>=8)return EU().filter(k=>E(k).unit<=o.unit);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
 const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-river')):m.shape(o,cls);
-function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
+function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
   const statics=()=>{if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
   const clear=m.clearShapes;m.clearShapes=()=>{clear();statics()};return m}
@@ -667,7 +703,11 @@ function home(){
      `<div class="section-card s2"><img src="${IMG.stamp2}" alt=""><div class="t"><span class="eyebrow">${x.eu2Sec}</span><h2>${x.eu2Name}</h2></div></div>`+
      COURSE8.map(u=>`<div class="unit-head"><span class="eyebrow">${x.eu2Sec} · ${x.unit} ${u.n}</span><h3>${esc(D.s8.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===8&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.eu2Sec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('e2-final'))+
-     (STEPS.some(s=>s.sec===8&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:'');
+     (STEPS.some(s=>s.sec===8&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:'')+
+     `<div class="section-card s2"><img src="${IMG.stamp3}" alt=""><div class="t"><span class="eyebrow">${x.eu3Sec}</span><h2>${x.eu3Name}</h2></div></div>`+
+     COURSE9.map(u=>`<div class="unit-head"><span class="eyebrow">${x.eu3Sec} · ${x.unit} ${u.n}</span><h3>${esc(D.s9.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===9&&s.unit===u.n).map(stopHtml).join('')).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.eu3Sec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('e3-final'))+
+     (STEPS.some(s=>s.sec===9&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:'');
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -698,7 +738,7 @@ function startPractice(st){
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const es=st.sec===8?x.eu2Sec:x.euSec;
+  const es=st.sec===9?x.eu3Sec:st.sec===8?x.eu2Sec:x.euSec;
   const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec>=7?(st.unit==='S'?es:`${es} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?x.huntDesc:x.finalDesc;
   let buttons;
@@ -1061,7 +1101,7 @@ function finalPuzzle(st){if(st.sec>=7)EUSEC=st.sec;const role=st.kind==='section
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,stamp:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,stamp:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
 function blockPuzzle(st){const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
@@ -1154,8 +1194,14 @@ const EU_PLACE={'atlantic-ocean':['в Атлантическом океане','
   iceland:['на острове Исландия','on the island of Iceland'],sicily:['на острове Сицилия','on the island of Sicily'],'baltic-sea':['в Балтийском море','in the Baltic Sea'],
   'north-sea':['в Северном море','in the North Sea'],'barents-sea':['в Баренцевом море','in the Barents Sea']};
 const EU_IN={'north-sea':['atlantic-ocean'],'baltic-sea':['atlantic-ocean'],'barents-sea':['arctic-ocean'],'great-britain':['atlantic-ocean'],ireland:['atlantic-ocean'],
-  iceland:['atlantic-ocean'],sicily:['mediterranean-sea']};
+  iceland:['atlantic-ocean'],sicily:['mediterranean-sea'],
+  // a range and the land of the same name (Svetlana, 28.10.2026: points of different objects never coincide)
+  'scandinavian-mountains':['scandinavian-peninsula'],'balkan-mountains':['balkan-peninsula'],apennines:['apennine-peninsula'],pyrenees:['iberian-peninsula'],
+  'scottish-highlands':['great-britain']};
 const EU_PT={'ural-river':{x:81.4,y:57.08}};
+const EU9_IN={pyrenees:['в Пиренеях','in the Pyrenees'],alps:['в Альпах','in the Alps'],apennines:['в Апеннинах','in the Apennines'],carpathians:['в Карпатах','in the Carpathians'],
+  'balkan-mountains':['в Балканских горах','in the Balkan Mountains'],'dinaric-alps':['на Динарском нагорье','in the Dinaric Alps'],
+  'scandinavian-mountains':['в Скандинавских горах','in the Scandinavian Mountains'],'scottish-highlands':['на Шотландском нагорье','in the Scottish Highlands'],caucasus:['на Кавказе','in the Caucasus']};
 const euNested=(a,b)=>(EU_IN[a.id]||[]).includes(b.id)||(EU_IN[b.id]||[]).includes(a.id)||inside(E(b.id),a.x,a.y)||inside(E(a.id),b.x,b.y);
 const EU8_ON={volga:['на Волге','on the Volga'],don:['на Дону','on the Don'],dnieper:['на Днепре','on the Dnieper'],dniester:['на Днестре','on the Dniester'],
   danube:['на Дунае','on the Danube'],rhine:['на Рейне','on the Rhine'],elbe:['на Эльбе','on the Elbe'],oder:['на Одере','on the Oder'],vistula:['на Висле','on the Vistula'],
@@ -1169,6 +1215,11 @@ function placesFor(st){
   if(st.sec===8){EUSEC=8;const u=st.unit==='S'?4:st.unit;
     return [...EU8_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,...EU8_PT(id),place:{ru:EU8_ON[id][0],en:EU8_ON[id][1]},pri:0,eu:true})),
       ...EU_IDS.filter(id=>D.s7.eu[id]).map(id=>({id,...EU8_PT(id),place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:1,eu:true}))]}
+  // Mountains of Europe: letters on the learned ranges (at the point of the range farthest from its edge) first, then on the objects of section 1
+  // (rivers, the Ural River too, are not drawn on the mountains map); a range and the peninsula or island of the same name never share a puzzle (EU_IN)
+  if(st.sec===9){EUSEC=9;const u=st.unit==='S'?3:st.unit;
+    return [...EU9_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU9_IN[id][0],en:EU9_IN[id][1]},pri:0,eu:true})),
+      ...EU_IDS.filter(id=>D.s7.eu[id]&&id!=='ural-river').map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:1,eu:true}))]}
   if(st.sec===7){EUSEC=7;return EU().filter(id=>E(id).unit<=st.unit).map(id=>({id,...(EU_PT[id]||{x:E(id).x,y:E(id).y}),place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:0,eu:true}))}
   const out=secIds[st.sec]().filter(([,u])=>u<=st.unit).map(([id])=>({...placeOf[st.sec](id),pri:0}));
   for(let k=2;k<st.sec;k++)for(const [id] of secIds[k]())out.push({...placeOf[k](id),pri:1});

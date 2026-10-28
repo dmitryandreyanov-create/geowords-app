@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-rivers-tip/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-mountains/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -356,7 +356,61 @@ try{
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e2-u1-l1"]')}
     await context.close()}
-  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map» and section 2 «Rivers of Europe» lessons, unit practice and finals');
+  // Block 2 section 3 «Mountains of Europe»: every lesson on the mountains map with right answers (tap on the range's label point / pick the name);
+  // a tap on a range never counts for its neighbour; finals stay closed until approved
+  {const context=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
+    await context.addInitScript(()=>{if(sessionStorage.getItem('fixture'))return;sessionStorage.setItem('fixture','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:'ru',done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))});
+    const page=await context.newPage();await page.goto(base+'/app/');await page.waitForSelector('[data-step="e3-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),/Горы Европы/);
+    const mMap=JSON.parse(fs.readFileSync('data/maps/europe-mountains.json')),eMap=JSON.parse(fs.readFileSync('data/maps/europe-overview.json'));
+    const mFacts=JSON.parse(fs.readFileSync('data/content/b2-section-3-facts.json')),eFacts=JSON.parse(fs.readFileSync('data/content/b2-section-1-facts.json'));
+    const lab=Object.fromEntries([...eMap.items,...mMap.items].map(i=>[i.id,i.label]));
+    const tapAt=async(pt)=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['e3-u1-l1','e3-u1-l2','e3-u2-l1','e3-u2-l2','e3-u3-l1','e3-u3-l2','e3-u3-l3','e3-u3-l4'];const kinds=new Set(),seen=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<60;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);if(q.id)seen.add(q.id);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-mountains.webp'),'mountains map: '+src);
+        if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),(mFacts.items.find(i=>i.id===q.id)||eFacts.items.find(i=>i.id===q.id)).fact.ru);
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){await tapAt(lab[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='whatEu'){await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e3-u1-l1"]')}
+    for(const k of ['introEu','introEuRec','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
+    for(const it of [...mMap.items,{id:'ural-mountains'}])assert(seen.has(it.id),'range practised: '+it.id);
+    const wrong=await page.evaluate(([a,d,ap])=>{window.__gwEuSec(9);const sz={W:360,H:262};
+      return [window.__gwEuOk('alps',d.x,d.y,sz),window.__gwEuOk('dinaric-alps',a.x,a.y,sz),window.__gwEuOk('apennines',a.x,a.y,sz),window.__gwEuHit(ap.x,ap.y,sz)]},[lab.alps,lab['dinaric-alps'],lab.apennines]);
+    assert.deepEqual(wrong,[false,false,false,'apennines']);
+    // unit practice: up to six words, letters on ranges learned by the unit or on section-1 objects (never the Ural River, not drawn here),
+    // a range never with the land of the same name
+    const mUnit=Object.fromEntries([...eMap.items.map(i=>[i.id,0]),...mMap.items.map(i=>[i.id,i.unit])]);
+    const same={'scandinavian-mountains':'scandinavian-peninsula','balkan-mountains':'balkan-peninsula',apennines:'apennine-peninsula',pyrenees:'iberian-peninsula','scottish-highlands':'great-britain'};
+    const mDict=JSON.parse(fs.readFileSync('data/dictionary/b2-section-3.json'));
+    for(const u of [1,2,3]){const n=Math.min(6,mDict.units[u-1].words.ru.filter(w=>w.role==='review'&&w.approval.status==='approved').length);
+      await page.locator(`[data-step="e3-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<n;w++){await page.waitForFunction(k=>window.__gwPuzzle?.seq?.i===k,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,n,'practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-mountains.webp'),'practice on the mountains map');
+        const ids=p.markers.map(m=>m.id);
+        for(const id of ids){assert(id!=='ural-river'&&mUnit[id]<=u,`${p.answer}: ${id} is learned by unit ${u}`);assert(!ids.includes(same[id]),`${p.answer}: ${id} with ${same[id]}`)}
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<n-1)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,n,'different words in unit '+u);await page.waitForSelector('[data-step="e3-u1-l1"]')}
+    const mGeo=JSON.parse(fs.readFileSync('data/geowords/b2-section-3.json')).puzzles;
+    for(const [step,id] of [['e3-u1-final','b2-section-3-unit-1-ru'],['e3-u2-final','b2-section-3-unit-2-ru'],['e3-u3-final','b2-section-3-unit-3-ru'],['e3-final','b2-section-3-final-ru']]){
+      const want=mGeo.find(p=>p.id===id);await page.locator(`[data-step="${step}"]`).click();
+      if(want?.approval?.status!=='approved'){assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft final does not open: '+step);await page.locator('.sheet button').click();continue}
+      await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-mountains.webp'),'final on the mountains map');
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e3-u1-l1"]')}
+    await context.close()}
+  console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» lessons, unit practice and finals');
 }finally{
   if(browser)await browser.close();
   await new Promise(resolve=>server.close(resolve));
