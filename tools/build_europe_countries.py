@@ -111,7 +111,7 @@ for i, (id_, unit, admin, en, ru, cid, cen, cru) in enumerate(ORDER, 1):
 if SEC == 4:
     out = {
       'map': './assets/europe-capitals.webp',
-      'alsoValidFor': ['./assets/europe-blank.webp', './assets/europe-rivers.webp', './assets/europe-mountains.webp'],
+      'alsoValidFor': ['./assets/europe-countries-rivers.webp', './assets/europe-blank.webp', './assets/europe-rivers.webp', './assets/europe-mountains.webp'],
       'mapAspect': '11 / 8',
       'level': 'Countries and capitals: west and north (block 2, section 4)',
       'coordinateSystem': 'label, capital and tapArea in % of image width/height from top-left; same for all four europe-*.webp (shared base)',

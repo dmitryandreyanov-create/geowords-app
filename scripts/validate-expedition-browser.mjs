@@ -426,7 +426,7 @@ try{
       for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
         for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
           const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);if(q.id)seen.add(q.id);
-          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-capitals.webp'),'capitals map: '+src);
+          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-countries-rivers.webp'),'countries and rivers map: '+src);
           if(q.k==='introEu'||q.k==='introEuRec'){
             if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),cFacts.items.find(i=>i.id===q.id).fact.ru);
             await page.locator('.fb .btn').click()}
@@ -450,17 +450,20 @@ try{
         for(const id of ids){assert(id!=='ural-river'&&id!=='crimean-peninsula',what+': '+id);assert(!ids.includes(same[id]),what+': '+id+' with '+same[id])}
         for(const a of p.markers)for(const b of p.markers)if(a!==b)assert(Math.hypot(a.x-b.x,(a.y-b.y)*1600/2200)>=9-1e-6,what+': '+a.id+' and '+b.id+' too close')};
       const cDict=JSON.parse(fs.readFileSync('data/dictionary/b2-section-4.json'));
+      // the rivers of section 2 take letters too (Svetlana, 28.10.2026)
+      const rivIds=new Set(JSON.parse(fs.readFileSync('data/maps/europe-rivers.json')).items.map(i=>i.id)),rivUsed=new Set();
       for(const u of [1,2,3]){const n=Math.min(6,cDict.units[u-1].words.ru.filter(w=>w.role==='review'&&w.approval.status==='approved').length);
         await page.locator(`[data-step="e4-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();
         for(let w=0;w<n;w++){await page.waitForFunction(k=>window.__gwPuzzle?.seq?.i===k,w);const p=await page.evaluate(()=>window.__gwPuzzle);
-          const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-capitals.webp'),'practice on the capitals map');
-          checkLetters(p,'practice '+p.answer);
+          const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-countries-rivers.webp'),'practice on the countries and rivers map');
+          checkLetters(p,'practice '+p.answer);p.markers.forEach(m=>{if(rivIds.has(m.id))rivUsed.add(m.id)});
           for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
           if(w<n-1)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
         await page.waitForSelector('[data-step="e4-u1-l1"]')}
+      assert(rivUsed.size>=5,'section 4 practice puts letters on rivers: '+[...rivUsed]);
       const cGeo=JSON.parse(fs.readFileSync('data/geowords/b2-section-4.json')).puzzles;
       for(const [step,id] of [['e4-u1-final','b2-section-4-unit-1-ru'],['e4-u2-final','b2-section-4-unit-2-ru'],['e4-u3-final','b2-section-4-unit-3-ru'],['e4-final','b2-section-4-final-ru']]){
-        const want=cGeo.find(p=>p.id===id);checkLetters(want,id);await page.locator(`[data-step="${step}"]`).click();
+        const want=cGeo.find(p=>p.id===id);checkLetters(want,id);assert(want.markers.filter(m=>rivIds.has(m.id)).length>=Math.floor(want.markers.length/3),id+': letters on rivers');await page.locator(`[data-step="${step}"]`).click();
         if(want.approval?.status!=='approved'){assert.equal(await page.locator('.sheet [data-a="go"]').count(),0,'a draft final does not open: '+step);await page.locator('.sheet button').click();continue}
         await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
         const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));

@@ -13,6 +13,9 @@
 // (data/maps/europe-countries.json, never on a capital dot) and on the objects of section 1 except the Ural River and the Crimean
 // Peninsula (Crimea never appears in country tasks, Svetlana 26.10.2026); spacing 9 (a letter
 // marker is ~9% of the map wide on a phone), at most one of the Netherlands, Belgium and Luxembourg; a country never with its island or peninsula.
+// Rivers too (Svetlana, 28.10.2026: «в вопросах с буквами должна быть практика про реки»): the map is europe-countries-rivers.webp (the capitals
+// map with the rivers of section 2 drawn on it), letters on the 20 rivers of data/maps/europe-rivers.json as well; the countries of the unit and
+// the rivers come first, about half of the letters on rivers, the section-1 objects only when they are needed. A river whose letter lies inside a country never shares a puzzle with it.
 // Section 5 «Countries and capitals: centre, south and east» (data/maps/europe-countries-5.json): letters at the centre of the countries
 // of section 5 learned by the end of the unit and of section 4; on the rivers of section 2, drawn over the capitals map («on the Danube»,
 // at the middle of the river's longest line); and on a river inside a country it crosses («on the Danube in Hungary»); the objects of
@@ -23,7 +26,7 @@
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/europe-overview.json", RIVERS = SEC === 5 ? "data/maps/europe-rivers.json" : SEC === 4 ? "data/maps/europe-countries.json" : SEC === 3 ? "data/maps/europe-mountains.json" : "data/maps/europe-rivers.json";
+const MAP = "data/maps/europe-overview.json", EU_RIVERS = "data/maps/europe-rivers.json", RIVERS = SEC === 5 ? "data/maps/europe-rivers.json" : SEC === 4 ? "data/maps/europe-countries.json" : SEC === 3 ? "data/maps/europe-mountains.json" : "data/maps/europe-rivers.json";
 const DICT = `data/dictionary/b2-section-${SEC}.json`, OUT = `data/geowords/b2-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -88,7 +91,8 @@ const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = JSON.parse(fs.rea
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
 const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
 const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
-const items = Object.fromEntries([...map.items, ...(SEC >= 2 ? rivers.items : [])].map(o => [o.id, o]));
+const euRivers = SEC === 4 ? JSON.parse(fs.readFileSync(EU_RIVERS, "utf8")).items : [];
+const items = Object.fromEntries([...map.items, ...(SEC >= 2 ? rivers.items : []), ...euRivers].map(o => [o.id, o]));
 const inside = (id, p) => { const o = items[id]; return !!o.tapArea && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl)); };
 const nested = (a, b) => (BENELUX.includes(a.id) && BENELUX.includes(b.id)) || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id) || inside(b.id, a) || inside(a.id, b);
 const far = (a, b) => Math.hypot(a.x - b.x, (a.y - b.y) * ASPECT) >= SEP;
@@ -108,22 +112,27 @@ function revealOrder(n) {
 // section 2: the section-1 objects count as unit 0 (always known), the rivers by their own unit
 const places = unit => SEC === 1 ? map.items.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...(RIVER_POINT[o.id] || o.label) }))
   : [...rivers.items.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label })),
+     ...euRivers.map(o => ({ id: o.id, unit: 0, river: true, ...o.label })),
      ...map.items.filter(o => (SEC < 3 || o.id !== "ural-river") && (SEC < 4 || o.id !== "crimean-peninsula")).map(o => ({ id: o.id, unit: 0, ...(RIVER_POINT[o.id] || o.label) }))];
 
-function build(word, lang, unit, final, tries = 4000) {
+// section 4: the unit's countries and the rivers first (mixed), then the other learned countries, then the section-1 objects
+const rank = (p, unit) => (p.unit === unit || p.river ? 0 : p.unit > 0 ? 1 : 2) + rnd() * 1.5;
+function build(word, lang, unit, final, tries = SEC === 4 ? 10000 : 4000) {
   const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length;
   const usable = places(unit).filter(p => !fold(PLACE[p.id][li]).includes(fold(word)));
-  let best = null, bestScore = -1;
+  let best = null, bestScore = -Infinity;
   for (let k = 0; k < tries; k++) {
     // the newest unit's objects first, so a unit final is mostly about that unit
-    const pool = shuffle([...usable]).sort((a, b) => (b.unit === unit) - (a.unit === unit) || (SEC >= 2 ? (b.unit > 0) - (a.unit > 0) : 0));
+    const pool = SEC === 4 ? usable.map(p => [rank(p, unit), p]).sort((a, b) => a[0] - b[0]).map(e => e[1])
+      : shuffle([...usable]).sort((a, b) => (b.unit === unit) - (a.unit === unit) || (SEC >= 2 ? (b.unit > 0) - (a.unit > 0) : 0));
     const pick = [];
     for (const p of pool) if (pick.length < n && pick.every(q => far(p, q) && !nested(p, q))) pick.push(p);
     if (pick.length < n) continue;
     // spread: the smallest gap between two circles, plus a bonus for using every unit in the section final
     const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT))));
     const units = new Set(pick.map(p => p.unit).filter(u => u > 0)).size, own = pick.filter(p => p.unit === unit).length, riv = pick.filter(p => p.unit > 0).length;
-    const score = gap + (final ? units * 3 + (SEC >= 2 ? riv : 0) : own);
+    const rv = pick.filter(p => p.river).length, s1 = pick.filter(p => p.unit === 0 && !p.river).length;
+    const score = SEC === 4 ? gap * 0.3 - Math.abs(rv - Math.round(n / 2)) * 2 - s1 * 3 + (final ? units * 3 : own * 2) : gap + (final ? units * 3 + (SEC >= 2 ? riv : 0) : own);
     if (score > bestScore) { bestScore = score; best = shuffle(pick); }
   }
   if (!best) return null;
@@ -197,7 +206,7 @@ for (const u of dict.units) {
     const b = (SEC === 5 ? build5 : build)(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
     if (!b) { console.error(`${id}: ${w.answer} cannot be laid out on the learned objects`); process.exitCode = 1; continue; }
     puzzles.push({ id, section: dict.section, block: 2, unit, role: sectionFinal ? "section-final" : "unit-final", language: lang, answer: w.answer,
-      map: SEC >= 4 ? "./assets/europe-capitals.webp" : SEC === 3 ? "./assets/europe-mountains.webp" : SEC === 2 ? "./assets/europe-rivers.webp" : "./assets/europe-blank.webp", mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
+      map: SEC === 5 ? "./assets/europe-capitals.webp" : SEC === 4 ? "./assets/europe-countries-rivers.webp" : SEC === 3 ? "./assets/europe-mountains.webp" : SEC === 2 ? "./assets/europe-rivers.webp" : "./assets/europe-blank.webp", mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
       approval: { status: "draft" } });
   }
 }
@@ -215,8 +224,8 @@ const out = SEC === 5 ? {
   section: dict.section, block: 2,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",
-    places: "letters at the centre of the countries of data/maps/europe-countries.json learned by the end of the unit (section final: all 13), never on a capital dot, first; then on the objects of data/maps/europe-overview.json except the Ural River (not drawn on the capitals map) and the Crimean Peninsula (never in country tasks, Svetlana 26.10.2026)",
-    nesting: "as section 1, and a country never shares a puzzle with its island or peninsula (the United Kingdom / Great Britain, Ireland, Iceland, Norway and Sweden / the Scandinavian Peninsula, Denmark / Jutland, Spain and Portugal / the Iberian Peninsula); at most one of the Netherlands, Belgium and Luxembourg (Svetlana, 28.10.2026)",
+    places: "letters at the centre of the countries of data/maps/europe-countries.json learned by the end of the unit (section final: all 13), never on a capital dot, and on the 20 rivers of data/maps/europe-rivers.json (at the middle of the river's longest line; Svetlana 28.10.2026: GeoWords must practise the rivers) first, mixed; then the other countries; the objects of data/maps/europe-overview.json only when needed, except the Ural River and the Crimean Peninsula (never in country tasks, Svetlana 26.10.2026). Map: europe-countries-rivers.webp = the capitals map with the rivers of section 2",
+    nesting: "as section 1, and a river whose letter lies inside a country never shares a puzzle with it; a country never shares a puzzle with its island or peninsula (the United Kingdom / Great Britain, Ireland, Iceland, Norway and Sweden / the Scandinavian Peninsula, Denmark / Jutland, Spain and Portugal / the Iberian Peninsula); at most one of the Netherlands, Belgium and Luxembourg (Svetlana, 28.10.2026)",
     spacing: "hypot(dx, dy * 1600/2200) >= 9 (% of map width): a letter marker is ~9% of the map wide on a phone (Svetlana, 28.10.2026)",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
   },
