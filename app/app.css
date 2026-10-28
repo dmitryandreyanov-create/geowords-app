@@ -211,6 +211,9 @@ h1,h2,h3,p{margin:0}
 .hl-shape.bad{fill:rgba(229,83,61,.4);stroke:#e5533d}
 
 /* section 5: magnifier insets for tiny straits */
+.tip-phrase b{color:var(--fox-d)}
+.mk.tip{pointer-events:none}
+.mk.tip span{background:#fff;color:var(--sea)}
 .mk.mag{width:36px;height:36px;margin:-46px 0 0 -18px;z-index:1}/* sits just above its point, so nearby letters stay tappable */
 .mk.mag span{width:30px;height:30px;background:#fff8e6;font-size:15px;box-shadow:0 0 0 2px var(--brass),0 2px 6px rgba(0,0,0,.5)}
 .mk.mag::after{content:'';position:absolute;left:50%;bottom:-8px;width:2px;height:10px;background:var(--brass);transform:translateX(-50%)}

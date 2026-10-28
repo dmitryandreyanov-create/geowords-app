@@ -50,7 +50,7 @@ const RELEASE = {
   "b2-section-2-facts.json": {
     section: "rivers-of-europe",
     ids: ["volga", "don", "dnieper", "dniester", "danube", "rhine", "elbe", "oder", "vistula", "thames", "seine", "loire", "rhone",
-      "po", "tiber", "tagus", "douro", "guadiana", "ebro", "guadalquivir"],
+      "po", "tiber", "tagus", "douro", "guadiana", "ebro", "guadalquivir", "tip-rhine-elbe-oder-vistula"],
   },
   "b2-section-2-records.json": {
     section: "rivers-of-europe",

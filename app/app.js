@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.27-rivers2';
+const BUILD='2026.10.28-rivers-tip';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -24,7 +24,7 @@ const T={
   go:'В путь',soon:'Скоро',notReady:'Этот юнит ещё готовится. Пока открыт юнит 1.',nextLesson:'Следующий урок',nextFinal:'К итогу юнита',section:'Раздел 1',sectionName:'Материки и океаны',unit:'Юнит',lessonN:n=>'Урок '+n,final:'Итог юнита: GeoWords',
   locked:'Сначала пройди предыдущий шаг',start:'Начать',later:'Позже',again:'Пройти урок ещё раз',finalAgain:'Итоговое слово ещё раз',practice:'Пройти ещё раз — новое слово',
   practiceNone:'Новые слова для повторения откроются в следующих юнитах: для длинных слов пока не хватает выученных мест на карте.',
-  intro:'Знакомство',find:'Найди на карте',what:'Что это?',hemi:'Полушария',line:'Линии на карте',washed:'Кто кого омывает',record:'Рекорд',
+  intro:'Знакомство',tip:'Лайфхак',find:'Найди на карте',what:'Что это?',hemi:'Полушария',line:'Линии на карте',washed:'Кто кого омывает',record:'Рекорд',
   tap:n=>`Нажми на <b>${n}</b>`,whatDir:'Какая это сторона света?',whatCont:'Какой это континент?',whatOcean:'Какой это океан?',
   washedQ:n=>`Нажми на все океаны, которые омывают <b>${n}</b>`,washedHint:'Отметь океаны и нажми «Проверить».',checkAns:'Проверить',
   next:'Дальше',check:'Понятно',right:'Верно!',wrongIs:n=>`Это ${n}.`,miss:'Мимо. Вот где это.',tryLine:'Мимо линии. Вот она.',hemiWrong:'Это другое полушарие. Вот нужное.',
@@ -60,7 +60,7 @@ const T={
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
   locked:'Finish the previous step first',start:'Start',later:'Later',again:'Play the lesson again',finalAgain:'Final word again',practice:'Play again — new word',
   practiceNone:'New review words open in the next units: long words need more places you have learned on the map.',
-  intro:'New',find:'Find on the map',what:'What is it?',hemi:'Hemispheres',line:'Lines on the map',washed:'Neighbours',record:'Record',
+  intro:'New',tip:'Memory trick',find:'Find on the map',what:'What is it?',hemi:'Hemispheres',line:'Lines on the map',washed:'Neighbours',record:'Record',
   tap:n=>`Tap <b>${n}</b>`,whatDir:'Which direction is this?',whatCont:'Which continent is this?',whatOcean:'Which ocean is this?',
   washedQ:n=>`Tap every ocean that washes <b>${n}</b>`,washedHint:'Mark the oceans, then tap “Check”.',checkAns:'Check',
   next:'Next',check:'Got it',right:'Correct!',wrongIs:n=>`That is ${n}.`,miss:'Missed. Here it is.',tryLine:'Not on the line. Here it is.',hemiWrong:'That is the other hemisphere. Here is the right one.',
@@ -471,12 +471,13 @@ COURSE7.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:7,kind:'les
 STEPS.push({id:'e1-final',sec:7,kind:'section',unit:'S'});
 // Block 2 section 2 «Rivers of Europe» (plan, facts and words approved by Svetlana 27.10.2026): 20 rivers in 4 units, the Ural River reviewed.
 const U8=n=>EU8_IDS.filter(id=>E(id)&&E(id).unit===n);
-const riv=(ids,rev)=>()=>[...ids.map(eu('introEu')),...shuffle(ids.flatMap(id=>[eu('findEu')(id),eu('whatEu')(id)])),...rev()];
+// a memory-trick card (kind "tip" in the facts) follows the introductions once all its rivers are known
+const riv=(ids,rev,tip)=>()=>[...ids.map(eu('introEu')),...(tip?[{k:'tipEu',id:tip}]:[]),...shuffle(ids.flatMap(id=>[eu('findEu')(id),eu('whatEu')(id)])),...rev()];
 const R8={
  'u1-l1':riv(['volga','don'],()=>[]),
  'u1-l2':riv(['dnieper','dniester','danube'],()=>[eu('findEu')('ural-river'),...some(['volga','don'],1).map(eu('findEu'))]),
  'u2-l1':riv(['rhine','elbe'],()=>some(U8(1),2).map(eu('findEu'))),
- 'u2-l2':riv(['oder','vistula'],()=>some(['rhine','elbe'],2).map(eu('whatEu'))),
+ 'u2-l2':riv(['oder','vistula'],()=>some(['rhine','elbe'],2).map(eu('whatEu')),'tip-rhine-elbe-oder-vistula'),
  'u3-l1':riv(['thames','seine'],()=>some(U8(2),2).map(eu('findEu'))),
  'u3-l2':riv(['loire','rhone'],()=>some(['thames','seine'],2).map(eu('whatEu'))),
  'u4-l1':riv(['po','tiber','ebro'],()=>some(U8(3),1).map(eu('findEu'))),
@@ -559,7 +560,7 @@ function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===8?IMG.euR
   const clear=m.clearShapes;m.clearShapes=()=>{clear();statics()};return m}
 
 /* ---------- map widget: base + layers + highlight shapes, markers in screen space, pinch/zoom ---------- */
-function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true,insets=[],onInsetTap,base=IMG.base,aspect=null}){
+function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true,insets=[],onInsetTap,base=IMG.base,aspect=null,focus=null}){
   host.innerHTML=`<div class="mapbox"><div class="map"${aspect?` style="aspect-ratio:${aspect}"`:''}><div class="world"><img src="${base}" alt="" draggable="false">${layers.map(l=>`<img src="${IMG.layer(l)}" alt="" draggable="false">`).join('')}
    <svg class="shapes" viewBox="0 0 100 100" preserveAspectRatio="none"></svg></div></div>
    ${trail?'<svg class="trailsvg" preserveAspectRatio="none"><polyline points=""/></svg>':''}<div class="marks"></div></div>
@@ -603,7 +604,8 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   marks.addEventListener('click',e=>{const b=e.target.closest('.mk');if(!b||moved)return;onMarker&&onMarker(b.dataset.id,b)});
   mapEl.addEventListener('click',e=>{if(moved||e.target.closest('.zoom')||!onTap)return;const r=mapEl.getBoundingClientRect();
     const px=(e.clientX-r.left-tx)/sc/W()*100,py=(e.clientY-r.top-ty)/sc/H()*100;onTap(px,py,e.clientX-r.left,e.clientY-r.top,{W:W()*sc,H:H()*sc})});
-  new ResizeObserver(()=>apply()).observe(mapEl);
+  // focus {x,y,zoom}: the map opens zoomed in on that point (percent of the map)
+  new ResizeObserver(()=>{if(focus){sc=focus.zoom;tx=W()/2-focus.x/100*W()*sc;ty=H()/2-focus.y/100*H()*sc}apply()}).observe(mapEl);
   return {btn,
     addLayer(id){const i=document.createElement('img');i.src=IMG.layer(id);i.alt='';i.className='hl';world.insertBefore(i,shapes);return i},
     shape(o,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',areaPath(o));p.setAttribute('class',cls||'hl-shape');p.dataset.id=o.id;shapes.appendChild(p);return p},
@@ -803,6 +805,11 @@ function lesson(step){
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
       const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
+    if(q.k==='tipEu'){const I=D.s8.facts.items.find(i=>i.id===q.id&&i.approval?.status==='approved');const rs=I?I.rivers.map(E).filter(Boolean):[];if(rs.length!==(I?.rivers.length??-1)){done++;return next()}
+      // the first letter of every word stands out: the phrase's letters are the rivers' first letters, west to east
+      frame(x.tip,`<div class="card"><div class="intro-pip"><img src="${IMG.yes}" alt=""><h3 class="tip-phrase">${I.name[lang].split(' ').map(w=>`<b>${esc(w[0])}</b>${esc(w.slice(1))}`).join(' ')}</h3></div><p>${esc(I.fact[lang])}</p></div><div class="mapslot"></div>`);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false,focus:I.map.focus,markers:I.map.letters.map(l=>({id:l.id,x:l.x,y:l.y,cls:'tip',label:E(l.id).name[lang][0],aria:E(l.id).name[lang]}))});rs.forEach(o=>showEu(m,o,'hl-shape'));
+      return gotIt(()=>learn(I.id))}
     if(q.k==='findEu'){const o=E(q.id);const rec=q.rec&&EUD().records.find(r=>r.id===q.rec);frame(rec||q.clue?x.record:x.find,`${tapQ(q)}<div class="mapslot"></div>`);
       let locked=false;const m=euMap(app.querySelector('.mapslot'),{onTap:(px,py,sx,sy,sz)=>{if(locked)return;
         const ok=euOk(q.id,px,py,sz),hit=ok?q.id:euHit(px,py,sz);locked=true;m.dot(sx,sy,ok);showEu(m,o,ok?'hl-shape good':'hl-shape pulse');
