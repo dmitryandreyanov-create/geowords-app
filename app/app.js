@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.28-countries';
+const BUILD='2026.10.28-rivers';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euMountains:A+'assets/europe-mountains.webp',euCapitals:A+'assets/europe-capitals.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euMountains:A+'assets/europe-mountains.webp',euCapitals:A+'assets/europe-capitals.webp',euCountriesRivers:A+'assets/europe-countries-rivers.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -634,7 +634,7 @@ const capRing=(c,r=1.3)=>({id:'cap-'+c.id,tapArea:[Array.from({length:20},(_,i)=
 // the drawn dot a tap lands on: the nearest within 24 px (every dot of the map counts, also those of section 5)
 function capHit(x,y,sz){let hit=null,d=24;for(const c of D.s10.dots){const v=Math.hypot((c.x-x)/100*sz.W,(c.y-y)/100*sz.H);if(v<=d){d=v;hit=c.id}}return hit}
 const capOwner=cid=>EU10_IDS.map(E).find(o=>o&&o.capital.id===cid);
-function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===10?IMG.euCapitals:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
+function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
   const statics=()=>{if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
   const clear=m.clearShapes;m.clearShapes=()=>{clear();statics()};return m}
@@ -1292,9 +1292,12 @@ function placesFor(st){
     return [...EU9_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU9_IN[id][0],en:EU9_IN[id][1]},pri:0,eu:true})),
       ...EU_IDS.filter(id=>D.s7.eu[id]&&id!=='ural-river').map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:1,eu:true}))]}
   // Countries and capitals: letters at the centre of the learned countries (never on a capital dot) first, then on the objects of section 1
-  // (the Ural River is not drawn on the capitals map; Crimea never appears in country tasks); at most one Benelux country per puzzle (one group); spacing 9% (buildPuzzle)
+  // (the Ural River is not drawn on the capitals map; Crimea never appears in country tasks); at most one Benelux country per puzzle (one group); spacing 9% (buildPuzzle).
+  // The rivers of section 2 are drawn on this map and take letters too, as often as the countries (Svetlana, 28.10.2026: GeoWords must practise the rivers);
+  // a river whose letter lies inside a country never shares a puzzle with it (euNested)
   if(st.sec===10){EUSEC=10;const u=st.unit==='S'?3:st.unit;
     return [...EU10_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU10_IN[id][0],en:EU10_IN[id][1]},pri:0,eu:true,...(BENELUX.includes(id)?{group:'benelux'}:{})})),
+      ...EU8_IDS.filter(id=>D.s8.eu[id]).map(id=>({id,...EU8_PT(id),place:{ru:EU8_ON[id][0],en:EU8_ON[id][1]},pri:0,eu:true,river:true})),
       ...EU_IDS.filter(id=>D.s7.eu[id]&&id!=='ural-river'&&id!=='crimean-peninsula').map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:1,eu:true}))]}
   if(st.sec===7){EUSEC=7;return EU().filter(id=>E(id).unit<=st.unit).map(id=>({id,...(EU_PT[id]||{x:E(id).x,y:E(id).y}),place:{ru:EU_PLACE[id][0],en:EU_PLACE[id][1]},pri:0,eu:true}))}
   const out=secIds[st.sec]().filter(([,u])=>u<=st.unit).map(([id])=>({...placeOf[st.sec](id),pri:0}));
@@ -1341,7 +1344,8 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answ
       else if(okWith(p,pick,sep))pick.push(p)}
     return pick.length===n?pick:null};
   for(let k=0;k<80&&!chosen;k++)chosen=greedy(true);
-  if(!(eu&&EUSEC===10))for(let k=0;k<300&&!chosen;k++)chosen=greedy(false);// countries: never closer than the spacing ruleif(!chosen)return null;
+  if(!(eu&&EUSEC===10))for(let k=0;k<300&&!chosen;k++)chosen=greedy(false);// countries: never closer than the spacing rule
+  if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
