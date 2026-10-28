@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-mountains/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-countries/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -409,6 +409,39 @@ try{
       const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-mountains.webp'),'final on the mountains map');
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e3-u1-l1"]')}
+    await context.close()}
+  // Block 2 section 4 «Countries and capitals: west and north»: hidden until its countries are approved; then every lesson on the capitals map
+  // with right answers (tap on the country's label point or on the capital dot / pick the answer); a tap on a neighbour never counts
+  {const cFacts=JSON.parse(fs.readFileSync('data/content/b2-section-4-facts.json')),cMap=JSON.parse(fs.readFileSync('data/maps/europe-countries.json'));
+    const approved=cFacts.items.every(i=>i.approval?.status==='approved');
+    const context=await browser.newContext({viewport:{width:360,height:800},hasTouch:true});
+    await context.addInitScript(()=>{if(sessionStorage.getItem('fixture'))return;sessionStorage.setItem('fixture','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:'ru',done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))});
+    const page=await context.newPage();await page.goto(base+'/app/');await page.waitForSelector('[data-step="e3-u1-l1"]');
+    if(!approved)assert.equal(await page.locator('[data-step="e4-u1-l1"]').count(),0,'section 4 stays hidden until its countries are approved');
+    else{assert.match(await page.locator('.path').innerText(),/Страны и столицы/);
+      const lab=Object.fromEntries(cMap.items.map(i=>[i.id,i.label])),cap=Object.fromEntries(cMap.items.map(i=>[i.id,i.capital]));
+      const tapAt=async(pt)=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+      const lessons=['e4-u1-l1','e4-u1-l2','e4-u2-l1','e4-u2-l2','e4-u3-l1','e4-u3-l2','e4-u3-l3','e4-u3-l4'];const kinds=new Set(),seen=new Set();
+      for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+        for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+          const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);if(q.id)seen.add(q.id);
+          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-capitals.webp'),'capitals map: '+src);
+          if(q.k==='introEu'||q.k==='introEuRec'){
+            if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),cFacts.items.find(i=>i.id===q.id).fact.ru);
+            await page.locator('.fb .btn').click()}
+          else if(q.k==='findEu'||q.k==='findCap'){await tapAt(q.k==='findEu'?lab[q.id]:cap[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
+            assert.equal(await page.locator('.fb.ok').count(),1,q.k+': a tap on '+q.id+' is right');await page.locator('.fb .btn').click()}
+          else if(['whatEu','capOf','whatCap'].includes(q.k)){await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+          else throw new Error('unexpected task '+q.k)}
+        await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="e4-u1-l1"]')}
+      for(const k of ['introEu','introEuRec','findEu','findCap'])assert(kinds.has(k),'task kind played: '+k);
+      assert(kinds.has('capOf')||kinds.has('whatCap'),'a «which capital / which country» task was played');
+      for(const it of cMap.items)assert(seen.has(it.id),'country practised: '+it.id);
+      const wrong=await page.evaluate(([nl,be,lu,br])=>{window.__gwEuSec(10);const sz={W:360,H:262};
+        return [window.__gwEuOk('belgium',nl.x,nl.y,sz),window.__gwEuOk('netherlands',be.x,be.y,sz),window.__gwEuOk('luxembourg-country',be.x,be.y,sz),window.__gwCapHit(br.x,br.y,sz)]},
+        [lab.netherlands,lab.belgium,lab['luxembourg-country'],cap.belgium]);
+      assert.deepEqual(wrong,[false,false,false,'brussels'])}
     await context.close()}
   console.log('PASS Expedition: real final unlocks unit 2 across reload; jump link works; RU review rotation and EN gating; unit practice gates the final; block review lessons 1–4 (records), block final, Speed Hunt and Challenge GeoWords; block 2 section 1 «Europe on the map», section 2 «Rivers of Europe» lessons, unit practice and finals; section 3 «Mountains of Europe» lessons, unit practice and finals');
 }finally{

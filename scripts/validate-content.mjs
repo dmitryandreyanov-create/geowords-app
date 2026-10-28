@@ -56,6 +56,14 @@ const RELEASE = {
     section: "rivers-of-europe",
     ids: ["volga-largest-delta", "loire-longest-france", "tagus-longest-iberia"],
   },
+  "b2-section-4-facts.json": {
+    section: "countries-west-and-north",
+    ids: ["united-kingdom", "ireland-country", "france", "netherlands", "belgium", "luxembourg-country", "spain", "portugal", "norway", "sweden", "denmark", "finland", "iceland-country"],
+  },
+  "b2-section-4-records.json": {
+    section: "countries-west-and-north",
+    ids: ["reykjavik-northernmost-capital", "lisbon-westernmost-mainland-capital", "france-largest-eu"],
+  },
   "b2-section-3-facts.json": {
     section: "mountains-of-europe",
     ids: ["pyrenees", "alps", "apennines", "carpathians", "balkan-mountains", "dinaric-alps", "scandinavian-mountains", "scottish-highlands", "caucasus"],

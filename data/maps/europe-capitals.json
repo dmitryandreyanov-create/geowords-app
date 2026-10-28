@@ -200,6 +200,24 @@
       "lat": 44.7866,
       "x": 53.59,
       "y": 76.28
+    },
+    {
+      "id": "reykjavik",
+      "name": "Reykjavik",
+      "lon": -21.9426,
+      "lat": 64.1466,
+      "x": 30.15,
+      "y": 25.14,
+      "added": "2026-10-28, block 2 section 4: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
+    },
+    {
+      "id": "luxembourg",
+      "name": "Luxembourg",
+      "lon": 6.1296,
+      "lat": 49.6116,
+      "x": 40.71,
+      "y": 63.83,
+      "added": "2026-10-28, block 2 section 4: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
     }
   ]
 }

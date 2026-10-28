@@ -1,0 +1,620 @@
+{
+ "section": "countries-west-and-north",
+ "block": 2,
+ "status": "approved",
+ "source": "Svetlana's list of 28.10.2026 and the doc https://claude.ai/artifact/5GD3nuDQn15T1jvgCnTvrd",
+ "rules": {
+  "structure": "3 units x (1 final + at least 6 review words) + section final; practice draws 6 of each unit's review words",
+  "places": "letters on the learned countries of the section (at the country centre, not on the capital dot) first, then on the objects of section 1 (europe-overview.json); rivers and ranges are not drawn on the capitals map",
+  "spacing": "letter centres at least 9% of the map width apart (hypot(dx, dy*1600/2200) >= 9); at most one of the Netherlands, Belgium and Luxembourg in a puzzle (Svetlana, 28.10.2026)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "all words approved by Svetlana 28.10.2026 («Утверждаю»): her list, with ГЕЙЗЕР→СКАЛЬД (already in section 1), SEAFARING→EXPLORATION (already in block 1), ГОБЕЛЕН→СТОУНХЕНДЖ, ДРАККАР→ЭДДА and same-root definitions reworded"
+ },
+ "units": [
+  {
+   "id": "unit-1-british-isles-and-france",
+   "title": {
+    "ru": "Британские острова и Франция",
+    "en": "The British Isles and France"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РЕВОЛЮЦИЯ",
+      "role": "final",
+      "definition": "Коренное изменение политического или общественного устройства страны, нередко происходящее в результате массовых выступлений.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "059b38948ccdef85"
+      }
+     },
+     {
+      "answer": "МОНАРХИЯ",
+      "role": "review",
+      "definition": "Форма правления, при которой страну возглавляет король, королева или император, а власть обычно передаётся по наследству.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "711ccf26768e6dbb"
+      }
+     },
+     {
+      "answer": "ПАРЛАМЕНТ",
+      "role": "review",
+      "definition": "Орган государственной власти, который принимает законы и представляет интересы населения.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3b199f88b9996597"
+      }
+     },
+     {
+      "answer": "КЕЛЬТЫ",
+      "role": "review",
+      "definition": "Группы древних народов Европы, чьи языки и культура сохранились в Ирландии, Уэльсе и некоторых других регионах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e75e6ca915b0abd1"
+      }
+     },
+     {
+      "answer": "НОРМАННЫ",
+      "role": "review",
+      "definition": "Потомки скандинавских переселенцев, поселившихся во Франции и завоевавших Англию в 1066 году.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e6f12ab10e4468c8"
+      }
+     },
+     {
+      "answer": "МЕГАЛИТ",
+      "role": "review",
+      "definition": "Большой камень, установленный людьми в древности, часто как часть памятника или сооружения.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "9ad30d82f1cd2379"
+      }
+     },
+     {
+      "answer": "ДРУИДЫ",
+      "role": "review",
+      "definition": "Жрецы, учителя и хранители традиций у некоторых древних кельтских народов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "7b7a6b4a921a1a80"
+      }
+     },
+     {
+      "answer": "СТОУНХЕНДЖ",
+      "role": "review",
+      "definition": "Древнее сооружение из огромных камней на юге Англии, ему больше 4000 лет.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "662c1599e7f45fe4"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "REVOLUTION",
+      "role": "final",
+      "definition": "A major change in a country’s political or social system, often brought about by mass movements.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "00cc77e6190c3e94"
+      }
+     },
+     {
+      "answer": "MONARCHY",
+      "role": "review",
+      "definition": "A form of government in which a king, queen or emperor is the head of state, usually by inheritance.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "ff0df60c9740f949"
+      }
+     },
+     {
+      "answer": "PARLIAMENT",
+      "role": "review",
+      "definition": "A lawmaking body whose members represent the people.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "aa273ac1cbf3ce91"
+      }
+     },
+     {
+      "answer": "CELTS",
+      "role": "review",
+      "definition": "Groups of ancient European peoples whose languages and culture survive in Ireland, Wales, and other regions.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "411af780b85003af"
+      }
+     },
+     {
+      "answer": "NORMANS",
+      "role": "review",
+      "definition": "Descendants of Scandinavian settlers in France who conquered England in 1066.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0922ff3032dcda15"
+      }
+     },
+     {
+      "answer": "MEGALITH",
+      "role": "review",
+      "definition": "A large stone placed by people in ancient times, often as part of a monument or structure.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8fc2f3b6d2f2da71"
+      }
+     },
+     {
+      "answer": "DRUIDS",
+      "role": "review",
+      "definition": "Religious leaders, teachers, and keepers of traditions among some ancient Celtic peoples.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3eefae5c50e7aa34"
+      }
+     },
+     {
+      "answer": "STONEHENGE",
+      "role": "review",
+      "definition": "An ancient circle of huge standing rocks in southern England, more than 4,000 years old.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "76759af43ea1abed"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-benelux-and-iberia",
+   "title": {
+    "ru": "Бенилюкс и Пиренейский полуостров",
+    "en": "Benelux and the Iberian Peninsula"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КОНКИСТАДОР",
+      "role": "final",
+      "definition": "Испанский или португальский завоеватель, участвовавший в захвате территорий, прежде всего в Америке, в XV–XVI веках.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d28a978c0548ff3f"
+      }
+     },
+     {
+      "answer": "ПОЛЬДЕР",
+      "role": "review",
+      "definition": "Низменный участок земли, защищённый дамбами от затопления, уровень воды на котором регулируют люди.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "20106b3154256028"
+      }
+     },
+     {
+      "answer": "ДАМБА",
+      "role": "review",
+      "definition": "Искусственное сооружение, которое удерживает воду и защищает территорию от затопления.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "aabce983d567d4ae"
+      }
+     },
+     {
+      "answer": "ФЛАНДРИЯ",
+      "role": "review",
+      "definition": "Историческая область Северо-Западной Европы, известная средневековыми торговыми городами и производством тканей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d8c54cbe9f43d9fc"
+      }
+     },
+     {
+      "answer": "КОЛОНИЯ",
+      "role": "review",
+      "definition": "Территория, находящаяся под политическим контролем другого государства.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "c0595e1f2346e6fe"
+      }
+     },
+     {
+      "answer": "КАРАВЕЛЛА",
+      "role": "review",
+      "definition": "Небольшое манёвренное парусное судно, использовавшееся португальскими и испанскими мореплавателями в эпоху Великих географических открытий.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0e46cb46e1bf0ce1"
+      }
+     },
+     {
+      "answer": "РЕКОНКИСТА",
+      "role": "review",
+      "definition": "Длительный процесс завоевания христианскими государствами территорий Пиренейского полуострова, находившихся под мусульманским правлением.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "5f3a7f0792270c4a"
+      }
+     },
+     {
+      "answer": "МАВРЫ",
+      "role": "review",
+      "definition": "Историческое название мусульманских народов Северной Африки и Пиренейского полуострова в Средние века.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "1fed20b0b70aa7b3"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CONQUISTADOR",
+      "role": "final",
+      "definition": "A Spanish or Portuguese soldier-explorer who seized lands, especially in the Americas, in the 15th and 16th centuries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0a4632fc74add275"
+      }
+     },
+     {
+      "answer": "POLDER",
+      "role": "review",
+      "definition": "A low-lying area of land protected by dikes, where water levels are controlled by people.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "6d0e794604d28904"
+      }
+     },
+     {
+      "answer": "DIKE",
+      "role": "review",
+      "definition": "A man-made barrier that holds back water and protects land from flooding.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0ce0d181702805df"
+      }
+     },
+     {
+      "answer": "FLANDERS",
+      "role": "review",
+      "definition": "A historic region of northwestern Europe known for its medieval trading cities and textile production.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "327042cf79497b53"
+      }
+     },
+     {
+      "answer": "COLONY",
+      "role": "review",
+      "definition": "A territory under the political control of another country.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d18cd115b194296b"
+      }
+     },
+     {
+      "answer": "CARAVEL",
+      "role": "review",
+      "definition": "A small, manoeuvrable sailing ship used by Portuguese and Spanish explorers during the Age of Exploration.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8367db6713285168"
+      }
+     },
+     {
+      "answer": "RECONQUISTA",
+      "role": "review",
+      "definition": "The centuries-long struggle in which Christian kingdoms took back the Iberian Peninsula from Muslim rulers.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e960215c5bec5883"
+      }
+     },
+     {
+      "answer": "MOORS",
+      "role": "review",
+      "definition": "A historical name for Muslim peoples of North Africa and the Iberian Peninsula during the Middle Ages.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "6b57c8e01984b743"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-northern-europe",
+   "title": {
+    "ru": "Северная Европа",
+    "en": "Northern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ВИКИНГИ",
+      "role": "final",
+      "definition": "Скандинавы, которые в VIII–XI веках совершали морские походы, торговали, основывали поселения и участвовали в завоеваниях.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "81e500d1bc6900a1"
+      }
+     },
+     {
+      "answer": "САГА",
+      "role": "review",
+      "definition": "Средневековое скандинавское повествование о людях, семьях, путешествиях и исторических событиях.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "66313c449f2c163a"
+      }
+     },
+     {
+      "answer": "РУНЫ",
+      "role": "review",
+      "definition": "Знаки древних алфавитов, которыми пользовались германские народы, в том числе скандинавы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d6c99610b852a689"
+      }
+     },
+     {
+      "answer": "АЛЬТИНГ",
+      "role": "review",
+      "definition": "Парламент Исландии, основанный около 930 года и считающийся одним из старейших парламентов мира.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "98949d8b7312eca3"
+      }
+     },
+     {
+      "answer": "ФЬЕЛЬД",
+      "role": "review",
+      "definition": "Скандинавское название горной местности, часто с плоскими вершинами, плато и скудной растительностью.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "84d7b721ba09b6fd"
+      }
+     },
+     {
+      "answer": "СААМЫ",
+      "role": "review",
+      "definition": "Коренной народ северных районов Норвегии, Швеции, Финляндии и Кольского полуострова России.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "5383d2a229238063"
+      }
+     },
+     {
+      "answer": "ЭДДА",
+      "role": "review",
+      "definition": "Сборник древних скандинавских песен о богах и героях, записанный в Исландии в XIII веке.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "a8dc37f987a7df3c"
+      }
+     },
+     {
+      "answer": "СКАЛЬД",
+      "role": "review",
+      "definition": "Поэт и сказитель при дворе скандинавских королей эпохи викингов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "809cd7e89f550365"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "VIKINGS",
+      "role": "final",
+      "definition": "Scandinavians who raided, traded, settled, and explored overseas during the 8th–11th centuries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "004390e4a20d27d1"
+      }
+     },
+     {
+      "answer": "SAGA",
+      "role": "review",
+      "definition": "A medieval Scandinavian narrative about people, families, journeys, and historical events.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "27e476f0ecb6a5ba"
+      }
+     },
+     {
+      "answer": "RUNES",
+      "role": "review",
+      "definition": "Letters of ancient alphabets used by Germanic peoples, including Scandinavians.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8a6b1566a23510ec"
+      }
+     },
+     {
+      "answer": "ALTHING",
+      "role": "review",
+      "definition": "Iceland’s parliament, founded around AD 930 and considered one of the oldest parliaments in the world.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8550cf9115875c9b"
+      }
+     },
+     {
+      "answer": "FJELL",
+      "role": "review",
+      "definition": "A Scandinavian term for mountainous terrain, often with broad plateaus, rounded summits, and sparse vegetation.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "aeed49df7679f778"
+      }
+     },
+     {
+      "answer": "SAMI",
+      "role": "review",
+      "definition": "An Indigenous people of northern Norway, Sweden, Finland, and Russia’s Kola Peninsula.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b7db1cedf374872a"
+      }
+     },
+     {
+      "answer": "EDDA",
+      "role": "review",
+      "definition": "A collection of Old Norse poems about gods and heroes, written down in Iceland in the 13th century.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "68c9b2c11681cce7"
+      }
+     },
+     {
+      "answer": "SKALD",
+      "role": "review",
+      "definition": "A poet and storyteller at the courts of Scandinavian kings in the Viking Age.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "664331ddd41bfa38"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МОРЕПЛАВАНИЕ",
+      "role": "section-final",
+      "definition": "Путешествия и работа людей на кораблях: управление судами, торговля и поиск новых путей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "fca644043d815a4b"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "EXPLORATION",
+      "role": "section-final",
+      "definition": "Travelling to unknown lands and waters to discover and map them.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8e023d8d024c90ba"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-28"
+}
