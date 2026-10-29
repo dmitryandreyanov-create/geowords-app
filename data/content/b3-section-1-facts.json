@@ -1,0 +1,635 @@
+{
+ "section": "asia-on-the-map",
+ "block": 3,
+ "use": "introduction cards (exercise type 0), one fact per object; asia-intro opens the section; ids match data/maps/asia-overview.json",
+ "decisions": [
+  "Block 3 «Asia» has 8 sections: Asia on the map, rivers, lakes, mountains, deserts, three sections of countries and capitals (Svetlana, 29.10.2026).",
+  "The Europe–Asia border is the one of the Europe maps (the Urals, the Ural River, the Caspian, the Kuma–Manych depression); the Bosporus, the Suez Canal and the Bering Strait are reviewed from block 1 in a new role, as borders of Asia."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Где кончается Азия",
+    "en": "Where Asia ends"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Полуострова Азии",
+    "en": "Peninsulas of Asia"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Острова и моря у берегов Азии",
+    "en": "Islands and seas off Asia"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "asia-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Asia",
+    "ru": "Азия"
+   },
+   "fact": {
+    "en": "Asia is the largest part of the world: it covers almost a third of all land. Together with Europe it forms the continent of Eurasia.",
+    "ru": "Азия — самая большая часть света: она занимает почти треть всей суши. Вместе с Европой она образует материк Евразия."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "108781afe1c4f06e"
+   }
+  },
+  {
+   "id": "as-arctic-ocean",
+   "order": 1,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Arctic Ocean",
+    "ru": "Северный Ледовитый океан"
+   },
+   "fact": {
+    "en": "The Arctic Ocean washes Asia from the north. Its coast is locked in ice for most of the year.",
+    "ru": "Северный Ледовитый океан омывает Азию с севера. Большую часть года его берега скованы льдом."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "57cca5d9e3b716bc"
+   }
+  },
+  {
+   "id": "as-pacific-ocean",
+   "order": 2,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The Pacific Ocean washes Asia from the east.",
+    "ru": "Тихий океан омывает Азию с востока."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2cdbed2d1ab6629a"
+   }
+  },
+  {
+   "id": "as-indian-ocean",
+   "order": 3,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Indian Ocean",
+    "ru": "Индийский океан"
+   },
+   "fact": {
+    "en": "The Indian Ocean washes Asia from the south. It is the warmest ocean on Earth.",
+    "ru": "Индийский океан омывает Азию с юга. Это самый тёплый океан Земли."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8b14cc53c83fbe0f"
+   }
+  },
+  {
+   "id": "as-ural-mountains",
+   "order": 4,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Ural Mountains",
+    "ru": "Уральские горы"
+   },
+   "fact": {
+    "en": "In the west, the Ural Mountains separate Asia from Europe.",
+    "ru": "На западе Азию от Европы отделяют Уральские горы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6151004b832b9676"
+   }
+  },
+  {
+   "id": "as-bosporus",
+   "order": 5,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Bosporus",
+    "ru": "Босфор"
+   },
+   "fact": {
+    "en": "The Bosporus separates Asia from Europe. Istanbul stands on both of its shores, in two parts of the world at once.",
+    "ru": "Босфор отделяет Азию от Европы. Стамбул стоит на обоих его берегах, сразу в двух частях света."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a572c7e32a038fdd"
+   }
+  },
+  {
+   "id": "as-suez-canal",
+   "order": 6,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Suez Canal",
+    "ru": "Суэцкий канал"
+   },
+   "fact": {
+    "en": "The border between Asia and Africa runs along the Suez Canal. That is why Egypt's Sinai Peninsula belongs to Asia.",
+    "ru": "По Суэцкому каналу проходит граница Азии и Африки. Поэтому египетский Синайский полуостров относится к Азии."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "158439c184928647"
+   }
+  },
+  {
+   "id": "as-bering-strait",
+   "order": 7,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Bering Strait",
+    "ru": "Берингов пролив"
+   },
+   "fact": {
+    "en": "The Bering Strait separates Asia from North America. In the middle lie the two Diomede Islands, one Russian and one American, about 4 km apart.",
+    "ru": "Берингов пролив отделяет Азию от Северной Америки. Посреди него лежат два острова Диомида, российский и американский, между ними около 4 км."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "71ce1dc864b6bb53"
+   }
+  },
+  {
+   "id": "as-asia-minor",
+   "order": 8,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Asia Minor",
+    "ru": "Малая Азия"
+   },
+   "fact": {
+    "en": "Almost all of Turkey lies on the peninsula of Asia Minor (Anatolia).",
+    "ru": "На полуострове Малая Азия лежит почти вся Турция."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c5ac353cd62be160"
+   }
+  },
+  {
+   "id": "as-arabian-peninsula",
+   "order": 9,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Arabian Peninsula",
+    "ru": "Аравийский полуостров"
+   },
+   "fact": {
+    "en": "Hot deserts cover most of the Arabian Peninsula.",
+    "ru": "Большую часть Аравийского полуострова занимают жаркие пустыни."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "31f5f3b760399d84"
+   }
+  },
+  {
+   "id": "as-hindustan",
+   "order": 10,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Indian subcontinent",
+    "ru": "Индостан"
+   },
+   "fact": {
+    "en": "The Himalayas close off the Indian subcontinent from the north. Most of India lies on it.",
+    "ru": "С севера Индостан закрывают Гималаи. На нём лежит большая часть Индии."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "74452a26eff6e4ec"
+   }
+  },
+  {
+   "id": "as-indochina",
+   "order": 11,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Indochina",
+    "ru": "Индокитай"
+   },
+   "fact": {
+    "en": "Indochina got its name because it lies between India and China.",
+    "ru": "Индокитай назвали так, потому что он лежит между Индией и Китаем."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6f7a419982108fa0"
+   }
+  },
+  {
+   "id": "as-malay-peninsula",
+   "order": 12,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Malay Peninsula",
+    "ru": "Малаккский полуостров"
+   },
+   "fact": {
+    "en": "The Malay Peninsula is the southernmost part of mainland Asia.",
+    "ru": "Малаккский полуостров — самая южная часть материковой Азии."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c8d6761744c119c3"
+   }
+  },
+  {
+   "id": "as-korean-peninsula",
+   "order": 13,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Korean Peninsula",
+    "ru": "Корейский полуостров"
+   },
+   "fact": {
+    "en": "Two countries lie on the Korean Peninsula: North Korea and South Korea.",
+    "ru": "На Корейском полуострове лежат две страны: КНДР и Республика Корея."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "568dfbdae498a29e"
+   }
+  },
+  {
+   "id": "as-kamchatka",
+   "order": 14,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Kamchatka",
+    "ru": "Камчатка"
+   },
+   "fact": {
+    "en": "Kamchatka has about 30 active volcanoes and the famous Valley of Geysers.",
+    "ru": "На Камчатке около 30 действующих вулканов и знаменитая Долина гейзеров."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "70960567cef91c0b"
+   }
+  },
+  {
+   "id": "as-taimyr",
+   "order": 15,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Taimyr Peninsula",
+    "ru": "Таймыр"
+   },
+   "fact": {
+    "en": "The largest herd of wild reindeer in Eurasia lives on the Taimyr Peninsula.",
+    "ru": "На Таймыре живёт самое большое в Евразии стадо диких северных оленей."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c78a62aa3dbae925"
+   }
+  },
+  {
+   "id": "as-japanese-islands",
+   "order": 16,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Japanese Islands",
+    "ru": "Японские острова"
+   },
+   "fact": {
+    "en": "Japan lies on four large islands and thousands of small ones.",
+    "ru": "Япония лежит на четырёх больших островах и тысячах маленьких."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "18b0f431d7dff5cf"
+   }
+  },
+  {
+   "id": "as-sakhalin",
+   "order": 17,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Sakhalin",
+    "ru": "Сахалин"
+   },
+   "fact": {
+    "en": "Sakhalin is the largest island of Russia.",
+    "ru": "Сахалин — самый большой остров России."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "441a9506c67ec599"
+   }
+  },
+  {
+   "id": "as-sri-lanka",
+   "order": 18,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Sri Lanka",
+    "ru": "Шри-Ланка"
+   },
+   "fact": {
+    "en": "Sri Lanka is famous for Ceylon tea: Ceylon is the island's old name.",
+    "ru": "Шри-Ланка славится цейлонским чаем: Цейлон — старое название острова."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c3ac1613dfbe2b5a"
+   }
+  },
+  {
+   "id": "as-borneo",
+   "order": 19,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Borneo",
+    "ru": "Калимантан"
+   },
+   "fact": {
+    "en": "Borneo is shared by three countries: Indonesia, Malaysia and Brunei.",
+    "ru": "Калимантан делят три страны: Индонезия, Малайзия и Бруней."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "9d96275962b859b7"
+   }
+  },
+  {
+   "id": "as-sea-of-japan",
+   "order": 20,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Sea of Japan",
+    "ru": "Японское море"
+   },
+   "fact": {
+    "en": "The Sea of Japan separates the Japanese islands from the mainland.",
+    "ru": "Японское море отделяет Японские острова от материка."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d7539316b11cc472"
+   }
+  },
+  {
+   "id": "as-sea-of-okhotsk",
+   "order": 21,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Sea of Okhotsk",
+    "ru": "Охотское море"
+   },
+   "fact": {
+    "en": "The Sea of Okhotsk is one of the coldest seas of the Pacific: in winter it is covered with ice.",
+    "ru": "Охотское море — одно из самых холодных морей Тихого океана: зимой его покрывает лёд."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "03edbe8ab1b1739e"
+   }
+  },
+  {
+   "id": "as-south-china-sea",
+   "order": 22,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "South China Sea",
+    "ru": "Южно-Китайское море"
+   },
+   "fact": {
+    "en": "The South China Sea has hundreds of small islands and coral reefs.",
+    "ru": "В Южно-Китайском море сотни мелких островов и коралловых рифов."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "388a0c04b6b1007a"
+   }
+  },
+  {
+   "id": "as-persian-gulf",
+   "order": 23,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Persian Gulf",
+    "ru": "Персидский залив"
+   },
+   "fact": {
+    "en": "The shores and the bed of the Persian Gulf are rich in oil.",
+    "ru": "Берега и дно Персидского залива богаты нефтью."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ffy2nGk4q2i3wUW5qN6MHA",
+    "note": "block 3 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "71f3f9949663efeb"
+   }
+  }
+ ]
+}

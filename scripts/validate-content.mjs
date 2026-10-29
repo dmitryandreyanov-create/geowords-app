@@ -84,6 +84,14 @@ const RELEASE = {
     section: "europe-on-the-map",
     ids: ["scandinavian-largest-peninsula", "great-britain-largest-island", "sicily-largest-mediterranean-island"],
   },
+  "b3-section-1-facts.json": {
+    section: "asia-on-the-map",
+    ids: ["asia-intro", "as-arctic-ocean", "as-pacific-ocean", "as-indian-ocean", "as-ural-mountains", "as-bosporus", "as-suez-canal", "as-bering-strait", "as-asia-minor", "as-arabian-peninsula", "as-hindustan", "as-indochina", "as-malay-peninsula", "as-korean-peninsula", "as-kamchatka", "as-taimyr", "as-japanese-islands", "as-sakhalin", "as-sri-lanka", "as-borneo", "as-sea-of-japan", "as-sea-of-okhotsk", "as-south-china-sea", "as-persian-gulf"],
+  },
+  "b3-section-1-records.json": {
+    section: "asia-on-the-map",
+    ids: ["arabian-largest-peninsula", "borneo-largest-island-asia", "chelyuskin-northernmost"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",

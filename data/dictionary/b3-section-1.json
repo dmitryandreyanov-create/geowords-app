@@ -1,0 +1,620 @@
+{
+ "section": "asia-on-the-map",
+ "block": 3,
+ "status": "approved",
+ "source": "Svetlana's list in the project thread, 29.10.2026 (25 words RU + EN)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters only on learned objects of the Asia map: up to 7 after unit 1, 15 after unit 2, 23 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Words from Svetlana's list (29.10.2026): ДЖУНГЛИ and IRRIGATION repeat block 1 and were replaced by КЯРИЗ and QANAT; the 4-letter words СЕЛЬ, ЛЁСС, ДЖУТ, ЮРТА, JUTE, YURT were replaced by БАРХАН, БАЗАР, ХЛОПОК, ЧАЙХАНА, COTTON, BAZAAR («Утверждаю», 29.10.2026). Unit split and definitions by Claude; all words and the 8 finals approved by Svetlana 2026-10-29 («Утверждаю»)."
+ },
+ "units": [
+  {
+   "id": "unit-1-where-asia-ends",
+   "title": {
+    "ru": "Где кончается Азия",
+    "en": "Where Asia ends"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТАЙФУН",
+      "role": "final",
+      "definition": "Тропический ураган над Тихим океаном у берегов Восточной Азии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "7968f9512daca881"
+      }
+     },
+     {
+      "answer": "САМУМ",
+      "role": "review",
+      "definition": "Сухой горячий ветер с песчаной бурей в пустынях Аравии и Северной Африки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "471fa337ef062520"
+      }
+     },
+     {
+      "answer": "ХАМСИН",
+      "role": "review",
+      "definition": "Жаркий сухой южный ветер из пустыни, который весной дует в Египте и на Ближнем Востоке.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "a6f8797406ab051c"
+      }
+     },
+     {
+      "answer": "ТАКЫР",
+      "role": "review",
+      "definition": "Ровная глинистая площадка в пустыне, которая летом растрескивается от жары.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "c167db70903f1928"
+      }
+     },
+     {
+      "answer": "БАРХАН",
+      "role": "review",
+      "definition": "Песчаный холм в форме полумесяца, который ветер передвигает по пустыне.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "112b6482874da8e1"
+      }
+     },
+     {
+      "answer": "САКСАУЛ",
+      "role": "review",
+      "definition": "Кустарник или деревце пустынь Средней Азии с очень твёрдой древесиной.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "15b624edabe7ac97"
+      }
+     },
+     {
+      "answer": "КЯРИЗ",
+      "role": "review",
+      "definition": "Подземный канал, по которому вода с гор идёт к полям в пустыне.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "ae35c67a1d9d95b9"
+      }
+     },
+     {
+      "answer": "КАРАВАН",
+      "role": "review",
+      "definition": "Вереница верблюдов с грузом и людьми, идущая через пустыню.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e9af049ab56bbd23"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TYPHOON",
+      "role": "final",
+      "definition": "A tropical storm over the Pacific Ocean near the coasts of East Asia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "d14ef69e707b1263"
+      }
+     },
+     {
+      "answer": "SIMOOM",
+      "role": "review",
+      "definition": "A hot dry wind with sandstorms in the deserts of Arabia and North Africa.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "af80e969ef617726"
+      }
+     },
+     {
+      "answer": "KHAMSIN",
+      "role": "review",
+      "definition": "A hot dry southerly wind from the desert that blows in Egypt and the Middle East in spring.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "855ee4b47f950659"
+      }
+     },
+     {
+      "answer": "TAKYR",
+      "role": "review",
+      "definition": "A flat clay patch in the desert that cracks in the summer heat.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "fd5814a3003a9856"
+      }
+     },
+     {
+      "answer": "SAXAUL",
+      "role": "review",
+      "definition": "A desert shrub or small tree of Central Asia with very hard wood.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "15c23f841b90f02d"
+      }
+     },
+     {
+      "answer": "QANAT",
+      "role": "review",
+      "definition": "An underground channel that carries water from the mountains to fields in the desert.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "1cda0d015dbdb97a"
+      }
+     },
+     {
+      "answer": "CARAVAN",
+      "role": "review",
+      "definition": "A line of camels carrying goods and people across the desert.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "d23879206f7fa5d7"
+      }
+     },
+     {
+      "answer": "MUDFLOW",
+      "role": "review",
+      "definition": "A fast stream of mud and stones rushing down a mountain valley after heavy rain.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "78a695a0e05b0eda"
+      }
+     },
+     {
+      "answer": "LOESS",
+      "role": "review",
+      "definition": "Fine yellow soil carried by the wind; it gives the Huang He its colour.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f6db2a68ebfe89c1"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-peninsulas-of-asia",
+   "title": {
+    "ru": "Полуострова Азии",
+    "en": "Peninsulas of Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КАРАВАНСАРАЙ",
+      "role": "final",
+      "definition": "Постоялый двор на торговом пути, где останавливались купцы с верблюдами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "0d37b942bf03068e"
+      }
+     },
+     {
+      "answer": "СОЛОНЧАК",
+      "role": "review",
+      "definition": "Почва с белой коркой, похожей на иней: в ней так много минералов, что почти ничего не растёт.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "06485fac41acef59"
+      }
+     },
+     {
+      "answer": "КОЧЕВНИК",
+      "role": "review",
+      "definition": "Человек, который не живёт на одном месте, а переходит со стадами с пастбища на пастбище.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "2244c049c0349873"
+      }
+     },
+     {
+      "answer": "ЧАЙХАНА",
+      "role": "review",
+      "definition": "Заведение в Средней Азии и Иране, где сидят на коврах, пьют горячий напиток из пиал и беседуют.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "75a494ac9f6def84"
+      }
+     },
+     {
+      "answer": "БАЗАР",
+      "role": "review",
+      "definition": "Шумный восточный рынок с торговыми рядами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "b7fb4508ce57e779"
+      }
+     },
+     {
+      "answer": "ХЛОПОК",
+      "role": "review",
+      "definition": "Растение, из пушистых коробочек которого делают нитки и ткань.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "dbf5e3704d83cf41"
+      }
+     },
+     {
+      "answer": "МИНАРЕТ",
+      "role": "review",
+      "definition": "Высокая башня рядом с мечетью, с которой призывают на молитву.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "23b987b00a90aac3"
+      }
+     },
+     {
+      "answer": "МЕДРЕСЕ",
+      "role": "review",
+      "definition": "Мусульманская школа, часто в красивом здании с куполом и внутренним двором.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f7439b4600547b3a"
+      }
+     },
+     {
+      "answer": "ИРРИГАЦИЯ",
+      "role": "review",
+      "definition": "Искусственный полив полей по каналам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "656550a109a32852"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CARAVANSERAI",
+      "role": "final",
+      "definition": "A roadside inn on a trade route where merchants stopped with their camels.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "39345ca5a414a5ae"
+      }
+     },
+     {
+      "answer": "SALTFLAT",
+      "role": "review",
+      "definition": "Flat ground covered with a white crust where a lake has dried up.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "5948e8f055054bf9"
+      }
+     },
+     {
+      "answer": "NOMAD",
+      "role": "review",
+      "definition": "A person who does not live in one place but moves with the herds from pasture to pasture.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "8d32824785249a69"
+      }
+     },
+     {
+      "answer": "BAZAAR",
+      "role": "review",
+      "definition": "A busy eastern market with rows of stalls.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "91b8f7e46e7a2ff6"
+      }
+     },
+     {
+      "answer": "COTTON",
+      "role": "review",
+      "definition": "A plant whose fluffy bolls are spun into thread and cloth.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "36df37427f34c963"
+      }
+     },
+     {
+      "answer": "MINARET",
+      "role": "review",
+      "definition": "A tall tower next to a mosque from which people are called to prayer.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "277297fd2e05c05a"
+      }
+     },
+     {
+      "answer": "MADRASA",
+      "role": "review",
+      "definition": "A Muslim school, often in a beautiful building with a dome and a courtyard.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "518cbbafd52e94aa"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-islands-and-seas",
+   "title": {
+    "ru": "Острова и моря у берегов Азии",
+    "en": "Islands and seas off Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТЕРРАСИРОВАНИЕ",
+      "role": "final",
+      "definition": "Устройство на склонах гор ступенчатых полей, как на рисовых полях Азии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "0e1c57fcf908bc06"
+      }
+     },
+     {
+      "answer": "БАМБУК",
+      "role": "review",
+      "definition": "Очень быстро растущий злак с полым стеблем, похожий на дерево.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f1edc483a5f2f725"
+      }
+     },
+     {
+      "answer": "МАНГРЫ",
+      "role": "review",
+      "definition": "Леса на морских берегах в тропиках, где деревья стоят в воде на корнях-ходулях.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "4e5219cceb8223cf"
+      }
+     },
+     {
+      "answer": "ТАЙГА",
+      "role": "review",
+      "definition": "Хвойный лес, который тянется через всю Сибирь.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e36fc400d58a2b5e"
+      }
+     },
+     {
+      "answer": "ПАГОДА",
+      "role": "review",
+      "definition": "Многоярусная башня-храм в Китае, Японии и Юго-Восточной Азии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e7bfd61a417f8f13"
+      }
+     },
+     {
+      "answer": "СТУПА",
+      "role": "review",
+      "definition": "Буддийское сооружение в форме купола или колокола, где хранят святыни.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "dd1fb242943e6673"
+      }
+     },
+     {
+      "answer": "СУБТРОПИКИ",
+      "role": "review",
+      "definition": "Климатический пояс с жарким летом и мягкой зимой, где растут мандарины и чай.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "4f9889b57c206056"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TERRACING",
+      "role": "final",
+      "definition": "Building step-like fields on mountain slopes, like the rice fields of Asia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "c429a0b0d03fb4d5"
+      }
+     },
+     {
+      "answer": "JUNGLE",
+      "role": "review",
+      "definition": "A dense tropical forest, thick with vines and undergrowth.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "7deade70fe3a3834"
+      }
+     },
+     {
+      "answer": "BAMBOO",
+      "role": "review",
+      "definition": "A very fast-growing giant grass with a hollow stem.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "3599f068f6b9f7ee"
+      }
+     },
+     {
+      "answer": "MANGROVES",
+      "role": "review",
+      "definition": "Tropical coastal forests whose trees stand in the sea on stilt-like roots.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "bdcbe7e9858a50bf"
+      }
+     },
+     {
+      "answer": "TAIGA",
+      "role": "review",
+      "definition": "The coniferous forest that stretches across all of Siberia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "300e62d07f3862c4"
+      }
+     },
+     {
+      "answer": "PAGODA",
+      "role": "review",
+      "definition": "A tower-temple of several tiers in China, Japan and South-East Asia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "c89ee19fa3d8f83a"
+      }
+     },
+     {
+      "answer": "STUPA",
+      "role": "review",
+      "definition": "A Buddhist dome- or bell-shaped monument that holds sacred relics.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e8bbf2912cedde48"
+      }
+     },
+     {
+      "answer": "SUBTROPICS",
+      "role": "review",
+      "definition": "The climate belt with hot summers and mild winters where tangerines and tea grow.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "3e62800344337e58"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ШЕЛКОВОДСТВО",
+      "role": "section-final",
+      "definition": "Разведение гусениц, которые прядут коконы для самой дорогой ткани Древнего Китая.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e5187b5f95263830"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "SERICULTURE",
+      "role": "section-final",
+      "definition": "Raising caterpillars that spin cocoons for silk, the costly cloth of ancient China.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "ada5ed9b9413559a"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-29"
+}
