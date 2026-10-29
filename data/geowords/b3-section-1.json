@@ -3,7 +3,7 @@
  "block": 3,
  "rules": {
   "clues": "clues in reveal order; position = slot the letter fills",
-  "places": "letters only on objects of data/maps/asia-overview.json learned by the end of the unit (section final: all 23), one letter per object, at the object's label point",
+  "places": "letters only on objects of data/maps/asia-overview.json learned by the end of the unit, one letter per object, at the object's label point (the finals approved 29.10.2026 were laid out on the 23 objects before the Chukchi Peninsula was added the same evening)",
   "nesting": "an object never shares a puzzle with the object that contains it: the Seas of Japan and Okhotsk, the South China Sea, the Japanese Islands, Sakhalin and Borneo with the Pacific; the Persian Gulf and Sri Lanka with the Indian Ocean; no letter inside the area of another object of the puzzle",
   "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
   "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"

@@ -42,13 +42,15 @@ def mask(g):
 
 L = mask(land)
 A = mask(asia) & L
+# the shelf (light water) follows the big coasts only: the specks of the Pacific islands would whiten the open ocean
+big = unary_union([p for p in polys(land) if p.area >= 1.0])
 rng = np.random.default_rng(7)
 def noise(sigma, amp):
     return gaussian_filter(rng.standard_normal((H, W)), sigma) * amp / gaussian_filter(rng.standard_normal((H, W)), sigma).std()
 
 # water: light near the coast, deeper away from it, with soft blotches like the Europe maps
-dist = distance_transform_edt(~L) / S
-t = np.clip(dist / 170 + noise(70 * S, 0.1), 0, 1)
+dist = distance_transform_edt(~mask(big)) / S
+t = np.clip(dist / 150 + noise(70 * S, 0.06), 0, 1)
 t = t * t * (3 - 2 * t)
 water = np.array(SHALLOW)[None, None] * (1 - t[..., None]) + np.array(DEEP)[None, None] * t[..., None]
 img = water + noise(6 * S, 3)[..., None]

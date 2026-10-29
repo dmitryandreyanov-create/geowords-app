@@ -432,8 +432,33 @@
    }
   },
   {
-   "id": "as-japanese-islands",
+   "id": "as-chukotka",
    "order": 16,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Chukchi Peninsula",
+    "ru": "Чукотский полуостров"
+   },
+   "fact": {
+    "en": "On the Chukchi Peninsula, Cape Dezhnev is the easternmost point of mainland Eurasia.",
+    "ru": "На Чукотке, на мысе Дежнёва, лежит самая восточная точка материка Евразия."
+   },
+   "source": {
+    "doc": "project thread",
+    "note": "Svetlana asked to add Chukotka and approved the fact («Да. Отлично.», 29.10.2026)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "99f4f6a83ccabb72"
+   }
+  },
+  {
+   "id": "as-japanese-islands",
+   "order": 17,
    "kind": "island",
    "unit": 3,
    "name": {
@@ -458,7 +483,7 @@
   },
   {
    "id": "as-sakhalin",
-   "order": 17,
+   "order": 18,
    "kind": "island",
    "unit": 3,
    "name": {
@@ -483,7 +508,7 @@
   },
   {
    "id": "as-sri-lanka",
-   "order": 18,
+   "order": 19,
    "kind": "island",
    "unit": 3,
    "name": {
@@ -508,7 +533,7 @@
   },
   {
    "id": "as-borneo",
-   "order": 19,
+   "order": 20,
    "kind": "island",
    "unit": 3,
    "name": {
@@ -533,7 +558,7 @@
   },
   {
    "id": "as-sea-of-japan",
-   "order": 20,
+   "order": 21,
    "kind": "sea",
    "unit": 3,
    "name": {
@@ -558,7 +583,7 @@
   },
   {
    "id": "as-sea-of-okhotsk",
-   "order": 21,
+   "order": 22,
    "kind": "sea",
    "unit": 3,
    "name": {
@@ -583,7 +608,7 @@
   },
   {
    "id": "as-south-china-sea",
-   "order": 22,
+   "order": 23,
    "kind": "sea",
    "unit": 3,
    "name": {
@@ -608,7 +633,7 @@
   },
   {
    "id": "as-persian-gulf",
-   "order": 23,
+   "order": 24,
    "kind": "sea",
    "unit": 3,
    "name": {

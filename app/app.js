@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.29-asia-1';
+const BUILD='2026.10.29-asia-1b';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -484,7 +484,7 @@ let EUSEC=7;
 const E=id=>D.s7.eu[id]||D.s8.eu[id]||D.s9.eu[id]||D.s10.eu[id]||D.s11.eu[id]||D.s13.eu[id];
 // Block 3 «Asia», section 1: every object on the Asia base map (ids «as-…», data/maps/asia-overview.json)
 const AS1_IDS=['as-arctic-ocean','as-pacific-ocean','as-indian-ocean','as-ural-mountains','as-bosporus','as-suez-canal','as-bering-strait',
-  'as-asia-minor','as-arabian-peninsula','as-hindustan','as-indochina','as-malay-peninsula','as-korean-peninsula','as-kamchatka','as-taimyr',
+  'as-asia-minor','as-arabian-peninsula','as-hindustan','as-indochina','as-malay-peninsula','as-korean-peninsula','as-kamchatka','as-taimyr','as-chukotka',
   'as-japanese-islands','as-sakhalin','as-sri-lanka','as-borneo','as-sea-of-japan','as-sea-of-okhotsk','as-south-china-sea','as-persian-gulf'];
 // the country rules of GeoWords (letters 9% apart, never closer) are those of Europe sections 4 and 5 only
 const EUCTY=()=>EUSEC===10||EUSEC===11;
@@ -673,8 +673,8 @@ const R13={
  'u2-l1':()=>[...['as-asia-minor','as-arabian-peninsula','as-hindustan','as-indochina'].map(eu('introEu')),eu('findEu')('as-arabian-peninsula'),eu('whatEu')('as-asia-minor'),
    eu('findEu')('as-hindustan'),eu('findEu')('as-indochina'),eu('whatEu')('as-arabian-peninsula'),eu('findEu')('as-asia-minor'),eu('whatEu')('as-hindustan'),eu('whatEu')('as-indochina'),
    ...some(AS1_IDS.filter(id=>E(id)&&E(id).unit===1),1).map(eu('findEu'))],
- 'u2-l2':()=>[...['as-malay-peninsula','as-korean-peninsula','as-kamchatka','as-taimyr'].map(eu('introEu')),eu('findEu')('as-korean-peninsula'),eu('whatEu')('as-malay-peninsula'),
-   eu('findEu')('as-kamchatka'),eu('findEu')('as-taimyr'),eu('whatEu')('as-korean-peninsula'),eu('findEu')('as-malay-peninsula'),eu('whatEu')('as-kamchatka'),eu('whatEu')('as-taimyr')],
+ 'u2-l2':()=>[...['as-malay-peninsula','as-korean-peninsula','as-kamchatka','as-taimyr','as-chukotka'].map(eu('introEu')),eu('findEu')('as-korean-peninsula'),eu('whatEu')('as-malay-peninsula'),
+   eu('findEu')('as-kamchatka'),eu('findEu')('as-taimyr'),eu('findEu')('as-chukotka'),eu('whatEu')('as-korean-peninsula'),eu('findEu')('as-malay-peninsula'),eu('whatEu')('as-kamchatka'),eu('whatEu')('as-taimyr'),eu('whatEu')('as-chukotka')],
  'u2-l3':()=>[{k:'allPen'},...shuffle(AS1_IDS.filter(id=>E(id)&&E(id).kind==='peninsula').map(eu('findEu'))),...some(AS1_IDS.filter(id=>E(id)&&E(id).kind==='peninsula'),2).map(eu('whatEu'))],
  'u3-l1':()=>[...['as-japanese-islands','as-sakhalin','as-sri-lanka','as-borneo'].map(eu('introEu')),eu('findEu')('as-japanese-islands'),eu('whatEu')('as-sakhalin'),
    eu('findEu')('as-sri-lanka'),eu('findEu')('as-borneo'),eu('whatEu')('as-japanese-islands'),eu('findEu')('as-sakhalin'),eu('whatEu')('as-sri-lanka'),eu('whatEu')('as-borneo'),
@@ -690,7 +690,7 @@ const COURSE13=[
  {n:1,lessons:[{id:'a1-u1-l1',title:{ru:'Океаны вокруг Азии',en:'The oceans around Asia'},plan:R13['u1-l1']},
    {id:'a1-u1-l2',title:{ru:'Урал, Босфор, Суэц и Берингов пролив',en:'The Urals, the Bosporus, Suez and the Bering Strait'},plan:R13['u1-l2']}]},
  {n:2,lessons:[{id:'a1-u2-l1',title:{ru:'Малая Азия, Аравия, Индостан, Индокитай',en:'Asia Minor, Arabia, India, Indochina'},plan:R13['u2-l1']},
-   {id:'a1-u2-l2',title:{ru:'Малакка, Корея, Камчатка, Таймыр',en:'Malaya, Korea, Kamchatka, Taimyr'},plan:R13['u2-l2']},{id:'a1-u2-l3',title:{ru:'Все полуострова',en:'All the peninsulas'},plan:R13['u2-l3']}]},
+   {id:'a1-u2-l2',title:{ru:'Малакка, Корея, Камчатка, Таймыр, Чукотка',en:'Malaya, Korea, Kamchatka, Taimyr, Chukotka'},plan:R13['u2-l2']},{id:'a1-u2-l3',title:{ru:'Все полуострова',en:'All the peninsulas'},plan:R13['u2-l3']}]},
  {n:3,lessons:[{id:'a1-u3-l1',title:{ru:'Острова',en:'Islands'},plan:R13['u3-l1']},{id:'a1-u3-l2',title:{ru:'Японское, Охотское, Южно-Китайское, Персидский залив',en:'The Seas of Japan and Okhotsk, the South China Sea, the Persian Gulf'},plan:R13['u3-l2']},
    {id:'a1-u3-l3',title:{ru:'Рекорды',en:'Records'},plan:R13['u3-l3']},{id:'a1-u3-l4',title:{ru:'Все объекты раздела',en:'All the places of the section'},plan:R13['u3-l4']}]}
 ];
@@ -1510,7 +1510,7 @@ const AS_PLACE={'as-arctic-ocean':['в Северном Ледовитом ок�
   'as-suez-canal':['у Суэцкого канала','at the Suez Canal'],'as-bering-strait':['в Беринговом проливе','in the Bering Strait'],'as-asia-minor':['на полуострове Малая Азия','on the peninsula of Asia Minor'],
   'as-arabian-peninsula':['на Аравийском полуострове','on the Arabian Peninsula'],'as-hindustan':['на полуострове Индостан','on the Indian subcontinent'],
   'as-indochina':['на полуострове Индокитай','on the Indochina Peninsula'],'as-malay-peninsula':['на Малаккском полуострове','on the Malay Peninsula'],
-  'as-korean-peninsula':['на Корейском полуострове','on the Korean Peninsula'],'as-kamchatka':['на Камчатке','on Kamchatka'],'as-taimyr':['на Таймыре','on the Taimyr Peninsula'],
+  'as-korean-peninsula':['на Корейском полуострове','on the Korean Peninsula'],'as-kamchatka':['на Камчатке','on Kamchatka'],'as-taimyr':['на Таймыре','on the Taimyr Peninsula'],'as-chukotka':['на Чукотке','on the Chukchi Peninsula'],
   'as-japanese-islands':['на Японских островах','on the Japanese Islands'],'as-sakhalin':['на Сахалине','on Sakhalin'],'as-sri-lanka':['на острове Шри-Ланка','on the island of Sri Lanka'],
   'as-borneo':['на острове Калимантан','on the island of Borneo'],'as-sea-of-japan':['в Японском море','in the Sea of Japan'],'as-sea-of-okhotsk':['в Охотском море','in the Sea of Okhotsk'],
   'as-south-china-sea':['в Южно-Китайском море','in the South China Sea'],'as-persian-gulf':['в Персидском заливе','in the Persian Gulf']};

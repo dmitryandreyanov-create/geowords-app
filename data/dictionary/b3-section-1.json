@@ -6,7 +6,7 @@
  "rules": {
   "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
   "languages": "EN and RU lists are independent",
-  "length": "letters only on learned objects of the Asia map: up to 7 after unit 1, 15 after unit 2, 23 after unit 3",
+  "length": "letters only on learned objects of the Asia map: up to 7 after unit 1, 16 after unit 2, 24 after unit 3",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
   "draft": "Words from Svetlana's list (29.10.2026): ДЖУНГЛИ and IRRIGATION repeat block 1 and were replaced by КЯРИЗ and QANAT; the 4-letter words СЕЛЬ, ЛЁСС, ДЖУТ, ЮРТА, JUTE, YURT were replaced by БАРХАН, БАЗАР, ХЛОПОК, ЧАЙХАНА, COTTON, BAZAAR («Утверждаю», 29.10.2026). Unit split and definitions by Claude; all words and the 8 finals approved by Svetlana 2026-10-29 («Утверждаю»)."

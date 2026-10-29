@@ -20,6 +20,7 @@ export const PLACE = {
   "as-hindustan": ["на полуострове Индостан", "on the Indian subcontinent"], "as-indochina": ["на полуострове Индокитай", "on the Indochina Peninsula"],
   "as-malay-peninsula": ["на Малаккском полуострове", "on the Malay Peninsula"], "as-korean-peninsula": ["на Корейском полуострове", "on the Korean Peninsula"],
   "as-kamchatka": ["на Камчатке", "on Kamchatka"], "as-taimyr": ["на Таймыре", "on the Taimyr Peninsula"],
+  "as-chukotka": ["на Чукотке", "on the Chukchi Peninsula"],
   "as-japanese-islands": ["на Японских островах", "on the Japanese Islands"], "as-sakhalin": ["на Сахалине", "on Sakhalin"],
   "as-sri-lanka": ["на острове Шри-Ланка", "on the island of Sri Lanka"], "as-borneo": ["на острове Калимантан", "on the island of Borneo"],
   "as-sea-of-japan": ["в Японском море", "in the Sea of Japan"], "as-sea-of-okhotsk": ["в Охотском море", "in the Sea of Okhotsk"],
@@ -98,7 +99,7 @@ const out = {
   section: "asia-on-the-map", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",
-    places: "letters only on objects of data/maps/asia-overview.json learned by the end of the unit (section final: all 23), one letter per object, at the object's label point",
+    places: "letters only on objects of data/maps/asia-overview.json learned by the end of the unit (section final: all 24), one letter per object, at the object's label point",
     nesting: "an object never shares a puzzle with the object that contains it: the Seas of Japan and Okhotsk, the South China Sea, the Japanese Islands, Sakhalin and Borneo with the Pacific; the Persian Gulf and Sri Lanka with the Indian Ocean; no letter inside the area of another object of the puzzle",
     spacing: "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
