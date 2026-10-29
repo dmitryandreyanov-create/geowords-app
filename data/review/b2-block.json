@@ -1,0 +1,1312 @@
+{
+ "block": "europe-2",
+ "unit": "block-review",
+ "status": "approved",
+ "rules": {
+  "noNewObjects": "only the 78 places of block 2 sections 1-5; each task opens the map the place was taught on (section 1: blank map with the Ural; rivers map; mountains map; capitals map with rivers for countries)",
+  "lesson": "about 10 tasks, 3-5 minutes; mistakes come back at the end until answered correctly; about 60% of the asked places are the child's weakest (S.weak)",
+  "crimea": "Crimea never appears in country tasks (Svetlana, 26.10.2026); a tap on Crimea or Kosovo answers no country",
+  "caucasus": "the Caucasus keeps its disputed note and is tied to no country",
+  "bern": "Switzerland's capital is shown as Bern with the approved card wording: by law there is no capital, Bern is the federal city (29.10.2026)",
+  "relations": "pairs and true/false use only approved relations; crosses (river -> country) come from data/maps/europe-countries-5.json rivers[].crosses, approved with section 5; in pairs no row's answer is also true for another row's place",
+  "approval": "each relation, true/false pair, select-all task, trap and record: approval.contentSha256 = first 16 hex of sha256 over the item without its approval (tools/approve.mjs); an item shows only when approved"
+ },
+ "lessons": [
+  {
+   "id": "lesson-1-nature",
+   "title": {
+    "ru": "Природа Европы",
+    "en": "Nature of Europe"
+   },
+   "objects": [
+    "section-1",
+    "rivers",
+    "mountains"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-2-countries",
+   "title": {
+    "ru": "Страны и столицы",
+    "en": "Countries and capitals"
+   },
+   "objects": [
+    "countries-west-north",
+    "countries-centre-south-east"
+   ],
+   "tasks": [
+    {
+     "type": "find-country",
+     "count": 3
+    },
+    {
+     "type": "find-capital",
+     "count": 2
+    },
+    {
+     "type": "which-country",
+     "count": 2
+    },
+    {
+     "type": "pairs-country-capital",
+     "count": 1
+    },
+    {
+     "type": "write-capital",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-3-relations",
+   "title": {
+    "ru": "Связи",
+    "en": "Connections"
+   },
+   "objects": [
+    "relations"
+   ],
+   "tasks": [
+    {
+     "type": "pairs",
+     "count": 4,
+     "kinds": [
+      "flowsInto",
+      "capitalOn",
+      "crosses",
+      "inCountry"
+     ]
+    },
+    {
+     "type": "select-all",
+     "count": 3
+    },
+    {
+     "type": "true-false",
+     "count": 2
+    },
+    {
+     "type": "trap",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "lesson-4-records",
+   "title": {
+    "ru": "Рекорды",
+    "en": "Records"
+   },
+   "objects": [
+    "records"
+   ],
+   "tasks": [
+    {
+     "type": "true-false",
+     "count": 4
+    },
+    {
+     "type": "pairs",
+     "count": 2
+    },
+    {
+     "type": "find-by-record",
+     "count": 2
+    },
+    {
+     "type": "what-is-it-by-record",
+     "count": 2
+    }
+   ],
+   "note": "15 records: 4 + 2x3 + 2 + 2 = 14 different records per lesson"
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "ru": "Итог блока",
+    "en": "Block final"
+   },
+   "geowords": [
+    "b2-block-final-en",
+    "b2-block-final-ru"
+   ],
+   "reward": "passport stamp"
+  }
+ ],
+ "relations": [
+  {
+   "id": "flowsInto-volga",
+   "relation": "flowsInto",
+   "subject": "volga",
+   "object": "caspian-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "379d443f59252e8e"
+   }
+  },
+  {
+   "id": "flowsInto-ural-river",
+   "relation": "flowsInto",
+   "subject": "ural-river",
+   "object": "caspian-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a7a7c73e5b6aee73"
+   }
+  },
+  {
+   "id": "flowsInto-dnieper",
+   "relation": "flowsInto",
+   "subject": "dnieper",
+   "object": "black-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c7df6fe519fe7c71"
+   }
+  },
+  {
+   "id": "flowsInto-dniester",
+   "relation": "flowsInto",
+   "subject": "dniester",
+   "object": "black-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "93af8e07a65cc03e"
+   }
+  },
+  {
+   "id": "flowsInto-danube",
+   "relation": "flowsInto",
+   "subject": "danube",
+   "object": "black-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "b5ce9f6a78f148e4"
+   }
+  },
+  {
+   "id": "flowsInto-rhine",
+   "relation": "flowsInto",
+   "subject": "rhine",
+   "object": "north-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c3904fc37c25aa73"
+   }
+  },
+  {
+   "id": "flowsInto-elbe",
+   "relation": "flowsInto",
+   "subject": "elbe",
+   "object": "north-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "118f7ad8440e4c79"
+   }
+  },
+  {
+   "id": "flowsInto-thames",
+   "relation": "flowsInto",
+   "subject": "thames",
+   "object": "north-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5eb517ef6009d5f6"
+   }
+  },
+  {
+   "id": "flowsInto-oder",
+   "relation": "flowsInto",
+   "subject": "oder",
+   "object": "baltic-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "4fc780c9d946cbc0"
+   }
+  },
+  {
+   "id": "flowsInto-vistula",
+   "relation": "flowsInto",
+   "subject": "vistula",
+   "object": "baltic-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1c601df404b0f5db"
+   }
+  },
+  {
+   "id": "flowsInto-seine",
+   "relation": "flowsInto",
+   "subject": "seine",
+   "object": "english-channel",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6847ee266108037a"
+   }
+  },
+  {
+   "id": "flowsInto-loire",
+   "relation": "flowsInto",
+   "subject": "loire",
+   "object": "atlantic-ocean",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "511eff59ccc2f32f"
+   }
+  },
+  {
+   "id": "flowsInto-tagus",
+   "relation": "flowsInto",
+   "subject": "tagus",
+   "object": "atlantic-ocean",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "185e590e5790ba27"
+   }
+  },
+  {
+   "id": "flowsInto-douro",
+   "relation": "flowsInto",
+   "subject": "douro",
+   "object": "atlantic-ocean",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "af46630cead10fb8"
+   }
+  },
+  {
+   "id": "flowsInto-guadiana",
+   "relation": "flowsInto",
+   "subject": "guadiana",
+   "object": "atlantic-ocean",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a973adef7d167522"
+   }
+  },
+  {
+   "id": "flowsInto-guadalquivir",
+   "relation": "flowsInto",
+   "subject": "guadalquivir",
+   "object": "atlantic-ocean",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8b3f4c6853992f6a"
+   }
+  },
+  {
+   "id": "flowsInto-rhone",
+   "relation": "flowsInto",
+   "subject": "rhone",
+   "object": "mediterranean-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a07f6818a88610f5"
+   }
+  },
+  {
+   "id": "flowsInto-ebro",
+   "relation": "flowsInto",
+   "subject": "ebro",
+   "object": "mediterranean-sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "f62ad3a2e908f008"
+   }
+  },
+  {
+   "id": "capitalOn-united-kingdom",
+   "relation": "capitalOn",
+   "subject": "united-kingdom",
+   "object": "thames",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e85756eb4824c053"
+   }
+  },
+  {
+   "id": "capitalOn-france",
+   "relation": "capitalOn",
+   "subject": "france",
+   "object": "seine",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6f41ef262d505398"
+   }
+  },
+  {
+   "id": "capitalOn-italy",
+   "relation": "capitalOn",
+   "subject": "italy",
+   "object": "tiber",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5fcdc12f7aa8220d"
+   }
+  },
+  {
+   "id": "capitalOn-portugal",
+   "relation": "capitalOn",
+   "subject": "portugal",
+   "object": "tagus",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8280e2775f326371"
+   }
+  },
+  {
+   "id": "capitalOn-poland",
+   "relation": "capitalOn",
+   "subject": "poland",
+   "object": "vistula",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a976eabd2970960d"
+   }
+  },
+  {
+   "id": "capitalOn-ukraine",
+   "relation": "capitalOn",
+   "subject": "ukraine",
+   "object": "dnieper",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "7916ac3b6867d991"
+   }
+  },
+  {
+   "id": "capitalOn-austria",
+   "relation": "capitalOn",
+   "subject": "austria",
+   "object": "danube",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "06601bda5dfab539"
+   }
+  },
+  {
+   "id": "capitalOn-hungary",
+   "relation": "capitalOn",
+   "subject": "hungary",
+   "object": "danube",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "9c9679d87cf3de57"
+   }
+  },
+  {
+   "id": "capitalOn-serbia",
+   "relation": "capitalOn",
+   "subject": "serbia",
+   "object": "danube",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1c36415b81073097"
+   }
+  },
+  {
+   "id": "inCountry-iberian-peninsula",
+   "relation": "inCountry",
+   "subject": "iberian-peninsula",
+   "object": [
+    "spain",
+    "portugal"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "40a7685f5da1338f"
+   }
+  },
+  {
+   "id": "inCountry-apennine-peninsula",
+   "relation": "inCountry",
+   "subject": "apennine-peninsula",
+   "object": [
+    "italy"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e5a03131b96f18f1"
+   }
+  },
+  {
+   "id": "inCountry-scandinavian-peninsula",
+   "relation": "inCountry",
+   "subject": "scandinavian-peninsula",
+   "object": [
+    "norway",
+    "sweden"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1343c2396911d635"
+   }
+  },
+  {
+   "id": "inCountry-kola-peninsula",
+   "relation": "inCountry",
+   "subject": "kola-peninsula",
+   "object": [
+    "russia"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "786317eb275d516b"
+   }
+  },
+  {
+   "id": "inCountry-great-britain",
+   "relation": "inCountry",
+   "subject": "great-britain",
+   "object": [
+    "united-kingdom"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2706c8e7bf010e9f"
+   }
+  },
+  {
+   "id": "inCountry-iceland",
+   "relation": "inCountry",
+   "subject": "iceland",
+   "object": [
+    "iceland-country"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2f06153fffbc41d4"
+   }
+  },
+  {
+   "id": "inCountry-sicily",
+   "relation": "inCountry",
+   "subject": "sicily",
+   "object": [
+    "italy"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2bbdeccb88bf7364"
+   }
+  },
+  {
+   "id": "inCountry-jutland",
+   "relation": "inCountry",
+   "subject": "jutland",
+   "object": [
+    "denmark"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a161526d25573c98"
+   }
+  },
+  {
+   "id": "inCountry-pyrenees",
+   "relation": "inCountry",
+   "subject": "pyrenees",
+   "object": [
+    "spain",
+    "france"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "3563a5881c0f7a07"
+   }
+  },
+  {
+   "id": "inCountry-apennines",
+   "relation": "inCountry",
+   "subject": "apennines",
+   "object": [
+    "italy"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e78376c47b9242f3"
+   }
+  },
+  {
+   "id": "inCountry-scandinavian-mountains",
+   "relation": "inCountry",
+   "subject": "scandinavian-mountains",
+   "object": [
+    "norway",
+    "sweden"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a6ea075f378f506d"
+   }
+  },
+  {
+   "id": "inCountry-scottish-highlands",
+   "relation": "inCountry",
+   "subject": "scottish-highlands",
+   "object": [
+    "united-kingdom"
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8f212b5accd82f1d"
+   }
+  }
+ ],
+ "trueFalse": [
+  {
+   "id": "tf-e01",
+   "subject": "danube",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Дунай впадает в Чёрное море.",
+    "en": "The Danube flows into the Black Sea."
+   },
+   "false": {
+    "ru": "Дунай впадает в Северное море.",
+    "en": "The Danube flows into the North Sea."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d266eca136f99553"
+   }
+  },
+  {
+   "id": "tf-e02",
+   "subject": "rhine",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Рейн впадает в Северное море.",
+    "en": "The Rhine flows into the North Sea."
+   },
+   "false": {
+    "ru": "Рейн впадает в Средиземное море.",
+    "en": "The Rhine flows into the Mediterranean Sea."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a2444ba718cce178"
+   }
+  },
+  {
+   "id": "tf-e03",
+   "subject": "vistula",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Висла впадает в Балтийское море.",
+    "en": "The Vistula flows into the Baltic Sea."
+   },
+   "false": {
+    "ru": "Висла впадает в Чёрное море.",
+    "en": "The Vistula flows into the Black Sea."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0f92dc219850ee2b"
+   }
+  },
+  {
+   "id": "tf-e04",
+   "subject": "rhone",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Рона впадает в Средиземное море.",
+    "en": "The Rhône flows into the Mediterranean Sea."
+   },
+   "false": {
+    "ru": "Рона впадает в Северное море.",
+    "en": "The Rhône flows into the North Sea."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "7685b09e1e6c1ee6"
+   }
+  },
+  {
+   "id": "tf-e05",
+   "subject": "thames",
+   "relation": "capitalOn",
+   "true": {
+    "ru": "Лондон стоит на Темзе.",
+    "en": "London stands on the Thames."
+   },
+   "false": {
+    "ru": "Лондон стоит на Сене.",
+    "en": "London stands on the Seine."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "dd62174ebc4d6e87"
+   }
+  },
+  {
+   "id": "tf-e06",
+   "subject": "seine",
+   "relation": "capitalOn",
+   "true": {
+    "ru": "Париж стоит на Сене.",
+    "en": "Paris stands on the Seine."
+   },
+   "false": {
+    "ru": "Париж стоит на Луаре.",
+    "en": "Paris stands on the Loire."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a8a6fe41a7d4416f"
+   }
+  },
+  {
+   "id": "tf-e07",
+   "subject": "tiber",
+   "relation": "capitalOn",
+   "true": {
+    "ru": "Рим стоит на Тибре.",
+    "en": "Rome stands on the Tiber."
+   },
+   "false": {
+    "ru": "Рим стоит на реке По.",
+    "en": "Rome stands on the Po."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e521163b015bf3da"
+   }
+  },
+  {
+   "id": "tf-e08",
+   "subject": "danube",
+   "relation": "crosses",
+   "true": {
+    "ru": "Дунай протекает через Венгрию.",
+    "en": "The Danube flows through Hungary."
+   },
+   "false": {
+    "ru": "Дунай протекает через Польшу.",
+    "en": "The Danube flows through Poland."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5218765a5d2a3228"
+   }
+  },
+  {
+   "id": "tf-e09",
+   "subject": "dnieper",
+   "relation": "crosses",
+   "true": {
+    "ru": "Днепр протекает через Беларусь и Украину.",
+    "en": "The Dnieper flows through Belarus and Ukraine."
+   },
+   "false": {
+    "ru": "Днепр протекает через Польшу и Германию.",
+    "en": "The Dnieper flows through Poland and Germany."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5e2f7213d2a0b383"
+   }
+  },
+  {
+   "id": "tf-e10",
+   "subject": "apennine-peninsula",
+   "relation": "inCountry",
+   "true": {
+    "ru": "На Апеннинском полуострове находится Италия.",
+    "en": "Italy lies on the Apennine Peninsula."
+   },
+   "false": {
+    "ru": "На Апеннинском полуострове находится Греция.",
+    "en": "Greece lies on the Apennine Peninsula."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "707d8857132e0838"
+   }
+  },
+  {
+   "id": "tf-e11",
+   "subject": "scandinavian-peninsula",
+   "relation": "inCountry",
+   "true": {
+    "ru": "На Скандинавском полуострове находятся Норвегия и Швеция.",
+    "en": "Norway and Sweden lie on the Scandinavian Peninsula."
+   },
+   "false": {
+    "ru": "На Скандинавском полуострове находятся Дания и Исландия.",
+    "en": "Denmark and Iceland lie on the Scandinavian Peninsula."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8330130e69d826bd"
+   }
+  },
+  {
+   "id": "tf-e12",
+   "subject": "pyrenees",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Пиренеи лежат на границе Испании и Франции.",
+    "en": "The Pyrenees lie on the border between Spain and France."
+   },
+   "false": {
+    "ru": "Пиренеи лежат на границе Италии и Франции.",
+    "en": "The Pyrenees lie on the border between Italy and France."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "50e184ab2643a91b"
+   }
+  }
+ ],
+ "selectAll": [
+  {
+   "id": "all-danube-countries",
+   "map": "countries",
+   "want": [
+    "germany",
+    "austria",
+    "hungary",
+    "serbia",
+    "romania"
+   ],
+   "neutral": [
+    "ukraine"
+   ],
+   "task": {
+    "ru": "Нажми на все страны, через которые течёт Дунай",
+    "en": "Tap every country the Danube flows through"
+   },
+   "note": "Ukraine is neutral: the Danube only touches it at the delta",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "10e8dddbbb8529fe"
+   }
+  },
+  {
+   "id": "all-black-sea-rivers",
+   "map": "rivers",
+   "want": [
+    "danube",
+    "dnieper",
+    "dniester"
+   ],
+   "neutral": [
+    "don"
+   ],
+   "task": {
+    "ru": "Нажми на все реки, которые впадают в Чёрное море",
+    "en": "Tap every river that flows into the Black Sea"
+   },
+   "note": "the Don is neutral: it flows into the Sea of Azov, which is joined to the Black Sea",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c1dd4e0dc74ed045"
+   }
+  },
+  {
+   "id": "all-north-sea-rivers",
+   "map": "rivers",
+   "want": [
+    "rhine",
+    "elbe",
+    "thames"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все реки, которые впадают в Северное море",
+    "en": "Tap every river that flows into the North Sea"
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "947076f3c147160e"
+   }
+  }
+ ],
+ "traps": [
+  {
+   "id": "trap-denmark",
+   "country": "denmark",
+   "answer": "jutland",
+   "options": [
+    "jutland",
+    "scandinavian-peninsula",
+    "iberian-peninsula",
+    "apennine-peninsula"
+   ],
+   "question": {
+    "ru": "На каком полуострове лежит Дания?",
+    "en": "Which peninsula is Denmark on?"
+   },
+   "explain": {
+    "ru": "Дания лежит на полуострове Ютландия и на островах. На Скандинавском полуострове — Норвегия и Швеция.",
+    "en": "Denmark lies on the Jutland Peninsula and on islands. Norway and Sweden are on the Scandinavian Peninsula."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "80a2b79689da1123"
+   }
+  }
+ ],
+ "records": [
+  {
+   "id": "scandinavian-largest-peninsula",
+   "object": "scandinavian-peninsula",
+   "clue": {
+    "ru": "Самый большой полуостров Европы",
+    "en": "The largest peninsula in Europe"
+   },
+   "true": {
+    "ru": "Скандинавский полуостров — самый большой полуостров Европы.",
+    "en": "The Scandinavian Peninsula is the largest peninsula in Europe."
+   },
+   "false": {
+    "ru": "Пиренейский полуостров — самый большой полуостров Европы.",
+    "en": "The Iberian Peninsula is the largest peninsula in Europe."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "98469322bb6ef784"
+   }
+  },
+  {
+   "id": "great-britain-largest-island",
+   "object": "great-britain",
+   "clue": {
+    "ru": "Самый большой остров Европы",
+    "en": "The largest island in Europe"
+   },
+   "true": {
+    "ru": "Великобритания — самый большой остров Европы.",
+    "en": "Great Britain is the largest island in Europe."
+   },
+   "false": {
+    "ru": "Исландия — самый большой остров Европы.",
+    "en": "Iceland is the largest island in Europe."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "3383ffea188c5d13"
+   }
+  },
+  {
+   "id": "sicily-largest-mediterranean-island",
+   "object": "sicily",
+   "clue": {
+    "ru": "Самый большой остров Средиземного моря",
+    "en": "The largest island in the Mediterranean Sea"
+   },
+   "true": {
+    "ru": "Сицилия — самый большой остров Средиземного моря.",
+    "en": "Sicily is the largest island in the Mediterranean Sea."
+   },
+   "false": {
+    "ru": "Сардиния — самый большой остров Средиземного моря.",
+    "en": "Sardinia is the largest island in the Mediterranean Sea."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "ab366d0a48c781a3"
+   }
+  },
+  {
+   "id": "volga-largest-delta",
+   "object": "volga",
+   "clue": {
+    "ru": "Река с самой большой дельтой в Европе",
+    "en": "The river with the largest delta in Europe"
+   },
+   "true": {
+    "ru": "У Волги самая большая дельта в Европе.",
+    "en": "The Volga has the largest delta in Europe."
+   },
+   "false": {
+    "ru": "У Дуная самая большая дельта в Европе.",
+    "en": "The Danube has the largest delta in Europe."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "b08174cdf2f17f07"
+   }
+  },
+  {
+   "id": "loire-longest-france",
+   "object": "loire",
+   "clue": {
+    "ru": "Самая длинная река Франции",
+    "en": "The longest river in France"
+   },
+   "true": {
+    "ru": "Луара — самая длинная река Франции.",
+    "en": "The Loire is the longest river in France."
+   },
+   "false": {
+    "ru": "Сена — самая длинная река Франции.",
+    "en": "The Seine is the longest river in France."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0e75f2c87708347c"
+   }
+  },
+  {
+   "id": "tagus-longest-iberia",
+   "object": "tagus",
+   "clue": {
+    "ru": "Самая длинная река Пиренейского полуострова",
+    "en": "The longest river of the Iberian Peninsula"
+   },
+   "true": {
+    "ru": "Тахо — самая длинная река Пиренейского полуострова.",
+    "en": "The Tagus is the longest river of the Iberian Peninsula."
+   },
+   "false": {
+    "ru": "Эбро — самая длинная река Пиренейского полуострова.",
+    "en": "The Ebro is the longest river of the Iberian Peninsula."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a2b62369691f66b5"
+   }
+  },
+  {
+   "id": "alps-highest-in-europe",
+   "object": "alps",
+   "clue": {
+    "ru": "Самая высокая горная система Европы, если границу Европы проводить по Кумо-Манычской впадине",
+    "en": "Europe's highest mountain range, when the Europe–Asia boundary is drawn along the Kuma–Manych Depression"
+   },
+   "true": {
+    "ru": "Если границу Европы проводить по Кумо-Манычской впадине, Альпы — самая высокая горная система Европы.",
+    "en": "When the Europe–Asia boundary is drawn along the Kuma–Manych Depression, the Alps are Europe's highest mountain range."
+   },
+   "false": {
+    "ru": "Если границу Европы проводить по Кумо-Манычской впадине, Пиренеи — самая высокая горная система Европы.",
+    "en": "When the Europe–Asia boundary is drawn along the Kuma–Manych Depression, the Pyrenees are Europe's highest mountain range."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "661fe49ba18d5bce"
+   }
+  },
+  {
+   "id": "galdhopiggen-highest-northern-europe",
+   "object": "scandinavian-mountains",
+   "clue": {
+    "ru": "Здесь находится самая высокая гора Северной Европы",
+    "en": "The highest mountain in Northern Europe is here"
+   },
+   "true": {
+    "ru": "Самая высокая гора Северной Европы, Галлхёпигген, находится в Скандинавских горах.",
+    "en": "The highest mountain in Northern Europe, Galdhøpiggen, is in the Scandinavian Mountains."
+   },
+   "false": {
+    "ru": "Самая высокая гора Северной Европы, Галлхёпигген, находится на Шотландском нагорье.",
+    "en": "The highest mountain in Northern Europe, Galdhøpiggen, is in the Scottish Highlands."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0b15ad3c326d1201"
+   }
+  },
+  {
+   "id": "aneto-highest-pyrenees",
+   "object": "pyrenees",
+   "clue": {
+    "ru": "Горы, самая высокая вершина которых — Ането, 3404 м",
+    "en": "The mountains whose highest peak is Aneto, 3,404 m"
+   },
+   "true": {
+    "ru": "Ането — самая высокая вершина Пиренеев.",
+    "en": "Aneto is the highest peak of the Pyrenees."
+   },
+   "false": {
+    "ru": "Ането — самая высокая вершина Альп.",
+    "en": "Aneto is the highest peak of the Alps."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "30820e6302d39b22"
+   }
+  },
+  {
+   "id": "reykjavik-northernmost-capital",
+   "object": "iceland-country",
+   "clue": {
+    "ru": "Страна, у которой самая северная столица независимого государства в мире",
+    "en": "The country with the northernmost capital of an independent country in the world"
+   },
+   "true": {
+    "ru": "Рейкьявик — самая северная столица независимого государства в мире.",
+    "en": "Reykjavik is the northernmost capital of an independent country in the world."
+   },
+   "false": {
+    "ru": "Хельсинки — самая северная столица независимого государства в мире.",
+    "en": "Helsinki is the northernmost capital of an independent country in the world."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "06184a5e37b87d15"
+   }
+  },
+  {
+   "id": "lisbon-westernmost-mainland-capital",
+   "object": "portugal",
+   "clue": {
+    "ru": "Страна, у которой самая западная столица на европейском материке",
+    "en": "The country with the westernmost capital on the European mainland"
+   },
+   "true": {
+    "ru": "Лиссабон — самая западная столица независимого государства на европейском материке.",
+    "en": "Lisbon is the westernmost capital of an independent country on the European mainland."
+   },
+   "false": {
+    "ru": "Мадрид — самая западная столица независимого государства на европейском материке.",
+    "en": "Madrid is the westernmost capital of an independent country on the European mainland."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e890cd297a093218"
+   }
+  },
+  {
+   "id": "france-largest-eu",
+   "object": "france",
+   "clue": {
+    "ru": "Самая большая по площади страна Европейского союза",
+    "en": "The largest country in the European Union by area"
+   },
+   "true": {
+    "ru": "Франция — самая большая по площади страна Европейского союза.",
+    "en": "France is the largest country in the European Union by area."
+   },
+   "false": {
+    "ru": "Испания — самая большая по площади страна Европейского союза.",
+    "en": "Spain is the largest country in the European Union by area."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "4d445b741f8a7258"
+   }
+  },
+  {
+   "id": "russia-largest-country",
+   "object": "russia",
+   "clue": {
+    "ru": "Самая большая по площади страна в мире",
+    "en": "The largest country in the world by area"
+   },
+   "true": {
+    "ru": "Россия — самая большая по площади страна в мире.",
+    "en": "Russia is the largest country in the world by area."
+   },
+   "false": {
+    "ru": "Канада — самая большая по площади страна в мире.",
+    "en": "Canada is the largest country in the world by area."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "9bc34aeaa427e409"
+   }
+  },
+  {
+   "id": "vatican-smallest-country",
+   "object": "italy",
+   "clue": {
+    "ru": "Страна, внутри столицы которой находится самое маленькое государство в мире",
+    "en": "The country whose capital has the smallest country in the world inside it"
+   },
+   "true": {
+    "ru": "Внутри Рима находится Ватикан — самое маленькое государство в мире.",
+    "en": "Inside Rome lies Vatican City, the smallest country in the world."
+   },
+   "false": {
+    "ru": "Внутри Парижа находится Ватикан — самое маленькое государство в мире.",
+    "en": "Inside Paris lies Vatican City, the smallest country in the world."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "598cf214a55e2a94"
+   }
+  },
+  {
+   "id": "germany-most-populous-eu",
+   "object": "germany",
+   "clue": {
+    "ru": "Самая населённая страна Европейского союза",
+    "en": "The country with the largest population in the European Union"
+   },
+   "true": {
+    "ru": "Германия — самая населённая страна Европейского союза.",
+    "en": "Germany has the largest population in the European Union."
+   },
+   "false": {
+    "ru": "Франция — самая населённая страна Европейского союза.",
+    "en": "France has the largest population in the European Union."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d374d0508bd0ad98"
+   }
+  }
+ ]
+}

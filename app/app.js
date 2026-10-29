@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.29-rivers-5';
+const BUILD='2026.10.29-europe-review';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -52,9 +52,9 @@ const T={
   huntFind:'Найди:',huntSkip:'Пропустить',huntScore:'Найдено',huntBest:'Рекорд',huntDone:'Время вышло!',huntAgain:'Ещё раз',huntSec:s=>s+' с',
   label:'Подпиши карту',labelQ:'Выбери название, потом нажми на его точку на карте',write:'Напиши название',writeQ:'Как называется этот объект?',
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
-  pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет'},
+  pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет',capitalOn:'Столица и её река',crosses:'Река и страна, через которую она течёт',inCountry:'Место и его страна',countryCap:'Страна и её столица'},
   recFind:'Найди его на карте.',recWhatQ:'Что это? Выбери название.',recPairsT:'Место и его рекорд',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.',
-  block2:'Блок 2 · Европа',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',eu3Name:'Горы Европы',eu3Sec:'Блок 2 · Раздел 3',eu4Name:'Страны и столицы: запад и север',eu4Sec:'Блок 2 · Раздел 4',eu5Name:'Страны и столицы: центр, юг и восток',eu5Sec:'Блок 2 · Раздел 5',eu5Note:'Деление на разделы учебное, а не строго по регионам: по классификации ООН Эстония, Латвия и Литва относятся к Северной Европе, а Германия, Швейцария и Австрия — к Западной.',tapCap:n=>`Нажми на столицу <b>${n}</b>`,capOfQ:n=>`${n} — столица какой страны?`,whatCapQ:'Какая столица у этой страны?',capIs:(c,n)=>`${c} — столица: ${n}.`,
+  block2:'Блок 2 · Европа',writeCapQ:'Как называется столица этой страны?',trap:'Подумай',allCheck:'Отметь и нажми «Проверить».',allBadEu:'Не совсем. Правильно так:',euHuntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше стран и рек Европы, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на странах и реках.',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',eu3Name:'Горы Европы',eu3Sec:'Блок 2 · Раздел 3',eu4Name:'Страны и столицы: запад и север',eu4Sec:'Блок 2 · Раздел 4',eu5Name:'Страны и столицы: центр, юг и восток',eu5Sec:'Блок 2 · Раздел 5',eu5Note:'Деление на разделы учебное, а не строго по регионам: по классификации ООН Эстония, Латвия и Литва относятся к Северной Европе, а Германия, Швейцария и Австрия — к Западной.',tapCap:n=>`Нажми на столицу <b>${n}</b>`,capOfQ:n=>`${n} — столица какой страны?`,whatCapQ:'Какая столица у этой страны?',capIs:(c,n)=>`${c} — столица: ${n}.`,
   allPen:'Нажми на все полуострова',allPenHint:'Отметь полуострова и нажми «Проверить».',allPenOk:'Все полуострова найдены!',allPenBad:'Не совсем. Вот полуострова Европы.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
@@ -88,9 +88,9 @@ const T={
   huntFind:'Find:',huntSkip:'Skip',huntScore:'Found',huntBest:'Best',huntDone:'Time is up!',huntAgain:'Play again',huntSec:s=>s+' s',
   label:'Label the map',labelQ:'Choose a name, then tap its point on the map',write:'Write the name',writeQ:'What is this place called?',
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
-  pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates'},
+  pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates',capitalOn:'A capital and its river',crosses:'A river and a country it flows through',inCountry:'A place and its country',countryCap:'A country and its capital'},
   recFind:'Find it on the map.',recWhatQ:'What is it? Pick the name.',recPairsT:'A place and its record',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.',
-  block2:'Block 2 · Europe',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',eu3Name:'Mountains of Europe',eu3Sec:'Block 2 · Section 3',eu4Name:'Countries and capitals: west and north',eu4Sec:'Block 2 · Section 4',eu5Name:'Countries and capitals: centre, south and east',eu5Sec:'Block 2 · Section 5',eu5Note:'The sections split Europe for learning, not strictly by region: the UN puts Estonia, Latvia and Lithuania in Northern Europe, and Germany, Switzerland and Austria in Western Europe.',tapCap:n=>`Tap the capital <b>${n}</b>`,capOfQ:n=>`${n} is the capital of which country?`,whatCapQ:'What is the capital of this country?',capIs:(c,n)=>`The capital of ${c} is ${n}.`,
+  block2:'Block 2 · Europe',writeCapQ:'What is the capital of this country called?',trap:'Think twice',allCheck:'Mark them and tap «Check».',allBadEu:'Not quite. Here is the answer:',euHuntDesc:'Two parts. Speed Hunt: in 60 seconds find as many countries and rivers of Europe as you can; a mistake only costs time. Then 3 GeoWords with letters on countries and rivers.',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',eu3Name:'Mountains of Europe',eu3Sec:'Block 2 · Section 3',eu4Name:'Countries and capitals: west and north',eu4Sec:'Block 2 · Section 4',eu5Name:'Countries and capitals: centre, south and east',eu5Sec:'Block 2 · Section 5',eu5Note:'The sections split Europe for learning, not strictly by region: the UN puts Estonia, Latvia and Lithuania in Northern Europe, and Germany, Switzerland and Austria in Western Europe.',tapCap:n=>`Tap the capital <b>${n}</b>`,capOfQ:n=>`${n} is the capital of which country?`,whatCapQ:'What is the capital of this country?',capIs:(c,n)=>`The capital of ${c} is ${n}.`,
   allPen:'Tap every peninsula',allPenHint:'Mark the peninsulas, then tap “Check”.',allPenOk:'All the peninsulas found!',allPenBad:'Not quite. Here are the peninsulas of Europe.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
@@ -237,6 +237,10 @@ async function loadData(){
   for(const o of Object.values(e5))o.area=o.tapArea.reduce((a,p)=>a+Math.abs(p.reduce((s,q,i)=>{const r=p[(i+1)%p.length];return s+q[0]*r[1]-r[0]*q[1]},0))/2,0);
   D.s11={facts:e5f,records:e5r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:e5,intro:null,dict:e5d,geo:e5g,
     neutral:e5m.neutral.map(n=>({...n,holes:[]})),rivers:e5m.rivers};
+  // Block 2 review (data/review/b2-block.json): relations, true/false, select-all, trap and record texts, each shown once Svetlana approved it;
+  // the block-final GeoWords, its word and the Challenge rules
+  const [ebr,ebd,ebg,ebc]=await Promise.all(['data/review/b2-block.json','data/dictionary/b2-block.json','data/geowords/b2-block.json','data/challenge/b2-block.json'].map(get));
+  D.eb={rev:ebr,dict:ebd,geo:ebg,challenge:ebc};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
@@ -605,6 +609,50 @@ const COURSE11=[
 COURSE11.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:11,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`e5-u${u.n}-practice`,sec:11,kind:'practice',unit:u.n});STEPS.push({id:`e5-u${u.n}-final`,sec:11,kind:'final',unit:u.n})});
 STEPS.push({id:'e5-final',sec:11,kind:'section',unit:'S'});
+// Block 2 review «Europe» (data/review/b2-block.json, plan approved by Svetlana 29.10.2026): no new places; about 60% of the asked places are
+// the child's weakest (S.weak). Every task opens the map its place was taught on (q.sec): section 1 objects on the blank map, rivers on the
+// rivers map, ranges on the mountains map, countries and capitals on the capitals map with the rivers. Lessons «Nature of Europe»,
+// «Countries and capitals», «Connections», «Records»; then the block-final GeoWords and the Challenge (Speed Hunt on countries and rivers).
+let EUREV=false;
+const EUB_NATURE=()=>[...EU_IDS.filter(id=>D.s7.eu[id]),...EU8_IDS.filter(id=>D.s8.eu[id]),...EU9_IDS.filter(id=>D.s9.eu[id])];
+const EUB_CTY=()=>[...EU10_IDS,...EU11_IDS].filter(id=>E(id));
+// countries are always asked on the section 5 map: a tap is judged against all 29 countries there, Crimea and Kosovo answer none
+const euSec=id=>D.s7.eu[id]?7:D.s8.eu[id]?8:D.s9.eu[id]?9:11;
+const ebq=(k,id,extra)=>({k,id,sec:euSec(id),...extra});
+const ebOk=it=>it&&it.approval?.status==='approved';
+// names a child can build from letter tiles: one or two words, at most 12 letters
+const tileName=n=>n.split(/\s+/).length<=2&&n.replace(/[\s-]/g,'').length<=12;
+const ebNature=()=>{const pool=EUB_NATURE(),f=weakPick(pool,4),w=weakPick(pool.filter(id=>!f.includes(id)),3);
+  return [...shuffle([...f.map(id=>ebq('findEu',id)),...w.map(id=>ebq('whatEu',id))]),{k:'labelEu'},...weakPick(pool.filter(id=>!f.includes(id)&&!w.includes(id)&&tileName(E(id).name[L()])),2).map(id=>ebq('writeEu',id))]};
+const ebCountries=()=>{const pool=EUB_CTY(),f=weakPick(pool,3),c=weakPick(pool.filter(id=>!f.includes(id)),2),w=weakPick(pool.filter(id=>!f.includes(id)&&!c.includes(id)),2);
+  const used=[...f,...c,...w];
+  return [...shuffle([...f.map(id=>ebq('findEu',id)),...c.map(id=>ebq('findCap',id)),...w.map(id=>ebq('whatEu',id))]),{k:'pairsCap'},
+    ...weakPick(pool.filter(id=>!used.includes(id)&&tileName(E(id).capital.name[L()])),2).map(id=>ebq('writeEu',id,{cap:true}))]};
+// true / false: one statement of a pair per lesson; never three identical answers in a row
+function ebSides(n){let sides;do sides=Array.from({length:n},()=>Math.random()<.5?'true':'false');while(sides.some((v,i)=>i>=2&&v===sides[i-1]&&v===sides[i-2]));return sides}
+const ebRelations=()=>{const R_=D.eb.rev,tf=shuffle(R_.trueFalse.filter(ebOk)).slice(0,2),sides=ebSides(tf.length);
+  return [...['flowsInto','capitalOn','crosses','inCountry'].map(rel=>({k:'pairsEu',rel})),...shuffle(R_.selectAll.filter(ebOk)).slice(0,3).map(t=>({k:'allEu',sel:t.id})),
+    ...tf.map((p,i)=>({k:'tfEu',pair:p.id,side:sides[i],id:p.subject,sec:euSec(p.subject)})),...shuffle(R_.traps.filter(ebOk)).slice(0,1).map(t=>({k:'trapEu',trap:t.id,id:t.country,sec:11,say:t.explain}))]};
+// Lesson 4 «Records» (15 records): 4 true/false, 2 pairs of 3 (place ↔ nameless clue), 2 «find it by the clue», 2 «what is it by the clue»;
+// each record at most once per lesson; records about the child's weakest places first
+function ebRecords(){const w=r=>S.weak[r.object]||0;
+  const order=shuffle(D.eb.rev.records.filter(ebOk)).sort((a,b)=>w(b)-w(a));
+  const tf=order.splice(0,4),find=order.splice(0,2),what=order.splice(0,2),groups=[];
+  for(let g=0;g<2;g++){const grp=[];for(const r of [...order])if(grp.length<3&&!grp.some(p=>p.object===r.object)){grp.push(r);order.splice(order.indexOf(r),1)}if(grp.length>=2)groups.push(grp)}
+  const rec=r=>({clue:r.clue,say:r.true});const sides=ebSides(tf.length);
+  return shuffle([...tf.map((r,i)=>({k:'recTf',rec:r.id,id:r.object,side:sides[i]})),...groups.map(g=>({k:'recPairs',recs:g.map(r=>r.id)})),
+    ...find.map(r=>({...ebq('findEu',r.object),...rec(r)})),...what.map(r=>({k:'recWhat',rec:r.id,id:r.object,sec:euSec(r.object),...rec(r)}))])}
+const COURSE_EB=[{id:'eb-l1',title:{ru:'Природа Европы',en:'Nature of Europe'},plan:ebNature},{id:'eb-l2',title:{ru:'Страны и столицы',en:'Countries and capitals'},plan:ebCountries},
+  {id:'eb-l3',title:{ru:'Связи',en:'Connections'},plan:ebRelations},{id:'eb-l4',title:{ru:'Рекорды',en:'Records'},plan:ebRecords}];
+COURSE_EB.forEach((l,i)=>STEPS.push({id:l.id,sec:12,kind:'lesson',unit:'B',n:i+1,title:l.title,plan:l.plan}));
+STEPS.push({id:'eb-final',sec:12,kind:'block',unit:'B'});
+STEPS.push({id:'eb-challenge',sec:12,kind:'challenge',unit:'B'});
+// a review lesson opens once its texts are approved; the block final and the Challenge once Svetlana approved them
+const ready12=s=>{const R_=D.eb.rev;if(s.kind==='block')return !!D.eb.geo.puzzles.find(p=>p.language===L()&&ebOk(p))&&ebOk(D.eb.dict.units[0].words[L()][0]);
+  if(s.kind==='challenge')return D.eb.challenge.status==='approved'&&ebOk(D.eb.challenge);
+  if(s.n===3)return ['flowsInto','capitalOn','inCountry'].every(rel=>R_.relations.filter(r=>r.relation===rel&&ebOk(r)).length>=4)&&R_.trueFalse.filter(ebOk).length>=2&&R_.selectAll.some(ebOk)&&R_.traps.some(ebOk);
+  if(s.n===4)return R_.records.filter(ebOk).length>=14;
+  return true};
 // Section 2 lessons are a draft: playable for review (after section 1, or with «Unlock every step»).
 const READY_S2=[1,2,3,'S'];
 const stepOf=id=>STEPS.find(s=>s.id===id);
@@ -613,7 +661,7 @@ const READY_S4=[1,2,3,'S'];
 const READY_S5=[1,2,3,'S'];
 // Europe finals open once Svetlana has approved the puzzle in the chosen language
 const euFinal=s=>SD(s).geo.puzzles.find(p=>p.language===L()&&p.approval?.status==='approved'&&(s.kind==='section'?p.role==='section-final':p.role==='unit-final'&&p.unit===s.unit));
-const ready=s=>s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===9?ready9(s):s.sec===10?ready10(s):s.sec===11?ready11(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const ready=s=>s.sec===12?ready12(s):s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===9?ready9(s):s.sec===10?ready10(s):s.sec===11?ready11(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];
 // section 2 of Europe: a lesson once its rivers are approved, practice once the unit has approved words, finals once Svetlana approved the puzzle
 const ready8=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s8.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU8_IDS.every(id=>D.s8.eu[id]);
@@ -668,7 +716,7 @@ function euOk(id,x,y,sz){const o=E(id);if(EUSEC===8&&o.path){const r=riverPx(o,x
     if(land&&!EU_LAND.includes(q.kind))return false;
     return land||o.path?v<d:v===0&&!(q.tapArea.length&&inside(q,o.x,o.y))})}
 // answer options of the same family: unit 1 (oceans, sea, the Urals and the Caspian), peninsulas, islands, the seas and oceans of the section
-const euFamily=id=>{const o=E(id);if(EUSEC>=8)return EU().filter(k=>E(k).unit<=o.unit);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
+const euFamily=id=>{const o=E(id);if(EUREV&&EUSEC>=10)return EUB_CTY();if(EUREV&&EUSEC>=8)return EU();if(EUSEC>=8)return EU().filter(k=>E(k).unit<=o.unit);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
 const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-river')):m.shape(o,cls);
 // a ring around a capital dot drawn on the map (round on screen: the map is 2200×1600)
 const capRing=(c,r=1.3)=>({id:'cap-'+c.id,tapArea:[Array.from({length:20},(_,i)=>[c.x+r*Math.cos(i*Math.PI/10),c.y+r*2200/1600*Math.sin(i*Math.PI/10)])],holes:[]});
@@ -816,7 +864,13 @@ function home(){
      (STEPS.some(s=>s.sec===11&&ready(s))?`<div class="section-card s2"><img src="${IMG.euCard}" alt=""><div class="t"><span class="eyebrow">${x.eu5Sec}</span><h2>${x.eu5Name}</h2></div></div><p class="rotate-hint">${x.eu5Note}</p>`+
      COURSE11.map(u=>`<div class="unit-head"><span class="eyebrow">${x.eu5Sec} · ${x.unit} ${u.n}</span><h3>${esc(D.s11.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===11&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.eu5Sec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('e5-final'))+
-     (STEPS.some(s=>s.sec===11&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:''):'');
+     (STEPS.some(s=>s.sec===11&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:''):'')+
+     // block 2 review and Challenge: the steps waiting for approval are skipped on the trail
+     `<div class="section-card s2"><img src="${IMG.euCard}" alt=""><div class="t"><span class="eyebrow">${x.block2}</span><h2>${x.blockName}</h2></div></div>`+
+     STEPS.filter(s=>s.sec===12&&s.kind==='lesson').map(stopHtml).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.block2}</span><h3>${x.blockFinal}</h3></div>`+stopHtml(stepOf('eb-final'))+
+     `<div class="unit-head"><span class="eyebrow">${x.block2}</span><h3>${x.challenge}</h3></div>`+stopHtml(stepOf('eb-challenge'))+
+     (STEPS.some(s=>s.sec===12&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:'');
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -848,8 +902,8 @@ function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
   const es=st.sec===11?x.eu5Sec:st.sec===10?x.eu4Sec:st.sec===9?x.eu3Sec:st.sec===8?x.eu2Sec:x.euSec;
-  const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec>=7?(st.unit==='S'?es:`${es} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
-  const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?x.huntDesc:x.finalDesc;
+  const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec===12?x.block2+' · '+x.blockName:st.sec>=7?(st.unit==='S'?es:`${es} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
+  const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?(st.sec===12?x.euHuntDesc:x.huntDesc):x.finalDesc;
   let buttons;
   if(st.kind!=='lesson'&&st.kind!=='practice'&&S.done[id]&&!st.sec){
     const hasNew=canReview(st);
@@ -903,7 +957,7 @@ function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').on
   const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?startLesson(n):n.kind==='practice'?runPractice(n):n.kind==='challenge'?speedHunt(n):n.kind==='block'?geowords(blockPuzzle(n)):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
-  if(step.sec>=7)EUSEC=step.sec;
+  EUREV=step.sec===12;if(step.sec>=7&&!EUREV)EUSEC=step.sec;
   const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));window.__gwPlan=queue.map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
   function exitAsk(){const s=sheet(`<h3>${x.quitT}</h3><p>${x.quitP}</p><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()}
@@ -921,6 +975,7 @@ function lesson(step){
   function wireNuance(o){const b=app.querySelector('.nuance');if(b)b.onclick=()=>{const s=sheet(`<div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.nuance}</h3></div><p>${esc(o.caveat[lang])}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove()}}
   function render(q){
     window.__gwTask=q;cur=q;// read by the automated play-through test
+    if(q.sec)EUSEC=q.sec;// block 2 review: the map the place was taught on
     if(q.k==='intro'){const d=dir(q.dir);frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${q.dir==='west'?IMG.left:q.dir==='east'?IMG.right:IMG.hello}" alt=""><h3>${esc(d.name[lang])}</h3></div><p>${esc(d.fact(lang))}</p></div><div class="mapslot"></div>`);
       mapWidget(app.querySelector('.mapslot'),{markers:[{id:d.id,x:d.x,y:d.y,cls:'dir pulse',label:{north:'↑',south:'↓',east:'→',west:'←'}[d.id]}],zoom:false});return gotIt(()=>learn(q.dir))}
     if(q.k==='introLine'){const ln=D.lines[q.line];frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${IMG.map}" alt=""><h3>${esc(ln.name[lang])}</h3></div><p>${esc(ln.fact(lang))}</p></div><div class="mapslot"></div>`);
@@ -1099,22 +1154,83 @@ function lesson(step){
       const chosen=[];for(const r of shuffle(rels))if(chosen.length<4&&!chosen.some(c=>key(c.object)===key(r.object)))chosen.push(r);
       pairsUI(x.pairsT[q.rel],chosen.map(r=>({s:r.subject,left:nameOf(r.subject),right:nameOf(r.object),key:key(r.object)})),'');return}
     // ---- lesson 4 «Records»: approved record texts only (records.items); the map never gives the answer away ----
-    const recOf=id=>D.b.rev.records.items.find(r=>r.id===id);
-    if(q.k==='recPairs'){pairsUI(x.recPairsT,q.recs.map(recOf).map(r=>({s:r.id,left:anyObj(r.object).name[lang],right:r.clue[lang],key:r.object})),'rec');return}
+    const recOf=id=>(EUREV?D.eb.rev.records:D.b.rev.records.items).find(r=>r.id===id),objName=id=>(EUREV?E(id):anyObj(id)).name[lang];
+    if(q.k==='recPairs'){pairsUI(x.recPairsT,q.recs.map(recOf).map(r=>({s:r.id,left:objName(r.object),right:r.clue[lang],key:r.object})),'rec');return}
     if(q.k==='recTf'){const r=recOf(q.rec),truth=q.side==='true';
       frame(x.tf,`<div class="card"><div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.record}</h3></div><p class="q" style="margin:0">${esc(r[q.side][lang])}</p></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
       app.querySelectorAll('.tfrow .choice').forEach(b=>b.onclick=()=>{const ok=(b.dataset.o==='true')===truth;app.querySelectorAll('.tfrow .choice').forEach(c=>{c.disabled=true;if((c.dataset.o==='true')===truth)c.classList.add('right')});
         if(!ok)b.classList.add('wrong');answered(q,ok);feedback(ok,ok?x.right:x.tfRight,truth&&ok?'':r.true[lang],ok?IMG.faceHappy:IMG.faceOops,next)});
       return}
-    if(q.k==='recWhat'){const k=kindOf(q.id),opts=pick({continent:CONT,ocean:OCEANS,river:RIVERS,mountain:MTNS,sea:SEAS,strait:STRAITS}[k],q.id,4);
-      frame(x.what,`<div class="card"><div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.record}</h3></div><p class="q" style="margin:0">${esc(q.clue[lang])}</p></div><p class="rotate-hint" style="margin:0">${x.recWhatQ}</p><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(anyObj(c).name[lang])}</button>`).join('')}</div>`);
-      return choices(q,q.id,()=>anyObj(q.id).name[lang],()=>q.say[lang])}
+    if(q.k==='recWhat'){const opts=EUREV?pick(euFamily(q.id),q.id,4):pick({continent:CONT,ocean:OCEANS,river:RIVERS,mountain:MTNS,sea:SEAS,strait:STRAITS}[kindOf(q.id)],q.id,4);
+      frame(x.what,`<div class="card"><div class="intro-pip"><img src="${IMG.wonder}" alt=""><h3>${x.record}</h3></div><p class="q" style="margin:0">${esc(q.clue[lang])}</p></div><p class="rotate-hint" style="margin:0">${x.recWhatQ}</p><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(objName(c))}</button>`).join('')}</div>`);
+      return choices(q,q.id,()=>objName(q.id),()=>q.say[lang])}
     if(q.k==='tf'){const p=D.b.rev.trueFalse.pairs.find(v=>v.id===q.pair),truth=q.side==='true',subj=[p.subject].flat()[0];
       frame(x.tf,`<div class="card"><p class="q" style="margin:0">${esc(p[q.side][lang])}</p></div><div class="mapslot"></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
       const m=mapWidget(app.querySelector('.mapslot'),{layers:kindLayers(kindOf(subj)),zoom:false,insets:anyObj(subj).inset?[anyObj(subj).inset.id]:[]});showAny(m,subj,'hl-shape pulse');
       app.querySelectorAll('.tfrow .choice').forEach(b=>b.onclick=()=>{const ok=(b.dataset.o==='true')===truth;app.querySelectorAll('.tfrow .choice').forEach(c=>{c.disabled=true;if((c.dataset.o==='true')===truth)c.classList.add('right')});
         if(!ok)b.classList.add('wrong');answered({...q,id:subj},ok);feedback(ok,ok?x.right:x.tfRight,truth?'':p.true[lang],ok?IMG.faceHappy:IMG.faceOops,next)});
       return}
+    // ---- block 2 review «Europe» (data/review/b2-block.json): every task on the map its place was taught on (EUSEC = q.sec) ----
+    if(q.k==='labelEu'){const far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*1600/2200)>=10,pt=id=>EU_PT[id]||E(id);let sec,items;
+      for(const s_ of shuffle([7,8,9])){const ids=(s_===7?EU_IDS.filter(id=>D.s7.eu[id]):s_===8?EU8_IDS.filter(id=>D.s8.eu[id]):EU9_IDS.filter(id=>D.s9.eu[id]));
+        for(let tries=0;tries<40&&!items;tries++){const pick_=[];for(const id of shuffle([...ids]))if(pick_.length<4&&pick_.every(p=>far(pt(p),pt(id))))pick_.push(id);if(pick_.length===4){sec=s_;items=pick_}}
+        if(items)break}
+      if(!items){done++;return next()}
+      EUSEC=sec;const names=shuffle([...items]);const placed={};let sel=null,checked=false;
+      frame(x.label,`<p class="q">${x.labelQ}</p><div class="mapslot"></div><div class="lchips">${names.map((id,i)=>`<button type="button" class="choice lchip" data-o="${id}"><span class="n">${i+1}</span>${esc(E(id).name[lang])}</button>`).join('')}</div>`);
+      const m=euMap(app.querySelector('.mapslot'),{markers:items.map(id=>({id,x:pt(id).x,y:pt(id).y,label:'?',aria:'?'})),
+        onMarker:id=>{if(checked)return;if(!sel){if(placed[id]){delete placed[id];redraw()}return}for(const k in placed)if(placed[k]===sel)delete placed[k];placed[id]=sel;sel=null;redraw()}});
+      const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;
+      function redraw(){for(const id of items){const b=m.btn[id].el;b.querySelector('span').textContent=placed[id]?names.indexOf(placed[id])+1:'?';b.classList.toggle('set',!!placed[id])}
+        app.querySelectorAll('.lchip').forEach(c=>{c.classList.toggle('sel',c.dataset.o===sel);c.classList.toggle('used',Object.values(placed).includes(c.dataset.o))});
+        fb.querySelector('.btn').disabled=Object.keys(placed).length<items.length}
+      app.querySelectorAll('.lchip').forEach(c=>c.onclick=()=>{if(checked)return;sel=sel===c.dataset.o?null:c.dataset.o;redraw()});
+      fb.querySelector('.btn').onclick=()=>{checked=true;const ok=items.every(id=>placed[id]===id);
+        for(const id of items){const b=m.btn[id].el;b.classList.remove('set');b.classList.add(placed[id]===id?'good':'bad');b.querySelector('span').textContent=names.indexOf(id)+1;if(placed[id]!==id)S.weak[id]=(S.weak[id]||0)+1}
+        app.querySelectorAll('.lchip').forEach(c=>c.disabled=true);answered(q,ok);
+        feedback(ok,ok?x.right:x.labelBad,ok?'':names.map((id,i)=>(i+1)+' — '+E(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};
+      return}
+    if(q.k==='writeEu'){const o=E(q.id),name=q.cap?o.capital.name[lang]:o.name[lang],chars=[...name],sep=c=>/[\s-]/.test(c);const letters=chars.filter(c=>!sep(c));const typed=[];
+      frame(x.write,`<p class="q">${q.cap?x.writeCapQ:x.writeQ}</p><div class="mapslot"></div><div class="wslots">${name.split(/(\s+)/).filter(Boolean).map(w=>/^\s+$/.test(w)?'':`<span class="wword">${[...w].map(c=>c==='-'?'<span class="wgap">-</span>':'<span class="wslot"></span>').join('')}</span>`).join('')}</div>
+        <div class="wtiles">${shuffle(letters.map((c,i)=>({c:c.toUpperCase(),i}))).map(t=>`<button type="button" class="wtile" data-i="${t.i}">${esc(t.c)}</button>`).join('')}<button type="button" class="wtile back" aria-label="⌫">⌫</button></div>`);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,q.cap?'hl-shape':'hl-shape pulse');if(q.cap)m.shape(capRing(o.capital),'hl-shape pulse');
+      const slots=[...app.querySelectorAll('.wslot')];const draw=()=>slots.forEach((s_,i)=>s_.textContent=typed[i]?typed[i].c:'');
+      app.querySelectorAll('.wtile[data-i]').forEach(b=>b.onclick=()=>{if(typed.length>=letters.length)return;typed.push({c:b.textContent,b});b.disabled=true;draw();
+        if(typed.length===letters.length){const ok=fold(typed.map(t=>t.c).join(''))===fold(letters.join(''));app.querySelectorAll('.wtile').forEach(t=>t.disabled=true);
+          slots.forEach((s_,i)=>{s_.textContent=letters[i].toUpperCase();s_.classList.add(ok?'good':'bad')});answered(q,ok);
+          feedback(ok,ok?x.right:x.wrongIs(name),ok?(q.cap?x.capIs(o.name[lang],name):(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});
+      app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
+      return}
+    if(q.k==='pairsCap'){const ids=weakPick(EUB_CTY(),4);pairsUI(x.pairsT.countryCap,ids.map(id=>({s:id,left:E(id).name[lang],right:E(id).capital.name[lang],key:id})),'');return}
+    // pairs of approved relations; a capital stands for its country (capitalOn); river → country from the section 5 map (rivers[].crosses).
+    // No row's answer is also true for another row's place, so the only right matching is the one asked for.
+    if(q.k==='pairsEu'){const rels=q.rel==='crosses'?D.s11.rivers.filter(r=>E(r.id)).flatMap(r=>r.crosses.filter(c=>E(c)).map(c=>({subject:r.id,object:c})))
+        :D.eb.rev.relations.filter(r=>r.relation===q.rel&&ebOk(r));
+      const objs=r=>[r.object].flat(),key=r=>objs(r).join('+'),holds=(s_,os)=>rels.some(r=>r.subject===s_&&os.every(o=>objs(r).includes(o)));
+      const nameOf=id=>(E(id)||(D.s4.seas[id])||(D.s5.straits[id])).name[lang],left=r=>q.rel==='capitalOn'?E(r.subject).capital.name[lang]:nameOf(r.subject);
+      const chosen=[];for(const r of shuffle([...rels]))if(chosen.length<4&&!chosen.some(c=>c.subject===r.subject||key(c)===key(r)||holds(r.subject,objs(c))||holds(c.subject,objs(r))))chosen.push(r);
+      if(chosen.length<3){done++;return next()}
+      pairsUI(x.pairsT[q.rel],chosen.map(r=>({s:r.subject,left:left(r),right:objs(r).map(nameOf).join(x.and),key:key(r)})),'');return}
+    // «tap all…»: countries on the capitals map or rivers on the rivers map; a neutral place (the Don for the Black Sea) never counts against the child
+    if(q.k==='allEu'){const T=D.eb.rev.selectAll.find(v=>v.id===q.sel);EUSEC=T.map==='countries'?11:8;const tappable=T.map==='countries'?EUB_CTY():EU();const sel=new Set();
+      frame(x.find,`<p class="q">${esc(T.task[lang])}</p><div class="mapslot"></div><p class="rotate-hint">${x.allCheck}</p>`);
+      const m=euMap(app.querySelector('.mapslot'),{onTap:(px,py,sx,sy,sz)=>{const hit=euHit(px,py,sz,tappable);if(!hit)return;
+        if(sel.has(hit))sel.delete(hit);else sel.add(hit);redraw()}});
+      function redraw(){m.clearShapes();sel.forEach(id=>showEu(m,E(id),'hl-shape sel'));const b=app.querySelector('.fb .btn');if(b)b.disabled=!sel.size}
+      const fb=app.querySelector('.fb');fb.innerHTML=`<button type="button" class="btn" disabled>${x.checkAns}</button>`;redraw();
+      fb.querySelector('.btn').onclick=()=>{const ok=T.want.every(id=>sel.has(id))&&[...sel].every(id=>T.want.includes(id)||T.neutral.includes(id));
+        m.clearShapes();T.want.forEach(id=>showEu(m,E(id),'hl-shape good'));answered(q,ok);
+        feedback(ok,ok?x.right:x.allBadEu,T.want.map(id=>E(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};return}
+    if(q.k==='tfEu'){const p=D.eb.rev.trueFalse.find(v=>v.id===q.pair),truth=q.side==='true',o=E(p.subject);
+      frame(x.tf,`<div class="card"><p class="q" style="margin:0">${esc(p[q.side][lang])}</p></div><div class="mapslot"></div><div class="choices tfrow"><button type="button" class="choice" data-o="true">${x.tfYes}</button><button type="button" class="choice" data-o="false">${x.tfNo}</button></div>`);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');
+      app.querySelectorAll('.tfrow .choice').forEach(b=>b.onclick=()=>{const ok=(b.dataset.o==='true')===truth;app.querySelectorAll('.tfrow .choice').forEach(c=>{c.disabled=true;if((c.dataset.o==='true')===truth)c.classList.add('right')});
+        if(!ok)b.classList.add('wrong');answered(q,ok);feedback(ok,ok?x.right:x.tfRight,truth?'':p.true[lang],ok?IMG.faceHappy:IMG.faceOops,next)});
+      return}
+    if(q.k==='trapEu'){const T=D.eb.rev.traps.find(v=>v.id===q.trap),o=E(T.country),opts=shuffle([...T.options]);
+      frame(x.trap,`<p class="q">${esc(T.question[lang])}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(E(c).name[lang])}</button>`).join('')}</div>`);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');
+      return choices(q,T.answer,()=>E(T.answer).name[lang],()=>T.explain[lang])}
     // ---- section 4: seas (outlined when asked; the base map shows land and water) ----
     if(q.k==='introSea'||q.k==='introSeaRec'){const rec=q.rec&&D.s4.records.find(r=>r.id===q.rec);const o=W(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
@@ -1226,10 +1342,14 @@ function finalPuzzle(st){if(st.sec>=7)EUSEC=st.sec;const role=st.kind==='section
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
     layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,stamp:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
-function blockPuzzle(st){const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
+function blockPuzzle(st){if(st.sec===12)return euBlockPuzzle(st);const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
   return {kind:'block',stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
     layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],stamp:IMG.stampBlock}}
+// Block 2 final (data/geowords/b2-block.json): letters on the countries, rivers and section-1 places of the capitals map with the rivers
+function euBlockPuzzle(st){EUSEC=11;const P=D.eb.geo.puzzles.find(p=>p.language===L()&&ebOk(p)),w=D.eb.dict.units[0].words[L()][0];
+  return {kind:'block',stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
+    layers:[],definition:w.definition,needsZoom:false,insets:[],eu:true,stamp:IMG.euCard}}
 // Reveal order (docs/app-mechanics.md, rule 5): neighbours never one after another; first letter late; last letters not early.
 function revealOrder(n){const long=n>=7,endN=n<=8?2:3;
   for(let tries=0;tries<20000;tries++){const o=shuffle([...Array(n)].map((_,i)=>i+1));let ok=true;
@@ -1547,9 +1667,18 @@ function challengeRound(){const recent=S.recentCw||[],places=challengePlaces(),p
     puzzles.push({kind:'challenge',section:P.section,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
       layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:defOf(P.answer),needsZoom:!!P.needsZoom,insets:P.showInsets||[]});
   S.recentCw=puzzles.map(p=>p.answer);save();return puzzles}
+// Block 2 Challenge GeoWords (data/challenge/b2-block.json): approved review words of the five Europe sections, three words from three
+// different sections, laid out on the capitals map with the rivers by the section 5 rules (buildPuzzle with EUSEC 11: a third of the letters on rivers)
+function euChallengeRound(){EUSEC=11;const lang=L(),recent=S.recentCwEu||[],places=placesFor({sec:11,unit:'S'}),words=[];
+  for(let k=7;k<=11;k++)for(const u of D['s'+k].dict.units)for(const w of u.words[lang]||[])if(w.role==='review'&&w.approval?.status==='approved'&&!words.some(o=>o.answer===w.answer))words.push({...w,section:k});
+  const ordered=[...shuffle(words.filter(w=>!recent.includes(w.answer))),...shuffle(words.filter(w=>recent.includes(w.answer)))],puzzles=[];
+  for(const sec of shuffle([7,8,9,10,11]))for(const w of ordered.filter(w=>w.section===sec)){if(puzzles.length===3||puzzles.some(p=>p.section===sec))break;
+    const P=buildPuzzle(w,places,[]);if(P)puzzles.push({...P,kind:'challenge',section:sec})}
+  S.recentCwEu=puzzles.map(p=>p.answer);save();return puzzles}
+window.__gwEuChallengeRound=()=>euChallengeRound();// read by the automated rules test
 window.__gwChallengeRound=()=>challengeRound();// read by the automated rules test
-window.__gwEuSec=n=>{EUSEC=n};window.__gwEuOk=(id,x,y,sz)=>euOk(id,x,y,sz);window.__gwEuHit=(x,y,sz)=>euHit(x,y,sz);window.__gwCapHit=(x,y,sz)=>capHit(x,y,sz);// read by the automated Europe test
-function challengeWords(st){const puzzles=challengeRound();puzzles.forEach(P=>P.stepId=st.id);
+window.__gwE=id=>{const o=E(id);return o&&{x:o.x,y:o.y,capital:o.capital,path:!!o.path}};window.__gwEuSec=n=>{EUSEC=n};window.__gwEuOk=(id,x,y,sz)=>euOk(id,x,y,sz);window.__gwEuHit=(x,y,sz)=>euHit(x,y,sz);window.__gwCapHit=(x,y,sz)=>capHit(x,y,sz);// read by the automated Europe test
+function challengeWords(st){const puzzles=st.sec===12?euChallengeRound():challengeRound();puzzles.forEach(P=>P.stepId=st.id);
   let i=0;const go=()=>{const P=puzzles[i];P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};go()}
 
 /* ---------- Challenge: Speed Hunt (data/challenge/block-1.json, approved 23.10.2026) ---------- */
@@ -1557,18 +1686,22 @@ function challengeWords(st){const puzzles=challengeRound();puzzles.forEach(P=>P.
 // a mistake lights the right place for 0.5 s and sends the object to the weak list; skipping is allowed; score + personal best + provisional stars.
 // a river counts as «inside» within 8 px of its line, so a tap on the drawn river is not lost to the continent under it
 function huntPx(id,px,py,sz){if(kindOf(id)==='river')return Math.max(0,riverPx(R(id),px,py,sz.W,sz.H)-8);const o=anyObj(id);return inside(o,px,py)?0:edgePx(o,px,py,sz.W,sz.H)}
+// Block 2: countries and rivers on the capitals map with the rivers (data/challenge/b2-block.json); Crimea and Kosovo answer nothing
+function huntPxEu(id,px,py,sz){const o=E(id);return o.path?Math.max(0,riverPx(o,px,py,sz.W,sz.H)-8):inside(o,px,py)?0:edgePx(o,px,py,sz.W,sz.H)}
 function speedHunt(st){
-  const x=t(),lang=L(),cfg=D.b.challenge.speedHunt,all=Object.values(cfg.pool).flat().filter(id=>!cfg.excluded.ids.includes(id));
+  const eu=st.sec===12;if(eu)EUSEC=11;
+  const x=t(),lang=L(),cfg=(eu?D.eb:D.b).challenge.speedHunt,all=Object.values(cfg.pool).flat().filter(id=>!cfg.excluded.ids.includes(id)&&(!eu||E(id)));
+  const nameOf=id=>(eu?E(id):anyObj(id)).name[lang],px_=eu?huntPxEu:huntPx,bestKey=eu?'huntEu':'hunt';
   const order=shuffle([...all]);let i=0,score=0,over=false,busy=false;const end=Date.now()+cfg.durationSeconds*1000;
   h(`<section class="screen lesson hunt"><div class="l-top"><button type="button" class="l-x" aria-label="${x.quit}">✕</button><div class="l-bar"><i style="width:100%"></i></div><b class="hunt-sec"></b></div>
    <div class="task"><span class="kind">${x.huntTag}</span><p class="q">${x.huntFind} <b class="hunt-name"></b></p><div class="mapslot"></div>
    <div class="row hunt-row"><span class="chip"><span class="star">★</span><b class="hunt-score">0</b></span><button type="button" class="btn ghost" data-a="skip">${x.huntSkip}</button></div></div></section>`);
   const layers=[...CONT.map(id=>O(id).layer),...RIVERS.map(id=>R(id).layer),...MTNS.map(id=>M(id).layer),'world-canal-suez-canal','world-canal-panama-canal'];
-  const show=()=>{if(i>=order.length)return finish();window.__gwHunt={target:order[i],score};app.querySelector('.hunt-name').textContent=anyObj(order[i]).name[lang]};
-  const m=mapWidget(app.querySelector('.mapslot'),{layers,onTap:(px,py,sx,sy,sz)=>{if(over||busy)return;const id=order[i],d=huntPx(id,px,py,sz);
-    const ok=d<=22&&!all.some(o=>o!==id&&huntPx(o,px,py,sz)<d);m.dot(sx,sy,ok);
+  const show=()=>{if(i>=order.length)return finish();window.__gwHunt={target:order[i],score};app.querySelector('.hunt-name').textContent=nameOf(order[i])};
+  const m=(eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:eu?[]:layers,onTap:(px,py,sx,sy,sz)=>{if(over||busy)return;const id=order[i],d=px_(id,px,py,sz);
+    const ok=d<=22&&!all.some(o=>o!==id&&px_(o,px,py,sz)<d)&&!(eu&&D.s11.neutral.some(n=>inside(n,px,py)));m.dot(sx,sy,ok);
     if(ok){score++;app.querySelector('.hunt-score').textContent=score;S.weak[id]=Math.max(0,(S.weak[id]||0)-1);i++;return show()}
-    S.weak[id]=(S.weak[id]||0)+1;busy=true;const k=kindOf(id);if(k==='river')m.line(riverPath(R(id)),'hl-river good');else m.shape(anyObj(id),'hl-shape good');
+    S.weak[id]=(S.weak[id]||0)+1;busy=true;if(eu)showEu(m,E(id),'hl-shape good');else if(kindOf(id)==='river')m.line(riverPath(R(id)),'hl-river good');else m.shape(anyObj(id),'hl-shape good');
     setTimeout(()=>{busy=false;m.clearShapes();i++;if(!over)show()},500)}});
   app.querySelector('[data-a=skip]').onclick=()=>{if(over||busy)return;i++;show()};
   const bar=app.querySelector('.l-bar i'),secEl=app.querySelector('.hunt-sec');
@@ -1576,13 +1709,13 @@ function speedHunt(st){
     bar.style.width=(left/cfg.durationSeconds/10)+'%';secEl.textContent=x.huntSec(Math.ceil(left/1000));if(!left)finish()},200);
   app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();over=true;clearInterval(tick);save();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
-  function finish(){if(over)return;over=true;clearInterval(tick);const best=Math.max(S.hunt||0,score),rec=score>(S.hunt||0)&&score>0;S.hunt=best;
+  function finish(){if(over)return;over=true;clearInterval(tick);const best=Math.max(S[bestKey]||0,score),rec=score>(S[bestKey]||0)&&score>0;S[bestKey]=best;
     const stars=cfg.stars.thresholds.filter(v=>score>=v).length,xp=10+score;S.done[st.id]=true;S.xp+=xp;bumpStreak();save();
     document.querySelectorAll('.sheet-back').forEach(b=>b.remove());window.__gwHunt={target:null,score,done:true};
     h(`<section class="screen done"><img class="medal" src="${IMG.stampChallenge}" alt="" style="transform:rotate(-8deg)"><h2>${x.huntDone}</h2>
      <p class="hunt-stars" aria-label="${stars}/3">${'★'.repeat(stars)}<span>${'★'.repeat(3-stars)}</span></p>
      <div class="tiles"><div class="tile"><small>${x.huntScore}</small><b>${score}</b></div><div class="tile"><small>${x.huntBest}</small><b>${best}${rec?' ✦':''}</b></div><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div></div>
-     ${D.b.cw.length?`<button type="button" class="btn" data-a="cw">${x.toCw}</button>`:''}<button type="button" class="btn ghost" data-a="again">${x.huntAgain}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button></section>`);
+     ${eu||D.b.cw.length?`<button type="button" class="btn" data-a="cw">${x.toCw}</button>`:''}<button type="button" class="btn ghost" data-a="again">${x.huntAgain}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button></section>`);
     app.querySelector('[data-a=again]').onclick=()=>speedHunt(st);app.querySelector('[data-a=home]').onclick=home;const cw=app.querySelector('[data-a=cw]');if(cw)cw.onclick=()=>challengeWords(st)}
   show();
 }

@@ -17,5 +17,11 @@ for (const p of j.puzzles || []) if (want(p.id)) { p.approval = approval(sha({ a
   layers: p.layers, language: p.language, showInsets: p.showInsets })); n++; }
 for (const u of j.units || []) for (const lang of ["en", "ru"]) for (const w of u.words?.[lang] || [])
   if (want(w.answer)) { w.approval = approval(sha({ answer: w.answer, definition: w.definition })); n++; }
+// Block review (data/review/b2-block.json): each relation, true/false pair, select-all task, trap and record — the hash covers the item without its approval
+const bare = it => Object.fromEntries(Object.entries(it).filter(([k]) => k !== "approval"));
+for (const key of ["relations", "trueFalse", "selectAll", "traps", "records"]) if (Array.isArray(j[key]) && j.block === "europe-2")
+  for (const it of j[key]) if (want(it.id)) { it.approval = approval(sha(bare(it))); n++; }
+// Challenge rules (data/challenge/b2-block.json): the hash covers the Speed Hunt rules and the GeoWords rules
+if (j.speedHunt && j.block === "europe-2" && want("challenge")) { j.approval = approval(sha({ speedHunt: j.speedHunt, geowords: j.geowords })); j.status = "approved"; n++; }
 fs.writeFileSync(file, JSON.stringify(j, null, 1) + "\n");
 console.log(`approved ${n} in ${file}`);
