@@ -218,6 +218,33 @@
       "x": 40.71,
       "y": 63.83,
       "added": "2026-10-28, block 2 section 4: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
+    },
+    {
+      "id": "tallinn",
+      "name": "Tallinn",
+      "lon": 24.7536,
+      "lat": 59.437,
+      "x": 57.82,
+      "y": 47.3,
+      "added": "2026-10-28, block 2 section 5: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
+    },
+    {
+      "id": "riga",
+      "name": "Riga",
+      "lon": 24.1052,
+      "lat": 56.9496,
+      "x": 57.35,
+      "y": 52.23,
+      "added": "2026-10-28, block 2 section 5: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
+    },
+    {
+      "id": "vilnius",
+      "name": "Vilnius",
+      "lon": 25.2797,
+      "lat": 54.6872,
+      "x": 58.34,
+      "y": 56.69,
+      "added": "2026-10-28, block 2 section 5: dot copied from the Madrid dot onto europe-capitals.webp; not used to fit the projection"
     }
   ]
 }

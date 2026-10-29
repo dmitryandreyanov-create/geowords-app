@@ -1,0 +1,99 @@
+{
+ "section": "countries-centre-south-and-east",
+ "block": 2,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "note": "Vatican City is not drawn on the map, so its record is tied to Italy. Russia has more people than Germany but is not in the European Union.",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "russia-largest-country",
+   "order": 1,
+   "object": "russia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Russia",
+    "ru": "Россия"
+   },
+   "fact": {
+    "ru": "Россия — самая большая по площади страна в мире.",
+    "en": "Russia is the largest country in the world by area."
+   },
+   "figure": {
+    "value": 17098246,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "7c18b0ee05cf0ee8"
+   }
+  },
+  {
+   "id": "vatican-smallest-country",
+   "order": 2,
+   "object": "italy",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Italy",
+    "ru": "Италия"
+   },
+   "fact": {
+    "ru": "Внутри Рима находится Ватикан — самое маленькое государство в мире.",
+    "en": "Inside Rome lies Vatican City, the smallest country in the world."
+   },
+   "figure": {
+    "value": 0.49,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "ecd260df6db5a60c"
+   }
+  },
+  {
+   "id": "germany-most-populous-eu",
+   "order": 3,
+   "object": "germany",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Germany",
+    "ru": "Германия"
+   },
+   "fact": {
+    "ru": "Германия — самая населённая страна Европейского союза.",
+    "en": "Germany has the largest population in the European Union."
+   },
+   "figure": {
+    "value": 83,
+    "unit": "million people"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "49afc79a62110da6"
+   }
+  }
+ ]
+}

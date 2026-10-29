@@ -1,0 +1,665 @@
+{
+ "section": "countries-centre-south-and-east",
+ "block": 2,
+ "status": "approved",
+ "source": "Svetlana's list of 28.10.2026 and the doc https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+ "rules": {
+  "structure": "3 units x (1 final + at least 6 review words) + section final; practice draws 6 of each unit's review words",
+  "places": "letters on the learned countries of sections 5 and 4 (at the country centre), on the rivers of section 2 drawn over the capitals map («on the Vistula»), on a river inside a country it crosses («on the Danube in Hungary»), and on the objects of section 1 only when places run short; at least a third of the letters on rivers (Svetlana, 28.10.2026)",
+  "nesting": "each country is named once per puzzle; a river letter «on the Danube» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula",
+  "spacing": "letter centres at least 9% of the map width apart (hypot(dx, dy*1600/2200) >= 9)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "all words approved by Svetlana 28.10.2026 («Согласна»): her list minus ВЕЧЕ and ДОЖ (too short, her decision) and ПОЛИС, ГОНДОЛА (already in section 1), plus her ВОЕВОДСТВО and ТАЛАССОКРАТИЯ; РЕФОРМАЦИЯ, ГАБСБУРГИ, КАНТОН and МАДЬЯРЫ proposed for Central Europe; same-root definitions reworded (ВОЕВОДА, ГУСИТЫ, ИКОНОБОРЧЕСТВО)"
+ },
+ "units": [
+  {
+   "id": "unit-1-central-europe",
+   "title": {
+    "ru": "Центральная Европа",
+    "en": "Central Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РЕФОРМАЦИЯ",
+      "role": "final",
+      "definition": "Религиозное движение XVI века, начатое Мартином Лютером в Германии, которое привело к появлению протестантских церквей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "9dbb9975aabdf735"
+      }
+     },
+     {
+      "answer": "ВОЕВОДСТВО",
+      "role": "review",
+      "definition": "Административно-территориальная единица в Польше (сегодня их 16), а в прошлом и в других государствах Центральной и Восточной Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "dc2df21456af1973"
+      }
+     },
+     {
+      "answer": "ГУСИТЫ",
+      "role": "review",
+      "definition": "Участники религиозного движения в Чехии XV века, названного по имени проповедника, сожжённого в 1415 году.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e976ae591e8a6762"
+      }
+     },
+     {
+      "answer": "ЯНЫЧАРЫ",
+      "role": "review",
+      "definition": "Военнослужащие элитного пехотного корпуса Османской империи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e0f1b2404d801c57"
+      }
+     },
+     {
+      "answer": "ГАБСБУРГИ",
+      "role": "review",
+      "definition": "Королевская и императорская династия, которая несколько веков правила из Вены Австрией и многими землями Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "ccf4d4e38001042f"
+      }
+     },
+     {
+      "answer": "КАНТОН",
+      "role": "review",
+      "definition": "Одна из 26 самоуправляющихся областей, из которых состоит Швейцария.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "ac42bb8103886b31"
+      }
+     },
+     {
+      "answer": "МАДЬЯРЫ",
+      "role": "review",
+      "definition": "Самоназвание венгров; их предки пришли на равнины по Дунаю в IX веке.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b6e80b0c9167b456"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "REFORMATION",
+      "role": "final",
+      "definition": "The 16th-century religious movement started by Martin Luther in Germany that gave rise to the Protestant churches.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "2e5193ea830ed0e3"
+      }
+     },
+     {
+      "answer": "VOIVODESHIP",
+      "role": "review",
+      "definition": "A province of Poland (there are 16 today), and in the past of some other states of Central and Eastern Europe.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "91ca59aa7080d1d5"
+      }
+     },
+     {
+      "answer": "HUSSITES",
+      "role": "review",
+      "definition": "Followers of a 15th-century Czech religious movement named after a preacher who was burned at the stake in 1415.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "cdd2a651c09bc930"
+      }
+     },
+     {
+      "answer": "JANISSARIES",
+      "role": "review",
+      "definition": "Soldiers of the elite infantry corps of the Ottoman Empire.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e0a4f8d61c62afe3"
+      }
+     },
+     {
+      "answer": "HABSBURGS",
+      "role": "review",
+      "definition": "A royal and imperial dynasty that ruled Austria and many lands of Europe from Vienna for centuries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "70970cb7dfa574b2"
+      }
+     },
+     {
+      "answer": "CANTON",
+      "role": "review",
+      "definition": "One of the 26 self-governing states that make up Switzerland.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "cae390437d191fce"
+      }
+     },
+     {
+      "answer": "MAGYARS",
+      "role": "review",
+      "definition": "The Hungarians' own name for themselves; their ancestors settled on the plains of the Danube in the 9th century.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "a9a47ebfc5ac0555"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-southern-europe",
+   "title": {
+    "ru": "Южная Европа",
+    "en": "Southern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГЛАДИАТОР",
+      "role": "final",
+      "definition": "Боец, участвовавший в публичных поединках в Древнем Риме.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "5eba6183dd890839"
+      }
+     },
+     {
+      "answer": "АКРОПОЛЬ",
+      "role": "review",
+      "definition": "Укреплённая возвышенная часть древнегреческого города, где часто находились храмы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "1daa30af9388f38a"
+      }
+     },
+     {
+      "answer": "АГОРА",
+      "role": "review",
+      "definition": "Центральная общественная площадь древнегреческого города, место торговли и собраний.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e7f9fb880c64fd2c"
+      }
+     },
+     {
+      "answer": "ПАТРИЦИЙ",
+      "role": "review",
+      "definition": "Представитель привилегированных родов Древнего Рима.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "1d71278ac166f32f"
+      }
+     },
+     {
+      "answer": "ПЛЕБЕЙ",
+      "role": "review",
+      "definition": "Представитель свободного населения Древнего Рима, первоначально не принадлежавшего к патрициям.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b8a78352ea89125e"
+      }
+     },
+     {
+      "answer": "ЛЕГИОН",
+      "role": "review",
+      "definition": "Крупное воинское подразделение Древнего Рима.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0b32f408a78ac392"
+      }
+     },
+     {
+      "answer": "АКВЕДУК",
+      "role": "review",
+      "definition": "Сооружение для подачи воды, широко применявшееся римлянами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0a4a1629bb85f063"
+      }
+     },
+     {
+      "answer": "МОЗАИКА",
+      "role": "review",
+      "definition": "Изображение, составленное из маленьких кусочков камня, стекла или других материалов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "fb927aa77fac1d36"
+      }
+     },
+     {
+      "answer": "КОНДОТЬЕР",
+      "role": "review",
+      "definition": "Командир наёмного военного отряда в средневековой и ренессансной Италии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "7e9004c1dacd8b6c"
+      }
+     },
+     {
+      "answer": "КАРБОНАРИИ",
+      "role": "review",
+      "definition": "Участники тайных политических обществ, действовавших в Италии в XIX веке и выступавших за политические преобразования.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "7d09199946fefd23"
+      }
+     },
+     {
+      "answer": "ТАЛАССОКРАТИЯ",
+      "role": "review",
+      "definition": "Государство или политическая система, основанная на господстве на море.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f6874a300f54aa88"
+      }
+     },
+     {
+      "answer": "ГАЙДУКИ",
+      "role": "review",
+      "definition": "Вооружённые отряды и повстанцы, действовавшие в различных регионах Юго-Восточной Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "807f92cc784301e2"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "GLADIATOR",
+      "role": "final",
+      "definition": "A fighter who took part in public combats in ancient Rome.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "51d592ff6a0e0465"
+      }
+     },
+     {
+      "answer": "ACROPOLIS",
+      "role": "review",
+      "definition": "The fortified high part of an ancient Greek city, where temples often stood.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "af99343bf748e040"
+      }
+     },
+     {
+      "answer": "AGORA",
+      "role": "review",
+      "definition": "The central public square of an ancient Greek city, a place for trade and meetings.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0ce26fa1cd220efb"
+      }
+     },
+     {
+      "answer": "PATRICIAN",
+      "role": "review",
+      "definition": "A member of the privileged noble families of ancient Rome.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "6dbbfb426aa86491"
+      }
+     },
+     {
+      "answer": "PLEBEIAN",
+      "role": "review",
+      "definition": "A free citizen of ancient Rome who at first did not belong to the patrician families.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e43393c0eced2b09"
+      }
+     },
+     {
+      "answer": "LEGION",
+      "role": "review",
+      "definition": "A large military unit of the army of ancient Rome.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f4e518165b494771"
+      }
+     },
+     {
+      "answer": "AQUEDUCT",
+      "role": "review",
+      "definition": "A structure for carrying water, widely used by the Romans.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "80d15d22a9df683b"
+      }
+     },
+     {
+      "answer": "MOSAIC",
+      "role": "review",
+      "definition": "A picture made of small pieces of stone, glass or other materials.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "db320aa652942350"
+      }
+     },
+     {
+      "answer": "CONDOTTIERE",
+      "role": "review",
+      "definition": "The leader of a band of hired soldiers in medieval and Renaissance Italy.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "58b62aba84017569"
+      }
+     },
+     {
+      "answer": "CARBONARI",
+      "role": "review",
+      "definition": "Members of secret political societies in 19th-century Italy who worked for political change.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "2d194cbd66d9db1a"
+      }
+     },
+     {
+      "answer": "THALASSOCRACY",
+      "role": "review",
+      "definition": "A state or political system based on power at sea, like the Republic of Venice.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d2dd5a9b8d3ae5a4"
+      }
+     },
+     {
+      "answer": "HAJDUKS",
+      "role": "review",
+      "definition": "Armed bands of rebels who fought in various parts of South-Eastern Europe.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "a72df497dcb2ee0d"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-baltic-and-eastern-europe",
+   "title": {
+    "ru": "Прибалтика и Восточная Европа",
+    "en": "The Baltic states and Eastern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КИРИЛЛИЦА",
+      "role": "final",
+      "definition": "Система письма, возникшая в средневековом славянском мире и используемая многими народами сегодня.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "1217eef2be98bb7e"
+      }
+     },
+     {
+      "answer": "ГЛАГОЛИЦА",
+      "role": "review",
+      "definition": "Одна из древнейших славянских азбук, созданная в IX веке.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "cc54d0c2a568b67f"
+      }
+     },
+     {
+      "answer": "ВОЕВОДА",
+      "role": "review",
+      "definition": "Предводитель ратников или правитель области в ряде славянских и других государств Восточной и Центральной Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "a824eaf43d9d24ed"
+      }
+     },
+     {
+      "answer": "БОЯРИН",
+      "role": "review",
+      "definition": "Представитель высшего слоя знати в средневековой Руси и некоторых странах Восточной Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d47adda66f8cce3c"
+      }
+     },
+     {
+      "answer": "ДРУЖИНА",
+      "role": "review",
+      "definition": "Вооружённый отряд при князе в Древней Руси и других раннесредневековых славянских государствах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3b0127928fc280ce"
+      }
+     },
+     {
+      "answer": "ВИЗАНТИЯ",
+      "role": "review",
+      "definition": "Название древнего города, на месте которого возник Константинополь; также распространённое название Восточной Римской империи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "67b1c750197eb2b5"
+      }
+     },
+     {
+      "answer": "ИКОНОБОРЧЕСТВО",
+      "role": "review",
+      "definition": "Религиозное движение против почитания священных изображений, особенно известное в истории Византии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "7ab2533fcf899fd6"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CYRILLIC",
+      "role": "final",
+      "definition": "A writing system that arose in the medieval Slavic world and is used by many peoples today.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e25fbc3dbfadb5e9"
+      }
+     },
+     {
+      "answer": "GLAGOLITIC",
+      "role": "review",
+      "definition": "One of the oldest Slavic alphabets, created in the 9th century.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3f95daa140c36e7c"
+      }
+     },
+     {
+      "answer": "VOIVODE",
+      "role": "review",
+      "definition": "A military commander or the governor of a region in several Slavic and other states of Eastern and Central Europe.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "eff1a1aa345db9a7"
+      }
+     },
+     {
+      "answer": "BOYAR",
+      "role": "review",
+      "definition": "A member of the highest nobility in medieval Rus and some countries of Eastern Europe.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "4e046aebe6caf0dc"
+      }
+     },
+     {
+      "answer": "DRUZHINA",
+      "role": "review",
+      "definition": "An armed band serving a prince in early Rus and other early medieval Slavic states.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "86afa00ce5ea3848"
+      }
+     },
+     {
+      "answer": "BYZANTIUM",
+      "role": "review",
+      "definition": "The ancient city on whose site Constantinople grew; also a common name for the Eastern Roman Empire.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "c4badae02368c11a"
+      }
+     },
+     {
+      "answer": "ICONOCLASM",
+      "role": "review",
+      "definition": "A religious movement against the veneration of holy images, best known from the history of Byzantium.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f349121169dac927"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РЕНЕССАНС",
+      "role": "section-final",
+      "definition": "Эпоха культурного расцвета Европы, начавшаяся в Италии и связанная с возрождением интереса к античности.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "4e930eb76164354f"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "RENAISSANCE",
+      "role": "section-final",
+      "definition": "An age of cultural flowering in Europe that began in Italy and brought new interest in the ancient world.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "cb7726f9d6659bdc"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-28"
+}
