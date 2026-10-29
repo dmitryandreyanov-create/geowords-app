@@ -55,6 +55,8 @@ geo = {
   'as-kamchatka': named(regions, 'KAMCHATKA PENINSULA', key='NAME').buffer(0.3).intersection(landAt(159, 55)),
   # Natural Earth's TAYMYR PENINSULA covers only the Byrranga Mountains: the mainland north of the Yenisei Gulf – Khatanga Gulf line
   'as-taimyr': landAt(100, 74).intersection(Polygon([(80, 72.0), (87, 71.2), (106, 72.4), (114, 73.8), (114, 79), (80, 79)])),
+  # the Chukchi Peninsula: the mainland east of Kolyuchin Bay – Kresta Bay (Natural Earth's polygon is only its tip)
+  'as-chukotka': landAt(185, 66).intersection(Polygon([(174.5, 67.3), (178.5, 65.2), (180.0, 64.5), (192, 64.5), (192, 70), (174.5, 70)])),
   'as-japanese-islands': unary_union([landAt(138.5, 36.0), landAt(143.0, 43.5), landAt(131.0, 32.5), landAt(133.5, 33.7)]),
   'as-sakhalin': landAt(142.8, 50.5),
   'as-sri-lanka': landAt(80.7, 7.8),
@@ -90,6 +92,7 @@ ORDER = [
  ('as-korean-peninsula', 'peninsula', 2, 'Korean Peninsula', 'Корейский полуостров'),
  ('as-kamchatka', 'peninsula', 2, 'Kamchatka', 'Камчатка'),
  ('as-taimyr', 'peninsula', 2, 'Taimyr Peninsula', 'Таймыр'),
+ ('as-chukotka', 'peninsula', 2, 'Chukchi Peninsula', 'Чукотский полуостров'),
  ('as-japanese-islands', 'island', 3, 'Japanese Islands', 'Японские острова'),
  ('as-sakhalin', 'island', 3, 'Sakhalin', 'Сахалин'),
  ('as-sri-lanka', 'island', 3, 'Sri Lanka', 'Шри-Ланка'),
@@ -109,7 +112,7 @@ for i, (id_, kind, unit, en, ru) in enumerate(ORDER, 1):
         it['tapArea'] = [rnd(c.exterior.coords)]
     else:
         ps = polys(geo[id_])
-        if kind == 'ocean':
+        if kind == 'ocean' or id_ == 'as-chukotka':
             # a strait is the border between oceans, not a part of one: its round tap area is cut out of the ocean
             cut = unary_union([circle(*POINT[k]) for k in POINT])
             ps = [q for p in ps for q in getattr(p.difference(cut), 'geoms', [p.difference(cut)]) if isinstance(q, Polygon) and q.area >= 0.02]
