@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.29-country-zoom';
+const BUILD='2026.10.29-rivers-5';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -688,11 +688,10 @@ function countryInset(m,host,o){const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=
   const ir=[c.l,c.t,c.l+F,c.t+F],pair=(c.l+F/2-cx)*(c.t+F/2-cy)>=0?[[2,1],[0,3]]:[[0,1],[2,3]];
   m.line(`M${fr[0]} ${fr[1]}H${fr[2]}V${fr[3]}H${fr[0]}Z`+pair.map(([i,j])=>`M${fr[i]} ${fr[j]}L${ir[i]} ${ir[j]}`).join(''),'zoom-frame');return zm}
 const capOwner=cid=>[...EU10_IDS,...EU11_IDS].map(E).find(o=>o&&o.capital.id===cid);
-function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===11?IMG.euCapitals:EUSEC===10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
+function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
-  // section 5 draws the rivers of section 2 over the capitals map: a river and the outline of a country together (Svetlana, 28.10.2026)
-  const statics=()=>{if(EUSEC===11){for(const id of EU8_IDS)if(D.s8.eu[id])m.line(riverPath(D.s8.eu[id]),'eu-river');return}
-    if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
+  // sections 4 and 5 use the capitals map with the rivers of section 2 drawn in: a river and the outline of a country together (Svetlana, 28.10.2026)
+  const statics=()=>{if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
   const clear=m.clearShapes;m.clearShapes=()=>{clear();statics()};return m}
 
 /* ---------- map widget: base + layers + highlight shapes, markers in screen space, pinch/zoom ---------- */
