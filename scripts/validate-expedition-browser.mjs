@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.29-country-zoom/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.29-rivers-5/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -489,8 +489,7 @@ try{
       for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
         for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
           const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);if(q.id)seen.add(q.id);
-          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-capitals.webp'),'capitals map: '+src);
-          assert(await page.locator('.task .eu-river').count()>=20,'the rivers of section 2 are drawn over the map');
+          const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-countries-rivers.webp'),'countries and rivers map: '+src);
           if(q.k==='introEu'||q.k==='introEuRec'){
             if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),cFacts.items.find(i=>i.id===q.id).fact.ru);
             // the zoom inset magnifies every country but Norway and Russia (big enough on the whole map), with a frame on the map
@@ -523,7 +522,7 @@ try{
       for(const u of [1,2,3]){const n=Math.min(6,cDict.units[u-1].words.ru.filter(w=>w.role==='review'&&w.approval.status==='approved').length);
         await page.locator(`[data-step="e5-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();
         for(let w=0;w<n;w++){await page.waitForFunction(k=>window.__gwPuzzle?.seq?.i===k,w);const p=await page.evaluate(()=>window.__gwPuzzle);
-          assert(await page.locator('.gw .eu-river').count()>=20,'practice: rivers drawn');checkLetters(p,'practice '+p.answer);
+          checkLetters(p,'practice '+p.answer);
           for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
           if(w<n-1)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
         await page.waitForSelector('[data-step="e5-u1-l1"]')}
