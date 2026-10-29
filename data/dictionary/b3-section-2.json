@@ -9,7 +9,7 @@
   "length": "letters on the learned rivers first, then on the objects of section 1: up to 30 after unit 1, 40 after unit 2, 47 after unit 3",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "Words from Svetlana's list (29.10.2026): ГАНГЕТИКА / GANGETIC → ВАРАНАСИ / VARANASI, МЕСОПОТАМЦЫ / MESOPOTAMIANS → НИНЕВИЯ / NINEVEH, ШУМЕРОЛОГИЯ / SUMEROLOGY → ГИЛЬГАМЕШ / GILGAMESH, EN for ЗИККУРАТ = ZIGGURAT («Утверждаю», 29.10.2026). Svetlana (29.10.2026): the words of a unit must belong to its rivers; for unit 1 (Siberia, none in her list) Claude proposed ЭВЕНКИ, ЯКУТЫ, ТАЙМЕНЬ, СОБОЛЬ, МАМОНТ, ОСТРОГ / EVENKS, YAKUTS, TAIMEN, SABLE, MAMMOTH, STOCKADE. Definitions by Claude, waiting for approval."
+  "draft": "Words from Svetlana's list (29.10.2026): ГАНГЕТИКА / GANGETIC → ВАРАНАСИ / VARANASI, МЕСОПОТАМЦЫ / MESOPOTAMIANS → НИНЕВИЯ / NINEVEH, ШУМЕРОЛОГИЯ / SUMEROLOGY → ГИЛЬГАМЕШ / GILGAMESH, EN for ЗИККУРАТ = ZIGGURAT («Утверждаю», 29.10.2026). Svetlana (29.10.2026): the words of a unit must belong to its rivers; for unit 1 (Siberia, none in her list) Claude proposed ЭВЕНКИ, ЯКУТЫ, ТАЙМЕНЬ, СОБОЛЬ, МАМОНТ, ОСТРОГ / EVENKS, YAKUTS, TAIMEN, SABLE, MAMMOTH, STOCKADE. Definitions by Claude, waiting for approval. Svetlana's own definitions (29.10.2026, 22:19): ЯКУТЫ, ТАЙМЕНЬ, МОХЕНДЖОДАРО, АНГКОР, КХМЕРЫ, ГИЛЬГАМЕШ, ВАВИЛОНИЯ (its capital's name left out: same root), ЧАМПА, ХИНДУСТАН; EN to match, SABLE «valuable fur»."
  },
  "units": [
   {
@@ -39,7 +39,7 @@
      {
       "answer": "ЯКУТЫ",
       "role": "review",
-      "definition": "Народ, который разводит коней и коров в долине Лены, на самом холодном обжитом краю Земли.",
+      "definition": "Народ Сибири, традиционно занимавшийся разведением лошадей и крупного рогатого скота в суровом климате бассейна Лены.",
       "approval": {
        "status": "draft"
       }
@@ -47,7 +47,7 @@
      {
       "answer": "ТАЙМЕНЬ",
       "role": "review",
-      "definition": "Самая большая рыба лососёвых, хищник холодных сибирских рек.",
+      "definition": "Крупная хищная рыба семейства лососёвых, обитающая в холодных реках Сибири.",
       "approval": {
        "status": "draft"
       }
@@ -55,7 +55,7 @@
      {
       "answer": "СОБОЛЬ",
       "role": "review",
-      "definition": "Небольшой зверёк тайги с драгоценным тёмным мехом.",
+      "definition": "Небольшой зверёк тайги с ценным мехом.",
       "approval": {
        "status": "draft"
       }
@@ -97,7 +97,7 @@
      {
       "answer": "YAKUTS",
       "role": "review",
-      "definition": "A people who raise horses and cattle in the Lena valley, in the coldest inhabited land on Earth.",
+      "definition": "A Siberian people who traditionally raised horses and cattle in the harsh climate of the Lena basin.",
       "approval": {
        "status": "draft"
       }
@@ -105,7 +105,7 @@
      {
       "answer": "TAIMEN",
       "role": "review",
-      "definition": "The largest fish of the salmon family, a predator of cold Siberian rivers.",
+      "definition": "A large predatory fish of the salmon family that lives in the cold rivers of Siberia.",
       "approval": {
        "status": "draft"
       }
@@ -113,7 +113,7 @@
      {
       "answer": "SABLE",
       "role": "review",
-      "definition": "A small taiga animal with precious dark fur.",
+      "definition": "A small taiga animal with valuable fur.",
       "approval": {
        "status": "draft"
       }
@@ -148,7 +148,7 @@
      {
       "answer": "МОХЕНДЖОДАРО",
       "role": "final",
-      "definition": "Древний город на Инде с прямыми улицами и водостоками, построенный 4500 лет назад.",
+      "definition": "Один из крупнейших городов Индской цивилизации, известный прямыми улицами и древней системой водоотведения.",
       "approval": {
        "status": "draft"
       }
@@ -180,7 +180,7 @@
      {
       "answer": "ХИНДУСТАН",
       "role": "review",
-      "definition": "Старое название Северной Индии, равнины по течению Ганга.",
+      "definition": "Историческое название севера Индии; его границы в разные времена понимали по-разному.",
       "approval": {
        "status": "draft"
       }
@@ -196,7 +196,7 @@
      {
       "answer": "АНГКОР",
       "role": "review",
-      "definition": "Огромный каменный храмовый город в джунглях Камбоджи.",
+      "definition": "Древний город и храмовый комплекс Камбоджи с огромной системой каналов и водохранилищ.",
       "approval": {
        "status": "draft"
       }
@@ -204,7 +204,7 @@
      {
       "answer": "КХМЕРЫ",
       "role": "review",
-      "definition": "Народ Камбоджи, построивший храмы в долине Меконга.",
+      "definition": "Народ Камбоджи, создавший могущественную империю и знаменитые храмы Ангкора.",
       "approval": {
        "status": "draft"
       }
@@ -212,7 +212,7 @@
      {
       "answer": "ЧАМПА",
       "role": "review",
-      "definition": "Древнее царство на побережье нынешнего Вьетнама.",
+      "definition": "Древнее государство, существовавшее на территории современного Центрального и Южного Вьетнама.",
       "approval": {
        "status": "draft"
       }
@@ -238,7 +238,7 @@
      {
       "answer": "MOHENJODARO",
       "role": "final",
-      "definition": "An ancient city on the Indus with straight streets and drains, built 4,500 years ago.",
+      "definition": "One of the largest cities of the Indus Valley Civilization, known for its straight streets and ancient drainage system.",
       "approval": {
        "status": "draft"
       }
@@ -270,7 +270,7 @@
      {
       "answer": "HINDUSTAN",
       "role": "review",
-      "definition": "An old name for northern India, the plain along the Ganges.",
+      "definition": "A historical name for the north of India; its borders were understood differently at different times.",
       "approval": {
        "status": "draft"
       }
@@ -286,7 +286,7 @@
      {
       "answer": "ANGKOR",
       "role": "review",
-      "definition": "A huge stone temple city in the jungles of Cambodia.",
+      "definition": "An ancient city and temple complex in Cambodia, with a vast system of canals and reservoirs.",
       "approval": {
        "status": "draft"
       }
@@ -294,7 +294,7 @@
      {
       "answer": "KHMERS",
       "role": "review",
-      "definition": "The people of Cambodia who built temples in the Mekong valley.",
+      "definition": "The people of Cambodia who built a powerful empire and the famous temples of Angkor.",
       "approval": {
        "status": "draft"
       }
@@ -302,7 +302,7 @@
      {
       "answer": "CHAMPA",
       "role": "review",
-      "definition": "An ancient kingdom on the coast of what is now Vietnam.",
+      "definition": "An ancient state on the territory of present-day central and southern Vietnam.",
       "approval": {
        "status": "draft"
       }
@@ -353,7 +353,7 @@
      {
       "answer": "ВАВИЛОНИЯ",
       "role": "review",
-      "definition": "Древнее царство на Евфрате, славившееся висячими садами своей столицы.",
+      "definition": "Древнее государство в Междуречье, столица которого стояла на Евфрате.",
       "approval": {
        "status": "draft"
       }
@@ -377,7 +377,7 @@
      {
       "answer": "ГИЛЬГАМЕШ",
       "role": "review",
-      "definition": "Царь Урука и герой древнейшей поэмы, искавший бессмертие.",
+      "definition": "Легендарный правитель Урука, герой одного из древнейших сохранившихся литературных произведений.",
       "approval": {
        "status": "draft"
       }
@@ -443,7 +443,7 @@
      {
       "answer": "BABYLONIA",
       "role": "review",
-      "definition": "An ancient kingdom on the Euphrates, famous for the hanging gardens of its capital.",
+      "definition": "An ancient state in Mesopotamia whose capital stood on the Euphrates.",
       "approval": {
        "status": "draft"
       }
@@ -467,7 +467,7 @@
      {
       "answer": "GILGAMESH",
       "role": "review",
-      "definition": "A king of Uruk and the hero of the oldest poem, who searched for eternal life.",
+      "definition": "A legendary king of Uruk and the hero of one of the oldest surviving works of literature.",
       "approval": {
        "status": "draft"
       }
