@@ -1,0 +1,468 @@
+{
+ "section": "asia-on-the-map",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 29.10.2026 (25 words RU + EN)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters only on learned objects of the Asia map: up to 7 after unit 1, 15 after unit 2, 23 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Words from Svetlana's list (29.10.2026): ДЖУНГЛИ and IRRIGATION repeat block 1 and were replaced by КЯРИЗ and QANAT; the 4-letter words СЕЛЬ, ЛЁСС, ДЖУТ, ЮРТА, JUTE, YURT were replaced by БАРХАН, БАЗАР, ХЛОПОК, ЧАЙХАНА, COTTON, BAZAAR («Утверждаю», 29.10.2026). Unit split and definitions by Claude, waiting for approval."
+ },
+ "units": [
+  {
+   "id": "unit-1-where-asia-ends",
+   "title": {
+    "ru": "Где кончается Азия",
+    "en": "Where Asia ends"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТАЙФУН",
+      "role": "final",
+      "definition": "Тропический ураган над Тихим океаном у берегов Восточной Азии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "САМУМ",
+      "role": "review",
+      "definition": "Сухой горячий ветер с песчаной бурей в пустынях Аравии и Северной Африки.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХАМСИН",
+      "role": "review",
+      "definition": "Жаркий сухой южный ветер из пустыни, который весной дует в Египте и на Ближнем Востоке.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТАКЫР",
+      "role": "review",
+      "definition": "Ровная глинистая площадка в пустыне, которая летом растрескивается от жары.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАРХАН",
+      "role": "review",
+      "definition": "Песчаный холм в форме полумесяца, который ветер передвигает по пустыне.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "САКСАУЛ",
+      "role": "review",
+      "definition": "Кустарник или деревце пустынь Средней Азии с очень твёрдой древесиной.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КЯРИЗ",
+      "role": "review",
+      "definition": "Подземный канал, по которому вода с гор идёт к полям в пустыне.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАРАВАН",
+      "role": "review",
+      "definition": "Вереница верблюдов с грузом и людьми, идущая через пустыню.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TYPHOON",
+      "role": "final",
+      "definition": "A tropical storm over the Pacific Ocean near the coasts of East Asia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SIMOOM",
+      "role": "review",
+      "definition": "A hot dry wind with sandstorms in the deserts of Arabia and North Africa.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHAMSIN",
+      "role": "review",
+      "definition": "A hot dry southerly wind from the desert that blows in Egypt and the Middle East in spring.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TAKYR",
+      "role": "review",
+      "definition": "A flat clay patch in the desert that cracks in the summer heat.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SAXAUL",
+      "role": "review",
+      "definition": "A desert shrub or small tree of Central Asia with very hard wood.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "QANAT",
+      "role": "review",
+      "definition": "An underground channel that carries water from the mountains to fields in the desert.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CARAVAN",
+      "role": "review",
+      "definition": "A line of camels carrying goods and people across the desert.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MUDFLOW",
+      "role": "review",
+      "definition": "A fast stream of mud and stones rushing down a mountain valley after heavy rain.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LOESS",
+      "role": "review",
+      "definition": "Fine yellow soil carried by the wind; it gives the Huang He its colour.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-peninsulas-of-asia",
+   "title": {
+    "ru": "Полуострова Азии",
+    "en": "Peninsulas of Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КАРАВАНСАРАЙ",
+      "role": "final",
+      "definition": "Постоялый двор на торговом пути, где останавливались купцы с верблюдами.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СОЛОНЧАК",
+      "role": "review",
+      "definition": "Почва с белой коркой, похожей на иней: в ней так много минералов, что почти ничего не растёт.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КОЧЕВНИК",
+      "role": "review",
+      "definition": "Человек, который не живёт на одном месте, а переходит со стадами с пастбища на пастбище.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЧАЙХАНА",
+      "role": "review",
+      "definition": "Заведение в Средней Азии и Иране, где сидят на коврах, пьют горячий напиток из пиал и беседуют.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАЗАР",
+      "role": "review",
+      "definition": "Шумный восточный рынок с торговыми рядами.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХЛОПОК",
+      "role": "review",
+      "definition": "Растение, из пушистых коробочек которого делают нитки и ткань.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МИНАРЕТ",
+      "role": "review",
+      "definition": "Высокая башня рядом с мечетью, с которой призывают на молитву.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МЕДРЕСЕ",
+      "role": "review",
+      "definition": "Мусульманская школа, часто в красивом здании с куполом и внутренним двором.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ИРРИГАЦИЯ",
+      "role": "review",
+      "definition": "Искусственный полив полей по каналам.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CARAVANSERAI",
+      "role": "final",
+      "definition": "A roadside inn on a trade route where merchants stopped with their camels.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SALTFLAT",
+      "role": "review",
+      "definition": "Flat ground covered with a white crust where a lake has dried up.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NOMAD",
+      "role": "review",
+      "definition": "A person who does not live in one place but moves with the herds from pasture to pasture.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BAZAAR",
+      "role": "review",
+      "definition": "A busy eastern market with rows of stalls.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "COTTON",
+      "role": "review",
+      "definition": "A plant whose fluffy bolls are spun into thread and cloth.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MINARET",
+      "role": "review",
+      "definition": "A tall tower next to a mosque from which people are called to prayer.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MADRASA",
+      "role": "review",
+      "definition": "A Muslim school, often in a beautiful building with a dome and a courtyard.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-islands-and-seas",
+   "title": {
+    "ru": "Острова и моря у берегов Азии",
+    "en": "Islands and seas off Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТЕРРАСИРОВАНИЕ",
+      "role": "final",
+      "definition": "Устройство на склонах гор ступенчатых полей, как на рисовых полях Азии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАМБУК",
+      "role": "review",
+      "definition": "Очень быстро растущий злак с полым стеблем, похожий на дерево.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАНГРЫ",
+      "role": "review",
+      "definition": "Леса на морских берегах в тропиках, где деревья стоят в воде на корнях-ходулях.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТАЙГА",
+      "role": "review",
+      "definition": "Хвойный лес, который тянется через всю Сибирь.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПАГОДА",
+      "role": "review",
+      "definition": "Многоярусная башня-храм в Китае, Японии и Юго-Восточной Азии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СТУПА",
+      "role": "review",
+      "definition": "Буддийское сооружение в форме купола или колокола, где хранят святыни.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СУБТРОПИКИ",
+      "role": "review",
+      "definition": "Климатический пояс с жарким летом и мягкой зимой, где растут мандарины и чай.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TERRACING",
+      "role": "final",
+      "definition": "Building step-like fields on mountain slopes, like the rice fields of Asia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "JUNGLE",
+      "role": "review",
+      "definition": "A dense tropical forest, thick with vines and undergrowth.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BAMBOO",
+      "role": "review",
+      "definition": "A very fast-growing giant grass with a hollow stem.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MANGROVES",
+      "role": "review",
+      "definition": "Tropical coastal forests whose trees stand in the sea on stilt-like roots.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TAIGA",
+      "role": "review",
+      "definition": "The coniferous forest that stretches across all of Siberia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PAGODA",
+      "role": "review",
+      "definition": "A tower-temple of several tiers in China, Japan and South-East Asia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "STUPA",
+      "role": "review",
+      "definition": "A Buddhist dome- or bell-shaped monument that holds sacred relics.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SUBTROPICS",
+      "role": "review",
+      "definition": "The climate belt with hot summers and mild winters where tangerines and tea grow.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ШЕЛКОВОДСТВО",
+      "role": "section-final",
+      "definition": "Разведение гусениц, которые прядут коконы для самой дорогой ткани Древнего Китая.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "SERICULTURE",
+      "role": "section-final",
+      "definition": "Raising caterpillars that spin cocoons for silk, the costly cloth of ancient China.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
