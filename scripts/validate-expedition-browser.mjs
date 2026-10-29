@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.28-countries-east/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.29-country-zoom/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
@@ -429,6 +429,9 @@ try{
           const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/europe-countries-rivers.webp'),'countries and rivers map: '+src);
           if(q.k==='introEu'||q.k==='introEuRec'){
             if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),cFacts.items.find(i=>i.id===q.id).fact.ru);
+            // the zoom inset magnifies every country but Norway and Russia (big enough on the whole map), with a frame on the map
+            if(q.k==='introEu'){const big=['norway','russia'].includes(q.id);assert.equal(await page.locator('.task .zoom-inset').count(),big?0:1,'zoom inset on the card of '+q.id);
+              assert.equal(await page.locator('.task .zoom-frame').count(),big?0:1,'zoom frame for '+q.id)}
             await page.locator('.fb .btn').click()}
           else if(q.k==='findEu'||q.k==='findCap'){await tapAt(q.k==='findEu'?lab[q.id]:cap[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
             assert.equal(await page.locator('.fb.ok').count(),1,q.k+': a tap on '+q.id+' is right');await page.locator('.fb .btn').click()}
@@ -490,6 +493,9 @@ try{
           assert(await page.locator('.task .eu-river').count()>=20,'the rivers of section 2 are drawn over the map');
           if(q.k==='introEu'||q.k==='introEuRec'){
             if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),cFacts.items.find(i=>i.id===q.id).fact.ru);
+            // the zoom inset magnifies every country but Norway and Russia (big enough on the whole map), with a frame on the map
+            if(q.k==='introEu'){const big=['norway','russia'].includes(q.id);assert.equal(await page.locator('.task .zoom-inset').count(),big?0:1,'zoom inset on the card of '+q.id);
+              assert.equal(await page.locator('.task .zoom-frame').count(),big?0:1,'zoom frame for '+q.id)}
             await page.locator('.fb .btn').click()}
           else if(q.k==='findEu'||q.k==='findCap'){await tapAt(q.k==='findEu'?lab[q.id]:cap[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
             assert.equal(await page.locator('.fb.ok').count(),1,q.k+': a tap on '+q.id+' is right');await page.locator('.fb .btn').click()}
