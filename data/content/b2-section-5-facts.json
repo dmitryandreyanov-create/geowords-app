@@ -75,8 +75,8 @@
     "ru": "Берн"
    },
    "fact": {
-    "en": "Switzerland has four national languages: German, French, Italian and Romansh. Its capital, Bern, stands on the River Aare.",
-    "ru": "В Швейцарии четыре государственных языка: немецкий, французский, итальянский и ретороманский. Её столица Берн стоит на реке Ааре."
+    "en": "Switzerland has four national languages: German, French, Italian and Romansh. By law the country has no capital: Bern is the 'federal city', where the government and parliament sit.",
+    "ru": "В Швейцарии четыре государственных языка: немецкий, французский, итальянский и ретороманский. По закону столицы у страны нет: Берн — «федеральный город», где работают правительство и парламент."
    },
    "source": {
     "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
@@ -86,8 +86,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-28",
-    "contentSha256": "d94b5158f242c2af"
+    "date": "2026-10-29",
+    "contentSha256": "da09fc9227f4b6cb"
    }
   },
   {
