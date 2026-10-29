@@ -155,6 +155,7 @@ jobs:
           node scripts/validate-challenge.mjs
           node scripts/test-validate-challenge.mjs
           node scripts/validate-review.mjs
+          node scripts/validate-review-b2.mjs
           node scripts/test-validate-review.mjs
 
   deploy:

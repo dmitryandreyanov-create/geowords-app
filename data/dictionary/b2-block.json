@@ -1,0 +1,40 @@
+{
+ "block": "europe-2",
+ "status": "draft",
+ "rules": {
+  "structure": "one block-final word per language for the block 2 «Europe» review; Challenge GeoWords reuse the approved review words of block 2 sections 1-5",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root"
+ },
+ "units": [
+  {
+   "id": "block-final",
+   "title": {
+    "en": "Block final",
+    "ru": "Итог блока"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CIVILIZATION",
+      "role": "block-final",
+      "definition": "A highly developed society with cities, writing, laws, science and art, like that of the ancient Greeks and Romans.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ЦИВИЛИЗАЦИЯ",
+      "role": "block-final",
+      "definition": "Высокий уровень развития общества: города, письменность, законы, науки и искусства. Так жили, например, древние греки и римляне.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "block": "europe-2",
+ "status": "draft",
+ "challenge": {
+  "parts": [
+   "speed-hunt",
+   "geowords"
+  ],
+  "geowords": "three app-generated words per round from the approved review words of block 2 sections 1-5 (data/dictionary/b2-section-*.json), three words from three different sections; letters on the capitals map with the rivers of section 2 (europe-countries-rivers.webp) by the section 5 rules"
+ },
+ "speedHunt": {
+  "durationSeconds": 60,
+  "map": "./assets/europe-countries-rivers.webp",
+  "prompt": {
+   "en": "Find:",
+   "ru": "Найди:",
+   "object": "the country or river name as on the cards (name.en / name.ru in data/maps); no capitals, records or facts"
+  },
+  "order": "random, no object repeats within a round",
+  "correct": "+1 and the next object at once",
+  "wrong": "the right place lights up for 0.5 s; no penalty except time; the object goes into the weak list",
+  "skip": "allowed",
+  "hit": "a river counts within 8 CSS px of its drawn line; a country counts inside its outline or within 22 CSS px of it; the nearest object of the pool wins; a tap on Crimea or Kosovo answers nothing",
+  "excluded": {
+   "ids": [
+    "ural-river"
+   ],
+   "why": "the Ural River is not drawn on the capitals map; mountains and section-1 places are on other maps (no time to switch maps in 60 s)"
+  },
+  "score": "objects found in the round + personal best",
+  "stars": {
+   "thresholds": [
+    10,
+    15,
+    20
+   ],
+   "provisional": true,
+   "note": "tune after testing with children"
+  },
+  "pool": {
+   "countries": [
+    "united-kingdom",
+    "ireland-country",
+    "france",
+    "netherlands",
+    "belgium",
+    "luxembourg-country",
+    "spain",
+    "portugal",
+    "norway",
+    "sweden",
+    "denmark",
+    "finland",
+    "iceland-country",
+    "germany",
+    "switzerland",
+    "austria",
+    "czechia",
+    "poland",
+    "hungary",
+    "italy",
+    "greece",
+    "serbia",
+    "romania",
+    "estonia",
+    "latvia",
+    "lithuania",
+    "belarus",
+    "ukraine",
+    "russia"
+   ],
+   "rivers": [
+    "volga",
+    "don",
+    "dnieper",
+    "dniester",
+    "danube",
+    "rhine",
+    "elbe",
+    "oder",
+    "vistula",
+    "thames",
+    "seine",
+    "loire",
+    "rhone",
+    "po",
+    "tiber",
+    "tagus",
+    "douro",
+    "guadiana",
+    "ebro",
+    "guadalquivir"
+   ]
+  },
+  "poolSize": 49
+ },
+ "geowords": {
+  "words": "approved review words (role review) of data/dictionary/b2-section-1..5.json, each word once; three different sections per round; recently played words last",
+  "places": "as the section 5 practice: centres of the 29 countries, the 20 rivers («on the Danube») and a river inside a country it crosses («on the Danube in Hungary»), the section-1 objects (not the Ural River or Crimea) only when needed; at least a third of the letters on rivers; a country named once; spacing 9% of map width",
+  "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ }
+}

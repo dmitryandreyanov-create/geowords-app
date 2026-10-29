@@ -1,0 +1,308 @@
+{
+ "block": "europe-2",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters at the centre of the 29 countries of sections 4 and 5 (data/maps/europe-countries.json, europe-countries-5.json), on the 20 rivers of section 2 drawn over the capitals map («on the Danube», at the middle of the river's longest line) and on a river inside a country it crosses («on the Danube in Hungary»); the objects of data/maps/europe-overview.json (not the Ural River or the Crimean Peninsula) only when places run short; at least a third of the letters on rivers (Svetlana, 28.10.2026). The mountains are not drawn on this map",
+  "nesting": "as b2-section-5.json: a country named once per puzzle; one letter per river; a river letter «on the Danube» never shares a puzzle with a country the river crosses; a country never with its island or peninsula; no letter inside the area of another place; at most one of the Netherlands, Belgium and Luxembourg",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 9 (% of map width)",
+  "role": "block-final: the final GeoWords of the block 2 review (passport stamp)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b2-block-final-en",
+   "block": "europe-2",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "en",
+   "answer": "CIVILIZATION",
+   "map": "./assets/europe-countries-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "lithuania",
+     "x": 57.55,
+     "y": 55.25,
+     "letter": "C"
+    },
+    {
+     "id": "ukraine",
+     "x": 64.9,
+     "y": 66.73,
+     "letter": "I"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 16.9,
+     "y": 37.11,
+     "letter": "V"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "I"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "L"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "I"
+    },
+    {
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
+     "letter": "Z"
+    },
+    {
+     "id": "sweden",
+     "x": 53.3,
+     "y": 37.05,
+     "letter": "A"
+    },
+    {
+     "id": "rhone@france",
+     "x": 37.77,
+     "y": 71.95,
+     "letter": "T"
+    },
+    {
+     "id": "danube@austria",
+     "x": 48.86,
+     "y": 68.77,
+     "letter": "I"
+    },
+    {
+     "id": "denmark",
+     "x": 45.53,
+     "y": 52.11,
+     "letter": "O"
+    },
+    {
+     "id": "portugal",
+     "x": 22.53,
+     "y": 74.16,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "volga",
+     "position": 5,
+     "text": "Find the fifth letter on the Volga."
+    },
+    {
+     "markerId": "ukraine",
+     "position": 2,
+     "text": "Find the second letter in Ukraine."
+    },
+    {
+     "markerId": "thames",
+     "position": 4,
+     "text": "Find the fourth letter on the Thames."
+    },
+    {
+     "markerId": "danube@austria",
+     "position": 10,
+     "text": "Find the tenth letter on the Danube in Austria."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 7,
+     "text": "Find the seventh letter in Iceland."
+    },
+    {
+     "markerId": "rhone@france",
+     "position": 9,
+     "text": "Find the ninth letter on the Rhône in France."
+    },
+    {
+     "markerId": "greece",
+     "position": 6,
+     "text": "Find the sixth letter in Greece."
+    },
+    {
+     "markerId": "sweden",
+     "position": 8,
+     "text": "Find the eighth letter in Sweden."
+    },
+    {
+     "markerId": "portugal",
+     "position": 12,
+     "text": "Find the twelfth letter in Portugal."
+    },
+    {
+     "markerId": "lithuania",
+     "position": 1,
+     "text": "Find the first letter in Lithuania."
+    },
+    {
+     "markerId": "denmark",
+     "position": 11,
+     "text": "Find the eleventh letter in Denmark."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b2-block-final-ru",
+   "block": "europe-2",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "ru",
+   "answer": "ЦИВИЛИЗАЦИЯ",
+   "map": "./assets/europe-countries-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "iceland-country",
+     "x": 32.86,
+     "y": 26.32,
+     "letter": "Ц"
+    },
+    {
+     "id": "sweden",
+     "x": 53.3,
+     "y": 37.05,
+     "letter": "И"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 16.9,
+     "y": 37.11,
+     "letter": "В"
+    },
+    {
+     "id": "volga",
+     "x": 77.62,
+     "y": 50.54,
+     "letter": "И"
+    },
+    {
+     "id": "lithuania",
+     "x": 57.55,
+     "y": 55.25,
+     "letter": "Л"
+    },
+    {
+     "id": "ukraine",
+     "x": 64.9,
+     "y": 66.73,
+     "letter": "И"
+    },
+    {
+     "id": "portugal",
+     "x": 22.53,
+     "y": 74.16,
+     "letter": "З"
+    },
+    {
+     "id": "rhone@france",
+     "x": 37.77,
+     "y": 71.95,
+     "letter": "А"
+    },
+    {
+     "id": "danube@austria",
+     "x": 48.86,
+     "y": 68.77,
+     "letter": "Ц"
+    },
+    {
+     "id": "greece",
+     "x": 54.49,
+     "y": 86.74,
+     "letter": "И"
+    },
+    {
+     "id": "thames",
+     "x": 34.75,
+     "y": 56.9,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "portugal",
+     "position": 7,
+     "text": "Найди седьмую букву в Португалии."
+    },
+    {
+     "markerId": "sweden",
+     "position": 2,
+     "text": "Найди вторую букву в Швеции."
+    },
+    {
+     "markerId": "lithuania",
+     "position": 5,
+     "text": "Найди пятую букву в Литве."
+    },
+    {
+     "markerId": "thames",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Темзе."
+    },
+    {
+     "markerId": "ukraine",
+     "position": 6,
+     "text": "Найди шестую букву в Украине."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Атлантическом океане."
+    },
+    {
+     "markerId": "rhone@france",
+     "position": 8,
+     "text": "Найди восьмую букву на Роне во Франции."
+    },
+    {
+     "markerId": "greece",
+     "position": 10,
+     "text": "Найди десятую букву в Греции."
+    },
+    {
+     "markerId": "volga",
+     "position": 4,
+     "text": "Найди четвёртую букву на Волге."
+    },
+    {
+     "markerId": "iceland-country",
+     "position": 1,
+     "text": "Найди первую букву в Исландии."
+    },
+    {
+     "markerId": "danube@austria",
+     "position": 9,
+     "text": "Найди девятую букву на Дунае в Австрии."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

@@ -47,6 +47,8 @@ const named=[
   'data/content/b2-section-4-facts.json','data/content/b2-section-4-records.json','data/dictionary/b2-section-4.json','data/geowords/b2-section-4.json',
   // Block 2 section 5 «Countries and capitals: centre, south and east»; its outlines and river points are data/maps/europe-countries-5.json (below).
   'data/content/b2-section-5-facts.json','data/content/b2-section-5-records.json','data/dictionary/b2-section-5.json','data/geowords/b2-section-5.json',
+  // Block 2 review «Europe»: review texts, block-final GeoWords and its word, the Challenge rules.
+  'data/review/b2-block.json','data/dictionary/b2-block.json','data/geowords/b2-block.json','data/challenge/b2-block.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
