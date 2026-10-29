@@ -159,7 +159,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "3ba57c9aa2cd5fab"
    }
   },
   {
@@ -301,7 +304,10 @@
     }
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "67aeaadf8746876c"
    }
   }
  ]

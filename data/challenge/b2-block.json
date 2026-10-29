@@ -1,6 +1,6 @@
 {
  "block": "europe-2",
- "status": "draft",
+ "status": "approved",
  "challenge": {
   "parts": [
    "speed-hunt",
@@ -98,5 +98,11 @@
   "words": "approved review words (role review) of data/dictionary/b2-section-1..5.json, each word once; three different sections per round; recently played words last",
   "places": "as the section 5 practice: centres of the 29 countries, the 20 rivers («on the Danube») and a river inside a country it crosses («on the Danube in Hungary»), the section-1 objects (not the Ural River or Crimea) only when needed; at least a third of the letters on rivers; a country named once; spacing 9% of map width",
   "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ },
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-10-29",
+  "contentSha256": "c89f51ef21570481"
  }
 }

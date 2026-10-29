@@ -1,7 +1,7 @@
 {
  "block": "europe-2",
  "unit": "block-review",
- "status": "draft",
+ "status": "approved",
  "rules": {
   "noNewObjects": "only the 78 places of block 2 sections 1-5; each task opens the map the place was taught on (section 1: blank map with the Ural; rivers map; mountains map; capitals map with rivers for countries)",
   "lesson": "about 10 tasks, 3-5 minutes; mistakes come back at the end until answered correctly; about 60% of the asked places are the child's weakest (S.weak)",
@@ -159,7 +159,10 @@
    "subject": "volga",
    "object": "caspian-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "379d443f59252e8e"
    }
   },
   {
@@ -168,7 +171,10 @@
    "subject": "ural-river",
    "object": "caspian-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a7a7c73e5b6aee73"
    }
   },
   {
@@ -177,7 +183,10 @@
    "subject": "dnieper",
    "object": "black-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c7df6fe519fe7c71"
    }
   },
   {
@@ -186,7 +195,10 @@
    "subject": "dniester",
    "object": "black-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "93af8e07a65cc03e"
    }
   },
   {
@@ -195,7 +207,10 @@
    "subject": "danube",
    "object": "black-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "b5ce9f6a78f148e4"
    }
   },
   {
@@ -204,7 +219,10 @@
    "subject": "rhine",
    "object": "north-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c3904fc37c25aa73"
    }
   },
   {
@@ -213,7 +231,10 @@
    "subject": "elbe",
    "object": "north-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "118f7ad8440e4c79"
    }
   },
   {
@@ -222,7 +243,10 @@
    "subject": "thames",
    "object": "north-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5eb517ef6009d5f6"
    }
   },
   {
@@ -231,7 +255,10 @@
    "subject": "oder",
    "object": "baltic-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "4fc780c9d946cbc0"
    }
   },
   {
@@ -240,7 +267,10 @@
    "subject": "vistula",
    "object": "baltic-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1c601df404b0f5db"
    }
   },
   {
@@ -249,7 +279,10 @@
    "subject": "seine",
    "object": "english-channel",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6847ee266108037a"
    }
   },
   {
@@ -258,7 +291,10 @@
    "subject": "loire",
    "object": "atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "511eff59ccc2f32f"
    }
   },
   {
@@ -267,7 +303,10 @@
    "subject": "tagus",
    "object": "atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "185e590e5790ba27"
    }
   },
   {
@@ -276,7 +315,10 @@
    "subject": "douro",
    "object": "atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "af46630cead10fb8"
    }
   },
   {
@@ -285,7 +327,10 @@
    "subject": "guadiana",
    "object": "atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a973adef7d167522"
    }
   },
   {
@@ -294,7 +339,10 @@
    "subject": "guadalquivir",
    "object": "atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8b3f4c6853992f6a"
    }
   },
   {
@@ -303,7 +351,10 @@
    "subject": "rhone",
    "object": "mediterranean-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a07f6818a88610f5"
    }
   },
   {
@@ -312,7 +363,10 @@
    "subject": "ebro",
    "object": "mediterranean-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "f62ad3a2e908f008"
    }
   },
   {
@@ -321,7 +375,10 @@
    "subject": "united-kingdom",
    "object": "thames",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e85756eb4824c053"
    }
   },
   {
@@ -330,7 +387,10 @@
    "subject": "france",
    "object": "seine",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "6f41ef262d505398"
    }
   },
   {
@@ -339,7 +399,10 @@
    "subject": "italy",
    "object": "tiber",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5fcdc12f7aa8220d"
    }
   },
   {
@@ -348,7 +411,10 @@
    "subject": "portugal",
    "object": "tagus",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8280e2775f326371"
    }
   },
   {
@@ -357,7 +423,10 @@
    "subject": "poland",
    "object": "vistula",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a976eabd2970960d"
    }
   },
   {
@@ -366,7 +435,10 @@
    "subject": "ukraine",
    "object": "dnieper",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "7916ac3b6867d991"
    }
   },
   {
@@ -375,7 +447,10 @@
    "subject": "austria",
    "object": "danube",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "06601bda5dfab539"
    }
   },
   {
@@ -384,7 +459,10 @@
    "subject": "hungary",
    "object": "danube",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "9c9679d87cf3de57"
    }
   },
   {
@@ -393,7 +471,10 @@
    "subject": "serbia",
    "object": "danube",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1c36415b81073097"
    }
   },
   {
@@ -405,7 +486,10 @@
     "portugal"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "40a7685f5da1338f"
    }
   },
   {
@@ -416,7 +500,10 @@
     "italy"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e5a03131b96f18f1"
    }
   },
   {
@@ -428,7 +515,10 @@
     "sweden"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "1343c2396911d635"
    }
   },
   {
@@ -439,7 +529,10 @@
     "russia"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "786317eb275d516b"
    }
   },
   {
@@ -450,7 +543,10 @@
     "united-kingdom"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2706c8e7bf010e9f"
    }
   },
   {
@@ -461,7 +557,10 @@
     "iceland-country"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2f06153fffbc41d4"
    }
   },
   {
@@ -472,7 +571,10 @@
     "italy"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2bbdeccb88bf7364"
    }
   },
   {
@@ -483,7 +585,10 @@
     "denmark"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a161526d25573c98"
    }
   },
   {
@@ -495,7 +600,10 @@
     "france"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "3563a5881c0f7a07"
    }
   },
   {
@@ -506,7 +614,10 @@
     "italy"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e78376c47b9242f3"
    }
   },
   {
@@ -518,7 +629,10 @@
     "sweden"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a6ea075f378f506d"
    }
   },
   {
@@ -529,7 +643,10 @@
     "united-kingdom"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8f212b5accd82f1d"
    }
   }
  ],
@@ -547,7 +664,10 @@
     "en": "The Danube flows into the North Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d266eca136f99553"
    }
   },
   {
@@ -563,7 +683,10 @@
     "en": "The Rhine flows into the Mediterranean Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a2444ba718cce178"
    }
   },
   {
@@ -579,7 +702,10 @@
     "en": "The Vistula flows into the Black Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0f92dc219850ee2b"
    }
   },
   {
@@ -595,7 +721,10 @@
     "en": "The Rhône flows into the North Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "7685b09e1e6c1ee6"
    }
   },
   {
@@ -611,7 +740,10 @@
     "en": "London stands on the Seine."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "dd62174ebc4d6e87"
    }
   },
   {
@@ -627,7 +759,10 @@
     "en": "Paris stands on the Loire."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a8a6fe41a7d4416f"
    }
   },
   {
@@ -643,7 +778,10 @@
     "en": "Rome stands on the Po."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e521163b015bf3da"
    }
   },
   {
@@ -659,7 +797,10 @@
     "en": "The Danube flows through Poland."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5218765a5d2a3228"
    }
   },
   {
@@ -675,7 +816,10 @@
     "en": "The Dnieper flows through Poland and Germany."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5e2f7213d2a0b383"
    }
   },
   {
@@ -691,7 +835,10 @@
     "en": "Greece lies on the Apennine Peninsula."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "707d8857132e0838"
    }
   },
   {
@@ -707,7 +854,10 @@
     "en": "Denmark and Iceland lie on the Scandinavian Peninsula."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "8330130e69d826bd"
    }
   },
   {
@@ -723,7 +873,10 @@
     "en": "The Pyrenees lie on the border between Italy and France."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "50e184ab2643a91b"
    }
   }
  ],
@@ -747,7 +900,10 @@
    },
    "note": "Ukraine is neutral: the Danube only touches it at the delta",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "10e8dddbbb8529fe"
    }
   },
   {
@@ -767,7 +923,10 @@
    },
    "note": "the Don is neutral: it flows into the Sea of Azov, which is joined to the Black Sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "c1dd4e0dc74ed045"
    }
   },
   {
@@ -784,7 +943,10 @@
     "en": "Tap every river that flows into the North Sea"
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "947076f3c147160e"
    }
   }
  ],
@@ -808,7 +970,10 @@
     "en": "Denmark lies on the Jutland Peninsula and on islands. Norway and Sweden are on the Scandinavian Peninsula."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "80a2b79689da1123"
    }
   }
  ],
@@ -829,7 +994,10 @@
     "en": "The Iberian Peninsula is the largest peninsula in Europe."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "98469322bb6ef784"
    }
   },
   {
@@ -848,7 +1016,10 @@
     "en": "Iceland is the largest island in Europe."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "3383ffea188c5d13"
    }
   },
   {
@@ -867,7 +1038,10 @@
     "en": "Sardinia is the largest island in the Mediterranean Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "ab366d0a48c781a3"
    }
   },
   {
@@ -886,7 +1060,10 @@
     "en": "The Danube has the largest delta in Europe."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "b08174cdf2f17f07"
    }
   },
   {
@@ -905,7 +1082,10 @@
     "en": "The Seine is the longest river in France."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0e75f2c87708347c"
    }
   },
   {
@@ -924,7 +1104,10 @@
     "en": "The Ebro is the longest river of the Iberian Peninsula."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "a2b62369691f66b5"
    }
   },
   {
@@ -943,7 +1126,10 @@
     "en": "When the Europe–Asia boundary is drawn along the Kuma–Manych Depression, the Pyrenees are Europe's highest mountain range."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "661fe49ba18d5bce"
    }
   },
   {
@@ -962,7 +1148,10 @@
     "en": "The highest mountain in Northern Europe, Galdhøpiggen, is in the Scottish Highlands."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "0b15ad3c326d1201"
    }
   },
   {
@@ -981,7 +1170,10 @@
     "en": "Aneto is the highest peak of the Alps."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "30820e6302d39b22"
    }
   },
   {
@@ -1000,7 +1192,10 @@
     "en": "Helsinki is the northernmost capital of an independent country in the world."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "06184a5e37b87d15"
    }
   },
   {
@@ -1019,7 +1214,10 @@
     "en": "Madrid is the westernmost capital of an independent country on the European mainland."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "e890cd297a093218"
    }
   },
   {
@@ -1038,7 +1236,10 @@
     "en": "Spain is the largest country in the European Union by area."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "4d445b741f8a7258"
    }
   },
   {
@@ -1057,7 +1258,10 @@
     "en": "Canada is the largest country in the world by area."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "9bc34aeaa427e409"
    }
   },
   {
@@ -1076,7 +1280,10 @@
     "en": "Inside Paris lies Vatican City, the smallest country in the world."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "598cf214a55e2a94"
    }
   },
   {
@@ -1095,7 +1302,10 @@
     "en": "France has the largest population in the European Union."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d374d0508bd0ad98"
    }
   }
  ]
