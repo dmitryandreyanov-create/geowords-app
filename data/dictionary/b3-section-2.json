@@ -1,0 +1,548 @@
+{
+ "section": "rivers-of-asia",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 29.10.2026 (24 words RU + EN; 6 words for unit 1 proposed by Claude)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters on the learned rivers first, then on the objects of section 1: up to 30 after unit 1, 40 after unit 2, 47 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Words from Svetlana's list (29.10.2026): ГАНГЕТИКА / GANGETIC → ВАРАНАСИ / VARANASI, МЕСОПОТАМЦЫ / MESOPOTAMIANS → НИНЕВИЯ / NINEVEH, ШУМЕРОЛОГИЯ / SUMEROLOGY → ГИЛЬГАМЕШ / GILGAMESH, EN for ЗИККУРАТ = ZIGGURAT («Утверждаю», 29.10.2026). Svetlana (29.10.2026): the words of a unit must belong to its rivers; for unit 1 (Siberia, none in her list) Claude proposed ЭВЕНКИ, ЯКУТЫ, ТАЙМЕНЬ, СОБОЛЬ, МАМОНТ, ОСТРОГ / EVENKS, YAKUTS, TAIMEN, SABLE, MAMMOTH, STOCKADE. Definitions by Claude, waiting for approval."
+ },
+ "units": [
+  {
+   "id": "unit-1-siberia-far-east",
+   "title": {
+    "ru": "Реки Сибири и Дальнего Востока",
+    "en": "Rivers of Siberia and the Far East"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МАНЬЧЖУРИЯ",
+      "role": "final",
+      "definition": "Историческая область на северо-востоке Китая, у южного берега Амура.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЭВЕНКИ",
+      "role": "review",
+      "definition": "Народ тайги, который пасёт оленей и охотится от Енисея до Охотского моря.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЯКУТЫ",
+      "role": "review",
+      "definition": "Народ, который разводит коней и коров в долине Лены, на самом холодном обжитом краю Земли.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТАЙМЕНЬ",
+      "role": "review",
+      "definition": "Самая большая рыба лососёвых, хищник холодных сибирских рек.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СОБОЛЬ",
+      "role": "review",
+      "definition": "Небольшой зверёк тайги с драгоценным тёмным мехом.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАМОНТ",
+      "role": "review",
+      "definition": "Древний слон с длинной шерстью; его туши находят в вечной мерзлоте у сибирских рек.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ОСТРОГ",
+      "role": "review",
+      "definition": "Деревянная крепость первых русских поселенцев на сибирских реках.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MANCHURIA",
+      "role": "final",
+      "definition": "A historical region of northeast China on the southern bank of the Amur.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "EVENKS",
+      "role": "review",
+      "definition": "A taiga people who herd reindeer and hunt from the Yenisei to the Sea of Okhotsk.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "YAKUTS",
+      "role": "review",
+      "definition": "A people who raise horses and cattle in the Lena valley, in the coldest inhabited land on Earth.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TAIMEN",
+      "role": "review",
+      "definition": "The largest fish of the salmon family, a predator of cold Siberian rivers.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SABLE",
+      "role": "review",
+      "definition": "A small taiga animal with precious dark fur.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAMMOTH",
+      "role": "review",
+      "definition": "An ancient woolly elephant whose remains are found in the frozen ground by Siberian rivers.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "STOCKADE",
+      "role": "review",
+      "definition": "A wooden fort of the first Russian settlers on Siberian rivers.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-east-south",
+   "title": {
+    "ru": "Реки Восточной и Южной Азии",
+    "en": "Rivers of East and South Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МОХЕНДЖОДАРО",
+      "role": "final",
+      "definition": "Древний город на Инде с прямыми улицами и водостоками, построенный 4500 лет назад.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХАРАППА",
+      "role": "review",
+      "definition": "Древний город на притоке Инда, по которому названа одна из первых цивилизаций мира.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПЕНДЖАБ",
+      "role": "review",
+      "definition": "Область Индии и Пакистана, название которой значит «пять рек»: там Инд собирает притоки.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БЕНГАЛИЯ",
+      "role": "review",
+      "definition": "Область в общей дельте Ганга и Брахмапутры, где тигры живут в мангровых лесах.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХИНДУСТАН",
+      "role": "review",
+      "definition": "Старое название Северной Индии, равнины по течению Ганга.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ВАРАНАСИ",
+      "role": "review",
+      "definition": "Священный город индуистов на берегу Ганга, куда приходят паломники.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АНГКОР",
+      "role": "review",
+      "definition": "Огромный каменный храмовый город в джунглях Камбоджи.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КХМЕРЫ",
+      "role": "review",
+      "definition": "Народ Камбоджи, построивший храмы в долине Меконга.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЧАМПА",
+      "role": "review",
+      "definition": "Древнее царство на побережье нынешнего Вьетнама.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СЫЧУАНЬ",
+      "role": "review",
+      "definition": "Провинция Китая в верховьях Янцзы, родина больших панд.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЮНЬНАНЬ",
+      "role": "review",
+      "definition": "Горная провинция на юге Китая, где рядом текут Янцзы, Меконг и Салуин.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MOHENJODARO",
+      "role": "final",
+      "definition": "An ancient city on the Indus with straight streets and drains, built 4,500 years ago.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HARAPPA",
+      "role": "review",
+      "definition": "An ancient city on a tributary of the Indus that gave its name to one of the first civilizations.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PUNJAB",
+      "role": "review",
+      "definition": "A region of India and Pakistan whose name means \"five rivers\": there the Indus gathers its tributaries.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BENGAL",
+      "role": "review",
+      "definition": "A region in the shared delta of the Ganges and the Brahmaputra, where tigers live in mangrove forests.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HINDUSTAN",
+      "role": "review",
+      "definition": "An old name for northern India, the plain along the Ganges.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "VARANASI",
+      "role": "review",
+      "definition": "A holy Hindu city on the bank of the Ganges where pilgrims come.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ANGKOR",
+      "role": "review",
+      "definition": "A huge stone temple city in the jungles of Cambodia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHMERS",
+      "role": "review",
+      "definition": "The people of Cambodia who built temples in the Mekong valley.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CHAMPA",
+      "role": "review",
+      "definition": "An ancient kingdom on the coast of what is now Vietnam.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SICHUAN",
+      "role": "review",
+      "definition": "A province of China on the upper Yangtze, home of the giant panda.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "YUNNAN",
+      "role": "review",
+      "definition": "A mountain province in southern China where the Yangtze, the Mekong and the Salween flow side by side.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-west-central",
+   "title": {
+    "ru": "Реки Западной и Средней Азии",
+    "en": "Rivers of West and Central Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МЕСОПОТАМИЯ",
+      "role": "final",
+      "definition": "Греческое название земли между Тигром и Евфратом, по-русски Двуречье.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ШУМЕРЫ",
+      "role": "review",
+      "definition": "Народ, построивший первые города в низовьях Тигра и Евфрата.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ВАВИЛОНИЯ",
+      "role": "review",
+      "definition": "Древнее царство на Евфрате, славившееся висячими садами своей столицы.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АССИРИЯ",
+      "role": "review",
+      "definition": "Древняя воинственная держава на Тигре.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "НИНЕВИЯ",
+      "role": "review",
+      "definition": "Древняя столица на берегу Тигра, где нашли огромную библиотеку глиняных табличек.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ГИЛЬГАМЕШ",
+      "role": "review",
+      "definition": "Царь Урука и герой древнейшей поэмы, искавший бессмертие.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КЛИНОПИСЬ",
+      "role": "review",
+      "definition": "Древнее письмо значками, которые выдавливали палочкой на сырой глине.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЗИККУРАТ",
+      "role": "review",
+      "definition": "Ступенчатая башня-храм из кирпича в древнем Двуречье.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХОРЕЗМ",
+      "role": "review",
+      "definition": "Древнее государство в низовьях Амударьи, у Аральского моря.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СОГДИАНА",
+      "role": "review",
+      "definition": "Древняя страна купцов Великого шёлкового пути, где стоял Самарканд.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАКТРИЯ",
+      "role": "review",
+      "definition": "Древняя страна в верховьях Амударьи, на землях нынешнего Афганистана.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MESOPOTAMIA",
+      "role": "final",
+      "definition": "The Greek name for the land between the Tigris and the Euphrates.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SUMERIANS",
+      "role": "review",
+      "definition": "The people who built the first cities on the lower Tigris and Euphrates.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BABYLONIA",
+      "role": "review",
+      "definition": "An ancient kingdom on the Euphrates, famous for the hanging gardens of its capital.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ASSYRIA",
+      "role": "review",
+      "definition": "A warlike ancient empire on the Tigris.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NINEVEH",
+      "role": "review",
+      "definition": "An ancient capital on the Tigris where a great library of clay tablets was found.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "GILGAMESH",
+      "role": "review",
+      "definition": "A king of Uruk and the hero of the oldest poem, who searched for eternal life.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CUNEIFORM",
+      "role": "review",
+      "definition": "Ancient writing of wedge-shaped marks pressed with a stick into wet clay.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ZIGGURAT",
+      "role": "review",
+      "definition": "A stepped brick temple tower of the ancient land between the Tigris and the Euphrates.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHWAREZM",
+      "role": "review",
+      "definition": "An ancient state on the lower Amu Darya, near the Aral Sea.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SOGDIANA",
+      "role": "review",
+      "definition": "An ancient land of Silk Road merchants, home of Samarkand.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BACTRIA",
+      "role": "review",
+      "definition": "An ancient land on the upper Amu Darya, in what is now Afghanistan.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТРАНСОКСИАНА",
+      "role": "section-final",
+      "definition": "Старое название земель между Амударьей и Сырдарьей, где стояли Самарканд и Бухара.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TRANSOXIANA",
+      "role": "section-final",
+      "definition": "The old name for the lands between the Amu Darya and the Syr Darya, where Samarkand and Bukhara stood.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

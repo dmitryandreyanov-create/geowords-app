@@ -51,6 +51,7 @@ const named=[
   'data/review/b2-block.json','data/dictionary/b2-block.json','data/geowords/b2-block.json','data/challenge/b2-block.json',
   // Block 3 «Asia», section 1 «Asia on the map»; its outlines are data/maps/asia-overview.json (below).
   'data/content/b3-section-1-facts.json','data/content/b3-section-1-records.json','data/dictionary/b3-section-1.json','data/geowords/b3-section-1.json',
+  'data/content/b3-section-2-facts.json','data/content/b3-section-2-records.json','data/dictionary/b3-section-2.json','data/geowords/b3-section-2.json','data/maps/asia-rivers.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
@@ -58,7 +59,7 @@ const named=[
   'assets/world-base.webp','assets/world-base-plain.webp',
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
-  'assets/asia-blank.webp',
+  'assets/asia-blank.webp','assets/asia-rivers.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){

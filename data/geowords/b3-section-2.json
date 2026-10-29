@@ -1,0 +1,1146 @@
+{
+ "section": "rivers-of-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the rivers of data/maps/asia-rivers.json learned by the end of the unit (section final: all 23), at the river's label point, the newest unit's rivers first; then on the objects of data/maps/asia-overview.json (section 1); one letter per object",
+  "nesting": "no letter inside the area of another object of the puzzle (a river letter inside a peninsula never with that peninsula); a marginal sea or an island never with the ocean it lies in",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-2-unit-1-en",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MANCHURIA",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "M"
+    },
+    {
+     "id": "as-ob",
+     "x": 45.65,
+     "y": 33.19,
+     "letter": "A"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "N"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "C"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "H"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 47.03,
+     "y": 40.86,
+     "letter": "U"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "R"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "I"
+    },
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-irtysh",
+     "position": 6,
+     "text": "Find the sixth letter on the Irtysh."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 4,
+     "text": "Find the fourth letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-ob",
+     "position": 2,
+     "text": "Find the second letter on the Ob."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 9,
+     "text": "Find the ninth letter at the Suez Canal."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 3,
+     "text": "Find the third letter on the Yenisei."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 7,
+     "text": "Find the seventh letter on the Amur."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 5,
+     "text": "Find the fifth letter on the Kolyma."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 8,
+     "text": "Find the eighth letter on the island of Sri Lanka."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 1,
+     "text": "Find the first letter on the Lena."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-unit-1-ru",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МАНЬЧЖУРИЯ",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "М"
+    },
+    {
+     "id": "as-ob",
+     "x": 45.65,
+     "y": 33.19,
+     "letter": "А"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "Н"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 47.03,
+     "y": 40.86,
+     "letter": "Ь"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "Ч"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "У"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "Р"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "И"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-irtysh",
+     "position": 4,
+     "text": "Найди четвёртую букву на Иртыше."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 7,
+     "text": "Найди седьмую букву на Амуре."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 3,
+     "text": "Найди третью букву на Лене."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 9,
+     "text": "Найди девятую букву на Енисее."
+    },
+    {
+     "markerId": "as-ob",
+     "position": 2,
+     "text": "Найди вторую букву на Оби."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 8,
+     "text": "Найди восьмую букву на Колыме."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Индийском океане."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 1,
+     "text": "Найди первую букву у Суэцкого канала."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 10,
+     "text": "Найди десятую букву на Корейском полуострове."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 5,
+     "text": "Найди пятую букву на острове Калимантан."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-unit-2-en",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MOHENJODARO",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-godavari",
+     "x": 37.28,
+     "y": 64.87,
+     "letter": "M"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "O"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "H"
+    },
+    {
+     "id": "as-ganges",
+     "x": 41.64,
+     "y": 59.64,
+     "letter": "E"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 47.03,
+     "y": 40.86,
+     "letter": "N"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "J"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 57.46,
+     "y": 56.58,
+     "letter": "O"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "D"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "A"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "R"
+    },
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-brahmaputra",
+     "position": 6,
+     "text": "Find the sixth letter on the Brahmaputra."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 4,
+     "text": "Find the fourth letter on the Ganges."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 8,
+     "text": "Find the eighth letter on the Amur."
+    },
+    {
+     "markerId": "as-huang-he",
+     "position": 11,
+     "text": "Find the eleventh letter on the Huang He."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 2,
+     "text": "Find the second letter on the Lena."
+    },
+    {
+     "markerId": "as-indus",
+     "position": 9,
+     "text": "Find the ninth letter on the Indus."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 7,
+     "text": "Find the seventh letter on the Yangtze."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 10,
+     "text": "Find the tenth letter on the Chao Phraya."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 1,
+     "text": "Find the first letter on the Godavari."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 3,
+     "text": "Find the third letter on the Yenisei."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 5,
+     "text": "Find the fifth letter on the Irtysh."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-unit-2-ru",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МОХЕНДЖОДАРО",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-yangtze",
+     "x": 57.46,
+     "y": 56.58,
+     "letter": "М"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "О"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "Х"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "Е"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "Н"
+    },
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "Д"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-ganges",
+     "x": 41.64,
+     "y": 59.64,
+     "letter": "О"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 47.03,
+     "y": 40.86,
+     "letter": "Д"
+    },
+    {
+     "id": "as-godavari",
+     "x": 37.28,
+     "y": 64.87,
+     "letter": "А"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "Р"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-kolyma",
+     "position": 3,
+     "text": "Найди третью букву на Колыме."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 7,
+     "text": "Найди седьмую букву на Чаупхрае."
+    },
+    {
+     "markerId": "as-indus",
+     "position": 5,
+     "text": "Найди пятую букву на Инде."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 9,
+     "text": "Найди девятую букву на Иртыше."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Лене."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 2,
+     "text": "Найди вторую букву на Амуре."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 8,
+     "text": "Найди восьмую букву на Ганге."
+    },
+    {
+     "markerId": "as-huang-he",
+     "position": 6,
+     "text": "Найди шестую букву на Хуанхэ."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 10,
+     "text": "Найди десятую букву на Годавари."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 1,
+     "text": "Найди первую букву на Янцзы."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Брахмапутре."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 4,
+     "text": "Найди четвёртую букву на Енисее."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-unit-3-en",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MESOPOTAMIA",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "M"
+    },
+    {
+     "id": "as-euphrates",
+     "x": 22.95,
+     "y": 41.15,
+     "letter": "E"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "S"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 57.46,
+     "y": 56.58,
+     "letter": "O"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "P"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "O"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "T"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "A"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.48,
+     "y": 42.32,
+     "letter": "M"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "I"
+    },
+    {
+     "id": "as-tarim",
+     "x": 46.11,
+     "y": 46.58,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-yangtze",
+     "position": 4,
+     "text": "Find the fourth letter on the Yangtze."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 2,
+     "text": "Find the second letter on the Euphrates."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 5,
+     "text": "Find the fifth letter on the Chao Phraya."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 7,
+     "text": "Find the seventh letter on the Kolyma."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 9,
+     "text": "Find the ninth letter on the Syr Darya."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 3,
+     "text": "Find the third letter on the Brahmaputra."
+    },
+    {
+     "markerId": "as-tarim",
+     "position": 11,
+     "text": "Find the eleventh letter on the Tarim."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 6,
+     "text": "Find the sixth letter on the Amur."
+    },
+    {
+     "markerId": "as-indus",
+     "position": 10,
+     "text": "Find the tenth letter on the Indus."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 8,
+     "text": "Find the eighth letter on the Lena."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 1,
+     "text": "Find the first letter on the Yenisei."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-unit-3-ru",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МЕСОПОТАМИЯ",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "М"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "Е"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 57.46,
+     "y": 56.58,
+     "letter": "С"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "О"
+    },
+    {
+     "id": "as-tarim",
+     "x": 46.11,
+     "y": 46.58,
+     "letter": "П"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "О"
+    },
+    {
+     "id": "as-euphrates",
+     "x": 22.95,
+     "y": 41.15,
+     "letter": "Т"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "А"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "М"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.48,
+     "y": 42.32,
+     "letter": "И"
+    },
+    {
+     "id": "as-godavari",
+     "x": 37.28,
+     "y": 64.87,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-yenisei",
+     "position": 4,
+     "text": "Найди четвёртую букву на Енисее."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 2,
+     "text": "Найди вторую букву на Чаупхрае."
+    },
+    {
+     "markerId": "as-tarim",
+     "position": 5,
+     "text": "Найди пятую букву на Тариме."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 8,
+     "text": "Найди восьмую букву на Лене."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 10,
+     "text": "Найди десятую букву на Сырдарье."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 7,
+     "text": "Найди седьмую букву на Евфрате."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Годавари."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 3,
+     "text": "Найди третью букву на Янцзы."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 6,
+     "text": "Найди шестую букву на Амуре."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 9,
+     "text": "Найди девятую букву на Брахмапутре."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 1,
+     "text": "Найди первую букву на Колыме."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-final-en",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "TRANSOXIANA",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "T"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "R"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "A"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "N"
+    },
+    {
+     "id": "as-euphrates",
+     "x": 22.95,
+     "y": 41.15,
+     "letter": "S"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 57.46,
+     "y": 56.58,
+     "letter": "O"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.48,
+     "y": 42.32,
+     "letter": "X"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "I"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "A"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "N"
+    },
+    {
+     "id": "as-tarim",
+     "x": 46.11,
+     "y": 46.58,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-kolyma",
+     "position": 2,
+     "text": "Find the second letter on the Kolyma."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 4,
+     "text": "Find the fourth letter on the Amur."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 7,
+     "text": "Find the seventh letter on the Syr Darya."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 10,
+     "text": "Find the tenth letter on the Chao Phraya."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 6,
+     "text": "Find the sixth letter on the Yangtze."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 9,
+     "text": "Find the ninth letter on the Brahmaputra."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 3,
+     "text": "Find the third letter on the Yenisei."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 5,
+     "text": "Find the fifth letter on the Euphrates."
+    },
+    {
+     "markerId": "as-tarim",
+     "position": 11,
+     "text": "Find the eleventh letter on the Tarim."
+    },
+    {
+     "markerId": "as-indus",
+     "position": 8,
+     "text": "Find the eighth letter on the Indus."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 1,
+     "text": "Find the first letter on the Lena."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-2-final-ru",
+   "section": "rivers-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ТРАНСОКСИАНА",
+   "map": "./assets/asia-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-euphrates",
+     "x": 22.95,
+     "y": 41.15,
+     "letter": "Т"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.48,
+     "y": 42.32,
+     "letter": "Р"
+    },
+    {
+     "id": "as-ob",
+     "x": 45.65,
+     "y": 33.19,
+     "letter": "А"
+    },
+    {
+     "id": "as-yenisei",
+     "x": 47.95,
+     "y": 22.52,
+     "letter": "Н"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 48.86,
+     "y": 60.15,
+     "letter": "С"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "О"
+    },
+    {
+     "id": "as-lena",
+     "x": 58.27,
+     "y": 19.51,
+     "letter": "К"
+    },
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "С"
+    },
+    {
+     "id": "as-tarim",
+     "x": 46.11,
+     "y": 46.58,
+     "letter": "И"
+    },
+    {
+     "id": "as-chao-phraya",
+     "x": 53.6,
+     "y": 69.94,
+     "letter": "А"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "Н"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-brahmaputra",
+     "position": 5,
+     "text": "Найди пятую букву на Брахмапутре."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 2,
+     "text": "Найди вторую букву на Сырдарье."
+    },
+    {
+     "markerId": "as-yenisei",
+     "position": 4,
+     "text": "Найди четвёртую букву на Енисее."
+    },
+    {
+     "markerId": "as-huang-he",
+     "position": 8,
+     "text": "Найди восьмую букву на Хуанхэ."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Амуре."
+    },
+    {
+     "markerId": "as-lena",
+     "position": 7,
+     "text": "Найди седьмую букву на Лене."
+    },
+    {
+     "markerId": "as-chao-phraya",
+     "position": 10,
+     "text": "Найди десятую букву на Чаупхрае."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Колыме."
+    },
+    {
+     "markerId": "as-indus",
+     "position": 6,
+     "text": "Найди шестую букву на Инде."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 1,
+     "text": "Найди первую букву на Евфрате."
+    },
+    {
+     "markerId": "as-ob",
+     "position": 3,
+     "text": "Найди третью букву на Оби."
+    },
+    {
+     "markerId": "as-tarim",
+     "position": 9,
+     "text": "Найди девятую букву на Тариме."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
