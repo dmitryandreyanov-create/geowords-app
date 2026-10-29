@@ -257,4 +257,12 @@ h1,h2,h3,p{margin:0}
 .pairs.rec .pbtn{height:auto;min-height:64px;font-size:14px;line-height:1.25}
 /* block 2: the Ural Mountains and the Ural River are not on the blank Europe base, so they are always drawn */
 .eu-mtn{fill:rgba(120,78,36,.32);stroke:rgba(90,56,24,.55);stroke-width:1.2;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}
+.zoom-inset{position:absolute;z-index:4;pointer-events:none}
+.zoom-inset .mapbox{box-shadow:0 0 0 2px #fff,0 6px 16px rgba(0,0,0,.5);border-radius:10px}
+.zoom-inset .map{border-radius:10px}
+/* a non-scaling stroke ignores the CSS scale of the inset: the widths are divided by the zoom */
+.zoom-inset .cap-ring{fill:none;stroke:#3dbb62;stroke-width:calc(3px / var(--z))}
+.zoom-inset .hl-shape{stroke-width:calc(3px / var(--z))}
+.zoom-inset .eu-river{stroke-width:calc(2.5px / var(--z))}
+.zoom-frame{fill:none;stroke:#fff;stroke-width:1.6;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 1px rgba(0,0,0,.7))}
 .eu-river{fill:none;stroke:#2f7fa8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}

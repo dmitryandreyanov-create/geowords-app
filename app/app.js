@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.28-countries-east';
+const BUILD='2026.10.29-country-zoom';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -674,6 +674,19 @@ const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-ri
 const capRing=(c,r=1.3)=>({id:'cap-'+c.id,tapArea:[Array.from({length:20},(_,i)=>[c.x+r*Math.cos(i*Math.PI/10),c.y+r*2200/1600*Math.sin(i*Math.PI/10)])],holes:[]});
 // the drawn dot a tap lands on: the nearest within 24 px (every dot of the map counts, also those of section 5)
 function capHit(x,y,sz){let hit=null,d=24;for(const c of D.s10.dots){const v=Math.hypot((c.x-x)/100*sz.W,(c.y-y)/100*sz.H);if(v<=d){d=v;hit=c.id}}return hit}
+// the zoom inset of a country card (Svetlana, 29.10.2026): a small country is hard to see on the whole map, so a corner inset magnifies it with its capital
+// and a frame on the map shows the magnified piece; Norway and Russia are big enough without it
+function countryInset(m,host,o){const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=ps.map(p=>p[1]);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),size=Math.max(x1-x0,(y1-y0)*1600/2200);if(size>22)return null;
+  const z=Math.min(10,Math.max(2.5,38/size)),hw=50/z,cx=Math.min(100-hw,Math.max(hw,(x0+x1)/2)),cy=Math.min(100-hw,Math.max(hw,(y0+y1)/2));
+  const fr=[cx-hw,cy-hw,cx+hw,cy+hw],F=48,g=2;
+  // the corner farthest from the frame that does not cover it
+  const corners=[[g,g],[100-F-g,g],[g,100-F-g],[100-F-g,100-F-g]].map(([l,t])=>({l,t,hit:l<fr[2]+2&&l+F>fr[0]-2&&t<fr[3]+2&&t+F>fr[1]-2,d:Math.hypot(l+F/2-cx,t+F/2-cy)}));
+  const c=corners.filter(k=>!k.hit).sort((a,b)=>b.d-a.d)[0]||corners.sort((a,b)=>b.d-a.d)[0];
+  const el=document.createElement('div');el.className='zoom-inset';el.style.left=c.l+'%';el.style.top=c.t+'%';el.style.width=F+'%';el.style.setProperty('--z',z);host.querySelector('.mapbox').appendChild(el);
+  const zm=euMap(el,{zoom:false,focus:{x:cx,y:cy,zoom:z},maxZoom:10});showEu(zm,o,'hl-shape');zm.shape(capRing(o.capital,6/z),'cap-ring');
+  const ir=[c.l,c.t,c.l+F,c.t+F],pair=(c.l+F/2-cx)*(c.t+F/2-cy)>=0?[[2,1],[0,3]]:[[0,1],[2,3]];
+  m.line(`M${fr[0]} ${fr[1]}H${fr[2]}V${fr[3]}H${fr[0]}Z`+pair.map(([i,j])=>`M${fr[i]} ${fr[j]}L${ir[i]} ${ir[j]}`).join(''),'zoom-frame');return zm}
 const capOwner=cid=>[...EU10_IDS,...EU11_IDS].map(E).find(o=>o&&o.capital.id===cid);
 function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===11?IMG.euCapitals:EUSEC===10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
@@ -683,7 +696,7 @@ function euMap(host,opts){const m=mapWidget(host,{...opts,base:EUSEC===11?IMG.eu
   const clear=m.clearShapes;m.clearShapes=()=>{clear();statics()};return m}
 
 /* ---------- map widget: base + layers + highlight shapes, markers in screen space, pinch/zoom ---------- */
-function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true,insets=[],onInsetTap,base=IMG.base,aspect=null,focus=null}){
+function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=true,insets=[],onInsetTap,base=IMG.base,aspect=null,focus=null,maxZoom=4}){
   host.innerHTML=`<div class="mapbox"><div class="map"${aspect?` style="aspect-ratio:${aspect}"`:''}><div class="world"><img src="${base}" alt="" draggable="false">${layers.map(l=>`<img src="${IMG.layer(l)}" alt="" draggable="false">`).join('')}
    <svg class="shapes" viewBox="0 0 100 100" preserveAspectRatio="none"></svg></div></div>
    ${trail?'<svg class="trailsvg" preserveAspectRatio="none"><polyline points=""/></svg>':''}<div class="marks"></div></div>
@@ -711,7 +724,7 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   const W=()=>mapEl.clientWidth,H=()=>mapEl.clientHeight;const toScreen=(x,y)=>[tx+x/100*W()*sc,ty+y/100*H()*sc];
   function place(){for(const {el,m,inset} of Object.values(btn)){if(inset)continue;const [x,y]=toScreen(m.x,m.y);el.style.left=x+'px';el.style.top=y+'px';el.hidden=x<-8||y<-8||x>W()+8||y>H()+8}
     if(poly){poly.parentNode.setAttribute('viewBox',`0 0 ${W()} ${H()}`);poly.setAttribute('points',route.filter(id=>!btn[id].inset).map(id=>toScreen(btn[id].m.x,btn[id].m.y).join(',')).join(' '))}}
-  function apply(){sc=Math.min(4,Math.max(1,sc));tx=Math.min(0,Math.max(W()-W()*sc,tx));ty=Math.min(0,Math.max(H()-H()*sc,ty));world.style.transform=`translate(${tx}px,${ty}px) scale(${sc})`;place()}
+  function apply(){sc=Math.min(maxZoom,Math.max(1,sc));tx=Math.min(0,Math.max(W()-W()*sc,tx));ty=Math.min(0,Math.max(H()-H()*sc,ty));world.style.transform=`translate(${tx}px,${ty}px) scale(${sc})`;place()}
   function zoomAt(f,cx,cy){const n=Math.min(4,Math.max(1,sc*f));tx=cx-(cx-tx)*n/sc;ty=cy-(cy-ty)*n/sc;sc=n;apply()}
   host.querySelector('.zoom')?.addEventListener('click',e=>{const z=e.target.closest('button');if(z)zoomAt(z.dataset.z==='+'?1.6:1/1.6,W()/2,H()/2)});
   box.addEventListener('wheel',e=>{if(!zoom)return;e.preventDefault();const r=mapEl.getBoundingClientRect();zoomAt(e.deltaY<0?1.2:1/1.2,e.clientX-r.left,e.clientY-r.top)},{passive:false});
@@ -940,7 +953,7 @@ function lesson(step){
       euMap(app.querySelector('.mapslot'),{zoom:false});return gotIt(()=>learn(I.id))}
     if(q.k==='introEu'||q.k==='introEuRec'){const rec=q.rec&&EUD().records.find(r=>r.id===q.rec);const o=E(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}${o.capital&&!rec?` <small>· ${esc(o.capital.name[lang])}</small>`:''}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
-      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(o.capital)m.shape(capRing(o.capital),'hl-shape good');if(!rec)wireNuance(o);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(o.capital){m.shape(capRing(o.capital),'hl-shape good');countryInset(m,app.querySelector('.mapslot'),o)}if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
     if(q.k==='tipEu'){const I=D.s8.facts.items.find(i=>i.id===q.id&&i.approval?.status==='approved');const rs=I?I.rivers.map(E).filter(Boolean):[];if(rs.length!==(I?.rivers.length??-1)){done++;return next()}
       // the first letter of every word stands out: the phrase's letters are the rivers' first letters, west to east
