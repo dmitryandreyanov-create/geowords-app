@@ -96,6 +96,14 @@ const RELEASE = {
     section: "rivers-of-asia",
     ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
   },
+  "b3-section-3-facts.json": {
+    section: "lakes-of-asia",
+    ids: ["asia-lakes-intro", "as-baikal", "as-khovsgol", "as-taymyr", "as-khanka", "as-qinghai", "as-caspian", "as-aral", "as-balkhash", "as-issyk-kul", "as-dead-sea", "as-urmia", "as-van", "as-tonle-sap"],
+  },
+  "b3-section-3-records.json": {
+    section: "lakes-of-asia",
+    ids: ["baikal-deepest-oldest", "dead-sea-lowest-land", "caspian-largest-lake"],
+  },
   "b3-section-2-records.json": {
     section: "rivers-of-asia",
     ids: ["yangtze-longest-asia", "irtysh-long-tributary", "yenisei-most-water-russia"],

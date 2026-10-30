@@ -6,11 +6,13 @@
 // Section 2 «Rivers of Asia»: letters on the rivers learned by the end of the unit (data/maps/asia-rivers.json, at the river's label point)
 // and on every object of section 1; the newest unit's rivers first, then the other learned rivers, section 1 when places run short.
 // A river whose letter lies inside a peninsula never shares a puzzle with it (no letter inside another object of the puzzle).
-// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2]  — writes drafts; approved puzzles already in the file are kept as they are.
+// Section 3 «Lakes of Asia»: the same with the lakes of data/maps/asia-lakes.json (at the lake's label point) in place of the rivers.
+// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3]  — writes drafts; approved puzzles already in the file are kept as they are.
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/asia-overview.json", RIVERS = "data/maps/asia-rivers.json";
+const MAP = "data/maps/asia-overview.json", LAYER = { 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json" }[SEC];
+const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp" }[SEC];
 const DICT = `data/dictionary/b3-section-${SEC}.json`, OUT = `data/geowords/b3-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -37,6 +39,11 @@ export const PLACE = {
   "as-brahmaputra": ["на Брахмапутре", "on the Brahmaputra"], "as-ganges": ["на Ганге", "on the Ganges"], "as-indus": ["на Инде", "on the Indus"],
   "as-tigris": ["на Тигре", "on the Tigris"], "as-euphrates": ["на Евфрате", "on the Euphrates"], "as-amu-darya": ["на Амударье", "on the Amu Darya"],
   "as-syr-darya": ["на Сырдарье", "on the Syr Darya"], "as-ili": ["на реке Или", "on the Ili"],
+  "as-baikal": ["в Байкале", "in Lake Baikal"], "as-khovsgol": ["в озере Хубсугул", "in Lake Khövsgöl"], "as-taymyr": ["в озере Таймыр", "in Lake Taymyr"],
+  "as-khanka": ["в озере Ханка", "in Lake Khanka"], "as-qinghai": ["в озере Кукунор", "in Qinghai Lake"], "as-caspian": ["в Каспийском море", "in the Caspian Sea"],
+  "as-aral": ["в Аральском море", "in the Aral Sea"], "as-balkhash": ["в озере Балхаш", "in Lake Balkhash"], "as-issyk-kul": ["в озере Иссык-Куль", "in Issyk-Kul"],
+  "as-dead-sea": ["в Мёртвом море", "in the Dead Sea"], "as-urmia": ["в озере Урмия", "in Lake Urmia"], "as-van": ["в озере Ван", "in Lake Van"],
+  "as-tonle-sap": ["в озере Тонлесап", "in Tonlé Sap"],
 };
 // An object and the object it lies in never share a puzzle (EU_IN in app/app.js)
 export const CONTAINERS = {
@@ -45,7 +52,7 @@ export const CONTAINERS = {
 };
 const ASPECT = 1600 / 2200, SEP = 4.5;
 
-const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = SEC === 2 ? JSON.parse(fs.readFileSync(RIVERS, "utf8")).items : [], dict = JSON.parse(fs.readFileSync(DICT, "utf8"));
+const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = SEC >= 2 ? JSON.parse(fs.readFileSync(LAYER, "utf8")).items : [], dict = JSON.parse(fs.readFileSync(DICT, "utf8"));
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
 const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
 const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
@@ -67,7 +74,7 @@ function revealOrder(n) {
   return null;
 }
 // section 2: the learned rivers (unit 1..3) and every object of section 1 (unit 0, used after the rivers)
-const places = unit => SEC === 2 ? [...rivers.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label })), ...map.items.map(o => ({ id: o.id, unit: 0, ...o.label }))]
+const places = unit => SEC >= 2 ? [...rivers.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label })), ...map.items.map(o => ({ id: o.id, unit: 0, ...o.label }))]
   : map.items.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label }));
 
 function build(word, lang, unit, final, tries = 6000) {
@@ -76,14 +83,14 @@ function build(word, lang, unit, final, tries = 6000) {
   let best = null, bestScore = -Infinity;
   for (let k = 0; k < tries; k++) {
     // the newest unit's objects first, so a unit final is mostly about that unit
-    const pool = shuffle([...usable]).sort((a, b) => (b.unit === unit) - (a.unit === unit) || (SEC === 2 ? (b.unit > 0) - (a.unit > 0) : 0));
+    const pool = shuffle([...usable]).sort((a, b) => (b.unit === unit) - (a.unit === unit) || (SEC >= 2 ? (b.unit > 0) - (a.unit > 0) : 0));
     const pick = [];
     for (const p of pool) if (pick.length < n && pick.every(q => far(p, q) && !nested(p, q))) pick.push(p);
     if (pick.length < n) continue;
     const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT))));
     const units = new Set(pick.map(p => p.unit)).size, own = pick.filter(p => p.unit === unit).length;
     const riv = pick.filter(p => p.unit > 0).length;
-    const score = gap + (final ? units * 3 : own) + (SEC === 2 ? riv * 2 : 0);
+    const score = gap + (final ? units * 3 : own) + (SEC >= 2 ? riv * 2 : 0);
     if (score > bestScore) { bestScore = score; best = shuffle(pick); }
   }
   if (!best) return null;
@@ -106,11 +113,21 @@ for (const u of dict.units) {
     const b = build(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
     if (!b) { console.error(`${id}: ${w.answer} cannot be laid out on the learned objects`); process.exitCode = 1; continue; }
     puzzles.push({ id, section: dict.section, block: 3, unit, role: sectionFinal ? "section-final" : "unit-final", language: lang, answer: w.answer,
-      map: SEC === 2 ? "./assets/asia-rivers.webp" : "./assets/asia-blank.webp", mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
+      map: BASE, mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
       approval: { status: "draft" } });
   }
 }
-const out = SEC === 2 ? {
+const out = SEC === 3 ? {
+  section: "lakes-of-asia", block: 3,
+  rules: {
+    clues: "clues in reveal order; position = slot the letter fills",
+    places: "letters on the lakes of data/maps/asia-lakes.json learned by the end of the unit (section final: all 13), at the lake's label point, the newest unit's lakes first; then on the objects of data/maps/asia-overview.json (section 1); one letter per object",
+    nesting: "no letter inside the area of another object of the puzzle (Lake Taymyr's letter never with the Taimyr Peninsula); a marginal sea or an island never with the ocean it lies in",
+    spacing: "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+    approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
+  },
+  puzzles,
+} : SEC === 2 ? {
   section: "rivers-of-asia", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",
