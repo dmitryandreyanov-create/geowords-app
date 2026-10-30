@@ -1,7 +1,7 @@
 {
  "section": "mountains-of-asia",
  "block": 3,
- "status": "draft",
+ "status": "approved",
  "source": "Svetlana's list in the project thread, 30.10.2026 (25 words with definitions; duplicates КАЛЬДЕРА, СЕЙСМИЧНОСТЬ, ОРОГЕНЕЗ, КАРАВАНСАРАЙ replaced by СТРАТОВУЛКАН, ИЗВЕРЖЕНИЕ, ШЕРПЫ, МАГМА — «Утверждаю» 20:54)",
  "rules": {
   "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
@@ -9,7 +9,7 @@
   "length": "letters on the learned mountains first, then on the objects of section 1",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "Definitions RU by Svetlana (30.10.2026, 20:51); EN and the four replacement words by Claude. ЛЕДОПАД reworded for the same-root rule (ледяными). Svetlana’s edits 30.10.2026 22:03: СОЛЬФАТАРА RU; KARAKORAM, KHANTENGRI, ANNAPURNA, ERUPTION, ICEFALL, SUBDUCTION EN. СУБДУКЦИЯ is the section final, ЛЕДОПАД moved to unit 2 so that every unit has 6 review words."
+  "draft": "Definitions RU by Svetlana (30.10.2026, 20:51); EN and the four replacement words by Claude. ЛЕДОПАД reworded for the same-root rule (ледяными). Svetlana’s edits 30.10.2026 22:03: СОЛЬФАТАРА RU; KARAKORAM, KHANTENGRI, ANNAPURNA, ERUPTION, ICEFALL, SUBDUCTION EN. СУБДУКЦИЯ is the section final, ЛЕДОПАД moved to unit 2 so that every unit has 6 review words. Approved by Svetlana 2026-10-30 23:15 («Утверждаю»)."
  },
  "units": [
   {
@@ -25,7 +25,10 @@
       "role": "final",
       "definition": "The third-highest peak on Earth.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "7a247560f841fc5e"
       }
      },
      {
@@ -33,7 +36,10 @@
       "role": "review",
       "definition": "A major mountain range in Asia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "222dccc3911cf375"
       }
      },
      {
@@ -41,7 +47,10 @@
       "role": "review",
       "definition": "A mountain system of Afghanistan and Pakistan.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e7696643c0f077e7"
       }
      },
      {
@@ -49,7 +58,10 @@
       "role": "review",
       "definition": "A mountain system of China.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "dcc923b1b59d9731"
       }
      },
      {
@@ -57,7 +69,10 @@
       "role": "review",
       "definition": "A peak in the Tian Shan Mountains.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "a7e10b47e2bc4523"
       }
      },
      {
@@ -65,7 +80,10 @@
       "role": "review",
       "definition": "A peak in the west of China.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "37bbd70a1db73b80"
       }
      },
      {
@@ -73,7 +91,10 @@
       "role": "review",
       "definition": "A peak of the western Himalayas.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "cd0859b14c2d8137"
       }
      },
      {
@@ -81,7 +102,10 @@
       "role": "review",
       "definition": "A mountain range in Nepal.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "7265c27ac5be1bad"
       }
      },
      {
@@ -89,7 +113,10 @@
       "role": "review",
       "definition": "A peak in Nepal more than 8,000 m high.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9ea6b8dcd13583d2"
       }
      },
      {
@@ -97,7 +124,10 @@
       "role": "review",
       "definition": "A people of the high mountains of Nepal, famous as Himalayan guides.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "69a35dd7b27a15da"
       }
      }
     ],
@@ -107,7 +137,10 @@
       "role": "final",
       "definition": "Третья по высоте вершина Земли.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "0abf96cdac3218d7"
       }
      },
      {
@@ -115,7 +148,10 @@
       "role": "review",
       "definition": "Высокогорная система Азии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "108eed76af901424"
       }
      },
      {
@@ -123,7 +159,10 @@
       "role": "review",
       "definition": "Горная система Афганистана и Пакистана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "81105f3df7795b61"
       }
      },
      {
@@ -131,7 +170,10 @@
       "role": "review",
       "definition": "Горная система Китая.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "eb76170fb81bcb63"
       }
      },
      {
@@ -139,7 +181,10 @@
       "role": "review",
       "definition": "Вершина Тянь-Шаня.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "fa1baa520bf673a6"
       }
      },
      {
@@ -147,7 +192,10 @@
       "role": "review",
       "definition": "Вершина на западе Китая.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "0cfd74efe5ca64b3"
       }
      },
      {
@@ -155,7 +203,10 @@
       "role": "review",
       "definition": "Вершина западных Гималаев.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "841796e1ee32c635"
       }
      },
      {
@@ -163,7 +214,10 @@
       "role": "review",
       "definition": "Горный массив Непала.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "a080795876838f8b"
       }
      },
      {
@@ -171,7 +225,10 @@
       "role": "review",
       "definition": "Восьмитысячник Непала.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "749a5b2a07ec2b2d"
       }
      },
      {
@@ -179,7 +236,10 @@
       "role": "review",
       "definition": "Народ высокогорий Непала, знаменитые проводники в Гималаях.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "198a1e382badd9dd"
       }
      }
     ]
@@ -198,7 +258,10 @@
       "role": "final",
       "definition": "A tall cone-shaped mountain built of layers of hardened lava and ash, like Mount Fuji.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9c72d4975a755bf4"
       }
      },
      {
@@ -206,7 +269,10 @@
       "role": "review",
       "definition": "The highest peak of the Altai.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "68b1cb67b4c56800"
       }
      },
      {
@@ -214,7 +280,10 @@
       "role": "review",
       "definition": "A volcano on Kamchatka.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "5f8918108fe9115f"
       }
      },
      {
@@ -222,7 +291,10 @@
       "role": "review",
       "definition": "The release of lava, ash, and gases from a volcano.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "7df54df6ce2c9254"
       }
      },
      {
@@ -230,7 +302,10 @@
       "role": "review",
       "definition": "Molten rock deep inside the Earth; at the surface it becomes lava.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9474878298c936d1"
       }
      },
      {
@@ -238,7 +313,10 @@
       "role": "review",
       "definition": "An opening where volcanic gases escape.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "7ebff867cd8929ae"
       }
      },
      {
@@ -246,7 +324,10 @@
       "role": "review",
       "definition": "A steep section of a glacier with deep crevasses and broken ice.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "1541026909a03ec8"
       }
      }
     ],
@@ -256,7 +337,10 @@
       "role": "final",
       "definition": "Высокая коническая гора из слоёв застывшей лавы и пепла, как Фудзи.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "15e490f4eaa6e9b3"
       }
      },
      {
@@ -264,7 +348,10 @@
       "role": "review",
       "definition": "Высочайшая вершина Алтая.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e1366f3fac869487"
       }
      },
      {
@@ -272,7 +359,10 @@
       "role": "review",
       "definition": "Вулкан Камчатки.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "8fb2d5042e050555"
       }
      },
      {
@@ -280,7 +370,10 @@
       "role": "review",
       "definition": "Выброс лавы, пепла и газов из жерла вулкана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "731ddcb518ac9dee"
       }
      },
      {
@@ -288,7 +381,10 @@
       "role": "review",
       "definition": "Расплавленная горная порода в глубине Земли; на поверхности она становится лавой.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9b893a92fe88c1e9"
       }
      },
      {
@@ -296,7 +392,10 @@
       "role": "review",
       "definition": "Выход вулканических газов.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "682c6401bb2afbe9"
       }
      },
      {
@@ -304,7 +403,10 @@
       "role": "review",
       "definition": "Крутой участок ледника, разбитый трещинами и обрывами.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "bb01105b5c018029"
       }
      }
     ]
@@ -323,7 +425,10 @@
       "role": "final",
       "definition": "A vent that gives off hot volcanic gases with sulphur.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e352737b3c9942d0"
       }
      },
      {
@@ -331,7 +436,10 @@
       "role": "review",
       "definition": "A volcano in Iran.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "3d08b1ae0e6a2de5"
       }
      },
      {
@@ -339,7 +447,10 @@
       "role": "review",
       "definition": "A group of volcanoes in Indonesia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "5c8f87f0860fe3fb"
       }
      },
      {
@@ -347,7 +458,10 @@
       "role": "review",
       "definition": "An active volcano on the island of Java.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4303d8e0c097b00e"
       }
      },
      {
@@ -355,7 +469,10 @@
       "role": "review",
       "definition": "A volcano in Indonesia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "6a7c0c0c3fb89495"
       }
      },
      {
@@ -363,7 +480,10 @@
       "role": "review",
       "definition": "Volcanic flows of mud and rock.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "1da6221cd59c8d7e"
       }
      },
      {
@@ -371,7 +491,10 @@
       "role": "review",
       "definition": "The growth of the Earth’s crust as tectonic processes add new material to it.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "a122f00d5fdca793"
       }
      }
     ],
@@ -381,7 +504,10 @@
       "role": "final",
       "definition": "Выход горячих вулканических газов, богатых соединениями серы.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "36416183117b4baf"
       }
      },
      {
@@ -389,7 +515,10 @@
       "role": "review",
       "definition": "Вулкан Ирана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "c979ba612948b661"
       }
      },
      {
@@ -397,7 +526,10 @@
       "role": "review",
       "definition": "Вулканический комплекс Индонезии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4eebc22c05e60d1c"
       }
      },
      {
@@ -405,7 +537,10 @@
       "role": "review",
       "definition": "Действующий вулкан острова Ява.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4b001f79fb6c18cf"
       }
      },
      {
@@ -413,7 +548,10 @@
       "role": "review",
       "definition": "Вулкан Индонезии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "a6fde2f00cff68ca"
       }
      },
      {
@@ -421,7 +559,10 @@
       "role": "review",
       "definition": "Вулканические грязекаменные потоки.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "929c97cb22293451"
       }
      },
      {
@@ -429,7 +570,10 @@
       "role": "review",
       "definition": "Наращивание земной коры при тектонических процессах.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "1db87eb8b5edef88"
       }
      }
     ]
@@ -448,7 +592,10 @@
       "role": "section-final",
       "definition": "One tectonic plate moving beneath another.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "8a30b143d8008df1"
       }
      }
     ],
@@ -458,11 +605,16 @@
       "role": "section-final",
       "definition": "Погружение одной литосферной плиты под другую.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "a2d8ebaf9f7dd2a4"
       }
      }
     ]
    }
   }
- ]
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-30"
 }

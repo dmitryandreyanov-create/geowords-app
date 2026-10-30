@@ -6,7 +6,8 @@
   "Mountains are their own section of block 3 (Svetlana, 29.10.2026).",
   "12 ranges, the Tibetan Plateau and the volcanoes Fuji, Klyuchevskaya Sopka and Krakatoa chosen by Svetlana 30.10.2026; the Himalayas, the Urals and the Caucasus are reviewed with new facts.",
   "Three units: the mountain knot / Siberia and the Far East / West and South Asia (Svetlana «Согласна», 30.10.2026). Ranges are outlines, volcanoes points.",
-  "Svetlana's review 30.10.2026 22:03: Pamirs, Himalayas (10 + 4 eight-thousanders by the usual classification), Klyuchevskaya (height changes), Zagros, Arakan and Krakatoa facts reworded; the knot ranges are drawn as separate systems that come close, not meeting in one point."
+  "Svetlana's review 30.10.2026 22:03: Pamirs, Himalayas (10 + 4 eight-thousanders by the usual classification), Klyuchevskaya (height changes), Zagros, Arakan and Krakatoa facts reworded; the knot ranges are drawn as separate systems that come close, not meeting in one point.",
+  "Facts, records, words and finals approved by Svetlana 30.10.2026 23:15 («Утверждаю»)."
  ],
  "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
  "units": [
@@ -52,7 +53,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "d573dc7b9cdecce9"
    }
   },
   {
@@ -74,7 +78,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "bd1af5ea2cff9a93"
    }
   },
   {
@@ -96,7 +103,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "815f104ff8e36503"
    }
   },
   {
@@ -118,7 +128,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "bce67fd7728b123f"
    }
   },
   {
@@ -140,7 +153,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b532e0f326471883"
    }
   },
   {
@@ -162,7 +178,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e2955356d22f61f3"
    }
   },
   {
@@ -184,7 +203,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "721464705a445c49"
    }
   },
   {
@@ -207,7 +229,10 @@
    "disputed": false,
    "review": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "5a3a7939c1a49f5e"
    }
   },
   {
@@ -229,7 +254,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a18ea22a4238cab3"
    }
   },
   {
@@ -251,7 +279,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "c6c12d5ac615a9e4"
    }
   },
   {
@@ -273,7 +304,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "7aaa3ec68afdd57c"
    }
   },
   {
@@ -295,7 +329,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a57a570d30685da7"
    }
   },
   {
@@ -317,7 +354,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e49916965ae20f42"
    }
   },
   {
@@ -340,7 +380,10 @@
    "disputed": false,
    "review": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "27a91ff19951a2b0"
    }
   },
   {
@@ -362,7 +405,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "684842bada3bcee5"
    }
   },
   {
@@ -384,7 +430,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "7b4e8c4bf60168ec"
    }
   },
   {
@@ -407,7 +456,10 @@
    "disputed": false,
    "review": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "39223d482cfe210a"
    }
   },
   {
@@ -429,7 +481,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a8e98a1f5d5a9221"
    }
   },
   {
@@ -451,7 +506,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b1e8f25896f89bfa"
    }
   },
   {
@@ -473,7 +531,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b32b878b3c4c6a6c"
    }
   }
  ]

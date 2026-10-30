@@ -96,6 +96,14 @@ const RELEASE = {
     section: "rivers-of-asia",
     ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
   },
+  "b3-section-4-facts.json": {
+    section: "mountains-of-asia",
+    ids: ["asia-mountains-intro", "as-pamirs", "as-tian-shan", "as-hindu-kush", "as-karakoram", "as-kunlun", "as-tibet", "as-himalayas", "as-altai", "as-sayan", "as-sikhote-alin", "as-klyuchevskaya", "as-fuji", "as-urals", "as-zagros", "as-elburz", "as-caucasus", "as-arakan", "as-barisan", "as-krakatoa"],
+  },
+  "b3-section-4-records.json": {
+    section: "mountains-of-asia",
+    ids: ["tibet-highest-plateau", "himalaya-karakoram-eight-thousanders", "klyuchevskaya-highest-active-volcano", "krakatoa-loudest-sound"],
+  },
   "b3-section-3-facts.json": {
     section: "lakes-of-asia",
     ids: ["asia-lakes-intro", "as-baikal", "as-khovsgol", "as-taymyr", "as-khanka", "as-qinghai", "as-caspian", "as-aral", "as-balkhash", "as-issyk-kul", "as-dead-sea", "as-urmia", "as-van", "as-tonle-sap"],

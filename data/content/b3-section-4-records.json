@@ -29,7 +29,10 @@
    "disputed": false,
    "category": "stable",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "f0ce5b4e3914b34f"
    }
   },
   {
@@ -57,7 +60,10 @@
    "disputed": false,
    "category": "stable",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "369f1e0144967136"
    }
   },
   {
@@ -85,7 +91,10 @@
    "disputed": false,
    "category": "stable",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "81ab417e24eec581"
    }
   },
   {
@@ -113,7 +122,10 @@
    "disputed": false,
    "category": "stable",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "c028f0b8728099b1"
    }
   }
  ]
