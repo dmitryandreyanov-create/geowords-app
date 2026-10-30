@@ -92,6 +92,14 @@ const RELEASE = {
     section: "asia-on-the-map",
     ids: ["arabian-largest-peninsula", "borneo-largest-island-asia", "chelyuskin-northernmost"],
   },
+  "b3-section-2-facts.json": {
+    section: "rivers-of-asia",
+    ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
+  },
+  "b3-section-2-records.json": {
+    section: "rivers-of-asia",
+    ids: ["yangtze-longest-asia", "irtysh-long-tributary", "yenisei-most-water-russia"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",

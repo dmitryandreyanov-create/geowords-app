@@ -17,6 +17,10 @@ const RELEASE = {
     section: "rivers-of-europe",
     units: ["unit-1-great-rivers-of-eastern-europe", "unit-2-rivers-of-central-europe", "unit-3-rivers-of-western-europe", "unit-4-rivers-of-southern-europe", "section-final"],
   },
+  "b3-section-2.json": {
+    section: "rivers-of-asia",
+    units: ["unit-1-siberia-far-east", "unit-2-east-south", "unit-3-west-central", "section-final"],
+  },
   "b3-section-1.json": {
     section: "asia-on-the-map",
     units: ["unit-1-where-asia-ends", "unit-2-peninsulas-of-asia", "unit-3-islands-and-seas", "section-final"],
