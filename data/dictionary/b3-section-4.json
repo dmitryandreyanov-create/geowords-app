@@ -1,0 +1,468 @@
+{
+ "section": "mountains-of-asia",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 30.10.2026 (25 words with definitions; duplicates КАЛЬДЕРА, СЕЙСМИЧНОСТЬ, ОРОГЕНЕЗ, КАРАВАНСАРАЙ replaced by СТРАТОВУЛКАН, ИЗВЕРЖЕНИЕ, ШЕРПЫ, МАГМА — «Утверждаю» 20:54)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent; English names of two words are written as one (HINDUKUSH, KHANTENGRI, NANGAPARBAT, MUZTAGHATA)",
+  "length": "letters on the learned mountains first, then on the objects of section 1",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Definitions RU by Svetlana (30.10.2026, 20:51); EN and the four replacement words by Claude. ЛЕДОПАД reworded for the same-root rule (ледяными). СУБДУКЦИЯ is the section final, ЛЕДОПАД moved to unit 2 so that every unit has 6 review words."
+ },
+ "units": [
+  {
+   "id": "unit-1-mountain-knot",
+   "title": {
+    "ru": "Горный узел Азии",
+    "en": "The mountain knot of Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "KANGCHENJUNGA",
+      "role": "final",
+      "definition": "The third-highest peak on Earth.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KARAKORAM",
+      "role": "review",
+      "definition": "A high mountain system of Asia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HINDUKUSH",
+      "role": "review",
+      "definition": "A mountain system of Afghanistan and Pakistan.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KUNLUN",
+      "role": "review",
+      "definition": "A mountain system of China.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHANTENGRI",
+      "role": "review",
+      "definition": "A peak of the Tian Shan.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MUZTAGHATA",
+      "role": "review",
+      "definition": "A peak in the west of China.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NANGAPARBAT",
+      "role": "review",
+      "definition": "A peak of the western Himalayas.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ANNAPURNA",
+      "role": "review",
+      "definition": "A mountain massif in Nepal.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "DHAULAGIRI",
+      "role": "review",
+      "definition": "A peak in Nepal more than 8,000 m high.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SHERPAS",
+      "role": "review",
+      "definition": "A people of the high mountains of Nepal, famous as Himalayan guides.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "КАНЧЕНДЖАНГА",
+      "role": "final",
+      "definition": "Третья по высоте вершина Земли.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАРАКОРУМ",
+      "role": "review",
+      "definition": "Высокогорная система Азии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ГИНДУКУШ",
+      "role": "review",
+      "definition": "Горная система Афганистана и Пакистана.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КУНЬЛУНЬ",
+      "role": "review",
+      "definition": "Горная система Китая.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХАНТЕНГРИ",
+      "role": "review",
+      "definition": "Вершина Тянь-Шаня.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МУЗТАГАТА",
+      "role": "review",
+      "definition": "Вершина на западе Китая.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "НАНГАПАРБАТ",
+      "role": "review",
+      "definition": "Вершина западных Гималаев.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АННАПУРНА",
+      "role": "review",
+      "definition": "Горный массив Непала.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДХАУЛАГИРИ",
+      "role": "review",
+      "definition": "Восьмитысячник Непала.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ШЕРПЫ",
+      "role": "review",
+      "definition": "Народ высокогорий Непала, знаменитые проводники в Гималаях.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-siberia-far-east",
+   "title": {
+    "ru": "Сибирь и Дальний Восток",
+    "en": "Siberia and the Far East"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "STRATOVOLCANO",
+      "role": "final",
+      "definition": "A tall cone-shaped mountain built of layers of hardened lava and ash, like Mount Fuji.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BELUKHA",
+      "role": "review",
+      "definition": "The highest peak of the Altai.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KLYUCHEVSKAYA",
+      "role": "review",
+      "definition": "A volcano on Kamchatka.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ERUPTION",
+      "role": "review",
+      "definition": "Lava, ash and gas bursting out of a volcano.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAGMA",
+      "role": "review",
+      "definition": "Molten rock deep inside the Earth; at the surface it becomes lava.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "FUMAROLE",
+      "role": "review",
+      "definition": "An opening where volcanic gases escape.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ICEFALL",
+      "role": "review",
+      "definition": "A steep part of a glacier broken by deep cracks and cliffs.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "СТРАТОВУЛКАН",
+      "role": "final",
+      "definition": "Высокая коническая гора из слоёв застывшей лавы и пепла, как Фудзи.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БЕЛУХА",
+      "role": "review",
+      "definition": "Высочайшая вершина Алтая.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КЛЮЧЕВСКАЯ",
+      "role": "review",
+      "definition": "Вулкан Камчатки.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ИЗВЕРЖЕНИЕ",
+      "role": "review",
+      "definition": "Выброс лавы, пепла и газов из жерла вулкана.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАГМА",
+      "role": "review",
+      "definition": "Расплавленная горная порода в глубине Земли; на поверхности она становится лавой.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ФУМАРОЛА",
+      "role": "review",
+      "definition": "Выход вулканических газов.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛЕДОПАД",
+      "role": "review",
+      "definition": "Крутой участок ледника, разбитый трещинами и обрывами.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-west-south",
+   "title": {
+    "ru": "Запад и юг Азии",
+    "en": "West and South Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "SOLFATARA",
+      "role": "final",
+      "definition": "A vent that gives off hot volcanic gases with sulphur.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "DAMAVAND",
+      "role": "review",
+      "definition": "A volcano in Iran.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KRAKATOA",
+      "role": "review",
+      "definition": "A group of volcanoes in Indonesia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MERAPI",
+      "role": "review",
+      "definition": "An active volcano on the island of Java.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BROMO",
+      "role": "review",
+      "definition": "A volcano in Indonesia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LAHARS",
+      "role": "review",
+      "definition": "Volcanic flows of mud and rock.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ACCRETION",
+      "role": "review",
+      "definition": "The growth of the Earth’s crust as tectonic processes add new material to it.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "СОЛЬФАТАРА",
+      "role": "final",
+      "definition": "Вулканическое газовое проявление.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДЕМАВЕНД",
+      "role": "review",
+      "definition": "Вулкан Ирана.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КРАКАТАУ",
+      "role": "review",
+      "definition": "Вулканический комплекс Индонезии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МЕРАПИ",
+      "role": "review",
+      "definition": "Действующий вулкан острова Ява.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БРОМО",
+      "role": "review",
+      "definition": "Вулкан Индонезии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛАХАРЫ",
+      "role": "review",
+      "definition": "Вулканические грязекаменные потоки.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АККРЕЦИЯ",
+      "role": "review",
+      "definition": "Наращивание земной коры при тектонических процессах.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "SUBDUCTION",
+      "role": "section-final",
+      "definition": "One plate of the Earth’s crust sinking beneath another.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "СУБДУКЦИЯ",
+      "role": "section-final",
+      "definition": "Погружение одной литосферной плиты под другую.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

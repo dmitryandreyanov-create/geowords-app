@@ -1,5 +1,5 @@
 /* Block 3 «Asia», sections 1 «Asia on the map», 2 «Rivers of Asia» and 3 «Lakes of Asia» at iPhone width: plays every lesson with right answers on the Asia base map
-   (section 2: on the Asia rivers map, section 3: on the Asia lakes map), then the unit practice and the finals with the draft facts, words and puzzles treated as approved in memory
+   (section 2: on the Asia rivers map, section 3: on the Asia lakes map, section 4: on the Asia mountains map), then the unit practice and the finals with the draft facts, words and puzzles treated as approved in memory
    (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
 import assert from 'node:assert/strict';
@@ -18,9 +18,11 @@ const approvedCopy=f=>JSON.stringify(ok(JSON.parse(fs.readFileSync(f,'utf8'))));
 const aMap=JSON.parse(fs.readFileSync('data/maps/asia-overview.json','utf8')),aFacts=JSON.parse(fs.readFileSync('data/content/b3-section-1-facts.json','utf8'));
 const rMap=JSON.parse(fs.readFileSync('data/maps/asia-rivers.json','utf8')),rFacts=JSON.parse(fs.readFileSync('data/content/b3-section-2-facts.json','utf8'));
 const lMap=JSON.parse(fs.readFileSync('data/maps/asia-lakes.json','utf8')),lFacts=JSON.parse(fs.readFileSync('data/content/b3-section-3-facts.json','utf8'));
-const lab=Object.fromEntries([...aMap.items,...rMap.items,...lMap.items].map(i=>[i.id,i.label])),unitOf=Object.fromEntries(aMap.items.map(i=>[i.id,i.unit]));
-const rUnit=Object.fromEntries(rMap.items.map(i=>[i.id,i.unit])),factOf=id=>[...aFacts.items,...rFacts.items,...lFacts.items].find(i=>i.id===id);
+const mMap=JSON.parse(fs.readFileSync('data/maps/asia-mountains.json','utf8')),mFacts=JSON.parse(fs.readFileSync('data/content/b3-section-4-facts.json','utf8'));
+const lab=Object.fromEntries([...aMap.items,...rMap.items,...lMap.items,...mMap.items].map(i=>[i.id,i.label])),unitOf=Object.fromEntries(aMap.items.map(i=>[i.id,i.unit]));
+const rUnit=Object.fromEntries(rMap.items.map(i=>[i.id,i.unit])),factOf=id=>[...aFacts.items,...rFacts.items,...lFacts.items,...mFacts.items].find(i=>i.id===id);
 const lUnit=Object.fromEntries(lMap.items.map(i=>[i.id,i.unit]));
+const mUnit=Object.fromEntries(mMap.items.map(i=>[i.id,i.unit]));
 const IN={'as-sea-of-japan':'as-pacific-ocean','as-sea-of-okhotsk':'as-pacific-ocean','as-south-china-sea':'as-pacific-ocean','as-persian-gulf':'as-indian-ocean',
   'as-japanese-islands':'as-pacific-ocean','as-sakhalin':'as-pacific-ocean','as-borneo':'as-pacific-ocean','as-sri-lanka':'as-indian-ocean'};
 let browser;
@@ -192,6 +194,61 @@ try{
       await page.waitForTimeout(400);await shot('final-'+id);
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a3-u1-l1"]')}
+    assert.deepEqual(errs,[],'no page errors');
+    await context.close();
+  }
+  // section 4 «Mountains of Asia»: lessons on the mountains map (a tap on the label point of a range, the plateau or a volcano is right), practice and finals
+  for(const lang of ['ru','en']){
+    const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,deviceScaleFactor:2});
+    for(const f of ['data/content/b3-section-4-facts.json','data/content/b3-section-4-records.json','data/dictionary/b3-section-4.json','data/geowords/b3-section-4.json'])
+      await context.route('**/'+f+'*',r=>r.fulfill({contentType:'application/json',body:approvedCopy(f)}));
+    await context.addInitScript(l=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:l,done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))},lang);
+    const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
+    await page.goto(base+'/app/');await page.waitForSelector('[data-step="a4-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),lang==='ru'?/Горы Азии/:/Mountains of Asia/);
+    const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`a4-${name}-${lang}.png`)})}};
+    const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['a4-u1-l1','a4-u1-l2','a4-u1-l3','a4-u2-l1','a4-u2-l2','a4-u3-l1','a4-u3-l2','a4-u3-l3','a4-u3-l4'];const kinds=new Set(),shotKinds=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-mountains.webp'),'Asia mountains map: '+src);
+        if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
+        if(q.k==='introEurope'){assert.equal(await page.locator('.task .card h3').first().innerText(),lang==='ru'?'Горы Азии':'Mountains of Asia');await page.locator('.fb .btn').click()}
+        else if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),factOf(q.id).fact[lang]);
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){assert(q.id in mUnit,'a mountain of section 4: '+q.id);await tapAt(lab[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='whatEu'){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in mUnit),'mountain options only');
+          await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a4-u1-l1"]')}
+    for(const k of ['introEurope','introEu','introEuRec','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
+    // the ranges of the mountain knot touch on the map: a tap on the Pamirs is never the Hindu Kush or the Karakoram next to it
+    const judged=await page.evaluate(([t,e])=>{window.__gwEuSec(16);const sz={W:390,H:284};return [window.__gwEuOk('as-pamirs',t.x,t.y,sz),window.__gwEuOk('as-hindu-kush',t.x,t.y,sz),window.__gwEuOk('as-hindu-kush',e.x,e.y,sz)]},
+      [lab['as-pamirs'],lab['as-hindu-kush']]);
+    assert.deepEqual(judged,[true,false,true]);
+    for(const u of [1,2,3]){await page.locator(`[data-step="a4-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-mountains.webp'),'practice on the mountains map');
+        for(const m of p.markers)assert(m.id in mUnit?mUnit[m.id]<=u:m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`);
+        assert(p.markers.some(m=>m.id in mUnit),p.answer+': letters on mountains');
+        if(w===0)await shot('practice-u'+u);
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="a4-u1-l1"]')}
+    const mGeo=JSON.parse(fs.readFileSync('data/geowords/b3-section-4.json','utf8')).puzzles;
+    for(const [step,id] of [['a4-u1-final','unit-1'],['a4-u2-final','unit-2'],['a4-u3-final','unit-3'],['a4-final','final']]){
+      const want=mGeo.find(p=>p.id===`b3-section-4-${id}-${lang}`);
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-mountains.webp'),'final on the mountains map');
+      await page.waitForTimeout(400);await shot('final-'+id);
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a4-u1-l1"]')}
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
   }
