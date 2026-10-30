@@ -23,7 +23,7 @@ import asia_base as B
 NE = sys.argv[1]
 FRAME = box(0, 0, B.W, B.H)
 SHADE, PLATEAU, MARK = (165, 115, 65), (196, 150, 96), (62, 52, 42)
-GAP, GROW, VOLC_R, THIN, SS = 5, 10, 18, 4, 4
+GAP, GROW, VOLC_R, THIN, SS = 11, 10, 18, 4, 4
 
 # id, unit, kind, Natural Earth names (regions polys; elevation points for volcanoes), EN, RU, review
 OBJECTS = [
@@ -61,7 +61,8 @@ for id_, unit, kind, names, *_ in OBJECTS:
         assert len(gs) == len(names), id_
         g = B.proj(unary_union([g.buffer(0.02) for g in gs])).intersection(FRAME)
         shapes[id_] = g.buffer(THIN) if kind == 'mountain' and g.area < 3000 else g  # narrow ranges get wide enough to see
-# seams: a range touching an earlier range of the list gives way to it by GAP px; the plateau gives way to every range
+# seams: a range touching an earlier range of the list gives way to it by GAP px, so the ranges of the knot read as separate systems that come
+# close, not as four ridges meeting in one point (Svetlana, 30.10.2026); the plateau gives way to every range
 ranges = [o[0] for o in OBJECTS if o[2] == 'mountain']
 done = []
 for id_ in ranges:

@@ -43,8 +43,8 @@
     "ru": "Каракорум"
    },
    "fact": {
-    "en": "All 14 peaks on Earth higher than 8,000 m are in the Himalayas and the Karakoram.",
-    "ru": "Все 14 вершин Земли выше 8000 м стоят в Гималаях и Каракоруме."
+    "en": "All 14 peaks on Earth higher than 8,000 m are in the Himalayas and the Karakoram: ten are usually counted in the Himalayas and four in the Karakoram.",
+    "ru": "Все 14 вершин Земли выше 8000 м стоят в Гималаях и Каракоруме: обычно десять относят к Гималаям, а четыре — к Каракоруму."
    },
    "figure": {
     "value": 14,
@@ -71,8 +71,8 @@
     "ru": "Ключевская Сопка"
    },
    "fact": {
-    "en": "Klyuchevskaya Sopka is the highest active volcano in Eurasia, about 4,750 m.",
-    "ru": "Ключевская Сопка — самый высокий действующий вулкан Евразии, около 4750 м."
+    "en": "Klyuchevskaya Sopka is the highest active volcano in Eurasia: about 4,750 m, and its height changes after eruptions.",
+    "ru": "Ключевская Сопка — самый высокий действующий вулкан Евразии: около 4750 м, после извержений высота меняется."
    },
    "figure": {
     "value": 4750,

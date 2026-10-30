@@ -38,8 +38,8 @@
     },
     {
      "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "x": 53,
+     "y": 55.62,
      "letter": "N"
     },
     {
@@ -62,8 +62,8 @@
     },
     {
      "id": "as-tian-shan",
-     "x": 40.86,
-     "y": 45.06,
+     "x": 42.59,
+     "y": 44.94,
      "letter": "E"
     },
     {
@@ -74,8 +74,8 @@
     },
     {
      "id": "as-hindu-kush",
-     "x": 36.91,
-     "y": 49,
+     "x": 36.64,
+     "y": 48.94,
      "letter": "J"
     },
     {
@@ -190,138 +190,138 @@
    "minSeparation": 4.5,
    "markers": [
     {
-     "id": "as-tian-shan",
-     "x": 40.86,
-     "y": 45.06,
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
      "letter": "К"
     },
     {
-     "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
      "letter": "А"
-    },
-    {
-     "id": "as-bering-strait",
-     "x": 73.91,
-     "y": 3.61,
-     "letter": "Н"
     },
     {
      "id": "as-asia-minor",
      "x": 21.23,
      "y": 33.67,
+     "letter": "Н"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
      "letter": "Ч"
     },
     {
-     "id": "as-hindu-kush",
-     "x": 36.91,
-     "y": 49,
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
      "letter": "Е"
     },
     {
-     "id": "as-malay-peninsula",
-     "x": 55.97,
-     "y": 82.15,
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
      "letter": "Н"
-    },
-    {
-     "id": "as-borneo",
-     "x": 65.72,
-     "y": 85.94,
-     "letter": "Д"
-    },
-    {
-     "id": "as-kamchatka",
-     "x": 72.85,
-     "y": 21.34,
-     "letter": "Ж"
-    },
-    {
-     "id": "as-sea-of-japan",
-     "x": 69.57,
-     "y": 41.85,
-     "letter": "А"
-    },
-    {
-     "id": "as-suez-canal",
-     "x": 17.1,
-     "y": 39.27,
-     "letter": "Н"
-    },
-    {
-     "id": "as-kunlun",
-     "x": 45.68,
-     "y": 50.56,
-     "letter": "Г"
     },
     {
      "id": "as-himalayas",
      "x": 47.27,
      "y": 58.62,
+     "letter": "Д"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "А"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "Н"
+    },
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "Г"
+    },
+    {
+     "id": "as-chukotka",
+     "x": 70.82,
+     "y": 6.85,
      "letter": "А"
     }
    ],
    "clues": [
     {
-     "markerId": "as-asia-minor",
+     "markerId": "as-arctic-ocean",
      "position": 4,
-     "text": "Найди четвёртую букву на полуострове Малая Азия."
-    },
-    {
-     "markerId": "as-sea-of-japan",
-     "position": 9,
-     "text": "Найди девятую букву в Японском море."
-    },
-    {
-     "markerId": "as-bering-strait",
-     "position": 3,
-     "text": "Найди третью букву в Беринговом проливе."
+     "text": "Найди четвёртую букву в Северном Ледовитом океане."
     },
     {
      "markerId": "as-kunlun",
-     "position": 11,
-     "text": "Найди одиннадцатую букву в горах Куньлунь."
+     "position": 9,
+     "text": "Найди девятую букву в горах Куньлунь."
     },
     {
-     "markerId": "as-kamchatka",
-     "position": 8,
-     "text": "Найди восьмую букву на Камчатке."
-    },
-    {
-     "markerId": "as-hindu-kush",
-     "position": 5,
-     "text": "Найди пятую букву в горах Гиндукуш."
-    },
-    {
-     "markerId": "as-tibet",
-     "position": 2,
-     "text": "Найди вторую букву на Тибетском нагорье."
-    },
-    {
-     "markerId": "as-borneo",
-     "position": 7,
-     "text": "Найди седьмую букву на острове Калимантан."
+     "markerId": "as-asia-minor",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Малая Азия."
     },
     {
      "markerId": "as-suez-canal",
-     "position": 10,
-     "text": "Найди десятую букву у Суэцкого канала."
+     "position": 11,
+     "text": "Найди одиннадцатую букву у Суэцкого канала."
     },
     {
-     "markerId": "as-malay-peninsula",
-     "position": 6,
-     "text": "Найди шестую букву на Малаккском полуострове."
+     "markerId": "as-hindu-kush",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Гиндукуш."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 5,
+     "text": "Найди пятую букву на Тибетском нагорье."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Найди вторую букву в Охотском море."
     },
     {
      "markerId": "as-himalayas",
-     "position": 12,
-     "text": "Найди двенадцатую букву в Гималаях."
+     "position": 7,
+     "text": "Найди седьмую букву в Гималаях."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 10,
+     "text": "Найди десятую букву на Корейском полуострове."
     },
     {
      "markerId": "as-tian-shan",
+     "position": 6,
+     "text": "Найди шестую букву в горах Тянь-Шань."
+    },
+    {
+     "markerId": "as-chukotka",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Чукотке."
+    },
+    {
+     "markerId": "as-south-china-sea",
      "position": 1,
-     "text": "Найди первую букву в горах Тянь-Шань."
+     "text": "Найди первую букву в Южно-Китайском море."
     }
    ],
    "approval": {
@@ -375,8 +375,8 @@
     },
     {
      "id": "as-tian-shan",
-     "x": 40.86,
-     "y": 45.06,
+     "x": 42.59,
+     "y": 44.94,
      "letter": "O"
     },
     {
@@ -405,8 +405,8 @@
     },
     {
      "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "x": 53,
+     "y": 55.62,
      "letter": "A"
     },
     {
@@ -417,8 +417,8 @@
     },
     {
      "id": "as-hindu-kush",
-     "x": 36.91,
-     "y": 49,
+     "x": 36.64,
+     "y": 48.94,
      "letter": "O"
     }
    ],
@@ -540,8 +540,8 @@
     },
     {
      "id": "as-tian-shan",
-     "x": 40.86,
-     "y": 45.06,
+     "x": 42.59,
+     "y": 44.94,
      "letter": "О"
     },
     {
@@ -552,8 +552,8 @@
     },
     {
      "id": "as-hindu-kush",
-     "x": 36.91,
-     "y": 49,
+     "x": 36.64,
+     "y": 48.94,
      "letter": "У"
     },
     {
@@ -576,8 +576,8 @@
     },
     {
      "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "x": 53,
+     "y": 55.62,
      "letter": "Н"
     }
    ],
@@ -663,105 +663,105 @@
    "minSeparation": 4.5,
    "markers": [
     {
-     "id": "as-klyuchevskaya",
-     "x": 73.25,
-     "y": 20.58,
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
      "letter": "S"
-    },
-    {
-     "id": "as-caucasus",
-     "x": 26.73,
-     "y": 35,
-     "letter": "O"
-    },
-    {
-     "id": "as-altai",
-     "x": 46.41,
-     "y": 38.06,
-     "letter": "L"
-    },
-    {
-     "id": "as-krakatoa",
-     "x": 59.69,
-     "y": 93.93,
-     "letter": "F"
-    },
-    {
-     "id": "as-zagros",
-     "x": 26.59,
-     "y": 50.94,
-     "letter": "A"
     },
     {
      "id": "as-elburz",
      "x": 28.45,
      "y": 44,
+     "letter": "O"
+    },
+    {
+     "id": "as-zagros",
+     "x": 26.59,
+     "y": 50.94,
+     "letter": "L"
+    },
+    {
+     "id": "as-caucasus",
+     "x": 26.73,
+     "y": 35,
+     "letter": "F"
+    },
+    {
+     "id": "as-klyuchevskaya",
+     "x": 73.25,
+     "y": 20.58,
+     "letter": "A"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
      "letter": "T"
+    },
+    {
+     "id": "as-barisan",
+     "x": 57.23,
+     "y": 91.31,
+     "letter": "A"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "R"
     },
     {
      "id": "as-arakan",
      "x": 49.55,
      "y": 65.56,
      "letter": "A"
-    },
-    {
-     "id": "as-urals",
-     "x": 35.45,
-     "y": 31.31,
-     "letter": "R"
-    },
-    {
-     "id": "as-kunlun",
-     "x": 45.68,
-     "y": 50.56,
-     "letter": "A"
     }
    ],
    "clues": [
     {
-     "markerId": "as-zagros",
-     "position": 5,
-     "text": "Find the fifth letter in the Zagros Mountains."
-    },
-    {
-     "markerId": "as-caucasus",
-     "position": 2,
-     "text": "Find the second letter in the Caucasus Mountains."
-    },
-    {
-     "markerId": "as-krakatoa",
-     "position": 4,
-     "text": "Find the fourth letter on the volcano Krakatoa."
-    },
-    {
-     "markerId": "as-urals",
-     "position": 8,
-     "text": "Find the eighth letter in the Ural Mountains."
-    },
-    {
-     "markerId": "as-altai",
-     "position": 3,
-     "text": "Find the third letter in the Altai Mountains."
-    },
-    {
-     "markerId": "as-arakan",
-     "position": 7,
-     "text": "Find the seventh letter in the Arakan Mountains."
-    },
-    {
      "markerId": "as-klyuchevskaya",
-     "position": 1,
-     "text": "Find the first letter on the volcano Klyuchevskaya Sopka."
-    },
-    {
-     "markerId": "as-kunlun",
-     "position": 9,
-     "text": "Find the ninth letter in the Kunlun Mountains."
+     "position": 5,
+     "text": "Find the fifth letter on the volcano Klyuchevskaya Sopka."
     },
     {
      "markerId": "as-elburz",
+     "position": 2,
+     "text": "Find the second letter in the Elburz Mountains."
+    },
+    {
+     "markerId": "as-caucasus",
+     "position": 4,
+     "text": "Find the fourth letter in the Caucasus Mountains."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 8,
+     "text": "Find the eighth letter in the Tian Shan."
+    },
+    {
+     "markerId": "as-zagros",
+     "position": 3,
+     "text": "Find the third letter in the Zagros Mountains."
+    },
+    {
+     "markerId": "as-barisan",
+     "position": 7,
+     "text": "Find the seventh letter in the Barisan Mountains."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 1,
+     "text": "Find the first letter on Mount Fuji."
+    },
+    {
+     "markerId": "as-arakan",
+     "position": 9,
+     "text": "Find the ninth letter in the Arakan Mountains."
+    },
+    {
+     "markerId": "as-hindu-kush",
      "position": 6,
-     "text": "Find the sixth letter in the Elburz Mountains."
+     "text": "Find the sixth letter in the Hindu Kush."
     }
    ],
    "approval": {
@@ -797,8 +797,8 @@
     },
     {
      "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "x": 53,
+     "y": 55.62,
      "letter": "Л"
     },
     {
@@ -809,8 +809,8 @@
     },
     {
      "id": "as-hindu-kush",
-     "x": 36.91,
-     "y": 49,
+     "x": 36.64,
+     "y": 48.94,
      "letter": "Ф"
     },
     {
@@ -917,8 +917,8 @@
    "markers": [
     {
      "id": "as-tibet",
-     "x": 52.86,
-     "y": 55.5,
+     "x": 53,
+     "y": 55.62,
      "letter": "S"
     },
     {
@@ -935,8 +935,8 @@
     },
     {
      "id": "as-tian-shan",
-     "x": 40.86,
-     "y": 45.06,
+     "x": 42.59,
+     "y": 44.94,
      "letter": "D"
     },
     {

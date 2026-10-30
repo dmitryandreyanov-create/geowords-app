@@ -5,7 +5,8 @@
  "decisions": [
   "Mountains are their own section of block 3 (Svetlana, 29.10.2026).",
   "12 ranges, the Tibetan Plateau and the volcanoes Fuji, Klyuchevskaya Sopka and Krakatoa chosen by Svetlana 30.10.2026; the Himalayas, the Urals and the Caucasus are reviewed with new facts.",
-  "Three units: the mountain knot / Siberia and the Far East / West and South Asia (Svetlana «Согласна», 30.10.2026). Ranges are outlines, volcanoes points."
+  "Three units: the mountain knot / Siberia and the Far East / West and South Asia (Svetlana «Согласна», 30.10.2026). Ranges are outlines, volcanoes points.",
+  "Svetlana's review 30.10.2026 22:03: Pamirs, Himalayas (10 + 4 eight-thousanders by the usual classification), Klyuchevskaya (height changes), Zagros, Arakan and Krakatoa facts reworded; the knot ranges are drawn as separate systems that come close, not meeting in one point."
  ],
  "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
  "units": [
@@ -64,8 +65,8 @@
     "ru": "Памир"
    },
    "fact": {
-    "en": "The Pamirs are called the Roof of the World. The Tian Shan, the Hindu Kush, the Karakoram and the Kunlun meet here.",
-    "ru": "Памир называют «Крышей мира». Здесь сходятся Тянь-Шань, Гиндукуш, Каракорум и Куньлунь."
+    "en": "The Pamirs are called the Roof of the World. They lie where the largest mountain systems of Central Asia come close together.",
+    "ru": "Памир называют «Крышей мира». Он расположен в области сближения крупнейших горных систем Центральной Азии."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
@@ -196,8 +197,8 @@
     "ru": "Гималаи"
    },
    "fact": {
-    "en": "The Himalayas hold 10 of the 14 peaks on Earth higher than 8,000 m, among them Everest, 8,849 m.",
-    "ru": "В Гималаях стоят 10 из 14 вершин Земли выше 8000 м, среди них Эверест (Джомолунгма), 8849 м."
+    "en": "Of the 14 peaks on Earth higher than 8,000 m, ten are usually counted in the Himalayas and four in the Karakoram. Everest, 8,849 m, is one of the Himalayan ones.",
+    "ru": "Из 14 вершин Земли выше 8000 м десять обычно относят к Гималаям, а четыре — к Каракоруму. Среди гималайских — Эверест (Джомолунгма), 8849 м."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
@@ -285,8 +286,8 @@
     "ru": "Ключевская Сопка"
    },
    "fact": {
-    "en": "Klyuchevskaya Sopka on Kamchatka is the highest active volcano in Eurasia, about 4,750 m.",
-    "ru": "Ключевская Сопка на Камчатке — самый высокий действующий вулкан Евразии, около 4750 м."
+    "en": "Klyuchevskaya Sopka on Kamchatka is the highest active volcano in Eurasia. It is about 4,750 m high; its height changes after eruptions.",
+    "ru": "Ключевская Сопка на Камчатке — самый высокий действующий вулкан Евразии. Его высота около 4750 м; после извержений она меняется."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
@@ -352,8 +353,8 @@
     "ru": "Загрос"
    },
    "fact": {
-    "en": "The Zagros runs for almost 1,600 km through Iran and Iraq along the Persian Gulf. It is the largest mountain range in Iran.",
-    "ru": "Загрос тянется почти на 1600 км через Иран и Ирак вдоль Персидского залива. Это самые большие горы Ирана."
+    "en": "The Zagros runs for almost 1,600 km through Iran and Iraq along the Persian Gulf. It is one of the largest mountain systems in Iran.",
+    "ru": "Загрос тянется почти на 1600 км через Иран и Ирак вдоль Персидского залива. Это одна из крупнейших горных систем Ирана."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
@@ -419,8 +420,8 @@
     "ru": "Араканские горы"
    },
    "fact": {
-    "en": "The Arakan Mountains run along the western coast of Myanmar and separate the Irrawaddy valley from the Bay of Bengal.",
-    "ru": "Араканские горы тянутся вдоль западного берега Мьянмы и отделяют долину Иравади от Бенгальского залива."
+    "en": "The Arakan Mountains run along the western coast of Myanmar and separate the central part of the country from the coastal region of Rakhine.",
+    "ru": "Араканские горы тянутся вдоль западного берега Мьянмы и отделяют центральные районы страны от прибрежной области Ракхайн."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
@@ -463,8 +464,8 @@
     "ru": "Кракатау"
    },
    "fact": {
-    "en": "Krakatoa is a volcano in the strait between Sumatra and Java. Its eruption in 1883 was one of the strongest in history: the blast was heard 4,800 km away.",
-    "ru": "Кракатау — вулкан в проливе между Суматрой и Явой. Его извержение в 1883 году было одним из самых сильных в истории: грохот слышали за 4800 км."
+    "en": "Krakatoa is a volcano in the strait between Sumatra and Java. Its eruption in 1883 was one of the largest volcanic eruptions in recorded history: the blast was heard 4,800 km away.",
+    "ru": "Кракатау — вулкан в проливе между Суматрой и Явой. Его извержение в 1883 году — одно из крупнейших вулканических извержений исторического времени: грохот слышали за 4800 км."
    },
    "source": {
     "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",

@@ -1,4 +1,4 @@
-/* Block 3 «Asia», sections 1 «Asia on the map», 2 «Rivers of Asia» and 3 «Lakes of Asia» at iPhone width: plays every lesson with right answers on the Asia base map
+/* Block 3 «Asia», sections 1 «Asia on the map», 2 «Rivers of Asia», 3 «Lakes of Asia» and 4 «Mountains of Asia» at iPhone width: plays every lesson with right answers on the Asia base map
    (section 2: on the Asia rivers map, section 3: on the Asia lakes map, section 4: on the Asia mountains map), then the unit practice and the finals with the draft facts, words and puzzles treated as approved in memory
    (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
@@ -264,5 +264,5 @@ try{
   if(JSON.parse(fs.readFileSync('data/content/b3-section-2-facts.json','utf8')).items.some(i=>i.approval.status!=='approved')){
     const context=await browser.newContext({viewport:{width:390,height:844}});const page=await context.newPage();
     await page.goto(base+'/app/');await page.waitForSelector('[data-step="a1-u1-l1"]');assert.equal(await page.locator('[data-step="a2-u1-l1"]').count(),0,'draft rivers stay hidden');await context.close()}
-  console.log('PASS: Asia sections 1, 2 and 3 — lessons, practice and finals on the Asia maps (RU, EN)');
+  console.log('PASS: Asia sections 1, 2, 3 and 4 — lessons, practice and finals on the Asia maps (RU, EN)');
 }finally{await browser?.close();server.close()}

@@ -9,7 +9,7 @@
   "length": "letters on the learned mountains first, then on the objects of section 1",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "Definitions RU by Svetlana (30.10.2026, 20:51); EN and the four replacement words by Claude. ЛЕДОПАД reworded for the same-root rule (ледяными). СУБДУКЦИЯ is the section final, ЛЕДОПАД moved to unit 2 so that every unit has 6 review words."
+  "draft": "Definitions RU by Svetlana (30.10.2026, 20:51); EN and the four replacement words by Claude. ЛЕДОПАД reworded for the same-root rule (ледяными). Svetlana’s edits 30.10.2026 22:03: СОЛЬФАТАРА RU; KARAKORAM, KHANTENGRI, ANNAPURNA, ERUPTION, ICEFALL, SUBDUCTION EN. СУБДУКЦИЯ is the section final, ЛЕДОПАД moved to unit 2 so that every unit has 6 review words."
  },
  "units": [
   {
@@ -31,7 +31,7 @@
      {
       "answer": "KARAKORAM",
       "role": "review",
-      "definition": "A high mountain system of Asia.",
+      "definition": "A major mountain range in Asia.",
       "approval": {
        "status": "draft"
       }
@@ -55,7 +55,7 @@
      {
       "answer": "KHANTENGRI",
       "role": "review",
-      "definition": "A peak of the Tian Shan.",
+      "definition": "A peak in the Tian Shan Mountains.",
       "approval": {
        "status": "draft"
       }
@@ -79,7 +79,7 @@
      {
       "answer": "ANNAPURNA",
       "role": "review",
-      "definition": "A mountain massif in Nepal.",
+      "definition": "A mountain range in Nepal.",
       "approval": {
        "status": "draft"
       }
@@ -220,7 +220,7 @@
      {
       "answer": "ERUPTION",
       "role": "review",
-      "definition": "Lava, ash and gas bursting out of a volcano.",
+      "definition": "The release of lava, ash, and gases from a volcano.",
       "approval": {
        "status": "draft"
       }
@@ -244,7 +244,7 @@
      {
       "answer": "ICEFALL",
       "role": "review",
-      "definition": "A steep part of a glacier broken by deep cracks and cliffs.",
+      "definition": "A steep section of a glacier with deep crevasses and broken ice.",
       "approval": {
        "status": "draft"
       }
@@ -379,7 +379,7 @@
      {
       "answer": "СОЛЬФАТАРА",
       "role": "final",
-      "definition": "Вулканическое газовое проявление.",
+      "definition": "Выход горячих вулканических газов, богатых соединениями серы.",
       "approval": {
        "status": "draft"
       }
@@ -446,7 +446,7 @@
      {
       "answer": "SUBDUCTION",
       "role": "section-final",
-      "definition": "One plate of the Earth’s crust sinking beneath another.",
+      "definition": "One tectonic plate moving beneath another.",
       "approval": {
        "status": "draft"
       }
