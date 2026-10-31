@@ -55,7 +55,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "783e63af1592a9d1"
    }
   },
   {
@@ -81,7 +84,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "e75d41ecb43874ec"
    }
   },
   {
@@ -107,7 +113,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "2d8f8caf8310242c"
    }
   },
   {
@@ -133,7 +142,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "68468cf59f1f1e57"
    }
   },
   {
@@ -159,7 +171,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "95b35f9fb507b9cb"
    }
   },
   {
@@ -190,7 +205,10 @@
    },
    "capitalQuestions": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "b3bfe5033aad4435"
    }
   },
   {
@@ -216,7 +234,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "84398e71b861234b"
    }
   },
   {
@@ -242,7 +263,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "cfd2df3c79f9c04d"
    }
   },
   {
@@ -268,7 +292,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "ddbe6a85e390e5a0"
    }
   },
   {
@@ -294,7 +321,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "6ad7aedb208d09aa"
    }
   },
   {
@@ -320,7 +350,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "08786c081b920eff"
    }
   },
   {
@@ -350,7 +383,10 @@
     "en": "The government of Malaysia works in the nearby city of Putrajaya, but the capital under the constitution is Kuala Lumpur."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "8c7a1b1bd5bfb505"
    }
   },
   {
@@ -376,7 +412,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "96a450fe4c4a19e3"
    }
   },
   {
@@ -406,7 +445,10 @@
     "en": "In 2022 Indonesia passed a law to move the capital to Nusantara, a new city on Borneo. Until the president signs the decree on the move, Jakarta remains the capital (as of October 2026)."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "bac5104a2c9ff07b"
    }
   },
   {
@@ -432,7 +474,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "799cf7fd3fd3d27b"
    }
   },
   {
@@ -458,7 +503,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "a917e2e2148ba010"
    }
   },
   {
@@ -484,7 +532,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "7c07aa3fe2fd23ec"
    }
   }
  ]
