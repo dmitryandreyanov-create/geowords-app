@@ -17,6 +17,10 @@ const RELEASE = {
     section: "rivers-of-europe",
     units: ["unit-1-great-rivers-of-eastern-europe", "unit-2-rivers-of-central-europe", "unit-3-rivers-of-western-europe", "unit-4-rivers-of-southern-europe", "section-final"],
   },
+  "b3-section-5.json": {
+    section: "deserts-of-asia",
+    units: ["unit-1-china-mongolia", "unit-2-turan-iran", "unit-3-south-west", "section-final"],
+  },
   "b3-section-4.json": {
     section: "mountains-of-asia",
     units: ["unit-1-mountain-knot", "unit-2-siberia-far-east", "unit-3-west-south", "section-final"],

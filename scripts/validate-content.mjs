@@ -96,6 +96,14 @@ const RELEASE = {
     section: "rivers-of-asia",
     ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
   },
+  "b3-section-5-facts.json": {
+    section: "deserts-of-asia",
+    ids: ["asia-deserts-intro", "as-taklamakan", "as-ordos", "as-gobi", "as-kyzylkum", "as-karakum", "as-kavir", "as-lut", "as-thar", "as-rub-al-khali", "as-negev"],
+  },
+  "b3-section-5-records.json": {
+    section: "deserts-of-asia",
+    ids: ["rub-al-khali-largest-sand-sea", "lut-hottest-surface", "thar-most-populated-desert"],
+  },
   "b3-section-4-facts.json": {
     section: "mountains-of-asia",
     ids: ["asia-mountains-intro", "as-pamirs", "as-tian-shan", "as-hindu-kush", "as-karakoram", "as-kunlun", "as-tibet", "as-himalayas", "as-altai", "as-sayan", "as-sikhote-alin", "as-klyuchevskaya", "as-fuji", "as-urals", "as-zagros", "as-elburz", "as-caucasus", "as-arakan", "as-barisan", "as-krakatoa"],
