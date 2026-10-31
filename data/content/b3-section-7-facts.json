@@ -60,7 +60,10 @@
     "en": "Kashmir is a mountain region in the north of the Indian subcontinent. Its borders are the subject of a territorial dispute between India and Pakistan, in which China is also involved: different countries control different parts of the region. The map shows the lines of control as they are on the ground; we do not settle the dispute."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "5daebfd915588703"
    }
   },
   {
@@ -90,7 +93,10 @@
     "en": "Kashmir is a mountain region in the north of the Indian subcontinent. Its borders are the subject of a territorial dispute between India and Pakistan, in which China is also involved: different countries control different parts of the region. The map shows the lines of control as they are on the ground; we do not settle the dispute."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "ac6bc7d3c6128f38"
    }
   },
   {
@@ -116,7 +122,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "785c0e5c4e4283ba"
    }
   },
   {
@@ -146,7 +155,10 @@
     "en": "Sri Jayawardenepura Kotte is the administrative and legislative capital, where the parliament sits. Colombo is the largest city and the country’s most important economic centre. In capital questions the answer is Sri Jayawardenepura Kotte."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "f1dcd8615dd87fd4"
    }
   },
   {
@@ -172,7 +184,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "cf962313c2218ba1"
    }
   },
   {
@@ -198,7 +213,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "01abbd3b9a446af4"
    }
   },
   {
@@ -224,7 +242,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "21ab6202e4a09156"
    }
   },
   {
@@ -254,7 +275,10 @@
     "en": "Since 2021, Afghanistan has been governed by the Taliban. International recognition of its government remains limited. The country’s capital is still Kabul."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "eed40c56b6006b73"
    }
   },
   {
@@ -280,7 +304,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "57105eecbd91dd00"
    }
   },
   {
@@ -306,7 +333,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "761197bb5e8e5860"
    }
   },
   {
@@ -332,7 +362,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "c061f8c0d332750e"
    }
   },
   {
@@ -358,7 +391,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "efd1469684cfaad6"
    }
   },
   {
@@ -384,7 +420,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "d7260ae4cb17d042"
    }
   }
  ]

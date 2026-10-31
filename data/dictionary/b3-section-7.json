@@ -1,7 +1,7 @@
 {
  "section": "countries-south-and-central-asia",
  "block": 3,
- "status": "draft",
+ "status": "approved",
  "source": "Svetlana's list in the project thread, 31.10.2026 19:02 (25 words RU + EN, with her replacements АЮРВЕДА ГУРКХИ ВАДЖРАЯНА ДЗОНГИ); repeats of earlier sections (ИНДУИЗМ, МОНСОН, БЕНГАЛИЯ, БАКТРИЯ, ХОРЕЗМ, СОГДИАНА, КАРАВАН, КАРАВАНСАРАЙ, МЕДРЕСЕ) replaced by МАУРЬЯ СИКХИЗМ АТОЛЛЫ ГАНДХАРА ЛАЗУРИТ УЛУГБЕК ДОМБРА СУЗАНЕ ОБСЕРВАТОРИЯ — «Утверждаю» 19:13",
  "rules": {
   "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
@@ -27,7 +27,10 @@
       "role": "final",
       "definition": "The title of an Indian ruler, meaning «great king» in Sanskrit.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "df2877ea6c1ae5aa"
       }
      },
      {
@@ -35,7 +38,10 @@
       "role": "review",
       "definition": "The ruling dynasty of an empire on the Indian subcontinent from the 16th to the 19th century; the Taj Mahal was built under it.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "50bb8c62d4b099fa"
       }
      },
      {
@@ -43,7 +49,10 @@
       "role": "review",
       "definition": "The ancient language of India in which the Vedas and the great epics were written.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "57ccf1945a388966"
       }
      },
      {
@@ -51,7 +60,10 @@
       "role": "review",
       "definition": "The traditional medical system of India: a teaching on health that treats and prevents illness with herbs, diet, massage, yoga and a healthy daily routine.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "6ed7470ab780af7c"
       }
      },
      {
@@ -59,7 +71,10 @@
       "role": "review",
       "definition": "The former name of the island and state of Sri Lanka (until 1972), famous for its tea.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "0b753ef9b96b3dc1"
       }
      },
      {
@@ -67,7 +82,10 @@
       "role": "review",
       "definition": "An ancient Indian empire of the 4th–2nd centuries BC; under King Ashoka it supported Buddhism.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "dbb53d57eb56c1cb"
       }
      },
      {
@@ -75,7 +93,10 @@
       "role": "review",
       "definition": "A religion founded in the Punjab around 1500; its holiest shrine is the Golden Temple in Amritsar.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "bec787d8a252a624"
       }
      },
      {
@@ -83,7 +104,10 @@
       "role": "review",
       "definition": "Ring-shaped coral reefs and groups of islands around a lagoon; the Maldives are made up of them.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "d5c7af6575d584d7"
       }
      }
     ],
@@ -93,7 +117,10 @@
       "role": "final",
       "definition": "Титул индийского правителя, в переводе с санскрита «великий царь».",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "2a710ad85b7db4e2"
       }
      },
      {
@@ -101,7 +128,10 @@
       "role": "review",
       "definition": "Правящая династия империи, существовавшей на Индийском субконтиненте в XVI–XIX веках; при ней построен Тадж-Махал.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "678e9652ac92eb37"
       }
      },
      {
@@ -109,7 +139,10 @@
       "role": "review",
       "definition": "Древний язык Индии, на котором записаны Веды и великие эпосы.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8b11aac7ce24ca58"
       }
      },
      {
@@ -117,7 +150,10 @@
       "role": "review",
       "definition": "Традиционная медицинская система Индии: учение о здоровье, которое лечит и предупреждает болезни травами, питанием, массажем, йогой и правильным режимом дня.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "32aec2f602d636b1"
       }
      },
      {
@@ -125,7 +161,10 @@
       "role": "review",
       "definition": "Прежнее название острова и государства Шри-Ланка (до 1972 года), известное по чаю.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "6eef3e43ba5b447b"
       }
      },
      {
@@ -133,7 +172,10 @@
       "role": "review",
       "definition": "Древнеиндийская держава IV–II веков до н. э.; при царе Ашоке она поддерживала буддизм.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ffa273af03f6a1bd"
       }
      },
      {
@@ -141,7 +183,10 @@
       "role": "review",
       "definition": "Религия, возникшая в Пенджабе около 1500 года; её главная святыня — Золотой храм в Амритсаре.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "5a58da952786f376"
       }
      },
      {
@@ -149,7 +194,10 @@
       "role": "review",
       "definition": "Кольцевые коралловые рифы и группы островов, окружающие лагуну; из них состоят Мальдивы.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7993a493c484cdf3"
       }
      }
     ]
@@ -168,7 +216,10 @@
       "role": "final",
       "definition": "A branch of Buddhism followed in Tibet, Bhutan, Nepal and Mongolia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9874c525eeb8bfba"
       }
      },
      {
@@ -176,7 +227,10 @@
       "role": "review",
       "definition": "Soldiers from Nepal, famous for serving in the British and Indian armies.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "d3b77075d76809b8"
       }
      },
      {
@@ -184,7 +238,10 @@
       "role": "review",
       "definition": "The home of a religious community; in the Himalayas such places often cling to steep slopes.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f5ba4a097b0443eb"
       }
      },
      {
@@ -192,7 +249,10 @@
       "role": "review",
       "definition": "A sacred circular pattern in Buddhism and Hinduism that represents the universe.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "3373578f2b45987e"
       }
      },
      {
@@ -200,7 +260,10 @@
       "role": "review",
       "definition": "White-walled fortresses of Bhutan that house both monks and the district government.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7a5f8a25d6d289ca"
       }
      },
      {
@@ -208,7 +271,10 @@
       "role": "review",
       "definition": "A valley in the mountains of Afghanistan where giant statues of the Buddha stood until they were destroyed in 2001.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9e7138131f14e2e6"
       }
      },
      {
@@ -216,7 +282,10 @@
       "role": "review",
       "definition": "An ancient region in north-west Pakistan and eastern Afghanistan where Buddhist art blended Indian and Greek traditions.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "425ce2d54867fe33"
       }
      },
      {
@@ -224,7 +293,10 @@
       "role": "review",
       "definition": "A blue mineral that gives its colour to an ornamental stone mined for thousands of years in the mountains of Badakhshan in north-east Afghanistan.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c7f3a90397de3221"
       }
      }
     ],
@@ -234,7 +306,10 @@
       "role": "final",
       "definition": "Направление буддизма, распространённое в Тибете, Бутане, Непале и Монголии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "04fbe42c7faca48e"
       }
      },
      {
@@ -242,7 +317,10 @@
       "role": "review",
       "definition": "Воины из Непала, знаменитые службой в британской и индийской армиях.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "cefd01f23ffc6667"
       }
      },
      {
@@ -250,7 +328,10 @@
       "role": "review",
       "definition": "Обитель общины, посвятившей себя религии; в Гималаях такие обители часто стоят на крутых склонах.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "d3540e247d77775c"
       }
      },
      {
@@ -258,7 +339,10 @@
       "role": "review",
       "definition": "Священный круглый узор в буддизме и индуизме, изображающий вселенную.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "05fe50438a1548e7"
       }
      },
      {
@@ -266,7 +350,10 @@
       "role": "review",
       "definition": "Бутанские крепости с белыми стенами, в которых размещаются и монахи, и власти округа.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7abef150bad78f40"
       }
      },
      {
@@ -274,7 +361,10 @@
       "role": "review",
       "definition": "Долина в горах Афганистана, где стояли огромные статуи Будды, разрушенные в 2001 году.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "fb0b9d6ad2c0339a"
       }
      },
      {
@@ -282,7 +372,10 @@
       "role": "review",
       "definition": "Древняя область на северо-западе Пакистана и востоке Афганистана, где в буддийском искусстве соединились индийские и греческие традиции.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "578db739b507b249"
       }
      },
      {
@@ -290,7 +383,10 @@
       "role": "review",
       "definition": "Синий минерал — основа поделочного камня, который тысячи лет добывают в горах Бадахшана на северо-востоке Афганистана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "3b68e8e8ef28362a"
       }
      }
     ]
@@ -309,7 +405,10 @@
       "role": "final",
       "definition": "A building for watching the sky; in the 15th century one of the most famous of them was built in Central Asia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "b6b1b7fb628a90ef"
       }
      },
      {
@@ -317,7 +416,10 @@
       "role": "review",
       "definition": "An ancient Silk Road city in Uzbekistan, famous for the Kalyan Minaret.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "641708205338f752"
       }
      },
      {
@@ -325,7 +427,10 @@
       "role": "review",
       "definition": "The dynasty descended from a great 14th-century conqueror; the cities of Central Asia and Iran flourished under it.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a16a488cdbd10672"
       }
      },
      {
@@ -333,7 +438,10 @@
       "role": "review",
       "definition": "A grand tomb building; the most famous one in Central Asia is the Gur-e-Amir, the tomb of Timur.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "dffbd64ed3fa1822"
       }
      },
      {
@@ -341,7 +449,10 @@
       "role": "review",
       "definition": "The historical name of a vast region of Central Asia, and of an ancient city in southern Kazakhstan with the mausoleum of Khoja Ahmed Yasawi.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8d69f3c6e95985c2"
       }
      },
      {
@@ -349,7 +460,10 @@
       "role": "review",
       "definition": "A 15th-century ruler of Samarkand and a great astronomer who made a catalogue of more than 1,000 stars.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "138d920552565e8b"
       }
      },
      {
@@ -357,7 +471,10 @@
       "role": "review",
       "definition": "A two-stringed, long-necked Kazakh instrument played by plucking.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "eeda6e0b91d7956e"
       }
      },
      {
@@ -365,7 +482,10 @@
       "role": "review",
       "definition": "Uzbek and Tajik embroidery with large flower patterns, a traditional decoration of the home.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a7b04f2821c9d007"
       }
      }
     ],
@@ -375,7 +495,10 @@
       "role": "final",
       "definition": "Здание для наблюдения за небом; в XV веке одно из самых знаменитых таких зданий построили в Центральной Азии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "466c0917b3c62cc4"
       }
      },
      {
@@ -383,7 +506,10 @@
       "role": "review",
       "definition": "Древний город Узбекистана на Великом шёлковом пути, знаменитый минаретом Калян.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "4aad50a31a7230a5"
       }
      },
      {
@@ -391,7 +517,10 @@
       "role": "review",
       "definition": "Династия потомков великого завоевателя XIV века; при ней расцвели города Центральной Азии и Ирана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7493af7e7d229a7a"
       }
      },
      {
@@ -399,7 +528,10 @@
       "role": "review",
       "definition": "Величественная гробница-усыпальница; самая известная в Центральной Азии — Гур-Эмир, гробница Тимура.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "25a0ace9b0a0c98d"
       }
      },
      {
@@ -407,7 +539,10 @@
       "role": "review",
       "definition": "Историческое название обширной области Центральной Азии; так же называется древний город на юге Казахстана с мавзолеем Ходжи Ахмеда Ясави.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9c820bf5be76b267"
       }
      },
      {
@@ -415,7 +550,10 @@
       "role": "review",
       "definition": "Правитель Самарканда в XV веке и великий астроном, составивший каталог более чем из 1000 звёзд.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ba9ce62363bac974"
       }
      },
      {
@@ -423,7 +561,10 @@
       "role": "review",
       "definition": "Казахский двухструнный щипковый музыкальный инструмент с длинной шейкой.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7b55ee65840d5fec"
       }
      },
      {
@@ -431,7 +572,10 @@
       "role": "review",
       "definition": "Узбекская и таджикская вышивка крупными цветочными узорами, традиционное украшение дома.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "98041e1c32c4aca3"
       }
      }
     ]
@@ -450,7 +594,10 @@
       "role": "section-final",
       "definition": "One of the oldest cities in the world, the pearl of the Silk Road, with the famous Registan square.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "6ac474f6c87e763c"
       }
      }
     ],
@@ -460,7 +607,10 @@
       "role": "section-final",
       "definition": "Один из древнейших городов мира, жемчужина Великого шёлкового пути, со знаменитой площадью Регистан.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "225d0ca8f7e993c6"
       }
      }
     ]
