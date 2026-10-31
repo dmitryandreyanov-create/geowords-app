@@ -1,0 +1,1073 @@
+{
+ "section": "countries-south-and-central-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-7.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the rivers of section 2 that flow through them («on the Ganges»), on a river inside a country it crosses («on the Ganges in Bangladesh»), and on the objects of section 1 and the lakes of section 3 (Caspian, Aral, Balkhash, Issyk-Kul) in view; at least half of the letters in the region of the unit, at least a third on rivers",
+  "nesting": "a country is named once per puzzle; a river letter «on the Ganges» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle (a lake letter never with the country it lies in)",
+  "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-7-unit-1-en",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MAHARAJA",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-godavari",
+     "x": 40.9,
+     "y": 67.77,
+     "letter": "M"
+    },
+    {
+     "id": "as-amu-darya",
+     "x": 35.66,
+     "y": 46.91,
+     "letter": "A"
+    },
+    {
+     "id": "as-indus@cty-india",
+     "x": 40.83,
+     "y": 52.01,
+     "letter": "H"
+    },
+    {
+     "id": "as-ganges",
+     "x": 41.64,
+     "y": 59.64,
+     "letter": "A"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 33.6,
+     "y": 58.4,
+     "letter": "R"
+    },
+    {
+     "id": "as-brahmaputra@cty-bangladesh",
+     "x": 47.04,
+     "y": 62.2,
+     "letter": "A"
+    },
+    {
+     "id": "cty-maldives",
+     "x": 33.05,
+     "y": 80.21,
+     "letter": "J"
+    },
+    {
+     "id": "cty-sri-lanka",
+     "x": 39.2,
+     "y": 76.8,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-brahmaputra@cty-bangladesh",
+     "position": 6,
+     "text": "Find the sixth letter on the Brahmaputra in Bangladesh."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 4,
+     "text": "Find the fourth letter on the Ganges."
+    },
+    {
+     "markerId": "as-amu-darya",
+     "position": 2,
+     "text": "Find the second letter on the Amu Darya."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 5,
+     "text": "Find the fifth letter in Pakistan."
+    },
+    {
+     "markerId": "cty-sri-lanka",
+     "position": 8,
+     "text": "Find the eighth letter in Sri Lanka."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 1,
+     "text": "Find the first letter on the Godavari."
+    },
+    {
+     "markerId": "as-indus@cty-india",
+     "position": 3,
+     "text": "Find the third letter on the Indus in India."
+    },
+    {
+     "markerId": "cty-maldives",
+     "position": 7,
+     "text": "Find the seventh letter in the Maldives."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 64,
+    "zoom": 2.6
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-unit-1-ru",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МАХАРАДЖА",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-indus@cty-india",
+     "x": 40.83,
+     "y": 52.01,
+     "letter": "М"
+    },
+    {
+     "id": "cty-sri-lanka",
+     "x": 39.2,
+     "y": 76.8,
+     "letter": "А"
+    },
+    {
+     "id": "as-amu-darya",
+     "x": 35.66,
+     "y": 46.91,
+     "letter": "Х"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 33.68,
+     "y": 55.3,
+     "letter": "А"
+    },
+    {
+     "id": "as-godavari",
+     "x": 39.39,
+     "y": 66.04,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-maldives",
+     "x": 32.4,
+     "y": 81.6,
+     "letter": "А"
+    },
+    {
+     "id": "as-ganges",
+     "x": 42.8,
+     "y": 60.81,
+     "letter": "Д"
+    },
+    {
+     "id": "as-brahmaputra@cty-bangladesh",
+     "x": 47.04,
+     "y": 62.2,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-maldives",
+     "position": 6,
+     "text": "Найди шестую букву на Мальдивах."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 4,
+     "text": "Найди четвёртую букву в Пакистане."
+    },
+    {
+     "markerId": "cty-sri-lanka",
+     "position": 2,
+     "text": "Найди вторую букву на Шри-Ланке."
+    },
+    {
+     "markerId": "as-brahmaputra@cty-bangladesh",
+     "position": 8,
+     "text": "Найди восьмую букву на Брахмапутре в Бангладеш."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 5,
+     "text": "Найди пятую букву на Годавари."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 7,
+     "text": "Найди седьмую букву на Ганге."
+    },
+    {
+     "markerId": "as-indus@cty-india",
+     "position": 1,
+     "text": "Найди первую букву на Инде в Индии."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 9,
+     "text": "Найди девятую букву в Персидском заливе."
+    },
+    {
+     "markerId": "as-amu-darya",
+     "position": 3,
+     "text": "Найди третью букву на Амударье."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 64,
+    "zoom": 2.6
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-unit-2-en",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "VAJRAYANA",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-irtysh",
+     "x": 45.43,
+     "y": 39.19,
+     "letter": "V"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32,
+     "y": 48.4,
+     "letter": "A"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 50.54,
+     "y": 57.17,
+     "letter": "J"
+    },
+    {
+     "id": "cty-nepal",
+     "x": 43.6,
+     "y": 58.4,
+     "letter": "R"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.49,
+     "y": 44.74,
+     "letter": "A"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 39.2,
+     "y": 50.4,
+     "letter": "Y"
+    },
+    {
+     "id": "as-ganges@cty-india",
+     "x": 41.3,
+     "y": 55.51,
+     "letter": "A"
+    },
+    {
+     "id": "as-godavari",
+     "x": 40.9,
+     "y": 67.77,
+     "letter": "N"
+    },
+    {
+     "id": "cty-bhutan",
+     "x": 47.37,
+     "y": 59.21,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-afghanistan",
+     "position": 2,
+     "text": "Find the second letter in Afghanistan."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 6,
+     "text": "Find the sixth letter in Pakistan."
+    },
+    {
+     "markerId": "cty-nepal",
+     "position": 4,
+     "text": "Find the fourth letter in Nepal."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 8,
+     "text": "Find the eighth letter on the Godavari."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 3,
+     "text": "Find the third letter on the Brahmaputra."
+    },
+    {
+     "markerId": "cty-bhutan",
+     "position": 9,
+     "text": "Find the ninth letter in Bhutan."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 5,
+     "text": "Find the fifth letter on the Syr Darya."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 1,
+     "text": "Find the first letter on the Irtysh."
+    },
+    {
+     "markerId": "as-ganges@cty-india",
+     "position": 7,
+     "text": "Find the seventh letter on the Ganges in India."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 54,
+    "zoom": 3
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-unit-2-ru",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ВАДЖРАЯНА",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-irtysh",
+     "x": 45.43,
+     "y": 39.19,
+     "letter": "В"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32,
+     "y": 48.4,
+     "letter": "А"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 50.54,
+     "y": 57.17,
+     "letter": "Д"
+    },
+    {
+     "id": "cty-nepal",
+     "x": 43.6,
+     "y": 58.4,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.49,
+     "y": 44.74,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 39.2,
+     "y": 50.4,
+     "letter": "А"
+    },
+    {
+     "id": "as-ganges@cty-india",
+     "x": 41.3,
+     "y": 55.51,
+     "letter": "Я"
+    },
+    {
+     "id": "as-godavari",
+     "x": 40.9,
+     "y": 67.77,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-bhutan",
+     "x": 47.37,
+     "y": 59.21,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-afghanistan",
+     "position": 2,
+     "text": "Найди вторую букву в Афганистане."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 5,
+     "text": "Найди пятую букву на Сырдарье."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 3,
+     "text": "Найди третью букву на Брахмапутре."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 6,
+     "text": "Найди шестую букву в Пакистане."
+    },
+    {
+     "markerId": "as-godavari",
+     "position": 8,
+     "text": "Найди восьмую букву на Годавари."
+    },
+    {
+     "markerId": "cty-nepal",
+     "position": 4,
+     "text": "Найди четвёртую букву в Непале."
+    },
+    {
+     "markerId": "as-ganges@cty-india",
+     "position": 7,
+     "text": "Найди седьмую букву на Ганге в Индии."
+    },
+    {
+     "markerId": "cty-bhutan",
+     "position": 9,
+     "text": "Найди девятую букву в Бутане."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 1,
+     "text": "Найди первую букву на Иртыше."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 54,
+    "zoom": 3
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-unit-3-en",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "OBSERVATORY",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-ganges@cty-india",
+     "x": 41.3,
+     "y": 55.51,
+     "letter": "O"
+    },
+    {
+     "id": "as-syr-darya@cty-kazakhstan",
+     "x": 35.31,
+     "y": 38.23,
+     "letter": "B"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 50.54,
+     "y": 57.17,
+     "letter": "S"
+    },
+    {
+     "id": "as-ili",
+     "x": 44.02,
+     "y": 43.85,
+     "letter": "E"
+    },
+    {
+     "id": "cty-turkmenistan",
+     "x": 30.4,
+     "y": 41.2,
+     "letter": "R"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 43.59,
+     "y": 37.25,
+     "letter": "V"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 33.2,
+     "y": 48.4,
+     "letter": "A"
+    },
+    {
+     "id": "as-indus@cty-pakistan",
+     "x": 38.17,
+     "y": 51.06,
+     "letter": "T"
+    },
+    {
+     "id": "as-balkhash",
+     "x": 40.68,
+     "y": 40.91,
+     "letter": "O"
+    },
+    {
+     "id": "cty-uzbekistan",
+     "x": 34.8,
+     "y": 43.6,
+     "letter": "R"
+    },
+    {
+     "id": "cty-kyrgyzstan",
+     "x": 39.2,
+     "y": 46,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-syr-darya@cty-kazakhstan",
+     "position": 2,
+     "text": "Find the second letter on the Syr Darya in Kazakhstan."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 7,
+     "text": "Find the seventh letter in Afghanistan."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 3,
+     "text": "Find the third letter on the Brahmaputra."
+    },
+    {
+     "markerId": "cty-turkmenistan",
+     "position": 5,
+     "text": "Find the fifth letter in Turkmenistan."
+    },
+    {
+     "markerId": "as-balkhash",
+     "position": 9,
+     "text": "Find the ninth letter in Lake Balkhash."
+    },
+    {
+     "markerId": "as-ili",
+     "position": 4,
+     "text": "Find the fourth letter on the Ili."
+    },
+    {
+     "markerId": "as-indus@cty-pakistan",
+     "position": 8,
+     "text": "Find the eighth letter on the Indus in Pakistan."
+    },
+    {
+     "markerId": "cty-kyrgyzstan",
+     "position": 11,
+     "text": "Find the eleventh letter in Kyrgyzstan."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 6,
+     "text": "Find the sixth letter on the Irtysh."
+    },
+    {
+     "markerId": "cty-uzbekistan",
+     "position": 10,
+     "text": "Find the tenth letter in Uzbekistan."
+    },
+    {
+     "markerId": "as-ganges@cty-india",
+     "position": 1,
+     "text": "Find the first letter on the Ganges in India."
+    }
+   ],
+   "focus": {
+    "x": 37,
+    "y": 40,
+    "zoom": 2.6
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-unit-3-ru",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ОБСЕРВАТОРИЯ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-syr-darya@cty-kazakhstan",
+     "x": 35.31,
+     "y": 38.23,
+     "letter": "О"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "Б"
+    },
+    {
+     "id": "as-brahmaputra",
+     "x": 46.02,
+     "y": 57.52,
+     "letter": "С"
+    },
+    {
+     "id": "cty-turkmenistan",
+     "x": 30.4,
+     "y": 41.2,
+     "letter": "Е"
+    },
+    {
+     "id": "cty-kyrgyzstan",
+     "x": 41.6,
+     "y": 44.4,
+     "letter": "Р"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "В"
+    },
+    {
+     "id": "cty-tajikistan",
+     "x": 38.4,
+     "y": 46.8,
+     "letter": "А"
+    },
+    {
+     "id": "as-indus@cty-india",
+     "x": 40.83,
+     "y": 52.01,
+     "letter": "Т"
+    },
+    {
+     "id": "as-ganges",
+     "x": 40.47,
+     "y": 57.21,
+     "letter": "О"
+    },
+    {
+     "id": "cty-uzbekistan",
+     "x": 34.8,
+     "y": 43.6,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 32,
+     "y": 56.4,
+     "letter": "И"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 43.59,
+     "y": 37.25,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-ural-mountains",
+     "position": 2,
+     "text": "Найди вторую букву в Уральских горах."
+    },
+    {
+     "markerId": "cty-tajikistan",
+     "position": 7,
+     "text": "Найди седьмую букву в Таджикистане."
+    },
+    {
+     "markerId": "as-brahmaputra",
+     "position": 3,
+     "text": "Найди третью букву на Брахмапутре."
+    },
+    {
+     "markerId": "cty-kyrgyzstan",
+     "position": 5,
+     "text": "Найди пятую букву в Киргизии."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 9,
+     "text": "Найди девятую букву на Ганге."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Иртыше."
+    },
+    {
+     "markerId": "as-indus@cty-india",
+     "position": 8,
+     "text": "Найди восьмую букву на Инде в Индии."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Пакистане."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 6,
+     "text": "Найди шестую букву на Аравийском полуострове."
+    },
+    {
+     "markerId": "cty-uzbekistan",
+     "position": 10,
+     "text": "Найди десятую букву в Узбекистане."
+    },
+    {
+     "markerId": "as-syr-darya@cty-kazakhstan",
+     "position": 1,
+     "text": "Найди первую букву на Сырдарье в Казахстане."
+    },
+    {
+     "markerId": "cty-turkmenistan",
+     "position": 4,
+     "text": "Найди четвёртую букву в Туркменистане."
+    }
+   ],
+   "focus": {
+    "x": 37,
+    "y": 40,
+    "zoom": 2.6
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-final-en",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "SAMARKAND",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-sri-lanka",
+     "x": 39.47,
+     "y": 78.42,
+     "letter": "S"
+    },
+    {
+     "id": "cty-india",
+     "x": 49.6,
+     "y": 58.8,
+     "letter": "A"
+    },
+    {
+     "id": "as-amu-darya@cty-uzbekistan",
+     "x": 33.49,
+     "y": 39.43,
+     "letter": "M"
+    },
+    {
+     "id": "as-indus@cty-pakistan",
+     "x": 38.17,
+     "y": 51.06,
+     "letter": "A"
+    },
+    {
+     "id": "cty-maldives",
+     "x": 32.8,
+     "y": 78.8,
+     "letter": "R"
+    },
+    {
+     "id": "as-syr-darya@cty-kyrgyzstan",
+     "x": 41.89,
+     "y": 44.95,
+     "letter": "K"
+    },
+    {
+     "id": "as-irtysh@cty-kazakhstan",
+     "x": 44.94,
+     "y": 38.02,
+     "letter": "A"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32,
+     "y": 50,
+     "letter": "N"
+    },
+    {
+     "id": "cty-nepal",
+     "x": 43.6,
+     "y": 58.4,
+     "letter": "D"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-syr-darya@cty-kyrgyzstan",
+     "position": 6,
+     "text": "Find the sixth letter on the Syr Darya in Kyrgyzstan."
+    },
+    {
+     "markerId": "as-indus@cty-pakistan",
+     "position": 4,
+     "text": "Find the fourth letter on the Indus in Pakistan."
+    },
+    {
+     "markerId": "cty-india",
+     "position": 2,
+     "text": "Find the second letter in India."
+    },
+    {
+     "markerId": "cty-nepal",
+     "position": 9,
+     "text": "Find the ninth letter in Nepal."
+    },
+    {
+     "markerId": "as-amu-darya@cty-uzbekistan",
+     "position": 3,
+     "text": "Find the third letter on the Amu Darya in Uzbekistan."
+    },
+    {
+     "markerId": "as-irtysh@cty-kazakhstan",
+     "position": 7,
+     "text": "Find the seventh letter on the Irtysh in Kazakhstan."
+    },
+    {
+     "markerId": "cty-maldives",
+     "position": 5,
+     "text": "Find the fifth letter in the Maldives."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 8,
+     "text": "Find the eighth letter in Afghanistan."
+    },
+    {
+     "markerId": "cty-sri-lanka",
+     "position": 1,
+     "text": "Find the first letter in Sri Lanka."
+    }
+   ],
+   "focus": {
+    "x": 38,
+    "y": 55,
+    "zoom": 1.8
+   },
+   "inRegion": 9,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-section-7-final-ru",
+   "section": "countries-south-and-central-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "САМАРКАНД",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-sri-lanka",
+     "x": 39.47,
+     "y": 78.42,
+     "letter": "С"
+    },
+    {
+     "id": "cty-india",
+     "x": 49.6,
+     "y": 58.8,
+     "letter": "А"
+    },
+    {
+     "id": "as-amu-darya@cty-uzbekistan",
+     "x": 33.49,
+     "y": 39.43,
+     "letter": "М"
+    },
+    {
+     "id": "as-indus@cty-pakistan",
+     "x": 38.17,
+     "y": 51.06,
+     "letter": "А"
+    },
+    {
+     "id": "cty-maldives",
+     "x": 32.8,
+     "y": 78.8,
+     "letter": "Р"
+    },
+    {
+     "id": "as-syr-darya@cty-kyrgyzstan",
+     "x": 41.89,
+     "y": 44.95,
+     "letter": "К"
+    },
+    {
+     "id": "as-irtysh@cty-kazakhstan",
+     "x": 44.94,
+     "y": 38.02,
+     "letter": "А"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32,
+     "y": 50,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-nepal",
+     "x": 43.6,
+     "y": 58.4,
+     "letter": "Д"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-indus@cty-pakistan",
+     "position": 4,
+     "text": "Найди четвёртую букву на Инде в Пакистане."
+    },
+    {
+     "markerId": "cty-india",
+     "position": 2,
+     "text": "Найди вторую букву в Индии."
+    },
+    {
+     "markerId": "as-syr-darya@cty-kyrgyzstan",
+     "position": 6,
+     "text": "Найди шестую букву на Сырдарье в Киргизии."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 8,
+     "text": "Найди восьмую букву в Афганистане."
+    },
+    {
+     "markerId": "as-amu-darya@cty-uzbekistan",
+     "position": 3,
+     "text": "Найди третью букву на Амударье в Узбекистане."
+    },
+    {
+     "markerId": "cty-maldives",
+     "position": 5,
+     "text": "Найди пятую букву на Мальдивах."
+    },
+    {
+     "markerId": "cty-sri-lanka",
+     "position": 1,
+     "text": "Найди первую букву на Шри-Ланке."
+    },
+    {
+     "markerId": "as-irtysh@cty-kazakhstan",
+     "position": 7,
+     "text": "Найди седьмую букву на Иртыше в Казахстане."
+    },
+    {
+     "markerId": "cty-nepal",
+     "position": 9,
+     "text": "Найди девятую букву в Непале."
+    }
+   ],
+   "focus": {
+    "x": 38,
+    "y": 55,
+    "zoom": 1.8
+   },
+   "inRegion": 9,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

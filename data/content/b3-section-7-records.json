@@ -1,0 +1,89 @@
+{
+ "section": "countries-south-and-central-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "kazakhstan-largest-landlocked",
+   "order": 1,
+   "object": "cty-kazakhstan",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Kazakhstan",
+    "ru": "Казахстан"
+   },
+   "fact": {
+    "ru": "Казахстан — самая большая в мире страна без выхода к мировому океану: более 2,7 млн км².",
+    "en": "Kazakhstan is the largest landlocked country in the world, with more than 2.7 million km²."
+   },
+   "figure": {
+    "value": 2700000,
+    "unit": "km2",
+    "more": true
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "maldives-lowest-country",
+   "order": 2,
+   "object": "cty-maldives",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Maldives",
+    "ru": "Мальдивы"
+   },
+   "fact": {
+    "ru": "Мальдивы — самая низменная страна мира: самая высокая точка поднимается лишь примерно на 2,4 м над морем.",
+    "en": "The Maldives are the lowest-lying country in the world: their highest point is only about 2.4 m above sea level."
+   },
+   "figure": {
+    "value": 2.4,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "uzbekistan-doubly-landlocked",
+   "order": 3,
+   "object": "cty-uzbekistan",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Uzbekistan",
+    "ru": "Узбекистан"
+   },
+   "fact": {
+    "ru": "Узбекистан — одна из двух стран мира, для которых путь к океану лежит через две границы: все его соседи тоже не имеют выхода к морю. Вторая такая страна — Лихтенштейн.",
+    "en": "Uzbekistan is one of only two doubly landlocked countries: all its neighbours are landlocked too. The other is Liechtenstein."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

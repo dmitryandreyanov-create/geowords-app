@@ -1,0 +1,470 @@
+{
+ "section": "countries-south-and-central-asia",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 31.10.2026 19:02 (25 words RU + EN, with her replacements АЮРВЕДА ГУРКХИ ВАДЖРАЯНА ДЗОНГИ); repeats of earlier sections (ИНДУИЗМ, МОНСОН, БЕНГАЛИЯ, БАКТРИЯ, ХОРЕЗМ, СОГДИАНА, КАРАВАН, КАРАВАНСАРАЙ, МЕДРЕСЕ) replaced by МАУРЬЯ СИКХИЗМ АТОЛЛЫ ГАНДХАРА ЛАЗУРИТ УЛУГБЕК ДОМБРА СУЗАНЕ ОБСЕРВАТОРИЯ — «Утверждаю» 19:13",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-7.json). At least half of the letters inside the region of the unit: its countries, the rivers inside them («on the Ganges in Bangladesh»), its seas and peninsulas; the rest on learned objects of Asia in view (countries of earlier units, rivers of section 2, objects of section 1, the lakes of section 3 on the map); never the Arctic Ocean, Chukotka or the Bering Strait; at least a third of the letters on rivers (Svetlana, 28.10.2026 and 31.10.2026 17:45). A letter stands anywhere well inside its country or on its river (spots).",
+  "nesting": "each country is named once per puzzle («on the Mekong in Laos» names Laos). A letter on a river («on the Mekong») and a letter in a country that river flows through («in Laos») are never in the same puzzle: the river letter could lie inside that country, and the child could not tell which place it marks. One letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle.",
+  "spacing": "letter centres at least 9% of the screen width apart: in % of the map, hypot(dx, dy*1600/2200) >= 9 / the zoom of the puzzle",
+  "languages": "EN and RU lists are independent",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Definitions RU and EN drafted by Claude for Svetlana's review (plan doc https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz)."
+ },
+ "units": [
+  {
+   "id": "unit-1-indian-subcontinent",
+   "title": {
+    "ru": "Индостан и Индийский океан",
+    "en": "The Indian Subcontinent and the Indian Ocean"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "MAHARAJA",
+      "role": "final",
+      "definition": "The title of an Indian ruler, meaning «great king» in Sanskrit.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MUGHALS",
+      "role": "review",
+      "definition": "The dynasty that ruled most of India from the 16th to the 19th century; the Taj Mahal was built under it.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SANSKRIT",
+      "role": "review",
+      "definition": "The ancient language of India in which the Vedas and the great epics were written.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "AYURVEDA",
+      "role": "review",
+      "definition": "The traditional medicine of India, based on herbs, diet and way of life.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CEYLON",
+      "role": "review",
+      "definition": "The former name of the island and state of Sri Lanka (until 1972), famous for its tea.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAURYA",
+      "role": "review",
+      "definition": "An ancient Indian empire of the 4th–2nd centuries BC; under King Ashoka it supported Buddhism.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SIKHISM",
+      "role": "review",
+      "definition": "A religion founded in the Punjab around 1500; its holiest shrine is the Golden Temple in Amritsar.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ATOLLS",
+      "role": "review",
+      "definition": "Ring-shaped coral islands around a lagoon; the Maldives are made up of them.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "МАХАРАДЖА",
+      "role": "final",
+      "definition": "Титул индийского правителя, в переводе с санскрита «великий царь».",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МОГОЛЫ",
+      "role": "review",
+      "definition": "Династия, правившая большей частью Индии в XVI–XIX веках; при ней построен Тадж-Махал.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "САНСКРИТ",
+      "role": "review",
+      "definition": "Древний язык Индии, на котором записаны Веды и великие эпосы.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АЮРВЕДА",
+      "role": "review",
+      "definition": "Традиционная индийская медицина, основанная на травах, питании и образе жизни.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЦЕЙЛОН",
+      "role": "review",
+      "definition": "Прежнее название острова и государства Шри-Ланка (до 1972 года), известное по чаю.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАУРЬЯ",
+      "role": "review",
+      "definition": "Древнеиндийская держава IV–II веков до н. э.; при царе Ашоке она поддерживала буддизм.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СИКХИЗМ",
+      "role": "review",
+      "definition": "Религия, возникшая в Пенджабе около 1500 года; её главная святыня — Золотой храм в Амритсаре.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АТОЛЛЫ",
+      "role": "review",
+      "definition": "Кольцевые коралловые острова с лагуной внутри; из них состоят Мальдивы.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-himalayas-and-hindu-kush",
+   "title": {
+    "ru": "Гималаи и Гиндукуш",
+    "en": "The Himalayas and the Hindu Kush"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "VAJRAYANA",
+      "role": "final",
+      "definition": "A branch of Buddhism followed in Tibet, Bhutan, Nepal and Mongolia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "GURKHAS",
+      "role": "review",
+      "definition": "Soldiers from Nepal, famous for serving in the British and Indian armies.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MONASTERY",
+      "role": "review",
+      "definition": "The home of a religious community; in the Himalayas such places often cling to steep slopes.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MANDALA",
+      "role": "review",
+      "definition": "A sacred circular pattern in Buddhism and Hinduism that represents the universe.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "DZONGS",
+      "role": "review",
+      "definition": "White-walled fortresses of Bhutan that house both monks and the district government.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BAMIYAN",
+      "role": "review",
+      "definition": "A valley in the mountains of Afghanistan where giant statues of the Buddha stood until they were destroyed in 2001.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "GANDHARA",
+      "role": "review",
+      "definition": "An ancient region in north-west Pakistan and eastern Afghanistan where Buddhist art blended Indian and Greek traditions.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LAZURITE",
+      "role": "review",
+      "definition": "A deep blue gemstone mined for thousands of years in the mountains of Badakhshan in north-east Afghanistan.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ВАДЖРАЯНА",
+      "role": "final",
+      "definition": "Направление буддизма, распространённое в Тибете, Бутане, Непале и Монголии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ГУРКХИ",
+      "role": "review",
+      "definition": "Воины из Непала, знаменитые службой в британской и индийской армиях.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МОНАСТЫРЬ",
+      "role": "review",
+      "definition": "Обитель общины, посвятившей себя религии; в Гималаях такие обители часто стоят на крутых склонах.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАНДАЛА",
+      "role": "review",
+      "definition": "Священный круглый узор в буддизме и индуизме, изображающий вселенную.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДЗОНГИ",
+      "role": "review",
+      "definition": "Бутанские крепости с белыми стенами, в которых размещаются и монахи, и власти округа.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАМИАН",
+      "role": "review",
+      "definition": "Долина в горах Афганистана, где стояли огромные статуи Будды, разрушенные в 2001 году.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ГАНДХАРА",
+      "role": "review",
+      "definition": "Древняя область на северо-западе Пакистана и востоке Афганистана, где в буддийском искусстве соединились индийские и греческие традиции.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛАЗУРИТ",
+      "role": "review",
+      "definition": "Синий полудрагоценный камень, который тысячи лет добывают в горах Бадахшана на северо-востоке Афганистана.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-central-asia",
+   "title": {
+    "ru": "Центральная Азия",
+    "en": "Central Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "OBSERVATORY",
+      "role": "final",
+      "definition": "A building for watching the sky; in the 15th century one of the most famous of them was built in Central Asia.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BUKHARA",
+      "role": "review",
+      "definition": "An ancient Silk Road city in Uzbekistan, famous for the Kalyan Minaret.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TIMURIDS",
+      "role": "review",
+      "definition": "The dynasty descended from a great 14th-century conqueror; the cities of Central Asia and Iran flourished under it.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAUSOLEUM",
+      "role": "review",
+      "definition": "A grand tomb building; the most famous one in Central Asia is the Gur-e-Amir, the tomb of Timur.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TURKESTAN",
+      "role": "review",
+      "definition": "The historical name of a vast region of Central Asia, and of an ancient city in southern Kazakhstan with the mausoleum of Khoja Ahmed Yasawi.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ULUGHBEK",
+      "role": "review",
+      "definition": "A 15th-century ruler of Samarkand and a great astronomer who made a catalogue of more than 1,000 stars.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "DOMBRA",
+      "role": "review",
+      "definition": "A two-stringed, long-necked Kazakh instrument played by plucking.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SUZANI",
+      "role": "review",
+      "definition": "Uzbek and Tajik embroidery with large flower patterns, a traditional decoration of the home.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ОБСЕРВАТОРИЯ",
+      "role": "final",
+      "definition": "Здание для наблюдения за небом; в XV веке одно из самых знаменитых таких зданий построили в Центральной Азии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БУХАРА",
+      "role": "review",
+      "definition": "Древний город Узбекистана на Великом шёлковом пути, знаменитый минаретом Калян.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТИМУРИДЫ",
+      "role": "review",
+      "definition": "Династия потомков великого завоевателя XIV века; при ней расцвели города Центральной Азии и Ирана.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МАВЗОЛЕЙ",
+      "role": "review",
+      "definition": "Величественная гробница-усыпальница; самая известная в Центральной Азии — Гур-Эмир, гробница Тимура.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТЮРКЕСТАН",
+      "role": "review",
+      "definition": "Историческое название обширной области Центральной Азии; так же называется древний город на юге Казахстана с мавзолеем Ходжи Ахмеда Ясави.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "УЛУГБЕК",
+      "role": "review",
+      "definition": "Правитель Самарканда в XV веке и великий астроном, составивший каталог более чем из 1000 звёзд.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДОМБРА",
+      "role": "review",
+      "definition": "Казахский двухструнный щипковый музыкальный инструмент с длинной шейкой.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "СУЗАНЕ",
+      "role": "review",
+      "definition": "Узбекская и таджикская вышивка крупными цветочными узорами, традиционное украшение дома.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "SAMARKAND",
+      "role": "section-final",
+      "definition": "One of the oldest cities in the world, the pearl of the Silk Road, with the famous Registan square.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "САМАРКАНД",
+      "role": "section-final",
+      "definition": "Один из древнейших городов мира, жемчужина Великого шёлкового пути, со знаменитой площадью Регистан.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
