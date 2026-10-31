@@ -96,6 +96,14 @@ const RELEASE = {
     section: "rivers-of-asia",
     ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
   },
+  "b3-section-6-facts.json": {
+    section: "countries-east-and-southeast-asia",
+    ids: ["cty-china", "cty-mongolia", "cty-north-korea", "cty-south-korea", "cty-japan", "cty-taiwan", "cty-vietnam", "cty-laos", "cty-cambodia", "cty-thailand", "cty-myanmar", "cty-malaysia", "cty-singapore", "cty-indonesia", "cty-brunei", "cty-philippines", "cty-timor-leste"],
+  },
+  "b3-section-6-records.json": {
+    section: "countries-east-and-southeast-asia",
+    ids: ["indonesia-largest-island-country", "ulaanbaatar-coldest-capital", "great-wall-longest-fortification"],
+  },
   "b3-section-5-facts.json": {
     section: "deserts-of-asia",
     ids: ["asia-deserts-intro", "as-taklamakan", "as-ordos", "as-gobi", "as-kyzylkum", "as-karakum", "as-kavir", "as-lut", "as-thar", "as-rub-al-khali", "as-negev"],

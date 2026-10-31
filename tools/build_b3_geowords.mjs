@@ -10,12 +10,18 @@
 // Section 4 «Mountains of Asia»: the same with the ranges, the plateau and the volcanoes of data/maps/asia-mountains.json; section 1's Ural Mountains are left out
 // (the Urals are drawn on the mountains map as «as-urals»).
 // Section 5 «Deserts of Asia»: the same with the deserts of data/maps/asia-deserts.json (drawn on the rivers map) and every object of section 1.
-// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3|4|5]  — writes drafts; approved puzzles already in the file are kept as they are.
+// Section 6 «Countries and capitals: East and Southeast Asia» (data/maps/asia-countries-6.json, map asia-countries.webp = the rivers map with
+// borders and capital dots): letters at the centre of the countries learned by the end of the unit; on the rivers of section 2 drawn over the
+// map («on the Mekong», at the river's label point); on a river inside a country it crosses («on the Mekong in Cambodia»); the objects of
+// section 1 only when places run short. At least a third of the letters on rivers (Svetlana, 28.10.2026 and 31.10.2026). A country is named
+// once per puzzle; a river letter «on the Mekong» never shares a puzzle with a country the river crosses; one letter per river; a country never
+// with its island or peninsula; spacing 9 as in Europe sections 4 and 5.
+// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3|4|5|6]  — writes drafts; approved puzzles already in the file are kept as they are.
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/asia-overview.json", LAYER = { 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json", 4: "data/maps/asia-mountains.json", 5: "data/maps/asia-deserts.json" }[SEC];
-const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp", 4: "./assets/asia-mountains.webp", 5: "./assets/asia-deserts.webp" }[SEC];
+const MAP = "data/maps/asia-overview.json", LAYER = { 6: "data/maps/asia-rivers.json", 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json", 4: "data/maps/asia-mountains.json", 5: "data/maps/asia-deserts.json" }[SEC];
+const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp", 4: "./assets/asia-mountains.webp", 5: "./assets/asia-deserts.webp", 6: "./assets/asia-countries.webp" }[SEC];
 const DICT = `data/dictionary/b3-section-${SEC}.json`, OUT = `data/geowords/b3-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -58,13 +64,25 @@ export const PLACE = {
   "as-kyzylkum": ["в пустыне Кызылкум", "in the Kyzylkum Desert"], "as-karakum": ["в пустыне Каракумы", "in the Karakum Desert"], "as-kavir": ["в пустыне Деште-Кевир", "in the Dasht-e Kavir"],
   "as-lut": ["в пустыне Деште-Лут", "in the Dasht-e Lut"], "as-thar": ["в пустыне Тар", "in the Thar Desert"], "as-rub-al-khali": ["в пустыне Руб-эль-Хали", "in the Rub’ al Khali"],
   "as-negev": ["в пустыне Негев", "in the Negev Desert"],
+  "cty-china": ["в Китае", "in China"], "cty-mongolia": ["в Монголии", "in Mongolia"], "cty-north-korea": ["в Северной Корее", "in North Korea"],
+  "cty-south-korea": ["в Южной Корее", "in South Korea"], "cty-japan": ["в Японии", "in Japan"], "cty-taiwan": ["на Тайване", "on Taiwan"],
+  "cty-vietnam": ["во Вьетнаме", "in Vietnam"], "cty-laos": ["в Лаосе", "in Laos"], "cty-cambodia": ["в Камбодже", "in Cambodia"],
+  "cty-thailand": ["в Таиланде", "in Thailand"], "cty-myanmar": ["в Мьянме", "in Myanmar"], "cty-malaysia": ["в Малайзии", "in Malaysia"],
+  "cty-singapore": ["в Сингапуре", "in Singapore"], "cty-indonesia": ["в Индонезии", "in Indonesia"], "cty-brunei": ["в Брунее", "in Brunei"],
+  "cty-philippines": ["на Филиппинах", "in the Philippines"], "cty-timor-leste": ["в Восточном Тиморе", "in Timor-Leste"],
 };
+// «on the Mekong in Cambodia»: the river phrase, then the country phrase
+export const placeOn = (river, country, li) => `${PLACE[river][li]} ${PLACE[country][li]}`;
 // An object and the object it lies in never share a puzzle (EU_IN in app/app.js)
 export const CONTAINERS = {
   "as-sea-of-japan": ["as-pacific-ocean"], "as-sea-of-okhotsk": ["as-pacific-ocean"], "as-south-china-sea": ["as-pacific-ocean"], "as-persian-gulf": ["as-indian-ocean"],
   "as-japanese-islands": ["as-pacific-ocean"], "as-sakhalin": ["as-pacific-ocean"], "as-borneo": ["as-pacific-ocean"], "as-sri-lanka": ["as-indian-ocean"],
+  // section 6: a country never with its island or peninsula
+  "cty-japan": ["as-japanese-islands"], "cty-north-korea": ["as-korean-peninsula"], "cty-south-korea": ["as-korean-peninsula"],
+  "cty-malaysia": ["as-malay-peninsula", "as-borneo"], "cty-singapore": ["as-malay-peninsula"], "cty-brunei": ["as-borneo"], "cty-indonesia": ["as-borneo"],
+  "cty-thailand": ["as-indochina", "as-malay-peninsula"], "cty-vietnam": ["as-indochina"], "cty-laos": ["as-indochina"], "cty-cambodia": ["as-indochina"], "cty-myanmar": ["as-indochina"],
 };
-const ASPECT = 1600 / 2200, SEP = 4.5;
+const ASPECT = 1600 / 2200, SEP = SEC === 6 ? Number(process.env.SEP || 9) : 4.5;
 
 const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = SEC >= 2 ? JSON.parse(fs.readFileSync(LAYER, "utf8")).items : [], dict = JSON.parse(fs.readFileSync(DICT, "utf8"));
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
@@ -115,6 +133,76 @@ function build(word, lang, unit, final, tries = 6000) {
   return { markers, clues };
 }
 
+// ---- section 6: countries, rivers and «a river in a country» ----
+const C6 = SEC === 6 ? JSON.parse(fs.readFileSync("data/maps/asia-countries-6.json", "utf8")) : null;
+const area6 = SEC === 6 ? Object.fromEntries([...map.items, ...C6.items].filter(o => o.tapArea).map(o => [o.id, o])) : {};
+const in6m = new Map(), in6 = (id, p) => { const k = id + ' ' + p.x + ' ' + p.y; if (!in6m.has(k)) { const o = area6[id]; in6m.set(k, !!o && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl))); } return in6m.get(k); };
+// Svetlana, 31.10.2026 17:45: at least half of the letters inside the region of the lesson, the rest on learned objects of Asia nearby;
+// no Arctic Ocean or Chukotka. The puzzle opens zoomed in on the region of its unit (C6.frames), so letters stay 9% of the screen apart
+// (SEP / zoom of the map), and a letter may stand anywhere well inside its country or anywhere on its river (C6 spots).
+const REGION_OBJ = { 1: ["as-korean-peninsula", "as-japanese-islands", "as-sea-of-japan"], 2: ["as-indochina", "as-south-china-sea"], 3: ["as-malay-peninsula", "as-borneo", "as-south-china-sea"] };
+const NEVER6 = ["as-arctic-ocean", "as-chukotka", "as-bering-strait"];
+const frame6 = unit => {
+  const f = C6.frames[unit === "section-final" || unit === "S" ? "S" : String(unit)], hw = 50 / f.zoom;
+  const cx = Math.min(100 - hw, Math.max(hw, f.x)), cy = Math.min(100 - hw, Math.max(hw, f.y)), m = 4 / f.zoom;
+  return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m };
+};
+function places6(unit, F) {
+  const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit), uOf = id => C6.items.find(o => o.id === id)?.unit;
+  const add = (base, spots) => { const sp = spots.filter(F.inView); if (sp.length) out.push({ ...base, spots: sp }); };
+  for (const o of C6.items) if (o.unit <= unit) add({ id: o.id, kind: "country", country: o.id, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
+  // only the rivers that flow through the countries of this section (the Jordan or the Ob belong to other parts of Asia)
+  for (const r of rivers) {
+    const rc = C6.rivers.find(q => q.id === r.id);
+    if (!rc) continue;
+    add({ id: r.id, kind: "river", river: r.id, crosses: rc.crosses, unit: 0, reg: null, place: PLACE[r.id] }, rc.spots);
+    for (const q of rc.points) if (learned(q.country))
+      add({ id: `${r.id}@${q.country}`, kind: "river", river: r.id, country: q.country, unit: 0, reg: [uOf(q.country)], place: [0, 1].map(li => placeOn(r.id, q.country, li)) }, q.spots);
+  }
+  // section 1 for review: only what is in view, never the far north
+  for (const o of map.items) if (!NEVER6.includes(o.id))
+    add({ id: o.id, kind: "object", unit: -1, reg: Object.keys(REGION_OBJ).filter(u => REGION_OBJ[u].includes(o.id)).map(Number), place: PLACE[o.id] }, [o.label]);
+  return out;
+}
+// a plain river letter («on the Mekong») is in the region of the unit whose country it stands in
+const regOf = p => p.reg || p.sreg || (p.sreg = C6.items.filter(o => in6(o.id, p)).map(o => o.unit));
+const conflict6 = (a, b) => (a.river && a.river === b.river) || (a.country && a.country === b.country)
+  || (a.kind === "river" && !a.country && b.kind === "country" && a.crosses.includes(b.id)) || (b.kind === "river" && !b.country && a.kind === "country" && b.crosses.includes(a.id))
+  || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id)
+  || (a.country && (CONTAINERS[a.country] || []).includes(b.id)) || (b.country && (CONTAINERS[b.country] || []).includes(a.id))
+  || (a.kind !== "river" && in6(a.id, b)) || (b.kind !== "river" && in6(b.id, a));
+function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 4000)) {
+  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = Math.ceil(n / 3), needReg = Math.ceil(n / 2);
+  const F = frame6(final ? "S" : unit), sep = SEP / F.zoom, U = final ? [1, 2, 3] : [unit];
+  const usable = places6(unit, F).filter(p => !fold(p.place[li]).includes(fold(word)));
+  const inReg = p => regOf(p).some(u => U.includes(u));
+  let best = null, bestScore = -Infinity;
+  for (let k = 0; k < tries; k++) {
+    const pick = [], ok = p => pick.every(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT) >= sep && !conflict6(p, q));
+    const take = g => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if (ok(p)) { pick.push(p); return; } } };
+    // rivers up to the quota first, then the region of the unit, then the rest (countries and rivers of earlier units, section 1)
+    const groups = shuffle([...usable]);
+    for (const g of groups.filter(g => g.kind === "river")) if (pick.filter(p => p.kind === "river").length < needR) take(g);
+    const regG = groups.filter(g => g.kind !== "object" && (g.reg ? g.reg.some(u => U.includes(u)) : true));
+    for (const g of regG) take(g);
+    for (const g of groups) take(g);
+    if (pick.length < n || pick.filter(p => p.kind === "river").length < needR) continue;
+    const reg = pick.filter(inReg).length;
+    if (reg < needReg) continue;
+    const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT)))) * F.zoom;
+    const units = new Set(pick.flatMap(regOf)).size, ctry = pick.filter(p => p.kind === "country").length;
+    const inCountry = pick.filter(p => p.kind === "river" && p.country).length, obj = pick.filter(p => p.kind === "object").length;
+    const score = Math.min(gap, 12) + reg * 6 + ctry * 3 + inCountry * 2 - obj * 2 + (final ? units * 5 : 0);
+    if (score > bestScore) { bestScore = score; best = shuffle(pick); }
+  }
+  if (!best) return null;
+  const order = revealOrder(n);
+  const markers = best.map((p, i) => ({ id: p.id, x: p.x, y: p.y, letter: letters[i] }));
+  const ord = tpl.ordinals[lang], t = tpl.template[lang], ph = Object.fromEntries(best.map(p => [p.id, p.place[li]]));
+  const clues = order.map(pos => ({ markerId: markers[pos - 1].id, position: pos, text: t.replace("{ordinal}", ord[pos - 1]).replace("{place}", ph[markers[pos - 1].id]) }));
+  return { markers, clues, focus: { x: F.x, y: F.y, zoom: F.zoom }, inRegion: best.filter(inReg).length };
+}
+
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { puzzles: [] };
 const puzzles = [];
 for (const u of dict.units) {
@@ -124,14 +212,24 @@ for (const u of dict.units) {
     const id = `b3-section-${SEC}-${sectionFinal ? "final" : `unit-${unit}`}-${lang}`;
     const old = prev.puzzles.find(p => p.id === id);
     if (old?.approval?.status === "approved" && old.answer === w.answer) { puzzles.push(old); continue; }
-    const b = build(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
+    const b = (SEC === 6 ? build6 : build)(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
     if (!b) { console.error(`${id}: ${w.answer} cannot be laid out on the learned objects`); process.exitCode = 1; continue; }
     puzzles.push({ id, section: dict.section, block: 3, unit, role: sectionFinal ? "section-final" : "unit-final", language: lang, answer: w.answer,
       map: BASE, mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
       approval: { status: "draft" } });
   }
 }
-const out = SEC === 5 ? {
+const out = SEC === 6 ? {
+  section: "countries-east-and-southeast-asia", block: 3,
+  rules: {
+    clues: "clues in reveal order; position = slot the letter fills",
+    places: "letters at the centre of the countries of data/maps/asia-countries-6.json learned by the end of the unit (section final: all 17), on the rivers of data/maps/asia-rivers.json drawn over the countries map («on the Mekong», at the river's label point), on a river inside a country it crosses («on the Mekong in Cambodia»), and on the objects of section 1 only when places run short; at least a third of the letters on rivers",
+    nesting: "a country is named once per puzzle; a river letter «on the Mekong» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle",
+    spacing: "hypot(dx, dy * 1600/2200) >= 9 (% of map width), as in Europe sections 4 and 5",
+    approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
+  },
+  puzzles,
+} : SEC === 5 ? {
   section: "deserts-of-asia", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",

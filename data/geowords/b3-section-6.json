@@ -1,0 +1,1163 @@
+{
+ "section": "countries-east-and-southeast-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters at the centre of the countries of data/maps/asia-countries-6.json learned by the end of the unit (section final: all 17), on the rivers of data/maps/asia-rivers.json drawn over the countries map («on the Mekong», at the river's label point), on a river inside a country it crosses («on the Mekong in Cambodia»), and on the objects of section 1 only when places run short; at least a third of the letters on rivers",
+  "nesting": "a country is named once per puzzle; a river letter «on the Mekong» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 9 (% of map width), as in Europe sections 4 and 5",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-6-unit-1-en",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CALLIGRAPHY",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-north-korea",
+     "x": 65.89,
+     "y": 43.93,
+     "letter": "C"
+    },
+    {
+     "id": "as-irrawaddy",
+     "x": 50.66,
+     "y": 68.6,
+     "letter": "A"
+    },
+    {
+     "id": "cty-japan",
+     "x": 72,
+     "y": 36,
+     "letter": "L"
+    },
+    {
+     "id": "as-brahmaputra@cty-china",
+     "x": 47.58,
+     "y": 57.53,
+     "letter": "L"
+    },
+    {
+     "id": "cty-taiwan",
+     "x": 66.5,
+     "y": 59.92,
+     "letter": "I"
+    },
+    {
+     "id": "as-ili",
+     "x": 44.02,
+     "y": 43.85,
+     "letter": "G"
+    },
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "R"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "A"
+    },
+    {
+     "id": "as-salween",
+     "x": 52.18,
+     "y": 57.82,
+     "letter": "P"
+    },
+    {
+     "id": "cty-mongolia",
+     "x": 60.8,
+     "y": 39.2,
+     "letter": "H"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 58.88,
+     "y": 54.99,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-huang-he",
+     "position": 7,
+     "text": "Find the seventh letter on the Huang He."
+    },
+    {
+     "markerId": "as-irrawaddy",
+     "position": 2,
+     "text": "Find the second letter on the Irrawaddy."
+    },
+    {
+     "markerId": "cty-taiwan",
+     "position": 5,
+     "text": "Find the fifth letter on Taiwan."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 11,
+     "text": "Find the eleventh letter on the Yangtze."
+    },
+    {
+     "markerId": "as-ili",
+     "position": 6,
+     "text": "Find the sixth letter on the Ili."
+    },
+    {
+     "markerId": "cty-japan",
+     "position": 3,
+     "text": "Find the third letter in Japan."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 8,
+     "text": "Find the eighth letter on the Amur."
+    },
+    {
+     "markerId": "cty-mongolia",
+     "position": 10,
+     "text": "Find the tenth letter in Mongolia."
+    },
+    {
+     "markerId": "as-brahmaputra@cty-china",
+     "position": 4,
+     "text": "Find the fourth letter on the Brahmaputra in China."
+    },
+    {
+     "markerId": "cty-north-korea",
+     "position": 1,
+     "text": "Find the first letter in North Korea."
+    },
+    {
+     "markerId": "as-salween",
+     "position": 9,
+     "text": "Find the ninth letter on the Salween."
+    }
+   ],
+   "focus": {
+    "x": 57,
+    "y": 50,
+    "zoom": 2.2
+   },
+   "inRegion": 10,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "0bfa99c7f700ff95"
+   }
+  },
+  {
+   "id": "b3-section-6-unit-1-ru",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "КАЛЛИГРАФИЯ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-north-korea",
+     "x": 65.89,
+     "y": 43.93,
+     "letter": "К"
+    },
+    {
+     "id": "as-irrawaddy",
+     "x": 50.66,
+     "y": 68.6,
+     "letter": "А"
+    },
+    {
+     "id": "cty-japan",
+     "x": 72,
+     "y": 36,
+     "letter": "Л"
+    },
+    {
+     "id": "as-brahmaputra@cty-china",
+     "x": 47.58,
+     "y": 57.53,
+     "letter": "Л"
+    },
+    {
+     "id": "cty-taiwan",
+     "x": 66.5,
+     "y": 59.92,
+     "letter": "И"
+    },
+    {
+     "id": "as-ili",
+     "x": 44.02,
+     "y": 43.85,
+     "letter": "Г"
+    },
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "Р"
+    },
+    {
+     "id": "as-amur",
+     "x": 66.67,
+     "y": 35.82,
+     "letter": "А"
+    },
+    {
+     "id": "as-salween",
+     "x": 52.18,
+     "y": 57.82,
+     "letter": "Ф"
+    },
+    {
+     "id": "cty-mongolia",
+     "x": 60.8,
+     "y": 39.2,
+     "letter": "И"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 58.88,
+     "y": 54.99,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-huang-he",
+     "position": 7,
+     "text": "Найди седьмую букву на Хуанхэ."
+    },
+    {
+     "markerId": "as-irrawaddy",
+     "position": 2,
+     "text": "Найди вторую букву на Иравади."
+    },
+    {
+     "markerId": "as-ili",
+     "position": 6,
+     "text": "Найди шестую букву на реке Или."
+    },
+    {
+     "markerId": "as-salween",
+     "position": 9,
+     "text": "Найди девятую букву на Салуине."
+    },
+    {
+     "markerId": "cty-japan",
+     "position": 3,
+     "text": "Найди третью букву в Японии."
+    },
+    {
+     "markerId": "cty-mongolia",
+     "position": 10,
+     "text": "Найди десятую букву в Монголии."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 8,
+     "text": "Найди восьмую букву на Амуре."
+    },
+    {
+     "markerId": "as-brahmaputra@cty-china",
+     "position": 4,
+     "text": "Найди четвёртую букву на Брахмапутре в Китае."
+    },
+    {
+     "markerId": "as-yangtze",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Янцзы."
+    },
+    {
+     "markerId": "cty-taiwan",
+     "position": 5,
+     "text": "Найди пятую букву на Тайване."
+    },
+    {
+     "markerId": "cty-north-korea",
+     "position": 1,
+     "text": "Найди первую букву в Северной Корее."
+    }
+   ],
+   "focus": {
+    "x": 57,
+    "y": 50,
+    "zoom": 2.2
+   },
+   "inRegion": 10,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "bf30547028a805c0"
+   }
+  },
+  {
+   "id": "b3-section-6-unit-2-en",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "AYUTTHAYA",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-salween@cty-myanmar",
+     "x": 52.81,
+     "y": 65.27,
+     "letter": "A"
+    },
+    {
+     "id": "as-irrawaddy",
+     "x": 51.88,
+     "y": 60.97,
+     "letter": "Y"
+    },
+    {
+     "id": "cty-vietnam",
+     "x": 60,
+     "y": 72.8,
+     "letter": "U"
+    },
+    {
+     "id": "as-yangtze",
+     "x": 60.7,
+     "y": 55.76,
+     "letter": "T"
+    },
+    {
+     "id": "cty-laos",
+     "x": 57.6,
+     "y": 68.8,
+     "letter": "T"
+    },
+    {
+     "id": "cty-thailand",
+     "x": 53.2,
+     "y": 69.2,
+     "letter": "H"
+    },
+    {
+     "id": "cty-cambodia",
+     "x": 56.8,
+     "y": 74.4,
+     "letter": "A"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "Y"
+    },
+    {
+     "id": "as-brahmaputra@cty-china",
+     "x": 46.02,
+     "y": 57.52,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-yangtze",
+     "position": 4,
+     "text": "Find the fourth letter on the Yangtze."
+    },
+    {
+     "markerId": "as-irrawaddy",
+     "position": 2,
+     "text": "Find the second letter on the Irrawaddy."
+    },
+    {
+     "markerId": "cty-thailand",
+     "position": 6,
+     "text": "Find the sixth letter in Thailand."
+    },
+    {
+     "markerId": "cty-vietnam",
+     "position": 3,
+     "text": "Find the third letter in Vietnam."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the South China Sea."
+    },
+    {
+     "markerId": "cty-laos",
+     "position": 5,
+     "text": "Find the fifth letter in Laos."
+    },
+    {
+     "markerId": "as-salween@cty-myanmar",
+     "position": 1,
+     "text": "Find the first letter on the Salween in Myanmar."
+    },
+    {
+     "markerId": "cty-cambodia",
+     "position": 7,
+     "text": "Find the seventh letter in Cambodia."
+    },
+    {
+     "markerId": "as-brahmaputra@cty-china",
+     "position": 9,
+     "text": "Find the ninth letter on the Brahmaputra in China."
+    }
+   ],
+   "focus": {
+    "x": 55,
+    "y": 70,
+    "zoom": 3.2
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "3c8e3affd489c90c"
+   }
+  },
+  {
+   "id": "b3-section-6-unit-2-ru",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АЮТТХАЯ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-laos",
+     "x": 56.4,
+     "y": 67.2,
+     "letter": "А"
+    },
+    {
+     "id": "cty-vietnam",
+     "x": 60,
+     "y": 72.8,
+     "letter": "Ю"
+    },
+    {
+     "id": "as-mekong@cty-china",
+     "x": 52.69,
+     "y": 58.64,
+     "letter": "Т"
+    },
+    {
+     "id": "cty-cambodia",
+     "x": 56.8,
+     "y": 74.4,
+     "letter": "Т"
+    },
+    {
+     "id": "as-irrawaddy",
+     "x": 50.66,
+     "y": 68.6,
+     "letter": "Х"
+    },
+    {
+     "id": "as-chao-phraya@cty-thailand",
+     "x": 53.95,
+     "y": 70.51,
+     "letter": "А"
+    },
+    {
+     "id": "as-salween@cty-myanmar",
+     "x": 52.81,
+     "y": 65.27,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-irrawaddy",
+     "position": 5,
+     "text": "Найди пятую букву на Иравади."
+    },
+    {
+     "markerId": "cty-vietnam",
+     "position": 2,
+     "text": "Найди вторую букву во Вьетнаме."
+    },
+    {
+     "markerId": "cty-cambodia",
+     "position": 4,
+     "text": "Найди четвёртую букву в Камбодже."
+    },
+    {
+     "markerId": "as-salween@cty-myanmar",
+     "position": 7,
+     "text": "Найди седьмую букву на Салуине в Мьянме."
+    },
+    {
+     "markerId": "as-mekong@cty-china",
+     "position": 3,
+     "text": "Найди третью букву на Меконге в Китае."
+    },
+    {
+     "markerId": "cty-laos",
+     "position": 1,
+     "text": "Найди первую букву в Лаосе."
+    },
+    {
+     "markerId": "as-chao-phraya@cty-thailand",
+     "position": 6,
+     "text": "Найди шестую букву на Чаупхрае в Таиланде."
+    }
+   ],
+   "focus": {
+    "x": 55,
+    "y": 70,
+    "zoom": 3.2
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "0f2d682cc757ec3d"
+   }
+  },
+  {
+   "id": "b3-section-6-unit-3-en",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MAJAPAHIT",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-indonesia",
+     "x": 84.8,
+     "y": 79.6,
+     "letter": "M"
+    },
+    {
+     "id": "as-irrawaddy@cty-myanmar",
+     "x": 50.44,
+     "y": 65.12,
+     "letter": "A"
+    },
+    {
+     "id": "cty-malaysia",
+     "x": 55.6,
+     "y": 83.2,
+     "letter": "J"
+    },
+    {
+     "id": "cty-brunei",
+     "x": 65.78,
+     "y": 80.02,
+     "letter": "A"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "P"
+    },
+    {
+     "id": "as-chao-phraya@cty-thailand",
+     "x": 53.95,
+     "y": 70.51,
+     "letter": "A"
+    },
+    {
+     "id": "cty-philippines",
+     "x": 73.17,
+     "y": 73.02,
+     "letter": "H"
+    },
+    {
+     "id": "cty-timor-leste",
+     "x": 78.08,
+     "y": 91.48,
+     "letter": "I"
+    },
+    {
+     "id": "as-mekong@cty-china",
+     "x": 53,
+     "y": 60.92,
+     "letter": "T"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-irrawaddy@cty-myanmar",
+     "position": 2,
+     "text": "Find the second letter on the Irrawaddy in Myanmar."
+    },
+    {
+     "markerId": "cty-brunei",
+     "position": 4,
+     "text": "Find the fourth letter in Brunei."
+    },
+    {
+     "markerId": "as-chao-phraya@cty-thailand",
+     "position": 6,
+     "text": "Find the sixth letter on the Chao Phraya in Thailand."
+    },
+    {
+     "markerId": "cty-timor-leste",
+     "position": 8,
+     "text": "Find the eighth letter in Timor-Leste."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the South China Sea."
+    },
+    {
+     "markerId": "cty-malaysia",
+     "position": 3,
+     "text": "Find the third letter in Malaysia."
+    },
+    {
+     "markerId": "as-mekong@cty-china",
+     "position": 9,
+     "text": "Find the ninth letter on the Mekong in China."
+    },
+    {
+     "markerId": "cty-philippines",
+     "position": 7,
+     "text": "Find the seventh letter in the Philippines."
+    },
+    {
+     "markerId": "cty-indonesia",
+     "position": 1,
+     "text": "Find the first letter in Indonesia."
+    }
+   ],
+   "focus": {
+    "x": 69,
+    "y": 80,
+    "zoom": 2.4
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "03f11fe5f5410499"
+   }
+  },
+  {
+   "id": "b3-section-6-unit-3-ru",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МАДЖАПАХИТ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-indonesia",
+     "x": 62.4,
+     "y": 84.8,
+     "letter": "М"
+    },
+    {
+     "id": "as-chao-phraya@cty-thailand",
+     "x": 53.95,
+     "y": 70.51,
+     "letter": "А"
+    },
+    {
+     "id": "as-irrawaddy@cty-myanmar",
+     "x": 50.44,
+     "y": 65.12,
+     "letter": "Д"
+    },
+    {
+     "id": "as-mekong@cty-cambodia",
+     "x": 58.25,
+     "y": 72.82,
+     "letter": "Ж"
+    },
+    {
+     "id": "cty-brunei",
+     "x": 65.78,
+     "y": 80.02,
+     "letter": "А"
+    },
+    {
+     "id": "cty-timor-leste",
+     "x": 78.08,
+     "y": 91.48,
+     "letter": "П"
+    },
+    {
+     "id": "as-yangtze@cty-china",
+     "x": 54.55,
+     "y": 60.02,
+     "letter": "А"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "Х"
+    },
+    {
+     "id": "cty-philippines",
+     "x": 71.6,
+     "y": 73.6,
+     "letter": "И"
+    },
+    {
+     "id": "cty-singapore",
+     "x": 57.59,
+     "y": 85.35,
+     "letter": "Т"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-mekong@cty-cambodia",
+     "position": 4,
+     "text": "Найди четвёртую букву на Меконге в Камбодже."
+    },
+    {
+     "markerId": "as-yangtze@cty-china",
+     "position": 7,
+     "text": "Найди седьмую букву на Янцзы в Китае."
+    },
+    {
+     "markerId": "as-irrawaddy@cty-myanmar",
+     "position": 3,
+     "text": "Найди третью букву на Иравади в Мьянме."
+    },
+    {
+     "markerId": "cty-philippines",
+     "position": 9,
+     "text": "Найди девятую букву на Филиппинах."
+    },
+    {
+     "markerId": "as-chao-phraya@cty-thailand",
+     "position": 2,
+     "text": "Найди вторую букву на Чаупхрае в Таиланде."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в Южно-Китайском море."
+    },
+    {
+     "markerId": "cty-timor-leste",
+     "position": 6,
+     "text": "Найди шестую букву в Восточном Тиморе."
+    },
+    {
+     "markerId": "cty-indonesia",
+     "position": 1,
+     "text": "Найди первую букву в Индонезии."
+    },
+    {
+     "markerId": "cty-singapore",
+     "position": 10,
+     "text": "Найди десятую букву в Сингапуре."
+    },
+    {
+     "markerId": "cty-brunei",
+     "position": 5,
+     "text": "Найди пятую букву в Брунее."
+    }
+   ],
+   "focus": {
+    "x": 69,
+    "y": 80,
+    "zoom": 2.4
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "cf5e5bbe84c9a9e4"
+   }
+  },
+  {
+   "id": "b3-section-6-final-en",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "CONFUCIANISM",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-singapore",
+     "x": 57.59,
+     "y": 85.35,
+     "letter": "C"
+    },
+    {
+     "id": "as-huang-he@cty-china",
+     "x": 59.98,
+     "y": 51.19,
+     "letter": "O"
+    },
+    {
+     "id": "cty-malaysia",
+     "x": 64,
+     "y": 82.8,
+     "letter": "N"
+    },
+    {
+     "id": "as-irtysh",
+     "x": 47.03,
+     "y": 40.86,
+     "letter": "F"
+    },
+    {
+     "id": "as-salween",
+     "x": 52.18,
+     "y": 57.82,
+     "letter": "U"
+    },
+    {
+     "id": "cty-taiwan",
+     "x": 66.5,
+     "y": 59.92,
+     "letter": "C"
+    },
+    {
+     "id": "as-mekong@cty-laos",
+     "x": 55.13,
+     "y": 66.16,
+     "letter": "I"
+    },
+    {
+     "id": "cty-timor-leste",
+     "x": 78.08,
+     "y": 91.48,
+     "letter": "A"
+    },
+    {
+     "id": "cty-japan",
+     "x": 72,
+     "y": 44.8,
+     "letter": "N"
+    },
+    {
+     "id": "cty-indonesia",
+     "x": 82,
+     "y": 78.8,
+     "letter": "I"
+    },
+    {
+     "id": "cty-vietnam",
+     "x": 58,
+     "y": 75.6,
+     "letter": "S"
+    },
+    {
+     "id": "cty-philippines",
+     "x": 73.17,
+     "y": 73.02,
+     "letter": "M"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-japan",
+     "position": 9,
+     "text": "Find the ninth letter in Japan."
+    },
+    {
+     "markerId": "cty-taiwan",
+     "position": 6,
+     "text": "Find the sixth letter on Taiwan."
+    },
+    {
+     "markerId": "as-huang-he@cty-china",
+     "position": 2,
+     "text": "Find the second letter on the Huang He in China."
+    },
+    {
+     "markerId": "as-irtysh",
+     "position": 4,
+     "text": "Find the fourth letter on the Irtysh."
+    },
+    {
+     "markerId": "cty-vietnam",
+     "position": 11,
+     "text": "Find the eleventh letter in Vietnam."
+    },
+    {
+     "markerId": "as-salween",
+     "position": 5,
+     "text": "Find the fifth letter on the Salween."
+    },
+    {
+     "markerId": "cty-philippines",
+     "position": 12,
+     "text": "Find the twelfth letter in the Philippines."
+    },
+    {
+     "markerId": "as-mekong@cty-laos",
+     "position": 7,
+     "text": "Find the seventh letter on the Mekong in Laos."
+    },
+    {
+     "markerId": "cty-indonesia",
+     "position": 10,
+     "text": "Find the tenth letter in Indonesia."
+    },
+    {
+     "markerId": "cty-malaysia",
+     "position": 3,
+     "text": "Find the third letter in Malaysia."
+    },
+    {
+     "markerId": "cty-singapore",
+     "position": 1,
+     "text": "Find the first letter in Singapore."
+    },
+    {
+     "markerId": "cty-timor-leste",
+     "position": 8,
+     "text": "Find the eighth letter in Timor-Leste."
+    }
+   ],
+   "focus": {
+    "x": 60,
+    "y": 64,
+    "zoom": 1.6
+   },
+   "inRegion": 12,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "551e99988445542f"
+   }
+  },
+  {
+   "id": "b3-section-6-final-ru",
+   "section": "countries-east-and-southeast-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "КОНФУЦИАНСТВО",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-huang-he",
+     "x": 56.85,
+     "y": 46.35,
+     "letter": "К"
+    },
+    {
+     "id": "cty-brunei",
+     "x": 65.78,
+     "y": 80.02,
+     "letter": "О"
+    },
+    {
+     "id": "as-mekong@cty-cambodia",
+     "x": 58.25,
+     "y": 72.82,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-singapore",
+     "x": 57.59,
+     "y": 85.35,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-salween",
+     "x": 50.33,
+     "y": 55.94,
+     "letter": "У"
+    },
+    {
+     "id": "as-ili@cty-china",
+     "x": 43.94,
+     "y": 43.71,
+     "letter": "Ц"
+    },
+    {
+     "id": "cty-south-korea",
+     "x": 67.65,
+     "y": 46.66,
+     "letter": "И"
+    },
+    {
+     "id": "as-irrawaddy@cty-myanmar",
+     "x": 50.66,
+     "y": 68.57,
+     "letter": "А"
+    },
+    {
+     "id": "cty-timor-leste",
+     "x": 78.08,
+     "y": 91.48,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-japan",
+     "x": 72.8,
+     "y": 41.2,
+     "letter": "С"
+    },
+    {
+     "id": "cty-vietnam",
+     "x": 56.92,
+     "y": 64.27,
+     "letter": "Т"
+    },
+    {
+     "id": "cty-mongolia",
+     "x": 50,
+     "y": 39.2,
+     "letter": "В"
+    },
+    {
+     "id": "cty-philippines",
+     "x": 68,
+     "y": 66.4,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-singapore",
+     "position": 4,
+     "text": "Найди четвёртую букву в Сингапуре."
+    },
+    {
+     "markerId": "cty-japan",
+     "position": 10,
+     "text": "Найди десятую букву в Японии."
+    },
+    {
+     "markerId": "as-irrawaddy@cty-myanmar",
+     "position": 8,
+     "text": "Найди восьмую букву на Иравади в Мьянме."
+    },
+    {
+     "markerId": "cty-brunei",
+     "position": 2,
+     "text": "Найди вторую букву в Брунее."
+    },
+    {
+     "markerId": "cty-vietnam",
+     "position": 11,
+     "text": "Найди одиннадцатую букву во Вьетнаме."
+    },
+    {
+     "markerId": "as-ili@cty-china",
+     "position": 6,
+     "text": "Найди шестую букву на реке Или в Китае."
+    },
+    {
+     "markerId": "cty-timor-leste",
+     "position": 9,
+     "text": "Найди девятую букву в Восточном Тиморе."
+    },
+    {
+     "markerId": "as-salween",
+     "position": 5,
+     "text": "Найди пятую букву на Салуине."
+    },
+    {
+     "markerId": "cty-philippines",
+     "position": 13,
+     "text": "Найди тринадцатую букву на Филиппинах."
+    },
+    {
+     "markerId": "cty-south-korea",
+     "position": 7,
+     "text": "Найди седьмую букву в Южной Корее."
+    },
+    {
+     "markerId": "as-mekong@cty-cambodia",
+     "position": 3,
+     "text": "Найди третью букву на Меконге в Камбодже."
+    },
+    {
+     "markerId": "cty-mongolia",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Монголии."
+    },
+    {
+     "markerId": "as-huang-he",
+     "position": 1,
+     "text": "Найди первую букву на Хуанхэ."
+    }
+   ],
+   "focus": {
+    "x": 60,
+    "y": 64,
+    "zoom": 1.6
+   },
+   "inRegion": 13,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "0106c5829a5d2471"
+   }
+  }
+ ]
+}

@@ -90,7 +90,7 @@ try{
   assert.equal(await flow.page.evaluate(()=>JSON.parse(localStorage.getItem('geowords_expedition_v1')).done['u1-final']),true);
   await flow.page.reload();
   await flow.page.locator('[data-a="continue-unit-2"]').waitFor();
-  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.31-asia-5/);
+  assert.match(await flow.page.locator('section.home').innerText(),/2026.10.31-asia-6b/);
   await flow.page.locator('[data-a="continue-unit-2"]').click();
   assert.equal(await flow.page.locator('.sheet [data-a="go"]').count(),1);
   await flow.page.locator('.sheet [data-a="go"]').click();
