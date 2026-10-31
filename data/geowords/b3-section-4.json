@@ -1,0 +1,1181 @@
+{
+ "section": "mountains-of-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the mountains of data/maps/asia-mountains.json learned by the end of the unit (section final: all 19), at the label point (a range's innermost point, a volcano's summit), the newest unit's first; then on the objects of data/maps/asia-overview.json (section 1) except its Ural Mountains, which are drawn on this map as «as-urals»; one letter per object",
+  "nesting": "no letter inside the area of another object of the puzzle; a marginal sea or an island never with the ocean it lies in",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-4-unit-1-en",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "KANGCHENJUNGA",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-himalayas",
+     "x": 47.27,
+     "y": 58.62,
+     "letter": "K"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "A"
+    },
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "N"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "G"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "C"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "H"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "E"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "N"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "J"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "U"
+    },
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "N"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "G"
+    },
+    {
+     "id": "as-chukotka",
+     "x": 70.82,
+     "y": 6.85,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 8,
+     "text": "Find the eighth letter on the Malay Peninsula."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 9,
+     "text": "Find the ninth letter in the Hindu Kush."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Find the second letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 12,
+     "text": "Find the twelfth letter on the Indochina Peninsula."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 3,
+     "text": "Find the third letter on the Tibetan Plateau."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 7,
+     "text": "Find the seventh letter in the Tian Shan."
+    },
+    {
+     "markerId": "as-chukotka",
+     "position": 13,
+     "text": "Find the thirteenth letter on the Chukchi Peninsula."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 6,
+     "text": "Find the sixth letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-kunlun",
+     "position": 11,
+     "text": "Find the eleventh letter in the Kunlun Mountains."
+    },
+    {
+     "markerId": "as-himalayas",
+     "position": 1,
+     "text": "Find the first letter in the Himalayas."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 10,
+     "text": "Find the tenth letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 4,
+     "text": "Find the fourth letter at the Bosporus."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e9270c1c5d246f91"
+   }
+  },
+  {
+   "id": "b3-section-4-unit-1-ru",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "КАНЧЕНДЖАНГА",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "К"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "А"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "Н"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "Ч"
+    },
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "Е"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "Н"
+    },
+    {
+     "id": "as-himalayas",
+     "x": 47.27,
+     "y": 58.62,
+     "letter": "Д"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "Ж"
+    },
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "А"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "Н"
+    },
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "Г"
+    },
+    {
+     "id": "as-chukotka",
+     "x": 70.82,
+     "y": 6.85,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-kunlun",
+     "position": 9,
+     "text": "Найди девятую букву в горах Куньлунь."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 11,
+     "text": "Найди одиннадцатую букву у Суэцкого канала."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Гиндукуш."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 5,
+     "text": "Найди пятую букву на Тибетском нагорье."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Найди вторую букву в Охотском море."
+    },
+    {
+     "markerId": "as-himalayas",
+     "position": 7,
+     "text": "Найди седьмую букву в Гималаях."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 10,
+     "text": "Найди десятую букву на Корейском полуострове."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 6,
+     "text": "Найди шестую букву в горах Тянь-Шань."
+    },
+    {
+     "markerId": "as-chukotka",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Чукотке."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 1,
+     "text": "Найди первую букву в Южно-Китайском море."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "2445d5331c3387d6"
+   }
+  },
+  {
+   "id": "b3-section-4-unit-2-en",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "STRATOVOLCANO",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-sayan",
+     "x": 50.86,
+     "y": 35.12,
+     "letter": "S"
+    },
+    {
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
+     "letter": "T"
+    },
+    {
+     "id": "as-klyuchevskaya",
+     "x": 73.25,
+     "y": 20.58,
+     "letter": "R"
+    },
+    {
+     "id": "as-urals",
+     "x": 35.45,
+     "y": 31.31,
+     "letter": "A"
+    },
+    {
+     "id": "as-himalayas",
+     "x": 47.27,
+     "y": 58.62,
+     "letter": "T"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "O"
+    },
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "V"
+    },
+    {
+     "id": "as-altai",
+     "x": 46.41,
+     "y": 38.06,
+     "letter": "O"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "L"
+    },
+    {
+     "id": "as-sikhote-alin",
+     "x": 68.73,
+     "y": 32.75,
+     "letter": "C"
+    },
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "A"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "N"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-klyuchevskaya",
+     "position": 3,
+     "text": "Find the third letter on the volcano Klyuchevskaya Sopka."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 6,
+     "text": "Find the sixth letter in the Tian Shan."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 2,
+     "text": "Find the second letter on Mount Fuji."
+    },
+    {
+     "markerId": "as-altai",
+     "position": 8,
+     "text": "Find the eighth letter in the Altai Mountains."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Hindu Kush."
+    },
+    {
+     "markerId": "as-kunlun",
+     "position": 7,
+     "text": "Find the seventh letter in the Kunlun Mountains."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 12,
+     "text": "Find the twelfth letter in the Bering Strait."
+    },
+    {
+     "markerId": "as-urals",
+     "position": 4,
+     "text": "Find the fourth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the South China Sea."
+    },
+    {
+     "markerId": "as-himalayas",
+     "position": 5,
+     "text": "Find the fifth letter in the Himalayas."
+    },
+    {
+     "markerId": "as-sikhote-alin",
+     "position": 10,
+     "text": "Find the tenth letter in the Sikhote-Alin."
+    },
+    {
+     "markerId": "as-sayan",
+     "position": 1,
+     "text": "Find the first letter in the Sayan Mountains."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 11,
+     "text": "Find the eleventh letter on the Tibetan Plateau."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "80104a35705c9ea8"
+   }
+  },
+  {
+   "id": "b3-section-4-unit-2-ru",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СТРАТОВУЛКАН",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "С"
+    },
+    {
+     "id": "as-himalayas",
+     "x": 47.27,
+     "y": 58.62,
+     "letter": "Т"
+    },
+    {
+     "id": "as-sayan",
+     "x": 50.86,
+     "y": 35.12,
+     "letter": "Р"
+    },
+    {
+     "id": "as-sikhote-alin",
+     "x": 68.73,
+     "y": 32.75,
+     "letter": "А"
+    },
+    {
+     "id": "as-urals",
+     "x": 35.45,
+     "y": 31.31,
+     "letter": "Т"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "О"
+    },
+    {
+     "id": "as-klyuchevskaya",
+     "x": 73.25,
+     "y": 20.58,
+     "letter": "В"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "У"
+    },
+    {
+     "id": "as-altai",
+     "x": 46.41,
+     "y": 38.06,
+     "letter": "Л"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "К"
+    },
+    {
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
+     "letter": "А"
+    },
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-tian-shan",
+     "position": 6,
+     "text": "Найди шестую букву в горах Тянь-Шань."
+    },
+    {
+     "markerId": "as-sikhote-alin",
+     "position": 4,
+     "text": "Найди четвёртую букву в горах Сихотэ-Алинь."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Гиндукуш."
+    },
+    {
+     "markerId": "as-sayan",
+     "position": 3,
+     "text": "Найди третью букву в Саянах."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 10,
+     "text": "Найди десятую букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-klyuchevskaya",
+     "position": 7,
+     "text": "Найди седьмую букву на вулкане Ключевская Сопка."
+    },
+    {
+     "markerId": "as-himalayas",
+     "position": 2,
+     "text": "Найди вторую букву в Гималаях."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Тибетском нагорье."
+    },
+    {
+     "markerId": "as-urals",
+     "position": 5,
+     "text": "Найди пятую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-altai",
+     "position": 9,
+     "text": "Найди девятую букву на Алтае."
+    },
+    {
+     "markerId": "as-kunlun",
+     "position": 1,
+     "text": "Найди первую букву в горах Куньлунь."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на вулкане Фудзи."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "2cd8d605561fa386"
+   }
+  },
+  {
+   "id": "b3-section-4-unit-3-en",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SOLFATARA",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
+     "letter": "S"
+    },
+    {
+     "id": "as-elburz",
+     "x": 28.45,
+     "y": 44,
+     "letter": "O"
+    },
+    {
+     "id": "as-zagros",
+     "x": 26.59,
+     "y": 50.94,
+     "letter": "L"
+    },
+    {
+     "id": "as-caucasus",
+     "x": 26.73,
+     "y": 35,
+     "letter": "F"
+    },
+    {
+     "id": "as-klyuchevskaya",
+     "x": 73.25,
+     "y": 20.58,
+     "letter": "A"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "T"
+    },
+    {
+     "id": "as-barisan",
+     "x": 57.23,
+     "y": 91.31,
+     "letter": "A"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "R"
+    },
+    {
+     "id": "as-arakan",
+     "x": 49.55,
+     "y": 65.56,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-klyuchevskaya",
+     "position": 5,
+     "text": "Find the fifth letter on the volcano Klyuchevskaya Sopka."
+    },
+    {
+     "markerId": "as-elburz",
+     "position": 2,
+     "text": "Find the second letter in the Elburz Mountains."
+    },
+    {
+     "markerId": "as-caucasus",
+     "position": 4,
+     "text": "Find the fourth letter in the Caucasus Mountains."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 8,
+     "text": "Find the eighth letter in the Tian Shan."
+    },
+    {
+     "markerId": "as-zagros",
+     "position": 3,
+     "text": "Find the third letter in the Zagros Mountains."
+    },
+    {
+     "markerId": "as-barisan",
+     "position": 7,
+     "text": "Find the seventh letter in the Barisan Mountains."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 1,
+     "text": "Find the first letter on Mount Fuji."
+    },
+    {
+     "markerId": "as-arakan",
+     "position": 9,
+     "text": "Find the ninth letter in the Arakan Mountains."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 6,
+     "text": "Find the sixth letter in the Hindu Kush."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "deebab09b448b25c"
+   }
+  },
+  {
+   "id": "b3-section-4-unit-3-ru",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СОЛЬФАТАРА",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-elburz",
+     "x": 28.45,
+     "y": 44,
+     "letter": "С"
+    },
+    {
+     "id": "as-kunlun",
+     "x": 45.68,
+     "y": 50.56,
+     "letter": "О"
+    },
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "Л"
+    },
+    {
+     "id": "as-barisan",
+     "x": 57.23,
+     "y": 91.31,
+     "letter": "Ь"
+    },
+    {
+     "id": "as-hindu-kush",
+     "x": 36.64,
+     "y": 48.94,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-zagros",
+     "x": 26.59,
+     "y": 50.94,
+     "letter": "А"
+    },
+    {
+     "id": "as-caucasus",
+     "x": 26.73,
+     "y": 35,
+     "letter": "Т"
+    },
+    {
+     "id": "as-sikhote-alin",
+     "x": 68.73,
+     "y": 32.75,
+     "letter": "А"
+    },
+    {
+     "id": "as-arakan",
+     "x": 49.55,
+     "y": 65.56,
+     "letter": "Р"
+    },
+    {
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-barisan",
+     "position": 4,
+     "text": "Найди четвёртую букву в горах Барисан."
+    },
+    {
+     "markerId": "as-kunlun",
+     "position": 2,
+     "text": "Найди вторую букву в горах Куньлунь."
+    },
+    {
+     "markerId": "as-hindu-kush",
+     "position": 5,
+     "text": "Найди пятую букву в горах Гиндукуш."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 10,
+     "text": "Найди десятую букву на вулкане Фудзи."
+    },
+    {
+     "markerId": "as-caucasus",
+     "position": 7,
+     "text": "Найди седьмую букву в Кавказских горах."
+    },
+    {
+     "markerId": "as-arakan",
+     "position": 9,
+     "text": "Найди девятую букву в Араканских горах."
+    },
+    {
+     "markerId": "as-zagros",
+     "position": 6,
+     "text": "Найди шестую букву в горах Загрос."
+    },
+    {
+     "markerId": "as-sikhote-alin",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Сихотэ-Алинь."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 3,
+     "text": "Найди третью букву на Тибетском нагорье."
+    },
+    {
+     "markerId": "as-elburz",
+     "position": 1,
+     "text": "Найди первую букву в горах Эльбурс."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "babde18068b793d1"
+   }
+  },
+  {
+   "id": "b3-section-4-final-en",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "SUBDUCTION",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-tibet",
+     "x": 53,
+     "y": 55.62,
+     "letter": "S"
+    },
+    {
+     "id": "as-sikhote-alin",
+     "x": 68.73,
+     "y": 32.75,
+     "letter": "U"
+    },
+    {
+     "id": "as-caucasus",
+     "x": 26.73,
+     "y": 35,
+     "letter": "B"
+    },
+    {
+     "id": "as-tian-shan",
+     "x": 42.59,
+     "y": 44.94,
+     "letter": "D"
+    },
+    {
+     "id": "as-fuji",
+     "x": 73.1,
+     "y": 44.04,
+     "letter": "U"
+    },
+    {
+     "id": "as-barisan",
+     "x": 57.23,
+     "y": 91.31,
+     "letter": "C"
+    },
+    {
+     "id": "as-elburz",
+     "x": 28.45,
+     "y": 44,
+     "letter": "T"
+    },
+    {
+     "id": "as-altai",
+     "x": 46.41,
+     "y": 38.06,
+     "letter": "I"
+    },
+    {
+     "id": "as-zagros",
+     "x": 26.59,
+     "y": 50.94,
+     "letter": "O"
+    },
+    {
+     "id": "as-arakan",
+     "x": 49.55,
+     "y": 65.56,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-barisan",
+     "position": 6,
+     "text": "Find the sixth letter in the Barisan Mountains."
+    },
+    {
+     "markerId": "as-sikhote-alin",
+     "position": 2,
+     "text": "Find the second letter in the Sikhote-Alin."
+    },
+    {
+     "markerId": "as-fuji",
+     "position": 5,
+     "text": "Find the fifth letter on Mount Fuji."
+    },
+    {
+     "markerId": "as-altai",
+     "position": 8,
+     "text": "Find the eighth letter in the Altai Mountains."
+    },
+    {
+     "markerId": "as-caucasus",
+     "position": 3,
+     "text": "Find the third letter in the Caucasus Mountains."
+    },
+    {
+     "markerId": "as-zagros",
+     "position": 9,
+     "text": "Find the ninth letter in the Zagros Mountains."
+    },
+    {
+     "markerId": "as-tian-shan",
+     "position": 4,
+     "text": "Find the fourth letter in the Tian Shan."
+    },
+    {
+     "markerId": "as-tibet",
+     "position": 1,
+     "text": "Find the first letter on the Tibetan Plateau."
+    },
+    {
+     "markerId": "as-arakan",
+     "position": 10,
+     "text": "Find the tenth letter in the Arakan Mountains."
+    },
+    {
+     "markerId": "as-elburz",
+     "position": 7,
+     "text": "Find the seventh letter in the Elburz Mountains."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "494a893e81bf8ee5"
+   }
+  },
+  {
+   "id": "b3-section-4-final-ru",
+   "section": "mountains-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "СУБДУКЦИЯ",
+   "map": "./assets/asia-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-sikhote-alin",
+     "x": 68.73,
+     "y": 32.75,
+     "letter": "С"
+    },
+    {
+     "id": "as-krakatoa",
+     "x": 59.69,
+     "y": 93.93,
+     "letter": "У"
+    },
+    {
+     "id": "as-klyuchevskaya",
+     "x": 73.25,
+     "y": 20.58,
+     "letter": "Б"
+    },
+    {
+     "id": "as-zagros",
+     "x": 26.59,
+     "y": 50.94,
+     "letter": "Д"
+    },
+    {
+     "id": "as-arakan",
+     "x": 49.55,
+     "y": 65.56,
+     "letter": "У"
+    },
+    {
+     "id": "as-pamirs",
+     "x": 38.82,
+     "y": 47.19,
+     "letter": "К"
+    },
+    {
+     "id": "as-caucasus",
+     "x": 26.73,
+     "y": 35,
+     "letter": "Ц"
+    },
+    {
+     "id": "as-elburz",
+     "x": 28.45,
+     "y": 44,
+     "letter": "И"
+    },
+    {
+     "id": "as-urals",
+     "x": 35.45,
+     "y": 31.31,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-arakan",
+     "position": 5,
+     "text": "Найди пятую букву в Араканских горах."
+    },
+    {
+     "markerId": "as-krakatoa",
+     "position": 2,
+     "text": "Найди вторую букву на вулкане Кракатау."
+    },
+    {
+     "markerId": "as-pamirs",
+     "position": 6,
+     "text": "Найди шестую букву на Памире."
+    },
+    {
+     "markerId": "as-urals",
+     "position": 9,
+     "text": "Найди девятую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-klyuchevskaya",
+     "position": 3,
+     "text": "Найди третью букву на вулкане Ключевская Сопка."
+    },
+    {
+     "markerId": "as-elburz",
+     "position": 8,
+     "text": "Найди восьмую букву в горах Эльбурс."
+    },
+    {
+     "markerId": "as-zagros",
+     "position": 4,
+     "text": "Найди четвёртую букву в горах Загрос."
+    },
+    {
+     "markerId": "as-caucasus",
+     "position": 7,
+     "text": "Найди седьмую букву в Кавказских горах."
+    },
+    {
+     "markerId": "as-sikhote-alin",
+     "position": 1,
+     "text": "Найди первую букву в горах Сихотэ-Алинь."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e8723187143b157e"
+   }
+  }
+ ]
+}

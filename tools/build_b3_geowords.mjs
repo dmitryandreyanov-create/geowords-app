@@ -7,12 +7,14 @@
 // and on every object of section 1; the newest unit's rivers first, then the other learned rivers, section 1 when places run short.
 // A river whose letter lies inside a peninsula never shares a puzzle with it (no letter inside another object of the puzzle).
 // Section 3 «Lakes of Asia»: the same with the lakes of data/maps/asia-lakes.json (at the lake's label point) in place of the rivers.
-// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3]  — writes drafts; approved puzzles already in the file are kept as they are.
+// Section 4 «Mountains of Asia»: the same with the ranges, the plateau and the volcanoes of data/maps/asia-mountains.json; section 1's Ural Mountains are left out
+// (the Urals are drawn on the mountains map as «as-urals»).
+// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3|4]  — writes drafts; approved puzzles already in the file are kept as they are.
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/asia-overview.json", LAYER = { 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json" }[SEC];
-const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp" }[SEC];
+const MAP = "data/maps/asia-overview.json", LAYER = { 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json", 4: "data/maps/asia-mountains.json" }[SEC];
+const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp", 4: "./assets/asia-mountains.webp" }[SEC];
 const DICT = `data/dictionary/b3-section-${SEC}.json`, OUT = `data/geowords/b3-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -44,6 +46,13 @@ export const PLACE = {
   "as-aral": ["в Аральском море", "in the Aral Sea"], "as-balkhash": ["в озере Балхаш", "in Lake Balkhash"], "as-issyk-kul": ["в озере Иссык-Куль", "in Issyk-Kul"],
   "as-dead-sea": ["в Мёртвом море", "in the Dead Sea"], "as-urmia": ["в озере Урмия", "in Lake Urmia"], "as-van": ["в озере Ван", "in Lake Van"],
   "as-tonle-sap": ["в озере Тонлесап", "in Tonlé Sap"],
+  "as-pamirs": ["на Памире", "in the Pamirs"], "as-tian-shan": ["в горах Тянь-Шань", "in the Tian Shan"], "as-hindu-kush": ["в горах Гиндукуш", "in the Hindu Kush"],
+  "as-karakoram": ["в горах Каракорум", "in the Karakoram"], "as-kunlun": ["в горах Куньлунь", "in the Kunlun Mountains"], "as-tibet": ["на Тибетском нагорье", "on the Tibetan Plateau"],
+  "as-himalayas": ["в Гималаях", "in the Himalayas"], "as-altai": ["на Алтае", "in the Altai Mountains"], "as-sayan": ["в Саянах", "in the Sayan Mountains"],
+  "as-sikhote-alin": ["в горах Сихотэ-Алинь", "in the Sikhote-Alin"], "as-klyuchevskaya": ["на вулкане Ключевская Сопка", "on the volcano Klyuchevskaya Sopka"],
+  "as-fuji": ["на вулкане Фудзи", "on Mount Fuji"], "as-urals": ["в Уральских горах", "in the Ural Mountains"], "as-zagros": ["в горах Загрос", "in the Zagros Mountains"],
+  "as-elburz": ["в горах Эльбурс", "in the Elburz Mountains"], "as-caucasus": ["в Кавказских горах", "in the Caucasus Mountains"], "as-arakan": ["в Араканских горах", "in the Arakan Mountains"],
+  "as-barisan": ["в горах Барисан", "in the Barisan Mountains"], "as-krakatoa": ["на вулкане Кракатау", "on the volcano Krakatoa"],
 };
 // An object and the object it lies in never share a puzzle (EU_IN in app/app.js)
 export const CONTAINERS = {
@@ -56,7 +65,7 @@ const map = JSON.parse(fs.readFileSync(MAP, "utf8")), rivers = SEC >= 2 ? JSON.p
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
 const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
 const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
-const items = Object.fromEntries(map.items.map(o => [o.id, o]));
+const items = Object.fromEntries([...map.items, ...(SEC === 4 ? rivers : [])].map(o => [o.id, o]));  // section 4: the mountains are areas too
 const inside = (id, p) => { const o = items[id]; if (!o) return false; return polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl)); };
 const nested = (a, b) => (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id) || inside(b.id, a) || inside(a.id, b);
 const far = (a, b) => Math.hypot(a.x - b.x, (a.y - b.y) * ASPECT) >= SEP;
@@ -74,7 +83,7 @@ function revealOrder(n) {
   return null;
 }
 // section 2: the learned rivers (unit 1..3) and every object of section 1 (unit 0, used after the rivers)
-const places = unit => SEC >= 2 ? [...rivers.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label })), ...map.items.map(o => ({ id: o.id, unit: 0, ...o.label }))]
+const places = unit => SEC >= 2 ? [...rivers.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label })), ...map.items.filter(o => !(SEC === 4 && o.id === "as-ural-mountains")).map(o => ({ id: o.id, unit: 0, ...o.label }))]
   : map.items.filter(o => o.unit <= unit).map(o => ({ id: o.id, unit: o.unit, ...o.label }));
 
 function build(word, lang, unit, final, tries = 6000) {
@@ -117,7 +126,17 @@ for (const u of dict.units) {
       approval: { status: "draft" } });
   }
 }
-const out = SEC === 3 ? {
+const out = SEC === 4 ? {
+  section: "mountains-of-asia", block: 3,
+  rules: {
+    clues: "clues in reveal order; position = slot the letter fills",
+    places: "letters on the mountains of data/maps/asia-mountains.json learned by the end of the unit (section final: all 19), at the label point (a range's innermost point, a volcano's summit), the newest unit's first; then on the objects of data/maps/asia-overview.json (section 1) except its Ural Mountains, which are drawn on this map as «as-urals»; one letter per object",
+    nesting: "no letter inside the area of another object of the puzzle; a marginal sea or an island never with the ocean it lies in",
+    spacing: "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+    approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
+  },
+  puzzles,
+} : SEC === 3 ? {
   section: "lakes-of-asia", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",
