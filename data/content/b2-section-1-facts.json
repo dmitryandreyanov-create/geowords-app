@@ -1,0 +1,560 @@
+{
+ "section": "europe-on-the-map",
+ "block": 2,
+ "use": "introduction cards (exercise type 0), one fact per object; europe-intro opens the section; ids match data/maps/europe-overview.json",
+ "decisions": [
+  "The southern stretch of the Europe–Asia border (Caucasus / Kuma–Manych) is not named in this section; the Caucasus comes in the mountains section marked disputed (Svetlana, 26.10.2026).",
+  "The Crimean Peninsula is shown only as a physical object, with no country, and never appears in countries and capitals tasks (Svetlana, 26.10.2026)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Где кончается Европа",
+    "en": "Where Europe ends"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Полуострова Европы",
+    "en": "Peninsulas of Europe"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Острова и моря у берегов Европы",
+    "en": "Islands and seas off Europe"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "europe-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Europe",
+    "ru": "Европа"
+   },
+   "fact": {
+    "en": "Europe is one of the seven continents. It is joined to Asia by land, and together they form the largest landmass, Eurasia.",
+    "ru": "Европа — один из семи континентов. С Азией она соединена сушей, и вместе они образуют самый большой материк — Евразию."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "73c00ffa8ce32ae0"
+   }
+  },
+  {
+   "id": "atlantic-ocean",
+   "order": 1,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Atlantic Ocean",
+    "ru": "Атлантический океан"
+   },
+   "fact": {
+    "en": "The Atlantic Ocean washes Europe from the west.",
+    "ru": "Атлантический океан омывает Европу с запада."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "c17c530d243d0567"
+   }
+  },
+  {
+   "id": "arctic-ocean",
+   "order": 2,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Arctic Ocean",
+    "ru": "Северный Ледовитый океан"
+   },
+   "fact": {
+    "en": "The Arctic Ocean washes Europe from the north.",
+    "ru": "Северный Ледовитый океан омывает Европу с севера."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "4e32822883fc9d46"
+   }
+  },
+  {
+   "id": "mediterranean-sea",
+   "order": 3,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Mediterranean Sea",
+    "ru": "Средиземное море"
+   },
+   "fact": {
+    "en": "The Mediterranean Sea separates Europe from Africa.",
+    "ru": "Средиземное море отделяет Европу от Африки."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "48a70b2295928d2c"
+   }
+  },
+  {
+   "id": "ural-mountains",
+   "order": 4,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Ural Mountains",
+    "ru": "Уральские горы"
+   },
+   "fact": {
+    "en": "The Ural Mountains are the eastern border of Europe. Asia begins beyond them.",
+    "ru": "Уральские горы — восточная граница Европы. За ними начинается Азия."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "8bb2ead71c8bd78c"
+   }
+  },
+  {
+   "id": "ural-river",
+   "order": 5,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Ural River",
+    "ru": "Река Урал"
+   },
+   "fact": {
+    "en": "The Ural River continues the border between Europe and Asia from the Ural Mountains to the Caspian Sea.",
+    "ru": "Река Урал продолжает границу Европы и Азии от Уральских гор до Каспийского моря."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "f1607e458a1c7c75"
+   }
+  },
+  {
+   "id": "caspian-sea",
+   "order": 6,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Caspian Sea",
+    "ru": "Каспийское море"
+   },
+   "fact": {
+    "en": "In the south-east, the border of Europe runs along the Caspian Sea.",
+    "ru": "На юго-востоке граница Европы проходит по Каспийскому морю."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "57e23709200f3e03"
+   }
+  },
+  {
+   "id": "scandinavian-peninsula",
+   "order": 7,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Scandinavian Peninsula",
+    "ru": "Скандинавский полуостров"
+   },
+   "fact": {
+    "en": "Norway and Sweden lie on the Scandinavian Peninsula.",
+    "ru": "На Скандинавском полуострове лежат Норвегия и Швеция."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "103d557374303823"
+   }
+  },
+  {
+   "id": "kola-peninsula",
+   "order": 8,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Kola Peninsula",
+    "ru": "Кольский полуостров"
+   },
+   "fact": {
+    "en": "The Kola Peninsula lies almost entirely north of the Arctic Circle.",
+    "ru": "Кольский полуостров почти целиком лежит за Северным полярным кругом."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "2fc02b491e283d5a"
+   }
+  },
+  {
+   "id": "jutland",
+   "order": 9,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Jutland",
+    "ru": "Ютландия"
+   },
+   "fact": {
+    "en": "Mainland Denmark lies on the Jutland Peninsula.",
+    "ru": "На полуострове Ютландия лежит материковая часть Дании."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "141cd6968393dcec"
+   }
+  },
+  {
+   "id": "iberian-peninsula",
+   "order": 10,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Iberian Peninsula",
+    "ru": "Пиренейский полуостров"
+   },
+   "fact": {
+    "en": "Spain and Portugal lie on the Iberian Peninsula.",
+    "ru": "На Пиренейском полуострове лежат Испания и Португалия."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "f5263eaa053261eb"
+   }
+  },
+  {
+   "id": "apennine-peninsula",
+   "order": 11,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Apennine Peninsula",
+    "ru": "Апеннинский полуостров"
+   },
+   "fact": {
+    "en": "The Apennine Peninsula is shaped like a boot. Italy lies on it.",
+    "ru": "Апеннинский полуостров похож на сапог. На нём лежит Италия."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "2b41b81eba2f0d75"
+   }
+  },
+  {
+   "id": "balkan-peninsula",
+   "order": 12,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Balkan Peninsula",
+    "ru": "Балканский полуостров"
+   },
+   "fact": {
+    "en": "The Balkan Peninsula is washed by the Adriatic, Ionian, Aegean and Black Seas.",
+    "ru": "Балканский полуостров омывают Адриатическое, Ионическое, Эгейское и Чёрное моря."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "4ccba628381cd556"
+   }
+  },
+  {
+   "id": "crimean-peninsula",
+   "order": 13,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Crimean Peninsula",
+    "ru": "Крымский полуостров"
+   },
+   "fact": {
+    "en": "The Crimean Peninsula is washed by the Black Sea and the Sea of Azov.",
+    "ru": "Крымский полуостров омывают Чёрное и Азовское моря."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "177b7c627a880c6d"
+   }
+  },
+  {
+   "id": "great-britain",
+   "order": 14,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Great Britain",
+    "ru": "Великобритания"
+   },
+   "fact": {
+    "en": "The English Channel separates Great Britain from the mainland.",
+    "ru": "Великобританию отделяет от материка пролив Ла-Манш."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "47def76a23c9b34d"
+   }
+  },
+  {
+   "id": "ireland",
+   "order": 15,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Ireland",
+    "ru": "Ирландия"
+   },
+   "fact": {
+    "en": "Ireland is called the Emerald Isle because of its green meadows.",
+    "ru": "Ирландию называют Изумрудным островом за зелёные луга."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "a14f86eb6ee0b703"
+   }
+  },
+  {
+   "id": "iceland",
+   "order": 16,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Iceland",
+    "ru": "Исландия"
+   },
+   "fact": {
+    "en": "Iceland has many active volcanoes and hot springs called geysers.",
+    "ru": "В Исландии много действующих вулканов и горячих источников — гейзеров."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "df14a49e5967d22f"
+   }
+  },
+  {
+   "id": "sicily",
+   "order": 17,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Sicily",
+    "ru": "Сицилия"
+   },
+   "fact": {
+    "en": "Mount Etna stands on Sicily, and it still erupts today.",
+    "ru": "На Сицилии стоит вулкан Этна, он извергается до сих пор."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "e202337a6089c7cd"
+   }
+  },
+  {
+   "id": "baltic-sea",
+   "order": 18,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Baltic Sea",
+    "ru": "Балтийское море"
+   },
+   "fact": {
+    "en": "The water of the Baltic Sea is only slightly salty because many rivers flow into it.",
+    "ru": "Вода в Балтийском море малосолёная: в него впадает много рек."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "52b20f0ea2c9093a"
+   }
+  },
+  {
+   "id": "north-sea",
+   "order": 19,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "North Sea",
+    "ru": "Северное море"
+   },
+   "fact": {
+    "en": "Oil and gas are extracted from the bed of the North Sea.",
+    "ru": "На дне Северного моря добывают нефть и газ."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "5b6e1d2d549befdf"
+   }
+  },
+  {
+   "id": "barents-sea",
+   "order": 20,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Barents Sea",
+    "ru": "Баренцево море"
+   },
+   "fact": {
+    "en": "A warm current keeps the southern part of the Barents Sea from freezing in winter.",
+    "ru": "Тёплое течение не даёт южной части Баренцева моря замёрзнуть зимой."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Ku2PFpBVkPXTKuNeTZk4h8",
+    "note": "block 2 plan, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "977c40df8413b9bc"
+   }
+  }
+ ]
+}

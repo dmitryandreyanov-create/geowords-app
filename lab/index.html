@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#eef8fb" />
+  <title>GeoWords — лаборатория карт</title>
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/icon-192.png" />
+  <link rel="stylesheet" href="./lab.css" />
+</head>
+<body>
+  <div class="lab">
+    <header class="lab-head">
+      <a class="back" href="../">← Игра</a>
+      <div>
+        <p class="eyebrow">РУЧНОЙ ТЕСТ · НЕ ДЛЯ ДЕТЕЙ</p>
+        <h1>Лаборатория карт</h1>
+      </div>
+    </header>
+
+    <nav class="tabs" id="tabs" aria-label="Набор карт"></nav>
+
+    <section class="panel">
+      <div class="modes" role="group" aria-label="Режим">
+        <button type="button" id="modeQuiz" class="mode on" aria-pressed="true">Нажми на объект</button>
+        <button type="button" id="modeBrowse" class="mode" aria-pressed="false">Просмотр</button>
+      </div>
+      <div id="task" class="task" aria-live="polite"></div>
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+
+    <div class="map-wrap" id="mapWrap">
+      <div class="map" id="map">
+        <img id="base" alt="Карта" draggable="false" />
+        <div id="layers"></div>
+        <svg id="zones" class="zones" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div id="pins"></div>
+      </div>
+    </div>
+
+    <section class="panel controls">
+      <label class="row" id="stepRow"><span>Шаг (слои): <b id="stepVal"></b></span><input type="range" id="step" min="1" max="1" value="1" /></label>
+      <label class="row" id="baseRow"><span>Основа Европы</span><select id="euroBase"></select></label>
+      <div class="row">
+        <span>Масштаб</span>
+        <div class="zoom"><button type="button" id="zOut" aria-label="Уменьшить">−</button><b id="zVal">100%</b><button type="button" id="zIn" aria-label="Увеличить">+</button></div>
+      </div>
+      <label class="row check"><input type="checkbox" id="showZones" /> <span>Показать зоны нажатия и допуск 44 px</span></label>
+      <label class="row check"><input type="checkbox" id="tolerance" checked /> <span>Допуск под палец (ближайшая метка в радиусе 22 px)</span></label>
+    </section>
+
+    <section class="panel">
+      <h2>Журнал теста</h2>
+      <p class="hint">Каждое нажатие в режиме теста записывается. Скопируйте отчёт и пришлите разработчику.</p>
+      <div id="stats" class="stats"></div>
+      <ol id="log" class="log"></ol>
+      <div class="actions">
+        <button type="button" id="copy">Скопировать отчёт</button>
+        <button type="button" id="clear" class="ghost">Очистить</button>
+      </div>
+      <textarea id="reportText" class="report" readonly hidden></textarea>
+    </section>
+  </div>
+
+  <div id="insetDlg" class="inset-dlg" hidden>
+    <div class="inset-box">
+      <div class="inset-head"><b id="insetTitle">Врезка</b><button type="button" id="insetClose" aria-label="Закрыть">✕</button></div>
+      <div class="map inset-map" id="insetMap">
+        <img id="insetImg" alt="Увеличенная врезка" draggable="false" />
+        <svg id="insetZones" class="zones" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg>
+        <div id="insetPins"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./lab.js"></script>
+</body>
+</html>

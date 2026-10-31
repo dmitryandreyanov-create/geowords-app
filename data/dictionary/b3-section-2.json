@@ -1,0 +1,730 @@
+{
+ "section": "rivers-of-asia",
+ "block": 3,
+ "status": "approved",
+ "source": "Svetlana's list in the project thread, 29.10.2026 (24 words RU + EN; 6 words for unit 1 proposed by Claude)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters on the learned rivers first, then on the objects of section 1: up to 30 after unit 1, 40 after unit 2, 47 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Words from Svetlana's list (29.10.2026): ГАНГЕТИКА / GANGETIC → ВАРАНАСИ / VARANASI, МЕСОПОТАМЦЫ / MESOPOTAMIANS → НИНЕВИЯ / NINEVEH, ШУМЕРОЛОГИЯ / SUMEROLOGY → ГИЛЬГАМЕШ / GILGAMESH, EN for ЗИККУРАТ = ZIGGURAT («Утверждаю», 29.10.2026). Svetlana (29.10.2026): the words of a unit must belong to its rivers; for unit 1 (Siberia, none in her list) Claude proposed ЭВЕНКИ, ЯКУТЫ, ТАЙМЕНЬ, СОБОЛЬ, МАМОНТ, ОСТРОГ / EVENKS, YAKUTS, TAIMEN, SABLE, MAMMOTH, STOCKADE. Definitions by Claude and Svetlana; all words and the 8 finals approved by Svetlana 2026-10-29 («Утверждаю»). Svetlana's own definitions (29.10.2026, 22:19): ЯКУТЫ, ТАЙМЕНЬ, МОХЕНДЖОДАРО, АНГКОР, КХМЕРЫ, ГИЛЬГАМЕШ, ВАВИЛОНИЯ (its capital's name left out: same root), ЧАМПА, ХИНДУСТАН; EN to match, SABLE «valuable fur»."
+ },
+ "units": [
+  {
+   "id": "unit-1-siberia-far-east",
+   "title": {
+    "ru": "Реки Сибири и Дальнего Востока",
+    "en": "Rivers of Siberia and the Far East"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МАНЬЧЖУРИЯ",
+      "role": "final",
+      "definition": "Историческая область на северо-востоке Китая, у южного берега Амура.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "4f982f5790c82767"
+      }
+     },
+     {
+      "answer": "ЭВЕНКИ",
+      "role": "review",
+      "definition": "Народ тайги, который пасёт оленей и охотится от Енисея до Охотского моря.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "b80878ec4a630dcb"
+      }
+     },
+     {
+      "answer": "ЯКУТЫ",
+      "role": "review",
+      "definition": "Народ Сибири, традиционно занимавшийся разведением лошадей и крупного рогатого скота в суровом климате бассейна Лены.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "d25310ddc4b3896a"
+      }
+     },
+     {
+      "answer": "ТАЙМЕНЬ",
+      "role": "review",
+      "definition": "Крупная хищная рыба семейства лососёвых, обитающая в холодных реках Сибири.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "63f5f0707d68869b"
+      }
+     },
+     {
+      "answer": "СОБОЛЬ",
+      "role": "review",
+      "definition": "Небольшой зверёк тайги с ценным мехом.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "55497d84a6265ed8"
+      }
+     },
+     {
+      "answer": "МАМОНТ",
+      "role": "review",
+      "definition": "Древний слон с длинной шерстью; его туши находят в вечной мерзлоте у сибирских рек.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "fcdf08caffe968cb"
+      }
+     },
+     {
+      "answer": "ОСТРОГ",
+      "role": "review",
+      "definition": "Деревянная крепость первых русских поселенцев на сибирских реках.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "141d30ce692bb7fd"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MANCHURIA",
+      "role": "final",
+      "definition": "A historical region of northeast China on the southern bank of the Amur.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f44c6937b5b97b8b"
+      }
+     },
+     {
+      "answer": "EVENKS",
+      "role": "review",
+      "definition": "A taiga people who herd reindeer and hunt from the Yenisei to the Sea of Okhotsk.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "0e9b1e92e04c318c"
+      }
+     },
+     {
+      "answer": "YAKUTS",
+      "role": "review",
+      "definition": "A Siberian people who traditionally raised horses and cattle in the harsh climate of the Lena basin.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "3584e32da25a463c"
+      }
+     },
+     {
+      "answer": "TAIMEN",
+      "role": "review",
+      "definition": "A large predatory fish of the salmon family that lives in the cold rivers of Siberia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "ef49e99cdd8777be"
+      }
+     },
+     {
+      "answer": "SABLE",
+      "role": "review",
+      "definition": "A small taiga animal with valuable fur.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f28ed6e7cffd5a05"
+      }
+     },
+     {
+      "answer": "MAMMOTH",
+      "role": "review",
+      "definition": "An ancient woolly elephant whose remains are found in the frozen ground by Siberian rivers.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "d18f21718ff9b330"
+      }
+     },
+     {
+      "answer": "STOCKADE",
+      "role": "review",
+      "definition": "A wooden fort of the first Russian settlers on Siberian rivers.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "a9b271ce4769e03b"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-east-south",
+   "title": {
+    "ru": "Реки Восточной и Южной Азии",
+    "en": "Rivers of East and South Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МОХЕНДЖОДАРО",
+      "role": "final",
+      "definition": "Один из крупнейших городов Индской цивилизации, известный прямыми улицами и древней системой водоотведения.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "136c5bb3f17800e4"
+      }
+     },
+     {
+      "answer": "ХАРАППА",
+      "role": "review",
+      "definition": "Древний город на притоке Инда, по которому названа одна из первых цивилизаций мира.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "a71ec85ee4d044a1"
+      }
+     },
+     {
+      "answer": "ПЕНДЖАБ",
+      "role": "review",
+      "definition": "Область Индии и Пакистана, название которой значит «пять рек»: там Инд собирает притоки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "0372acca708a8527"
+      }
+     },
+     {
+      "answer": "БЕНГАЛИЯ",
+      "role": "review",
+      "definition": "Область в общей дельте Ганга и Брахмапутры, где тигры живут в мангровых лесах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "931847bae997648c"
+      }
+     },
+     {
+      "answer": "ХИНДУСТАН",
+      "role": "review",
+      "definition": "Историческое название севера Индии; его границы в разные времена понимали по-разному.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e44df4b19167c7f1"
+      }
+     },
+     {
+      "answer": "ВАРАНАСИ",
+      "role": "review",
+      "definition": "Священный город индуистов на берегу Ганга, куда приходят паломники.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "33c284c53c66e534"
+      }
+     },
+     {
+      "answer": "АНГКОР",
+      "role": "review",
+      "definition": "Древний город и храмовый комплекс Камбоджи с огромной системой каналов и водохранилищ.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "6ffde4c0cfe05ff6"
+      }
+     },
+     {
+      "answer": "КХМЕРЫ",
+      "role": "review",
+      "definition": "Народ Камбоджи, создавший могущественную империю и знаменитые храмы Ангкора.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "45a56a38a92c0a80"
+      }
+     },
+     {
+      "answer": "ЧАМПА",
+      "role": "review",
+      "definition": "Древнее государство, существовавшее на территории современного Центрального и Южного Вьетнама.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "25bf5e6dd1aad1a4"
+      }
+     },
+     {
+      "answer": "СЫЧУАНЬ",
+      "role": "review",
+      "definition": "Провинция Китая в верховьях Янцзы, родина больших панд.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e9a8fc2ea496c451"
+      }
+     },
+     {
+      "answer": "ЮНЬНАНЬ",
+      "role": "review",
+      "definition": "Горная провинция на юге Китая, где рядом текут Янцзы, Меконг и Салуин.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "589d0e9dbfa07c9e"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MOHENJODARO",
+      "role": "final",
+      "definition": "One of the largest cities of the Indus Valley Civilization, known for its straight streets and ancient drainage system.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "6e62e2b9bf170ccc"
+      }
+     },
+     {
+      "answer": "HARAPPA",
+      "role": "review",
+      "definition": "An ancient city on a tributary of the Indus that gave its name to one of the first civilizations.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "7801aeb094c8f40d"
+      }
+     },
+     {
+      "answer": "PUNJAB",
+      "role": "review",
+      "definition": "A region of India and Pakistan whose name means \"five rivers\": there the Indus gathers its tributaries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "8a70ef102bcae8c5"
+      }
+     },
+     {
+      "answer": "BENGAL",
+      "role": "review",
+      "definition": "A region in the shared delta of the Ganges and the Brahmaputra, where tigers live in mangrove forests.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "85cb840a8b620be8"
+      }
+     },
+     {
+      "answer": "HINDUSTAN",
+      "role": "review",
+      "definition": "A historical name for the north of India; its borders were understood differently at different times.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "6725bc54deb38491"
+      }
+     },
+     {
+      "answer": "VARANASI",
+      "role": "review",
+      "definition": "A holy Hindu city on the bank of the Ganges where pilgrims come.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "6d14d1de73ce98d4"
+      }
+     },
+     {
+      "answer": "ANGKOR",
+      "role": "review",
+      "definition": "An ancient city and temple complex in Cambodia, with a vast system of canals and reservoirs.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "824c58b718eb72d4"
+      }
+     },
+     {
+      "answer": "KHMERS",
+      "role": "review",
+      "definition": "The people of Cambodia who built a powerful empire and the famous temples of Angkor.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "abbcc525a971d9a9"
+      }
+     },
+     {
+      "answer": "CHAMPA",
+      "role": "review",
+      "definition": "An ancient state on the territory of present-day central and southern Vietnam.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "131546692547faab"
+      }
+     },
+     {
+      "answer": "SICHUAN",
+      "role": "review",
+      "definition": "A province of China on the upper Yangtze, home of the giant panda.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "46da09cf3721f105"
+      }
+     },
+     {
+      "answer": "YUNNAN",
+      "role": "review",
+      "definition": "A mountain province in southern China where the Yangtze, the Mekong and the Salween flow side by side.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "cafd2b1df4a56a56"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-west-central",
+   "title": {
+    "ru": "Реки Западной и Средней Азии",
+    "en": "Rivers of West and Central Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МЕСОПОТАМИЯ",
+      "role": "final",
+      "definition": "Греческое название земли между Тигром и Евфратом, по-русски Двуречье.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "a4d8b691f2e27570"
+      }
+     },
+     {
+      "answer": "ШУМЕРЫ",
+      "role": "review",
+      "definition": "Народ, построивший первые города в низовьях Тигра и Евфрата.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "397307e689c947c0"
+      }
+     },
+     {
+      "answer": "ВАВИЛОНИЯ",
+      "role": "review",
+      "definition": "Древнее государство в Междуречье, столица которого стояла на Евфрате.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "6d790c842a86689a"
+      }
+     },
+     {
+      "answer": "АССИРИЯ",
+      "role": "review",
+      "definition": "Древняя воинственная держава на Тигре.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "8193bb4832217140"
+      }
+     },
+     {
+      "answer": "НИНЕВИЯ",
+      "role": "review",
+      "definition": "Древняя столица на берегу Тигра, где нашли огромную библиотеку глиняных табличек.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "358c5eeff79a30d1"
+      }
+     },
+     {
+      "answer": "ГИЛЬГАМЕШ",
+      "role": "review",
+      "definition": "Легендарный правитель Урука, герой одного из древнейших сохранившихся литературных произведений.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "37ce68d2ecd79018"
+      }
+     },
+     {
+      "answer": "КЛИНОПИСЬ",
+      "role": "review",
+      "definition": "Древнее письмо значками, которые выдавливали палочкой на сырой глине.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "fe436bec1f459bfc"
+      }
+     },
+     {
+      "answer": "ЗИККУРАТ",
+      "role": "review",
+      "definition": "Ступенчатая башня-храм из кирпича в древнем Двуречье.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f544cb74b3114cab"
+      }
+     },
+     {
+      "answer": "ХОРЕЗМ",
+      "role": "review",
+      "definition": "Древнее государство в низовьях Амударьи, у Аральского моря.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "d62a30b7d6e362ba"
+      }
+     },
+     {
+      "answer": "СОГДИАНА",
+      "role": "review",
+      "definition": "Древняя страна купцов Великого шёлкового пути, где стоял Самарканд.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "42633a46fb1582c5"
+      }
+     },
+     {
+      "answer": "БАКТРИЯ",
+      "role": "review",
+      "definition": "Древняя страна в верховьях Амударьи, на землях нынешнего Афганистана.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "da30f70cf2ba9838"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MESOPOTAMIA",
+      "role": "final",
+      "definition": "The Greek name for the land between the Tigris and the Euphrates.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "395e0022abac9612"
+      }
+     },
+     {
+      "answer": "SUMERIANS",
+      "role": "review",
+      "definition": "The people who built the first cities on the lower Tigris and Euphrates.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "e2b7adc4080fb17e"
+      }
+     },
+     {
+      "answer": "BABYLONIA",
+      "role": "review",
+      "definition": "An ancient state in Mesopotamia whose capital stood on the Euphrates.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "2733acb97f68a8d2"
+      }
+     },
+     {
+      "answer": "ASSYRIA",
+      "role": "review",
+      "definition": "A warlike ancient empire on the Tigris.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "813b44d9fe57a721"
+      }
+     },
+     {
+      "answer": "NINEVEH",
+      "role": "review",
+      "definition": "An ancient capital on the Tigris where a great library of clay tablets was found.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "b881a140f8b60b72"
+      }
+     },
+     {
+      "answer": "GILGAMESH",
+      "role": "review",
+      "definition": "A legendary king of Uruk and the hero of one of the oldest surviving works of literature.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "835721c92b992e5e"
+      }
+     },
+     {
+      "answer": "CUNEIFORM",
+      "role": "review",
+      "definition": "Ancient writing of wedge-shaped marks pressed with a stick into wet clay.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "54674146e01fdabd"
+      }
+     },
+     {
+      "answer": "ZIGGURAT",
+      "role": "review",
+      "definition": "A stepped brick temple tower of the ancient land between the Tigris and the Euphrates.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "c94a2a59e16a2dcb"
+      }
+     },
+     {
+      "answer": "KHWAREZM",
+      "role": "review",
+      "definition": "An ancient state on the lower Amu Darya, near the Aral Sea.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "f2e9b6d78efde686"
+      }
+     },
+     {
+      "answer": "SOGDIANA",
+      "role": "review",
+      "definition": "An ancient land of Silk Road merchants, home of Samarkand.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "b1142c20b5ae84b8"
+      }
+     },
+     {
+      "answer": "BACTRIA",
+      "role": "review",
+      "definition": "An ancient land on the upper Amu Darya, in what is now Afghanistan.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "cdad1b78c090c69e"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТРАНСОКСИАНА",
+      "role": "section-final",
+      "definition": "Старое название земель между Амударьей и Сырдарьей, где стояли Самарканд и Бухара.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "a7ff5ad36fadf4f6"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TRANSOXIANA",
+      "role": "section-final",
+      "definition": "The old name for the lands between the Amu Darya and the Syr Darya, where Samarkand and Bukhara stood.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-29",
+       "contentSha256": "fc288c19bbb5c63f"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-29"
+}

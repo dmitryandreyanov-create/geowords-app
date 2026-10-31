@@ -1,0 +1,939 @@
+{
+ "section": "europe-on-the-map",
+ "block": 2,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters only on objects of data/maps/europe-overview.json learned by the end of the unit (section final: all 20), one letter per object, at the object's label point (the Ural River: a point on its line)",
+  "nesting": "an object never shares a puzzle with the object that contains it: the North and Baltic Seas, Great Britain, Ireland and Iceland with the Atlantic; the Barents Sea with the Arctic Ocean; Sicily with the Mediterranean. The Mediterranean and the Atlantic are separate areas on the Europe map and may share a puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b2-section-1-unit-1-en",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BORDER",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "B"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 16.9,
+     "y": 37.11,
+     "letter": "O"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "R"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "D"
+    },
+    {
+     "id": "ural-river",
+     "x": 81.4,
+     "y": 57.08,
+     "letter": "E"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 43.57,
+     "y": 27.01,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "ural-river",
+     "position": 5,
+     "text": "Find the fifth letter on the Ural River."
+    },
+    {
+     "markerId": "atlantic-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 4,
+     "text": "Find the fourth letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 1,
+     "text": "Find the first letter in the Ural Mountains."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 3,
+     "text": "Find the third letter in the Caspian Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "fd4c13a7364abd5e"
+   }
+  },
+  {
+   "id": "b2-section-1-unit-1-ru",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "РУБЕЖ",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "Р"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "У"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "Б"
+    },
+    {
+     "id": "atlantic-ocean",
+     "x": 16.9,
+     "y": 37.11,
+     "letter": "Е"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 43.57,
+     "y": 27.01,
+     "letter": "Ж"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "atlantic-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Каспийском море."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 5,
+     "text": "Найди пятую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 3,
+     "text": "Найди третью букву в Средиземном море."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 1,
+     "text": "Найди первую букву в Уральских горах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "c6fc0693fc902d35"
+   }
+  },
+  {
+   "id": "b2-section-1-unit-2-en",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ISTHMUS",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "apennine-peninsula",
+     "x": 44.69,
+     "y": 78.44,
+     "letter": "I"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "S"
+    },
+    {
+     "id": "iberian-peninsula",
+     "x": 26.26,
+     "y": 76.31,
+     "letter": "T"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "H"
+    },
+    {
+     "id": "jutland",
+     "x": 45.52,
+     "y": 52.1,
+     "letter": "M"
+    },
+    {
+     "id": "crimean-peninsula",
+     "x": 67.74,
+     "y": 74.04,
+     "letter": "U"
+    },
+    {
+     "id": "balkan-peninsula",
+     "x": 55.84,
+     "y": 81.15,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "kola-peninsula",
+     "position": 2,
+     "text": "Find the second letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "jutland",
+     "position": 5,
+     "text": "Find the fifth letter on the Jutland Peninsula."
+    },
+    {
+     "markerId": "iberian-peninsula",
+     "position": 3,
+     "text": "Find the third letter on the Iberian Peninsula."
+    },
+    {
+     "markerId": "balkan-peninsula",
+     "position": 7,
+     "text": "Find the seventh letter on the Balkan Peninsula."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 4,
+     "text": "Find the fourth letter on the Scandinavian Peninsula."
+    },
+    {
+     "markerId": "crimean-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Crimean Peninsula."
+    },
+    {
+     "markerId": "apennine-peninsula",
+     "position": 1,
+     "text": "Find the first letter on the Apennine Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "1e905db6d832e5cb"
+   }
+  },
+  {
+   "id": "b2-section-1-unit-2-ru",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПЕРЕШЕЕК",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "arctic-ocean",
+     "x": 43.57,
+     "y": 27.01,
+     "letter": "П"
+    },
+    {
+     "id": "apennine-peninsula",
+     "x": 44.69,
+     "y": 78.44,
+     "letter": "Е"
+    },
+    {
+     "id": "iberian-peninsula",
+     "x": 26.26,
+     "y": 76.31,
+     "letter": "Р"
+    },
+    {
+     "id": "balkan-peninsula",
+     "x": 55.84,
+     "y": 81.15,
+     "letter": "Е"
+    },
+    {
+     "id": "crimean-peninsula",
+     "x": 67.74,
+     "y": 74.04,
+     "letter": "Ш"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "Е"
+    },
+    {
+     "id": "jutland",
+     "x": 45.52,
+     "y": 52.1,
+     "letter": "Е"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "К"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "apennine-peninsula",
+     "position": 2,
+     "text": "Найди вторую букву на Апеннинском полуострове."
+    },
+    {
+     "markerId": "balkan-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на Балканском полуострове."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 6,
+     "text": "Найди шестую букву на Кольском полуострове."
+    },
+    {
+     "markerId": "iberian-peninsula",
+     "position": 3,
+     "text": "Найди третью букву на Пиренейском полуострове."
+    },
+    {
+     "markerId": "jutland",
+     "position": 7,
+     "text": "Найди седьмую букву на полуострове Ютландия."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 8,
+     "text": "Найди восьмую букву на Скандинавском полуострове."
+    },
+    {
+     "markerId": "crimean-peninsula",
+     "position": 5,
+     "text": "Найди пятую букву на Крымском полуострове."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "bb4b7d9f1c295ed8"
+   }
+  },
+  {
+   "id": "b2-section-1-unit-3-en",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ARCHIPELAGO",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "A"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "R"
+    },
+    {
+     "id": "great-britain",
+     "x": 35.18,
+     "y": 55.07,
+     "letter": "C"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "H"
+    },
+    {
+     "id": "sicily",
+     "x": 45.88,
+     "y": 90.03,
+     "letter": "I"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "P"
+    },
+    {
+     "id": "baltic-sea",
+     "x": 52.96,
+     "y": 54.23,
+     "letter": "E"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "L"
+    },
+    {
+     "id": "ural-river",
+     "x": 81.4,
+     "y": 57.08,
+     "letter": "A"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "G"
+    },
+    {
+     "id": "apennine-peninsula",
+     "x": 44.69,
+     "y": 78.44,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "baltic-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the Baltic Sea."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 4,
+     "text": "Find the fourth letter on the Scandinavian Peninsula."
+    },
+    {
+     "markerId": "ireland",
+     "position": 8,
+     "text": "Find the eighth letter on the island of Ireland."
+    },
+    {
+     "markerId": "apennine-peninsula",
+     "position": 11,
+     "text": "Find the eleventh letter on the Apennine Peninsula."
+    },
+    {
+     "markerId": "iceland",
+     "position": 6,
+     "text": "Find the sixth letter on the island of Iceland."
+    },
+    {
+     "markerId": "great-britain",
+     "position": 3,
+     "text": "Find the third letter on the island of Great Britain."
+    },
+    {
+     "markerId": "sicily",
+     "position": 5,
+     "text": "Find the fifth letter on the island of Sicily."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 2,
+     "text": "Find the second letter in the Barents Sea."
+    },
+    {
+     "markerId": "ural-river",
+     "position": 9,
+     "text": "Find the ninth letter on the Ural River."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 1,
+     "text": "Find the first letter in the North Sea."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 10,
+     "text": "Find the tenth letter in the Caspian Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "256eadb8cecfec2f"
+   }
+  },
+  {
+   "id": "b2-section-1-unit-3-ru",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АРХИПЕЛАГ",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "great-britain",
+     "x": 35.18,
+     "y": 55.07,
+     "letter": "А"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "Р"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "Х"
+    },
+    {
+     "id": "sicily",
+     "x": 45.88,
+     "y": 90.03,
+     "letter": "И"
+    },
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "П"
+    },
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "Е"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "Л"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "А"
+    },
+    {
+     "id": "baltic-sea",
+     "x": 52.96,
+     "y": 54.23,
+     "letter": "Г"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sicily",
+     "position": 4,
+     "text": "Найди четвёртую букву на острове Сицилия."
+    },
+    {
+     "markerId": "iceland",
+     "position": 2,
+     "text": "Найди вторую букву на острове Исландия."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 5,
+     "text": "Найди пятую букву в Уральских горах."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 7,
+     "text": "Найди седьмую букву в Баренцевом море."
+    },
+    {
+     "markerId": "baltic-sea",
+     "position": 9,
+     "text": "Найди девятую букву в Балтийском море."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 3,
+     "text": "Найди третью букву на Кольском полуострове."
+    },
+    {
+     "markerId": "great-britain",
+     "position": 1,
+     "text": "Найди первую букву на острове Великобритания."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Северном море."
+    },
+    {
+     "markerId": "ireland",
+     "position": 8,
+     "text": "Найди восьмую букву на острове Ирландия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "388a2e1bafb90def"
+   }
+  },
+  {
+   "id": "b2-section-1-final-en",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "EXPEDITION",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "E"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "X"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "P"
+    },
+    {
+     "id": "great-britain",
+     "x": 35.18,
+     "y": 55.07,
+     "letter": "E"
+    },
+    {
+     "id": "baltic-sea",
+     "x": 52.96,
+     "y": 54.23,
+     "letter": "D"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "I"
+    },
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "T"
+    },
+    {
+     "id": "crimean-peninsula",
+     "x": 67.74,
+     "y": 74.04,
+     "letter": "I"
+    },
+    {
+     "id": "sicily",
+     "x": 45.88,
+     "y": 90.03,
+     "letter": "O"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "baltic-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the Baltic Sea."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 3,
+     "text": "Find the third letter in the Barents Sea."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the North Sea."
+    },
+    {
+     "markerId": "sicily",
+     "position": 9,
+     "text": "Find the ninth letter on the island of Sicily."
+    },
+    {
+     "markerId": "ireland",
+     "position": 2,
+     "text": "Find the second letter on the island of Ireland."
+    },
+    {
+     "markerId": "crimean-peninsula",
+     "position": 8,
+     "text": "Find the eighth letter on the Crimean Peninsula."
+    },
+    {
+     "markerId": "great-britain",
+     "position": 4,
+     "text": "Find the fourth letter on the island of Great Britain."
+    },
+    {
+     "markerId": "iceland",
+     "position": 1,
+     "text": "Find the first letter on the island of Iceland."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 10,
+     "text": "Find the tenth letter in the Caspian Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "268f850139c8a5f4"
+   }
+  },
+  {
+   "id": "b2-section-1-final-ru",
+   "section": "europe-on-the-map",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ЭКСПЕДИЦИЯ",
+   "map": "./assets/europe-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "Э"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "К"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "С"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "П"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "Е"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "Д"
+    },
+    {
+     "id": "baltic-sea",
+     "x": 52.96,
+     "y": 54.23,
+     "letter": "И"
+    },
+    {
+     "id": "great-britain",
+     "x": 35.18,
+     "y": 55.07,
+     "letter": "Ц"
+    },
+    {
+     "id": "apennine-peninsula",
+     "x": 44.69,
+     "y": 78.44,
+     "letter": "И"
+    },
+    {
+     "id": "sicily",
+     "x": 45.88,
+     "y": 90.03,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "baltic-sea",
+     "position": 7,
+     "text": "Найди седьмую букву в Балтийском море."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 5,
+     "text": "Найди пятую букву в Баренцевом море."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Каспийском море."
+    },
+    {
+     "markerId": "great-britain",
+     "position": 8,
+     "text": "Найди восьмую букву на острове Великобритания."
+    },
+    {
+     "markerId": "sicily",
+     "position": 10,
+     "text": "Найди десятую букву на острове Сицилия."
+    },
+    {
+     "markerId": "iceland",
+     "position": 6,
+     "text": "Найди шестую букву на острове Исландия."
+    },
+    {
+     "markerId": "apennine-peninsula",
+     "position": 9,
+     "text": "Найди девятую букву на Апеннинском полуострове."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на Кольском полуострове."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 1,
+     "text": "Найди первую букву в Северном море."
+    },
+    {
+     "markerId": "ireland",
+     "position": 3,
+     "text": "Найди третью букву на острове Ирландия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-26",
+    "contentSha256": "c4579a6c3db0e521"
+   }
+  }
+ ]
+}

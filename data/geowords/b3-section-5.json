@@ -1,0 +1,1060 @@
+{
+ "section": "deserts-of-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the deserts of data/maps/asia-deserts.json learned by the end of the unit (section final: all 10), at the label point (a desert's innermost point), the newest unit's first; then on the objects of data/maps/asia-overview.json (section 1); one letter per object",
+  "nesting": "no letter inside the area of another object of the puzzle (a desert and the peninsula it lies on); a marginal sea or an island never with the ocean it lies in",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-5-unit-1-en",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "VELOCIRAPTOR",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "V"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "E"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "L"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "O"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "C"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "I"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "R"
+    },
+    {
+     "id": "as-japanese-islands",
+     "x": 72.45,
+     "y": 44.16,
+     "letter": "A"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "P"
+    },
+    {
+     "id": "as-ordos",
+     "x": 57.41,
+     "y": 47.94,
+     "letter": "T"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "O"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Find the second letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 7,
+     "text": "Find the seventh letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 4,
+     "text": "Find the fourth letter at the Bosporus."
+    },
+    {
+     "markerId": "as-japanese-islands",
+     "position": 8,
+     "text": "Find the eighth letter on the Japanese Islands."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 11,
+     "text": "Find the eleventh letter in the Taklamakan Desert."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 3,
+     "text": "Find the third letter on the Indochina Peninsula."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 6,
+     "text": "Find the sixth letter on the island of Borneo."
+    },
+    {
+     "markerId": "as-ordos",
+     "position": 10,
+     "text": "Find the tenth letter in the Ordos Desert."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 5,
+     "text": "Find the fifth letter on the Arabian Peninsula."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 9,
+     "text": "Find the ninth letter on the Taimyr Peninsula."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 1,
+     "text": "Find the first letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 12,
+     "text": "Find the twelfth letter in the Bering Strait."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "2639cb685e2fa925"
+   }
+  },
+  {
+   "id": "b3-section-5-unit-1-ru",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ВЕЛОЦИРАПТОР",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "В"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "Е"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "Л"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "О"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "Ц"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "И"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Р"
+    },
+    {
+     "id": "as-japanese-islands",
+     "x": 72.45,
+     "y": 44.16,
+     "letter": "А"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "П"
+    },
+    {
+     "id": "as-ordos",
+     "x": 57.41,
+     "y": 47.94,
+     "letter": "Т"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "О"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "Р"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Найди вторую букву в Охотском море."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 7,
+     "text": "Найди седьмую букву в Индийском океане."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 4,
+     "text": "Найди четвёртую букву у Босфора."
+    },
+    {
+     "markerId": "as-japanese-islands",
+     "position": 8,
+     "text": "Найди восьмую букву на Японских островах."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в пустыне Такла-Макан."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Индокитай."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 6,
+     "text": "Найди шестую букву на острове Калимантан."
+    },
+    {
+     "markerId": "as-ordos",
+     "position": 10,
+     "text": "Найди десятую букву в пустыне Ордос."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 5,
+     "text": "Найди пятую букву на Аравийском полуострове."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 9,
+     "text": "Найди девятую букву на Таймыре."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 1,
+     "text": "Найди первую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Беринговом проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "99b4febc3d312778"
+   }
+  },
+  {
+   "id": "b3-section-5-unit-2-en",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "DEFLATION",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-ordos",
+     "x": 57.41,
+     "y": 47.94,
+     "letter": "D"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "E"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "F"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "L"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "A"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "T"
+    },
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "I"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "O"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 2,
+     "text": "Find the second letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-kyzylkum",
+     "position": 5,
+     "text": "Find the fifth letter in the Kyzylkum Desert."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 7,
+     "text": "Find the seventh letter in the Dasht-e Lut."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 3,
+     "text": "Find the third letter at the Bosporus."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 8,
+     "text": "Find the eighth letter on the Indochina Peninsula."
+    },
+    {
+     "markerId": "as-ordos",
+     "position": 1,
+     "text": "Find the first letter in the Ordos Desert."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 9,
+     "text": "Find the ninth letter in the Taklamakan Desert."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 4,
+     "text": "Find the fourth letter on the Malay Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "3a896dadd26b54c4"
+   }
+  },
+  {
+   "id": "b3-section-5-unit-2-ru",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ДЕФЛЯЦИЯ",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-ordos",
+     "x": 57.41,
+     "y": 47.94,
+     "letter": "Д"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "Е"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "Л"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "Я"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "Ц"
+    },
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "И"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-taimyr",
+     "position": 6,
+     "text": "Найди шестую букву на Таймыре."
+    },
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Тихом океане."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 5,
+     "text": "Найди пятую букву в пустыне Такла-Макан."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 8,
+     "text": "Найди восьмую букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 7,
+     "text": "Найди седьмую букву в пустыне Деште-Лут."
+    },
+    {
+     "markerId": "as-ordos",
+     "position": 1,
+     "text": "Найди первую букву в пустыне Ордос."
+    },
+    {
+     "markerId": "as-kyzylkum",
+     "position": 4,
+     "text": "Найди четвёртую букву в пустыне Кызылкум."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "78c708fc09df8b67"
+   }
+  },
+  {
+   "id": "b3-section-5-unit-3-en",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BEDOUINS",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "B"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "E"
+    },
+    {
+     "id": "as-thar",
+     "x": 35.59,
+     "y": 57.38,
+     "letter": "D"
+    },
+    {
+     "id": "as-negev",
+     "x": 18.36,
+     "y": 40.25,
+     "letter": "O"
+    },
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "U"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "I"
+    },
+    {
+     "id": "as-gobi",
+     "x": 53.68,
+     "y": 45.94,
+     "letter": "N"
+    },
+    {
+     "id": "as-rub-al-khali",
+     "x": 22.18,
+     "y": 55.94,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-kyzylkum",
+     "position": 6,
+     "text": "Find the sixth letter in the Kyzylkum Desert."
+    },
+    {
+     "markerId": "as-thar",
+     "position": 3,
+     "text": "Find the third letter in the Thar Desert."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 5,
+     "text": "Find the fifth letter in the Dasht-e Lut."
+    },
+    {
+     "markerId": "as-rub-al-khali",
+     "position": 8,
+     "text": "Find the eighth letter in the Rub’ al Khali."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "as-gobi",
+     "position": 7,
+     "text": "Find the seventh letter in the Gobi Desert."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 1,
+     "text": "Find the first letter in the Taklamakan Desert."
+    },
+    {
+     "markerId": "as-negev",
+     "position": 4,
+     "text": "Find the fourth letter in the Negev Desert."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "3e92e23292ae0eb9"
+   }
+  },
+  {
+   "id": "b3-section-5-unit-3-ru",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "БЕДУИНЫ",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-thar",
+     "x": 35.59,
+     "y": 57.38,
+     "letter": "Б"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "Е"
+    },
+    {
+     "id": "as-negev",
+     "x": 18.36,
+     "y": 40.25,
+     "letter": "Д"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "У"
+    },
+    {
+     "id": "as-gobi",
+     "x": 53.68,
+     "y": 45.94,
+     "letter": "И"
+    },
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "Н"
+    },
+    {
+     "id": "as-rub-al-khali",
+     "x": 22.18,
+     "y": 55.94,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-gobi",
+     "position": 5,
+     "text": "Найди пятую букву в пустыне Гоби."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 2,
+     "text": "Найди вторую букву в пустыне Такла-Макан."
+    },
+    {
+     "markerId": "as-kyzylkum",
+     "position": 4,
+     "text": "Найди четвёртую букву в пустыне Кызылкум."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 6,
+     "text": "Найди шестую букву в пустыне Деште-Лут."
+    },
+    {
+     "markerId": "as-negev",
+     "position": 3,
+     "text": "Найди третью букву в пустыне Негев."
+    },
+    {
+     "markerId": "as-rub-al-khali",
+     "position": 7,
+     "text": "Найди седьмую букву в пустыне Руб-эль-Хали."
+    },
+    {
+     "markerId": "as-thar",
+     "position": 1,
+     "text": "Найди первую букву в пустыне Тар."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "74b5f4dc3c30c668"
+   }
+  },
+  {
+   "id": "b3-section-5-final-en",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "PETROGLYPHS",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "P"
+    },
+    {
+     "id": "as-negev",
+     "x": 18.36,
+     "y": 40.25,
+     "letter": "E"
+    },
+    {
+     "id": "as-thar",
+     "x": 35.59,
+     "y": 57.38,
+     "letter": "T"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "R"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "O"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "G"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "L"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "Y"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "P"
+    },
+    {
+     "id": "as-rub-al-khali",
+     "x": 22.18,
+     "y": 55.94,
+     "letter": "H"
+    },
+    {
+     "id": "as-gobi",
+     "x": 53.68,
+     "y": 45.94,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-thar",
+     "position": 3,
+     "text": "Find the third letter in the Thar Desert."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 6,
+     "text": "Find the sixth letter on the Indochina Peninsula."
+    },
+    {
+     "markerId": "as-negev",
+     "position": 2,
+     "text": "Find the second letter in the Negev Desert."
+    },
+    {
+     "markerId": "as-gobi",
+     "position": 11,
+     "text": "Find the eleventh letter in the Gobi Desert."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 4,
+     "text": "Find the fourth letter in the Taklamakan Desert."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 9,
+     "text": "Find the ninth letter on the Malay Peninsula."
+    },
+    {
+     "markerId": "as-kyzylkum",
+     "position": 7,
+     "text": "Find the seventh letter in the Kyzylkum Desert."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 8,
+     "text": "Find the eighth letter on the Korean Peninsula."
+    },
+    {
+     "markerId": "as-rub-al-khali",
+     "position": 10,
+     "text": "Find the tenth letter in the Rub’ al Khali."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 1,
+     "text": "Find the first letter in the Dasht-e Lut."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "a0096bfd08ee7286"
+   }
+  },
+  {
+   "id": "b3-section-5-final-ru",
+   "section": "deserts-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ПЕТРОГЛИФЫ",
+   "map": "./assets/asia-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "П"
+    },
+    {
+     "id": "as-negev",
+     "x": 18.36,
+     "y": 40.25,
+     "letter": "Е"
+    },
+    {
+     "id": "as-gobi",
+     "x": 53.68,
+     "y": 45.94,
+     "letter": "Т"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "Р"
+    },
+    {
+     "id": "as-rub-al-khali",
+     "x": 22.18,
+     "y": 55.94,
+     "letter": "О"
+    },
+    {
+     "id": "as-taklamakan",
+     "x": 44.18,
+     "y": 48.25,
+     "letter": "Г"
+    },
+    {
+     "id": "as-lut",
+     "x": 29.68,
+     "y": 48.94,
+     "letter": "Л"
+    },
+    {
+     "id": "as-kyzylkum",
+     "x": 35.64,
+     "y": 42.12,
+     "letter": "И"
+    },
+    {
+     "id": "as-thar",
+     "x": 35.59,
+     "y": 57.38,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-kamchatka",
+     "x": 72.85,
+     "y": 21.34,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-gobi",
+     "position": 3,
+     "text": "Найди третью букву в пустыне Гоби."
+    },
+    {
+     "markerId": "as-lut",
+     "position": 7,
+     "text": "Найди седьмую букву в пустыне Деште-Лут."
+    },
+    {
+     "markerId": "as-rub-al-khali",
+     "position": 5,
+     "text": "Найди пятую букву в пустыне Руб-эль-Хали."
+    },
+    {
+     "markerId": "as-kamchatka",
+     "position": 10,
+     "text": "Найди десятую букву на Камчатке."
+    },
+    {
+     "markerId": "as-negev",
+     "position": 2,
+     "text": "Найди вторую букву в пустыне Негев."
+    },
+    {
+     "markerId": "as-kyzylkum",
+     "position": 8,
+     "text": "Найди восьмую букву в пустыне Кызылкум."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 4,
+     "text": "Найди четвёртую букву на острове Шри-Ланка."
+    },
+    {
+     "markerId": "as-taklamakan",
+     "position": 6,
+     "text": "Найди шестую букву в пустыне Такла-Макан."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-thar",
+     "position": 9,
+     "text": "Найди девятую букву в пустыне Тар."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "ce87834bb4d68b13"
+   }
+  }
+ ]
+}
