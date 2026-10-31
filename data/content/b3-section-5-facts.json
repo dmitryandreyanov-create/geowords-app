@@ -5,7 +5,8 @@
  "decisions": [
   "Deserts are their own section of block 3 (Svetlana, 29.10.2026).",
   "10 deserts chosen by Svetlana 31.10.2026, with a bias to history and archaeology (the Silk Road, lost cities, water in the sands, the dinosaurs of the Gobi); three units China and Mongolia / Turan and Iran / South and West Asia («Утверждаю» 31.10.2026 11:33).",
-  "The Ordos is the Mu Us Desert of Natural Earth; the Negev is shown in a zoom inset like the Dead Sea."
+  "The Ordos is the Mu Us Desert of Natural Earth; the Negev is shown in a zoom inset like the Dead Sea.",
+  "Svetlana's review 31.10.2026 14:40: the Ordos is a desert region (the Kubuqi and the Mu Us sands), with a caveat; Gobi and Thar facts reworded; the Lut record above 80 °C (NASA, 2002–2019). Facts, records, words and finals approved by Svetlana 31.10.2026 15:08 («Утверждаю»)."
  ],
  "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
  "units": [
@@ -51,7 +52,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "23ec9f76833240d4"
    }
   },
   {
@@ -73,7 +77,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "9ccd59c0c5f46c62"
    }
   },
   {
@@ -99,7 +106,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "e9ffc7bb6c858bea"
    }
   },
   {
@@ -121,7 +131,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "74ed74ca99d5a610"
    }
   },
   {
@@ -143,7 +156,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "fad9f8ebe02d7d7e"
    }
   },
   {
@@ -165,7 +181,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "106d839bf5129c99"
    }
   },
   {
@@ -187,7 +206,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "22baaf93ef20266d"
    }
   },
   {
@@ -209,7 +231,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "f770ce0c0272f8cf"
    }
   },
   {
@@ -231,7 +256,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "cca3b004e326bf73"
    }
   },
   {
@@ -253,7 +281,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "0e85065f365accb1"
    }
   },
   {
@@ -275,7 +306,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "99aea90e1ca949e3"
    }
   }
  ]

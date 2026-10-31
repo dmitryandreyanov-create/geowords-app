@@ -1,7 +1,7 @@
 {
  "section": "deserts-of-asia",
  "block": 3,
- "status": "draft",
+ "status": "approved",
  "source": "Svetlana's list in the project thread, 31.10.2026 (25 words RU + EN); repeats of section 1 (ТАКЫР БАРХАН СОЛОНЧАК САКСАУЛ КАРАВАН КАРАВАНСАРАЙ КЯРИЗ) and the short ЛЁСС replaced by ОАЗИС МИРАЖ ЛОУЛАНЬ НАБАТЕИ ЛАДАН ВЕЛОЦИРАПТОР ПРОТОЦЕРАТОПС ОВИРАПТОР — «Утверждаю» 11:33",
  "rules": {
   "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
@@ -9,7 +9,7 @@
   "length": "letters on the learned deserts first, then on the objects of section 1",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
-  "draft": "Definitions RU and EN drafted by Claude for Svetlana's review (plan doc)."
+  "draft": "Definitions RU and EN drafted by Claude; Svetlana's edits 31.10.2026 14:40 (ЛОУЛАНЬ, ОВИРАПТОР, БЕДУИНЫ, ХАМАДА, ПЕТРОГЛИФЫ tied to the Negev and Central Asia). Approved by Svetlana 2026-10-31 15:08 («Утверждаю»)."
  },
  "units": [
   {
@@ -25,7 +25,10 @@
       "role": "final",
       "definition": "A small meat-eating dinosaur with a sharp claw on each hind foot; its skeletons were found in the Gobi.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "32f5f0e77b7b048d"
       }
      },
      {
@@ -33,7 +36,10 @@
       "role": "review",
       "definition": "An oasis in a deep depression in north-western China, on the northern branch of the Silk Road.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c79eff3b4533f563"
       }
      },
      {
@@ -41,7 +47,10 @@
       "role": "review",
       "definition": "An oasis town at the edge of the desert where branches of the Silk Road met; nearby are caves with Buddhist paintings.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "b53c00e58289d527"
       }
      },
      {
@@ -49,7 +58,10 @@
       "role": "review",
       "definition": "An oasis on the southern edge of the Taklamakan, long famous for its jade.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "0bb80f06d6528497"
       }
      },
      {
@@ -57,7 +69,10 @@
       "role": "review",
       "definition": "Ruins of an ancient settlement near the southern edge of the Taklamakan, where a fort and Buddhist wall paintings were found.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c4a64d8375ff5cad"
       }
      },
      {
@@ -65,7 +80,10 @@
       "role": "review",
       "definition": "Ruins of an ancient Silk Road city near Lop Nur, a lake that later dried up.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "56536b61f3c64d21"
       }
      },
      {
@@ -73,7 +91,10 @@
       "role": "review",
       "definition": "“The Black City”: ruins of a Tangut fortress in the desert of northern China, found by the explorer Pyotr Kozlov.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "5a6cea0626f71e12"
       }
      },
      {
@@ -81,7 +102,10 @@
       "role": "review",
       "definition": "A two-humped camel that copes with both heat and frost.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "39c90677ee9b0449"
       }
      },
      {
@@ -89,7 +113,10 @@
       "role": "review",
       "definition": "A plant-eating dinosaur with a bony frill behind its head; very many of its skeletons were found in the Gobi.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "1dbe913078715a06"
       }
      },
      {
@@ -97,7 +124,10 @@
       "role": "review",
       "definition": "A dinosaur from the Gobi once thought to steal eggs. Later discoveries showed that dinosaurs like it cared for their nests.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f66511f9b9900f5e"
       }
      }
     ],
@@ -107,7 +137,10 @@
       "role": "final",
       "definition": "Небольшой хищный динозавр с острым когтем на задних лапах; его скелеты нашли в Гоби.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "efb99f545f2b6bbf"
       }
      },
      {
@@ -115,7 +148,10 @@
       "role": "review",
       "definition": "Оазис в глубокой впадине на северо-западе Китая, на северной ветке Шёлкового пути.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "abc00b0b46306d15"
       }
      },
      {
@@ -123,7 +159,10 @@
       "role": "review",
       "definition": "Город-оазис на краю пустыни, где сходились ветки Шёлкового пути; рядом — пещеры с буддийскими росписями.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "918c21cd4b3bfc98"
       }
      },
      {
@@ -131,7 +170,10 @@
       "role": "review",
       "definition": "Оазис на южной окраине Такла-Макана, издавна славный нефритом.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "899ea494c1b8f987"
       }
      },
      {
@@ -139,7 +181,10 @@
       "role": "review",
       "definition": "Развалины древнего поселения у южного края Такла-Макана, где нашли крепость и буддийские росписи.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "d2829f51bada75a8"
       }
      },
      {
@@ -147,7 +192,10 @@
       "role": "review",
       "definition": "Руины древнего города Шёлкового пути возле озера Лобнор, которое со временем высохло.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "3f7ab2db54fd55d6"
       }
      },
      {
@@ -155,7 +203,10 @@
       "role": "review",
       "definition": "«Чёрный город» — руины крепости тангутов в пустыне на севере Китая, найденные путешественником Петром Козловым.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "b6e95168b1973772"
       }
      },
      {
@@ -163,7 +214,10 @@
       "role": "review",
       "definition": "Двугорбый верблюд, выносливый и в жару, и в мороз.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "44dfcc555ab2bcba"
       }
      },
      {
@@ -171,7 +225,10 @@
       "role": "review",
       "definition": "Травоядный динозавр с костяным воротником на шее; в Гоби нашли очень много его скелетов.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "03578f59de8dbe09"
       }
      },
      {
@@ -179,7 +236,10 @@
       "role": "review",
       "definition": "Хищный динозавр из Гоби, которого сначала считали похитителем яиц. Позже учёные обнаружили, что подобные динозавры заботились о своих кладках.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "22cb6e4e0841236b"
       }
      }
     ]
@@ -198,7 +258,10 @@
       "role": "final",
       "definition": "The removal of sand and dust from the ground by the wind.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "5c09fa177b2ed361"
       }
      },
      {
@@ -206,7 +269,10 @@
       "role": "review",
       "definition": "Long ridges carved by the wind out of clay or soft rock.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ae0f63141c3b5718"
       }
      },
      {
@@ -214,7 +280,10 @@
       "role": "review",
       "definition": "The wearing away of rock by sand carried by the wind.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "987b355f896e518e"
       }
      },
      {
@@ -222,7 +291,10 @@
       "role": "review",
       "definition": "A desert shrub with thin, almost leafless branches; its roots hold the sand in place.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9fb5fd71ddd10f45"
       }
      },
      {
@@ -230,7 +302,10 @@
       "role": "review",
       "definition": "A thick forest and shrubland along a river in the middle of a desert.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "cc570cc4a152c826"
       }
      },
      {
@@ -238,7 +313,10 @@
       "role": "review",
       "definition": "Plants that sprout, flower and set seed during a short spring.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8e888c94475abf02"
       }
      },
      {
@@ -246,7 +324,10 @@
       "role": "review",
       "definition": "“The sandy place”: the name of a desert in southern Afghanistan and of the main square of Samarkand.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "bd95f98059695fb2"
       }
      }
     ],
@@ -256,7 +337,10 @@
       "role": "final",
       "definition": "Выдувание ветром песка и пыли с поверхности земли.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c98a33322f4225a2"
       }
      },
      {
@@ -264,7 +348,10 @@
       "role": "review",
       "definition": "Вытянутые гряды, выточенные ветром в глине или мягкой горной породе.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "23a10970d0013c51"
       }
      },
      {
@@ -272,7 +359,10 @@
       "role": "review",
       "definition": "Обтачивание скал песком, который несёт ветер.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a6f23f5962f24828"
       }
      },
      {
@@ -280,7 +370,10 @@
       "role": "review",
       "definition": "Пустынный кустарник с тонкими почти безлистными ветками; его корни удерживают пески.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "80ccfdc3adf65e31"
       }
      },
      {
@@ -288,7 +381,10 @@
       "role": "review",
       "definition": "Густой лес и кустарник в долине реки посреди пустыни.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "d291a33960dc5e91"
       }
      },
      {
@@ -296,7 +392,10 @@
       "role": "review",
       "definition": "Растения, которые за короткую весну успевают прорасти, зацвести и дать семена.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "bacbf166c49113d9"
       }
      },
      {
@@ -304,7 +403,10 @@
       "role": "review",
       "definition": "«Песчаное место»: так называют пустыню на юге Афганистана и главную площадь Самарканда.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "2ef277825f75ae6e"
       }
      }
     ]
@@ -323,7 +425,10 @@
       "role": "final",
       "definition": "Arab communities who traditionally lived by nomadic herding in the deserts of the Middle East.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9ffff3db6c0e685e"
       }
      },
      {
@@ -331,7 +436,10 @@
       "role": "review",
       "definition": "An ancient people of traders who led incense caravans across the Negev; their capital was Petra.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ffe2cea911d8fd63"
       }
      },
      {
@@ -339,7 +447,10 @@
       "role": "review",
       "definition": "A fragrant tree resin from southern Arabia that caravans carried for sale.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "165a239119976517"
       }
      },
      {
@@ -347,7 +458,10 @@
       "role": "review",
       "definition": "A green place in a desert where there is water.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "831861794f02055b"
       }
      },
      {
@@ -355,7 +469,10 @@
       "role": "review",
       "definition": "A trick of hot air: you see water in the distance that is not there.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "63329322f2fc7823"
       }
      },
      {
@@ -363,7 +480,10 @@
       "role": "review",
       "definition": "A stony desert of bare hard rock and gravel, without a wide cover of sand.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "da81e0336a85b499"
       }
      },
      {
@@ -371,7 +491,10 @@
       "role": "review",
       "definition": "A shrub or small tree with tiny scale-like leaves that grows even in salty soil.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "85dbe15c2b162b2d"
       }
      }
     ],
@@ -381,7 +504,10 @@
       "role": "final",
       "definition": "Арабские общины, традиционно занимавшиеся кочевым скотоводством в пустынях Ближнего Востока.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "1beb85cd3ec6bfff"
       }
      },
      {
@@ -389,7 +515,10 @@
       "role": "review",
       "definition": "Древний народ торговцев, водивший караваны с благовониями через Негев; их столицей была Петра.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "179134b0257d55f3"
       }
      },
      {
@@ -397,7 +526,10 @@
       "role": "review",
       "definition": "Душистая смола деревьев юга Аравии, которую караваны везли на продажу.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c9b01433152925a2"
       }
      },
      {
@@ -405,7 +537,10 @@
       "role": "review",
       "definition": "Зелёное место в пустыне, где есть вода.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "66e33300d19452f9"
       }
      },
      {
@@ -413,7 +548,10 @@
       "role": "review",
       "definition": "Обман зрения в горячем воздухе: вдали видна вода, которой нет.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c3646485f39ad149"
       }
      },
      {
@@ -421,7 +559,10 @@
       "role": "review",
       "definition": "Каменистая пустыня, где на поверхности лежат твёрдые горные породы и щебень, а сплошного песчаного покрова нет.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "e19fb77f95ef55ae"
       }
      },
      {
@@ -429,7 +570,10 @@
       "role": "review",
       "definition": "Кустарник или дерево с мелкими чешуйчатыми листьями, которое растёт даже на солёной почве.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "482a501ba666bc47"
       }
      }
     ]
@@ -448,7 +592,10 @@
       "role": "section-final",
       "definition": "Ancient pictures carved into rock; there are many on the rocks of the Negev Desert and in Central Asia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "09d812609c2ec60b"
       }
      }
     ],
@@ -458,11 +605,16 @@
       "role": "section-final",
       "definition": "Древние рисунки, выбитые на камне; их много на скалах пустыни Негев и в Центральной Азии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c73578ea1dd0baea"
       }
      }
     ]
    }
   }
- ]
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-31"
 }
