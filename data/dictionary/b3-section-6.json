@@ -5,9 +5,9 @@
  "source": "Svetlana's list in the project thread, 31.10.2026 16:54 (25 words RU + EN); repeats of earlier sections (ПАГОДА, МАНГРЫ, КОЧЕВНИКИ, КХМЕРЫ, АНГКОРВАТ, КАРАКОРУМ, МУССОНЫ, АРХИПЕЛАГ) and the pairs she flagged (БАТИК, ДЖОНКА, ИЕРОГЛИФ) replaced by ШВЕДАГОН ХАНГЫЛЬ ЧИНГИСХАН ТЕРАВАДА АПСАРЫ АЮТТХАЯ МАДЖАПАХИТ ШРИВИДЖАЯ ГАЛЕОН ХАЛОНГ ОРАНГУТАН — «Утверждаю» 16:57",
  "rules": {
   "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
-  "places": "letters at the centre of the learned countries of this section, on the rivers of section 2 drawn over the countries map («on the Mekong»), on a river inside a country it crosses («on the Mekong in Cambodia»), and on the objects of section 1 only when places run short; at least a third of the letters on rivers (Svetlana, 28.10.2026 and 31.10.2026)",
-  "nesting": "each country is named once per puzzle; a river letter never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle",
-  "spacing": "letter centres at least 9% of the map width apart, as in Europe sections 4 and 5 (hypot(dx, dy*1600/2200) >= 9)",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-6.json). At least half of the letters inside the region of the unit: its countries, the rivers inside them («on the Mekong in Cambodia»), its seas and peninsulas; the rest on learned objects of Asia in view (countries of earlier units, rivers of section 2, objects of section 1); never the Arctic Ocean, Chukotka or the Bering Strait; at least a third of the letters on rivers (Svetlana, 28.10.2026 and 31.10.2026 17:45). A letter stands anywhere well inside its country or on its river (spots).",
+  "nesting": "each country is named once per puzzle («on the Mekong in Laos» names Laos). A letter on a river («on the Mekong») and a letter in a country that river flows through («in Laos») are never in the same puzzle: the river letter could lie inside that country, and the child could not tell which place it marks. One letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle.",
+  "spacing": "letter centres at least 9% of the screen width apart: in % of the map, hypot(dx, dy*1600/2200) >= 9 / the zoom of the puzzle",
   "languages": "EN and RU lists are independent; GENGHIS KHAN written as one (GENGHISKHAN)",
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
@@ -33,7 +33,7 @@
      {
       "answer": "SAMURAI",
       "role": "review",
-      "definition": "A noble warrior of medieval Japan who followed the bushido code of honour.",
+      "definition": "A member of Japan’s warrior class, associated with the bushido code of honour.",
       "approval": {
        "status": "draft"
       }
@@ -41,7 +41,7 @@
      {
       "answer": "SHOGUNATE",
       "role": "review",
-      "definition": "Military rule in Japan from the 12th to the 19th century: a warlord held real power and the emperor remained a symbol.",
+      "definition": "A system of military rule in Japan in which the main political power belonged to a military ruler.",
       "approval": {
        "status": "draft"
       }
@@ -49,7 +49,7 @@
      {
       "answer": "SHINTOISM",
       "role": "review",
-      "definition": "The traditional religion of Japan, honouring the spirits of nature and of ancestors, the kami.",
+      "definition": "Japan’s traditional religion, centred on the worship of kami, sacred spirits associated with nature and ancestors.",
       "approval": {
        "status": "draft"
       }
@@ -65,7 +65,7 @@
      {
       "answer": "EMPEROR",
       "role": "review",
-      "definition": "The title of the supreme ruler of old China; Japan still has such a ruler today.",
+      "definition": "The title of the ruler of an empire. Japan still has one, but the role today is ceremonial.",
       "approval": {
        "status": "draft"
       }
@@ -73,7 +73,7 @@
      {
       "answer": "MANDARIN",
       "role": "review",
-      "definition": "What Europeans called an educated official of imperial China who had passed the state exams.",
+      "definition": "What Europeans called an official of imperial China.",
       "approval": {
        "status": "draft"
       }
@@ -81,7 +81,7 @@
      {
       "answer": "TERRACOTTA",
       "role": "review",
-      "definition": "Baked clay; the army of warriors in the tomb of China’s first emperor is made of it.",
+      "definition": "Baked clay; the army of warriors in the burial complex of Qin Shi Huang, China’s first emperor, is made of it.",
       "approval": {
        "status": "draft"
       }
@@ -115,7 +115,7 @@
      {
       "answer": "САМУРАЙ",
       "role": "review",
-      "definition": "Воин-дворянин средневековой Японии, следовавший кодексу чести бусидо.",
+      "definition": "Представитель военного сословия Японии, с которым связывают кодекс чести бусидо.",
       "approval": {
        "status": "draft"
       }
@@ -123,7 +123,7 @@
      {
       "answer": "СЁГУНАТ",
       "role": "review",
-      "definition": "Военное правление в Японии XII–XIX веков: реальная власть была у полководца, а император оставался символом.",
+      "definition": "Система военного правления в Японии, при которой основная политическая власть принадлежала военному правителю.",
       "approval": {
        "status": "draft"
       }
@@ -147,7 +147,7 @@
      {
       "answer": "ИМПЕРАТОР",
       "role": "review",
-      "definition": "Титул верховного правителя старого Китая; в Японии такой правитель есть и сегодня.",
+      "definition": "Титул правителя империи. В Японии такой правитель существует и сегодня, но выполняет церемониальные функции и не управляет государством.",
       "approval": {
        "status": "draft"
       }
@@ -155,7 +155,7 @@
      {
       "answer": "МАНДАРИН",
       "role": "review",
-      "definition": "Так европейцы называли образованного чиновника императорского Китая, сдавшего государственные экзамены.",
+      "definition": "Так европейцы называли чиновника императорского Китая.",
       "approval": {
        "status": "draft"
       }
@@ -163,7 +163,7 @@
      {
       "answer": "ТЕРРАКОТА",
       "role": "review",
-      "definition": "Обожжённая глина; из неё сделана армия воинов в гробнице первого императора Китая.",
+      "definition": "Обожжённая глина; из неё сделана армия воинов в погребальном комплексе Цинь Шихуанди, первого императора Китая.",
       "approval": {
        "status": "draft"
       }
@@ -198,7 +198,7 @@
      {
       "answer": "AYUTTHAYA",
       "role": "final",
-      "definition": "The old capital of the Kingdom of Siam on the Chao Phraya, destroyed in 1767; its ruins are a UNESCO site.",
+      "definition": "A former capital of the Kingdom of Siam on the Chao Phraya, destroyed in 1767; its ruins are a UNESCO site.",
       "approval": {
        "status": "draft"
       }
@@ -206,7 +206,7 @@
      {
       "answer": "SHWEDAGON",
       "role": "review",
-      "definition": "The golden pagoda in Yangon, the holiest Buddhist shrine of Myanmar.",
+      "definition": "The golden pagoda in Yangon, one of Myanmar’s most sacred Buddhist sites.",
       "approval": {
        "status": "draft"
       }
@@ -214,7 +214,7 @@
      {
       "answer": "THERAVADA",
       "role": "review",
-      "definition": "The oldest school of Buddhism, the main one in Thailand, Myanmar, Laos and Cambodia.",
+      "definition": "One of the oldest surviving traditions of Buddhism, the main one in Thailand, Myanmar, Laos and Cambodia.",
       "approval": {
        "status": "draft"
       }
@@ -264,7 +264,7 @@
      {
       "answer": "ШВЕДАГОН",
       "role": "review",
-      "definition": "Золотая пагода в Янгоне, главная святыня буддистов Мьянмы.",
+      "definition": "Золотая пагода в Янгоне, одна из главных святынь буддистов Мьянмы.",
       "approval": {
        "status": "draft"
       }
@@ -272,7 +272,7 @@
      {
       "answer": "ТЕРАВАДА",
       "role": "review",
-      "definition": "Древнейшая школа буддизма, главная в Таиланде, Мьянме, Лаосе и Камбодже.",
+      "definition": "Одна из древнейших сохранившихся традиций буддизма, главная в Таиланде, Мьянме, Лаосе и Камбодже.",
       "approval": {
        "status": "draft"
       }
@@ -313,17 +313,17 @@
    }
   },
   {
-   "id": "unit-3-malay-archipelago",
+   "id": "unit-3-maritime-southeast-asia",
    "title": {
-    "ru": "Малайский архипелаг",
-    "en": "The Malay Archipelago"
+    "ru": "Островная Юго-Восточная Азия",
+    "en": "Maritime Southeast Asia"
    },
    "words": {
     "en": [
      {
       "answer": "MAJAPAHIT",
       "role": "final",
-      "definition": "A sea empire centred on Java in the 13th–16th centuries.",
+      "definition": "A maritime empire based on Java in the 13th–16th centuries.",
       "approval": {
        "status": "draft"
       }
@@ -331,7 +331,7 @@
      {
       "answer": "SRIVIJAYA",
       "role": "review",
-      "definition": "A sea kingdom on Sumatra in the 7th–13th centuries that controlled the Strait of Malacca.",
+      "definition": "A maritime kingdom based on Sumatra in the 7th–13th centuries that played an important part in trade through the Strait of Malacca.",
       "approval": {
        "status": "draft"
       }
@@ -339,7 +339,7 @@
      {
       "answer": "BOROBUDUR",
       "role": "review",
-      "definition": "The largest Buddhist temple in the world, built on Java around 800 AD.",
+      "definition": "One of the largest Buddhist monuments in the world, built on Java around 800 AD.",
       "approval": {
        "status": "draft"
       }
@@ -371,7 +371,7 @@
      {
       "answer": "SPICES",
       "role": "review",
-      "definition": "Cloves, nutmeg and pepper: Europeans sailed to the Moluccas for them.",
+      "definition": "Aromatic plant products used to flavour food. European sailors travelled to the Moluccas in search of cloves and nutmeg.",
       "approval": {
        "status": "draft"
       }
@@ -389,7 +389,7 @@
      {
       "answer": "ШРИВИДЖАЯ",
       "role": "review",
-      "definition": "Морское царство на Суматре VII–XIII веков, контролировавшее Малаккский пролив.",
+      "definition": "Морское царство на Суматре VII–XIII веков, игравшее важную роль в торговле через Малаккский пролив.",
       "approval": {
        "status": "draft"
       }
@@ -397,7 +397,7 @@
      {
       "answer": "БОРОБУДУР",
       "role": "review",
-      "definition": "Крупнейший буддийский храм мира, построенный на Яве около 800 года.",
+      "definition": "Один из крупнейших буддийских памятников мира, построенный на Яве около 800 года.",
       "approval": {
        "status": "draft"
       }
@@ -429,7 +429,7 @@
      {
       "answer": "ПРЯНОСТИ",
       "role": "review",
-      "definition": "Гвоздика, мускатный орех, перец: ради них европейцы плыли к Молуккским островам.",
+      "definition": "Ароматные части растений, используемые для приготовления пищи. Ради гвоздики и мускатного ореха европейские мореплаватели отправлялись к Молуккским островам.",
       "approval": {
        "status": "draft"
       }

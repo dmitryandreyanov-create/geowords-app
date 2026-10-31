@@ -3,7 +3,7 @@
  "block": 3,
  "use": "introduction cards, one fact per country and its capital; ids match data/maps/asia-countries-6.json",
  "decisions": [
-  "Svetlana 31.10.2026 16:54: 16 countries of East and Southeast Asia and Taiwan as a separate object with a note on its special status; three units East Asia / Indochina / the Malay Archipelago.",
+  "Svetlana 31.10.2026 16:54: 16 countries of East and Southeast Asia and Taiwan as a separate object with a note on its special status; three units East Asia / Indochina / Maritime Southeast Asia (renamed from the Malay Archipelago, 17:45: Malaysia has a mainland and an island part).",
   "Svetlana 31.10.2026 15:23: geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes. Taiwan is asked as a place on the map only, not in capital questions (capitalQuestions false). Jakarta is the capital until the presidential decree on the move to Nusantara (Constitutional Court, May 2026; no decree as of 31.10.2026).",
   "disputed true marks the cards with a «Есть нюанс» note (Taiwan, Malaysia, Indonesia)."
  ],
@@ -26,8 +26,8 @@
   {
    "n": 3,
    "title": {
-    "ru": "Малайский архипелаг",
-    "en": "The Malay Archipelago"
+    "ru": "Островная Юго-Восточная Азия",
+    "en": "Maritime Southeast Asia"
    }
   }
  ],
@@ -72,8 +72,8 @@
     "ru": "Улан-Батор"
    },
    "fact": {
-    "en": "Mongolia has no access to the sea. Steppes and the Gobi Desert cover most of the country.",
-    "ru": "Монголия не имеет выхода к морю. Большую часть страны занимают степи и пустыня Гоби."
+    "en": "Mongolia has no access to the sea. It has vast steppes, mountains and the Gobi Desert.",
+    "ru": "Монголия не имеет выхода к морю. В Монголии простираются обширные степи, горы и пустыня Гоби."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
@@ -285,8 +285,8 @@
     "ru": "Бангкок"
    },
    "fact": {
-    "en": "Thailand is the only country in Southeast Asia that was never a European colony. Bangkok stands on the Chao Phraya River.",
-    "ru": "Таиланд — единственная страна Юго-Восточной Азии, которая никогда не была европейской колонией. Бангкок стоит на реке Чаупхрая."
+    "en": "Thailand is the only country in Southeast Asia that was never a European colony, although it had to give up some of its lands to Britain and France. Bangkok stands on the Chao Phraya River.",
+    "ru": "Таиланд — единственная страна Юго-Восточной Азии, которая никогда не была европейской колонией, хотя ей пришлось уступить часть земель Великобритании и Франции. Бангкок стоит на реке Чаупхрая."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
@@ -311,8 +311,8 @@
     "ru": "Нейпьидо"
    },
    "fact": {
-    "en": "Naypyidaw is a new capital built in the 2000s. The former capital, Yangon, is still the largest city. The Irrawaddy flows through the whole country.",
-    "ru": "Нейпьидо — новая столица, построенная в 2000-х годах. Прежняя столица Янгон остаётся крупнейшим городом. Через всю страну течёт Иравади."
+    "en": "Naypyidaw is a new capital built in the 2000s. The former capital, Yangon, is still the largest city. The Irrawaddy flows south through central Myanmar.",
+    "ru": "Нейпьидо — новая столица, построенная в 2000-х годах. Прежняя столица Янгон остаётся крупнейшим городом. Иравади течёт через центральную часть Мьянмы с севера на юг."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
@@ -337,8 +337,8 @@
     "ru": "Куала-Лумпур"
    },
    "fact": {
-    "en": "Malaysia has two parts: the south of the Malay Peninsula and the north of the island of Borneo. The Petronas Twin Towers stand in Kuala Lumpur.",
-    "ru": "Малайзия состоит из двух частей: юга Малаккского полуострова и севера острова Калимантан. В Куала-Лумпуре стоят башни-близнецы Петронас."
+    "en": "Malaysia has two parts: a mainland part in the south of the Malay Peninsula and an island part in the north of Borneo. The Petronas Twin Towers stand in Kuala Lumpur.",
+    "ru": "Малайзия состоит из двух частей: материковой — на юге Малаккского полуострова — и островной, на севере острова Калимантан. В Куала-Лумпуре стоят башни-близнецы Петронас."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
@@ -449,8 +449,8 @@
     "ru": "Манила"
    },
    "fact": {
-    "en": "The Philippines lie on more than 7,600 islands. Manila is on the island of Luzon, on Manila Bay.",
-    "ru": "Филиппины лежат более чем на 7600 островах. Манила стоит на острове Лусон, у Манильского залива."
+    "en": "The Philippines lie on thousands of islands. Manila is on the island of Luzon, on Manila Bay.",
+    "ru": "Филиппины лежат на тысячах островов. Манила стоит на острове Лусон, у Манильского залива."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",

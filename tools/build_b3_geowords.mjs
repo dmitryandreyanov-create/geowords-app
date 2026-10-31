@@ -136,44 +136,63 @@ function build(word, lang, unit, final, tries = 6000) {
 // ---- section 6: countries, rivers and «a river in a country» ----
 const C6 = SEC === 6 ? JSON.parse(fs.readFileSync("data/maps/asia-countries-6.json", "utf8")) : null;
 const area6 = SEC === 6 ? Object.fromEntries([...map.items, ...C6.items].filter(o => o.tapArea).map(o => [o.id, o])) : {};
-const in6 = (id, p) => { const o = area6[id]; return !!o && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl)); };
-function places6(unit) {
-  const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit);
-  for (const o of C6.items) if (o.unit <= unit) out.push({ id: o.id, kind: "country", country: o.id, unit: o.unit, x: o.label.x, y: o.label.y, place: PLACE[o.id] });
+const in6m = new Map(), in6 = (id, p) => { const k = id + ' ' + p.x + ' ' + p.y; if (!in6m.has(k)) { const o = area6[id]; in6m.set(k, !!o && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl))); } return in6m.get(k); };
+// Svetlana, 31.10.2026 17:45: at least half of the letters inside the region of the lesson, the rest on learned objects of Asia nearby;
+// no Arctic Ocean or Chukotka. The puzzle opens zoomed in on the region of its unit (C6.frames), so letters stay 9% of the screen apart
+// (SEP / zoom of the map), and a letter may stand anywhere well inside its country or anywhere on its river (C6 spots).
+const REGION_OBJ = { 1: ["as-korean-peninsula", "as-japanese-islands", "as-sea-of-japan"], 2: ["as-indochina", "as-south-china-sea"], 3: ["as-malay-peninsula", "as-borneo", "as-south-china-sea"] };
+const NEVER6 = ["as-arctic-ocean", "as-chukotka", "as-bering-strait"];
+const frame6 = unit => {
+  const f = C6.frames[unit === "section-final" || unit === "S" ? "S" : String(unit)], hw = 50 / f.zoom;
+  const cx = Math.min(100 - hw, Math.max(hw, f.x)), cy = Math.min(100 - hw, Math.max(hw, f.y)), m = 4 / f.zoom;
+  return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m };
+};
+function places6(unit, F) {
+  const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit), uOf = id => C6.items.find(o => o.id === id)?.unit;
+  const add = (base, spots) => { const sp = spots.filter(F.inView); if (sp.length) out.push({ ...base, spots: sp }); };
+  for (const o of C6.items) if (o.unit <= unit) add({ id: o.id, kind: "country", country: o.id, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
   // only the rivers that flow through the countries of this section (the Jordan or the Ob belong to other parts of Asia)
   for (const r of rivers) {
     const rc = C6.rivers.find(q => q.id === r.id);
     if (!rc) continue;
-    out.push({ id: r.id, kind: "river", river: r.id, crosses: rc.crosses, unit: 0, x: r.label.x, y: r.label.y, place: PLACE[r.id] });
+    add({ id: r.id, kind: "river", river: r.id, crosses: rc.crosses, unit: 0, reg: null, place: PLACE[r.id] }, rc.spots);
     for (const q of rc.points) if (learned(q.country))
-      out.push({ id: `${r.id}@${q.country}`, kind: "river", river: r.id, country: q.country, unit: 0, x: q.x, y: q.y, place: [0, 1].map(li => placeOn(r.id, q.country, li)) });
+      add({ id: `${r.id}@${q.country}`, kind: "river", river: r.id, country: q.country, unit: 0, reg: [uOf(q.country)], place: [0, 1].map(li => placeOn(r.id, q.country, li)) }, q.spots);
   }
-  // section 1 fills in, the places of East and Southeast Asia first (the Suez Canal would say nothing about these countries)
-  for (const o of map.items) out.push({ id: o.id, kind: "object", unit: -1, east: o.label.x >= 50, x: o.label.x, y: o.label.y, place: PLACE[o.id] });
+  // section 1 for review: only what is in view, never the far north
+  for (const o of map.items) if (!NEVER6.includes(o.id))
+    add({ id: o.id, kind: "object", unit: -1, reg: Object.keys(REGION_OBJ).filter(u => REGION_OBJ[u].includes(o.id)).map(Number), place: PLACE[o.id] }, [o.label]);
   return out;
 }
+// a plain river letter («on the Mekong») is in the region of the unit whose country it stands in
+const regOf = p => p.reg || p.sreg || (p.sreg = C6.items.filter(o => in6(o.id, p)).map(o => o.unit));
 const conflict6 = (a, b) => (a.river && a.river === b.river) || (a.country && a.country === b.country)
   || (a.kind === "river" && !a.country && b.kind === "country" && a.crosses.includes(b.id)) || (b.kind === "river" && !b.country && a.kind === "country" && b.crosses.includes(a.id))
   || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id)
   || (a.country && (CONTAINERS[a.country] || []).includes(b.id)) || (b.country && (CONTAINERS[b.country] || []).includes(a.id))
   || (a.kind !== "river" && in6(a.id, b)) || (b.kind !== "river" && in6(b.id, a));
-function build6(word, lang, unit, final, tries = 6000) {
-  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = Math.ceil(n / 3);
-  const usable = places6(unit).filter(p => !fold(p.place[li]).includes(fold(word)));
+function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 4000)) {
+  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = Math.ceil(n / 3), needReg = Math.ceil(n / 2);
+  const F = frame6(final ? "S" : unit), sep = SEP / F.zoom, U = final ? [1, 2, 3] : [unit];
+  const usable = places6(unit, F).filter(p => !fold(p.place[li]).includes(fold(word)));
+  const inReg = p => regOf(p).some(u => U.includes(u));
   let best = null, bestScore = -Infinity;
   for (let k = 0; k < tries; k++) {
-    // rivers up to the quota first (those in this section's countries before the others), then this unit's countries, other countries and rivers, the section 1 objects last
-    const rank = p => p.unit === -1 ? (p.east ? 3 : 4) : p.kind === "country" && p.unit === unit ? 0 : 1;
-    const pool = shuffle([...usable]).sort((a, b) => rank(a) - rank(b));
-    const pick = [], ok = p => pick.every(q => far(p, q) && !conflict6(p, q));
-    for (const p of shuffle(usable.filter(p => p.kind === "river"))) if (pick.length < needR && ok(p)) pick.push(p);
-    for (const p of pool) if (pick.length < n && !pick.includes(p) && ok(p)) pick.push(p);
+    const pick = [], ok = p => pick.every(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT) >= sep && !conflict6(p, q));
+    const take = g => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if (ok(p)) { pick.push(p); return; } } };
+    // rivers up to the quota first, then the region of the unit, then the rest (countries and rivers of earlier units, section 1)
+    const groups = shuffle([...usable]);
+    for (const g of groups.filter(g => g.kind === "river")) if (pick.filter(p => p.kind === "river").length < needR) take(g);
+    const regG = groups.filter(g => g.kind !== "object" && (g.reg ? g.reg.some(u => U.includes(u)) : true));
+    for (const g of regG) take(g);
+    for (const g of groups) take(g);
     if (pick.length < n || pick.filter(p => p.kind === "river").length < needR) continue;
-    const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT))));
-    const unitOf = c => C6.items.find(o => o.id === c)?.unit || 0;
-    const own = pick.filter(p => p.country && unitOf(p.country) === unit).length, units = new Set(pick.map(p => p.country && unitOf(p.country)).filter(Boolean)).size;
-    const inCountry = pick.filter(p => p.kind === "river" && p.country).length, filler = pick.filter(p => p.unit === -1).length + 2 * pick.filter(p => p.unit === -1 && !p.east).length;
-    const score = Math.min(gap, 12) + (final ? units * 4 + pick.filter(p => p.country).length * 3 : own * 6 + pick.filter(p => p.country).length * 2) + inCountry * 2 - filler * 3;
+    const reg = pick.filter(inReg).length;
+    if (reg < needReg) continue;
+    const gap = Math.min(...pick.flatMap((p, i) => pick.slice(i + 1).map(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT)))) * F.zoom;
+    const units = new Set(pick.flatMap(regOf)).size, ctry = pick.filter(p => p.kind === "country").length;
+    const inCountry = pick.filter(p => p.kind === "river" && p.country).length, obj = pick.filter(p => p.kind === "object").length;
+    const score = Math.min(gap, 12) + reg * 6 + ctry * 3 + inCountry * 2 - obj * 2 + (final ? units * 5 : 0);
     if (score > bestScore) { bestScore = score; best = shuffle(pick); }
   }
   if (!best) return null;
@@ -181,7 +200,7 @@ function build6(word, lang, unit, final, tries = 6000) {
   const markers = best.map((p, i) => ({ id: p.id, x: p.x, y: p.y, letter: letters[i] }));
   const ord = tpl.ordinals[lang], t = tpl.template[lang], ph = Object.fromEntries(best.map(p => [p.id, p.place[li]]));
   const clues = order.map(pos => ({ markerId: markers[pos - 1].id, position: pos, text: t.replace("{ordinal}", ord[pos - 1]).replace("{place}", ph[markers[pos - 1].id]) }));
-  return { markers, clues };
+  return { markers, clues, focus: { x: F.x, y: F.y, zoom: F.zoom }, inRegion: best.filter(inReg).length };
 }
 
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { puzzles: [] };

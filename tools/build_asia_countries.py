@@ -132,6 +132,44 @@ for rv in json.load(open(ROOT / 'data/maps/asia-rivers.json'))['items']:
     rv_out.append({'id': rv['id'], 'crosses': [cid for cid, _ in cross], 'points': points})
     print(rv['id'], [cid for cid, _ in cross], [(q['country'], q['length']) for q in points])
 
+# ---- letter spots for GeoWords (Svetlana, 31.10.2026 17:45: at least half of the letters inside the region of the lesson) ----
+# A GeoWords puzzle of this section opens zoomed in on the region of its unit (FRAMES: centre and zoom in % of the map), so the
+# countries are large enough for letters 9% of the screen apart. A letter may stand anywhere well inside its country (spots: the
+# label point and a grid of points at least 0.25% inside the border, thinned to 1% apart), and anywhere on a river (spots along the
+# river; «on the Mekong in Laos»: along the part of the river at least 0.4% inside that country). Distances are measured with y scaled
+# by H / W, as on the screen.
+FRAMES = {'1': {'x': 57, 'y': 50, 'zoom': 2.2}, '2': {'x': 55, 'y': 70, 'zoom': 3.2}, '3': {'x': 69, 'y': 80, 'zoom': 2.4}, 'S': {'x': 60, 'y': 64, 'zoom': 1.6}}
+K = H / W
+sq = lambda g: affinity.scale(g, 1, K, origin=(0, 0))      # to screen-like units
+un = lambda g: affinity.scale(g, 1, 1 / K, origin=(0, 0))
+def thin(pts, d):
+    out = []
+    for x, y in pts:
+        if all(((x - a) ** 2 + ((y - b) * K) ** 2) ** .5 >= d for a, b in out): out.append((x, y))
+    return [{'x': round(x, 2), 'y': round(y, 2)} for x, y in out]
+for it in items:
+    inner = un(sq(shapes[it['id']]).buffer(-0.25))
+    grid = [(x / 10, y / 10) for x in range(0, 1000, 4) for y in range(0, 1000, 4) if inner.contains(Point(x / 10, y / 10))]
+    it['spots'] = thin([(it['label']['x'], it['label']['y'])] + grid, 1.0)
+def along(line, step=1.2):
+    pts = []
+    for seg in getattr(line, 'geoms', [line]):
+        if seg.geom_type != 'LineString' or seg.length < 0.05: continue
+        s = sq(seg); n = max(1, int(s.length / step))
+        pts += [(q.x, q.y / K) for q in (s.interpolate(i / n, normalized=True) for i in range(n + 1))]
+    return pts
+for rv, ro in zip([r for r in json.load(open(ROOT / 'data/maps/asia-rivers.json'))['items'] if any(o['id'] == r['id'] for o in rv_out)], rv_out):
+    assert rv['id'] == ro['id']
+    line = MultiLineString([[tuple(q) for q in seg] for seg in rv['path'] if len(seg) > 1])
+    ro['spots'] = thin([(rv['label']['x'], rv['label']['y'])] + along(line), 1.4)
+    ro['points'] = []
+    for cid in ro['crosses']:
+        inner = line.intersection(un(sq(shapes[cid]).buffer(-0.4)))
+        pts = along(inner)
+        if len(pts) < 2: continue
+        mid = max(getattr(inner, 'geoms', [inner]), key=lambda g: g.length).interpolate(0.5, normalized=True)
+        ro['points'].append({'country': cid, 'x': round(mid.x, 2), 'y': round(mid.y, 2), 'spots': thin([(mid.x, mid.y)] + pts, 1.4)})
+
 out = {
   'map': './assets/asia-countries.webp',
   'alsoValidFor': ['./assets/asia-blank.webp', './assets/asia-rivers.webp', './assets/asia-lakes.webp', './assets/asia-mountains.webp', './assets/asia-deserts.webp'],
@@ -144,7 +182,9 @@ out = {
             'Taiwan is a separate object with a note on its special international status; the dispute is not presented as resolved.',
             'Hong Kong and Macao are part of the tap area of China.',
             'Singapore (a fraction of a pixel on a phone) has a round tap spot of 1.2% around it.',
-            'rivers: for each river of section 2 the countries of this section it crosses, and for a river crossing two or more of them a point on the river inside each country it crosses far enough.'],
+            'rivers: for each river of section 2 the countries of this section it crosses, and a point on the river inside each country it crosses far enough («on the Mekong in Laos»).',
+            'spots: where a GeoWords letter of a country or river may stand; frames: the zoomed view of the GeoWords puzzles of each unit (S = section final).'],
+  'frames': FRAMES,
   'items': items,
   'rivers': rv_out,
 }

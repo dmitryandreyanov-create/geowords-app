@@ -43,12 +43,8 @@
     "ru": "Монголия"
    },
    "fact": {
-    "ru": "Улан-Батор — самая холодная столица мира: средняя температура за год ниже нуля.",
-    "en": "Ulaanbaatar is the coldest capital in the world: its average yearly temperature is below zero."
-   },
-   "figure": {
-    "value": -0.4,
-    "unit": "°C"
+    "ru": "Улан-Батор считается самой холодной столицей мира по среднегодовой температуре.",
+    "en": "Ulaanbaatar is widely regarded as the world’s coldest national capital by average annual temperature."
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
@@ -61,7 +57,7 @@
    }
   },
   {
-   "id": "great-wall-longest-structure",
+   "id": "great-wall-longest-fortification",
    "order": 3,
    "object": "cty-china",
    "kind": "record",
@@ -71,12 +67,13 @@
     "ru": "Китай"
    },
    "fact": {
-    "ru": "Великая Китайская стена — самое длинное сооружение, построенное людьми: вместе со всеми ветвями более 20 тысяч км.",
-    "en": "The Great Wall of China is the longest structure ever built: with all its branches it is more than 20,000 km long."
+    "ru": "Великая Китайская стена — самая протяжённая система оборонительных укреплений в мире. Её общая длина превышает 20 тысяч километров.",
+    "en": "The Great Wall of China is the world’s longest system of defensive fortifications, stretching over 20,000 kilometres in total."
    },
    "figure": {
-    "value": 21196,
-    "unit": "km"
+    "value": 20000,
+    "unit": "km",
+    "more": true
    },
    "source": {
     "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",

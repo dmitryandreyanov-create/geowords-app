@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.10.31-asia-6';
+const BUILD='2026.10.31-asia-6b';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -294,7 +294,7 @@ async function loadData(){
       capital:{id:it.capital.id,name:f.capital,x:it.capital.x,y:it.capital.y},fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat}}
   for(const o of Object.values(a6))o.area=o.tapArea.reduce((a,p)=>a+Math.abs(p.reduce((s,q,i)=>{const r=p[(i+1)%p.length];return s+q[0]*r[1]-r[0]*q[1]},0))/2,0);
   D.s18={facts:a6f,records:a6r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:a6,intro:null,dict:a6d,geo:a6g,
-    rivers:a6m.rivers,dots:a6m.items.map(it=>({id:it.capital.id,x:it.capital.x,y:it.capital.y}))};
+    rivers:a6m.rivers,dots:a6m.items.map(it=>({id:it.capital.id,x:it.capital.x,y:it.capital.y})),frames:a6m.frames,spots:Object.fromEntries(a6m.items.map(it=>[it.id,it.spots]))};
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
@@ -980,6 +980,8 @@ function capHit(x,y,sz){let hit=null,d=24;for(const c of (EUSEC===18?D.s18.dots:
 // the zoom inset of a country card (Svetlana, 29.10.2026): a small country is hard to see on the whole map, so a corner inset magnifies it with its capital;
 // the Dead Sea card of «Lakes of Asia» has the same inset, without a capital (Svetlana, 30.10.2026)
 // and a frame on the map shows the magnified piece; Norway and Russia are big enough without it
+// in Asia section 6 only the three smallest countries get the inset (Svetlana, 31.10.2026 17:45)
+const AS6_INSET=new Set(['cty-singapore','cty-brunei','cty-timor-leste']);
 function countryInset(m,host,o){const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=ps.map(p=>p[1]);
   const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),size=Math.max(x1-x0,(y1-y0)*1600/2200);if(size>22)return null;
   const z=Math.min(10,Math.max(2.5,38/size)),hw=50/z,cx=Math.min(100-hw,Math.max(hw,(x0+x1)/2)),cy=Math.min(100-hw,Math.max(hw,(y0+y1)/2));
@@ -1292,7 +1294,7 @@ function lesson(step){
       euMap(app.querySelector('.mapslot'),{zoom:false});return gotIt(()=>learn(I.id))}
     if(q.k==='introEu'||q.k==='introEuRec'){const rec=q.rec&&EUD().records.find(r=>r.id===q.rec);const o=E(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}${o.capital&&!rec?` <small>· ${esc(o.capital.name[lang])}</small>`:''}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
-      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(o.capital){m.shape(capRing(o.capital),'hl-shape good');countryInset(m,app.querySelector('.mapslot'),o)}else if(o.zoomInset)countryInset(m,app.querySelector('.mapslot'),o);if(!rec)wireNuance(o);
+      const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(o.capital){m.shape(capRing(o.capital),'hl-shape good');if(EUSEC!==18||AS6_INSET.has(o.id))countryInset(m,app.querySelector('.mapslot'),o)}else if(o.zoomInset)countryInset(m,app.querySelector('.mapslot'),o);if(!rec)wireNuance(o);
       return gotIt(()=>learn(o.id))}
     if(q.k==='tipEu'){const I=D.s8.facts.items.find(i=>i.id===q.id&&i.approval?.status==='approved');const rs=I?I.rivers.map(E).filter(Boolean):[];if(rs.length!==(I?.rivers.length??-1)){done++;return next()}
       // the first letter of every word stands out: the phrase's letters are the rivers' first letters, west to east
@@ -1625,7 +1627,7 @@ function finalPuzzle(st){if(st.sec>=7)EUSEC=st.sec;const role=st.kind==='section
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,stamp:st.sec===18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,focus:P.focus||null,stamp:st.sec===18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
 function blockPuzzle(st){if(st.sec===12)return euBlockPuzzle(st);const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
@@ -1836,12 +1838,21 @@ function placesFor(st){
   // Deserts of Asia: the same with the learned deserts (at the label point), then every object of section 1 (drawn on the same rivers base)
   // Countries and capitals: East and Southeast Asia — as Europe section 5: letters at the centre of the learned countries, on the rivers of section 2 that flow
   // through them (drawn over the map: «on the Mekong»), on a river inside a country it crosses («on the Mekong in Cambodia»); the objects of section 1 fill in (pri 2)
-  if(st.sec===18){EUSEC=18;const u=st.unit==='S'?3:st.unit;const learned=id=>!!(E(id)&&E(id).unit<=u);
-    const out=AS6_IDS.filter(learned).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS6_IN[id][0],en:AS6_IN[id][1]},pri:0,eu:true,kind:'country',country:id}));
+  // Svetlana, 31.10.2026 17:45: the puzzle opens zoomed in on the region of its unit (frames of asia-countries-6.json), at least half of the letters in that
+  // region (reg), the rest on learned objects of Asia in view; a letter may stand anywhere well inside its country or on its river (spots, one per group)
+  if(st.sec===18){EUSEC=18;const u=st.unit==='S'?3:st.unit;const learned=id=>!!(E(id)&&E(id).unit<=u),U=st.unit==='S'?[1,2,3]:[st.unit];
+    const f=D.s18.frames[st.unit==='S'?'S':String(st.unit)],hw=50/f.zoom,cx=Math.min(100-hw,Math.max(hw,f.x)),cy=Math.min(100-hw,Math.max(hw,f.y)),mg=4/f.zoom;
+    const inView=q=>q.x>=cx-hw+mg&&q.x<=cx+hw-mg&&q.y>=cy-hw+mg&&q.y<=cy+hw-mg,uOf=id=>E(id)&&E(id).unit;
+    const out=[],add=(base,spots,reg)=>{for(const q of spots.filter(inView))out.push({...base,x:q.x,y:q.y,group:base.id,reg:reg(q)})};
+    for(const id of AS6_IDS.filter(learned))add({id,place:{ru:AS6_IN[id][0],en:AS6_IN[id][1]},pri:0,eu:true,kind:'country',country:id},D.s18.spots[id]||[E(id)],()=>U.includes(uOf(id)));
     for(const r of D.s18.rivers){if(!D.s14.eu[r.id])continue;
-      out.push({id:r.id,x:E(r.id).x,y:E(r.id).y,place:{ru:AS2_ON[r.id][0],en:AS2_ON[r.id][1]},pri:0,eu:true,kind:'river',river:r.id,crosses:r.crosses});
-      for(const q of r.points)if(learned(q.country))out.push({id:r.id+'@'+q.country,x:q.x,y:q.y,place:{ru:AS2_ON[r.id][0]+' '+AS6_IN[q.country][0],en:AS2_ON[r.id][1]+' '+AS6_IN[q.country][1]},pri:0,eu:true,kind:'river',river:r.id,country:q.country})}
-    return [...out,...AS1_IDS.filter(id=>D.s13.eu[id]).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS_PLACE[id][0],en:AS_PLACE[id][1]},pri:2,eu:true,kind:'object'}))]}
+      add({id:r.id,place:{ru:AS2_ON[r.id][0],en:AS2_ON[r.id][1]},pri:0,eu:true,kind:'river',river:r.id,crosses:r.crosses},r.spots||[E(r.id)],q=>AS6_IDS.some(c=>U.includes(uOf(c))&&euArea(c)&&inside(euArea(c),q.x,q.y)));
+      for(const q of r.points)if(learned(q.country))add({id:r.id+'@'+q.country,place:{ru:AS2_ON[r.id][0]+' '+AS6_IN[q.country][0],en:AS2_ON[r.id][1]+' '+AS6_IN[q.country][1]},pri:0,eu:true,kind:'river',river:r.id,country:q.country},q.spots||[q],()=>U.includes(uOf(q.country)))}
+    const REG={1:['as-korean-peninsula','as-japanese-islands','as-sea-of-japan'],2:['as-indochina','as-south-china-sea'],3:['as-malay-peninsula','as-borneo','as-south-china-sea']};
+    for(const id of AS1_IDS.filter(id=>D.s13.eu[id]&&!['as-arctic-ocean','as-chukotka','as-bering-strait'].includes(id)))
+      add({id,place:{ru:AS_PLACE[id][0],en:AS_PLACE[id][1]},pri:2,eu:true,kind:'object'},[E(id)],()=>U.some(k=>REG[k].includes(id)));
+    for(const p of out)if(!p.reg&&p.pri===0)p.pri=1;
+    out.frame={x:f.x,y:f.y,zoom:f.zoom};return out}
   if(st.sec===17){EUSEC=17;const u=st.unit==='S'?3:st.unit;
     return [...AS5_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS5_IN[id][0],en:AS5_IN[id][1]},pri:0,eu:true})),
       ...AS1_IDS.filter(id=>D.s13.eu[id]).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS_PLACE[id][0],en:AS_PLACE[id][1]},pri:1,eu:true}))]}
@@ -1889,11 +1900,11 @@ const inArea=(p,q)=>{const o=areaOf(q.id);return !!(o&&q.id!==p.id&&inside(o,p.x
 const nested=(a,b)=>containers(a.id).includes(b.id)||containers(b.id).includes(a.id)||inArea(a,b)||inArea(b,a);
 function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answer],n=letters.length;const order=revealOrder(n);if(!order)return null;
   const usable=places.filter(p=>!fold(p.place[lang]).includes(fold(w.answer)));
-  const eu=places.some(p=>p.eu),far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*(eu?1600/2200:.55))>=(eu&&(EUCTY()||EUSEC===18)?9:4.5);let chosen=null;// spacing 9 for small countries: a letter marker is ~9% of the map wide on a phone (Svetlana, 28.10.2026)
+  const eu=places.some(p=>p.eu),fz=places.frame,far=(a,b)=>Math.hypot(a.x-b.x,(a.y-b.y)*(eu?1600/2200:.55))>=(eu&&(EUCTY()||EUSEC===18)?9:4.5)/(fz?fz.zoom:1);let chosen=null;// spacing 9 for small countries: a letter marker is ~9% of the map wide on a phone (Svetlana, 28.10.2026)
   // current section first, then earlier sections, continents / oceans last (places without pri — section 1 — are all equal)
   // continents / oceans last; otherwise the places used least so far in this practice first, so every learned object turns up across the six words
   // Rivers and Lakes of Asia: the learned rivers / lakes always come before the places of section 1, so every word practises them
-  const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||(eu&&(EUSEC===14||EUSEC===15||EUSEC===16||EUSEC===17)?(a.pri||0)-(b.pri||0):0)||((usage[a.group||a.id]||0)-(usage[b.group||b.id]||0))||((a.pri||0)-(b.pri||0)));
+  const order_=()=>shuffle([...usable]).sort((a,b)=>((a.pri===2)-(b.pri===2))||(eu&&(EUSEC===14||EUSEC===15||EUSEC===16||EUSEC===17||EUSEC===18)?(a.pri||0)-(b.pri||0):0)||((usage[a.group||a.id]||0)-(usage[b.group||b.id]||0))||((a.pri||0)-(b.pri||0)));
   // a river group gives one «on» letter or its mouth (+ its source, always together); ends of a river are taken as a pair
   const okWith=(p,pick,sep)=>pick.every(q=>(!sep||far(p,q))&&!(eu?(EUSEC===11||EUSEC===18?nest11:euNested):nested)(p,q)&&!(p.group&&q.group===p.group));
   // section 5: at least a third of the letters on rivers, so the rivers are taken first up to that share (Svetlana, 28.10.2026)
@@ -1902,14 +1913,14 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=[...w.answ
     for(const p of order_()){if(pick.length>=n||pick.includes(p))continue;
       if(p.pair){if(pick.length+2>n||!usable.includes(p.pair)||!okWith(p,pick,sep)||!okWith(p.pair,pick,sep)||(sep&&!far(p,p.pair)))continue;pick.push(p,p.pair)}
       else if(okWith(p,pick,sep))pick.push(p)}
-    return pick.length===n?pick:null};
-  for(let k=0;k<80&&!chosen;k++)chosen=greedy(true);
+    return pick.length===n&&(!fz||pick.filter(p=>p.reg).length>=Math.ceil(n/2))?pick:null};
+  for(let k=0;k<(fz?400:80)&&!chosen;k++)chosen=greedy(true);
   if(!(eu&&(EUCTY()||EUSEC===18)))for(let k=0;k<300&&!chosen;k++)chosen=greedy(false);// countries: never closer than the spacing rule
   if(!chosen)return null;
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
-  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers,eu}}
+  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers,eu,focus:fz||null}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
   const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers){const key=k.id.replace(/-(river|mouth|source)$/,'');usage[key]=(usage[key]||0)+1}}}
@@ -1928,7 +1939,7 @@ function geowords(P){
   app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
   const slots=[...app.querySelectorAll('.slot')];
-  const m=(P.eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose});
+  const m=(P.eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose,...(P.focus?{focus:P.focus}:{})});
   if(P.eu)app.querySelector('.gw .mapbox').style.aspectRatio='2200/1600';
   const pip=(img,txt)=>{app.querySelector('.gw-pip img').src=img;app.querySelector('.bubble').textContent=txt};
   function clue(){const c=P.clues[step];app.querySelector('.gw-clue').innerHTML=esc(c.text).replace(/(\S+ букву|the \S+ letter)/,'<b>$1</b>');

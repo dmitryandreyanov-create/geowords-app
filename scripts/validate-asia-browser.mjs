@@ -335,7 +335,9 @@ try{
         if(!shotKinds.has(q.k)||q.id==='cty-taiwan'&&q.k==='introEu'){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k+(q.id==='cty-taiwan'?'-taiwan':''))}
         if(q.k==='introEu'||q.k==='introEuRec'){
           if(q.k==='introEu'){const f=cFacts.items.find(i=>i.id===q.id);assert.equal(await page.locator('.task .card p').first().innerText(),f.fact[lang]);
-            assert.equal(await page.locator('.task .nuance').count(),f.caveat?1:0,'«Есть нюанс» on '+q.id)}
+            assert.equal(await page.locator('.task .nuance').count(),f.caveat?1:0,'«Есть нюанс» on '+q.id);
+            // the zoom inset only on Singapore, Brunei and Timor-Leste (Svetlana, 31.10.2026 17:45)
+            assert.equal(await page.locator('.task .zoom-inset').count(),['cty-singapore','cty-brunei','cty-timor-leste'].includes(q.id)?1:0,'zoom inset on '+q.id)}
           await page.locator('.fb .btn').click()}
         else if(q.k==='findEu'){assert(q.id in cUnit,'a country of section 6: '+q.id);await tapAt(cOf[q.id].label);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
@@ -357,6 +359,9 @@ try{
         const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-countries.webp'),'practice on the countries map');
         for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?rivIds.has(r)&&cUnit[c]<=u:m.id in cUnit?cUnit[m.id]<=u:rivIds.has(m.id)||m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`)}
         assert(p.markers.filter(m=>rivIds.has(m.id.split('@')[0])).length>=Math.ceil(p.answer.length/3),p.answer+': a third of the letters on rivers');
+        assert.deepEqual(p.focus,cMap.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        assert(!p.markers.some(m=>['as-arctic-ocean','as-chukotka','as-bering-strait'].includes(m.id)),p.answer+': no letter in the far north');
+        await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
         if(w===0)await shot('practice-u'+u);
         for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
         if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
@@ -367,6 +372,8 @@ try{
       await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
       const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
       const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-countries.webp'),'final on the countries map');
+      assert.deepEqual(p.focus,want.focus,'the final opens zoomed in');assert(want.inRegion>=Math.ceil(want.answer.length/2),'half of the letters in the region');
+      await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,want.id+': every letter in view');
       await page.waitForTimeout(400);await shot('final-'+id);
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a6-u1-l1"]')}
