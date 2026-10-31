@@ -63,7 +63,7 @@
      {
       "answer": "LOULAN",
       "role": "review",
-      "definition": "A lost city by the dried-up lake Lop Nur, buried by the sands of the Taklamakan.",
+      "definition": "Ruins of an ancient Silk Road city near Lop Nur, a lake that later dried up.",
       "approval": {
        "status": "draft"
       }
@@ -95,7 +95,7 @@
      {
       "answer": "OVIRAPTOR",
       "role": "review",
-      "definition": "A dinosaur found in the Gobi beside a nest of eggs; later scientists learned it was sitting on its own eggs.",
+      "definition": "A dinosaur from the Gobi once thought to steal eggs. Later discoveries showed that dinosaurs like it cared for their nests.",
       "approval": {
        "status": "draft"
       }
@@ -145,7 +145,7 @@
      {
       "answer": "ЛОУЛАНЬ",
       "role": "review",
-      "definition": "Затерянный город у высохшего озера Лобнор, засыпанный песками Такла-Макана.",
+      "definition": "Руины древнего города Шёлкового пути возле озера Лобнор, которое со временем высохло.",
       "approval": {
        "status": "draft"
       }
@@ -177,7 +177,7 @@
      {
       "answer": "ОВИРАПТОР",
       "role": "review",
-      "definition": "Динозавр, найденный в Гоби рядом с кладкой яиц; позже выяснилось, что он высиживал свои собственные яйца.",
+      "definition": "Хищный динозавр из Гоби, которого сначала считали похитителем яиц. Позже учёные обнаружили, что подобные динозавры заботились о своих кладках.",
       "approval": {
        "status": "draft"
       }
@@ -321,7 +321,7 @@
      {
       "answer": "BEDOUINS",
       "role": "final",
-      "definition": "Nomadic Arab tribes of the deserts who herd camels.",
+      "definition": "Arab communities who traditionally lived by nomadic herding in the deserts of the Middle East.",
       "approval": {
        "status": "draft"
       }
@@ -361,7 +361,7 @@
      {
       "answer": "HAMADA",
       "role": "review",
-      "definition": "A stony desert covered with gravel and broken rock.",
+      "definition": "A stony desert of bare hard rock and gravel, without a wide cover of sand.",
       "approval": {
        "status": "draft"
       }
@@ -379,7 +379,7 @@
      {
       "answer": "БЕДУИНЫ",
       "role": "final",
-      "definition": "Кочевые арабские племена пустынь, разводящие верблюдов.",
+      "definition": "Арабские общины, традиционно занимавшиеся кочевым скотоводством в пустынях Ближнего Востока.",
       "approval": {
        "status": "draft"
       }
@@ -419,7 +419,7 @@
      {
       "answer": "ХАМАДА",
       "role": "review",
-      "definition": "Каменистая пустыня, покрытая щебнем и обломками скал.",
+      "definition": "Каменистая пустыня, где на поверхности лежат твёрдые горные породы и щебень, а сплошного песчаного покрова нет.",
       "approval": {
        "status": "draft"
       }
@@ -446,7 +446,7 @@
      {
       "answer": "PETROGLYPHS",
       "role": "section-final",
-      "definition": "Ancient pictures carved or scratched into rock.",
+      "definition": "Ancient pictures carved into rock; there are many on the rocks of the Negev Desert and in Central Asia.",
       "approval": {
        "status": "draft"
       }
@@ -456,7 +456,7 @@
      {
       "answer": "ПЕТРОГЛИФЫ",
       "role": "section-final",
-      "definition": "Древние рисунки, выбитые или процарапанные на камне.",
+      "definition": "Древние рисунки, выбитые на камне; их много на скалах пустыни Негев и в Центральной Азии.",
       "approval": {
        "status": "draft"
       }

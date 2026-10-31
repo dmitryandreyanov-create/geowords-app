@@ -5,8 +5,9 @@ shaded on the Asia rivers map (assets/asia-rivers.webp, the shared base of tools
 
 Three looks, so a child sees that a desert is not always sand (Svetlana, 31.10.2026): sand (yellow with sand dots), stony
 (grey-brown with pebbles: the Gobi, the Negev) and salt (pale with short white strokes: the Dasht-e Kavir).
-Source: Natural Earth 1:10m geography regions (polygons). The Ordos is the Mu Us Desert of Natural Earth (the sands inside the
-Huang He bend); the Negev is small on a phone, so the app shows it in a zoom inset like the Dead Sea (Svetlana, 31.10.2026).
+Source: Natural Earth 1:10m geography regions (polygons). The Ordos is the Natural Earth polygon named
+«Mu Us Desert», which covers the whole desert region inside the Huang He bend (37.2–40.9° N): the Mu Us and the Kubuqi sands
+together, so it is drawn as the conventional outline of the Ordos desert region, not one sand sea (Svetlana, 31.10.2026); the Negev is small on a phone, so the app shows it in a zoom inset like the Dead Sea (Svetlana, 31.10.2026).
 Touching deserts (the Gobi and the Ordos, the Karakum and the Kyzylkum) are kept GAP px apart; the later one in the list gives way.
 Tap areas are the drawn shapes widened by GROW px without overlapping.
 
@@ -128,7 +129,7 @@ out = {
   'source': 'Natural Earth 1:10m geography regions (polygons), projected like asia-overview.json; drawn on assets/asia-rivers.webp',
   'notes': ['Built by tools/build_asia_deserts.py, which also draws assets/asia-deserts.webp.',
             'Looks: sand, stony (Gobi, Negev), salt (Dasht-e Kavir). Touching deserts are kept %d px apart.' % GAP,
-            'The Ordos is the Mu Us Desert of Natural Earth. The Negev is shown in a zoom inset on its card.'],
+            'The Ordos is the Natural Earth polygon «Mu Us Desert», which covers the whole desert region inside the Huang He bend (the Mu Us and the Kubuqi sands): a conventional outline of a desert region, not one sand sea. The Negev is shown in a zoom inset on its card.'],
   'items': items,
 }
 dst = B.ROOT / 'data/maps/asia-deserts.json'

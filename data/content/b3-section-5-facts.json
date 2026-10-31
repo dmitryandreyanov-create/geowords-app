@@ -86,8 +86,12 @@
     "ru": "Ордос"
    },
    "fact": {
-    "en": "A dry region inside the great bend of the Huang He in China. The Mu Us and Kubuqi sands lie here. People plant trees and shrubs there to stop the sand.",
-    "ru": "Засушливая область внутри большой излучины Хуанхэ в Китае. Здесь лежат пески Муус и Кубучи. Люди сажают там деревья и кустарники, чтобы остановить пески."
+    "en": "A desert region inside the great bend of the Huang He in China. It is not one sand sea: it holds the Kubuqi sands in the north and the Mu Us sands in the south. People plant trees and shrubs there to stop the sand.",
+    "ru": "Пустынная область внутри большой излучины Хуанхэ в Китае. Это не единый массив песков: в неё входят пески Кубучи на севере и Муус на юге. Люди сажают там деревья и кустарники, чтобы остановить пески."
+   },
+   "caveat": {
+    "ru": "На карте Ордос обведён условным контуром: это пустынная область с песками Кубучи и Муус, а не единый массив песков.",
+    "en": "On the map the Ordos has a conventional outline: it is a desert region with the Kubuqi and the Mu Us sands, not one sand sea."
    },
    "source": {
     "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
@@ -108,8 +112,8 @@
     "ru": "Гоби"
    },
    "fact": {
-    "en": "A huge desert region in Mongolia and China. Most of it is not sand but stony and gravel plains, and its winters are very cold. The Gobi is famous for dinosaurs: sand buried them quickly, and in the dry climate skeletons and even nests of eggs survived.",
-    "ru": "Огромная пустынная область в Монголии и Китае. Большая её часть — не песок, а каменистые и щебнистые равнины, а зимы здесь очень холодные. Гоби знаменита динозаврами: их быстро засыпало песком, и в сухом климате сохранились скелеты и даже кладки яиц."
+    "en": "A huge desert region in Mongolia and China. Most of it is not sand but stony and gravel plains, and its winters are very cold. The Gobi is famous for dinosaur fossils, including skeletons and nests of eggs. Rapid burial by sediment millions of years ago helped preserve them.",
+    "ru": "Огромная пустынная область в Монголии и Китае. Большая её часть — не песок, а каменистые и щебнистые равнины, а зимы здесь очень холодные. В Гоби обнаружены знаменитые окаменелости динозавров, включая скелеты и кладки яиц. Их сохранению способствовало быстрое погребение осадками миллионы лет назад."
    },
    "source": {
     "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
@@ -218,8 +222,8 @@
     "ru": "Тар"
    },
    "fact": {
-    "en": "A desert in north-western India and in Pakistan, mostly in the Indian state of Rajasthan. Old fortress towns stand here, and people collect rainwater in stepwells.",
-    "ru": "Пустыня на северо-западе Индии и в Пакистане, больше всего — в индийском штате Раджастхан. Здесь стоят старинные города-крепости, а люди собирают дождевую воду в ступенчатые колодцы."
+    "en": "A desert in north-western India and in Pakistan, mostly in the Indian state of Rajasthan. The region is home to historic fortified towns and stepwells that helped people access and store water in a dry climate.",
+    "ru": "Пустыня на северо-западе Индии и в Пакистане, больше всего — в индийском штате Раджастхан. Здесь сохранились старинные города-крепости и ступенчатые колодцы, помогавшие людям получать и хранить воду в засушливом климате."
    },
    "source": {
     "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",

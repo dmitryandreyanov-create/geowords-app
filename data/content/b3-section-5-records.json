@@ -43,11 +43,11 @@
     "ru": "Деште-Лут"
    },
    "fact": {
-    "en": "Satellites measured one of the highest land surface temperatures on Earth in the Dasht-e Lut — about 70 °C.",
-    "ru": "В Деште-Лут спутники измерили одну из самых высоких температур поверхности Земли — около 70 °C."
+    "en": "Satellites have recorded land surface temperatures above 80°C in the Dasht-e Lut, making it one of the hottest places on Earth.",
+    "ru": "Спутники зафиксировали в пустыне Деште-Лут температуру земной поверхности выше 80 °C. Это одно из самых жарких мест на планете."
    },
    "figure": {
-    "value": 70,
+    "value": 80,
     "unit": "°C"
    },
    "source": {
