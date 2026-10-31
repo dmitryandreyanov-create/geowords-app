@@ -1,0 +1,92 @@
+{
+ "section": "countries-east-and-southeast-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "indonesia-largest-island-country",
+   "order": 1,
+   "object": "cty-indonesia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Indonesia",
+    "ru": "Индонезия"
+   },
+   "fact": {
+    "ru": "Индонезия — самое большое островное государство мира: около 17 тысяч островов.",
+    "en": "Indonesia is the largest island country in the world, with about 17,000 islands."
+   },
+   "figure": {
+    "value": 17000,
+    "unit": "islands"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "ulaanbaatar-coldest-capital",
+   "order": 2,
+   "object": "cty-mongolia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Mongolia",
+    "ru": "Монголия"
+   },
+   "fact": {
+    "ru": "Улан-Батор — самая холодная столица мира: средняя температура за год ниже нуля.",
+    "en": "Ulaanbaatar is the coldest capital in the world: its average yearly temperature is below zero."
+   },
+   "figure": {
+    "value": -0.4,
+    "unit": "°C"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "great-wall-longest-structure",
+   "order": 3,
+   "object": "cty-china",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "China",
+    "ru": "Китай"
+   },
+   "fact": {
+    "ru": "Великая Китайская стена — самое длинное сооружение, построенное людьми: вместе со всеми ветвями более 20 тысяч км.",
+    "en": "The Great Wall of China is the longest structure ever built: with all its branches it is more than 20,000 km long."
+   },
+   "figure": {
+    "value": 21196,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

@@ -1,0 +1,491 @@
+{
+ "section": "countries-east-and-southeast-asia",
+ "block": 3,
+ "use": "introduction cards, one fact per country and its capital; ids match data/maps/asia-countries-6.json",
+ "decisions": [
+  "Svetlana 31.10.2026 16:54: 16 countries of East and Southeast Asia and Taiwan as a separate object with a note on its special status; three units East Asia / Indochina / the Malay Archipelago.",
+  "Svetlana 31.10.2026 15:23: geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes. Taiwan is asked as a place on the map only, not in capital questions (capitalQuestions false). Jakarta is the capital until the presidential decree on the move to Nusantara (Constitutional Court, May 2026; no decree as of 31.10.2026).",
+  "disputed true marks the cards with a «Есть нюанс» note (Taiwan, Malaysia, Indonesia)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Восточная Азия",
+    "en": "East Asia"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Индокитай",
+    "en": "Indochina"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Малайский архипелаг",
+    "en": "The Malay Archipelago"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "cty-china",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "China",
+    "ru": "Китай"
+   },
+   "capital": {
+    "en": "Beijing",
+    "ru": "Пекин"
+   },
+   "fact": {
+    "en": "The Forbidden City, the palace of the Chinese emperors, stands in the centre of Beijing. The Yangtze and the Huang He flow across China.",
+    "ru": "В центре Пекина стоит Запретный город — дворец китайских императоров. Через Китай текут Янцзы и Хуанхэ."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-mongolia",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Mongolia",
+    "ru": "Монголия"
+   },
+   "capital": {
+    "en": "Ulaanbaatar",
+    "ru": "Улан-Батор"
+   },
+   "fact": {
+    "en": "Mongolia has no access to the sea. Steppes and the Gobi Desert cover most of the country.",
+    "ru": "Монголия не имеет выхода к морю. Большую часть страны занимают степи и пустыня Гоби."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-north-korea",
+   "order": 3,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "North Korea",
+    "ru": "Северная Корея"
+   },
+   "capital": {
+    "en": "Pyongyang",
+    "ru": "Пхеньян"
+   },
+   "fact": {
+    "en": "North Korea occupies the north of the Korean Peninsula. Pyongyang stands on the Taedong River.",
+    "ru": "Северная Корея занимает север Корейского полуострова. Пхеньян стоит на реке Тэдонган."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-south-korea",
+   "order": 4,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "South Korea",
+    "ru": "Южная Корея"
+   },
+   "capital": {
+    "en": "Seoul",
+    "ru": "Сеул"
+   },
+   "fact": {
+    "en": "Seoul stands on the Han River. Almost half of the country’s people live in and around Seoul.",
+    "ru": "Сеул стоит на реке Ханган. В Сеуле и вокруг него живёт почти половина жителей страны."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-japan",
+   "order": 5,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Japan",
+    "ru": "Япония"
+   },
+   "capital": {
+    "en": "Tokyo",
+    "ru": "Токио"
+   },
+   "fact": {
+    "en": "Japan lies on four large islands and thousands of small ones. Tokyo is on the largest of them, Honshu.",
+    "ru": "Япония лежит на четырёх крупных островах и тысячах мелких. Токио — на самом большом из них, Хонсю."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-taiwan",
+   "order": 6,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Taiwan",
+    "ru": "Тайвань"
+   },
+   "capital": {
+    "en": "Taipei",
+    "ru": "Тайбэй"
+   },
+   "fact": {
+    "en": "Taiwan is an island off the south-east coast of China. Its largest city and administrative centre is Taipei.",
+    "ru": "Тайвань — остров у юго-восточного побережья Китая. Его крупнейший город и административный центр — Тайбэй."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "У Тайваня особый международный статус: у него своё правительство, но большинство государств официально не признают его отдельной страной, а Китай считает его своей частью. Здесь Тайвань показан как остров и территория; спор о его статусе мы не решаем.",
+    "en": "Taiwan has a special international status: it has its own government, but most countries do not officially recognise it as a separate country, and China considers it part of its territory. Here Taiwan is shown as an island and a territory; we do not settle the dispute over its status."
+   },
+   "capitalQuestions": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-vietnam",
+   "order": 7,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Vietnam",
+    "ru": "Вьетнам"
+   },
+   "capital": {
+    "en": "Hanoi",
+    "ru": "Ханой"
+   },
+   "fact": {
+    "en": "Vietnam stretches along the South China Sea. Hanoi stands on the Red River in the north, and the Mekong reaches the sea in the south.",
+    "ru": "Вьетнам вытянут вдоль Южно-Китайского моря. Ханой стоит на Красной реке на севере, а на юге в море впадает Меконг."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-laos",
+   "order": 8,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Laos",
+    "ru": "Лаос"
+   },
+   "capital": {
+    "en": "Vientiane",
+    "ru": "Вьентьян"
+   },
+   "fact": {
+    "en": "Laos is the only country in Southeast Asia without access to the sea. Vientiane stands on the Mekong, on the border with Thailand.",
+    "ru": "Лаос — единственная страна Юго-Восточной Азии без выхода к морю. Вьентьян стоит на Меконге, на границе с Таиландом."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-cambodia",
+   "order": 9,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Cambodia",
+    "ru": "Камбоджа"
+   },
+   "capital": {
+    "en": "Phnom Penh",
+    "ru": "Пномпень"
+   },
+   "fact": {
+    "en": "Phnom Penh stands where the Tonlé Sap River meets the Mekong. The ancient temple of Angkor Wat is on the flag of Cambodia.",
+    "ru": "Пномпень стоит там, где в Меконг впадает река Тонлесап. На флаге Камбоджи изображён древний храм Ангкор-Ват."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-thailand",
+   "order": 10,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Thailand",
+    "ru": "Таиланд"
+   },
+   "capital": {
+    "en": "Bangkok",
+    "ru": "Бангкок"
+   },
+   "fact": {
+    "en": "Thailand is the only country in Southeast Asia that was never a European colony. Bangkok stands on the Chao Phraya River.",
+    "ru": "Таиланд — единственная страна Юго-Восточной Азии, которая никогда не была европейской колонией. Бангкок стоит на реке Чаупхрая."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-myanmar",
+   "order": 11,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Myanmar",
+    "ru": "Мьянма"
+   },
+   "capital": {
+    "en": "Naypyidaw",
+    "ru": "Нейпьидо"
+   },
+   "fact": {
+    "en": "Naypyidaw is a new capital built in the 2000s. The former capital, Yangon, is still the largest city. The Irrawaddy flows through the whole country.",
+    "ru": "Нейпьидо — новая столица, построенная в 2000-х годах. Прежняя столица Янгон остаётся крупнейшим городом. Через всю страну течёт Иравади."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-malaysia",
+   "order": 12,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Malaysia",
+    "ru": "Малайзия"
+   },
+   "capital": {
+    "en": "Kuala Lumpur",
+    "ru": "Куала-Лумпур"
+   },
+   "fact": {
+    "en": "Malaysia has two parts: the south of the Malay Peninsula and the north of the island of Borneo. The Petronas Twin Towers stand in Kuala Lumpur.",
+    "ru": "Малайзия состоит из двух частей: юга Малаккского полуострова и севера острова Калимантан. В Куала-Лумпуре стоят башни-близнецы Петронас."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Правительство Малайзии работает в соседнем городе Путраджая, но столица по конституции — Куала-Лумпур.",
+    "en": "The government of Malaysia works in the nearby city of Putrajaya, but the capital under the constitution is Kuala Lumpur."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-singapore",
+   "order": 13,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Singapore",
+    "ru": "Сингапур"
+   },
+   "capital": {
+    "en": "Singapore",
+    "ru": "Сингапур"
+   },
+   "fact": {
+    "en": "Singapore is a city-state on an island off the southern tip of the Malay Peninsula. Its port is one of the busiest in the world.",
+    "ru": "Сингапур — город-государство на острове у южного конца Малаккского полуострова. Его порт — один из самых загруженных в мире."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-indonesia",
+   "order": 14,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Indonesia",
+    "ru": "Индонезия"
+   },
+   "capital": {
+    "en": "Jakarta",
+    "ru": "Джакарта"
+   },
+   "fact": {
+    "en": "Indonesia lies on thousands of islands between the Indian and Pacific Oceans. Jakarta is on the island of Java.",
+    "ru": "Индонезия лежит на тысячах островов между Индийским и Тихим океанами. Джакарта стоит на острове Ява."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "В 2022 году Индонезия приняла закон о переносе столицы в новый город Нусантара на Калимантане. Пока президент не подписал указ о переносе, столицей остаётся Джакарта (на октябрь 2026 года).",
+    "en": "In 2022 Indonesia passed a law to move the capital to Nusantara, a new city on Borneo. Until the president signs the decree on the move, Jakarta remains the capital (as of October 2026)."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-brunei",
+   "order": 15,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Brunei",
+    "ru": "Бруней"
+   },
+   "capital": {
+    "en": "Bandar Seri Begawan",
+    "ru": "Бандар-Сери-Бегаван"
+   },
+   "fact": {
+    "en": "Brunei is a small country in the north of Borneo. Part of its capital, Kampong Ayer, is a village built on stilts over the water.",
+    "ru": "Бруней — маленькая страна на севере Калимантана. Часть столицы, Кампонг-Айер, — деревня на сваях прямо на воде."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-philippines",
+   "order": 16,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Philippines",
+    "ru": "Филиппины"
+   },
+   "capital": {
+    "en": "Manila",
+    "ru": "Манила"
+   },
+   "fact": {
+    "en": "The Philippines lie on more than 7,600 islands. Manila is on the island of Luzon, on Manila Bay.",
+    "ru": "Филиппины лежат более чем на 7600 островах. Манила стоит на острове Лусон, у Манильского залива."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cty-timor-leste",
+   "order": 17,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Timor-Leste",
+    "ru": "Восточный Тимор"
+   },
+   "capital": {
+    "en": "Dili",
+    "ru": "Дили"
+   },
+   "fact": {
+    "en": "Timor-Leste occupies the eastern part of the island of Timor; the western part belongs to Indonesia. It is one of the youngest countries in the world: independent since 2002.",
+    "ru": "Восточный Тимор занимает восточную часть острова Тимор; западная часть принадлежит Индонезии. Это одно из самых молодых государств мира: независимость — в 2002 году."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
