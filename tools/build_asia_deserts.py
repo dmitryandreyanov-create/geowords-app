@@ -4,8 +4,8 @@ shaded on the Asia rivers map (assets/asia-rivers.webp, the shared base of tools
 (the Huang He bend round the Ordos, the Amu Darya and the Syr Darya round the Kyzylkum) stay in sight.
 
 Three looks, so a child sees that a desert is not always sand (Svetlana, 31.10.2026): sand (yellow with sand dots), stony
-(grey-brown with pebbles: the Gobi, the Negev) and salt (cream with a brown net of cracks in the crust: the Dasht-e Kavir; an
-earlier near-white fill read as a lake, Svetlana 31.10.2026).
+(grey-brown with pebbles: the Gobi, the Negev) and salt (the yellow of the sand deserts with a brown net of cracks in the crust:
+the Dasht-e Kavir; an earlier near-white fill read as a lake, and Svetlana asked for the same yellow as the other deserts, 31.10.2026).
 Source: Natural Earth 1:10m geography regions (polygons). The Ordos is the Natural Earth polygon named
 «Mu Us Desert», which covers the whole desert region inside the Huang He bend (37.2–40.9° N): the Mu Us and the Kubuqi sands
 together, so it is drawn as the conventional outline of the Ordos desert region, not one sand sea (Svetlana, 31.10.2026); the Negev is small on a phone, so the app shows it in a zoom inset like the Dead Sea (Svetlana, 31.10.2026).
@@ -29,7 +29,7 @@ GAP, GROW, SS = 8, 10, 4
 LOOK = {  # fill, mark colour
   'sand': ((246, 214, 120), (196, 136, 52)),
   'stony': ((186, 168, 150), (104, 90, 78)),
-  'salt': ((236, 222, 188), (150, 118, 82)),  # cream crust with brown cracks: never white, so it is not read as water (Svetlana, 31.10.2026)
+  'salt': ((246, 214, 120), (150, 104, 48)),  # the yellow of the sand deserts with brown cracks: never white, so it is not read as water (Svetlana, 31.10.2026)
 }
 # id, unit, look, Natural Earth names, EN, RU
 OBJECTS = [
