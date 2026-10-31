@@ -1,0 +1,468 @@
+{
+ "section": "deserts-of-asia",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 31.10.2026 (25 words RU + EN); repeats of section 1 (ТАКЫР БАРХАН СОЛОНЧАК САКСАУЛ КАРАВАН КАРАВАНСАРАЙ КЯРИЗ) and the short ЛЁСС replaced by ОАЗИС МИРАЖ ЛОУЛАНЬ НАБАТЕИ ЛАДАН ВЕЛОЦИРАПТОР ПРОТОЦЕРАТОПС ОВИРАПТОР — «Утверждаю» 11:33",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent; ABRASION → CORRASION, KHARA-KHOTO written as one (KHARAKHOTO)",
+  "length": "letters on the learned deserts first, then on the objects of section 1",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Definitions RU and EN drafted by Claude for Svetlana's review (plan doc)."
+ },
+ "units": [
+  {
+   "id": "unit-1-china-mongolia",
+   "title": {
+    "ru": "Китай и Монголия",
+    "en": "China and Mongolia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "VELOCIRAPTOR",
+      "role": "final",
+      "definition": "A small meat-eating dinosaur with a sharp claw on each hind foot; its skeletons were found in the Gobi.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TURPAN",
+      "role": "review",
+      "definition": "An oasis in a deep depression in north-western China, on the northern branch of the Silk Road.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "DUNHUANG",
+      "role": "review",
+      "definition": "An oasis town at the edge of the desert where branches of the Silk Road met; nearby are caves with Buddhist paintings.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHOTAN",
+      "role": "review",
+      "definition": "An oasis on the southern edge of the Taklamakan, long famous for its jade.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MIRAN",
+      "role": "review",
+      "definition": "Ruins of an ancient settlement near the southern edge of the Taklamakan, where a fort and Buddhist wall paintings were found.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "LOULAN",
+      "role": "review",
+      "definition": "A lost city by the dried-up lake Lop Nur, buried by the sands of the Taklamakan.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "KHARAKHOTO",
+      "role": "review",
+      "definition": "“The Black City”: ruins of a Tangut fortress in the desert of northern China, found by the explorer Pyotr Kozlov.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "BACTRIAN",
+      "role": "review",
+      "definition": "A two-humped camel that copes with both heat and frost.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PROTOCERATOPS",
+      "role": "review",
+      "definition": "A plant-eating dinosaur with a bony frill behind its head; very many of its skeletons were found in the Gobi.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "OVIRAPTOR",
+      "role": "review",
+      "definition": "A dinosaur found in the Gobi beside a nest of eggs; later scientists learned it was sitting on its own eggs.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ВЕЛОЦИРАПТОР",
+      "role": "final",
+      "definition": "Небольшой хищный динозавр с острым когтем на задних лапах; его скелеты нашли в Гоби.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТУРФАН",
+      "role": "review",
+      "definition": "Оазис в глубокой впадине на северо-западе Китая, на северной ветке Шёлкового пути.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДУНЬХУАН",
+      "role": "review",
+      "definition": "Город-оазис на краю пустыни, где сходились ветки Шёлкового пути; рядом — пещеры с буддийскими росписями.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХОТАН",
+      "role": "review",
+      "definition": "Оазис на южной окраине Такла-Макана, издавна славный нефритом.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МИРАН",
+      "role": "review",
+      "definition": "Развалины древнего поселения у южного края Такла-Макана, где нашли крепость и буддийские росписи.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛОУЛАНЬ",
+      "role": "review",
+      "definition": "Затерянный город у высохшего озера Лобнор, засыпанный песками Такла-Макана.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХАРАХОТО",
+      "role": "review",
+      "definition": "«Чёрный город» — руины крепости тангутов в пустыне на севере Китая, найденные путешественником Петром Козловым.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "БАКТРИАН",
+      "role": "review",
+      "definition": "Двугорбый верблюд, выносливый и в жару, и в мороз.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПРОТОЦЕРАТОПС",
+      "role": "review",
+      "definition": "Травоядный динозавр с костяным воротником на шее; в Гоби нашли очень много его скелетов.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ОВИРАПТОР",
+      "role": "review",
+      "definition": "Динозавр, найденный в Гоби рядом с кладкой яиц; позже выяснилось, что он высиживал свои собственные яйца.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-turan-iran",
+   "title": {
+    "ru": "Туран и Иран",
+    "en": "Turan and Iran"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "DEFLATION",
+      "role": "final",
+      "definition": "The removal of sand and dust from the ground by the wind.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "YARDANGS",
+      "role": "review",
+      "definition": "Long ridges carved by the wind out of clay or soft rock.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CORRASION",
+      "role": "review",
+      "definition": "The wearing away of rock by sand carried by the wind.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CALLIGONUM",
+      "role": "review",
+      "definition": "A desert shrub with thin, almost leafless branches; its roots hold the sand in place.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TUGAI",
+      "role": "review",
+      "definition": "A thick forest and shrubland along a river in the middle of a desert.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "EPHEMERALS",
+      "role": "review",
+      "definition": "Plants that sprout, flower and set seed during a short spring.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "REGISTAN",
+      "role": "review",
+      "definition": "“The sandy place”: the name of a desert in southern Afghanistan and of the main square of Samarkand.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ДЕФЛЯЦИЯ",
+      "role": "final",
+      "definition": "Выдувание ветром песка и пыли с поверхности земли.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЯРДАНГИ",
+      "role": "review",
+      "definition": "Вытянутые гряды, выточенные ветром в глине или мягкой горной породе.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КОРРАЗИЯ",
+      "role": "review",
+      "definition": "Обтачивание скал песком, который несёт ветер.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ДЖУЗГУН",
+      "role": "review",
+      "definition": "Пустынный кустарник с тонкими почти безлистными ветками; его корни удерживают пески.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТУГАЙ",
+      "role": "review",
+      "definition": "Густой лес и кустарник в долине реки посреди пустыни.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЭФЕМЕРЫ",
+      "role": "review",
+      "definition": "Растения, которые за короткую весну успевают прорасти, зацвести и дать семена.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "РЕГИСТАН",
+      "role": "review",
+      "definition": "«Песчаное место»: так называют пустыню на юге Афганистана и главную площадь Самарканда.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-south-west",
+   "title": {
+    "ru": "Юг и запад Азии",
+    "en": "South and West Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "BEDOUINS",
+      "role": "final",
+      "definition": "Nomadic Arab tribes of the deserts who herd camels.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NABATAEANS",
+      "role": "review",
+      "definition": "An ancient people of traders who led incense caravans across the Negev; their capital was Petra.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "FRANKINCENSE",
+      "role": "review",
+      "definition": "A fragrant tree resin from southern Arabia that caravans carried for sale.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "OASIS",
+      "role": "review",
+      "definition": "A green place in a desert where there is water.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MIRAGE",
+      "role": "review",
+      "definition": "A trick of hot air: you see water in the distance that is not there.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HAMADA",
+      "role": "review",
+      "definition": "A stony desert covered with gravel and broken rock.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TAMARISK",
+      "role": "review",
+      "definition": "A shrub or small tree with tiny scale-like leaves that grows even in salty soil.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "БЕДУИНЫ",
+      "role": "final",
+      "definition": "Кочевые арабские племена пустынь, разводящие верблюдов.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "НАБАТЕИ",
+      "role": "review",
+      "definition": "Древний народ торговцев, водивший караваны с благовониями через Негев; их столицей была Петра.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛАДАН",
+      "role": "review",
+      "definition": "Душистая смола деревьев юга Аравии, которую караваны везли на продажу.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ОАЗИС",
+      "role": "review",
+      "definition": "Зелёное место в пустыне, где есть вода.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "МИРАЖ",
+      "role": "review",
+      "definition": "Обман зрения в горячем воздухе: вдали видна вода, которой нет.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ХАМАДА",
+      "role": "review",
+      "definition": "Каменистая пустыня, покрытая щебнем и обломками скал.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТАМАРИСК",
+      "role": "review",
+      "definition": "Кустарник или дерево с мелкими чешуйчатыми листьями, которое растёт даже на солёной почве.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "PETROGLYPHS",
+      "role": "section-final",
+      "definition": "Ancient pictures carved or scratched into rock.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПЕТРОГЛИФЫ",
+      "role": "section-final",
+      "definition": "Древние рисунки, выбитые или процарапанные на камне.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

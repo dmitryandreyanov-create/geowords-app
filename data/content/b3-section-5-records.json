@@ -1,0 +1,88 @@
+{
+ "section": "deserts-of-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "rub-al-khali-largest-sand-sea",
+   "order": 1,
+   "object": "as-rub-al-khali",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Rub’ al Khali",
+    "ru": "Руб-эль-Хали"
+   },
+   "fact": {
+    "en": "The Rub’ al Khali is the largest continuous body of sand on Earth: more than 600,000 km² of almost unbroken dunes.",
+    "ru": "Руб-эль-Хали — крупнейший сплошной массив песков на Земле: больше 600 000 км² почти сплошных дюн."
+   },
+   "figure": {
+    "value": 600000,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "lut-hottest-surface",
+   "order": 2,
+   "object": "as-lut",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Dasht-e Lut",
+    "ru": "Деште-Лут"
+   },
+   "fact": {
+    "en": "Satellites measured one of the highest land surface temperatures on Earth in the Dasht-e Lut — about 70 °C.",
+    "ru": "В Деште-Лут спутники измерили одну из самых высоких температур поверхности Земли — около 70 °C."
+   },
+   "figure": {
+    "value": 70,
+    "unit": "°C"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "thar-most-populated-desert",
+   "order": 3,
+   "object": "as-thar",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Thar Desert",
+    "ru": "Тар"
+   },
+   "fact": {
+    "en": "The Thar is considered the most densely populated desert in the world.",
+    "ru": "Тар считается самой густонаселённой пустыней мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

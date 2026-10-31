@@ -54,6 +54,7 @@ const named=[
   'data/content/b3-section-2-facts.json','data/content/b3-section-2-records.json','data/dictionary/b3-section-2.json','data/geowords/b3-section-2.json','data/maps/asia-rivers.json',
   'data/content/b3-section-3-facts.json','data/content/b3-section-3-records.json','data/dictionary/b3-section-3.json','data/geowords/b3-section-3.json','data/maps/asia-lakes.json',
   'data/content/b3-section-4-facts.json','data/content/b3-section-4-records.json','data/dictionary/b3-section-4.json','data/geowords/b3-section-4.json','data/maps/asia-mountains.json',
+  'data/content/b3-section-5-facts.json','data/content/b3-section-5-records.json','data/dictionary/b3-section-5.json','data/geowords/b3-section-5.json','data/maps/asia-deserts.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
@@ -61,7 +62,7 @@ const named=[
   'assets/world-base.webp','assets/world-base-plain.webp',
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
-  'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp',
+  'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){

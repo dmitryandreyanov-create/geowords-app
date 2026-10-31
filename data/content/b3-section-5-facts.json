@@ -1,0 +1,278 @@
+{
+ "section": "deserts-of-asia",
+ "block": 3,
+ "use": "introduction cards, one fact per desert; asia-deserts-intro opens the section; ids match data/maps/asia-deserts.json",
+ "decisions": [
+  "Deserts are their own section of block 3 (Svetlana, 29.10.2026).",
+  "10 deserts chosen by Svetlana 31.10.2026, with a bias to history and archaeology (the Silk Road, lost cities, water in the sands, the dinosaurs of the Gobi); three units China and Mongolia / Turan and Iran / South and West Asia («Утверждаю» 31.10.2026 11:33).",
+  "The Ordos is the Mu Us Desert of Natural Earth; the Negev is shown in a zoom inset like the Dead Sea."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Китай и Монголия",
+    "en": "China and Mongolia"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Туран и Иран",
+    "en": "Turan and Iran"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Юг и запад Азии",
+    "en": "South and West Asia"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "asia-deserts-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Deserts of Asia",
+    "ru": "Пустыни Азии"
+   },
+   "fact": {
+    "en": "Deserts cover huge areas in the heart of Asia and in its south-west. A desert is not always sand: it can be stony, clay, salt or even cold. For centuries people have lived in deserts and crossed them with caravans.",
+    "ru": "Пустыни занимают огромные пространства в глубине Азии и на её юго-западе. Пустыня не обязательно состоит из песка: она бывает каменистой, глинистой, солончаковой и даже холодной. Люди веками жили в пустынях и пересекали их с караванами."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-taklamakan",
+   "order": 1,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Taklamakan Desert",
+    "ru": "Такла-Макан"
+   },
+   "fact": {
+    "en": "A sand desert in the Tarim Basin in western China, ringed by high mountains. Silk Road caravans went round it along its northern and southern edges, where rivers from the glaciers fed oases at the foot of the mountains. Archaeologists have found lost cities in its sands.",
+    "ru": "Песчаная пустыня в Таримской впадине на западе Китая, окружённая высокими горами. Караваны Шёлкового пути обходили её по северной и южной окраинам: там, у подножий гор, реки с ледников питали оазисы. В её песках археологи нашли затерянные города."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-ordos",
+   "order": 2,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Ordos Desert",
+    "ru": "Ордос"
+   },
+   "fact": {
+    "en": "A dry region inside the great bend of the Huang He in China. The Mu Us and Kubuqi sands lie here. People plant trees and shrubs there to stop the sand.",
+    "ru": "Засушливая область внутри большой излучины Хуанхэ в Китае. Здесь лежат пески Муус и Кубучи. Люди сажают там деревья и кустарники, чтобы остановить пески."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-gobi",
+   "order": 3,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Gobi Desert",
+    "ru": "Гоби"
+   },
+   "fact": {
+    "en": "A huge desert region in Mongolia and China. Most of it is not sand but stony and gravel plains, and its winters are very cold. The Gobi is famous for dinosaurs: sand buried them quickly, and in the dry climate skeletons and even nests of eggs survived.",
+    "ru": "Огромная пустынная область в Монголии и Китае. Большая её часть — не песок, а каменистые и щебнистые равнины, а зимы здесь очень холодные. Гоби знаменита динозаврами: их быстро засыпало песком, и в сухом климате сохранились скелеты и даже кладки яиц."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-kyzylkum",
+   "order": 4,
+   "kind": "desert",
+   "unit": 2,
+   "name": {
+    "en": "Kyzylkum Desert",
+    "ru": "Кызылкум"
+   },
+   "fact": {
+    "en": "A desert in Uzbekistan and Kazakhstan, mainly between the Amu Darya and the Syr Darya. Its name means “red sands”. Ancient Silk Road cities, Bukhara and Khiva, stood at its edges.",
+    "ru": "Пустыня в Узбекистане и Казахстане, главным образом между Амударьёй и Сырдарьёй. Её название означает «красные пески». По её краям лежали древние города Шёлкового пути — Бухара и Хива."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-karakum",
+   "order": 5,
+   "kind": "desert",
+   "unit": 2,
+   "name": {
+    "en": "Karakum Desert",
+    "ru": "Каракумы"
+   },
+   "fact": {
+    "en": "A desert that covers most of Turkmenistan. The Karakum Canal crosses it — one of the longest irrigation canals in the world: it carries water from the Amu Darya to fields and towns.",
+    "ru": "Пустыня, занимающая большую часть Туркменистана. Через неё проходит Каракумский канал — один из самых длинных оросительных каналов мира: он несёт воду Амударьи к полям и городам."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-kavir",
+   "order": 6,
+   "kind": "desert",
+   "unit": 2,
+   "name": {
+    "en": "Dasht-e Kavir",
+    "ru": "Деште-Кевир"
+   },
+   "fact": {
+    "en": "A large salt desert in central Iran, with salt crusts and clay plains. For centuries people lived at its edges thanks to underground channels: they carry water from the foot of the mountains under the ground, so it does not evaporate in the heat.",
+    "ru": "Большая солончаковая пустыня в центре Ирана с соляными корками и глинистыми равнинами. На её окраинах люди веками жили благодаря подземным водоводам: они ведут воду от подножий гор под землёй, и она не испаряется на жаре."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-lut",
+   "order": 7,
+   "kind": "desert",
+   "unit": 2,
+   "name": {
+    "en": "Dasht-e Lut",
+    "ru": "Деште-Лут"
+   },
+   "fact": {
+    "en": "A desert in eastern Iran and one of the hottest places on Earth. Here the wind has carved tall ridges out of clay and sandstone that look like ruined cities.",
+    "ru": "Пустыня на востоке Ирана, одно из самых жарких мест Земли. Ветер выточил здесь из глины и песчаника высокие гряды, похожие на разрушенные города."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-thar",
+   "order": 8,
+   "kind": "desert",
+   "unit": 3,
+   "name": {
+    "en": "Thar Desert",
+    "ru": "Тар"
+   },
+   "fact": {
+    "en": "A desert in north-western India and in Pakistan, mostly in the Indian state of Rajasthan. Old fortress towns stand here, and people collect rainwater in stepwells.",
+    "ru": "Пустыня на северо-западе Индии и в Пакистане, больше всего — в индийском штате Раджастхан. Здесь стоят старинные города-крепости, а люди собирают дождевую воду в ступенчатые колодцы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-rub-al-khali",
+   "order": 9,
+   "kind": "desert",
+   "unit": 3,
+   "name": {
+    "en": "Rub’ al Khali",
+    "ru": "Руб-эль-Хали"
+   },
+   "fact": {
+    "en": "A desert in the south of the Arabian Peninsula; its name means “the Empty Quarter”. It is a sea of sand dunes, and some of them rise higher than 200 m.",
+    "ru": "Пустыня на юге Аравийского полуострова; её название означает «пустая четверть». Это море песчаных дюн, и некоторые из них поднимаются выше 200 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "as-negev",
+   "order": 10,
+   "kind": "desert",
+   "unit": 3,
+   "name": {
+    "en": "Negev Desert",
+    "ru": "Негев"
+   },
+   "fact": {
+    "en": "A stony desert in southern Israel. In ancient times the Incense Route crossed it: caravans carried fragrant resins from Arabia to the ports of the Mediterranean Sea.",
+    "ru": "Каменистая пустыня на юге Израиля. В древности через неё проходил путь благовоний: караваны везли благовонные смолы из Аравии к портам Средиземного моря."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LfVfXfsYyEJVMKzz71k3BN",
+    "note": "block 3 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
