@@ -274,7 +274,7 @@ try{
     for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
       for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
         const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
-        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-deserts.webp'),'Asia deserts map: '+src);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(/assets\/asia-deserts\.webp(\?v=\d+)?$/.test(src),'Asia deserts map: '+src);
         if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
         if(q.k==='introEurope'){assert.equal(await page.locator('.task .card h3').first().innerText(),lang==='ru'?'Пустыни Азии':'Deserts of Asia');await page.locator('.fb .btn').click()}
         else if(q.k==='introEu'||q.k==='introEuRec'){
@@ -294,7 +294,7 @@ try{
     for(const u of [1,2,3]){await page.locator(`[data-step="a5-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
       for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
         assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
-        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-deserts.webp'),'practice on the deserts map');
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(/assets\/asia-deserts\.webp(\?v=\d+)?$/.test(src),'practice on the deserts map');
         for(const m of p.markers)assert(m.id in dUnit?dUnit[m.id]<=u:m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`);
         assert(p.markers.some(m=>m.id in dUnit),p.answer+': letters on deserts');
         if(w===0)await shot('practice-u'+u);
@@ -306,7 +306,7 @@ try{
       const want=dGeo.find(p=>p.id===`b3-section-5-${id}-${lang}`);
       await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
       const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
-      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-deserts.webp'),'final on the deserts map');
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(/assets\/asia-deserts\.webp(\?v=\d+)?$/.test(src),'final on the deserts map');
       await page.waitForTimeout(400);await shot('final-'+id);
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a5-u1-l1"]')}
