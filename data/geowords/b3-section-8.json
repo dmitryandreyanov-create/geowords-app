@@ -3,8 +3,9 @@
  "block": 3,
  "rules": {
   "clues": "clues in reveal order; position = slot the letter fills",
-  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit, at least a third on rivers",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit (unit 1 also takes in the Iranian Plateau and the Caspian Sea), a third on rivers but no more than three",
   "nesting": "a country is named once per puzzle; a river letter «on the Euphrates» never shares a puzzle with a country the river crosses; one letter per river; a country never with its peninsula or gulf; no letter inside the area of another place of the puzzle",
+  "depth": "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
   "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
   "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
  },
@@ -32,8 +33,8 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 30.8,
-     "y": 56,
+     "x": 33,
+     "y": 55.2,
      "letter": "C"
     },
     {
@@ -44,8 +45,8 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 33.2,
-     "y": 52.8,
+     "x": 33.3,
+     "y": 50.7,
      "letter": "A"
     },
     {
@@ -68,8 +69,8 @@
     },
     {
      "id": "cty-iran",
-     "x": 30,
-     "y": 50,
+     "x": 29.7,
+     "y": 50.1,
      "letter": "N"
     },
     {
@@ -80,8 +81,8 @@
     },
     {
      "id": "cty-turkmenistan",
-     "x": 32.4,
-     "y": 44.8,
+     "x": 33.3,
+     "y": 44.7,
      "letter": "D"
     },
     {
@@ -155,10 +156,7 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "82cd5a73e2c8dcbf"
+    "status": "draft"
    }
   },
   {
@@ -190,14 +188,14 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 30.8,
-     "y": 56,
+     "x": 33,
+     "y": 55.2,
      "letter": "Е"
     },
     {
      "id": "cty-afghanistan",
-     "x": 34.4,
-     "y": 48,
+     "x": 34.5,
+     "y": 49.5,
      "letter": "М"
     },
     {
@@ -226,8 +224,8 @@
     },
     {
      "id": "cty-iran",
-     "x": 25.6,
-     "y": 41.2,
+     "x": 27.3,
+     "y": 45,
      "letter": "Ы"
     }
    ],
@@ -285,10 +283,7 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "290db63e6484675a"
+    "status": "draft"
    }
   },
   {
@@ -320,14 +315,14 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 50,
+     "x": 32.1,
+     "y": 50.1,
      "letter": "P"
     },
     {
      "id": "cty-kazakhstan",
-     "x": 32,
-     "y": 36.4,
+     "x": 32.1,
+     "y": 33.3,
      "letter": "P"
     },
     {
@@ -356,8 +351,8 @@
     },
     {
      "id": "cty-turkmenistan",
-     "x": 30.4,
-     "y": 41.2,
+     "x": 32.1,
+     "y": 42.6,
      "letter": "I"
     },
     {
@@ -426,10 +421,7 @@
    },
    "inRegion": 5,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "297722a3114e6f39"
+    "status": "draft"
    }
   },
   {
@@ -473,8 +465,8 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 50,
+     "x": 32.1,
+     "y": 50.1,
      "letter": "А"
     },
     {
@@ -485,8 +477,8 @@
     },
     {
      "id": "cty-turkmenistan",
-     "x": 30,
-     "y": 42.8,
+     "x": 32.1,
+     "y": 42.6,
      "letter": "О"
     },
     {
@@ -503,8 +495,8 @@
     },
     {
      "id": "cty-iran",
-     "x": 24.8,
-     "y": 46,
+     "x": 26.1,
+     "y": 45.9,
      "letter": "Я"
     }
    ],
@@ -567,10 +559,7 @@
    },
    "inRegion": 5,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "ca6f3cc4ad8a1f7f"
+    "status": "draft"
    }
   },
   {
@@ -602,14 +591,14 @@
     },
     {
      "id": "cty-yemen",
-     "x": 17.6,
-     "y": 59.6,
+     "x": 17.1,
+     "y": 57.6,
      "letter": "C"
     },
     {
      "id": "cty-oman",
-     "x": 22.8,
-     "y": 59.2,
+     "x": 23.1,
+     "y": 59.7,
      "letter": "E"
     },
     {
@@ -626,8 +615,8 @@
     },
     {
      "id": "cty-saudi-arabia",
-     "x": 18,
-     "y": 49.2,
+     "x": 20.1,
+     "y": 51,
      "letter": "E"
     }
    ],
@@ -675,10 +664,7 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "e0c6417c2544af70"
+    "status": "draft"
    }
   },
   {
@@ -698,8 +684,8 @@
    "markers": [
     {
      "id": "cty-turkey",
-     "x": 20,
-     "y": 31.6,
+     "x": 21.3,
+     "y": 33.9,
      "letter": "Б"
     },
     {
@@ -728,8 +714,8 @@
     },
     {
      "id": "cty-saudi-arabia",
-     "x": 17.6,
-     "y": 44,
+     "x": 20.1,
+     "y": 51,
      "letter": "В"
     },
     {
@@ -740,8 +726,8 @@
     },
     {
      "id": "cty-yemen",
-     "x": 17.6,
-     "y": 59.6,
+     "x": 17.1,
+     "y": 57.6,
      "letter": "Н"
     },
     {
@@ -752,8 +738,8 @@
     },
     {
      "id": "cty-oman",
-     "x": 22.8,
-     "y": 59.2,
+     "x": 23.1,
+     "y": 59.7,
      "letter": "Я"
     }
    ],
@@ -816,10 +802,7 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "c45b1bec1383b543"
+    "status": "draft"
    }
   },
   {
@@ -839,8 +822,8 @@
    "markers": [
     {
      "id": "cty-oman",
-     "x": 24.8,
-     "y": 60,
+     "x": 23.4,
+     "y": 59.4,
      "letter": "Z"
     },
     {
@@ -851,8 +834,8 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 35.2,
-     "y": 50.8,
+     "x": 35.4,
+     "y": 49.5,
      "letter": "R"
     },
     {
@@ -881,8 +864,8 @@
     },
     {
      "id": "cty-yemen",
-     "x": 18.4,
-     "y": 58.4,
+     "x": 18.3,
+     "y": 58.5,
      "letter": "R"
     },
     {
@@ -905,8 +888,8 @@
     },
     {
      "id": "cty-saudi-arabia",
-     "x": 17.6,
-     "y": 47.6,
+     "x": 18.3,
+     "y": 47.7,
      "letter": "I"
     },
     {
@@ -917,8 +900,8 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 30.8,
-     "y": 56,
+     "x": 32.7,
+     "y": 55.5,
      "letter": "M"
     }
    ],
@@ -1001,10 +984,7 @@
    },
    "inRegion": 11,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "d68ba17b31a7150d"
+    "status": "draft"
    }
   },
   {
@@ -1036,14 +1016,14 @@
     },
     {
      "id": "cty-turkey",
-     "x": 22.4,
-     "y": 34,
+     "x": 22.2,
+     "y": 33.9,
      "letter": "Р"
     },
     {
      "id": "cty-saudi-arabia",
-     "x": 18.4,
-     "y": 55.6,
+     "x": 19.2,
+     "y": 55.2,
      "letter": "О"
     },
     {
@@ -1054,14 +1034,14 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 35.2,
-     "y": 50.8,
+     "x": 35.4,
+     "y": 49.5,
      "letter": "С"
     },
     {
      "id": "cty-pakistan",
-     "x": 30.8,
-     "y": 56,
+     "x": 32.7,
+     "y": 55.5,
      "letter": "Т"
     },
     {
@@ -1078,8 +1058,8 @@
     },
     {
      "id": "cty-oman",
-     "x": 26,
-     "y": 59.6,
+     "x": 23.7,
+     "y": 59.4,
      "letter": "З"
     },
     {
@@ -1153,10 +1133,7 @@
    },
    "inRegion": 10,
    "approval": {
-    "status": "approved",
-    "by": "Svetlana",
-    "date": "2026-11-01",
-    "contentSha256": "4981307835bbc6e1"
+    "status": "draft"
    }
   }
  ]
