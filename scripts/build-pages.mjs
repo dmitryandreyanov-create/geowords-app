@@ -58,6 +58,8 @@ const named=[
   'data/content/b3-section-6-facts.json','data/content/b3-section-6-records.json','data/dictionary/b3-section-6.json','data/geowords/b3-section-6.json','data/maps/asia-countries-6.json',
   'data/content/b3-section-7-facts.json','data/content/b3-section-7-records.json','data/dictionary/b3-section-7.json','data/geowords/b3-section-7.json','data/maps/asia-countries-7.json',
   'data/content/b3-section-8-facts.json','data/content/b3-section-8-records.json','data/dictionary/b3-section-8.json','data/geowords/b3-section-8.json','data/maps/asia-countries-8.json',
+  // Block 3 review «Asia»: review texts, block-final GeoWords and its word, the Challenge rules.
+  'data/review/b3-block.json','data/dictionary/b3-block.json','data/geowords/b3-block.json','data/challenge/b3-block.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),

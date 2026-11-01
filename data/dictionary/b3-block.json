@@ -1,0 +1,40 @@
+{
+ "block": "asia-3",
+ "status": "draft",
+ "rules": {
+  "structure": "one block-final word per language for the block 3 «Asia» review; Challenge GeoWords reuse the approved review words of block 3 sections 1-8",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (no «много», «образ», «diverse»)"
+ },
+ "units": [
+  {
+   "id": "block-final",
+   "title": {
+    "ru": "Итог блока",
+    "en": "Block final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "DIVERSITY",
+      "role": "block-final",
+      "definition": "A great variety of things that are not alike, side by side: landscapes, peoples, languages and customs. Asia is a striking example, from taiga and rainforest to deserts and the highest mountains on Earth.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "МНОГООБРАЗИЕ",
+      "role": "block-final",
+      "definition": "Огромное число разных, непохожих друг на друга видов, форм и явлений рядом: природных зон, народов, языков, обычаев. Азия — яркий пример: тайга и тропические леса, пустыни и высочайшие горы Земли.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
