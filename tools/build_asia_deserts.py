@@ -4,7 +4,8 @@ shaded on the Asia rivers map (assets/asia-rivers.webp, the shared base of tools
 (the Huang He bend round the Ordos, the Amu Darya and the Syr Darya round the Kyzylkum) stay in sight.
 
 Three looks, so a child sees that a desert is not always sand (Svetlana, 31.10.2026): sand (yellow with sand dots), stony
-(grey-brown with pebbles: the Gobi, the Negev) and salt (pale with short white strokes: the Dasht-e Kavir).
+(grey-brown with pebbles: the Gobi, the Negev) and salt (the yellow of the sand deserts with a brown net of cracks in the crust:
+the Dasht-e Kavir; an earlier near-white fill read as a lake, and Svetlana asked for the same yellow as the other deserts, 31.10.2026).
 Source: Natural Earth 1:10m geography regions (polygons). The Ordos is the Natural Earth polygon named
 «Mu Us Desert», which covers the whole desert region inside the Huang He bend (37.2–40.9° N): the Mu Us and the Kubuqi sands
 together, so it is drawn as the conventional outline of the Ordos desert region, not one sand sea (Svetlana, 31.10.2026); the Negev is small on a phone, so the app shows it in a zoom inset like the Dead Sea (Svetlana, 31.10.2026).
@@ -28,7 +29,7 @@ GAP, GROW, SS = 8, 10, 4
 LOOK = {  # fill, mark colour
   'sand': ((246, 214, 120), (196, 136, 52)),
   'stony': ((186, 168, 150), (104, 90, 78)),
-  'salt': ((232, 228, 214), (255, 255, 255)),
+  'salt': ((246, 214, 120), (150, 104, 48)),  # the yellow of the sand deserts with brown cracks: never white, so it is not read as water (Svetlana, 31.10.2026)
 }
 # id, unit, look, Natural Earth names, EN, RU
 OBJECTS = [
@@ -81,7 +82,7 @@ for look, (fill, mark) in LOOK.items():
     im.paste(Image.new('RGB', (W, H), fill), (0, 0), mk.point(lambda v: v * 0.95))
     # texture: sand dots, pebbles or salt strokes on a jittered grid inside the shapes (not too near the edge)
     tex = Image.new('L', (W * SS, H * SS), 0); dt = ImageDraw.Draw(tex)
-    step = {'sand': 9, 'stony': 12, 'salt': 11}[look]
+    step = {'sand': 9, 'stony': 12, 'salt': 10}[look]
     for i in ids:
         g = shapes[i].buffer(-3); x0, y0, x1, y1 = shapes[i].bounds
         for y in np.arange(y0, y1, step):
@@ -91,7 +92,10 @@ for look, (fill, mark) in LOOK.items():
                 X, Y = px_ * SS, py_ * SS
                 if look == 'sand': r = 1.3 * SS; dt.ellipse([X - r, Y - r, X + r, Y + r], fill=255)
                 elif look == 'stony': r = 2.1 * SS; dt.ellipse([X - r, Y - r * 0.7, X + r, Y + r * 0.7], fill=255)
-                else: dt.line([(X - 3 * SS, Y), (X + 3 * SS, Y)], fill=255, width=round(1.6 * SS))
+                else:  # a cell of the crack net: three short strokes meeting at a point, like a cracked salt crust
+                    for a in (90, 210, 330):
+                        r = math.radians(a + rng.uniform(-15, 15))
+                        dt.line([(X, Y), (X + 5.5 * SS * math.cos(r), Y - 5.5 * SS * math.sin(r))], fill=255, width=round(1.4 * SS))
     im.paste(Image.new('RGB', (W, H), mark), (0, 0), tex.resize((W, H), Image.LANCZOS).point(lambda v: v * 0.8))
 # a thin darker rim, so a desert reads as one object
 rim = Image.new('L', (W * SS, H * SS), 0); dr = ImageDraw.Draw(rim)
