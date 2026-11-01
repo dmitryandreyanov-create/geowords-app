@@ -285,7 +285,7 @@ const out = SEC === 8 ? {
   section: "countries-west-asia-and-transcaucasia", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",
-    places: "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit, at least a third on rivers",
+    places: "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit (unit 1 also takes in the Iranian Plateau and the Caspian Sea), a third on rivers but no more than three",
     nesting: "a country is named once per puzzle; a river letter «on the Euphrates» never shares a puzzle with a country the river crosses; one letter per river; a country never with its peninsula or gulf; no letter inside the area of another place of the puzzle",
     spacing: "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
