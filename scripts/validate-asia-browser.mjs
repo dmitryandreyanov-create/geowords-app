@@ -1,4 +1,4 @@
-/* Block 3 «Asia», sections 1 «Asia on the map», 2 «Rivers of Asia», 3 «Lakes of Asia», 4 «Mountains of Asia», 5 «Deserts of Asia» 6 «Countries and capitals: East and Southeast Asia» and 7 «Countries and capitals: South and Central Asia» at iPhone width: plays every lesson with right answers on the Asia base map
+/* Block 3 «Asia», sections 1 «Asia on the map», 2 «Rivers of Asia», 3 «Lakes of Asia», 4 «Mountains of Asia», 5 «Deserts of Asia» 6 «Countries and capitals: East and Southeast Asia» 7 «Countries and capitals: South and Central Asia» and 8 «Countries and capitals: West Asia and Transcaucasia» at iPhone width: plays every lesson with right answers on the Asia base map
    (section 2: on the Asia rivers map, section 3: on the Asia lakes map, section 4: on the Asia mountains map, section 5: on the Asia deserts map), then the unit practice and the finals with the draft facts, words and puzzles treated as approved in memory
    (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
@@ -31,6 +31,9 @@ const cMap=JSON.parse(fs.readFileSync('data/maps/asia-countries-6.json','utf8'))
 const cUnit=Object.fromEntries(cMap.items.map(i=>[i.id,i.unit])),cOf=Object.fromEntries(cMap.items.map(i=>[i.id,i]));
 const c7Map=JSON.parse(fs.readFileSync('data/maps/asia-countries-7.json','utf8')),c7Facts=JSON.parse(fs.readFileSync('data/content/b3-section-7-facts.json','utf8'));
 const c7Unit=Object.fromEntries(c7Map.items.map(i=>[i.id,i.unit])),c7Of=Object.fromEntries(c7Map.items.map(i=>[i.id,i])),LAKES7=['as-caspian','as-aral','as-balkhash','as-issyk-kul'];
+const c8Map=JSON.parse(fs.readFileSync('data/maps/asia-countries-8.json','utf8')),c8Facts=JSON.parse(fs.readFileSync('data/content/b3-section-8-facts.json','utf8'));
+const c8Unit=Object.fromEntries(c8Map.items.map(i=>[i.id,i.unit])),c8Of=Object.fromEntries(c8Map.items.map(i=>[i.id,i])),NOCAP8=['cty-israel','cty-palestine'];
+const INSET8=['cty-armenia','cty-lebanon','cty-israel','cty-palestine','cty-kuwait','cty-bahrain','cty-qatar'],NEIGH8=['cty-afghanistan','cty-pakistan','cty-turkmenistan','cty-uzbekistan','cty-kazakhstan'];
 const IN={'as-sea-of-japan':'as-pacific-ocean','as-sea-of-okhotsk':'as-pacific-ocean','as-south-china-sea':'as-pacific-ocean','as-persian-gulf':'as-indian-ocean',
   'as-japanese-islands':'as-pacific-ocean','as-sakhalin':'as-pacific-ocean','as-borneo':'as-pacific-ocean','as-sri-lanka':'as-indian-ocean'};
 let browser;
@@ -448,6 +451,76 @@ try{
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
   }
+  // section 8 «Countries and capitals: West Asia and Transcaucasia»: the same checks on the same countries map; Israel and Palestine are never in a capital question,
+  // the four historical regions are shown on cards; the neighbours of section 7, its rivers and the Caspian Sea may hold letters; rivers: a third, at most three
+  for(const lang of run(8)?['ru','en']:[]){
+    const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,deviceScaleFactor:2});
+    for(const f of ['data/content/b3-section-8-facts.json','data/content/b3-section-8-records.json','data/dictionary/b3-section-8.json','data/geowords/b3-section-8.json'])
+      await context.route('**/'+f+'*',r=>r.fulfill({contentType:'application/json',body:approvedCopy(f)}));
+    await context.addInitScript(l=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:l,done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))},lang);
+    const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
+    await page.goto(base+'/app/');await page.waitForSelector('[data-step="a8-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),lang==='ru'?/Западная Азия и Закавказье/:/West Asia and Transcaucasia/);
+    const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`a8-${name}-${lang}.png`)})}};
+    const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['a8-u1-l1','a8-u1-l2','a8-u2-l1','a8-u2-l2','a8-u2-l3','a8-u3-l1','a8-u3-l2','a8-u3-l3','a8-u3-l4','a8-u3-l5'];const zones=new Set();const kinds=new Set(),shotKinds=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<120;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-countries.webp'),'Asia countries map: '+src);
+        if(['findCap','capOf','whatCap'].includes(q.k))assert(!NOCAP8.includes(q.id),q.id+' is never in a capital question');
+        const special=q.k==='introEu'&&(NOCAP8.includes(q.id)||q.id.startsWith('zone-')||['cty-cyprus','cty-georgia','cty-syria'].includes(q.id));
+        if(!shotKinds.has(q.k)||special){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k+(special?'-'+q.id:''))}
+        if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu'){const f=c8Facts.items.find(i=>i.id===q.id);assert.equal(await page.locator('.task .card p').first().innerText(),f.fact[lang]);
+            assert.equal(await page.locator('.task .nuance').count(),f.caveat?1:0,'«Есть нюанс» on '+q.id);
+            if(q.id.startsWith('zone-'))zones.add(q.id);
+            // the zoom inset only on the small countries
+            assert.equal(await page.locator('.task .zoom-inset').count(),INSET8.includes(q.id)?1:0,'zoom inset on '+q.id)}
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){assert(q.id in c8Unit,'a country of section 8: '+q.id);await tapAt(c8Of[q.id].label);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='findCap'){await tapAt(c8Of[q.id].capital);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c8Unit),'country options only');
+          if(q.k!=='whatEu')assert(!opts.some(o=>NOCAP8.includes(o)),'Israel and Palestine are never options of a capital question');
+          await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a8-u1-l1"]')}
+    for(const k of ['introEu','introEuRec','findEu','whatEu','findCap','capOf','whatCap'])assert(kinds.has(k),'task kind played: '+k);
+    assert.deepEqual([...zones].sort(),c8Map.regions.map(r=>r.id).sort(),'every historical region has its card');
+    // the capital dots of Beirut and Damascus are close: a tap on one is never the other; a tap on Amman is Amman, never Jerusalem
+    const caps=await page.evaluate(([b,d,a])=>{window.__gwEuSec(20);const sz={W:390,H:284};return [window.__gwCapHit(b.x,b.y,sz),window.__gwCapHit(d.x,d.y,sz),window.__gwCapHit(a.x,a.y,sz)]},[c8Of['cty-lebanon'].capital,c8Of['cty-syria'].capital,c8Of['cty-jordan'].capital]);
+    assert.deepEqual(caps,['beirut','damascus','amman']);
+    const rivIds=new Set(c8Map.rivers.map(r=>r.id));
+    for(const u of [1,2,3]){await page.locator(`[data-step="a8-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-countries.webp'),'practice on the countries map');
+        for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?rivIds.has(r)&&c8Unit[c]<=u:m.id in c8Unit?c8Unit[m.id]<=u:rivIds.has(m.id)||m.id in unitOf||m.id==='as-caspian'||NEIGH8.includes(m.id),`${p.answer}: ${m.id} is learned by unit ${u}`)}
+        assert(p.markers.filter(m=>rivIds.has(m.id.split('@')[0])).length>=Math.min(3,Math.ceil(p.answer.length/3)),p.answer+': a third of the letters on rivers (at most three)');
+        assert.deepEqual(p.focus,c8Map.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        assert(!p.markers.some(m=>['as-arctic-ocean','as-chukotka','as-bering-strait'].includes(m.id)),p.answer+': no letter in the far north');
+        await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
+        if(w===0)await shot('practice-u'+u);
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="a8-u1-l1"]')}
+    const c8Geo=JSON.parse(fs.readFileSync('data/geowords/b3-section-8.json','utf8')).puzzles;
+    for(const [step,id] of [['a8-u1-final','unit-1'],['a8-u2-final','unit-2'],['a8-u3-final','unit-3'],['a8-final','final']]){
+      const want=c8Geo.find(p=>p.id===`b3-section-8-${id}-${lang}`);
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith('assets/asia-countries.webp'),'final on the countries map');
+      assert.deepEqual(p.focus,want.focus,'the final opens zoomed in');assert(want.inRegion>=Math.ceil(want.answer.length/2),'half of the letters in the region');
+      await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,want.id+': every letter in view');
+      await page.waitForTimeout(400);await shot('final-'+id);
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a8-u1-l1"]')}
+    assert.deepEqual(errs,[],'no page errors');
+    await context.close();
+  }
   // without the approvals the finals wait: a draft final does not open
   {const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true});
     await context.addInitScript(()=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
@@ -460,5 +533,5 @@ try{
   if(JSON.parse(fs.readFileSync('data/content/b3-section-2-facts.json','utf8')).items.some(i=>i.approval.status!=='approved')){
     const context=await browser.newContext({viewport:{width:390,height:844}});const page=await context.newPage();
     await page.goto(base+'/app/');await page.waitForSelector('[data-step="a1-u1-l1"]');assert.equal(await page.locator('[data-step="a2-u1-l1"]').count(),0,'draft rivers stay hidden');await context.close()}
-  console.log('PASS: Asia sections 1–7 — lessons, practice and finals on the Asia maps (RU, EN)');
+  console.log('PASS: Asia sections 1–8 — lessons, practice and finals on the Asia maps (RU, EN)');
 }finally{await browser?.close();server.close()}

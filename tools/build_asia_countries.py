@@ -18,6 +18,7 @@ and for a river crossing two or more of them a point on the river well inside ea
 usage: python3 tools/build_asia_countries.py <natural-earth-dir> [section, default 6]
 """
 import json, sys
+import shapely.ops
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter
 from shapely.geometry import shape, Polygon, MultiLineString, Point, box
@@ -69,7 +70,34 @@ ORDER7 = [
  ('cty-kyrgyzstan', 3, ['Kyrgyzstan'], 'Kyrgyzstan', 'Киргизия', 'bishkek', 'Bishkek', 'Бишкек', 74.5698, 42.8746),
  ('cty-tajikistan', 3, ['Tajikistan'], 'Tajikistan', 'Таджикистан', 'dushanbe', 'Dushanbe', 'Душанбе', 68.7870, 38.5598),
 ]
-SECTIONS = {6: ORDER6, 7: ORDER7}
+# section 8 (Svetlana, 01.11.2026 11:33): 18 countries of West Asia and Iran. Cyprus is the whole island (with Northern Cyprus, the UN
+# buffer zone and the British base areas, the borders recognised by the UN); Georgia with Abkhazia and South Ossetia (Natural Earth's
+# default view). The Golan Heights and the Shebaa Farms (disputed areas of Natural Earth) are in no tap area. Israel and Palestine: the
+# capital dots are Jerusalem and East Jerusalem (one dot on the map); they are never asked in capital questions (capitalQuestions false).
+ORDER8 = [
+ ('cty-georgia', 1, ['Georgia'], 'Georgia', 'Грузия', 'tbilisi', 'Tbilisi', 'Тбилиси', 44.7930, 41.7151),
+ ('cty-armenia', 1, ['Armenia'], 'Armenia', 'Армения', 'yerevan', 'Yerevan', 'Ереван', 44.5152, 40.1872),
+ ('cty-azerbaijan', 1, ['Azerbaijan'], 'Azerbaijan', 'Азербайджан', 'baku', 'Baku', 'Баку', 49.8671, 40.4093),
+ ('cty-iran', 1, ['Iran'], 'Iran', 'Иран', 'tehran', 'Tehran', 'Тегеран', 51.3890, 35.6892),
+ ('cty-turkey', 2, ['Turkey'], 'Turkey', 'Турция', 'ankara', 'Ankara', 'Анкара', 32.8597, 39.9334),
+ ('cty-cyprus', 2, ['Cyprus', 'Northern Cyprus', 'Cyprus No Mans Area', 'Dhekelia Sovereign Base Area', 'Akrotiri Sovereign Base Area'], 'Cyprus', 'Кипр', 'nicosia', 'Nicosia', 'Никосия', 33.3823, 35.1856),
+ ('cty-syria', 2, ['Syria'], 'Syria', 'Сирия', 'damascus', 'Damascus', 'Дамаск', 36.2765, 33.5138),
+ ('cty-lebanon', 2, ['Lebanon'], 'Lebanon', 'Ливан', 'beirut', 'Beirut', 'Бейрут', 35.5018, 33.8938),
+ ('cty-israel', 2, ['Israel'], 'Israel', 'Израиль', 'jerusalem', 'Jerusalem', 'Иерусалим', 35.2137, 31.7683),
+ ('cty-palestine', 2, ['Palestine'], 'Palestine', 'Палестина', 'east-jerusalem', 'East Jerusalem', 'Восточный Иерусалим', 35.2340, 31.7830),
+ ('cty-jordan', 2, ['Jordan'], 'Jordan', 'Иордания', 'amman', 'Amman', 'Амман', 35.9106, 31.9539),
+ ('cty-iraq', 3, ['Iraq'], 'Iraq', 'Ирак', 'baghdad', 'Baghdad', 'Багдад', 44.3661, 33.3152),
+ ('cty-saudi-arabia', 3, ['Saudi Arabia'], 'Saudi Arabia', 'Саудовская Аравия', 'riyadh', 'Riyadh', 'Эр-Рияд', 46.6753, 24.7136),
+ ('cty-kuwait', 3, ['Kuwait'], 'Kuwait', 'Кувейт', 'kuwait-city', 'Kuwait City', 'Эль-Кувейт', 47.9783, 29.3759),
+ ('cty-bahrain', 3, ['Bahrain'], 'Bahrain', 'Бахрейн', 'manama', 'Manama', 'Манама', 50.5860, 26.2285),
+ ('cty-qatar', 3, ['Qatar'], 'Qatar', 'Катар', 'doha', 'Doha', 'Доха', 51.5310, 25.2854),
+ ('cty-uae', 3, ['United Arab Emirates'], 'United Arab Emirates', 'Объединённые Арабские Эмираты', 'abu-dhabi', 'Abu Dhabi', 'Абу-Даби', 54.3773, 24.4539),
+ ('cty-oman', 3, ['Oman'], 'Oman', 'Оман', 'muscat', 'Muscat', 'Маскат', 58.4059, 23.5880),
+ ('cty-yemen', 3, ['Yemen'], 'Yemen', 'Йемен', 'sanaa', 'Sanaa', 'Сана', 44.2066, 15.3694),
+]
+SECTIONS = {6: ORDER6, 7: ORDER7, 8: ORDER8}
+# the Golan Heights and the Shebaa Farms: in no tap area (section 8)
+NOBODY = unary_union([g for p, g in B.load(NE, 'ne_10m_admin_0_disputed_areas', 'BRK_NAME') if p.get('BRK_NAME') in ('Golan Heights', 'Shebaa Farms')])
 
 # ---- tap areas ----
 countries = {}
@@ -84,6 +112,7 @@ def build(order):
   items = []
   for i, (id_, unit, admins, en, ru, cid, cen, cru, lon, lat) in enumerate(order, 1):
     g = unary_union([x for a in admins for x in countries[a]])
+    if id_ in ('cty-israel', 'cty-syria', 'cty-lebanon'): g = g.difference(NOBODY.buffer(0.01))
     ps = polys(g)
     if not ps:
         # the Maldives: atolls far smaller than a pixel; the tap area is the outline of the whole island chain, widened
@@ -112,14 +141,45 @@ ralpha = np.clip((np.abs(rivers - blank).sum(2) - 20) / 80, 0, 1) * (rivers[:, :
 
 region = B.asia_region(NE).union(box(128, -11, 152, 0))  # Asia and New Guinea
 mask = Image.new('L', (W * SS, H * SS), 0); dr = ImageDraw.Draw(mask)
-for props, g in B.load(NE, 'ne_10m_admin_0_boundary_lines_land'):
+CY = {'Cyprus', 'Northern Cyprus', 'Cyprus No Mans Area', 'Dhekelia Sovereign Base Area', 'Akrotiri Sovereign Base Area', 'Cyprus U.N. Buffer Zone'}
+WEST = box(25, 28, 45, 40)
+# section 8 (Svetlana, 01.11.2026 12:10): borders and lines of de facto control must look different — lines of control, disputed and
+# unrecognised lines of West Asia are dashed (Cyprus, the West Bank and Gaza, the Golan ceasefire line), and so are the inner borders of
+# Abkhazia and South Ossetia; the Golan Heights and the Shebaa Farms are hatched as territories of disputed status
+DASHED = ('Disputed (please verify)', 'Line of control (please verify)', 'Unrecognized')
+dis = {p['BRK_NAME']: g for p, g in B.load(NE, 'ne_10m_admin_0_disputed_areas', 'BRK_NAME')}
+lines = [(p, g, g.intersects(WEST) and p.get('FEATURECLA') in DASHED) for p, g in B.load(NE, 'ne_10m_admin_0_boundary_lines_land')]
+geo = unary_union(countries['Georgia']).buffer(-0.02)
+for k in ('Abkhazia', 'South Ossetia'): lines.append(({}, dis[k].boundary.intersection(geo), True))
+HATCH = unary_union([dis['Golan Heights'], dis['Shebaa Farms']])
+lines.append(({}, dis['Golan Heights'].boundary, True))
+def dashes(l, on=7 * SS, off=5 * SS):
+    """the pieces of a projected line (in px) drawn as dashes"""
+    out, t = [], 0.0
+    while t < l.length:
+        seg = shapely.ops.substring(l, t, min(t + on / SS, l.length))
+        if seg.length > 0: out.append(seg)
+        t += (on + off) / SS
+    return out
+for props, g, dashed in lines:
+    # no UN overlay limits (buffer zones) in West Asia; inside Cyprus only the dashed line of control
+    if g.intersects(WEST) and (props.get('FEATURECLA') == 'Overlay limit' or ({props.get('ADM0_LEFT'), props.get('ADM0_RIGHT')} <= CY and not dashed)): continue
     g = g.intersection(region)
     if g.is_empty: continue
     g = B.proj(g)
     for l in getattr(g, 'geoms', [g]):
-        if l.geom_type != 'LineString' or l.length < 1: continue
-        xy = [(x * SS, y * SS) for x, y in l.simplify(0.4).coords]
-        dr.line(xy, fill=255, width=round(BW * SS), joint='curve')
+        if l.geom_type != 'LineString' or l.length < (0.3 if dashed else 1): continue
+        for piece in (dashes(l.simplify(0.2)) if dashed else [l.simplify(0.4)]):
+            dr.line([(x * SS, y * SS) for x, y in piece.coords], fill=255, width=round((BW * 0.8 if dashed else BW) * SS), joint='curve')
+# hatching: thin diagonal lines inside the Golan Heights and the Shebaa Farms
+hm = Image.new('L', (W * SS, H * SS), 0); hd = ImageDraw.Draw(hm)
+for q in getattr(B.proj(HATCH), 'geoms', [B.proj(HATCH)]):
+    hd.polygon([(x * SS, y * SS) for x, y in q.exterior.coords], fill=255)
+st = Image.new('L', (W * SS, H * SS), 0); sd = ImageDraw.Draw(st)
+x0, y0, x1, y1 = [round(v * SS) for v in B.proj(HATCH).bounds]
+for c in range(x0 - (y1 - y0) - 20, x1 + 20, 3 * SS):
+    sd.line([(c, y1 + 10), (c + (y1 - y0) + 20, y0 - 10)], fill=255, width=round(0.9 * SS))
+dr.bitmap((0, 0), Image.fromarray(np.minimum(np.asarray(hm), np.asarray(st))), fill=255)
 mask = np.asarray(mask.resize((W, H), Image.LANCZOS)).astype(float) / 255
 # borders only on land: the land of the blank map is light brown or grey, never the blue of the sea
 land = ~((blank[:, :, 2] > blank[:, :, 0] + 8))
@@ -135,7 +195,10 @@ mx, my = round(mad['x'] / 100 * EW), round(mad['y'] / 100 * EH)
 patch = eu.crop((mx - R, my - R, mx + R, my + R))
 dmask = Image.new('L', patch.size, 0); ImageDraw.Draw(dmask).ellipse((1, 1, 2 * R - 1, 2 * R - 1), fill=255)
 dmask = dmask.filter(ImageFilter.GaussianBlur(0.8))
+seen = []
 for c in dots:
+    if any(abs(c['x'] - a) < 0.3 and abs(c['y'] - b) < 0.3 for a, b in seen): continue  # Jerusalem and East Jerusalem: one dot
+    seen.append((c['x'], c['y']))
     im.paste(patch, (round(c['x'] / 100 * W) - R, round(c['y'] / 100 * H) - R), dmask)
 im.convert('RGB').save(ROOT / 'assets/asia-countries.webp', 'WEBP', quality=90, method=6)
 print('wrote assets/asia-countries.webp')
@@ -145,9 +208,12 @@ shapes = {it['id']: unary_union([Polygon(p).buffer(0) for p in it['tapArea']]) f
 rv_out = []
 for rv in json.load(open(ROOT / 'data/maps/asia-rivers.json'))['items']:
     line = MultiLineString([[tuple(q) for q in seg] for seg in rv['path'] if len(seg) > 1])
-    cross = [(cid, line.intersection(g)) for cid, g in shapes.items()]
+    # section 8: a river along a border (the Shatt al-Arab between Iraq and Iran) does not cross the country on its other bank
+    cross = [(cid, line.intersection(g.buffer(-0.15) if SEC == 8 else g)) for cid, g in shapes.items()]
     cross = [(cid, part) for cid, part in cross if part.length > 0.3]
-    if not cross: continue
+    # section 8: West Asia has only three rivers of section 2 (the Tigris, the Euphrates, the Jordan); the other learned rivers in view
+    # nearest them (the Amu Darya, the Syr Darya, the Indus) join as review rivers that cross none of its countries
+    if not cross and not (SEC == 8 and rv['id'] in ('as-jordan', 'as-amu-darya', 'as-syr-darya', 'as-indus')): continue
     points = []
     if len(cross) >= 2:
         for cid, part in cross:
@@ -166,7 +232,8 @@ for rv in json.load(open(ROOT / 'data/maps/asia-rivers.json'))['items']:
 # river; «on the Mekong in Laos»: along the part of the river at least 0.4% inside that country). Distances are measured with y scaled
 # by H / W, as on the screen.
 FRAMES = {6: {'1': {'x': 57, 'y': 50, 'zoom': 2.2}, '2': {'x': 55, 'y': 70, 'zoom': 3.2}, '3': {'x': 69, 'y': 80, 'zoom': 2.4}, 'S': {'x': 60, 'y': 64, 'zoom': 1.6}},
-          7: {'1': {'x': 40, 'y': 64, 'zoom': 2.6}, '2': {'x': 40, 'y': 54, 'zoom': 3}, '3': {'x': 37, 'y': 40, 'zoom': 2.6}, 'S': {'x': 38, 'y': 55, 'zoom': 1.8}}}[SEC]
+          7: {'1': {'x': 40, 'y': 64, 'zoom': 2.6}, '2': {'x': 40, 'y': 54, 'zoom': 3}, '3': {'x': 37, 'y': 40, 'zoom': 2.6}, 'S': {'x': 38, 'y': 55, 'zoom': 1.8}},
+          8: {'1': {'x': 27, 'y': 41, 'zoom': 3}, '2': {'x': 20, 'y': 38, 'zoom': 3.8}, '3': {'x': 23, 'y': 51, 'zoom': 2.2}, 'S': {'x': 23, 'y': 45, 'zoom': 1.8}}}[SEC]
 K = H / W
 sq = lambda g: affinity.scale(g, 1, K, origin=(0, 0))      # to screen-like units
 un = lambda g: affinity.scale(g, 1, 1 / K, origin=(0, 0))
@@ -202,7 +269,8 @@ out = {
   'map': './assets/asia-countries.webp',
   'alsoValidFor': ['./assets/asia-blank.webp', './assets/asia-rivers.webp', './assets/asia-lakes.webp', './assets/asia-mountains.webp', './assets/asia-deserts.webp'],
   'mapAspect': '11 / 8',
-  'level': {6: 'Countries and capitals: East and Southeast Asia (block 3, section 6)', 7: 'Countries and capitals: South and Central Asia (block 3, section 7)'}[SEC],
+  'level': {6: 'Countries and capitals: East and Southeast Asia (block 3, section 6)', 7: 'Countries and capitals: South and Central Asia (block 3, section 7)',
+            8: 'Countries and capitals: West Asia and Transcaucasia (block 3, section 8)'}[SEC],
   'coordinateSystem': 'label, capital, tapArea and river points in % of image width/height from top-left; same for every asia-*.webp (shared base, tools/asia_base.py)',
   'source': 'Natural Earth 1:10m admin 0 countries and boundary lines, projected like asia-overview.json; capitals from their lon/lat; rivers = data/maps/asia-rivers.json',
 }
@@ -220,12 +288,44 @@ NOTES = {6: NOTES6['notes'], 7: [
   'Geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes (Svetlana, 31.10.2026).',
   'Kashmir: the lines of Natural Earth\'s default (de facto) view; the Siachen Glacier (a separate disputed unit there) is in no tap area. The cards of India and Pakistan carry a neutral note.',
   'Sri Lanka: the capital dot is Sri Jayawardenepura Kotte, the legislative capital, next to Colombo.',
-  'The Maldives (atolls far below a pixel) have the outline of the whole island chain, widened, as their tap area.'] + COMMON}
+  'The Maldives (atolls far below a pixel) have the outline of the whole island chain, widened, as their tap area.'] + COMMON,
+  8: ['Built by tools/build_asia_countries.py <ne> 8; assets/asia-countries.webp carries the capital dots of sections 6, 7 and 8.',
+  'Geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes (Svetlana, 31.10.2026 and 01.11.2026).',
+  'Cyprus is the whole island (Northern Cyprus, the UN buffer zone and the British base areas included) and no line is drawn across it; Georgia includes Abkhazia and South Ossetia (the borders recognised by the UN).',
+  'The Golan Heights and the Shebaa Farms are in no tap area; the outline of the Golan Heights is drawn. Israel and Palestine: borders of Natural Earth (the West Bank and the Gaza Strip); one capital dot for Jerusalem and East Jerusalem.',
+  'Bahrain (a fraction of a pixel on a phone) has a round tap spot of 1.2% around it.',
+  'regions: the four historical regions of the section (Svetlana, 01.11.2026 11:33), shown shaded on their cards and never asked: the Iranian Plateau and Mesopotamia drawn by hand along the mountains and rivers, the Levant along the eastern Mediterranean coast, Arabia = the Arabian Peninsula of section 1.'] + COMMON}
 out = {**out, 'notes': NOTES[SEC],
   'frames': FRAMES,
   'items': items,
   'rivers': rv_out,
 }
+# ---- section 8: the four historical regions (lon/lat outlines drawn by hand, clipped to land) ----
+if SEC == 8:
+    land = unary_union([g for _, g in B.load(NE, 'ne_10m_land') if g.intersects(box(25, 10, 70, 45))])
+    HAND = {
+     'zone-iranian-plateau': [(45.0, 37.6), (46.0, 38.9), (48.0, 38.5), (50.0, 36.9), (53.5, 36.8), (56.0, 37.9), (60.0, 37.6), (64.0, 36.2), (68.0, 34.6),
+                              (69.2, 31.5), (68.0, 29.0), (66.0, 26.2), (61.5, 25.4), (57.0, 27.0), (54.0, 27.4), (50.0, 30.0), (47.6, 33.0), (45.6, 35.3)],
+     'zone-mesopotamia': [(38.4, 36.3), (38.6, 37.3), (41.0, 37.4), (43.5, 36.9), (45.0, 35.1), (46.6, 33.5), (48.0, 31.4), (48.6, 30.0), (47.6, 29.9),
+                          (46.0, 30.9), (44.0, 32.0), (42.5, 33.6), (40.5, 35.0)],
+     'zone-levant': [(35.8, 36.4), (37.5, 36.4), (38.5, 35.0), (37.8, 33.2), (36.9, 31.5), (36.0, 29.4), (34.9, 29.4), (34.2, 31.3), (34.9, 32.6), (35.5, 34.5)],
+    }
+    NAMES = {'zone-iranian-plateau': ('The Iranian Plateau', 'Иранское нагорье', 1), 'zone-levant': ('The Levant', 'Левант', 2),
+             'zone-mesopotamia': ('Mesopotamia', 'Месопотамия', 3), 'zone-arabia': ('Arabia', 'Аравия', 3)}
+    regions = []
+    for i, (zid, (en, ru, unit)) in enumerate(NAMES.items(), 1):
+        if zid in HAND:
+            g = B.proj(Polygon(HAND[zid]).intersection(land), B.pct)
+            ps = sorted([q for q in getattr(g, 'geoms', [g]) if isinstance(q, Polygon) and q.area > 0.01], key=lambda q: -q.area)
+            ps = [q.simplify(0.05) for q in ps]
+            area = [rnd(q.exterior.coords) for q in ps]
+        else:  # Arabia: the Arabian Peninsula of section 1
+            area = next(o for o in json.load(open(ROOT / 'data/maps/asia-overview.json'))['items'] if o['id'] == 'as-arabian-peninsula')['tapArea']
+            ps = [Polygon(a) for a in area]
+        lab = polylabel(max(ps, key=lambda q: q.area), tolerance=0.02)
+        regions.append({'id': zid, 'order': i, 'kind': 'region', 'unit': unit, 'name': {'en': en, 'ru': ru}, 'label': {'x': round(lab.x, 2), 'y': round(lab.y, 2)}, 'tapArea': area})
+        print(zid, len(area), 'parts', regions[-1]['label'])
+    out['regions'] = regions
 dst = ROOT / f'data/maps/asia-countries-{SEC}.json'
 dst.write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')).replace('{"id"', '\n{"id"') + '\n')
 print('wrote', dst, len(items), 'items')

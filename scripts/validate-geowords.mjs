@@ -15,6 +15,7 @@ const RELEASE = {
     "b2-section-2-unit-3-en", "b2-section-2-unit-3-ru", "b2-section-2-unit-4-en", "b2-section-2-unit-4-ru"],
   "b3-section-6.json": ["b3-section-6-final-en", "b3-section-6-final-ru", "b3-section-6-unit-1-en", "b3-section-6-unit-1-ru", "b3-section-6-unit-2-en", "b3-section-6-unit-2-ru", "b3-section-6-unit-3-en", "b3-section-6-unit-3-ru"],
   "b3-section-7.json": ["b3-section-7-final-en", "b3-section-7-final-ru", "b3-section-7-unit-1-en", "b3-section-7-unit-1-ru", "b3-section-7-unit-2-en", "b3-section-7-unit-2-ru", "b3-section-7-unit-3-en", "b3-section-7-unit-3-ru"],
+  "b3-section-8.json": ["b3-section-8-final-en", "b3-section-8-final-ru", "b3-section-8-unit-1-en", "b3-section-8-unit-1-ru", "b3-section-8-unit-2-en", "b3-section-8-unit-2-ru", "b3-section-8-unit-3-en", "b3-section-8-unit-3-ru"],
   "b3-section-5.json": ["b3-section-5-final-en", "b3-section-5-final-ru", "b3-section-5-unit-1-en", "b3-section-5-unit-1-ru", "b3-section-5-unit-2-en", "b3-section-5-unit-2-ru", "b3-section-5-unit-3-en", "b3-section-5-unit-3-ru"],
   "b3-section-4.json": ["b3-section-4-final-en", "b3-section-4-final-ru", "b3-section-4-unit-1-en", "b3-section-4-unit-1-ru", "b3-section-4-unit-2-en", "b3-section-4-unit-2-ru", "b3-section-4-unit-3-en", "b3-section-4-unit-3-ru"],
   "b3-section-3.json": ["b3-section-3-final-en", "b3-section-3-final-ru", "b3-section-3-unit-1-en", "b3-section-3-unit-1-ru", "b3-section-3-unit-2-en", "b3-section-3-unit-2-ru", "b3-section-3-unit-3-en", "b3-section-3-unit-3-ru"],

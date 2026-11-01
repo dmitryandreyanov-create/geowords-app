@@ -112,6 +112,14 @@ const RELEASE = {
     section: "countries-south-and-central-asia",
     ids: ["kazakhstan-largest-landlocked", "maldives-lowest-country", "uzbekistan-doubly-landlocked"],
   },
+  "b3-section-8-facts.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    ids: ["cty-georgia", "cty-armenia", "cty-azerbaijan", "cty-iran", "cty-turkey", "cty-cyprus", "cty-syria", "cty-lebanon", "cty-israel", "cty-palestine", "cty-jordan", "cty-iraq", "cty-saudi-arabia", "cty-kuwait", "cty-bahrain", "cty-qatar", "cty-uae", "cty-oman", "cty-yemen", "zone-iranian-plateau", "zone-levant", "zone-mesopotamia", "zone-arabia"],
+  },
+  "b3-section-8-records.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    ids: ["baku-lowest-capital", "saudi-arabia-largest-without-rivers", "bahrain-smallest-west-asia"],
+  },
   "b3-section-5-facts.json": {
     section: "deserts-of-asia",
     ids: ["asia-deserts-intro", "as-taklamakan", "as-ordos", "as-gobi", "as-kyzylkum", "as-karakum", "as-kavir", "as-lut", "as-thar", "as-rub-al-khali", "as-negev"],

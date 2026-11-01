@@ -1,0 +1,102 @@
+{
+ "section": "countries-west-asia-and-transcaucasia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "baku-lowest-capital",
+   "order": 1,
+   "object": "cty-azerbaijan",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Azerbaijan",
+    "ru": "Азербайджан"
+   },
+   "fact": {
+    "ru": "Баку — самая низко расположенная столица мира: около 28 м ниже уровня океана.",
+    "en": "Baku is the lowest-lying capital in the world, about 28 m below sea level."
+   },
+   "figure": {
+    "value": -28,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "b0662c0a21eecae8"
+   }
+  },
+  {
+   "id": "saudi-arabia-largest-without-rivers",
+   "order": 2,
+   "object": "cty-saudi-arabia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Saudi Arabia",
+    "ru": "Саудовская Аравия"
+   },
+   "fact": {
+    "ru": "Саудовская Аравия — самая большая страна мира без естественных постоянных рек: более 2 млн км².",
+    "en": "Saudi Arabia is the largest country in the world without natural permanent rivers, with more than 2 million km²."
+   },
+   "figure": {
+    "value": 2000000,
+    "unit": "km2",
+    "more": true
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "55b2aeef5ca62591"
+   }
+  },
+  {
+   "id": "bahrain-smallest-west-asia",
+   "order": 3,
+   "object": "cty-bahrain",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Bahrain",
+    "ru": "Бахрейн"
+   },
+   "fact": {
+    "ru": "Бахрейн — самая маленькая страна Западной Азии: около 790 км².",
+    "en": "Bahrain is the smallest country of West Asia, about 790 km²."
+   },
+   "figure": {
+    "value": 790,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "e2f976925ba116ed"
+   }
+  }
+ ]
+}
