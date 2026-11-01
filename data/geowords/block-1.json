@@ -220,12 +220,12 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "straits and small seas are tiny on a phone map; Bering Strait is answered in its magnifier inset",
-   "minSeparation": 6.3,
+   "minSeparation": 6.2,
    "markers": [
     {
-     "id": "arctic-ocean",
-     "x": 96.8,
-     "y": 4.5,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "П"
     },
     {
@@ -365,9 +365,9 @@
      "text": "Найди тринадцатую букву в Беринговом проливе."
     },
     {
-     "markerId": "arctic-ocean",
+     "markerId": "mississippi-source",
      "position": 1,
-     "text": "Найди первую букву в Северном Ледовитом океане."
+     "text": "Найди первую букву в истоке Миссисипи."
     },
     {
      "markerId": "coral-sea",
@@ -383,8 +383,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "6764d675b9ece967"
+    "date": "2026-10-25",
+    "contentSha256": "403e9953671d7281"
    }
   }
  ]

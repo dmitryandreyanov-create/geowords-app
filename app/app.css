@@ -1,0 +1,279 @@
+/* GeoWords «Экспедиция»: night chart table, sand paper cards, fox-orange accent, brass details. */
+:root{
+  --sea:#0f2e33;--deck:#173f46;--deck2:#1d4a52;--sand:#f4e3c1;--paper:#fbf3e2;--fox:#ff8a3d;--fox-d:#d96a20;
+  --brass:#d9b45a;--ink:#2a1d0c;--text:#eaf4f2;--muted:#a8c3c0;--ok:#4cc46a;--ok-d:#2e8f48;--bad:#ff7a6b;--line:rgba(255,255,255,.12);
+  --f:"Rubik",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--sea);color:var(--text);font-family:var(--f);-webkit-tap-highlight-color:transparent}
+body{overscroll-behavior:none}
+button{font:inherit;color:inherit}
+button:focus-visible,a:focus-visible{outline:3px solid #7fd0ff;outline-offset:2px}
+.app{min-height:100%;max-width:520px;margin:0 auto;position:relative;background:radial-gradient(120% 60% at 50% 0%,#1d4a52 0%,var(--sea) 70%)}
+.loading{display:grid;place-items:center;min-height:100vh;color:var(--muted)}
+.screen{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;padding:calc(10px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) calc(16px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+h1,h2,h3,p{margin:0}
+.btn{border:0;border-radius:16px;padding:15px 20px;font-weight:800;font-size:18px;cursor:pointer;background:var(--fox);color:#2a1406;box-shadow:inset 0 -4px 0 var(--fox-d);width:100%}
+.btn:active{transform:translateY(2px);box-shadow:inset 0 -2px 0 var(--fox-d)}
+.btn[disabled]{opacity:.45;cursor:default}
+.btn.ghost{background:transparent;color:var(--sand);box-shadow:inset 0 0 0 2px var(--line)}
+.btn.sand{background:var(--sand);color:var(--ink);box-shadow:inset 0 -4px 0 #cdb88f}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--brass)}
+
+/* ---------- welcome ---------- */
+.welcome .hero{margin:-10px calc(-1*max(16px,env(safe-area-inset-left))) 0;aspect-ratio:16/10;background:center/cover no-repeat;border-radius:0 0 28px 28px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+.welcome .body{display:grid;gap:14px;margin-top:20px}
+.welcome h1{font-size:34px;font-weight:800;letter-spacing:-.01em}
+.welcome p.lead{color:var(--muted);font-size:17px;line-height:1.4}
+.langs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.lang{border:2px solid var(--line);background:var(--deck);border-radius:16px;padding:14px 10px;cursor:pointer;text-align:center;display:grid;gap:4px}
+.lang b{font-size:18px}.lang span{font-size:13px;color:var(--muted)}
+.lang[aria-pressed="true"]{border-color:var(--fox);background:#2a3f3a}
+.welcome .go{margin-top:auto;padding-top:18px}
+
+/* ---------- home ---------- */
+.topbar{display:flex;align-items:center;gap:10px;padding:2px 0 10px;position:sticky;top:0;z-index:5;background:linear-gradient(var(--sea) 70%,transparent)}
+.chip{display:flex;align-items:center;gap:6px;font-weight:800;font-size:16px;background:var(--deck);border-radius:999px;padding:5px 12px 5px 6px}
+.chip img{width:26px;height:26px}
+.chip .star{color:var(--brass);font-size:20px;line-height:1;margin-left:4px}
+.topbar .grow{flex:1}
+.iconbtn{width:42px;height:42px;border-radius:50%;border:0;background:var(--deck);cursor:pointer;font-size:20px;display:grid;place-items:center}
+.section-card{background:var(--deck);border-radius:20px;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:inset 0 0 0 1px var(--line)}
+.section-card .t{flex:1;display:grid;gap:4px}
+.section-card h2{font-size:20px}
+.section-card .bar{height:8px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;margin-top:4px}
+.section-card .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--brass),var(--fox))}
+.section-card img{width:58px;height:58px;opacity:.95}
+.path{position:relative;margin:10px 0 30px}
+.path svg.trail{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.path svg.trail path{fill:none;stroke:var(--fox);stroke-width:4;stroke-dasharray:2 12;stroke-linecap:round;opacity:.75}
+.unit-head{position:relative;z-index:1;margin:22px 0 6px;text-align:center}
+.unit-head .eyebrow{display:block}
+.unit-head h3{font-size:19px;margin-top:3px}
+.unit-head p{color:var(--muted);font-size:14px;margin-top:2px}
+.stop-row{position:relative;height:104px;z-index:1}
+.stop{position:absolute;top:8px;width:84px;height:84px;margin-left:-42px;border:0;padding:0;background:none;cursor:pointer;display:grid;place-items:center}
+.stop .disc{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:24px;color:#3b230d;
+  background:radial-gradient(circle at 35% 30%,#e9c58f 0%,#c99456 55%,#9b6a35 100%);box-shadow:0 6px 0 #6e4520,0 10px 18px rgba(0,0,0,.35),inset 0 0 0 4px rgba(110,69,32,.35)}
+.stop.done .disc{background:#2d5c46 url("../assets/graphics/game/path-lesson-done.webp") center/88% no-repeat;box-shadow:0 6px 0 #1f3f31,0 10px 18px rgba(0,0,0,.35)}
+.stop.locked{cursor:default}
+.stop.locked .disc{filter:grayscale(1) brightness(.55);box-shadow:0 6px 0 #333,inset 0 0 0 4px rgba(0,0,0,.3)}
+.stop.final .disc{background:radial-gradient(circle at 35% 30%,#ffe08a,#d9a63a 60%,#9c7020);box-shadow:0 6px 0 #6f4f12,0 10px 18px rgba(0,0,0,.35)}
+.stop.final .disc img{width:58px;height:58px}
+.stop.current .disc{animation:bob 1.8s ease-in-out infinite}
+.stop.current::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid var(--fox);animation:ring 1.8s ease-out infinite}
+@keyframes bob{50%{transform:translateY(-4px)}}
+@keyframes ring{from{opacity:.9;transform:scale(.9)}to{opacity:0;transform:scale(1.25)}}
+.boat{position:absolute;width:82px;height:82px;top:22px;pointer-events:none;z-index:2}
+.stop-label{position:absolute;top:92px;width:150px;margin-left:-75px;text-align:center;font-size:12.5px;color:var(--muted);line-height:1.2;z-index:2}
+.stop-label span{background:rgba(15,46,51,.92);border-radius:8px;padding:2px 7px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.sheet-back{position:fixed;inset:0;background:rgba(5,15,18,.55);z-index:20;display:flex;align-items:flex-end;justify-content:center}
+.sheet{width:100%;max-width:520px;background:var(--paper);color:var(--ink);border-radius:24px 24px 0 0;padding:18px 18px calc(18px + env(safe-area-inset-bottom));display:grid;gap:12px;animation:up .25s ease}
+@keyframes up{from{transform:translateY(40px);opacity:0}}
+.sheet h3{font-size:21px}
+.sheet p{color:#5a4a33;line-height:1.4}
+.sheet .row{display:flex;gap:10px}
+.sheet .btn.ghost{color:var(--ink);box-shadow:inset 0 0 0 2px #d8c6a2}
+.sheet .opt{display:flex;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid #e6d7b8;padding-top:12px}
+.seg{display:flex;border-radius:12px;overflow:hidden;box-shadow:inset 0 0 0 2px #d8c6a2}
+.seg button{border:0;background:none;padding:8px 14px;font-weight:700;cursor:pointer;color:var(--ink)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+/* ---------- lesson ---------- */
+.lesson{gap:0}
+.l-top{display:flex;align-items:center;gap:12px;padding:4px 0 10px}
+.l-x{width:38px;height:38px;border:0;background:none;font-size:24px;cursor:pointer;color:var(--muted)}
+.l-bar{flex:1;height:14px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}
+.l-bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--brass),var(--fox));transition:width .35s ease}
+.task{display:flex;flex-direction:column;gap:14px;flex:1}
+.task .q{font-size:22px;font-weight:700;line-height:1.25;text-wrap:balance}
+.task .q b{color:var(--fox)}
+.kind{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.card{background:var(--paper);color:var(--ink);border-radius:20px;padding:16px;display:grid;gap:10px}
+.card h3{font-size:24px}
+.card p{font-size:17px;line-height:1.4;color:#4a3b25}
+.intro-pip{display:flex;gap:10px;align-items:flex-end}
+.intro-pip img{width:96px;flex:0 0 96px}
+.choices{display:grid;gap:10px}
+.choice{border:2px solid var(--line);border-bottom-width:5px;background:var(--deck);border-radius:16px;padding:14px;font-size:19px;font-weight:700;cursor:pointer;text-align:center}
+.choice.right{border-color:var(--ok);background:#1f4a35}
+.choice.wrong{border-color:var(--bad);background:#4a2a28}
+.choice[disabled]{cursor:default}
+
+/* map */
+.mapbox{position:relative;border-radius:16px;box-shadow:0 0 0 2px var(--brass),0 10px 24px rgba(0,0,0,.4);touch-action:none;user-select:none;-webkit-user-select:none}
+.map{position:relative;overflow:hidden;border-radius:16px;aspect-ratio:2200/1211;width:100%}
+.world{position:absolute;inset:0;transform-origin:0 0}
+.world img{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.world img.hl{animation:fadein .4s ease}
+@keyframes fadein{from{opacity:0}}
+.marks,.trailsvg{position:absolute;inset:0;pointer-events:none;overflow:visible;width:100%;height:100%}
+.trailsvg{overflow:hidden}/* the route line stays inside the map when it is zoomed */
+.trailsvg polyline{fill:none;stroke:var(--fox);stroke-width:3;stroke-dasharray:7 6;stroke-linecap:round}
+.mk{position:absolute;width:46px;height:46px;margin:-23px 0 0 -23px;border:0;background:none;padding:0;pointer-events:auto;cursor:pointer;display:grid;place-items:center}
+.mk[hidden]{display:none}/* letters scrolled out of the zoomed map are hidden (display:grid above would override the hidden attribute) */
+.mk span{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;background:var(--fox);color:#1d1206;box-shadow:0 0 0 2px #fff,0 2px 6px rgba(0,0,0,.5);transition:transform .2s}
+.mk.dir span{background:#fff;color:var(--sea)}
+.mk.done span{background:var(--brass)}
+.mk.pulse span{animation:pulse 1s ease-in-out infinite}
+.mk.good span{background:var(--ok);color:#fff}
+.mk.bad span{background:var(--bad);color:#fff}
+.mk.shake span{animation:shake .4s}
+@keyframes pulse{50%{transform:scale(1.35)}}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.tapdot{position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;border:3px solid #fff;pointer-events:none;animation:tapfade 1.2s ease forwards}
+.tapdot.ok{border-color:var(--ok)}.tapdot.bad{border-color:var(--bad)}
+@keyframes tapfade{from{transform:scale(.5)}to{opacity:0;transform:scale(1.4)}}
+.zoom{display:flex;gap:6px;justify-content:flex-end;margin-top:8px}
+.zoom button{width:36px;height:36px;border-radius:10px;border:0;background:rgba(15,46,51,.85);color:var(--sand);font-size:20px;font-weight:800;cursor:pointer;box-shadow:0 0 0 1px var(--brass)}
+.rotate-hint{font-size:13px;color:var(--muted);text-align:center;margin-top:14px}
+
+/* feedback */
+.fb{position:sticky;bottom:0;margin:12px calc(-1*max(16px,env(safe-area-inset-left))) calc(-16px - env(safe-area-inset-bottom));padding:14px max(16px,env(safe-area-inset-left)) calc(16px + env(safe-area-inset-bottom));display:grid;gap:12px;border-radius:22px 22px 0 0}
+.fb.idle{background:transparent}
+.fb.ok{background:#173f2b}.fb.bad{background:#46262a}
+.fb .msg{display:flex;gap:10px;align-items:center}
+.fb .msg img{width:58px;height:58px;border-radius:50%;background:var(--sand);flex:0 0 58px}
+.fb .msg b{display:block;font-size:19px}
+.fb.ok .msg b{color:#8fe3a4}.fb.bad .msg b{color:#ffb2a6}
+.fb .msg p{font-size:15px;color:var(--text);line-height:1.35}
+
+/* lesson / unit done */
+.done{align-items:center;text-align:center;justify-content:center;gap:16px}
+.done .pip{width:190px}
+.done h2{font-size:28px;color:var(--brass)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%}
+.tile{background:var(--deck);border-radius:14px;padding:10px 6px;display:grid;gap:2px}
+.tile small{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.tile b{font-size:22px}
+.medal{width:150px;animation:medal .7s cubic-bezier(.2,1.6,.4,1)}
+@keyframes medal{from{transform:scale(1.8) rotate(-20deg);opacity:0}}
+/* long words (13–18 letters in Challenge) shrink to fit one line on a phone */
+.word-big{font-size:min(34px,calc((min(100vw,520px) - 40px) / var(--n,8) / .85));white-space:nowrap;font-weight:800;letter-spacing:.08em;color:var(--sand)}
+.defn{color:var(--muted);font-size:17px;max-width:30ch}
+
+/* GeoWords */
+.gw-clue{font-size:20px;font-weight:500;line-height:1.3;min-height:52px}
+.gw-clue b{color:var(--fox);font-weight:800}
+.slots{display:flex;justify-content:center;gap:6px;flex-wrap:nowrap}
+.slot{width:40px;height:48px;display:grid;place-items:center;font-size:26px;font-weight:800;background:rgba(255,255,255,.08);border-bottom:3px solid var(--brass);border-radius:8px 8px 2px 2px;color:var(--sand)}
+.slot.new{animation:pop .45s ease}
+@keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}}
+.gw-pip{display:flex;gap:10px;align-items:flex-end;margin-top:auto}
+.gw-pip img{width:92px;flex:0 0 92px}
+.bubble{position:relative;background:var(--sand);color:var(--ink);border-radius:16px;padding:11px 13px;font-size:16px;line-height:1.3;margin-bottom:24px;flex:1}
+.bubble::after{content:"";position:absolute;left:-7px;bottom:14px;border:7px solid transparent;border-right-color:var(--sand);border-left:0}
+/* landscape phone: the map takes the whole height on the left, everything else (✕, progress, clue, letters, Pip) goes to a narrow column on the right.
+   The zoom buttons stand in the gap right of the map so they cost no height and cover no letter. --ar is the map's aspect ratio (set by mapWidget). */
+@media (orientation:landscape) and (max-height:520px){
+  .app{max-width:none}
+  .gw{--padv:calc(12px + env(safe-area-inset-top) + env(safe-area-inset-bottom));display:grid;grid-template-columns:auto minmax(200px,1fr);grid-template-rows:auto auto auto 1fr;column-gap:58px;row-gap:8px;align-content:start;height:100dvh;min-height:0;padding-top:calc(6px + env(safe-area-inset-top));padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+  .gw .slot{width:30px;height:36px;font-size:20px}
+  .gw .slots{gap:4px}
+  .gw .gw-pip{align-self:end;margin-top:0}
+  .gw .gw-pip img{width:64px;flex-basis:64px}
+  .gw .bubble{font-size:14px;margin-bottom:8px}
+  .gw .gw-clue{font-size:18px;min-height:0}
+  .gw .l-top{grid-column:2;grid-row:1;padding:0}
+  .gw .mapslot{grid-column:1;grid-row:1/5;align-self:center;position:relative;min-width:0}
+  .gw .mapbox{width:min(calc((100dvh - var(--padv)) * var(--ar,1.8167)),calc(100vw - 290px - env(safe-area-inset-left) - env(safe-area-inset-right)))}
+  .gw .zoom{position:absolute;left:calc(100% + 8px);bottom:0;margin:0;flex-direction:column}
+  .gw .gw-head{grid-column:2;grid-row:2}
+  .gw .slots{grid-column:2;grid-row:3;flex-wrap:wrap}
+  .gw .gw-pip{grid-column:2;grid-row:4}
+  .gw .rotate-hint{display:none}
+}
+/* small phones on their side (iPhone SE, mini): a narrower right column, so smaller letter boxes and Pip */
+@media (orientation:landscape) and (max-height:520px) and (max-width:760px){
+  .gw .slot{width:24px;height:30px;font-size:17px}
+  .gw .slots{gap:3px}
+  .gw .gw-clue{font-size:16px}
+  .gw .gw-pip img{width:48px;flex-basis:48px}
+  .gw .bubble{font-size:12.5px;padding:8px 10px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+/* highlight shapes drawn from map tap areas (continents, oceans) */
+.world svg.shapes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible}
+.hl-shape{fill:rgba(255,138,61,.38);fill-rule:evenodd;stroke:var(--fox);stroke-width:3;vector-effect:non-scaling-stroke}
+.hl-shape.pulse{animation:shapepulse 1.4s ease-in-out infinite}
+.hl-shape.cont{fill:rgba(255,138,61,.55);stroke:#fff}
+.hl-shape.sel{fill:rgba(40,120,255,.42);stroke:#bfe4ff}
+.hl-shape.good{fill:rgba(76,196,106,.5);stroke:#d6ffe0}
+@keyframes shapepulse{50%{fill-opacity:.15;stroke-opacity:.5}}
+.nuance{justify-self:start;display:flex;gap:6px;align-items:center;border:0;border-radius:999px;background:#efe0bf;color:var(--ink);font-weight:700;padding:6px 12px 6px 6px;cursor:pointer}
+.nuance img{width:26px;height:26px}
+.gw-head{display:grid;gap:4px}
+.sheet .intro-pip img{width:80px;flex:0 0 80px}
+
+/* section 2: rivers highlighted along their course */
+.hl-river{fill:none;stroke:var(--fox);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.hl-river.pulse{animation:shapepulse 1.4s ease-in-out infinite}
+.hl-river.good{stroke:#4cc46a}
+.hl-river.bad{stroke:#e5533d}
+.hl-river.sel{stroke:#2878ff}
+.section-card.s2{margin-top:28px}
+
+/* mandatory unit practice stop */
+.stop.practice .disc{font-weight:800;font-size:20px}
+.stop.practice .disc .abc{font-size:15px;letter-spacing:.5px}/* word-puzzle step, not a lesson number */
+
+.hl-shape.bad{fill:rgba(229,83,61,.4);stroke:#e5533d}
+
+/* section 5: magnifier insets for tiny straits */
+.tip-phrase b{color:var(--fox-d)}
+.mk.tip{pointer-events:none}
+.mk.tip span{background:#fff;color:var(--sea)}
+.mk.mag{width:36px;height:36px;margin:-46px 0 0 -18px;z-index:1}/* sits just above its point, so nearby letters stay tappable */
+.mk.mag span{width:30px;height:30px;background:#fff8e6;font-size:15px;box-shadow:0 0 0 2px var(--brass),0 2px 6px rgba(0,0,0,.5)}
+.mk.mag::after{content:'';position:absolute;left:50%;bottom:-8px;width:2px;height:10px;background:var(--brass);transform:translateX(-50%)}
+.inset-pop{position:absolute;left:8%;width:84%;top:50%;transform:translateY(-50%);z-index:5;border-radius:14px;overflow:hidden;box-shadow:0 0 0 3px var(--brass),0 14px 30px rgba(0,0,0,.55);background:#cfe3e6}
+.inset-pop[hidden]{display:none}
+.inset-pop img{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.inset-pop .shapes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.inset-pop .imarks{position:absolute;inset:0}
+.inset-pop .imarks .mk{pointer-events:auto}
+.inset-x{position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;border-radius:50%;background:rgba(15,46,51,.85);color:#fff;font-size:18px;z-index:2}
+/* ---------- block review: label the map, write the name, pairs, true / false; Speed Hunt ---------- */
+.lchips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.lchip{font-size:15px;padding:10px 8px;display:flex;align-items:center;gap:8px;text-align:left}
+.lchip .n{flex:none;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--fox);color:#1d1206;font-size:13px}
+.lchip.sel{border-color:var(--fox);background:#3a3a2a}
+.lchip.used{opacity:.55}
+.mk.set span{background:var(--sand);color:var(--ink)}
+.wslots{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px}
+.wword{display:flex;gap:3px}
+.wslot{width:24px;height:36px;display:grid;place-items:center;font-size:20px;font-weight:800;background:rgba(255,255,255,.08);border-bottom:3px solid var(--brass);border-radius:6px 6px 2px 2px;color:var(--sand)}
+.wslot.good{border-color:var(--ok);color:#8fe3a4}.wslot.bad{border-color:var(--bad);color:#ffb2a6}
+.wgap{width:10px;display:grid;place-items:center;font-size:20px;color:var(--sand)}
+.wtiles{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.wtile{min-width:44px;height:48px;border:2px solid var(--line);border-bottom-width:4px;border-radius:12px;background:var(--deck);font-size:20px;font-weight:800;cursor:pointer}
+.wtile[disabled]{opacity:.3;cursor:default}
+.wtile.back{background:transparent}
+.pairs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pcol{display:grid;gap:8px;align-content:start}
+.pbtn{font-size:15px;padding:8px 6px;height:64px}
+.pbtn.sel{border-color:var(--fox);background:#3a3a2a}
+.tfrow{grid-template-columns:1fr 1fr}
+.hunt .l-top{align-items:center}
+.hunt-sec{min-width:44px;text-align:right;font-variant-numeric:tabular-nums}
+.hunt-row{display:flex;gap:10px;align-items:center}
+.hunt-row .chip{flex:none}
+.hunt-row .btn{padding:10px 16px;font-size:16px}
+.hunt-stars{font-size:40px;color:var(--brass);letter-spacing:6px;margin:0}
+.hunt-stars span{color:rgba(255,255,255,.18)}
+/* lesson 4 «Records»: the clue column is wider and its buttons grow with the text */
+.pairs.rec{grid-template-columns:2fr 3fr}
+.pairs.rec .pbtn{height:auto;min-height:64px;font-size:14px;line-height:1.25}
+/* block 2: the Ural Mountains and the Ural River are not on the blank Europe base, so they are always drawn */
+.eu-mtn{fill:rgba(120,78,36,.32);stroke:rgba(90,56,24,.55);stroke-width:1.2;stroke-dasharray:3 3;vector-effect:non-scaling-stroke}
+.zoom-inset{position:absolute;z-index:4;pointer-events:none}
+.zoom-inset .mapbox{box-shadow:0 0 0 2px #fff,0 6px 16px rgba(0,0,0,.5);border-radius:10px}
+.zoom-inset .map{border-radius:10px}
+/* a non-scaling stroke ignores the CSS scale of the inset: the widths are divided by the zoom */
+.zoom-inset .cap-ring{fill:none;stroke:#3dbb62;stroke-width:calc(3px / var(--z))}
+.zoom-inset .hl-shape{stroke-width:calc(3px / var(--z))}
+.zoom-inset .eu-river{stroke-width:calc(2.5px / var(--z))}
+.zoom-frame{fill:none;stroke:#fff;stroke-width:1.6;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 1px rgba(0,0,0,.7))}
+.eu-river{fill:none;stroke:#2f7fa8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}

@@ -9,6 +9,19 @@ const dir = process.env.GEOWORDS_DIR || path.join(process.cwd(), "data/geowords"
 const mapsDir = process.env.MAPS_DIR || path.join(process.cwd(), "data/maps");
 // Release packages: file -> the exact puzzle ids it must contain (each with a complete approval).
 const RELEASE = {
+  "b2-section-3.json": ["b2-section-3-final-en", "b2-section-3-final-ru", "b2-section-3-unit-1-en", "b2-section-3-unit-1-ru", "b2-section-3-unit-2-en", "b2-section-3-unit-2-ru",
+    "b2-section-3-unit-3-en", "b2-section-3-unit-3-ru"],
+  "b2-section-2.json": ["b2-section-2-final-en", "b2-section-2-final-ru", "b2-section-2-unit-1-en", "b2-section-2-unit-1-ru", "b2-section-2-unit-2-en", "b2-section-2-unit-2-ru",
+    "b2-section-2-unit-3-en", "b2-section-2-unit-3-ru", "b2-section-2-unit-4-en", "b2-section-2-unit-4-ru"],
+  "b3-section-6.json": ["b3-section-6-final-en", "b3-section-6-final-ru", "b3-section-6-unit-1-en", "b3-section-6-unit-1-ru", "b3-section-6-unit-2-en", "b3-section-6-unit-2-ru", "b3-section-6-unit-3-en", "b3-section-6-unit-3-ru"],
+  "b3-section-7.json": ["b3-section-7-final-en", "b3-section-7-final-ru", "b3-section-7-unit-1-en", "b3-section-7-unit-1-ru", "b3-section-7-unit-2-en", "b3-section-7-unit-2-ru", "b3-section-7-unit-3-en", "b3-section-7-unit-3-ru"],
+  "b3-section-8.json": ["b3-section-8-final-en", "b3-section-8-final-ru", "b3-section-8-unit-1-en", "b3-section-8-unit-1-ru", "b3-section-8-unit-2-en", "b3-section-8-unit-2-ru", "b3-section-8-unit-3-en", "b3-section-8-unit-3-ru"],
+  "b3-section-5.json": ["b3-section-5-final-en", "b3-section-5-final-ru", "b3-section-5-unit-1-en", "b3-section-5-unit-1-ru", "b3-section-5-unit-2-en", "b3-section-5-unit-2-ru", "b3-section-5-unit-3-en", "b3-section-5-unit-3-ru"],
+  "b3-section-4.json": ["b3-section-4-final-en", "b3-section-4-final-ru", "b3-section-4-unit-1-en", "b3-section-4-unit-1-ru", "b3-section-4-unit-2-en", "b3-section-4-unit-2-ru", "b3-section-4-unit-3-en", "b3-section-4-unit-3-ru"],
+  "b3-section-3.json": ["b3-section-3-final-en", "b3-section-3-final-ru", "b3-section-3-unit-1-en", "b3-section-3-unit-1-ru", "b3-section-3-unit-2-en", "b3-section-3-unit-2-ru", "b3-section-3-unit-3-en", "b3-section-3-unit-3-ru"],
+  "b3-section-2.json": ["b3-section-2-final-en", "b3-section-2-final-ru", "b3-section-2-unit-1-en", "b3-section-2-unit-1-ru", "b3-section-2-unit-2-en", "b3-section-2-unit-2-ru", "b3-section-2-unit-3-en", "b3-section-2-unit-3-ru"],
+  "b3-section-1.json": ["b3-section-1-final-en", "b3-section-1-final-ru", "b3-section-1-unit-1-en", "b3-section-1-unit-1-ru", "b3-section-1-unit-2-en", "b3-section-1-unit-2-ru", "b3-section-1-unit-3-en", "b3-section-1-unit-3-ru"],
+  "b2-section-1.json": ["b2-section-1-final-en", "b2-section-1-final-ru", "b2-section-1-unit-1-en", "b2-section-1-unit-1-ru", "b2-section-1-unit-2-en", "b2-section-1-unit-2-ru", "b2-section-1-unit-3-en", "b2-section-1-unit-3-ru"],
   "block-1.json": ["block-1-final-en", "block-1-final-ru"],
   "section-5.json": ["section-5-unit-1-en", "section-5-unit-1-ru", "section-5-unit-2-en", "section-5-unit-2-ru", "section-5-unit-3-en", "section-5-unit-3-ru", "section-5-final-en", "section-5-final-ru"],
   "section-4.json": ["section-4-unit-1-en", "section-4-unit-1-ru", "section-4-unit-2-en", "section-4-unit-2-ru", "section-4-unit-3-en", "section-4-unit-3-ru", "section-4-final-en", "section-4-final-ru"],
@@ -67,6 +80,29 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
     }
   }
 }
+// River ends (Svetlana, 2026-10-25): a letter «at the mouth» of a river always comes with the letter «at the source» of the same river
+// (except rivers without an agreed source point — the Nile and the Amazon), a source never comes alone, and neither comes with «on» that river.
+// Source and mouth letters sit on the approved points of data/maps/world-rivers.json.
+{
+  const rivers = Object.fromEntries((fs.existsSync(path.join(mapsDir, "world-rivers.json")) ? JSON.parse(fs.readFileSync(path.join(mapsDir, "world-rivers.json"), "utf8")).rivers : []).map(r => [r.id, r]));
+  for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
+    for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+      const ids = new Set((p.markers || []).map(m => m.id)), err = m => errors.push(`${file}: ${p.id} ${m}`);
+      for (const m of p.markers || []) {
+        const end = /-(mouth|source)$/.exec(m.id);
+        if (!end) continue;
+        const r = m.id.slice(0, -end[0].length), river = rivers[r];
+        if (ids.has(`${r}-river`)) err(`has «on» and «at the ${end[1]}» of ${r} together`);
+        if (!river) continue;
+        if (end[1] === "source" && !river.source) err(`${m.id}: ${r} has no agreed source point`);
+        if (end[1] === "mouth" && river.source && !ids.has(`${r}-source`)) err(`${m.id} needs the source of ${r} in the same puzzle`);
+        if (end[1] === "source" && !ids.has(`${r}-mouth`)) err(`${m.id} needs the mouth of ${r} in the same puzzle`);
+        const pt = river[end[1]];
+        if (pt && Math.hypot(pt.x - m.x, pt.y - m.y) > (end[1] === "mouth" ? 0.6 : 0.3)) err(`${m.id} is not on the approved ${end[1]} point of ${r}`);
+      }
+    }
+  }
+}
 // Placement rules (Svetlana, 2026-10-23): a sea's circle sits at the centre of the sea (its label point, within 1.5% of map
 // width), and no letter lies inside another object of the same puzzle (checked here for seas and straits, whose tap
 // areas are in data/maps; the generator also checks continents, oceans, rivers and mountains).
@@ -76,8 +112,10 @@ const seas = Object.fromEntries(readMap("world-waters.json", "waters").map(w => 
 const areas = Object.fromEntries([...Object.values(seas), ...readMap("world-straits.json", "items").filter(s => !s.inset)].map(o => [o.id, o.tapArea]));
 const polys = a => typeof a?.[0]?.[0] === "number" ? [a] : (a || []).flatMap(polys);
 const inPoly = (x, y, poly) => { let c = false; for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) { const [xi, yi] = poly[i], [xj, yj] = poly[j]; if ((yi > y) !== (yj > y) && x < (xj - xi) * (y - yi) / (yj - yi) + xi) c = !c; } return c; };
+// World-map checks run only on puzzles drawn on the world map: Europe puzzles reuse ids such as mediterranean-sea on another map.
+const onWorld = p => !p.map || p.map.endsWith("world-base.webp");
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
-  for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+  for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(onWorld)) {
     const ms = (p.markers || []).filter(m => !m.inset);
     for (const m of ms) {
       if (seas[m.id] && near(m, seas[m.id].label) > 1.5) errors.push(`${file}: ${p.id} circle for ${m.id} is not at the centre of the sea`);
@@ -89,11 +127,37 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
 // Runs when the continents and oceans map is present (it arrives with PR #21).
 const coItems = Object.fromEntries(readMap("world-continents-oceans.json", "items").map(o => [o.id, o]));
 for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
-  for (const p of JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []) {
+  for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(onWorld)) {
     for (const m of (p.markers || []).filter(m => !m.inset && coItems[m.id])) {
       const o = coItems[m.id];
       if (!polys(o.tapArea).some(pl => inPoly(m.x, m.y, pl)) || polys(o.holes || []).some(pl => inPoly(m.x, m.y, pl)))
         errors.push(`${file}: ${p.id} letter for ${m.id} is not inside ${m.id}`);
+    }
+  }
+}
+// Europe map (block 2): letters only on objects of data/maps/europe-overview.json, each inside its own object (the Ural River: within
+// 1% of its line), never inside another object of the puzzle, never with the object that contains it, spacing >= 4.5 on the 2200×1600 map.
+{
+  // section 2 «Rivers of Europe» (europe-rivers.webp): the rivers of europe-rivers.json join the section-1 objects
+  const eu1 = Object.fromEntries(readMap("europe-overview.json", "items").map(o => [o.id, o]));
+  const eu2 = { ...eu1, ...Object.fromEntries(readMap("europe-rivers.json", "items").map(o => [o.id, o])) };
+  const EU_IN = { "north-sea": ["atlantic-ocean"], "baltic-sea": ["atlantic-ocean"], "barents-sea": ["arctic-ocean"], "great-britain": ["atlantic-ocean"],
+    ireland: ["atlantic-ocean"], iceland: ["atlantic-ocean"], sicily: ["mediterranean-sea"] };
+  const inObj = (o, m) => polys(o.tapArea).some(pl => inPoly(m.x, m.y, pl)) && !polys(o.holes || []).some(pl => inPoly(m.x, m.y, pl));
+  const segDist = (m, [a, b]) => { const dx = b[0] - a[0], dy = b[1] - a[1], t = Math.max(0, Math.min(1, ((m.x - a[0]) * dx + (m.y - a[1]) * dy) / (dx * dx + dy * dy || 1)));
+    return Math.hypot(a[0] + t * dx - m.x, a[1] + t * dy - m.y); };
+  for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) {
+    for (const p of (JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")).puzzles || []).filter(p => /europe-(blank|rivers)\.webp$/.test(p.map || ""))) {
+      const eu = p.map.endsWith("europe-rivers.webp") ? eu2 : eu1;
+      const err = m => errors.push(`${file}: ${p.id} ${m}`), ms = p.markers || [];
+      for (const m of ms) {
+        const o = eu[m.id];
+        if (!o) { err(`letter on ${m.id}, which is not on the Europe map`); continue; }
+        if (o.path ? Math.min(...o.path.flatMap(l => l.slice(1).map((q, i) => segDist(m, [l[i], q])))) > 1 : !inObj(o, m)) err(`letter for ${m.id} is not on ${m.id}`);
+        for (const q of ms) if (q !== m && eu[q.id]?.tapArea && inObj(eu[q.id], m)) err(`letter on ${m.id} lies inside ${q.id}`);
+        for (const q of ms) if ((EU_IN[m.id] || []).includes(q.id)) err(`has ${m.id} with ${q.id}, which contains it`);
+        for (const q of ms) if (m.id < q.id && Math.hypot(m.x - q.x, (m.y - q.y) * 1600 / 2200) < 4.5) err(`letters on ${m.id} and ${q.id} are too close`);
+      }
     }
   }
 }

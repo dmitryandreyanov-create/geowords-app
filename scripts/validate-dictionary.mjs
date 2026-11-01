@@ -1,4 +1,4 @@
-// Validates data/dictionary/*.json: unit shape (1 final + 6 review per language), single-word answers,
+// Validates data/dictionary/*.json: unit shape (1 final + at least 6 review per language; block 2 units have extra words Svetlana added 26.10.2026), single-word answers,
 // no duplicate answers per language, definitions present, and that each approval still matches its text.
 // Release packages listed in RELEASE are checked fail-closed: all expected units in both languages,
 // one section-final unit, and a complete approval on every word.
@@ -9,6 +9,50 @@ import crypto from "node:crypto";
 const dir = process.env.DICTIONARY_DIR || path.join(process.cwd(), "data/dictionary");
 // Release packages: file -> section and the exact unit ids it must contain (the last one is the section final).
 const RELEASE = {
+  "b2-section-3.json": {
+    section: "mountains-of-europe",
+    units: ["unit-1-mountains-of-western-and-southern-europe", "unit-2-mountains-of-central-and-south-eastern-europe", "unit-3-mountains-of-the-north-and-east", "section-final"],
+  },
+  "b2-section-2.json": {
+    section: "rivers-of-europe",
+    units: ["unit-1-great-rivers-of-eastern-europe", "unit-2-rivers-of-central-europe", "unit-3-rivers-of-western-europe", "unit-4-rivers-of-southern-europe", "section-final"],
+  },
+  "b3-section-6.json": {
+    section: "countries-east-and-southeast-asia",
+    units: ["unit-1-east-asia", "unit-2-indochina", "unit-3-maritime-southeast-asia", "section-final"],
+  },
+  "b3-section-7.json": {
+    section: "countries-south-and-central-asia",
+    units: ["unit-1-indian-subcontinent", "unit-2-himalayas-and-hindu-kush", "unit-3-central-asia", "section-final"],
+  },
+  "b3-section-8.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    units: ["unit-1-south-caucasus-and-iran", "unit-2-anatolia-and-eastern-mediterranean", "unit-3-mesopotamia-and-arabia", "section-final"],
+  },
+  "b3-section-5.json": {
+    section: "deserts-of-asia",
+    units: ["unit-1-china-mongolia", "unit-2-turan-iran", "unit-3-south-west", "section-final"],
+  },
+  "b3-section-4.json": {
+    section: "mountains-of-asia",
+    units: ["unit-1-mountain-knot", "unit-2-siberia-far-east", "unit-3-west-south", "section-final"],
+  },
+  "b3-section-3.json": {
+    section: "lakes-of-asia",
+    units: ["unit-1-north-east", "unit-2-central", "unit-3-west-south-east", "section-final"],
+  },
+  "b3-section-2.json": {
+    section: "rivers-of-asia",
+    units: ["unit-1-siberia-far-east", "unit-2-east-south", "unit-3-west-central", "section-final"],
+  },
+  "b3-section-1.json": {
+    section: "asia-on-the-map",
+    units: ["unit-1-where-asia-ends", "unit-2-peninsulas-of-asia", "unit-3-islands-and-seas", "section-final"],
+  },
+  "b2-section-1.json": {
+    section: "europe-on-the-map",
+    units: ["unit-1-where-europe-ends", "unit-2-peninsulas-of-europe", "unit-3-islands-and-seas", "section-final"],
+  },
   "block-1.json": {
     section: "world-1",
     units: ["challenge-extra", "block-final"],
@@ -34,6 +78,7 @@ const RELEASE = {
     units: ["unit-1-directions-hemispheres", "unit-2-continents", "unit-3-oceans", "unit-4-neighbours-records", "section-final"],
   },
 };
+const ROLES = new Set(["final", "review", "reserve", "section-final", "block-final", "challenge"]);
 const STATUSES = new Set(["approved", "draft"]);
 // Release packages are required: a missing directory or file fails.
 if (!fs.existsSync(dir)) { console.error(`Dictionary validation failed:\n- missing directory ${dir}`); process.exit(1); }
@@ -79,11 +124,27 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
       const reviews = words.filter(w => w.role === "review").length;
       const sectionFinal = words.filter(w => w.role === "section-final" || w.role === "block-final").length;
       const challengeOnly = (u.words?.en || []).concat(u.words?.ru || []).every(w => w.role === "challenge");
-      if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews !== 6)
-        errors.push(`${file}: ${u.id} ${lang} must have 1 final + 6 review words (or one section-final / block-final)`);
+      if (challengeOnly ? false : sectionFinal ? words.length !== 1 : finals !== 1 || reviews < 6)
+        errors.push(`${file}: ${u.id} ${lang} must have 1 final + at least 6 review words (or one section-final / block-final)`);
       if (!words.length && !challengeOnly) errors.push(`${file}: ${u.id} has no ${lang} words`);
+      // Reserve words ("Play again" when no review word fits the learned places): only beside a unit final,
+      // and never longer than the unit's reserveMaxLetters.
+      // practiceExtra: short approved words of later units used in this unit's practice; each must exist and fit reserveMaxLetters.
+      for (const a of u.practiceExtra?.[lang] || []) {
+        const later = units.slice(units.indexOf(u) + 1).flatMap(v => v.words?.[lang] || []).find(w => w.answer === a && (w.role === "review" || w.role === "reserve"));
+        if (!later) errors.push(`${file}: ${u.id} ${lang} practiceExtra ${a} is not a review or reserve word of a later unit`);
+        else if (!Number.isInteger(u.reserveMaxLetters) || [...a].length > u.reserveMaxLetters) errors.push(`${file}: ${u.id} ${lang} practiceExtra ${a} is longer than reserveMaxLetters`);
+      }
+      const reserves = words.filter(w => w.role === "reserve");
+      if (reserves.length) {
+        if (finals !== 1) errors.push(`${file}: ${u.id} ${lang} reserve words need a unit with a final word`);
+        if (!Number.isInteger(u.reserveMaxLetters) || u.reserveMaxLetters < 3) errors.push(`${file}: ${u.id} has reserve words but no reserveMaxLetters`);
+        else for (const w of reserves) if ([...(w.answer || "")].length > u.reserveMaxLetters)
+          errors.push(`${file}: ${u.id} ${lang} reserve word ${w.answer} is longer than ${u.reserveMaxLetters} letters`);
+      }
       for (const w of words) {
         count++;
+        if (!ROLES.has(w.role)) errors.push(`${file}: ${u.id} ${lang} ${w.answer} has unknown role "${w.role}"`);
         const a = w.approval;
         if (a && !STATUSES.has(a.status)) errors.push(`${file}: ${w.answer} unknown approval status "${a.status}"`);
         if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
