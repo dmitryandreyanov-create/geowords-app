@@ -5,6 +5,7 @@
   "clues": "clues in reveal order; position = slot the letter fills",
   "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-7.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the rivers of section 2 that flow through them («on the Ganges»), on a river inside a country it crosses («on the Ganges in Bangladesh»), and on the objects of section 1 and the lakes of section 3 (Caspian, Aral, Balkhash, Issyk-Kul) in view; at least half of the letters in the region of the unit, at least a third on rivers",
   "nesting": "a country is named once per puzzle; a river letter «on the Ganges» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle (a lake letter never with the country it lies in)",
+  "depth": "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
   "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
   "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
  },
@@ -50,8 +51,8 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 33.6,
-     "y": 58.4,
+     "x": 33.9,
+     "y": 55.8,
      "letter": "R"
     },
     {
@@ -68,8 +69,8 @@
     },
     {
      "id": "cty-sri-lanka",
-     "x": 39.2,
-     "y": 76.8,
+     "x": 39.3,
+     "y": 77.7,
      "letter": "A"
     }
    ],
@@ -124,8 +125,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "49d714f4fe3b62ee"
+    "date": "2026-11-01",
+    "contentSha256": "e64d3860b5e5a46f"
    }
   },
   {
@@ -151,8 +152,8 @@
     },
     {
      "id": "cty-sri-lanka",
-     "x": 39.2,
-     "y": 76.8,
+     "x": 39.3,
+     "y": 77.7,
      "letter": "А"
     },
     {
@@ -175,8 +176,8 @@
     },
     {
      "id": "cty-maldives",
-     "x": 32.4,
-     "y": 81.6,
+     "x": 33,
+     "y": 80.7,
      "letter": "А"
     },
     {
@@ -254,8 +255,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "426da53e11476479"
+    "date": "2026-11-01",
+    "contentSha256": "6868a990eed21ec5"
    }
   },
   {
@@ -281,8 +282,8 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 48.4,
+     "x": 34.5,
+     "y": 49.8,
      "letter": "A"
     },
     {
@@ -293,8 +294,8 @@
     },
     {
      "id": "cty-nepal",
-     "x": 43.6,
-     "y": 58.4,
+     "x": 43.8,
+     "y": 58.2,
      "letter": "R"
     },
     {
@@ -305,8 +306,8 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 39.2,
-     "y": 50.4,
+     "x": 38.7,
+     "y": 49.8,
      "letter": "Y"
     },
     {
@@ -384,8 +385,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "d362e08166fbbb64"
+    "date": "2026-11-01",
+    "contentSha256": "edac7d9587557625"
    }
   },
   {
@@ -411,8 +412,8 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 48.4,
+     "x": 34.5,
+     "y": 49.8,
      "letter": "А"
     },
     {
@@ -423,8 +424,8 @@
     },
     {
      "id": "cty-nepal",
-     "x": 43.6,
-     "y": 58.4,
+     "x": 43.8,
+     "y": 58.2,
      "letter": "Ж"
     },
     {
@@ -435,8 +436,8 @@
     },
     {
      "id": "cty-pakistan",
-     "x": 39.2,
-     "y": 50.4,
+     "x": 38.7,
+     "y": 49.8,
      "letter": "А"
     },
     {
@@ -514,8 +515,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "9adaf7a0a6c17bf8"
+    "date": "2026-11-01",
+    "contentSha256": "3a25672990bcd670"
    }
   },
   {
@@ -559,8 +560,8 @@
     },
     {
      "id": "cty-turkmenistan",
-     "x": 30.4,
-     "y": 41.2,
+     "x": 32.4,
+     "y": 42.9,
      "letter": "R"
     },
     {
@@ -571,14 +572,14 @@
     },
     {
      "id": "cty-afghanistan",
-     "x": 33.2,
-     "y": 48.4,
+     "x": 34.5,
+     "y": 49.8,
      "letter": "A"
     },
     {
      "id": "as-indus@cty-pakistan",
-     "x": 38.17,
-     "y": 51.06,
+     "x": 34.06,
+     "y": 57.01,
      "letter": "T"
     },
     {
@@ -589,14 +590,14 @@
     },
     {
      "id": "cty-uzbekistan",
-     "x": 34.8,
-     "y": 43.6,
+     "x": 35.7,
+     "y": 44.4,
      "letter": "R"
     },
     {
      "id": "cty-kyrgyzstan",
-     "x": 39.2,
-     "y": 46,
+     "x": 39.3,
+     "y": 45.9,
      "letter": "Y"
     }
    ],
@@ -666,8 +667,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "29e5143c056d085c"
+    "date": "2026-11-01",
+    "contentSha256": "ff8553db20b0d323"
    }
   },
   {
@@ -705,14 +706,14 @@
     },
     {
      "id": "cty-turkmenistan",
-     "x": 30.4,
-     "y": 41.2,
+     "x": 30.9,
+     "y": 42,
      "letter": "Е"
     },
     {
      "id": "cty-kyrgyzstan",
-     "x": 41.6,
-     "y": 44.4,
+     "x": 41.4,
+     "y": 44.7,
      "letter": "Р"
     },
     {
@@ -723,8 +724,8 @@
     },
     {
      "id": "cty-tajikistan",
-     "x": 38.4,
-     "y": 46.8,
+     "x": 38.7,
+     "y": 47.7,
      "letter": "А"
     },
     {
@@ -741,14 +742,14 @@
     },
     {
      "id": "cty-uzbekistan",
-     "x": 34.8,
-     "y": 43.6,
+     "x": 35.1,
+     "y": 43.5,
      "letter": "Р"
     },
     {
      "id": "cty-pakistan",
-     "x": 32,
-     "y": 56.4,
+     "x": 32.4,
+     "y": 55.8,
      "letter": "И"
     },
     {
@@ -829,8 +830,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "971164366dc5abf9"
+    "date": "2026-11-01",
+    "contentSha256": "15d1d0d7508c858e"
    }
   },
   {
@@ -856,8 +857,8 @@
     },
     {
      "id": "cty-india",
-     "x": 49.6,
-     "y": 58.8,
+     "x": 41.7,
+     "y": 64.2,
      "letter": "A"
     },
     {
@@ -868,38 +869,38 @@
     },
     {
      "id": "as-indus@cty-pakistan",
-     "x": 38.17,
-     "y": 51.06,
+     "x": 34.06,
+     "y": 57.01,
      "letter": "A"
     },
     {
      "id": "cty-maldives",
-     "x": 32.8,
-     "y": 78.8,
+     "x": 33.3,
+     "y": 78.9,
      "letter": "R"
     },
     {
      "id": "as-syr-darya@cty-kyrgyzstan",
-     "x": 41.89,
-     "y": 44.95,
+     "x": 40.29,
+     "y": 44.92,
      "letter": "K"
     },
     {
      "id": "as-irtysh@cty-kazakhstan",
-     "x": 44.94,
-     "y": 38.02,
+     "x": 43.01,
+     "y": 35.87,
      "letter": "A"
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 50,
+     "x": 33.3,
+     "y": 50.1,
      "letter": "N"
     },
     {
      "id": "cty-nepal",
-     "x": 43.6,
-     "y": 58.4,
+     "x": 42.9,
+     "y": 57.3,
      "letter": "D"
     }
    ],
@@ -959,8 +960,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "0d5e128acadfcba0"
+    "date": "2026-11-01",
+    "contentSha256": "6ad7b09791259853"
    }
   },
   {
@@ -986,8 +987,8 @@
     },
     {
      "id": "cty-india",
-     "x": 49.6,
-     "y": 58.8,
+     "x": 41.7,
+     "y": 64.2,
      "letter": "А"
     },
     {
@@ -998,38 +999,38 @@
     },
     {
      "id": "as-indus@cty-pakistan",
-     "x": 38.17,
-     "y": 51.06,
+     "x": 34.06,
+     "y": 57.01,
      "letter": "А"
     },
     {
      "id": "cty-maldives",
-     "x": 32.8,
-     "y": 78.8,
+     "x": 33.3,
+     "y": 78.9,
      "letter": "Р"
     },
     {
      "id": "as-syr-darya@cty-kyrgyzstan",
-     "x": 41.89,
-     "y": 44.95,
+     "x": 40.29,
+     "y": 44.92,
      "letter": "К"
     },
     {
      "id": "as-irtysh@cty-kazakhstan",
-     "x": 44.94,
-     "y": 38.02,
+     "x": 43.01,
+     "y": 35.87,
      "letter": "А"
     },
     {
      "id": "cty-afghanistan",
-     "x": 32,
-     "y": 50,
+     "x": 33.3,
+     "y": 50.1,
      "letter": "Н"
     },
     {
      "id": "cty-nepal",
-     "x": 43.6,
-     "y": 58.4,
+     "x": 42.9,
+     "y": 57.3,
      "letter": "Д"
     }
    ],
@@ -1089,8 +1090,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-31",
-    "contentSha256": "d8b00629485964c1"
+    "date": "2026-11-01",
+    "contentSha256": "b9e46ba3c80740c7"
    }
   }
  ]

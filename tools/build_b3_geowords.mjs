@@ -186,9 +186,28 @@ const frame6 = unit => {
   const cx = Math.min(100 - hw, Math.max(hw, f.x)), cy = Math.min(100 - hw, Math.max(hw, f.y)), m = 4 / f.zoom;
   return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m };
 };
+// Svetlana, 1.11.2026 («Найди вторую букву в Индии», but no letter could be seen in India): the letter of India stood in the narrow north-east
+// of the country next to Bangladesh, and the letter of Nepal at its southern border, so they read as letters of a neighbour. A letter
+// in a country («in India», «on the Ganges in India») stands in the main part of the country (the part with its name label), its circle
+// (16px on a phone map about 360px wide, 4.5% of the screen with a little air) wholly inside the border at the zoom of the puzzle; a country
+// too small for that (Bhutan, Sri Lanka at the zoom of the section final…) takes its deepest spots.
+const R_MARK = 4.5;
+let DEEP = 1;  // lowered step by step for a word that cannot be laid out with every circle wholly inside
+const segD = (px, py, ax, ay, bx, by) => { const dx = bx - ax, dy = by - ay, l = dx * dx + dy * dy, t = l ? Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / l)) : 0; return Math.hypot(px - ax - t * dx, py - ay - t * dy); };
+const depthIn = (cid, p) => { let d = Infinity; const o = area6[cid]; for (const pl of [...polys(o.tapArea), ...polys(o.holes)]) for (let i = 0, j = pl.length - 1; i < pl.length; j = i++)
+  d = Math.min(d, segD(p.x, p.y * ASPECT, pl[j][0], pl[j][1] * ASPECT, pl[i][0], pl[i][1] * ASPECT)); return d; };
+function deepSpots(cid, spots, zoom) {
+  const o = area6[cid]; if (!o) return spots;
+  const main = o.label ? polys(o.tapArea).filter(pl => inPoly(o.label.x, o.label.y, pl)) : [];
+  const inMain = main.length ? spots.filter(s => main.some(pl => inPoly(s.x, s.y, pl))) : [];
+  const sc = (inMain.length ? inMain : spots).map(s => [s, depthIn(cid, s)]), ok = sc.filter(([, d]) => d >= DEEP * R_MARK / zoom);
+  if (ok.length) return ok.map(([s]) => s);
+  const mx = Math.max(...sc.map(([, d]) => d));
+  return sc.filter(([, d]) => d >= mx * 0.8).map(([s]) => s);
+}
 function places6(unit, F) {
   const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit), uOf = id => C6.items.find(o => o.id === id)?.unit;
-  const add = (base, spots) => { const sp = spots.filter(F.inView); if (sp.length) out.push({ ...base, spots: sp }); };
+  const add = (base, spots) => { const all = spots.filter(F.inView); if (all.length) out.push({ ...base, spots: base.country ? deepSpots(base.country, all, F.zoom) : all, allSpots: all }); };
   for (const o of C6.items) if (o.unit <= unit) add({ id: o.id, kind: "country", country: o.id, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
   for (const o of C7.items) add({ id: o.id, kind: "country", country: o.id, unit: 0, reg: [], place: PLACE[o.id] }, o.spots);
   // only the rivers that flow through the countries of this section (the Jordan or the Ob belong to other parts of Asia)
@@ -265,6 +284,65 @@ function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 400
   return { markers, clues, focus: { x: F.x, y: F.y, zoom: F.zoom }, inRegion: best.filter(inReg).length };
 }
 
+// REPAIR=1: an approved puzzle keeps its word, places, letters and clues; its letters in countries move deeper inside them. The deepest
+// layout is searched together (the letters keep the spacing, the nesting rules and the region of the unit): first with every circle
+// wholly inside its country, then a little less deep, down to half the circle; a country too small for that keeps its deepest spots.
+const mainSpots = (cid, spots) => { const o = area6[cid], main = o?.label ? polys(o.tapArea).filter(pl => inPoly(o.label.x, o.label.y, pl)) : [];
+  const m = main.length ? spots.filter(s => main.some(pl => inPoly(s.x, s.y, pl))) : []; return m.length ? m : spots; };
+// a letter in a country may stand on a finer grid than the spots of the countries map (0.3% of the map width), in the part with its label
+const gridM = new Map();
+function gridSpots(cid, F) {
+  const k = cid + F.zoom + F.x + F.y; if (gridM.has(k)) return gridM.get(k);
+  const o = area6[cid], main = polys(o.tapArea).filter(pl => !o.label || inPoly(o.label.x, o.label.y, pl)), out = [];
+  for (const pl of main) { const xs = pl.map(q => q[0]), ys = pl.map(q => q[1]);
+    for (let x = Math.ceil(Math.min(...xs) / 0.3) * 0.3; x <= Math.max(...xs); x += 0.3) for (let y = Math.ceil(Math.min(...ys) / 0.3) * 0.3; y <= Math.max(...ys); y += 0.3) {
+      const s = { x: Math.round(x * 100) / 100, y: Math.round(y * 100) / 100 };
+      if (F.inView(s) && inPoly(s.x, s.y, pl) && !polys(o.holes).some(h => inPoly(s.x, s.y, h)) && depthIn(cid, s) >= 0.25) out.push(s);
+    } }
+  gridM.set(k, out); return out;
+}
+function repair6(p, unit, final, tiers = [1, 0.85, 0.7, 0.6, 0.5]) {
+  const F = frame6(final ? "S" : unit), sep = SEP / F.zoom, U = final ? [1, 2, 3] : [unit], G = {}, Rz = R_MARK / F.zoom;
+  for (const g of places6(unit, F)) G[g.id] ||= g;
+  const inR = (g, s) => [...(g.reg || []), ...regOf({ x: s.x, y: s.y })].some(u => U.includes(u));
+  const ratio = (g, s) => g.country ? depthIn(g.country, s) / Rz : 1;
+  const fixed = [], free = [];
+  // a plain river letter («on the Ganges») may slide along its river to make room
+  for (const m of p.markers) { const g = G[m.id]; (g?.country || g?.kind === "river" ? free : fixed).push({ m, g: g || { id: m.id, kind: "object" } }); }
+  const okPair = (a, sa, b, sb) => Math.hypot(sa.x - sb.x, (sa.y - sb.y) * ASPECT) >= sep && !conflict6({ ...a, x: sa.x, y: sa.y }, { ...b, x: sb.x, y: sb.y });
+  for (const t of tiers) {
+    const cands = free.map(({ m, g }) => {
+      if (!g.country) return g.allSpots.filter(s => !inR(g, m) || inR(g, s)).map(s => ({ s, r: 1 })).sort((a, b) => Math.hypot(a.s.x - m.x, (a.s.y - m.y) * ASPECT) - Math.hypot(b.s.x - m.x, (b.s.y - m.y) * ASPECT)).slice(0, 30);
+      const sp = (g.kind === "country" ? gridSpots(g.country, F) : mainSpots(g.country, g.allSpots)).filter(s => !inR(g, m) || inR(g, s)).map(s => ({ s, r: ratio(g, s) }));
+      // "best": as deep as the other letters let it, never less deep than it was (the approved spot is the last candidate)
+      if (t === "best") return [...sp.filter(c => c.r > ratio(g, m)).sort((a, b) => b.r - a.r).slice(0, 60), { s: { x: m.x, y: m.y }, r: ratio(g, m) }];
+      const mx = Math.max(...sp.map(c => c.r)), need = Math.min(t, mx * (t >= 0.5 ? 0.9 : 0.75));
+      // already deep enough: stays where it was approved
+      if (ratio(g, m) >= need) return [{ s: { x: m.x, y: m.y }, r: ratio(g, m) }];
+      return sp.filter(c => c.r >= need).sort((a, b) => Math.hypot(a.s.x - m.x, (a.s.y - m.y) * ASPECT) - Math.hypot(b.s.x - m.x, (b.s.y - m.y) * ASPECT)).slice(0, 60);
+    });
+    const order = free.map((_, i) => i).sort((a, b) => cands[a].length - cands[b].length), pick = [];
+    let steps = 0;
+    const dfs = k => {
+      if (k === order.length) return true;
+      if (++steps > 200000) return false;
+      const i = order[k], { g } = free[i];
+      for (const c of cands[i]) {
+        if (!fixed.every(f => okPair(g, c.s, f.g, f.m))) continue;
+        if (!order.slice(0, k).every(j => okPair(g, c.s, free[j].g, pick[j]))) continue;
+        pick[i] = c.s; if (dfs(k + 1)) return true;
+      }
+      return false;
+    };
+    if (!dfs(0)) continue;
+    const moved = [], markers = p.markers.map(m => { const i = free.findIndex(f => f.m === m); if (i < 0 || (pick[i].x === m.x && pick[i].y === m.y)) return m;
+      moved.push(`${m.id} ${m.letter} ${ratio(free[i].g, m).toFixed(2)}→${ratio(free[i].g, pick[i]).toFixed(2)}`); return { ...m, x: pick[i].x, y: pick[i].y }; });
+    if (moved.length) console.log(`${p.id} (depth ${t}): ${moved.join("; ")}`);
+    return moved.length ? { ...p, markers } : p;
+  }
+  return null;
+}
+
 const prev = fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, "utf8")) : { puzzles: [] };
 const puzzles = [];
 for (const u of dict.units) {
@@ -273,8 +351,27 @@ for (const u of dict.units) {
     const w = u.words[lang].find(w => w.role === "final" || w.role === "section-final");
     const id = `b3-section-${SEC}-${sectionFinal ? "final" : `unit-${unit}`}-${lang}`;
     const old = prev.puzzles.find(p => p.id === id);
-    if (old?.approval?.status === "approved" && old.answer === w.answer) { puzzles.push(old); continue; }
-    const b = (SEC >= 6 ? build6 : build)(w.answer, lang, sectionFinal ? dict.units.length - 1 : unit, sectionFinal);
+    const U = sectionFinal ? dict.units.length - 1 : unit, make = deep => { for (DEEP of deep) { const b = build6(w.answer, lang, U, sectionFinal); if (b) return b; } return null; };
+    if (old?.approval?.status === "approved" && old.answer === w.answer) {
+      if (!process.env.REPAIR || SEC < 6) { puzzles.push(old); continue; }
+      // REPAIR (1.11.2026): keep the approved places and clues when the letters can move deep enough; else lay the word out anew (a draft)
+      const r = repair6(old, U, sectionFinal, [1, 0.85, 0.7, 0.6, 0.5, 0.45, 0.4, 0.35, 0.3]);
+      if (r) { puzzles.push(r); continue; }
+      // keep the approved clues whenever the letters can at least move deeper ("best"); lay out anew only with LAYOUT_ANEW=1
+      // …unless a letter would still stand outside the main part of its country (Malaysia on Borneo, Indonesia off its label island)
+      const r3 = repair6(old, U, sectionFinal, ["best"]) || old;
+      const offMain = r3.markers.some(m => { const c = (m.id.split("@")[1] || m.id), o = area6[c]; return c.startsWith("cty-") && o?.label && !polys(o.tapArea).some(pl => inPoly(o.label.x, o.label.y, pl) && inPoly(m.x, m.y, pl)); });
+      if (!process.env.LAYOUT_ANEW && !offMain) { console.log(`${id}: letters moved as deep as the other letters let them`); puzzles.push(r3); continue; }
+      const b = make([1, 0.8, 0.6, 0.5, 0.45, 0.4, 0.35, 0.3]);
+      DEEP = 1;
+      if (!b) { const r3 = repair6(old, U, sectionFinal, ["best"]); console.log(`${id}: ${w.answer} cannot be laid out with its letters half inside; letters moved as deep as they can`); puzzles.push(r3 || old); continue; }
+      console.log(`${id}: laid out anew`);
+      puzzles.push({ ...old, ...b, approval: { status: "draft" } });
+      continue;
+    }
+    let b = null;
+    for (DEEP of SEC >= 6 ? [1, 0.8, 0.6, 0.5, 0.4, 0.3] : [1]) if ((b = (SEC >= 6 ? build6 : build)(w.answer, lang, U, sectionFinal))) break;
+    DEEP = 1;
     if (!b) { console.error(`${id}: ${w.answer} cannot be laid out on the learned objects`); process.exitCode = 1; continue; }
     puzzles.push({ id, section: dict.section, block: 3, unit, role: sectionFinal ? "section-final" : "unit-final", language: lang, answer: w.answer,
       map: BASE, mapAspect: "2200 / 1600", layers: [], showInsets: [], needsZoom: false, minSeparation: SEP, ...b,
@@ -287,6 +384,7 @@ const out = SEC === 8 ? {
     clues: "clues in reveal order; position = slot the letter fills",
     places: "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit (unit 1 also takes in the Iranian Plateau and the Caspian Sea), a third on rivers but no more than three",
     nesting: "a country is named once per puzzle; a river letter «on the Euphrates» never shares a puzzle with a country the river crosses; one letter per river; a country never with its peninsula or gulf; no letter inside the area of another place of the puzzle",
+    depth: "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
     spacing: "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
   },
@@ -297,6 +395,7 @@ const out = SEC === 8 ? {
     clues: "clues in reveal order; position = slot the letter fills",
     places: "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-7.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the rivers of section 2 that flow through them («on the Ganges»), on a river inside a country it crosses («on the Ganges in Bangladesh»), and on the objects of section 1 and the lakes of section 3 (Caspian, Aral, Balkhash, Issyk-Kul) in view; at least half of the letters in the region of the unit, at least a third on rivers",
     nesting: "a country is named once per puzzle; a river letter «on the Ganges» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle (a lake letter never with the country it lies in)",
+    depth: "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
     spacing: "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
   },
@@ -307,6 +406,7 @@ const out = SEC === 8 ? {
     clues: "clues in reveal order; position = slot the letter fills",
     places: "letters at the centre of the countries of data/maps/asia-countries-6.json learned by the end of the unit (section final: all 17), on the rivers of data/maps/asia-rivers.json drawn over the countries map («on the Mekong», at the river's label point), on a river inside a country it crosses («on the Mekong in Cambodia»), and on the objects of section 1 only when places run short; at least a third of the letters on rivers",
     nesting: "a country is named once per puzzle; a river letter «on the Mekong» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle",
+    depth: "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
     spacing: "hypot(dx, dy * 1600/2200) >= 9 (% of map width), as in Europe sections 4 and 5",
     approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
   },
