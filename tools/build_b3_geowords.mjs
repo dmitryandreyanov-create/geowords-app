@@ -18,12 +18,15 @@
 // with its island or peninsula; spacing 9 as in Europe sections 4 and 5.
 // Section 7 «Countries and capitals: South and Central Asia» (data/maps/asia-countries-7.json, the same map): as section 6; the lakes of
 // section 3 drawn on the map (Caspian, Aral, Balkhash, Issyk-Kul) join section 1 as review objects in view.
-// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3|4|5|6|7]  — writes drafts; approved puzzles already in the file are kept as they are.
+// Section 8 «Countries and capitals: West Asia and Transcaucasia» (data/maps/asia-countries-8.json, the same map): as section 7; West Asia
+// has only three rivers of section 2 (Tigris, Euphrates, Jordan), so the Amu Darya, the Syr Darya and the Indus join as review rivers in view;
+// the Caspian Sea (the one lake of section 3 drawn on the map here) is a review object. The Bosporus and the Suez Canal are objects again.
+// Usage: node tools/build_b3_geowords.mjs [seed] [section 1|2|3|4|5|6|7|8]  — writes drafts; approved puzzles already in the file are kept as they are.
 import fs from "node:fs";
 
 const SEC = Number(process.argv[3] || 1);
-const MAP = "data/maps/asia-overview.json", LAYER = { 7: "data/maps/asia-rivers.json", 6: "data/maps/asia-rivers.json", 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json", 4: "data/maps/asia-mountains.json", 5: "data/maps/asia-deserts.json" }[SEC];
-const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp", 4: "./assets/asia-mountains.webp", 5: "./assets/asia-deserts.webp", 6: "./assets/asia-countries.webp", 7: "./assets/asia-countries.webp" }[SEC];
+const MAP = "data/maps/asia-overview.json", LAYER = { 8: "data/maps/asia-rivers.json", 7: "data/maps/asia-rivers.json", 6: "data/maps/asia-rivers.json", 2: "data/maps/asia-rivers.json", 3: "data/maps/asia-lakes.json", 4: "data/maps/asia-mountains.json", 5: "data/maps/asia-deserts.json" }[SEC];
+const BASE = { 1: "./assets/asia-blank.webp", 2: "./assets/asia-rivers.webp", 3: "./assets/asia-lakes.webp", 4: "./assets/asia-mountains.webp", 5: "./assets/asia-deserts.webp", 6: "./assets/asia-countries.webp", 7: "./assets/asia-countries.webp", 8: "./assets/asia-countries.webp" }[SEC];
 const DICT = `data/dictionary/b3-section-${SEC}.json`, OUT = `data/geowords/b3-section-${SEC}.json`;
 let seed = Number(process.argv[2] || 2026);
 const rnd = () => (seed = (seed * 1103515245 + 12345) % 2147483648) / 2147483648;
@@ -77,6 +80,12 @@ export const PLACE = {
   "cty-bhutan": ["в Бутане", "in Bhutan"], "cty-afghanistan": ["в Афганистане", "in Afghanistan"], "cty-kazakhstan": ["в Казахстане", "in Kazakhstan"],
   "cty-uzbekistan": ["в Узбекистане", "in Uzbekistan"], "cty-turkmenistan": ["в Туркменистане", "in Turkmenistan"], "cty-kyrgyzstan": ["в Киргизии", "in Kyrgyzstan"],
   "cty-tajikistan": ["в Таджикистане", "in Tajikistan"],
+  "cty-georgia": ["в Грузии", "in Georgia"], "cty-armenia": ["в Армении", "in Armenia"], "cty-azerbaijan": ["в Азербайджане", "in Azerbaijan"],
+  "cty-iran": ["в Иране", "in Iran"], "cty-turkey": ["в Турции", "in Turkey"], "cty-cyprus": ["на Кипре", "in Cyprus"], "cty-syria": ["в Сирии", "in Syria"],
+  "cty-lebanon": ["в Ливане", "in Lebanon"], "cty-israel": ["в Израиле", "in Israel"], "cty-palestine": ["в Палестине", "in Palestine"],
+  "cty-jordan": ["в Иордании", "in Jordan"], "cty-iraq": ["в Ираке", "in Iraq"], "cty-saudi-arabia": ["в Саудовской Аравии", "in Saudi Arabia"],
+  "cty-kuwait": ["в Кувейте", "in Kuwait"], "cty-bahrain": ["в Бахрейне", "in Bahrain"], "cty-qatar": ["в Катаре", "in Qatar"],
+  "cty-uae": ["в ОАЭ", "in the UAE"], "cty-oman": ["в Омане", "in Oman"], "cty-yemen": ["в Йемене", "in Yemen"],
 };
 // «on the Mekong in Cambodia»: the river phrase, then the country phrase
 export const placeOn = (river, country, li) => `${PLACE[river][li]} ${PLACE[country][li]}`;
@@ -90,6 +99,10 @@ export const CONTAINERS = {
   "cty-thailand": ["as-indochina", "as-malay-peninsula"], "cty-vietnam": ["as-indochina"], "cty-laos": ["as-indochina"], "cty-cambodia": ["as-indochina"], "cty-myanmar": ["as-indochina"],
   // section 7
   "cty-india": ["as-hindustan"], "cty-sri-lanka": ["as-sri-lanka"], "cty-maldives": ["as-indian-ocean"],
+  // section 8
+  "cty-turkey": ["as-asia-minor", "as-bosporus"], "cty-saudi-arabia": ["as-arabian-peninsula"], "cty-yemen": ["as-arabian-peninsula"], "cty-oman": ["as-arabian-peninsula"],
+  "cty-uae": ["as-arabian-peninsula"], "cty-qatar": ["as-arabian-peninsula", "as-persian-gulf"], "cty-kuwait": ["as-arabian-peninsula", "as-persian-gulf"],
+  "cty-bahrain": ["as-persian-gulf", "as-arabian-peninsula"],
 };
 const ASPECT = 1600 / 2200, SEP = SEC >= 6 ? Number(process.env.SEP || 9) : 4.5;
 
@@ -134,6 +147,7 @@ function build(word, lang, unit, final, tries = 6000) {
     const score = gap + (final ? units * 3 : own) + (SEC >= 2 ? riv * 2 : 0);
     if (score > bestScore) { bestScore = score; best = shuffle(pick); }
   }
+  if (process.env.DEBUG) { console.error(word, Object.entries(globalThis.__st).sort((a, b) => b[1] - a[1]).slice(0, 8), globalThis.__rv); globalThis.__st = {}; globalThis.__rv = {}; }
   if (!best) return null;
   const order = revealOrder(n);
   const markers = best.map((p, i) => ({ id: p.id, x: p.x, y: p.y, letter: letters[i] }));
@@ -149,17 +163,26 @@ const C6 = SEC >= 6 ? JSON.parse(fs.readFileSync(`data/maps/asia-countries-${SEC
 // of data/maps/asia-mountains.json), so a letter in India or Pakistan, or on the Indus, inside the Himalayas or the Hindu Kush is in the region
 const MTN7 = SEC === 7 ? JSON.parse(fs.readFileSync("data/maps/asia-mountains.json", "utf8")).items.filter(o => ["as-himalayas", "as-hindu-kush"].includes(o.id)) : [];
 const inMtn7 = p => MTN7.some(o => polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)));
-const LAKES7 = SEC === 7 ? JSON.parse(fs.readFileSync("data/maps/asia-lakes.json", "utf8")).items.filter(o => ["as-caspian", "as-aral", "as-balkhash", "as-issyk-kul"].includes(o.id)) : [];
-const area6 = SEC >= 6 ? Object.fromEntries([...map.items, ...LAKES7, ...C6.items].filter(o => o.tapArea).map(o => [o.id, o])) : {};
+// section 8, unit 1 «The South Caucasus and Iran»: four countries, three of them small and close together, cannot hold half the letters of a
+// 9–11 letter word. Its region also takes in the Iranian Plateau (the historical region shown in unit 1, data/maps/asia-countries-8.json
+// regions), so a letter in Afghanistan or Pakistan inside the plateau counts for it, as do the Caspian Sea and the Persian Gulf, the seas of Iran
+const ZONE8 = SEC === 8 ? C6.regions.filter(o => o.id === "zone-iranian-plateau") : [];
+const inZone8 = p => ZONE8.some(o => polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)));
+const LAKES7 = SEC >= 7 ? JSON.parse(fs.readFileSync("data/maps/asia-lakes.json", "utf8")).items.filter(o => (SEC === 8 ? ["as-caspian"] : ["as-caspian", "as-aral", "as-balkhash", "as-issyk-kul"]).includes(o.id)) : [];
+// section 8: the countries of section 7 in view are review places (Afghanistan, Pakistan, Turkmenistan…); a river crosses the countries of both
+const C7 = SEC === 8 ? JSON.parse(fs.readFileSync("data/maps/asia-countries-7.json", "utf8")) : { items: [], rivers: [] };
+if (SEC === 8) C7.items = C7.items.filter(o => ["cty-afghanistan", "cty-pakistan", "cty-turkmenistan", "cty-uzbekistan", "cty-kazakhstan"].includes(o.id));  // the neighbours
+const area6 = SEC >= 6 ? Object.fromEntries([...map.items, ...LAKES7, ...C7.items, ...C6.items].filter(o => o.tapArea).map(o => [o.id, o])) : {};
 const in6m = new Map(), in6 = (id, p) => { const k = id + ' ' + p.x + ' ' + p.y; if (!in6m.has(k)) { const o = area6[id]; in6m.set(k, !!o && polys(o.tapArea).some(pl => inPoly(p.x, p.y, pl)) && !polys(o.holes).some(pl => inPoly(p.x, p.y, pl))); } return in6m.get(k); };
 // Svetlana, 31.10.2026 17:45: at least half of the letters inside the region of the lesson, the rest on learned objects of Asia nearby;
 // no Arctic Ocean or Chukotka. The puzzle opens zoomed in on the region of its unit (C6.frames), so letters stay 9% of the screen apart
 // (SEP / zoom of the map), and a letter may stand anywhere well inside its country or anywhere on its river (C6 spots).
-const REGION_OBJ = SEC === 7 ? { 1: ["as-hindustan", "as-sri-lanka"], 2: [], 3: [] }
+const REGION_OBJ = SEC === 8 ? { 1: ["as-persian-gulf"], 2: ["as-asia-minor", "as-bosporus"], 3: ["as-arabian-peninsula", "as-persian-gulf"] }
+  : SEC === 7 ? { 1: ["as-hindustan", "as-sri-lanka"], 2: [], 3: [] }
   : { 1: ["as-korean-peninsula", "as-japanese-islands", "as-sea-of-japan"], 2: ["as-indochina", "as-south-china-sea"], 3: ["as-malay-peninsula", "as-borneo", "as-south-china-sea"] };
 const NEVER6 = ["as-arctic-ocean", "as-chukotka", "as-bering-strait", ...(SEC === 7 ? ["as-bosporus", "as-suez-canal"] : [])];
 const frame6 = unit => {
-  const f = C6.frames[unit === "section-final" || unit === "S" ? "S" : String(unit)], hw = 50 / f.zoom;
+  const k = unit === "section-final" || unit === "S" ? "S" : String(unit), f = { ...C6.frames[k], ...(process.env.FRAMES ? JSON.parse(process.env.FRAMES)[k] : {}) }, hw = 50 / f.zoom;
   const cx = Math.min(100 - hw, Math.max(hw, f.x)), cy = Math.min(100 - hw, Math.max(hw, f.y)), m = 4 / f.zoom;
   return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m };
 };
@@ -167,11 +190,13 @@ function places6(unit, F) {
   const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit), uOf = id => C6.items.find(o => o.id === id)?.unit;
   const add = (base, spots) => { const sp = spots.filter(F.inView); if (sp.length) out.push({ ...base, spots: sp }); };
   for (const o of C6.items) if (o.unit <= unit) add({ id: o.id, kind: "country", country: o.id, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
+  for (const o of C7.items) add({ id: o.id, kind: "country", country: o.id, unit: 0, reg: [], place: PLACE[o.id] }, o.spots);
   // only the rivers that flow through the countries of this section (the Jordan or the Ob belong to other parts of Asia)
   for (const r of rivers) {
     const rc = C6.rivers.find(q => q.id === r.id);
     if (!rc) continue;
-    add({ id: r.id, kind: "river", river: r.id, crosses: rc.crosses, unit: 0, reg: null, place: PLACE[r.id] }, rc.spots);
+    const crosses = [...rc.crosses, ...(C7.rivers.find(q => q.id === r.id)?.crosses || [])];
+    add({ id: r.id, kind: "river", river: r.id, crosses, unit: 0, reg: null, place: PLACE[r.id] }, rc.spots);
     for (const q of rc.points) if (learned(q.country))
       add({ id: `${r.id}@${q.country}`, kind: "river", river: r.id, country: q.country, unit: 0, reg: [uOf(q.country)], place: [0, 1].map(li => placeOn(r.id, q.country, li)) }, q.spots);
   }
@@ -179,36 +204,49 @@ function places6(unit, F) {
   for (const o of map.items) if (!NEVER6.includes(o.id))
     add({ id: o.id, kind: "object", unit: -1, reg: Object.keys(REGION_OBJ).filter(u => REGION_OBJ[u].includes(o.id)).map(Number), place: PLACE[o.id] }, [o.label]);
   // a lake belongs to the region of the country it lies in (reg null: found from its letter, as a plain river letter)
-  for (const o of LAKES7) add({ id: o.id, kind: "object", unit: -1, reg: null, place: PLACE[o.id] }, [o.label]);
+  for (const o of LAKES7) add({ id: o.id, kind: "object", unit: -1, reg: SEC === 8 ? [1] : null, place: PLACE[o.id] }, [o.label]);
   // section 7: the same country or river again with only its spots in the Himalayas or the Hindu Kush, in the region of unit 2 (one letter per id)
   if (SEC === 7) for (const g of [...out]) if (g.kind !== "object" && !(g.reg || []).includes(2)) {
     const sp = g.spots.filter(inMtn7);
     if (sp.length) out.push({ ...g, spots: sp, reg: [...(g.reg || []), 2] });
   }
+  // section 8: the same country or river again with only its spots on the Iranian Plateau, in the region of unit 1 (one letter per id)
+  if (SEC === 8) for (const g of [...out]) if (g.kind !== "object" && !(g.reg || []).includes(1)) {
+    const sp = g.spots.filter(inZone8);
+    if (sp.length) out.push({ ...g, spots: sp, reg: [...(g.reg || []), 1] });
+  }
   return out;
 }
 // a plain river letter («on the Mekong») is in the region of the unit whose country it stands in
-const regOf = p => p.reg || p.sreg || (p.sreg = [...C6.items.filter(o => in6(o.id, p)).map(o => o.unit), ...(SEC === 7 && inMtn7(p) ? [2] : [])]);
+const regOf = p => p.reg || p.sreg || (p.sreg = [...C6.items.filter(o => in6(o.id, p)).map(o => o.unit), ...(SEC === 7 && inMtn7(p) ? [2] : []), ...(SEC === 8 && inZone8(p) ? [1] : [])]);
 const conflict6 = (a, b) => (a.river && a.river === b.river) || (a.country && a.country === b.country)
   || (a.kind === "river" && !a.country && b.kind === "country" && a.crosses.includes(b.id)) || (b.kind === "river" && !b.country && a.kind === "country" && b.crosses.includes(a.id))
   || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id)
   || (a.country && (CONTAINERS[a.country] || []).includes(b.id)) || (b.country && (CONTAINERS[b.country] || []).includes(a.id))
   || (a.kind !== "river" && in6(a.id, b)) || (b.kind !== "river" && in6(b.id, a));
 function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 4000)) {
-  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = Math.ceil(n / 3), needReg = Math.ceil(n / 2);
+  // section 8: a third of the letters on rivers, but never more than three — West Asia has only the Tigris, the Euphrates and the Jordan
+  const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needR = SEC === 8 ? Math.min(3, Math.ceil(n / 3)) : Math.ceil(n / 3), needReg = Math.ceil(n / 2);
   const F = frame6(final ? "S" : unit), sep = SEP / F.zoom, U = final ? [1, 2, 3] : [unit];
   const usable = places6(unit, F).filter(p => !fold(p.place[li]).includes(fold(word)));
   const inReg = p => regOf(p).some(u => U.includes(u));
   let best = null, bestScore = -Infinity;
   for (let k = 0; k < tries; k++) {
     const pick = [], ok = p => pick.every(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT) >= sep && !conflict6(p, q));
-    const take = g => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if (ok(p)) { pick.push(p); return; } } };
+    const take = (g, want) => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if ((!want || want(p)) && ok(p)) { pick.push(p); return; } } };
     // rivers up to the quota first, then the region of the unit, then the rest (countries and rivers of earlier units, section 1)
     const groups = shuffle([...usable]);
+    // section 8: the region is small and crowded, so its letters go first (only spots inside it), then the rivers
+    // (the countries of the section and its seas before the countries of section 7 on the Iranian Plateau, which would shut out the Amu Darya and the Indus)
+    // rivers first in half of the tries: a river letter inside the region counts for both quotas
+    const rf = k % 4 < 2 ? [] : groups.filter(g => g.kind === "river");
+    if (SEC === 8) for (const g of [...rf, ...groups.filter(g => g.unit !== 0 || g.kind !== "country"), ...groups.filter(g => g.unit === 0 && g.kind === "country")])
+      if (pick.filter(inReg).length < needReg + (k % 2)) take(g, inReg);
     for (const g of groups.filter(g => g.kind === "river")) if (pick.filter(p => p.kind === "river").length < needR) take(g);
     const regG = groups.filter(g => g.kind !== "object" && (g.reg ? g.reg.some(u => U.includes(u)) : true));
     for (const g of regG) take(g);
     for (const g of groups) take(g);
+    if (process.env.DEBUG) { const rv = globalThis.__rv ||= {}; for (const q of pick) if (q.kind === "river") rv[q.id] = (rv[q.id] || 0) + 1; const st = globalThis.__st ||= {}; const key = `${pick.length}/${n} r${pick.filter(p => p.kind === "river").length}/${needR} g${pick.filter(inReg).length}/${needReg}`; st[key] = (st[key] || 0) + 1; }
     if (pick.length < n || pick.filter(p => p.kind === "river").length < needR) continue;
     const reg = pick.filter(inReg).length;
     if (reg < needReg) continue;
@@ -218,6 +256,7 @@ function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 400
     const score = Math.min(gap, 12) + reg * 6 + ctry * 3 + inCountry * 2 - obj * 2 + (final ? units * 5 : 0);
     if (score > bestScore) { bestScore = score; best = shuffle(pick); }
   }
+  if (process.env.DEBUG) { console.error(word, Object.entries(globalThis.__st).sort((a, b) => b[1] - a[1]).slice(0, 8), globalThis.__rv); globalThis.__st = {}; globalThis.__rv = {}; }
   if (!best) return null;
   const order = revealOrder(n);
   const markers = best.map((p, i) => ({ id: p.id, x: p.x, y: p.y, letter: letters[i] }));
@@ -242,7 +281,17 @@ for (const u of dict.units) {
       approval: { status: "draft" } });
   }
 }
-const out = SEC === 7 ? {
+const out = SEC === 8 ? {
+  section: "countries-west-asia-and-transcaucasia", block: 3,
+  rules: {
+    clues: "clues in reveal order; position = slot the letter fills",
+    places: "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit, at least a third on rivers",
+    nesting: "a country is named once per puzzle; a river letter «on the Euphrates» never shares a puzzle with a country the river crosses; one letter per river; a country never with its peninsula or gulf; no letter inside the area of another place of the puzzle",
+    spacing: "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
+    approval: "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets",
+  },
+  puzzles,
+} : SEC === 7 ? {
   section: "countries-south-and-central-asia", block: 3,
   rules: {
     clues: "clues in reveal order; position = slot the letter fills",

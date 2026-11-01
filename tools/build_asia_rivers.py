@@ -37,7 +37,7 @@ RIVERS = [
  ('as-indus', 2, ['Indus'], (66, 82, 23, 36), 'Indus', 'Инд'),
  ('as-godavari', 2, ['Godävari'], (73, 83, 16, 21), 'Godavari', 'Годавари'),
  ('as-tigris', 3, ['Tigris', 'Dicle'], (38, 49, 30, 39), 'Tigris', 'Тигр'),
- ('as-euphrates', 3, ['Euphrates', 'Firat', 'Shatt al Arab'], (37, 49, 29, 40), 'Euphrates', 'Евфрат'),
+ ('as-euphrates', 3, ['Euphrates', 'Firat', 'Al Furat', 'Shatt al Arab'], (37, 49, 29, 40), 'Euphrates', 'Евфрат'),
  ('as-jordan', 3, ['Jordan'], (35, 36.5, 31, 33.5), 'Jordan', 'Иордан'),
  ('as-amu-darya', 3, ['Amu  Darya', 'Panj'], (58, 75, 35, 45), 'Amu Darya', 'Амударья'),
  ('as-syr-darya', 3, ['Syr  Darya', 'Naryn'], (60, 77, 39, 47), 'Syr Darya', 'Сырдарья'),
@@ -65,6 +65,10 @@ for it in items:
     longest = max(it['_lines'], key=lambda l: l.length)
     best = max((longest.interpolate(t / 100, normalized=True) for t in range(15, 86)), key=lambda q: others.distance(squash(q)))
     it['label'] = {'x': round(best.x, 2), 'y': round(best.y, 2)}
+# 01.11.2026: «Al Furat» (the Euphrates in Syria) was missing from the source names and is now drawn; the labels of the Tigris and the
+# Euphrates stay where section 2 was approved with them
+LABEL = {'as-tigris': {'x': 24.15, 'y': 39.22}, 'as-euphrates': {'x': 22.95, 'y': 41.15}}
+for it in items: it['label'] = LABEL.get(it['id'], it['label'])
 
 im = Image.open(B.ROOT / 'assets/asia-blank.webp').convert('RGB'); W, H = im.size
 mask = Image.new('L', (W * SS, H * SS), 0); dr = ImageDraw.Draw(mask)
