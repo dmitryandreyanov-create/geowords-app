@@ -156,7 +156,10 @@
    },
    "inRegion": 10,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "aa43232e2d065351"
    }
   },
   {
@@ -305,7 +308,10 @@
    },
    "inRegion": 10,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "a138ae5aaf4d90fb"
    }
   },
   {
@@ -432,7 +438,10 @@
    },
    "inRegion": 7,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "c5168accc67ba893"
    }
   },
   {
@@ -537,7 +546,10 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "7fa490db02d73dcf"
    }
   },
   {
@@ -664,7 +676,10 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "e497e4c736affc76"
    }
   },
   {
@@ -802,7 +817,10 @@
    },
    "inRegion": 6,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "63078fd56923e3ec"
    }
   },
   {
@@ -962,7 +980,10 @@
    },
    "inRegion": 12,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "86119a5c703118fa"
    }
   },
   {
@@ -1133,7 +1154,10 @@
    },
    "inRegion": 13,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "d74d3b725e682d5d"
    }
   }
  ]
