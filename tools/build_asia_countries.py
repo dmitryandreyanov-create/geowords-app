@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Builds the Asia countries map — assets/asia-countries.webp — and data/maps/asia-countries-6.json for block 3 section 6
-«Countries and capitals: East and Southeast Asia».
+"""Builds the Asia countries map — assets/asia-countries.webp — and data/maps/asia-countries-<section>.json for block 3 section 6
+«Countries and capitals: East and Southeast Asia» and section 7 «Countries and capitals: South and Central Asia».
+The map carries the capital dots of every section listed in SECTIONS; the json is written for the section given.
 
 The map is the Asia rivers map (assets/asia-rivers.webp, every river of section 2 stays drawn: GeoWords practise a river together with
 the outline of its country, Svetlana 28.10.2026) with thin land borders of Asia under the rivers and the capital dots on top. The dot is
@@ -14,7 +15,7 @@ Tap areas: Natural Earth 1:10m admin 0 countries in the projection of tools/asia
 Rivers: the rivers of section 2 (data/maps/asia-rivers.json) against the countries of this section — the countries each river crosses,
 and for a river crossing two or more of them a point on the river well inside each one («on the Mekong in Laos»).
 
-usage: python3 tools/build_asia_countries.py <natural-earth-dir>
+usage: python3 tools/build_asia_countries.py <natural-earth-dir> [section, default 6]
 """
 import json, sys
 import numpy as np
@@ -25,13 +26,14 @@ from shapely.ops import polylabel, unary_union
 import asia_base as B
 
 NE = sys.argv[1]
+SEC = int(sys.argv[2]) if len(sys.argv) > 2 else 6
 ROOT = B.ROOT
 W, H = B.W, B.H
 FRAME = box(0, 0, 100, 100)
 BORDER, BW, SS = (158, 120, 76), 2.3, 4  # the thin land borders of europe-capitals.webp: colour, width in px; supersampling
 
 # id, unit, Natural Earth ADMIN names, EN, RU, capital id, capital EN, capital RU, capital lon, lat
-ORDER = [
+ORDER6 = [
  ('cty-china', 1, ['China', 'Hong Kong S.A.R.', 'Macao S.A.R'], 'China', 'Китай', 'beijing', 'Beijing', 'Пекин', 116.4074, 39.9042),
  ('cty-mongolia', 1, ['Mongolia'], 'Mongolia', 'Монголия', 'ulaanbaatar', 'Ulaanbaatar', 'Улан-Батор', 106.9057, 47.8864),
  ('cty-north-korea', 1, ['North Korea'], 'North Korea', 'Северная Корея', 'pyongyang', 'Pyongyang', 'Пхеньян', 125.7625, 39.0392),
@@ -50,6 +52,24 @@ ORDER = [
  ('cty-philippines', 3, ['Philippines'], 'Philippines', 'Филиппины', 'manila', 'Manila', 'Манила', 120.9842, 14.5995),
  ('cty-timor-leste', 3, ['East Timor'], 'Timor-Leste', 'Восточный Тимор', 'dili', 'Dili', 'Дили', 125.5603, -8.5569),
 ]
+# section 7 (Svetlana, 31.10.2026 19:02): Kashmir follows Natural Earth's default (de facto) view; the Siachen Glacier, a separate
+# disputed unit in Natural Earth, belongs to no tap area. Sri Lanka: the capital dot is Sri Jayawardenepura Kotte (next to Colombo).
+ORDER7 = [
+ ('cty-india', 1, ['India'], 'India', 'Индия', 'new-delhi', 'New Delhi', 'Нью-Дели', 77.2090, 28.6139),
+ ('cty-pakistan', 1, ['Pakistan'], 'Pakistan', 'Пакистан', 'islamabad', 'Islamabad', 'Исламабад', 73.0479, 33.6844),
+ ('cty-bangladesh', 1, ['Bangladesh'], 'Bangladesh', 'Бангладеш', 'dhaka', 'Dhaka', 'Дакка', 90.4125, 23.8103),
+ ('cty-sri-lanka', 1, ['Sri Lanka'], 'Sri Lanka', 'Шри-Ланка', 'sri-jayawardenepura-kotte', 'Sri Jayawardenepura Kotte', 'Шри-Джаяварденепура-Котте', 79.9070, 6.8868),
+ ('cty-maldives', 1, ['Maldives'], 'Maldives', 'Мальдивы', 'male', 'Malé', 'Мале', 73.5093, 4.1755),
+ ('cty-nepal', 2, ['Nepal'], 'Nepal', 'Непал', 'kathmandu', 'Kathmandu', 'Катманду', 85.3240, 27.7172),
+ ('cty-bhutan', 2, ['Bhutan'], 'Bhutan', 'Бутан', 'thimphu', 'Thimphu', 'Тхимпху', 89.6386, 27.4728),
+ ('cty-afghanistan', 2, ['Afghanistan'], 'Afghanistan', 'Афганистан', 'kabul', 'Kabul', 'Кабул', 69.2075, 34.5553),
+ ('cty-kazakhstan', 3, ['Kazakhstan'], 'Kazakhstan', 'Казахстан', 'astana', 'Astana', 'Астана', 71.4704, 51.1605),
+ ('cty-uzbekistan', 3, ['Uzbekistan'], 'Uzbekistan', 'Узбекистан', 'tashkent', 'Tashkent', 'Ташкент', 69.2401, 41.2995),
+ ('cty-turkmenistan', 3, ['Turkmenistan'], 'Turkmenistan', 'Туркменистан', 'ashgabat', 'Ashgabat', 'Ашхабад', 58.3833, 37.9601),
+ ('cty-kyrgyzstan', 3, ['Kyrgyzstan'], 'Kyrgyzstan', 'Киргизия', 'bishkek', 'Bishkek', 'Бишкек', 74.5698, 42.8746),
+ ('cty-tajikistan', 3, ['Tajikistan'], 'Tajikistan', 'Таджикистан', 'dushanbe', 'Dushanbe', 'Душанбе', 68.7870, 38.5598),
+]
+SECTIONS = {6: ORDER6, 7: ORDER7}
 
 # ---- tap areas ----
 countries = {}
@@ -60,10 +80,15 @@ def polys(g):
     out = sorted([p for p in getattr(g, 'geoms', [g]) if isinstance(p, Polygon) and p.area >= 0.0015], key=lambda p: -p.area)
     return out[:1] + [p for p in out[1:] if p.area >= 0.01]
 rnd = lambda c: [[round(x, 2), round(y, 2)] for x, y in list(c)[:-1]]
-items = []
-for i, (id_, unit, admins, en, ru, cid, cen, cru, lon, lat) in enumerate(ORDER, 1):
+def build(order):
+  items = []
+  for i, (id_, unit, admins, en, ru, cid, cen, cru, lon, lat) in enumerate(order, 1):
     g = unary_union([x for a in admins for x in countries[a]])
     ps = polys(g)
+    if not ps:
+        # the Maldives: atolls far smaller than a pixel; the tap area is the outline of the whole island chain, widened
+        raw = B.proj(g, B.pct)
+        ps = [affinity.scale(raw.convex_hull.buffer(0.35, 16), 1, 1).simplify(0.04)]
     lab = polylabel(ps[0], tolerance=0.02)
     if sum(p.area for p in ps) < 0.1:
         # Singapore is a fraction of a pixel on a phone: its tap area is a small round spot around it (a tap there that also lies in
@@ -75,7 +100,10 @@ for i, (id_, unit, admins, en, ru, cid, cen, cru, lon, lat) in enumerate(ORDER, 
                   'label': {'x': round(lab.x, 2), 'y': round(lab.y, 2)},
                   'capital': {'id': cid, 'name': {'en': cen, 'ru': cru}, 'x': round(cx, 2), 'y': round(cy, 2)},
                   'tapArea': [rnd(p.exterior.coords) for p in ps]})
-    print(id_, len(ps), 'parts', items[-1]['label'], 'capital', cid, (round(cx, 2), round(cy, 2)))
+    print(id_, len(ps), 'parts', items[-1]['label'], 'capital', cid, (round(cx, 2), round(cy, 2)), 'area', round(sum(p.area for p in ps), 3))
+  return items
+items = build(SECTIONS[SEC])
+dots = [it['capital'] for o in SECTIONS.values() for it in (items if o is SECTIONS[SEC] else build(o))]
 
 # ---- the map ----
 blank = np.asarray(Image.open(ROOT / 'assets/asia-blank.webp').convert('RGB')).astype(int)
@@ -107,8 +135,7 @@ mx, my = round(mad['x'] / 100 * EW), round(mad['y'] / 100 * EH)
 patch = eu.crop((mx - R, my - R, mx + R, my + R))
 dmask = Image.new('L', patch.size, 0); ImageDraw.Draw(dmask).ellipse((1, 1, 2 * R - 1, 2 * R - 1), fill=255)
 dmask = dmask.filter(ImageFilter.GaussianBlur(0.8))
-for it in items:
-    c = it['capital']
+for c in dots:
     im.paste(patch, (round(c['x'] / 100 * W) - R, round(c['y'] / 100 * H) - R), dmask)
 im.convert('RGB').save(ROOT / 'assets/asia-countries.webp', 'WEBP', quality=90, method=6)
 print('wrote assets/asia-countries.webp')
@@ -138,7 +165,8 @@ for rv in json.load(open(ROOT / 'data/maps/asia-rivers.json'))['items']:
 # label point and a grid of points at least 0.25% inside the border, thinned to 1% apart), and anywhere on a river (spots along the
 # river; «on the Mekong in Laos»: along the part of the river at least 0.4% inside that country). Distances are measured with y scaled
 # by H / W, as on the screen.
-FRAMES = {'1': {'x': 57, 'y': 50, 'zoom': 2.2}, '2': {'x': 55, 'y': 70, 'zoom': 3.2}, '3': {'x': 69, 'y': 80, 'zoom': 2.4}, 'S': {'x': 60, 'y': 64, 'zoom': 1.6}}
+FRAMES = {6: {'1': {'x': 57, 'y': 50, 'zoom': 2.2}, '2': {'x': 55, 'y': 70, 'zoom': 3.2}, '3': {'x': 69, 'y': 80, 'zoom': 2.4}, 'S': {'x': 60, 'y': 64, 'zoom': 1.6}},
+          7: {'1': {'x': 40, 'y': 64, 'zoom': 2.6}, '2': {'x': 40, 'y': 54, 'zoom': 3}, '3': {'x': 37, 'y': 40, 'zoom': 2.6}, 'S': {'x': 38, 'y': 55, 'zoom': 1.8}}}[SEC]
 K = H / W
 sq = lambda g: affinity.scale(g, 1, K, origin=(0, 0))      # to screen-like units
 un = lambda g: affinity.scale(g, 1, 1 / K, origin=(0, 0))
@@ -174,20 +202,30 @@ out = {
   'map': './assets/asia-countries.webp',
   'alsoValidFor': ['./assets/asia-blank.webp', './assets/asia-rivers.webp', './assets/asia-lakes.webp', './assets/asia-mountains.webp', './assets/asia-deserts.webp'],
   'mapAspect': '11 / 8',
-  'level': 'Countries and capitals: East and Southeast Asia (block 3, section 6)',
+  'level': {6: 'Countries and capitals: East and Southeast Asia (block 3, section 6)', 7: 'Countries and capitals: South and Central Asia (block 3, section 7)'}[SEC],
   'coordinateSystem': 'label, capital, tapArea and river points in % of image width/height from top-left; same for every asia-*.webp (shared base, tools/asia_base.py)',
   'source': 'Natural Earth 1:10m admin 0 countries and boundary lines, projected like asia-overview.json; capitals from their lon/lat; rivers = data/maps/asia-rivers.json',
-  'notes': ['Built by tools/build_asia_countries.py, which also draws assets/asia-countries.webp (borders and capital dots over the rivers map).',
+}
+NOTES6 = {'notes': ['Built by tools/build_asia_countries.py, which also draws assets/asia-countries.webp (borders and capital dots over the rivers map).',
             'Geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes (Svetlana, 31.10.2026).',
             'Taiwan is a separate object with a note on its special international status; the dispute is not presented as resolved.',
             'Hong Kong and Macao are part of the tap area of China.',
             'Singapore (a fraction of a pixel on a phone) has a round tap spot of 1.2% around it.',
             'rivers: for each river of section 2 the countries of this section it crosses, and a point on the river inside each country it crosses far enough («on the Mekong in Laos»).',
-            'spots: where a GeoWords letter of a country or river may stand; frames: the zoomed view of the GeoWords puzzles of each unit (S = section final).'],
+            'spots: where a GeoWords letter of a country or river may stand; frames: the zoomed view of the GeoWords puzzles of each unit (S = section final).']}
+COMMON = ['rivers: for each river of section 2 the countries of this section it crosses, and a point on the river inside each country it crosses far enough («on the Ganges in Bangladesh»).',
+          'spots: where a GeoWords letter of a country or river may stand; frames: the zoomed view of the GeoWords puzzles of each unit (S = section final).']
+NOTES = {6: NOTES6['notes'], 7: [
+  'Built by tools/build_asia_countries.py <ne> 7; assets/asia-countries.webp carries the capital dots of sections 6 and 7.',
+  'Geographic objects are shown regardless of political disputes; disputed places get neutral names and short notes (Svetlana, 31.10.2026).',
+  'Kashmir: the lines of Natural Earth\'s default (de facto) view; the Siachen Glacier (a separate disputed unit there) is in no tap area. The cards of India and Pakistan carry a neutral note.',
+  'Sri Lanka: the capital dot is Sri Jayawardenepura Kotte, the legislative capital, next to Colombo.',
+  'The Maldives (atolls far below a pixel) have the outline of the whole island chain, widened, as their tap area.'] + COMMON}
+out = {**out, 'notes': NOTES[SEC],
   'frames': FRAMES,
   'items': items,
   'rivers': rv_out,
 }
-dst = ROOT / 'data/maps/asia-countries-6.json'
+dst = ROOT / f'data/maps/asia-countries-{SEC}.json'
 dst.write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')).replace('{"id"', '\n{"id"') + '\n')
 print('wrote', dst, len(items), 'items')

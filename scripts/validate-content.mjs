@@ -104,6 +104,14 @@ const RELEASE = {
     section: "countries-east-and-southeast-asia",
     ids: ["indonesia-largest-island-country", "ulaanbaatar-coldest-capital", "great-wall-longest-fortification"],
   },
+  "b3-section-7-facts.json": {
+    section: "countries-south-and-central-asia",
+    ids: ["cty-india", "cty-pakistan", "cty-bangladesh", "cty-sri-lanka", "cty-maldives", "cty-nepal", "cty-bhutan", "cty-afghanistan", "cty-kazakhstan", "cty-uzbekistan", "cty-turkmenistan", "cty-kyrgyzstan", "cty-tajikistan"],
+  },
+  "b3-section-7-records.json": {
+    section: "countries-south-and-central-asia",
+    ids: ["kazakhstan-largest-landlocked", "maldives-lowest-country", "uzbekistan-doubly-landlocked"],
+  },
   "b3-section-5-facts.json": {
     section: "deserts-of-asia",
     ids: ["asia-deserts-intro", "as-taklamakan", "as-ordos", "as-gobi", "as-kyzylkum", "as-karakum", "as-kavir", "as-lut", "as-thar", "as-rub-al-khali", "as-negev"],
