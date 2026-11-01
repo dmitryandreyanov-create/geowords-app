@@ -25,6 +25,10 @@ const RELEASE = {
     section: "countries-south-and-central-asia",
     units: ["unit-1-indian-subcontinent", "unit-2-himalayas-and-hindu-kush", "unit-3-central-asia", "section-final"],
   },
+  "b3-section-8.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    units: ["unit-1-south-caucasus-and-iran", "unit-2-anatolia-and-eastern-mediterranean", "unit-3-mesopotamia-and-arabia", "section-final"],
+  },
   "b3-section-5.json": {
     section: "deserts-of-asia",
     units: ["unit-1-china-mongolia", "unit-2-turan-iran", "unit-3-south-west", "section-final"],

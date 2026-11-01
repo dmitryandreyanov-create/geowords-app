@@ -63,7 +63,10 @@
     "en": "Abkhazia and South Ossetia are regions in the north of Georgia that are not governed by its government and have declared independence. Only a few countries recognise them; most consider them part of Georgia. The map shows Georgia within the borders recognised by the UN, with the borders of these regions dashed; we do not settle the dispute."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "a7598b23f7b61cd1"
    }
   },
   {
@@ -89,7 +92,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "65da47bdc65c58cc"
    }
   },
   {
@@ -115,7 +121,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "653f54a94c2fbb61"
    }
   },
   {
@@ -145,7 +154,10 @@
     "en": "This unit includes Iran alongside West Asia because of its geographic and historical connections with the region. In the UN statistical classification, Iran is grouped with Southern Asia."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "5d70b77f491ddf39"
    }
   },
   {
@@ -171,7 +183,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "b806c6ff8ec4128e"
    }
   },
   {
@@ -201,7 +216,10 @@
     "en": "Since 1974 the island has been divided. The northern part of Cyprus is run by authorities recognised only by Turkey. A UN buffer zone runs between the two parts, through Nicosia too. The map shows the whole island as Cyprus, within the borders recognised by the UN, with the dividing line dashed; we do not settle the dispute."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "0e93b991bdd00f22"
    }
   },
   {
@@ -231,7 +249,10 @@
     "en": "The Golan Heights in south-western Syria have been controlled by Israel since 1967. Most countries consider them Syrian territory. On the map this area is hatched as a territory of disputed status; we do not settle the dispute."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "d95afc5e1af2063f"
    }
   },
   {
@@ -257,7 +278,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "353a7a4ac2e3604c"
    }
   },
   {
@@ -288,7 +312,10 @@
    },
    "capitalQuestions": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "9b9632c8aaa73a46"
    }
   },
   {
@@ -319,7 +346,10 @@
    },
    "capitalQuestions": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "cee10718b2b667d5"
    }
   },
   {
@@ -345,7 +375,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "e9224bdb28554343"
    }
   },
   {
@@ -371,7 +404,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "4d286f5defebdb55"
    }
   },
   {
@@ -397,7 +433,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "42c71f87001fcbcf"
    }
   },
   {
@@ -423,7 +462,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "fbff4252131476d4"
    }
   },
   {
@@ -449,7 +491,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "eaae805440c7a4e0"
    }
   },
   {
@@ -475,7 +520,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "3212232e955e7fb4"
    }
   },
   {
@@ -501,7 +549,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "3de3c6bd57e8c6f6"
    }
   },
   {
@@ -527,7 +578,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "f028c1359c5f2d3a"
    }
   },
   {
@@ -557,7 +611,10 @@
     "en": "Sanaa is Yemen’s capital, but the country remains divided by conflict. The city is controlled by the Houthis, while internationally recognised authorities operate outside it, including in Aden. In capital questions, the correct answer is Sanaa."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "666afea3813d1e1c"
    }
   },
   {
@@ -579,7 +636,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "12fa6567bafa313a"
    }
   },
   {
@@ -601,7 +661,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "c91ed8d11bc3c332"
    }
   },
   {
@@ -623,7 +686,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "51c32155e0873d0c"
    }
   },
   {
@@ -645,7 +711,10 @@
    },
    "disputed": false,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "8f2249621666617a"
    }
   }
  ]

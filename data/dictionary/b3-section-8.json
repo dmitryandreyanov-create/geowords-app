@@ -27,7 +27,10 @@
       "role": "final",
       "definition": "Династия царей, создавшая в VI веке до н. э. огромную державу — от Балкан и Египта до долины Инда.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "1ae626216046ef56"
       }
      },
      {
@@ -35,7 +38,10 @@
       "role": "review",
       "definition": "Название Ирана, которое преобладало в международном употреблении до 1935 года.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "3615326fe5c33544"
       }
      },
      {
@@ -43,7 +49,10 @@
       "role": "review",
       "definition": "Парадная столица державы Ахеменидов; её руины находятся на юге Ирана.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "87ea41f0a812d02b"
       }
      },
      {
@@ -51,7 +60,10 @@
       "role": "review",
       "definition": "Древнее царство на Армянском нагорье у озера Ван; Ереван вырос на месте его крепости Эребуни, основанной в 782 году до н. э.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "aafb6406016d2506"
       }
      },
      {
@@ -59,7 +71,10 @@
       "role": "review",
       "definition": "Древняя страна на восточном берегу Чёрного моря, на западе нынешней Грузии; по мифу, сюда за золотым руном плыли аргонавты.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "2ba3ee8b79b13b21"
       }
      },
      {
@@ -67,7 +82,10 @@
       "role": "review",
       "definition": "Армянская каменная плита с резным крестом и тонким узором.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "b01aa415980c47c3"
       }
      },
      {
@@ -75,7 +93,10 @@
       "role": "review",
       "definition": "Пение, в котором сочетаются две и более самостоятельные мелодические линии; им славятся грузинские народные хоры.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "2f72599f54167b54"
       }
      },
      {
@@ -83,7 +104,10 @@
       "role": "review",
       "definition": "Дорогая пряность из высушенных рылец цветков крокуса; больше всего её выращивают в Иране.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "47c5250a4f2864ea"
       }
      }
     ],
@@ -93,7 +117,10 @@
       "role": "final",
       "definition": "Dynasty of kings who built a vast empire in the 6th century BC, from the Balkans and Egypt to the Indus Valley.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "c5bc75ba449545c2"
       }
      },
      {
@@ -101,7 +128,10 @@
       "role": "review",
       "definition": "The name of Iran most used internationally until 1935.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "39839925ecba3267"
       }
      },
      {
@@ -109,7 +139,10 @@
       "role": "review",
       "definition": "Ceremonial capital of the Achaemenid Empire; its ruins stand in southern Iran.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "52e7ec6cdb3e9403"
       }
      },
      {
@@ -117,7 +150,10 @@
       "role": "review",
       "definition": "Ancient kingdom of the Armenian Highlands around Lake Van; Yerevan grew up on the site of its fortress Erebuni, founded in 782 BC.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "9612a377d4bdd2fe"
       }
      },
      {
@@ -125,7 +161,10 @@
       "role": "review",
       "definition": "Ancient land on the eastern shore of the Black Sea, in the west of today’s Georgia; in the myth, the Argonauts sailed here for the Golden Fleece.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "8aeb19560398524b"
       }
      },
      {
@@ -133,7 +172,10 @@
       "role": "review",
       "definition": "Armenian stone slab carved with a cross and intricate carved patterns.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "7a0e726a48942d67"
       }
      },
      {
@@ -141,7 +183,10 @@
       "role": "review",
       "definition": "Singing that combines two or more independent melodic lines; Georgian folk choirs are famous for it.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "06f53301570c7a16"
       }
      },
      {
@@ -149,7 +194,10 @@
       "role": "review",
       "definition": "Costly spice made from the dried threads of crocus flowers; Iran grows the most of it.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "8e73e79b2a0e0b81"
       }
      }
     ]
@@ -168,7 +216,10 @@
       "role": "final",
       "definition": "Область в центре Анатолии, известная скалами-«грибами» и подземными городами.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "0c6f9063001e8e6a"
       }
      },
      {
@@ -176,7 +227,10 @@
       "role": "review",
       "definition": "Другое название полуострова Малая Азия, на котором лежит большая часть Турции.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "258e2f995531ccfb"
       }
      },
      {
@@ -184,7 +238,10 @@
       "role": "review",
       "definition": "Историческое название земель на восточном берегу Средиземного моря — от Сирии до Синая.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "13096bd978cda1be"
       }
      },
      {
@@ -192,7 +249,10 @@
       "role": "review",
       "definition": "Столица древнего Хеттского царства; её руины находятся в центре Турции.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "72427a826b2fa891"
       }
      },
      {
@@ -200,7 +260,10 @@
       "role": "review",
       "definition": "Династия правителей огромной империи, просуществовавшей до 1922 года. После завоевания 1453 года её столицей стал Константинополь — нынешний Стамбул.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "4ccc6de9ead2cd44"
       }
      },
      {
@@ -208,7 +271,10 @@
       "role": "review",
       "definition": "Древний город-оазис в Сирийской пустыне, разбогатевший на караванной торговле.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "7e5bfc5ab5850c3b"
       }
      },
      {
@@ -216,7 +282,10 @@
       "role": "review",
       "definition": "Город в долине реки Иордан, недалеко от Мёртвого моря; один из древнейших городов мира.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "698bd0bbf5b071f1"
       }
      },
      {
@@ -224,7 +293,10 @@
       "role": "review",
       "definition": "Система письма, в которой знаки передают отдельные звуки речи. Финикийцы создали одну из важнейших ранних систем такого письма.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "f3dd9f89952e4f9a"
       }
      }
     ],
@@ -234,7 +306,10 @@
       "role": "final",
       "definition": "Region in central Anatolia known for its «fairy chimney» rocks and underground cities.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "c7e1bc06c7038841"
       }
      },
      {
@@ -242,7 +317,10 @@
       "role": "review",
       "definition": "Another name for Asia Minor, the peninsula that holds most of Turkey.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "486649cbec9118f5"
       }
      },
      {
@@ -250,7 +328,10 @@
       "role": "review",
       "definition": "Historical name for the lands on the eastern shore of the Mediterranean, from Syria to Sinai.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "2a42af9a1336a4c7"
       }
      },
      {
@@ -258,7 +339,10 @@
       "role": "review",
       "definition": "Capital of the ancient Hittite kingdom; its ruins lie in central Turkey.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "8d34d06a2fcd1532"
       }
      },
      {
@@ -266,7 +350,10 @@
       "role": "review",
       "definition": "Dynasty that ruled a vast empire until 1922. After its conquest in 1453, Constantinople, now Istanbul, became the imperial capital.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "b36af3abaefe7a61"
       }
      },
      {
@@ -274,7 +361,10 @@
       "role": "review",
       "definition": "Ancient oasis city in the Syrian Desert that grew rich on caravan trade.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "fe02ce5744e18137"
       }
      },
      {
@@ -282,7 +372,10 @@
       "role": "review",
       "definition": "Town in the Jordan Valley near the Dead Sea; one of the oldest towns in the world.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "9f0ed3cc1c276d04"
       }
      },
      {
@@ -290,7 +383,10 @@
       "role": "review",
       "definition": "A writing system whose letters represent speech sounds. The Phoenicians developed an influential early script that wrote only consonants.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "b946b042b5f3511a"
       }
      }
     ]
@@ -309,7 +405,10 @@
       "role": "final",
       "definition": "Ароматные смолы, например ладан и мирра; их везли караванами с юга Аравии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "12bd586ec0b03c30"
       }
      },
      {
@@ -317,7 +416,10 @@
       "role": "review",
       "definition": "Территория, с двух сторон ограниченная соседними водотоками; самый известный пример — земли у Тигра и Евфрата.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "00d0ad6a249ad016"
       }
      },
      {
@@ -325,7 +427,10 @@
       "role": "review",
       "definition": "Царь Вавилона, при котором был составлен один из самых известных и хорошо сохранившихся древних сводов законов.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "280af53df429f800"
       }
      },
      {
@@ -333,7 +438,10 @@
       "role": "review",
       "definition": "Мусульманское государство, правитель которого считался преемником пророка Мухаммада; один из самых известных примеров — держава Аббасидов со столицей в Багдаде.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "b83cbf3e1710ed7f"
       }
      },
      {
@@ -341,7 +449,10 @@
       "role": "review",
       "definition": "Государство мусульманского монарха с этим титулом; сегодня так называется, например, Оман.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "41bacc4a76086d0f"
       }
      },
      {
@@ -349,7 +460,10 @@
       "role": "review",
       "definition": "Владение мусульманского князя; семь таких владений объединились в государство на берегу Персидского залива.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "be78e7bd53a6507b"
       }
      },
      {
@@ -357,7 +471,10 @@
       "role": "review",
       "definition": "Драгоценное образование, возникающее внутри раковины некоторых моллюсков; раньше его добычей славился Бахрейн.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "928b0d247f2ca493"
       }
      },
      {
@@ -365,7 +482,10 @@
       "role": "review",
       "definition": "Последняя династия царей Ирана до прихода арабов; их столица Ктесифон стояла на Тигре, недалеко от нынешнего Багдада.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "e05111c11c0cab89"
       }
      }
     ],
@@ -375,7 +495,10 @@
       "role": "final",
       "definition": "Fragrant resins burnt for their scent, like myrrh; caravans carried them from southern Arabia.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "f80c10fc7b0e476f"
       }
      },
      {
@@ -383,7 +506,10 @@
       "role": "review",
       "definition": "Area of land between two neighbouring watercourses; the best-known example lies along the Tigris and the Euphrates.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "e9f417c47bcb166e"
       }
      },
      {
@@ -391,7 +517,10 @@
       "role": "review",
       "definition": "King of Babylon whose code of laws is one of the best-known and best-preserved of the ancient world.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "3d36371408c54fe0"
       }
      },
      {
@@ -399,7 +528,10 @@
       "role": "review",
       "definition": "Muslim state whose ruler was regarded as the successor of the Prophet Muhammad; one well-known example is the Abbasid state, ruled from Baghdad.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "ea569430a433c71a"
       }
      },
      {
@@ -407,7 +539,10 @@
       "role": "review",
       "definition": "A state ruled by a Muslim monarch of that title; Oman is one today.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "a47055b6396b3d6c"
       }
      },
      {
@@ -415,7 +550,10 @@
       "role": "review",
       "definition": "A land ruled by a Muslim prince; seven of them form one country on the Persian Gulf.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "a60a6750862f3db1"
       }
      },
      {
@@ -423,7 +561,10 @@
       "role": "review",
       "definition": "Precious objects formed inside certain mollusc shells; Bahrain was once famous for harvesting them.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "9f58cdbd95471150"
       }
      },
      {
@@ -431,7 +572,10 @@
       "role": "review",
       "definition": "The last dynasty of Iranian kings before the Arab conquest; their capital, Ctesiphon, stood on the Tigris near today’s Baghdad.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "aa310a1e9157a358"
       }
      }
     ]
@@ -450,7 +594,10 @@
       "role": "section-final",
       "definition": "Древняя религия Ирана; огонь в ней — священный символ чистоты и света, а не предмет поклонения.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "ef037682363129f8"
       }
      }
     ],
@@ -460,7 +607,10 @@
       "role": "section-final",
       "definition": "Ancient religion of Iran in which fire is a sacred symbol of purity and light, not an object of worship.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-01",
+       "contentSha256": "2263a7c73b66c830"
       }
      }
     ]
