@@ -164,22 +164,33 @@ h1,h2,h3,p{margin:0}
 .gw-pip img{width:92px;flex:0 0 92px}
 .bubble{position:relative;background:var(--sand);color:var(--ink);border-radius:16px;padding:11px 13px;font-size:16px;line-height:1.3;margin-bottom:24px;flex:1}
 .bubble::after{content:"";position:absolute;left:-7px;bottom:14px;border:7px solid transparent;border-right-color:var(--sand);border-left:0}
+/* landscape phone: the map takes the whole height on the left, everything else (✕, progress, clue, letters, Pip) goes to a narrow column on the right.
+   The zoom buttons stand in the gap right of the map so they cost no height and cover no letter. --ar is the map's aspect ratio (set by mapWidget). */
 @media (orientation:landscape) and (max-height:520px){
   .app{max-width:none}
-  .gw{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(240px,1fr);grid-template-rows:auto auto auto 1fr;column-gap:14px;row-gap:10px;align-content:start;height:100dvh;min-height:0}
-  .gw .slot{width:34px;height:40px;font-size:22px}
+  .gw{--padv:calc(12px + env(safe-area-inset-top) + env(safe-area-inset-bottom));display:grid;grid-template-columns:auto minmax(200px,1fr);grid-template-rows:auto auto auto 1fr;column-gap:58px;row-gap:8px;align-content:start;height:100dvh;min-height:0;padding-top:calc(6px + env(safe-area-inset-top));padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+  .gw .slot{width:30px;height:36px;font-size:20px}
+  .gw .slots{gap:4px}
   .gw .gw-pip{align-self:end;margin-top:0}
-  .gw .gw-pip img{width:72px;flex-basis:72px}
-  .gw .bubble{font-size:14px}
-  .gw .l-top{grid-column:1/3}
-  .gw .mapslot{grid-column:1;grid-row:2/5;align-self:start;min-width:0}
-  .gw .mapbox{height:calc(100dvh - 140px);width:auto;aspect-ratio:2200/1211;max-width:100%}
-  .gw .map{height:100%;width:100%}
-  .gw .zoom{margin-top:6px}
+  .gw .gw-pip img{width:64px;flex-basis:64px}
+  .gw .bubble{font-size:14px;margin-bottom:8px}
+  .gw .gw-clue{font-size:18px;min-height:0}
+  .gw .l-top{grid-column:2;grid-row:1;padding:0}
+  .gw .mapslot{grid-column:1;grid-row:1/5;align-self:center;position:relative;min-width:0}
+  .gw .mapbox{width:min(calc((100dvh - var(--padv)) * var(--ar,1.8167)),calc(100vw - 290px - env(safe-area-inset-left) - env(safe-area-inset-right)))}
+  .gw .zoom{position:absolute;left:calc(100% + 8px);bottom:0;margin:0;flex-direction:column}
   .gw .gw-head{grid-column:2;grid-row:2}
   .gw .slots{grid-column:2;grid-row:3;flex-wrap:wrap}
   .gw .gw-pip{grid-column:2;grid-row:4}
   .gw .rotate-hint{display:none}
+}
+/* small phones on their side (iPhone SE, mini): a narrower right column, so smaller letter boxes and Pip */
+@media (orientation:landscape) and (max-height:520px) and (max-width:760px){
+  .gw .slot{width:24px;height:30px;font-size:17px}
+  .gw .slots{gap:3px}
+  .gw .gw-clue{font-size:16px}
+  .gw .gw-pip img{width:48px;flex-basis:48px}
+  .gw .bubble{font-size:12.5px;padding:8px 10px}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 
