@@ -349,7 +349,7 @@ try{
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(q.k==='findCap'){await tapAt(cOf[q.id].capital);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
-        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in cUnit),'country options only');
+        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in cUnit||!o.startsWith('cty-')),'country options only (Asia section 6, or Europe countries filling in)');
           if(q.k!=='whatEu')assert(!opts.includes('cty-taiwan'),'Taiwan is never an option of a capital question');
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
@@ -415,7 +415,7 @@ try{
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(q.k==='findCap'){await tapAt(c7Of[q.id].capital);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
-        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c7Unit),'country options only');
+        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c7Unit||o in cUnit),'country options only (section 7, or section 6 filling in)');
           if(q.k!=='whatEu')assert(!opts.includes('cty-taiwan'),'Taiwan is never an option of a capital question');
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
@@ -489,8 +489,10 @@ try{
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(q.k==='findCap'){await tapLv(c8Of[q.id].capital,c8Of[q.id].capital.id);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
-        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c8Unit),'country options only');
+        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c8Unit||o in c7Unit),'country options only');
           if(q.k!=='whatEu')assert(!opts.some(o=>NOCAP8.includes(o)),'Israel and Palestine are never options of a capital question');
+          // only countries taught by this lesson, or of section 7 when fewer than four are taught (Svetlana, 02.11.2026 «только уже пройденные»)
+          {const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)||o in c7Unit),`${id} ${q.k} ${q.id}: options ${opts} not taught yet (${taught})`)}
           // the large Levant map opens at once for a small country of the Levant, and for a capital ring there
           const lvOpen=q.k==='capOf'?LV.capitals.includes(c8Of[q.id].capital.id):LV.objects.includes(q.id);
           assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),lvOpen?1:0,'large Levant map open on '+q.k+' '+q.id);

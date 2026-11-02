@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.02-levant-3';
+const BUILD='2026.11.02-taught';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -1045,7 +1045,18 @@ function euOk(id,x,y,sz){const o=E(id);if(EURIV()&&o.path){const r=riverPx(o,x,y
     if(land&&!EU_LAND.includes(q.kind))return false;
     return land||o.path?v<d:v===0&&!(q.tapArea.length&&inside(q,o.x,o.y))})}
 // answer options of the same family: unit 1 (oceans, sea, the Urals and the Caspian), peninsulas, islands, the seas and oceans of the section
-const euFamily=id=>{const o=E(id);if(EUREV&&EUSEC>=10)return EUB_CTY();if(EUREV&&EUSEC>=8)return EU();if(EUSEC>=8&&EUSEC!==13)return EU().filter(k=>E(k).unit<=o.unit);return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
+// answer options of a lesson come only from what has been taught by that lesson (Svetlana, 02.11.2026: «только уже пройденные» — no Beirut
+// or Damascus among the options in «Turkey and Cyprus»); when the lesson has taught fewer than four, the countries of the previous section
+// fill in, and only then the rest of the unit
+let TAUGHT=null;
+function taughtBy(step){const ls=STEPS.filter(s=>s.sec===step.sec&&s.kind==='lesson'&&s.plan),i=ls.findIndex(s=>s.id===step.id);if(i<0)return null;
+  const ids=new Set();for(const s of ls.slice(0,i+1))for(const q of s.plan())if(q.k==='introEu'&&q.id)ids.add(q.id);return ids}
+const PREV_SEC={20:()=>AS7_IDS,19:()=>AS6_IDS,18:()=>[...EU10_IDS,...EU11_IDS],11:()=>EU10_IDS};
+const euFamily=(id,keep=()=>true)=>{const o=E(id);if(EUREV&&EUSEC>=10)return EUB_CTY().filter(keep);if(EUREV&&EUSEC>=8)return EU().filter(keep);
+  if(EUSEC>=8&&EUSEC!==13){const unit=EU().filter(k=>E(k).unit<=o.unit&&keep(k));if(!TAUGHT)return unit;
+    const own=unit.filter(k=>TAUGHT.has(k)||k===id);if(own.length>=4)return own;
+    const prev=shuffle((PREV_SEC[EUSEC]?PREV_SEC[EUSEC]():[]).filter(k=>E(k)&&keep(k)&&!own.includes(k))).slice(0,4-own.length);
+    const fill=[...own,...prev];return fill.length>=4?fill:[...fill,...shuffle(unit.filter(k=>!fill.includes(k))).slice(0,4-fill.length)]}return EU().filter(k=>o.unit===1?E(k).unit===1:o.kind==='peninsula'||o.kind==='island'?E(k).kind===o.kind:['sea','ocean'].includes(E(k).kind))};
 const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-river')):m.shape(o,cls);
 // a ring around a capital dot drawn on the map (round on screen: the map is 2200×1600)
 const capRing=(c,r=1.3)=>({id:'cap-'+c.id,ring:c,tapArea:[Array.from({length:20},(_,i)=>[c.x+r*Math.cos(i*Math.PI/10),c.y+r*2200/1600*Math.sin(i*Math.PI/10)])],holes:[]});
@@ -1361,7 +1372,7 @@ function wireNext(id){const n=nextStep(id);app.querySelector('[data-a=home]').on
   const b=app.querySelector('[data-a=next]');if(b)b.onclick=()=>n.kind==='lesson'?startLesson(n):n.kind==='practice'?runPractice(n):n.kind==='challenge'?speedHunt(n):n.kind==='block'?geowords(blockPuzzle(n)):geowords(finalPuzzle(n))}
 /* ---------- lesson engine ---------- */
 function lesson(step){
-  EUREV=step.sec===12;if(step.sec>=7&&!EUREV)EUSEC=step.sec;
+  EUREV=step.sec===12;if(step.sec>=7&&!EUREV)EUSEC=step.sec;TAUGHT=EUREV?null:taughtBy(step);window.__gwTaught=TAUGHT&&[...TAUGHT];
   const x=t(),lang=L(),id=step.id;const queue=step.plan().map(q=>({...q}));window.__gwPlan=queue.map(q=>({...q}));const total=queue.length;let done=0,wrong=0;const t0=Date.now();
   function exitAsk(){const s=sheet(`<h3>${x.quitT}</h3><p>${x.quitP}</p><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()}
@@ -1433,11 +1444,11 @@ function lesson(step){
         const hit=capHit(px,py,sz),ok=hit===c.id;locked=true;m.dot(sx,sy,ok);m.shape(capRing(c),ok?'hl-shape good':'hl-shape pulse');
         const wrongC=hit&&!ok&&capOwner(hit);if(wrongC)m.shape(capRing(wrongC.capital),'hl-shape bad');lvShow(m,o,true);answered(q,ok);
         feedback(ok,ok?x.right:(wrongC?x.wrongIs(wrongC.capital.name[lang]):x.miss),ok?x.capIs(o.name[lang],c.name[lang]):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
-    if(q.k==='capOf'){const o=E(q.id),opts=pick(euFamily(q.id).filter(k=>!E(k).noCap),q.id,4);
+    if(q.k==='capOf'){const o=E(q.id),opts=pick(euFamily(q.id,k=>!E(k).noCap),q.id,4);
       frame(x.what,`<p class="q">${x.capOfQ(esc(o.capital.name[lang]))}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(E(c).name[lang])}</button>`).join('')}</div>`);
       const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true});m.shape(capRing(o.capital),'hl-shape pulse');lvShow(m,o,true);
       return choices(q,q.id,()=>o.name[lang],()=>x.capIs(o.name[lang],o.capital.name[lang]))}
-    if(q.k==='whatCap'){const o=E(q.id),opts=pick(euFamily(q.id).filter(k=>!E(k).noCap),q.id,4);
+    if(q.k==='whatCap'){const o=E(q.id),opts=pick(euFamily(q.id,k=>!E(k).noCap),q.id,4);
       frame(x.what,`<p class="q">${x.whatCapQ}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(E(c).capital.name[lang])}</button>`).join('')}</div>`);
       const m=hlMap(o);showEu(m,o,'hl-shape pulse');hlOpen(m,o);
       return choices(q,q.id,()=>o.capital.name[lang],()=>x.capIs(o.name[lang],o.capital.name[lang]))}
