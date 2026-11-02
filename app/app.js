@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.02-levant-2';
+const BUILD='2026.11.02-levant-3';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -40,7 +40,7 @@ const T={
   whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
   allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
   whatStrait:'Что это за пролив или канал?',connectsQ:n=>`Что соединяет <b>${n}</b>?`,separatesQ:n=>`Что разделяет <b>${n}</b>?`,connectsT:'Что соединяет',separatesT:'Что разделяет',
-  openMag:'Он маленький — открой лупу 🔍 на карте',lvName:'Левант крупно',lvHint:'Страны Леванта маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',
+  openMag:'Он маленький — открой лупу 🔍 на карте',lvName:'Восточное Средиземноморье крупно',lvHint:'Страны у восточного берега Средиземного моря маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',
   whatSea:'Что это за море или залив?',seaOcean:n=>`<b>${n}</b> — часть какого океана?`,seaNone:'Ни какого: это внутренний водоём',
   allIndian:'Нажми на все моря и заливы Индийского океана',allIndianHint:'Отметь моря и заливы и нажми «Проверить».',allIndianOk:'Все моря и заливы Индийского океана найдены!',allIndianBad:'Не совсем. Вот моря и заливы Индийского океана.',
   whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
@@ -76,7 +76,7 @@ const T={
   whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
   allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
   whatStrait:'Which strait or canal is this?',connectsQ:n=>`What does <b>${n}</b> connect?`,separatesQ:n=>`What does <b>${n}</b> separate?`,connectsT:'What it connects',separatesT:'What it separates',
-  openMag:'It is tiny — open the magnifier 🔍 on the map',lvName:'The Levant, enlarged',lvHint:'The Levant countries are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',
+  openMag:'It is tiny — open the magnifier 🔍 on the map',lvName:'The Eastern Mediterranean, enlarged',lvHint:'The countries on the eastern shore of the Mediterranean are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',
   whatSea:'Which sea or bay is this?',seaOcean:n=>`Which ocean is <b>${n}</b> part of?`,seaNone:'None: it is an inland body of water',
   allIndian:'Tap every sea and bay of the Indian Ocean',allIndianHint:'Mark the seas and bays, then tap “Check”.',allIndianOk:'All the seas and bays of the Indian Ocean found!',allIndianBad:'Not quite. Here are the seas and bays of the Indian Ocean.',
   whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
