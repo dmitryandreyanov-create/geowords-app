@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.02-levant';
+const BUILD='2026.11.02-levant-2';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -1074,6 +1074,14 @@ const lvOn=()=>!!(ASCTY()&&D.lv&&EU_JUDGE().some(id=>D.lv.set.has(id)));
 // a highlight task opens it at once when the country or capital asked is small there (the frame of the Levant, a small country or a crowded capital)
 const LV_SMALL=new Set(['cty-cyprus','cty-lebanon','cty-israel','cty-palestine']);
 const lvShow=(m,o,cap)=>{if(m.levant&&(cap?D.lv.capitals.includes(o.capital.id):LV_SMALL.has(o.id)))m.openLevant()};
+// a highlight task about a country (Svetlana, 02.11.2026 «не видно, о чём речь»): a country of the Levant opens the large map at once,
+// any other small country opens the map zoomed in on it, so the highlighted outline is never a speck on the whole of Asia
+const lvAll=o=>ASCTY()&&lvOn()&&D.lv.set.has(o.id);
+function hlFocus(o){if(!ASCTY()||lvAll(o)||!o.tapArea||!o.tapArea.length)return null;const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=ps.map(p=>p[1]);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),size=Math.max(x1-x0,(y1-y0)*1600/2200);if(size>=14)return null;
+  return {x:(x0+x1)/2,y:(y0+y1)/2,zoom:Math.min(4,Math.max(1.8,22/size))}}
+const hlMap=(o,opts={})=>{const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true,focus:hlFocus(o),...opts});return m};
+const hlOpen=(m,o)=>{if(m.levant&&lvAll(o))m.openLevant()};
 const lvHint=()=>lvOn()?`<p class="rotate-hint">${t().lvHint}</p>`:'';
 function euMap(host,opts){const m=mapWidget(host,{...opts,levant:(opts.onTap||opts.levant)&&lvOn()?{...D.lv,name:t().lvName}:null,base:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
@@ -1138,8 +1146,9 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   const up=e=>{pts.delete(e.pointerId);if(pts.size<2)pinch=null;if(!pts.size)drag=null};
   box.addEventListener('pointerup',up);box.addEventListener('pointercancel',up);
   marks.addEventListener('click',e=>{const b=e.target.closest('.mk');if(!b||moved)return;onMarker&&onMarker(b.dataset.id,b)});
-  mapEl.addEventListener('click',e=>{if(moved||e.target.closest('.zoom')||!onTap)return;const r=mapEl.getBoundingClientRect();
-    const px=(e.clientX-r.left-tx)/sc/W()*100,py=(e.clientY-r.top-ty)/sc/H()*100;if(inLv(px,py)){openLv();return}onTap(px,py,e.clientX-r.left,e.clientY-r.top,{W:W()*sc,H:H()*sc})});
+  // a tap inside the frame of the Levant opens the large map in every task, also in a question with answer buttons
+  mapEl.addEventListener('click',e=>{if(moved||e.target.closest('.zoom')||!onTap&&!LF)return;const r=mapEl.getBoundingClientRect();
+    const px=(e.clientX-r.left-tx)/sc/W()*100,py=(e.clientY-r.top-ty)/sc/H()*100;if(inLv(px,py)){openLv();return}if(!onTap)return;onTap(px,py,e.clientX-r.left,e.clientY-r.top,{W:W()*sc,H:H()*sc})});
   // focus {x,y,zoom}: the map opens zoomed in on that point (percent of the map)
   new ResizeObserver(()=>{if(focus){sc=focus.zoom;tx=W()/2-focus.x/100*W()*sc;ty=H()/2-focus.y/100*H()*sc}apply()}).observe(mapEl);
   const lvFrame=()=>{if(!LF)return;const f=document.createElementNS('http://www.w3.org/2000/svg','path');f.setAttribute('d',`M${LF.x} ${LF.y}h${LF.w}v${LF.h}h${-LF.w}Z`);f.setAttribute('class','lv-frame');shapes.appendChild(f)};lvFrame();
@@ -1416,7 +1425,7 @@ function lesson(step){
         feedback(ok,ok?x.right:(hit?x.wrongIs(nameIn(hit)):x.miss),ok?(rec?'':(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});return}
     if(q.k==='whatEu'){const o=E(q.id);const opts=pick(euFamily(q.id),q.id,4);
       frame(x.what,`<p class="q">${x.recWhatQ}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(E(c).name[lang])}</button>`).join('')}</div>`);
-      const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true});showEu(m,o,'hl-shape pulse');lvShow(m,o);
+      const m=hlMap(o);showEu(m,o,'hl-shape pulse');hlOpen(m,o);
       return choices(q,q.id,()=>o.name[lang],()=>o.disputed?'':o.fact(lang))}
     // ---- block 2 section 4: capitals (the dots are drawn on the capitals map; a tap is judged against the nearest dot) ----
     if(q.k==='findCap'){const o=E(q.id),c=o.capital;frame(x.find,`<p class="q">${x.tapCap(esc(c.name[lang]))}</p><div class="mapslot"></div>${lvHint()}`);
@@ -1430,7 +1439,7 @@ function lesson(step){
       return choices(q,q.id,()=>o.name[lang],()=>x.capIs(o.name[lang],o.capital.name[lang]))}
     if(q.k==='whatCap'){const o=E(q.id),opts=pick(euFamily(q.id).filter(k=>!E(k).noCap),q.id,4);
       frame(x.what,`<p class="q">${x.whatCapQ}</p><div class="mapslot"></div><div class="choices">${opts.map(c=>`<button type="button" class="choice" data-o="${c}">${esc(E(c).capital.name[lang])}</button>`).join('')}</div>`);
-      const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true});showEu(m,o,'hl-shape pulse');lvShow(m,o);
+      const m=hlMap(o);showEu(m,o,'hl-shape pulse');hlOpen(m,o);
       return choices(q,q.id,()=>o.capital.name[lang],()=>x.capIs(o.name[lang],o.capital.name[lang]))}
     if(q.k==='allPen'){const want=EU().filter(id=>E(id).kind==='peninsula'),tappable=EU().filter(id=>['peninsula','island'].includes(E(id).kind));const sel=new Set();
       frame(x.find,`<p class="q">${x.allPen}</p><div class="mapslot"></div><p class="rotate-hint">${x.allPenHint}</p>`);
