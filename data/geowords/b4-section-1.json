@@ -1,0 +1,1014 @@
+{
+ "section": "north-america-on-the-map",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters only on objects of data/maps/namerica-overview.json learned by the end of the unit, one letter per object, at the object's label point",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b4_geowords.mjs = NA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-1-unit-1-en",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "TORNADO",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "T"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "O"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "R"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "N"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "A"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "D"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-denmark-strait",
+     "position": 4,
+     "text": "Find the fourth letter in the Denmark Strait."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 2,
+     "text": "Find the second letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 7,
+     "text": "Find the seventh letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 1,
+     "text": "Find the first letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 6,
+     "text": "Find the sixth letter in the Caribbean Sea."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-unit-1-ru",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ТОРНАДО",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Т"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "О"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "Р"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "Н"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "А"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "Д"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 5,
+     "text": "Найди пятую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 2,
+     "text": "Найди вторую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тихом океане."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 7,
+     "text": "Найди седьмую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 1,
+     "text": "Найди первую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Карибском море."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-unit-2-en",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "PIONEER",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "P"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "I"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "O"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "N"
+    },
+    {
+     "id": "na-baja-california",
+     "x": 37.07,
+     "y": 68.9,
+     "letter": "E"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "E"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 3,
+     "text": "Find the third letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-baja-california",
+     "position": 5,
+     "text": "Find the fifth letter on the Baja California peninsula."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 2,
+     "text": "Find the second letter on the Yucatán Peninsula."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 7,
+     "text": "Find the seventh letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 1,
+     "text": "Find the first letter on the Labrador Peninsula."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 6,
+     "text": "Find the sixth letter on the Florida peninsula."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 4,
+     "text": "Find the fourth letter on the Boothia Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-unit-2-ru",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПЕРЕСЕЛЕНЕЦ",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "П"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "Е"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "Р"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "Е"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "С"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "Е"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "Л"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "Е"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "Н"
+    },
+    {
+     "id": "na-baja-california",
+     "x": 37.07,
+     "y": 68.9,
+     "letter": "Е"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "Ц"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yucatan",
+     "position": 7,
+     "text": "Найди седьмую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тихом океане."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на полуострове Лабрадор."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 6,
+     "text": "Найди шестую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 5,
+     "text": "Найди пятую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Бутия."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 9,
+     "text": "Найди девятую букву на полуострове Аляска."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 1,
+     "text": "Найди первую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-baja-california",
+     "position": 10,
+     "text": "Найди десятую букву на полуострове Калифорния."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-unit-3-en",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BUCCANEER",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "B"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "U"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "C"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "C"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "A"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "N"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "E"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "E"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 4,
+     "text": "Find the fourth letter in the Canadian Arctic Archipelago."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 2,
+     "text": "Find the second letter in Hudson Bay."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 6,
+     "text": "Find the sixth letter in the Gulf of California."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 3,
+     "text": "Find the third letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 8,
+     "text": "Find the eighth letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 5,
+     "text": "Find the fifth letter on Cuba."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 1,
+     "text": "Find the first letter in Greenland."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 7,
+     "text": "Find the seventh letter in the Denmark Strait."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 9,
+     "text": "Find the ninth letter on the island of Newfoundland."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-unit-3-ru",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ФЛИБУСТЬЕР",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "Ф"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "Л"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "И"
+    },
+    {
+     "id": "na-hispaniola",
+     "x": 69.79,
+     "y": 80.81,
+     "letter": "Б"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "У"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "С"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "Т"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "Ь"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "Е"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Р"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 7,
+     "text": "Найди седьмую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 3,
+     "text": "Найди третью букву в Гренландии."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 5,
+     "text": "Найди пятую букву на острове Ньюфаундленд."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 9,
+     "text": "Найди девятую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 6,
+     "text": "Найди шестую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 8,
+     "text": "Найди восьмую букву в Канадском Арктическом архипелаге."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 1,
+     "text": "Найди первую букву в Калифорнийском заливе."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 10,
+     "text": "Найди десятую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-hispaniola",
+     "position": 4,
+     "text": "Найди четвёртую букву на острове Гаити."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-final-en",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "PROSPECTOR",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "P"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "R"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "O"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "S"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "P"
+    },
+    {
+     "id": "na-hispaniola",
+     "x": 69.79,
+     "y": 80.81,
+     "letter": "E"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "C"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "T"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "O"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-boothia",
+     "position": 7,
+     "text": "Find the seventh letter on the Boothia Peninsula."
+    },
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 2,
+     "text": "Find the second letter in the Canadian Arctic Archipelago."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 5,
+     "text": "Find the fifth letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 9,
+     "text": "Find the ninth letter in Greenland."
+    },
+    {
+     "markerId": "na-hispaniola",
+     "position": 6,
+     "text": "Find the sixth letter on the island of Hispaniola."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 3,
+     "text": "Find the third letter on the island of Newfoundland."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 8,
+     "text": "Find the eighth letter in Hudson Bay."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 10,
+     "text": "Find the tenth letter in the Denmark Strait."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 4,
+     "text": "Find the fourth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 1,
+     "text": "Find the first letter in the Gulf of California."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-1-final-ru",
+   "section": "north-america-on-the-map",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ЗОЛОТОИСКАТЕЛЬ",
+   "map": "./assets/namerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "З"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "О"
+    },
+    {
+     "id": "na-baja-california",
+     "x": 37.07,
+     "y": 68.9,
+     "letter": "Л"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "О"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Т"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "О"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "И"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "С"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "К"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "А"
+    },
+    {
+     "id": "na-baffin",
+     "x": 59.65,
+     "y": 32.19,
+     "letter": "Т"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "Е"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "Л"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Аляска."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 8,
+     "text": "Найди восьмую букву в Гренландии."
+    },
+    {
+     "markerId": "na-baffin",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Баффиновой Земле."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 14,
+     "text": "Найди четырнадцатую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 6,
+     "text": "Найди шестую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 4,
+     "text": "Найди четвёртую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 13,
+     "text": "Найди тринадцатую букву на острове Ньюфаундленд."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 10,
+     "text": "Найди десятую букву на полуострове Бутия."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 7,
+     "text": "Найди седьмую букву на Кубе."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 9,
+     "text": "Найди девятую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 5,
+     "text": "Найди пятую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Калифорнийском заливе."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 1,
+     "text": "Найди первую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "na-baja-california",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Калифорния."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

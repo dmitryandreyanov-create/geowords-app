@@ -1,0 +1,637 @@
+{
+ "section": "north-america-on-the-map",
+ "block": 4,
+ "use": "introduction cards (exercise type 0), one fact per object; namerica-intro opens the section, namerica-hawaii is an explanation card without a map task; ids match data/maps/namerica-overview.json",
+ "decisions": [
+  "Block 4 «North America» has 7 sections: North America on the map, rivers, lakes, mountains and plains, deserts, canyons and plateaus, two sections of countries and capitals (Svetlana, 01.11.2026, plan v2 approved 02.11.2026).",
+  "The boundary with South America is shown near the Panama–Colombia border as one accepted convention, not the only one (Svetlana, 01.11.2026).",
+  "The Alaska Peninsula is the narrow peninsula in the southwest of Alaska; the 1867 sale is about the whole territory (Svetlana, 01.11.2026).",
+  "Hawaii is explained (a US state in Oceania) but is not an object on the map; it stays grey (Svetlana, 01.11.2026)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Где кончается Северная Америка",
+    "en": "Where North America ends"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Полуострова Северной Америки",
+    "en": "Peninsulas of North America"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Острова и заливы",
+    "en": "Islands and gulfs"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "namerica-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "North America",
+    "ru": "Северная Америка"
+   },
+   "fact": {
+    "en": "North America is the third-largest continent on Earth, after Eurasia and Africa. The narrow Isthmus of Panama joins it to South America.",
+    "ru": "Северная Америка — третий по площади материк Земли после Евразии и Африки. С Южной Америкой её соединяет узкий Панамский перешеек."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "c07d512607a392d2"
+   }
+  },
+  {
+   "id": "namerica-hawaii",
+   "order": 0,
+   "kind": "note",
+   "unit": 0,
+   "name": {
+    "en": "Hawaii",
+    "ru": "Гавайи"
+   },
+   "fact": {
+    "en": "Hawaii is a US state, but geographically it lies in the middle of the Pacific, in Polynesia, and belongs to Oceania. That is why it is grey on the map of North America.",
+    "ru": "Гавайи — штат США, но географически они лежат посреди Тихого океана, в Полинезии, и относятся к Океании. Поэтому на карте Северной Америки они серые."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "8c8bb662ed06d32c"
+   }
+  },
+  {
+   "id": "na-arctic-ocean",
+   "order": 1,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Arctic Ocean",
+    "ru": "Северный Ледовитый океан"
+   },
+   "fact": {
+    "en": "The Arctic Ocean borders North America to the north. Off the coast of Canada it holds thousands of islands, and the straits between them are frozen for most of the year.",
+    "ru": "Северный Ледовитый океан омывает Северную Америку с севера. У берегов Канады в нём тысячи островов, а проливы между ними почти весь год во льду."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "636d144d973e0388"
+   }
+  },
+  {
+   "id": "na-pacific-ocean",
+   "order": 2,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The Pacific Ocean borders North America to the west. The Cordillera mountains run along its coast.",
+    "ru": "Тихий океан омывает Северную Америку с запада. Вдоль его берега тянутся горы Кордильеры."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "d1ef1752bb836a86"
+   }
+  },
+  {
+   "id": "na-atlantic-ocean",
+   "order": 3,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Atlantic Ocean",
+    "ru": "Атлантический океан"
+   },
+   "fact": {
+    "en": "The Atlantic Ocean borders North America to the east.",
+    "ru": "Атлантический океан омывает Северную Америку с востока."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "aceeeaf53feb0d7a"
+   }
+  },
+  {
+   "id": "na-bering-strait",
+   "order": 4,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Bering Strait",
+    "ru": "Берингов пролив"
+   },
+   "fact": {
+    "en": "The Bering Strait separates Alaska from Asia. At its narrowest it is about 82 km wide.",
+    "ru": "Берингов пролив отделяет Аляску от Азии. В самом узком месте его ширина около 82 км."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "2627b6a951ff1b99"
+   }
+  },
+  {
+   "id": "na-denmark-strait",
+   "order": 5,
+   "kind": "strait",
+   "unit": 1,
+   "name": {
+    "en": "Denmark Strait",
+    "ru": "Датский пролив"
+   },
+   "fact": {
+    "en": "The Denmark Strait separates Greenland from Iceland, and so North America from Europe.",
+    "ru": "Датский пролив отделяет Гренландию от Исландии, то есть Северную Америку от Европы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "07520ddb20e4f230"
+   }
+  },
+  {
+   "id": "na-isthmus-of-panama",
+   "order": 6,
+   "kind": "isthmus",
+   "unit": 1,
+   "name": {
+    "en": "Isthmus of Panama",
+    "ru": "Панамский перешеек"
+   },
+   "fact": {
+    "en": "The Isthmus of Panama connects North and South America. The boundary between the continents is often placed near the Panama–Colombia border, although other geographic conventions exist.",
+    "ru": "Северную и Южную Америку соединяет Панамский перешеек. Границу между материками часто проводят в районе границы Панамы и Колумбии, хотя существуют и другие географические варианты."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "c144707fbc0561e1"
+   }
+  },
+  {
+   "id": "na-caribbean-sea",
+   "order": 7,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Caribbean Sea",
+    "ru": "Карибское море"
+   },
+   "fact": {
+    "en": "The Caribbean Sea borders North America to the southeast. It holds thousands of islands.",
+    "ru": "Карибское море омывает Северную Америку с юго-востока. В нём тысячи островов."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "b7572ef3d61bae37"
+   }
+  },
+  {
+   "id": "na-gulf-of-mexico",
+   "order": 8,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Gulf of Mexico",
+    "ru": "Мексиканский залив"
+   },
+   "fact": {
+    "en": "Warm water flows from the Caribbean Sea into the Gulf of Mexico, then through the Florida Straits into the Atlantic, feeding the Gulf Stream system.",
+    "ru": "Тёплые воды из Карибского моря поступают в Мексиканский залив, а затем через Флоридский пролив выходят в Атлантический океан, питая систему течения Гольфстрим."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "568e6d5edd6fe8c7"
+   }
+  },
+  {
+   "id": "na-alaska-peninsula",
+   "order": 9,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Alaska Peninsula",
+    "ru": "Полуостров Аляска"
+   },
+   "fact": {
+    "en": "The Alaska Peninsula is a narrow peninsula in the southwest of Alaska; beyond it the Aleutian Islands stretch into the ocean. Russia sold the whole territory of Alaska to the United States in 1867.",
+    "ru": "Полуостров Аляска — узкий полуостров на юго-западе Аляски, за ним в океан уходят Алеутские острова. Всю территорию Аляски Россия продала США в 1867 году."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "87dcd1f42d968528"
+   }
+  },
+  {
+   "id": "na-labrador",
+   "order": 10,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Labrador Peninsula",
+    "ru": "Лабрадор"
+   },
+   "fact": {
+    "en": "Labrador is covered with tundra and taiga and has thousands of lakes.",
+    "ru": "Лабрадор покрыт тундрой и тайгой, на нём тысячи озёр."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "1d37b4c304f7f44c"
+   }
+  },
+  {
+   "id": "na-boothia",
+   "order": 11,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Boothia Peninsula",
+    "ru": "Бутия"
+   },
+   "fact": {
+    "en": "Murchison Promontory, the northernmost point of mainland North America, lies in the north of the Boothia Peninsula.",
+    "ru": "На севере полуострова Бутия лежит мыс Мёрчисон — самая северная точка материковой части Северной Америки."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "33e4b37c847f4a74"
+   }
+  },
+  {
+   "id": "na-florida",
+   "order": 12,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Florida",
+    "ru": "Флорида"
+   },
+   "fact": {
+    "en": "The Everglades, a vast wetland where alligators live, lie in the south of Florida.",
+    "ru": "На юге Флориды лежит Эверглейдс — обширная заболоченная территория, где живут аллигаторы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "b53b6dfab6e58aca"
+   }
+  },
+  {
+   "id": "na-baja-california",
+   "order": 13,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Baja California",
+    "ru": "Полуостров Калифорния"
+   },
+   "fact": {
+    "en": "Baja California is a long, narrow peninsula of Mexico, more than 1,200 km long. It is not the US state of California.",
+    "ru": "Полуостров Калифорния (Нижняя Калифорния) — длинный узкий полуостров Мексики, длиной больше 1200 км. Не путать с американским штатом Калифорния."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "bc0110a3b4deaf69"
+   }
+  },
+  {
+   "id": "na-yucatan",
+   "order": 14,
+   "kind": "peninsula",
+   "unit": 2,
+   "name": {
+    "en": "Yucatán Peninsula",
+    "ru": "Юкатан"
+   },
+   "fact": {
+    "en": "Pyramids of the ancient Maya still stand on the Yucatán Peninsula.",
+    "ru": "На Юкатане сохранились пирамиды древних майя."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "c4f11531a1c4f9f5"
+   }
+  },
+  {
+   "id": "na-greenland",
+   "order": 15,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Greenland",
+    "ru": "Гренландия"
+   },
+   "fact": {
+    "en": "Almost 80% of Greenland is covered with ice. It is an autonomous part of Denmark.",
+    "ru": "Почти 80% Гренландии покрыто льдом. Это автономная часть Дании."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "9809c7c11696ea1e"
+   }
+  },
+  {
+   "id": "na-arctic-archipelago",
+   "order": 16,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Canadian Arctic Archipelago",
+    "ru": "Канадский Арктический архипелаг"
+   },
+   "fact": {
+    "en": "A huge archipelago of tens of thousands of islands lies north of Canada. For hundreds of years sailors searched its straits for the Northwest Passage from the Atlantic to the Pacific.",
+    "ru": "К северу от Канады лежит огромный архипелаг из десятков тысяч островов. Мореплаватели сотни лет искали через его проливы Северо-Западный проход из Атлантики в Тихий океан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "1a2ed64e2532607e"
+   }
+  },
+  {
+   "id": "na-baffin",
+   "order": 17,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Baffin Island",
+    "ru": "Баффинова Земля"
+   },
+   "fact": {
+    "en": "Baffin Island is the largest island of Canada.",
+    "ru": "Баффинова Земля — самый большой остров Канады."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "3203e9a8b488eb5e"
+   }
+  },
+  {
+   "id": "na-newfoundland",
+   "order": 18,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Newfoundland",
+    "ru": "Ньюфаундленд"
+   },
+   "fact": {
+    "en": "About a thousand years ago Vikings sailed to Newfoundland. They are the first Europeans known to have reached America.",
+    "ru": "Около тысячи лет назад на Ньюфаундленд приплыли викинги. Это первые известные европейцы в Америке."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "64793d71af206e91"
+   }
+  },
+  {
+   "id": "na-cuba",
+   "order": 19,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Cuba",
+    "ru": "Куба"
+   },
+   "fact": {
+    "en": "Cuba is the largest of the Greater Antilles.",
+    "ru": "Куба — самый большой из Больших Антильских островов."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "f5f0173c801ee8b5"
+   }
+  },
+  {
+   "id": "na-hispaniola",
+   "order": 20,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Hispaniola",
+    "ru": "Гаити (остров)"
+   },
+   "fact": {
+    "en": "The island of Hispaniola is shared by two countries: Haiti and the Dominican Republic.",
+    "ru": "Остров Гаити делят две страны: Гаити и Доминиканская Республика."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "d613e3ff48cad417"
+   }
+  },
+  {
+   "id": "na-hudson-bay",
+   "order": 21,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Hudson Bay",
+    "ru": "Гудзонов залив"
+   },
+   "fact": {
+    "en": "In autumn, polar bears gather on the shore of Hudson Bay and wait for it to freeze.",
+    "ru": "Осенью белые медведи собираются на берегу Гудзонова залива и ждут, когда он замёрзнет."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "9a69be59f96ff582"
+   }
+  },
+  {
+   "id": "na-gulf-of-california",
+   "order": 22,
+   "kind": "sea",
+   "unit": 3,
+   "name": {
+    "en": "Gulf of California",
+    "ru": "Калифорнийский залив"
+   },
+   "fact": {
+    "en": "The Gulf of California separates Baja California from the mainland. Whales, dolphins and sea lions live in its warm waters.",
+    "ru": "Калифорнийский залив отделяет полуостров Калифорния от материка. В его тёплых водах живут киты, дельфины и морские львы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "57ad506edc4eabd4"
+   }
+  }
+ ]
+}
