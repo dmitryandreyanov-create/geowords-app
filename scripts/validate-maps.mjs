@@ -138,6 +138,16 @@ for (const file of files) {
     if (Math.abs(j.size[0] / j.size[1] - aspect) > 0.002) fail(file, `size ${j.size.join("×")} has a different aspect than the base map`);
   }
 
+  // an enlarged piece of another map (asia-levant.json): the frame must keep the shape of the image, and the parent map must exist
+  if (j.frame && j.of) {
+    const ofRel = exists(file, j.of, "parent map"), f = j.frame;
+    if (ofRel && base) {
+      const p = webpInfo(ofRel), want = (f.w / 100 * p.w) / (f.h / 100 * p.h);
+      if (Math.abs(base.w / base.h - want) > 0.01) fail(file, `frame ${f.w}%×${f.h}% of ${ofRel} does not have the shape of ${base.w}×${base.h}`);
+    }
+    if (!(f.x >= 0 && f.y >= 0 && f.x + f.w <= 100 && f.y + f.h <= 100)) fail(file, "frame outside the parent map");
+    continue;
+  }
   const key = Object.keys(j).find(k => Array.isArray(j[k]) && j[k].length && j[k][0] && typeof j[k][0] === "object" && "id" in j[k][0]);
   if (!key) { fail(file, "no list of objects with ids"); continue; }
   const items = j[key];
