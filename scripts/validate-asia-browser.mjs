@@ -33,6 +33,7 @@ const c7Map=JSON.parse(fs.readFileSync('data/maps/asia-countries-7.json','utf8')
 const c7Unit=Object.fromEntries(c7Map.items.map(i=>[i.id,i.unit])),c7Of=Object.fromEntries(c7Map.items.map(i=>[i.id,i])),LAKES7=['as-caspian','as-aral','as-balkhash','as-issyk-kul'];
 const c8Map=JSON.parse(fs.readFileSync('data/maps/asia-countries-8.json','utf8')),c8Facts=JSON.parse(fs.readFileSync('data/content/b3-section-8-facts.json','utf8'));
 const c8Unit=Object.fromEntries(c8Map.items.map(i=>[i.id,i.unit])),c8Of=Object.fromEntries(c8Map.items.map(i=>[i.id,i])),NOCAP8=['cty-israel','cty-palestine'];
+const LV=JSON.parse(fs.readFileSync('data/maps/asia-levant.json','utf8')),LF=LV.frame,inLv=pt=>pt.x>=LF.x&&pt.x<=LF.x+LF.w&&pt.y>=LF.y&&pt.y<=LF.y+LF.h;
 const INSET8=['cty-armenia','cty-lebanon','cty-israel','cty-palestine','cty-kuwait','cty-bahrain','cty-qatar'],NEIGH8=['cty-afghanistan','cty-pakistan','cty-turkmenistan','cty-uzbekistan','cty-kazakhstan'];
 const IN={'as-sea-of-japan':'as-pacific-ocean','as-sea-of-okhotsk':'as-pacific-ocean','as-south-china-sea':'as-pacific-ocean','as-persian-gulf':'as-indian-ocean',
   'as-japanese-islands':'as-pacific-ocean','as-sakhalin':'as-pacific-ocean','as-borneo':'as-pacific-ocean','as-sri-lanka':'as-indian-ocean'};
@@ -464,6 +465,11 @@ try{
     assert.match(await page.locator('.path').innerText(),lang==='ru'?/Западная Азия и Закавказье/:/West Asia and Transcaucasia/);
     const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`a8-${name}-${lang}.png`)})}};
     const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    // the Levant (Svetlana, 02.11.2026): a tap inside its frame opens the large map, and the answer is tapped there
+    let lvShots=0;
+    const tapLv=async(pt,name)=>{await tapAt(pt);if(!inLv(pt))return;assert.equal(await page.locator('.task .fb.ok,.task .fb.bad').count(),0,'a tap in the Levant frame is not judged');
+      await page.locator('.task .lv-pop').waitFor();if(lvShots<4){lvShots++;await page.waitForTimeout(300);await shot('levant-'+name)}
+      const box=await page.locator('.task .lv-pop').boundingBox();await page.mouse.click(box.x+box.width*(pt.x-LF.x)/LF.w,box.y+box.height*(pt.y-LF.y)/LF.h)};
     const lessons=['a8-u1-l1','a8-u1-l2','a8-u2-l1','a8-u2-l2','a8-u2-l3','a8-u3-l1','a8-u3-l2','a8-u3-l3','a8-u3-l4','a8-u3-l5'];const zones=new Set();const kinds=new Set(),shotKinds=new Set();
     for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
       for(let n=0;n<120;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
@@ -479,12 +485,16 @@ try{
             // the zoom inset only on the small countries
             assert.equal(await page.locator('.task .zoom-inset').count(),INSET8.includes(q.id)?1:0,'zoom inset on '+q.id)}
           await page.locator('.fb .btn').click()}
-        else if(q.k==='findEu'){assert(q.id in c8Unit,'a country of section 8: '+q.id);await tapAt(c8Of[q.id].label);await page.waitForSelector('.fb.ok,.fb.bad');
+        else if(q.k==='findEu'){assert(q.id in c8Unit,'a country of section 8: '+q.id);await tapLv(c8Of[q.id].label,q.id);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
-        else if(q.k==='findCap'){await tapAt(c8Of[q.id].capital);await page.waitForSelector('.fb.ok,.fb.bad');
+        else if(q.k==='findCap'){await tapLv(c8Of[q.id].capital,c8Of[q.id].capital.id);await page.waitForSelector('.fb.ok,.fb.bad');
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c8Unit),'country options only');
           if(q.k!=='whatEu')assert(!opts.some(o=>NOCAP8.includes(o)),'Israel and Palestine are never options of a capital question');
+          // the large Levant map opens at once for a small country of the Levant, and for a capital ring there
+          const lvOpen=q.k==='capOf'?LV.capitals.includes(c8Of[q.id].capital.id):['cty-cyprus','cty-lebanon','cty-israel','cty-palestine'].includes(q.id);
+          assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),lvOpen?1:0,'large Levant map open on '+q.k+' '+q.id);
+          if(lvOpen&&lvShots<6){lvShots++;await page.waitForTimeout(300);await shot('levant-'+q.k+'-'+q.id)}
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
       await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="a8-u1-l1"]')}
