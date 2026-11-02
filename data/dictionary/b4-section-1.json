@@ -1,0 +1,468 @@
+{
+ "section": "north-america-on-the-map",
+ "block": 4,
+ "status": "draft",
+ "source": "25 words RU + 25 EN picked by Claude at Svetlana's request and approved with plan v2 («Согласна», 02.11.2026)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters only on learned objects of the North America map, one per object, never with the object it lies in: up to 7 after unit 1 (the Atlantic never with the Caribbean or the Gulf of Mexico), 13 after unit 2, about 20 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "The 25 words approved 02.11.2026. Unit 1 can hold words of up to 7 letters only, unit 2 up to 13, so ЧЕРЕПАХА and ЛАМАНТИН moved to unit 2 and КАРИБУ, ЛОСОСЬ to unit 1; ПЕРЕСЕЛЕНЕЦ / PIONEER is the unit 2 final and ЗОЛОТОИСКАТЕЛЬ / PROSPECTOR (14 / 10 letters) the section final. Definitions by Claude, waiting for approval."
+ },
+ "units": [
+  {
+   "id": "unit-1-where-north-america-ends",
+   "title": {
+    "ru": "Где кончается Северная Америка",
+    "en": "Where North America ends"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТОРНАДО",
+      "role": "final",
+      "definition": "Сильный вихрь в виде воронки; в центре США их бывает больше всего в мире.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КОРАЛЛ",
+      "role": "review",
+      "definition": "Морское животное, из известковых скелетов которого вырастают рифы у Флориды и в Карибском море.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПОЛЫНЬЯ",
+      "role": "review",
+      "definition": "Участок открытой воды среди морского льда, который не замерзает даже зимой.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "НАРВАЛ",
+      "role": "review",
+      "definition": "Арктический кит с длинным прямым бивнем, похожим на рог единорога.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАЛАН",
+      "role": "review",
+      "definition": "Морская выдра Тихого океана; из-за её меха русские промышленники плавали к Аляске.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ГАРПУН",
+      "role": "review",
+      "definition": "Копьё на верёвке, с которым инуиты охотились на тюленей и китов.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАРИБУ",
+      "role": "review",
+      "definition": "Так в Северной Америке называют северного оленя.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛОСОСЬ",
+      "role": "review",
+      "definition": "Рыба, которая из океана поднимается на нерест вверх по рекам Аляски и Канады.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TORNADO",
+      "role": "final",
+      "definition": "A violent funnel of wind; the middle of the USA has more of them than anywhere else.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CORAL",
+      "role": "review",
+      "definition": "A sea animal whose limestone skeletons build the reefs off Florida and in the Caribbean.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "POLYNYA",
+      "role": "review",
+      "definition": "A patch of open water in the sea ice that stays unfrozen even in winter.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "NARWHAL",
+      "role": "review",
+      "definition": "An Arctic whale with a long straight tusk like a unicorn's horn.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TURTLE",
+      "role": "review",
+      "definition": "A sea reptile that swims across the warm Caribbean and lays its eggs on sandy beaches.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MANATEE",
+      "role": "review",
+      "definition": "A slow, gentle sea cow that grazes on water plants off Florida.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "OTTER",
+      "role": "review",
+      "definition": "A furry swimmer; the sea kind of the Pacific drew Russian fur traders to Alaska.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HARPOON",
+      "role": "review",
+      "definition": "A spear on a rope that the Inuit used to hunt seals and whales.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-peninsulas",
+   "title": {
+    "ru": "Полуострова Северной Америки",
+    "en": "Peninsulas of North America"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПЕРЕСЕЛЕНЕЦ",
+      "role": "final",
+      "definition": "Человек, который уехал на новые земли, чтобы жить там, как европейцы, приплывавшие в Америку.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЧЕРЕПАХА",
+      "role": "review",
+      "definition": "Морская рептилия с панцирем; откладывает яйца на песчаных пляжах Карибского моря.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ЛАМАНТИН",
+      "role": "review",
+      "definition": "Медлительная «морская корова», которая пасётся на водорослях у берегов Флориды.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "АЛЛИГАТОР",
+      "role": "review",
+      "definition": "Крупная рептилия болот Флориды с широкой тупой мордой.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ФЛАМИНГО",
+      "role": "review",
+      "definition": "Розовая птица на длинных ногах, которая кормится на мелководье Карибских островов.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПИРАМИДА",
+      "role": "review",
+      "definition": "Ступенчатый каменный храм майя, такие стоят на Юкатане.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КУКУРУЗА",
+      "role": "review",
+      "definition": "Злак, который индейцы Мексики выращивали тысячи лет назад.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАКАО",
+      "role": "review",
+      "definition": "Бобы тропического дерева; из них майя и ацтеки готовили горький напиток.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "PIONEER",
+      "role": "final",
+      "definition": "One of the first people to go and live in a new, wild land.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CARIBOU",
+      "role": "review",
+      "definition": "The North American name for the reindeer.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SALMON",
+      "role": "review",
+      "definition": "A fish that swims from the ocean up the rivers of Alaska and Canada to spawn.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ALLIGATOR",
+      "role": "review",
+      "definition": "A large reptile of the Florida swamps with a broad, blunt snout.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "FLAMINGO",
+      "role": "review",
+      "definition": "A pink bird on long legs that feeds in the shallow waters of the Caribbean islands.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PYRAMID",
+      "role": "review",
+      "definition": "A stepped stone temple of the Maya, like those on the Yucatán.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "MAIZE",
+      "role": "review",
+      "definition": "A grain the native peoples of Mexico grew thousands of years ago.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CACAO",
+      "role": "review",
+      "definition": "The beans of a tropical tree; the Maya and Aztecs made a bitter drink from them.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-islands-and-gulfs",
+   "title": {
+    "ru": "Острова и заливы",
+    "en": "Islands and gulfs"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ФЛИБУСТЬЕР",
+      "role": "final",
+      "definition": "Морской разбойник XVII века, нападавший на испанские корабли в Карибском море.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ИНУИТЫ",
+      "role": "review",
+      "definition": "Коренной народ Арктики: живут на севере Канады, на Аляске и в Гренландии.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "НАРТЫ",
+      "role": "review",
+      "definition": "Лёгкие сани, в которые запрягают собачью упряжку.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КАНОЭ",
+      "role": "review",
+      "definition": "Лёгкая лодка индейцев из коры или дерева, которой гребут одним веслом.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ТОТЕМ",
+      "role": "review",
+      "definition": "Высокий резной столб с фигурами зверей у индейцев северо-западного побережья.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "КОЛИБРИ",
+      "role": "review",
+      "definition": "Крошечная птица, которая умеет зависать в воздухе у цветка.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ИГУАНА",
+      "role": "review",
+      "definition": "Крупная ящерица с гребнем на спине, живёт на Карибских островах.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "ПЕЛИКАН",
+      "role": "review",
+      "definition": "Морская птица с большим кожаным мешком под клювом для рыбы.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "BUCCANEER",
+      "role": "final",
+      "definition": "A 17th-century sea robber who attacked Spanish ships in the Caribbean.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "INUIT",
+      "role": "review",
+      "definition": "The native people of the Arctic: northern Canada, Alaska and Greenland.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "SLEDGE",
+      "role": "review",
+      "definition": "A light vehicle on runners, pulled by a team of dogs over snow and ice.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "CANOE",
+      "role": "review",
+      "definition": "A light boat made of bark or wood and paddled with a single paddle.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "TOTEM",
+      "role": "review",
+      "definition": "A tall carved pole with animal figures, made by peoples of the northwest coast.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "HUMMINGBIRD",
+      "role": "review",
+      "definition": "A tiny bird that can hover in the air in front of a flower.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "IGUANA",
+      "role": "review",
+      "definition": "A large lizard with a crest along its back that lives on the Caribbean islands.",
+      "approval": {
+       "status": "draft"
+      }
+     },
+     {
+      "answer": "PELICAN",
+      "role": "review",
+      "definition": "A sea bird with a big skin pouch under its beak for catching fish.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ЗОЛОТОИСКАТЕЛЬ",
+      "role": "section-final",
+      "definition": "Тот, кто в конце XIX века ехал на Клондайк и Аляску в надежде разбогатеть.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "PROSPECTOR",
+      "role": "section-final",
+      "definition": "Someone who searched for gold in the Klondike and Alaska at the end of the 19th century.",
+      "approval": {
+       "status": "draft"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
