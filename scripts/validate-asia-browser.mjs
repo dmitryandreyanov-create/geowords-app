@@ -492,8 +492,11 @@ try{
         else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in c8Unit),'country options only');
           if(q.k!=='whatEu')assert(!opts.some(o=>NOCAP8.includes(o)),'Israel and Palestine are never options of a capital question');
           // the large Levant map opens at once for a small country of the Levant, and for a capital ring there
-          const lvOpen=q.k==='capOf'?LV.capitals.includes(c8Of[q.id].capital.id):['cty-cyprus','cty-lebanon','cty-israel','cty-palestine'].includes(q.id);
+          const lvOpen=q.k==='capOf'?LV.capitals.includes(c8Of[q.id].capital.id):LV.objects.includes(q.id);
           assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),lvOpen?1:0,'large Levant map open on '+q.k+' '+q.id);
+          // a small country outside the Levant: the map opens zoomed in on it (Svetlana, 02.11.2026 «не видно, о чём речь»)
+          if(q.k!=='capOf'&&['cty-armenia','cty-kuwait','cty-bahrain','cty-qatar'].includes(q.id)){const tr=await page.locator('.task .world').evaluate(e=>e.style.transform);
+            assert(Number((/scale\(([\d.]+)\)/.exec(tr)||[0,1])[1])>=1.8,'map zoomed in on '+q.id+': '+tr);if(lvShots<9){lvShots++;await page.waitForTimeout(300);await shot('zoom-'+q.k+'-'+q.id)}}
           if(lvOpen&&lvShots<6){lvShots++;await page.waitForTimeout(300);await shot('levant-'+q.k+'-'+q.id)}
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
