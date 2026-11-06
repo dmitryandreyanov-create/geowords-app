@@ -80,3 +80,23 @@ def asia_region(ne):
             (33.8, 27.8), (43.3, 12.6), (52.0, 10.0), (60.0, -30.0)]
     ring = [(66.0, 89.0)] + west + [(140.0, -30.0), (191.0, 50.0), (191.0, 65.5), (189.5, 89.0)]
     return Polygon(ring).buffer(0)
+
+# The countries maps paint everything outside Asia grey (Europe west of the Urals and the Ural River, New Guinea…), while a tap area
+# keeps the whole country: West Kazakhstan beyond the Ural River, the Indonesian half of New Guinea. A GeoWords letter must stand
+# on the coloured (Asian) part of its country, where the child sees the country (Svetlana, 06.11.2026: «в Казахстане нет букв»).
+_BASE = None
+def on_asia(x, y, img='assets/asia-countries.webp', r=6):
+    """True when the map is coloured (not the grey outside Asia) around (x, y) in % of the map."""
+    global _BASE
+    if _BASE is None:
+        from PIL import Image
+        _BASE = Image.open(ROOT / img).convert('RGB')
+    w, h = _BASE.size
+    px, py = int(x * w / 100), int(y * h / 100)
+    grey = total = 0
+    for dx in range(-r, r + 1, 2):
+        for dy in range(-r, r + 1, 2):
+            c = _BASE.getpixel((min(w - 1, max(0, px + dx)), min(h - 1, max(0, py + dy))))
+            total += 1
+            grey += abs(c[0] - c[1]) < 16 and abs(c[1] - c[2]) < 16 and 60 < c[0] < 175
+    return grey / total <= 0.6
