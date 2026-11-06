@@ -49,6 +49,7 @@ try{
           assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
         else if(q.k==='whatEu'){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o.startsWith('na-')),'North America options only');
           assert(!(opts.includes('na-baffin')&&opts.includes('na-arctic-archipelago')),'Baffin and the archipelago never together');
+          const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)),'options only from taught lessons: '+opts);
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else if(q.k==='allPen'){for(const it of nMap.items.filter(i=>i.kind==='peninsula'))await tapAt(it.label);
           await page.locator('.fb .btn').click();assert.equal(await page.locator('.fb.ok').count(),1,'all peninsulas found');await page.locator('.fb .btn').click()}

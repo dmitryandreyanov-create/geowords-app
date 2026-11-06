@@ -67,7 +67,7 @@ const named=[
   'assets/world-base.webp','assets/world-base-plain.webp',
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
-  'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp','assets/asia-countries.webp',
+  'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp','assets/asia-countries.webp','assets/asia-levant.webp',
   'assets/namerica-blank.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});

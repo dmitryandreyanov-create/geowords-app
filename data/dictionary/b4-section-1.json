@@ -25,7 +25,10 @@
       "role": "final",
       "definition": "Сильный вихрь в виде воронки; в центре США их бывает больше всего в мире.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "c1bf55d769023b2e"
       }
      },
      {
@@ -33,7 +36,10 @@
       "role": "review",
       "definition": "Морское животное, из известковых скелетов которого вырастают рифы у Флориды и в Карибском море.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "7f9e699570877d33"
       }
      },
      {
@@ -41,7 +47,10 @@
       "role": "review",
       "definition": "Участок открытой воды среди морского льда, который не замерзает даже зимой.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "99aed6b4c6f1ba93"
       }
      },
      {
@@ -49,7 +58,10 @@
       "role": "review",
       "definition": "Арктический кит с длинным прямым бивнем, похожим на рог единорога.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "11beb2fe2cd71b78"
       }
      },
      {
@@ -57,7 +69,10 @@
       "role": "review",
       "definition": "Морская выдра Тихого океана; из-за её меха русские промышленники плавали к Аляске.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "04168f473825b626"
       }
      },
      {
@@ -65,7 +80,10 @@
       "role": "review",
       "definition": "Копьё на верёвке, с которым инуиты охотились на тюленей и китов.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "75126abc6a954616"
       }
      },
      {
@@ -73,7 +91,10 @@
       "role": "review",
       "definition": "Так в Северной Америке называют северного оленя.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "4bf47e7f1ac466fe"
       }
      },
      {
@@ -81,7 +102,10 @@
       "role": "review",
       "definition": "Рыба, которая из океана поднимается на нерест вверх по рекам Аляски и Канады.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "6722cf44bd6c5191"
       }
      }
     ],
@@ -91,7 +115,10 @@
       "role": "final",
       "definition": "A violent funnel of wind; the middle of the USA has more of them than anywhere else.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "a949ba1d70321969"
       }
      },
      {
@@ -99,7 +126,10 @@
       "role": "review",
       "definition": "A sea animal whose limestone skeletons build the reefs off Florida and in the Caribbean.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "b6146b443717d986"
       }
      },
      {
@@ -107,7 +137,10 @@
       "role": "review",
       "definition": "A patch of open water in the sea ice that stays unfrozen even in winter.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "6c49fa42a2f137b3"
       }
      },
      {
@@ -115,7 +148,10 @@
       "role": "review",
       "definition": "An Arctic whale with a long straight tusk like a unicorn's horn.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "24ff482d3c6c22fa"
       }
      },
      {
@@ -123,7 +159,10 @@
       "role": "review",
       "definition": "A sea reptile that swims across the warm Caribbean and lays its eggs on sandy beaches.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "d496814ceb7fbbc7"
       }
      },
      {
@@ -131,7 +170,10 @@
       "role": "review",
       "definition": "A slow, gentle sea cow that grazes on water plants off Florida.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "a1db7b6418c6f698"
       }
      },
      {
@@ -139,7 +181,10 @@
       "role": "review",
       "definition": "A furry swimmer; the sea kind of the Pacific drew Russian fur traders to Alaska.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "415066f17968698d"
       }
      },
      {
@@ -147,7 +192,10 @@
       "role": "review",
       "definition": "A spear on a rope that the Inuit used to hunt seals and whales.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "ebb6371d39316cb0"
       }
      }
     ]
@@ -166,7 +214,10 @@
       "role": "final",
       "definition": "Человек, который уехал на новые земли, чтобы жить там, как европейцы, приплывавшие в Америку.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "957c5d419cec7a99"
       }
      },
      {
@@ -174,7 +225,10 @@
       "role": "review",
       "definition": "Морская рептилия с панцирем; откладывает яйца на песчаных пляжах Карибского моря.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "50add050eef3a947"
       }
      },
      {
@@ -182,7 +236,10 @@
       "role": "review",
       "definition": "Медлительная «морская корова», которая пасётся на водорослях у берегов Флориды.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "2fdfed27ade70f76"
       }
      },
      {
@@ -190,7 +247,10 @@
       "role": "review",
       "definition": "Крупная рептилия болот Флориды с широкой тупой мордой.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "da46137dc5633a78"
       }
      },
      {
@@ -198,7 +258,10 @@
       "role": "review",
       "definition": "Розовая птица на длинных ногах, которая кормится на мелководье Карибских островов.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "8339d8ff6b934c4e"
       }
      },
      {
@@ -206,7 +269,10 @@
       "role": "review",
       "definition": "Ступенчатый каменный храм майя, такие стоят на Юкатане.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "c951520bf5c2cc92"
       }
      },
      {
@@ -214,7 +280,10 @@
       "role": "review",
       "definition": "Злак, который индейцы Мексики выращивали тысячи лет назад.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "09f16578a737db98"
       }
      },
      {
@@ -222,7 +291,10 @@
       "role": "review",
       "definition": "Бобы тропического дерева; из них майя и ацтеки готовили горький напиток.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "ca4531e1fe2aa5fb"
       }
      }
     ],
@@ -232,7 +304,10 @@
       "role": "final",
       "definition": "One of the first people to go and live in a new, wild land.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "9c4049e50c062d2a"
       }
      },
      {
@@ -240,7 +315,10 @@
       "role": "review",
       "definition": "The North American name for the reindeer.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "d74fad3b662b3203"
       }
      },
      {
@@ -248,7 +326,10 @@
       "role": "review",
       "definition": "A fish that swims from the ocean up the rivers of Alaska and Canada to spawn.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "967a4dd4cc715293"
       }
      },
      {
@@ -256,7 +337,10 @@
       "role": "review",
       "definition": "A large reptile of the Florida swamps with a broad, blunt snout.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "a0fd46ebea8a49e5"
       }
      },
      {
@@ -264,7 +348,10 @@
       "role": "review",
       "definition": "A pink bird on long legs that feeds in the shallow waters of the Caribbean islands.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "24971bfb1b9f7403"
       }
      },
      {
@@ -272,7 +359,10 @@
       "role": "review",
       "definition": "A stepped stone temple of the Maya, like those on the Yucatán.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "5d7b83fc519230db"
       }
      },
      {
@@ -280,7 +370,10 @@
       "role": "review",
       "definition": "A grain the native peoples of Mexico grew thousands of years ago.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "179bd91cb0fecab9"
       }
      },
      {
@@ -288,7 +381,10 @@
       "role": "review",
       "definition": "The beans of a tropical tree; the Maya and Aztecs made a bitter drink from them.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "5f0a2cbc63fb7d5d"
       }
      }
     ]
@@ -307,7 +403,10 @@
       "role": "final",
       "definition": "Морской разбойник XVII века, нападавший на испанские корабли в Карибском море.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "542a9b47f7360cd7"
       }
      },
      {
@@ -315,7 +414,10 @@
       "role": "review",
       "definition": "Коренной народ Арктики: живут на севере Канады, на Аляске и в Гренландии.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "2004a99ecb377cba"
       }
      },
      {
@@ -323,7 +425,10 @@
       "role": "review",
       "definition": "Лёгкие сани, в которые запрягают собачью упряжку.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "0c5f0e8d958c570b"
       }
      },
      {
@@ -331,7 +436,10 @@
       "role": "review",
       "definition": "Лёгкая лодка индейцев из коры или дерева, которой гребут одним веслом.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "6dff94b6110827f4"
       }
      },
      {
@@ -339,7 +447,10 @@
       "role": "review",
       "definition": "Высокий резной столб с фигурами зверей у индейцев северо-западного побережья.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "c7ee6329c338860e"
       }
      },
      {
@@ -347,7 +458,10 @@
       "role": "review",
       "definition": "Крошечная птица, которая умеет зависать в воздухе у цветка.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "0c2e3e0c21fbd907"
       }
      },
      {
@@ -355,7 +469,10 @@
       "role": "review",
       "definition": "Крупная ящерица с гребнем на спине, живёт на Карибских островах.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "c98d7adf1a8c9313"
       }
      },
      {
@@ -363,7 +480,10 @@
       "role": "review",
       "definition": "Морская птица с большим кожаным мешком под клювом для рыбы.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "8c99da349731bcde"
       }
      }
     ],
@@ -373,7 +493,10 @@
       "role": "final",
       "definition": "A 17th-century sea robber who attacked Spanish ships in the Caribbean.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "5898244de763ea6f"
       }
      },
      {
@@ -381,7 +504,10 @@
       "role": "review",
       "definition": "The native people of the Arctic: northern Canada, Alaska and Greenland.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "cfa15146be2257bd"
       }
      },
      {
@@ -389,7 +515,10 @@
       "role": "review",
       "definition": "A light vehicle on runners, pulled by a team of dogs over snow and ice.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "f2dd185806f4634f"
       }
      },
      {
@@ -397,7 +526,10 @@
       "role": "review",
       "definition": "A light boat made of bark or wood and paddled with a single paddle.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "8ac3a8a074cbbf7b"
       }
      },
      {
@@ -405,7 +537,10 @@
       "role": "review",
       "definition": "A tall carved pole with animal figures, made by peoples of the northwest coast.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "c1132d5b43226ebc"
       }
      },
      {
@@ -413,7 +548,10 @@
       "role": "review",
       "definition": "A tiny bird that can hover in the air in front of a flower.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "f1bb77cb46f274e0"
       }
      },
      {
@@ -421,7 +559,10 @@
       "role": "review",
       "definition": "A large lizard with a crest along its back that lives on the Caribbean islands.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "1190aba2bb0c7dfb"
       }
      },
      {
@@ -429,7 +570,10 @@
       "role": "review",
       "definition": "A sea bird with a big skin pouch under its beak for catching fish.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "472c3ecc1562b20b"
       }
      }
     ]
@@ -448,7 +592,10 @@
       "role": "section-final",
       "definition": "Тот, кто в конце XIX века ехал на Клондайк и Аляску в надежде разбогатеть.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "9529943ca4c1f29f"
       }
      }
     ],
@@ -458,7 +605,10 @@
       "role": "section-final",
       "definition": "Someone who searched for gold in the Klondike and Alaska at the end of the 19th century.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-06",
+       "contentSha256": "756f4bf1be4ce0a0"
       }
      }
     ]
