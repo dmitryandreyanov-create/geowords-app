@@ -35,6 +35,9 @@ const c8Map=JSON.parse(fs.readFileSync('data/maps/asia-countries-8.json','utf8')
 const c8Unit=Object.fromEntries(c8Map.items.map(i=>[i.id,i.unit])),c8Of=Object.fromEntries(c8Map.items.map(i=>[i.id,i])),NOCAP8=['cty-israel','cty-palestine'];
 const LV=JSON.parse(fs.readFileSync('data/maps/asia-levant.json','utf8')),LF=LV.frame,inLv=pt=>pt.x>=LF.x&&pt.x<=LF.x+LF.w&&pt.y>=LF.y&&pt.y<=LF.y+LF.h;
 const INSET8=['cty-armenia','cty-lebanon','cty-israel','cty-palestine','cty-kuwait','cty-bahrain','cty-qatar'],NEIGH8=['cty-afghanistan','cty-pakistan','cty-turkmenistan','cty-uzbekistan','cty-kazakhstan'];
+// a country letter stands on one of its stored spots: on the coloured (Asian) part of the country, never on the grey outside Asia
+// (West Kazakhstan beyond the Ural River, the Indonesian half of New Guinea — Svetlana, 06.11.2026)
+const onSpot=(m,...maps)=>{const it=maps.map(mp=>mp.items.find(i=>i.id===m.id)).find(Boolean);return !it||!it.spots||it.spots.some(s=>s.x===m.x&&s.y===m.y)};
 const IN={'as-sea-of-japan':'as-pacific-ocean','as-sea-of-okhotsk':'as-pacific-ocean','as-south-china-sea':'as-pacific-ocean','as-persian-gulf':'as-indian-ocean',
   'as-japanese-islands':'as-pacific-ocean','as-sakhalin':'as-pacific-ocean','as-borneo':'as-pacific-ocean','as-sri-lanka':'as-indian-ocean'};
 let browser;
@@ -366,6 +369,7 @@ try{
         for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?rivIds.has(r)&&cUnit[c]<=u:m.id in cUnit?cUnit[m.id]<=u:rivIds.has(m.id)||m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`)}
         assert(p.markers.filter(m=>rivIds.has(m.id.split('@')[0])).length>=Math.ceil(p.answer.length/3),p.answer+': a third of the letters on rivers');
         assert.deepEqual(p.focus,cMap.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        for(const m of p.markers)assert(onSpot(m,cMap),`${p.answer}: ${m.id} letter on the country (${m.x}, ${m.y})`);
         assert(!p.markers.some(m=>['as-arctic-ocean','as-chukotka','as-bering-strait'].includes(m.id)),p.answer+': no letter in the far north');
         await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
         if(w===0)await shot('practice-u'+u);
@@ -432,6 +436,7 @@ try{
         for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?rivIds.has(r)&&c7Unit[c]<=u:m.id in c7Unit?c7Unit[m.id]<=u:rivIds.has(m.id)||m.id in unitOf||LAKES7.includes(m.id),`${p.answer}: ${m.id} is learned by unit ${u}`)}
         assert(p.markers.filter(m=>rivIds.has(m.id.split('@')[0])).length>=Math.ceil(p.answer.length/3),p.answer+': a third of the letters on rivers');
         assert.deepEqual(p.focus,c7Map.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        for(const m of p.markers)assert(onSpot(m,c7Map),`${p.answer}: ${m.id} letter on the country (${m.x}, ${m.y})`);
         assert(!p.markers.some(m=>['as-arctic-ocean','as-chukotka','as-bering-strait','as-bosporus','as-suez-canal'].includes(m.id)),p.answer+': no letter in the far north');
         await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
         if(w===0)await shot('practice-u'+u);
@@ -516,6 +521,7 @@ try{
         for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?rivIds.has(r)&&c8Unit[c]<=u:m.id in c8Unit?c8Unit[m.id]<=u:rivIds.has(m.id)||m.id in unitOf||m.id==='as-caspian'||NEIGH8.includes(m.id),`${p.answer}: ${m.id} is learned by unit ${u}`)}
         assert(p.markers.filter(m=>rivIds.has(m.id.split('@')[0])).length>=Math.min(3,Math.ceil(p.answer.length/3)),p.answer+': a third of the letters on rivers (at most three)');
         assert.deepEqual(p.focus,c8Map.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        for(const m of p.markers)assert(onSpot(m,c8Map,c7Map),`${p.answer}: ${m.id} letter on the country (${m.x}, ${m.y})`);
         assert(!p.markers.some(m=>['as-arctic-ocean','as-chukotka','as-bering-strait'].includes(m.id)),p.answer+': no letter in the far north');
         await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
         if(w===0)await shot('practice-u'+u);
