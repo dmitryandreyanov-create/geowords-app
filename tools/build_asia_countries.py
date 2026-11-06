@@ -239,7 +239,7 @@ sq = lambda g: affinity.scale(g, 1, K, origin=(0, 0))      # to screen-like unit
 un = lambda g: affinity.scale(g, 1, 1 / K, origin=(0, 0))
 def thin(pts, d):
     out = []
-    for x, y in pts:
+    for x, y in [p for p in pts if B.on_asia(*p)]:  # never on the grey part outside Asia (asia_base.on_asia)
         if all(((x - a) ** 2 + ((y - b) * K) ** 2) ** .5 >= d for a, b in out): out.append((x, y))
     return [{'x': round(x, 2), 'y': round(y, 2)} for x, y in out]
 for it in items:
