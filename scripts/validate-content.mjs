@@ -41,6 +41,113 @@ const RELEASE = {
     section: "straits-and-canals",
     ids: ["suez-canal", "panama-canal", "strait-of-gibraltar", "english-channel", "bosporus", "dardanelles", "bab-el-mandeb", "strait-of-hormuz", "gulf-of-oman", "strait-of-malacca", "mozambique-channel", "bering-strait", "drake-passage", "strait-of-magellan"],
   },
+  "b2-section-1-facts.json": {
+    section: "europe-on-the-map",
+    ids: ["europe-intro", "atlantic-ocean", "arctic-ocean", "mediterranean-sea", "ural-mountains", "ural-river", "caspian-sea",
+      "scandinavian-peninsula", "kola-peninsula", "jutland", "iberian-peninsula", "apennine-peninsula", "balkan-peninsula", "crimean-peninsula",
+      "great-britain", "ireland", "iceland", "sicily", "baltic-sea", "north-sea", "barents-sea"],
+  },
+  "b2-section-2-facts.json": {
+    section: "rivers-of-europe",
+    ids: ["volga", "don", "dnieper", "dniester", "danube", "rhine", "elbe", "oder", "vistula", "thames", "seine", "loire", "rhone",
+      "po", "tiber", "tagus", "douro", "guadiana", "ebro", "guadalquivir", "tip-rhine-elbe-oder-vistula"],
+  },
+  "b2-section-2-records.json": {
+    section: "rivers-of-europe",
+    ids: ["volga-largest-delta", "loire-longest-france", "tagus-longest-iberia"],
+  },
+  "b2-section-4-facts.json": {
+    section: "countries-west-and-north",
+    ids: ["united-kingdom", "ireland-country", "france", "netherlands", "belgium", "luxembourg-country", "spain", "portugal", "norway", "sweden", "denmark", "finland", "iceland-country"],
+  },
+  "b2-section-4-records.json": {
+    section: "countries-west-and-north",
+    ids: ["reykjavik-northernmost-capital", "lisbon-westernmost-mainland-capital", "france-largest-eu"],
+  },
+  "b2-section-5-facts.json": {
+    section: "countries-centre-south-and-east",
+    ids: ["germany", "switzerland", "austria", "czechia", "poland", "hungary", "italy", "greece", "serbia", "romania", "estonia", "latvia", "lithuania", "belarus", "ukraine", "russia"],
+  },
+  "b2-section-5-records.json": {
+    section: "countries-centre-south-and-east",
+    ids: ["russia-largest-country", "vatican-smallest-country", "germany-most-populous-eu"],
+  },
+  "b2-section-3-facts.json": {
+    section: "mountains-of-europe",
+    ids: ["pyrenees", "alps", "apennines", "carpathians", "balkan-mountains", "dinaric-alps", "scandinavian-mountains", "scottish-highlands", "caucasus"],
+  },
+  "b2-section-3-records.json": {
+    section: "mountains-of-europe",
+    ids: ["alps-highest-in-europe", "galdhopiggen-highest-northern-europe", "aneto-highest-pyrenees"],
+  },
+  "b2-section-1-records.json": {
+    section: "europe-on-the-map",
+    ids: ["scandinavian-largest-peninsula", "great-britain-largest-island", "sicily-largest-mediterranean-island"],
+  },
+  "b3-section-1-facts.json": {
+    section: "asia-on-the-map",
+    ids: ["asia-intro", "as-arctic-ocean", "as-pacific-ocean", "as-indian-ocean", "as-ural-mountains", "as-bosporus", "as-suez-canal", "as-bering-strait", "as-asia-minor", "as-arabian-peninsula", "as-hindustan", "as-indochina", "as-malay-peninsula", "as-korean-peninsula", "as-kamchatka", "as-taimyr", "as-chukotka", "as-japanese-islands", "as-sakhalin", "as-sri-lanka", "as-borneo", "as-sea-of-japan", "as-sea-of-okhotsk", "as-south-china-sea", "as-persian-gulf"],
+  },
+  "b3-section-1-records.json": {
+    section: "asia-on-the-map",
+    ids: ["arabian-largest-peninsula", "borneo-largest-island-asia", "chelyuskin-northernmost"],
+  },
+  "b3-section-2-facts.json": {
+    section: "rivers-of-asia",
+    ids: ["asia-rivers-intro", "as-ob", "as-irtysh", "as-yenisei", "as-lena", "as-amur", "as-kolyma", "as-yangtze", "as-huang-he", "as-mekong", "as-chao-phraya", "as-salween", "as-irrawaddy", "as-brahmaputra", "as-ganges", "as-indus", "as-godavari", "as-tigris", "as-euphrates", "as-jordan", "as-amu-darya", "as-syr-darya", "as-ili", "as-tarim"],
+  },
+  "b3-section-6-facts.json": {
+    section: "countries-east-and-southeast-asia",
+    ids: ["cty-china", "cty-mongolia", "cty-north-korea", "cty-south-korea", "cty-japan", "cty-taiwan", "cty-vietnam", "cty-laos", "cty-cambodia", "cty-thailand", "cty-myanmar", "cty-malaysia", "cty-singapore", "cty-indonesia", "cty-brunei", "cty-philippines", "cty-timor-leste"],
+  },
+  "b3-section-6-records.json": {
+    section: "countries-east-and-southeast-asia",
+    ids: ["indonesia-largest-island-country", "ulaanbaatar-coldest-capital", "great-wall-longest-fortification"],
+  },
+  "b3-section-7-facts.json": {
+    section: "countries-south-and-central-asia",
+    ids: ["cty-india", "cty-pakistan", "cty-bangladesh", "cty-sri-lanka", "cty-maldives", "cty-nepal", "cty-bhutan", "cty-afghanistan", "cty-kazakhstan", "cty-uzbekistan", "cty-turkmenistan", "cty-kyrgyzstan", "cty-tajikistan"],
+  },
+  "b3-section-7-records.json": {
+    section: "countries-south-and-central-asia",
+    ids: ["kazakhstan-largest-landlocked", "maldives-lowest-country", "uzbekistan-doubly-landlocked"],
+  },
+  "b3-section-8-facts.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    ids: ["cty-georgia", "cty-armenia", "cty-azerbaijan", "cty-iran", "cty-turkey", "cty-cyprus", "cty-syria", "cty-lebanon", "cty-israel", "cty-palestine", "cty-jordan", "cty-iraq", "cty-saudi-arabia", "cty-kuwait", "cty-bahrain", "cty-qatar", "cty-uae", "cty-oman", "cty-yemen", "zone-iranian-plateau", "zone-levant", "zone-mesopotamia", "zone-arabia"],
+  },
+  "b3-section-8-records.json": {
+    section: "countries-west-asia-and-transcaucasia",
+    ids: ["baku-lowest-capital", "saudi-arabia-largest-without-rivers", "bahrain-smallest-west-asia"],
+  },
+  "b3-section-5-facts.json": {
+    section: "deserts-of-asia",
+    ids: ["asia-deserts-intro", "as-taklamakan", "as-ordos", "as-gobi", "as-kyzylkum", "as-karakum", "as-kavir", "as-lut", "as-thar", "as-rub-al-khali", "as-negev"],
+  },
+  "b3-section-5-records.json": {
+    section: "deserts-of-asia",
+    ids: ["rub-al-khali-largest-sand-sea", "lut-hottest-surface", "thar-most-populated-desert"],
+  },
+  "b3-section-4-facts.json": {
+    section: "mountains-of-asia",
+    ids: ["asia-mountains-intro", "as-pamirs", "as-tian-shan", "as-hindu-kush", "as-karakoram", "as-kunlun", "as-tibet", "as-himalayas", "as-altai", "as-sayan", "as-sikhote-alin", "as-klyuchevskaya", "as-fuji", "as-urals", "as-zagros", "as-elburz", "as-caucasus", "as-arakan", "as-barisan", "as-krakatoa"],
+  },
+  "b3-section-4-records.json": {
+    section: "mountains-of-asia",
+    ids: ["tibet-highest-plateau", "himalaya-karakoram-eight-thousanders", "klyuchevskaya-highest-active-volcano", "krakatoa-loudest-sound"],
+  },
+  "b3-section-3-facts.json": {
+    section: "lakes-of-asia",
+    ids: ["asia-lakes-intro", "as-baikal", "as-khovsgol", "as-taymyr", "as-khanka", "as-qinghai", "as-caspian", "as-aral", "as-balkhash", "as-issyk-kul", "as-dead-sea", "as-urmia", "as-van", "as-tonle-sap"],
+  },
+  "b3-section-3-records.json": {
+    section: "lakes-of-asia",
+    ids: ["baikal-deepest-oldest", "dead-sea-lowest-land", "caspian-largest-lake"],
+  },
+  "b3-section-2-records.json": {
+    section: "rivers-of-asia",
+    ids: ["yangtze-longest-asia", "irtysh-long-tributary", "yenisei-most-water-russia"],
+  },
   "section-1-facts.json": {
     section: "continents-and-oceans",
     ids: ["north", "south", "east", "west",

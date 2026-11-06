@@ -1,0 +1,98 @@
+{
+ "section": "mountains-of-europe",
+ "block": 2,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "alps-highest-in-europe",
+   "order": 1,
+   "object": "alps",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Alps",
+    "ru": "Альпы"
+   },
+   "fact": {
+    "ru": "При проведении границы Европы по Кумо-Манычской впадине Альпы являются самой высокой горной системой Европы. Их высшая точка — Монблан, около 4800 м.",
+    "en": "When the Europe–Asia boundary is drawn along the Kuma–Manych Depression, the Alps are Europe's highest mountain range. Their highest peak, Mont Blanc, rises to about 4,800 m."
+   },
+   "figure": {
+    "value": 4806,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/X5TXYq2ijDoS5S7TEJgtBb"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "a6fe1ee0ce4ba9f3"
+   }
+  },
+  {
+   "id": "galdhopiggen-highest-northern-europe",
+   "order": 2,
+   "object": "scandinavian-mountains",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Scandinavian Mountains",
+    "ru": "Скандинавские горы"
+   },
+   "fact": {
+    "en": "Galdhøpiggen in the Scandinavian Mountains is the highest mountain in Northern Europe, 2,469 m.",
+    "ru": "Галлхёпигген в Скандинавских горах — самая высокая гора Северной Европы, 2469 м."
+   },
+   "figure": {
+    "value": 2469,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/X5TXYq2ijDoS5S7TEJgtBb"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "8dd9b1a75b41f55a"
+   }
+  },
+  {
+   "id": "aneto-highest-pyrenees",
+   "order": 3,
+   "object": "pyrenees",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Pyrenees",
+    "ru": "Пиренеи"
+   },
+   "fact": {
+    "en": "Aneto is the highest peak of the Pyrenees, 3,404 m.",
+    "ru": "Ането — самая высокая вершина Пиренеев, 3404 м."
+   },
+   "figure": {
+    "value": 3404,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/X5TXYq2ijDoS5S7TEJgtBb"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "3c4cf5b2f6fe47eb"
+   }
+  }
+ ]
+}

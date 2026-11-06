@@ -1,0 +1,500 @@
+{
+ "section": "countries-centre-south-and-east",
+ "block": 2,
+ "use": "introduction cards, one fact per country and its capital; ids match data/maps/europe-countries-5.json",
+ "decisions": [
+  "Svetlana (26.10.2026): Crimea never appears in country or capital tasks; Natural Earth draws it in Russia, so it is cut out of Russia and belongs to no tap area. Kosovo is not part of Serbia's tap area and appears in no task (plan approved 28.10.2026).",
+  "Svetlana (28.10.2026): Germany, Switzerland and Austria moved here from section 4; Estonia, Latvia and Lithuania added (Tallinn, Riga and Vilnius dots drawn on europe-capitals.webp); the section card says the split into sections is educational, not strictly regional (the UN puts the Baltic states in Northern Europe, Germany, Switzerland and Austria in Western Europe).",
+  "Svetlana (28.10.2026): plan, facts and records approved («Согласна»)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Центральная Европа",
+    "en": "Central Europe"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Южная Европа",
+    "en": "Southern Europe"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Прибалтика и Восточная Европа",
+    "en": "The Baltic states and Eastern Europe"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "germany",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Germany",
+    "ru": "Германия"
+   },
+   "capital": {
+    "en": "Berlin",
+    "ru": "Берлин"
+   },
+   "fact": {
+    "en": "Berlin, the capital of Germany, stands on the River Spree. Its symbol is the Brandenburg Gate.",
+    "ru": "Столица Германии Берлин стоит на реке Шпрее. Его символ — Бранденбургские ворота."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "b14f5384c098d616"
+   }
+  },
+  {
+   "id": "switzerland",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Switzerland",
+    "ru": "Швейцария"
+   },
+   "capital": {
+    "en": "Bern",
+    "ru": "Берн"
+   },
+   "fact": {
+    "en": "Switzerland has four national languages: German, French, Italian and Romansh. By law the country has no capital: Bern is the 'federal city', where the government and parliament sit.",
+    "ru": "В Швейцарии четыре государственных языка: немецкий, французский, итальянский и ретороманский. По закону столицы у страны нет: Берн — «федеральный город», где работают правительство и парламент."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "da09fc9227f4b6cb"
+   }
+  },
+  {
+   "id": "austria",
+   "order": 3,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Austria",
+    "ru": "Австрия"
+   },
+   "capital": {
+    "en": "Vienna",
+    "ru": "Вена"
+   },
+   "fact": {
+    "en": "Vienna, the capital of Austria, stands on the Danube. It is called the city of music: Mozart, Beethoven and Strauss lived here.",
+    "ru": "Столица Австрии Вена стоит на Дунае. Её называют городом музыки: здесь жили Моцарт, Бетховен и Штраус."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "b7532d4bac353a0a"
+   }
+  },
+  {
+   "id": "czechia",
+   "order": 4,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Czechia",
+    "ru": "Чехия"
+   },
+   "capital": {
+    "en": "Prague",
+    "ru": "Прага"
+   },
+   "fact": {
+    "en": "Prague, the capital of Czechia, stands on the River Vltava. Its old Charles Bridge is lined with thirty statues.",
+    "ru": "Столица Чехии Прага стоит на реке Влтаве. Старинный Карлов мост украшают тридцать статуй."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "cdbc9bf3706550bf"
+   }
+  },
+  {
+   "id": "poland",
+   "order": 5,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Poland",
+    "ru": "Польша"
+   },
+   "capital": {
+    "en": "Warsaw",
+    "ru": "Варшава"
+   },
+   "fact": {
+    "en": "Warsaw, the capital of Poland, stands on the Vistula. Its Old Town was destroyed in the Second World War and rebuilt using old paintings and drawings.",
+    "ru": "Столица Польши Варшава стоит на Висле. Её Старый город, разрушенный во Вторую мировую войну, восстановили по старинным картинам и чертежам."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "df0a2291704a38f6"
+   }
+  },
+  {
+   "id": "hungary",
+   "order": 6,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Hungary",
+    "ru": "Венгрия"
+   },
+   "capital": {
+    "en": "Budapest",
+    "ru": "Будапешт"
+   },
+   "fact": {
+    "en": "The name of Hungary's capital joins two towns, Buda and Pest, which stand on opposite banks of the Danube.",
+    "ru": "Имя столицы Венгрии соединяет два города: Буду и Пешт, которые стоят на разных берегах Дуная."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "03329aecc37e4e1a"
+   }
+  },
+  {
+   "id": "italy",
+   "order": 7,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Italy",
+    "ru": "Италия"
+   },
+   "capital": {
+    "en": "Rome",
+    "ru": "Рим"
+   },
+   "fact": {
+    "en": "Rome, the capital of Italy, stands on the River Tiber. It is called the Eternal City: legend says it is more than 2,700 years old.",
+    "ru": "Столица Италии Рим стоит на реке Тибр. Его называют Вечным городом: по легенде, ему больше 2700 лет."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "3148f74530c95748"
+   }
+  },
+  {
+   "id": "greece",
+   "order": 8,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Greece",
+    "ru": "Греция"
+   },
+   "capital": {
+    "en": "Athens",
+    "ru": "Афины"
+   },
+   "fact": {
+    "en": "Above Athens, the capital of Greece, the Parthenon temple stands on a rocky hill. It was built almost 2,500 years ago.",
+    "ru": "Над Афинами, столицей Греции, на скалистом холме стоит храм Парфенон. Его построили почти 2500 лет назад."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "b8a15fd71ea01f59"
+   }
+  },
+  {
+   "id": "serbia",
+   "order": 9,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Serbia",
+    "ru": "Сербия"
+   },
+   "capital": {
+    "en": "Belgrade",
+    "ru": "Белград"
+   },
+   "fact": {
+    "en": "Belgrade, the capital of Serbia, stands where the River Sava flows into the Danube.",
+    "ru": "Столица Сербии Белград стоит там, где река Сава впадает в Дунай."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "60aee5ba5f6913a6"
+   }
+  },
+  {
+   "id": "romania",
+   "order": 10,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Romania",
+    "ru": "Румыния"
+   },
+   "capital": {
+    "en": "Bucharest",
+    "ru": "Бухарест"
+   },
+   "fact": {
+    "en": "Bucharest, the capital of Romania, lies on a plain between the Carpathians and the Danube.",
+    "ru": "Столица Румынии Бухарест стоит на равнине между Карпатами и Дунаем."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "0b8238390eccebbd"
+   }
+  },
+  {
+   "id": "estonia",
+   "order": 11,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Estonia",
+    "ru": "Эстония"
+   },
+   "capital": {
+    "en": "Tallinn",
+    "ru": "Таллин"
+   },
+   "fact": {
+    "en": "Tallinn, the capital of Estonia, stands on the Gulf of Finland. Its Old Town is surrounded by a medieval wall with towers.",
+    "ru": "Столица Эстонии Таллин стоит на берегу Финского залива. Его Старый город окружён средневековой стеной с башнями."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "44842e348865f563"
+   }
+  },
+  {
+   "id": "latvia",
+   "order": 12,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Latvia",
+    "ru": "Латвия"
+   },
+   "capital": {
+    "en": "Riga",
+    "ru": "Рига"
+   },
+   "fact": {
+    "en": "Riga, the capital of Latvia, stands at the mouth of the River Daugava. It is the largest city of the Baltic states.",
+    "ru": "Столица Латвии Рига стоит в устье реки Даугавы. Это самый большой город Прибалтики."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "578e8fdc433c834d"
+   }
+  },
+  {
+   "id": "lithuania",
+   "order": 13,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Lithuania",
+    "ru": "Литва"
+   },
+   "capital": {
+    "en": "Vilnius",
+    "ru": "Вильнюс"
+   },
+   "fact": {
+    "en": "Vilnius, the capital of Lithuania, stands where the Neris and Vilnia rivers meet. The city takes its name from the Vilnia.",
+    "ru": "Столица Литвы Вильнюс стоит там, где сливаются реки Нерис и Вильня. От Вильни город и получил своё имя."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "86ec9aed972d88be"
+   }
+  },
+  {
+   "id": "belarus",
+   "order": 14,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Belarus",
+    "ru": "Беларусь"
+   },
+   "capital": {
+    "en": "Minsk",
+    "ru": "Минск"
+   },
+   "fact": {
+    "en": "Minsk, the capital of Belarus, stands on the River Svislach. Belarus has more than 10,000 lakes.",
+    "ru": "Столица Беларуси Минск стоит на реке Свислочь. В стране больше 10 000 озёр, поэтому её называют синеокой."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "f87e19c60d566a9a"
+   }
+  },
+  {
+   "id": "ukraine",
+   "order": 15,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Ukraine",
+    "ru": "Украина"
+   },
+   "capital": {
+    "en": "Kyiv",
+    "ru": "Киев"
+   },
+   "fact": {
+    "en": "Kyiv, the capital of Ukraine, stands on the Dnieper. It is one of the oldest cities in Eastern Europe.",
+    "ru": "Столица Украины Киев стоит на Днепре. Это один из древнейших городов Восточной Европы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "c7b9fea80c635c9f"
+   }
+  },
+  {
+   "id": "russia",
+   "order": 16,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Russia",
+    "ru": "Россия"
+   },
+   "capital": {
+    "en": "Moscow",
+    "ru": "Москва"
+   },
+   "fact": {
+    "en": "Moscow, the capital of Russia, stands on the Moskva River. The Kremlin and Red Square are in its centre.",
+    "ru": "Столица России Москва стоит на Москве-реке. В её центре находятся Кремль и Красная площадь."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Qpy3qFaf6QBmbnTAgnVTF8",
+    "note": "block 2 section 5 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "9461b78faebfb1e5"
+   }
+  }
+ ]
+}

@@ -1,0 +1,97 @@
+{
+ "section": "lakes-of-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "baikal-deepest-oldest",
+   "order": 1,
+   "object": "as-baikal",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Lake Baikal",
+    "ru": "Байкал"
+   },
+   "fact": {
+    "en": "Lake Baikal is the deepest and the oldest lake in the world: 1,642 m deep and about 25 million years old.",
+    "ru": "Байкал — самое глубокое и самое древнее озеро мира: глубина 1642 м, возраст около 25 миллионов лет."
+   },
+   "figure": {
+    "value": 1642,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/VZJqAi5MQJim1Xr3SkJcpq",
+    "note": "block 3 section 3 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "6c5888a8f659ae8c"
+   }
+  },
+  {
+   "id": "dead-sea-lowest-land",
+   "order": 2,
+   "object": "as-dead-sea",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Dead Sea",
+    "ru": "Мёртвое море"
+   },
+   "fact": {
+    "en": "The Dead Sea is the lowest place on land: its shore lies about 430 m below the level of the ocean.",
+    "ru": "Мёртвое море — самое низкое место на суше: его берег лежит примерно на 430 м ниже уровня океана."
+   },
+   "figure": {
+    "value": -430,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/VZJqAi5MQJim1Xr3SkJcpq",
+    "note": "block 3 section 3 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "5bc8e96a0dc9d693"
+   }
+  },
+  {
+   "id": "caspian-largest-lake",
+   "order": 3,
+   "object": "as-caspian",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Caspian Sea",
+    "ru": "Каспийское море"
+   },
+   "fact": {
+    "en": "The Caspian Sea is the largest lake in the world.",
+    "ru": "Каспийское море — самое большое озеро мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/VZJqAi5MQJim1Xr3SkJcpq",
+    "note": "block 3 section 3 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "282a33202261dc86"
+   }
+  }
+ ]
+}

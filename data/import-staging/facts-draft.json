@@ -1,0 +1,2449 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "warning": "Source text only. A bridge/context label and candidate phase do not approve truth, prerequisite facts, unlock timing, or geographic semantics.",
+  "sources": [
+    {
+      "bookId": "l1",
+      "source": "Level 1 Oceans & Continents.pdf",
+      "sha256": "6ed1badf41662af9efd35a1324584a8bbab08d1df91872c44bdf1f629e2b7946"
+    },
+    {
+      "bookId": "l2",
+      "source": "GeoWords Level 2 Rivers-2.pdf",
+      "sha256": "defb96e61d0c38c7814d49bd5d9b513ca68520bf060468c51cda638e67d3c11d"
+    }
+  ],
+  "sourceBlocks": [
+    {
+      "id": "source-l1-p06-continents",
+      "status": "editorial_pending",
+      "category": "intro",
+      "text": {
+        "en": "There are seven continents on Earth: Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
+      },
+      "sourceLines": [
+        {
+          "text": "There are seven continents on Earth: Asia, Africa, North",
+          "bbox": [
+            227.483,
+            121.028,
+            666.521,
+            141.872
+          ]
+        },
+        {
+          "text": "America, South America, Antarctica, Europe, and Australia.",
+          "bbox": [
+            227.483,
+            146.528,
+            694.034,
+            167.372
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          225,
+          115,
+          740,
+          175
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p06-eurasia",
+      "status": "editorial_pending",
+      "category": "intro",
+      "text": {
+        "en": "Sometimes Europe and Asia are counted as one continent. Together, they are called Eurasia."
+      },
+      "sourceLines": [
+        {
+          "text": "Sometimes Europe and Asia",
+          "bbox": [
+            488.875,
+            186.278,
+            715.447,
+            207.122
+          ]
+        },
+        {
+          "text": "are counted as one continent.",
+          "bbox": [
+            488.875,
+            211.778,
+            732.058,
+            232.622
+          ]
+        },
+        {
+          "text": "Together, they are called Eurasia.",
+          "bbox": [
+            436.803,
+            239.128,
+            699.59,
+            259.972
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          180,
+          740,
+          268
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p06-oceans",
+      "status": "editorial_pending",
+      "category": "intro",
+      "text": {
+        "en": "There are five oceans on Earth: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans."
+      },
+      "sourceLines": [
+        {
+          "text": "There are five oceans on",
+          "bbox": [
+            496.945,
+            283.243,
+            690.949,
+            304.087
+          ]
+        },
+        {
+          "text": "Earth: the Pacific, Atlantic,",
+          "bbox": [
+            496.945,
+            308.743,
+            707.635,
+            329.587
+          ]
+        },
+        {
+          "text": "Indian, Southern, and Arctic Oceans.",
+          "bbox": [
+            436.208,
+            334.922,
+            726.542,
+            355.766
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          278,
+          740,
+          362
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p06-land-water",
+      "status": "editorial_pending",
+      "category": "intro",
+      "text": {
+        "en": "Continents are very large areas of land. Oceans are very large areas of salt water."
+      },
+      "sourceLines": [
+        {
+          "text": "Continents are very large",
+          "bbox": [
+            492.689,
+            380.071,
+            693.028,
+            400.915
+          ]
+        },
+        {
+          "text": "areas of land.",
+          "bbox": [
+            492.689,
+            405.571,
+            597.69,
+            426.415
+          ]
+        },
+        {
+          "text": "Oceans are very large areas of",
+          "bbox": [
+            439.213,
+            424.671,
+            677.046,
+            445.515
+          ]
+        },
+        {
+          "text": "salt water.",
+          "bbox": [
+            439.213,
+            450.171,
+            520.234,
+            471.015
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          375,
+          740,
+          476
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p06-pacific-map",
+      "status": "editorial_pending",
+      "category": "intro",
+      "text": {
+        "en": "The Pacific Ocean appears on both sides of the map, but it is one ocean."
+      },
+      "sourceLines": [
+        {
+          "text": "The Pacific Ocean appears on",
+          "bbox": [
+            478.554,
+            483.706,
+            716.053,
+            504.55
+          ]
+        },
+        {
+          "text": "both sides of the map, but it is",
+          "bbox": [
+            478.554,
+            509.206,
+            720.453,
+            530.05
+          ]
+        },
+        {
+          "text": "one ocean.",
+          "bbox": [
+            478.554,
+            534.706,
+            565.27,
+            555.55
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          475,
+          480,
+          740,
+          558
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p08-continent-properties",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "Eurasia contains Europe and Asia. The largest continent is Asia. The smallest continent is Australia. The hottest continent is Africa. The coldest continent is Antarctica."
+      },
+      "sourceLines": [
+        {
+          "text": "Eurasia contains Europe and Asia.",
+          "bbox": [
+            305.557,
+            406.175,
+            575.112,
+            427.019
+          ]
+        },
+        {
+          "text": "The largest continent is Asia.",
+          "bbox": [
+            305.557,
+            431.675,
+            533.762,
+            452.519
+          ]
+        },
+        {
+          "text": "The smallest continent is Australia.",
+          "bbox": [
+            305.557,
+            457.175,
+            582.871,
+            478.019
+          ]
+        },
+        {
+          "text": "The hottest continent is Africa.",
+          "bbox": [
+            305.557,
+            482.675,
+            550.445,
+            503.519
+          ]
+        },
+        {
+          "text": "The coldest continent is Antarctica.",
+          "bbox": [
+            305.557,
+            508.174,
+            586.709,
+            529.019
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 8,
+        "region": [
+          300,
+          405,
+          740,
+          532
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p10-oceans-left",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "There are five oceans in the world. The smallest ocean is the Arctic Ocean. The coldest ocean is the Southern Ocean."
+      },
+      "sourceLines": [
+        {
+          "text": "There are five oceans in the world.",
+          "bbox": [
+            113.943,
+            442.509,
+            352.174,
+            460.745
+          ]
+        },
+        {
+          "text": "The smallest ocean is the Arctic Ocean.",
+          "bbox": [
+            113.943,
+            464.259,
+            386.273,
+            482.495
+          ]
+        },
+        {
+          "text": "The coldest ocean is the Southern Ocean.",
+          "bbox": [
+            113.943,
+            486.009,
+            403.232,
+            504.245
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          110,
+          440,
+          410,
+          510
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p10-salinity-note"
+      ]
+    },
+    {
+      "id": "source-l1-p10-oceans-right",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The warmest ocean is the Indian Ocean. The deepest ocean is the Pacific Ocean. The saltiest ocean is the Atlantic Ocean.*"
+      },
+      "sourceLines": [
+        {
+          "text": "The warmest ocean is the Indian Ocean.",
+          "bbox": [
+            436.076,
+            443.359,
+            715.599,
+            461.595
+          ]
+        },
+        {
+          "text": "The deepest ocean is the Pacific Ocean.",
+          "bbox": [
+            436.076,
+            465.109,
+            713.332,
+            483.345
+          ]
+        },
+        {
+          "text": "The saltiest ocean is the Atlantic Ocean.*",
+          "bbox": [
+            436.076,
+            486.859,
+            717.936,
+            505.095
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          430,
+          440,
+          740,
+          510
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p10-salinity-note"
+      ]
+    },
+    {
+      "id": "source-l1-p10-salinity-note",
+      "status": "editorial_pending",
+      "category": "caveat",
+      "text": {
+        "en": "*The Atlantic is considered the saltiest of the five oceans based on its average salinity. However, salinity varies from place to place, and some areas may be saltier or less salty than others."
+      },
+      "sourceLines": [
+        {
+          "text": "*The Atlantic is considered the saltiest of the five oceans based on its average salinity. However, salinity varies from",
+          "bbox": [
+            76.515,
+            524.235,
+            703.865,
+            538.561
+          ]
+        },
+        {
+          "text": "place to place, and some areas may be saltier or less salty than others.",
+          "bbox": [
+            76.515,
+            539.235,
+            459.353,
+            553.561
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 10,
+        "region": [
+          50,
+          520,
+          740,
+          556
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p12-directions",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "To read a map, we use directions: north, south, east, and west. Every continent and ocean has northern, southern, eastern, and western parts."
+      },
+      "sourceLines": [
+        {
+          "text": "To read a map, we use directions: north, south, east, and west.",
+          "bbox": [
+            131.659,
+            437.818,
+            623.421,
+            458.662
+          ]
+        },
+        {
+          "text": "Every continent and ocean has northern, southern, eastern, and",
+          "bbox": [
+            131.659,
+            463.318,
+            640.71,
+            484.162
+          ]
+        },
+        {
+          "text": "western parts.",
+          "bbox": [
+            131.659,
+            488.818,
+            244.721,
+            509.662
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 12,
+        "region": [
+          125,
+          430,
+          740,
+          516
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p14-equator",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Equator divides the Earth into the Northern and Southern Hemispheres."
+      },
+      "sourceLines": [
+        {
+          "text": "The Equator divides the Earth into",
+          "bbox": [
+            134.932,
+            453.466,
+            391.612,
+            473.011
+          ]
+        },
+        {
+          "text": "the Northern and Southern",
+          "bbox": [
+            134.932,
+            474.466,
+            340.597,
+            494.011
+          ]
+        },
+        {
+          "text": "Hemispheres.",
+          "bbox": [
+            134.932,
+            495.466,
+            238.282,
+            515.011
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 14,
+        "region": [
+          130,
+          450,
+          415,
+          520
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p14-prime-meridian",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Prime Meridian divides the Earth into the Eastern and Western Hemispheres."
+      },
+      "sourceLines": [
+        {
+          "text": "The Prime Meridian divides the",
+          "bbox": [
+            444.256,
+            453.466,
+            677.986,
+            473.011
+          ]
+        },
+        {
+          "text": "Earth into the Eastern and Western",
+          "bbox": [
+            444.256,
+            474.466,
+            709.261,
+            494.011
+          ]
+        },
+        {
+          "text": "Hemispheres.",
+          "bbox": [
+            444.256,
+            495.466,
+            547.607,
+            515.011
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 14,
+        "region": [
+          435,
+          450,
+          740,
+          520
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p16-islands-left",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The largest island in the world is Greenland. Madagascar was once part of Africa."
+      },
+      "sourceLines": [
+        {
+          "text": "The largest island in the world is",
+          "bbox": [
+            134.932,
+            432.786,
+            375.816,
+            452.331
+          ]
+        },
+        {
+          "text": "Greenland.",
+          "bbox": [
+            134.932,
+            453.786,
+            217.042,
+            473.331
+          ]
+        },
+        {
+          "text": "Madagascar was once part of Africa.",
+          "bbox": [
+            134.932,
+            474.786,
+            405.951,
+            494.331
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          130,
+          430,
+          415,
+          503
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p16-island-continent-note"
+      ]
+    },
+    {
+      "id": "source-l1-p16-islands-right",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "Australia is both an island and a continent*. Iceland is a volcanic island."
+      },
+      "sourceLines": [
+        {
+          "text": "Australia is both an island and a",
+          "bbox": [
+            444.256,
+            436.975,
+            682.471,
+            456.52
+          ]
+        },
+        {
+          "text": "continent*.",
+          "bbox": [
+            444.256,
+            457.975,
+            525.961,
+            477.52
+          ]
+        },
+        {
+          "text": "Iceland is a volcanic island.",
+          "bbox": [
+            444.256,
+            478.975,
+            644.401,
+            498.52
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          435,
+          430,
+          740,
+          503
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p16-island-continent-note"
+      ]
+    },
+    {
+      "id": "source-l1-p16-island-continent-note",
+      "status": "editorial_pending",
+      "category": "caveat",
+      "text": {
+        "en": "*Australia is often called an “island continent” because it is surrounded by water. However, it is classified as a continent and is not included in lists of islands."
+      },
+      "sourceLines": [
+        {
+          "text": "*Australia is often called an “island continent” because it is surrounded by water. However, it is classified as a",
+          "bbox": [
+            76.515,
+            513.46,
+            722.258,
+            529.096
+          ]
+        },
+        {
+          "text": "continent and is not included in lists of islands.",
+          "bbox": [
+            76.515,
+            529.96,
+            356.427,
+            545.596
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 16,
+        "region": [
+          50,
+          510,
+          740,
+          556
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p18-residents-climate-population",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "There are no permanent residents in Antarctica. Only scientists live there for research. The Pacific Ocean is the largest and the most geologically active ocean. Asia is the most populous continent. South America is the wettest continent."
+      },
+      "sourceLines": [
+        {
+          "text": "There are no permanent residents in Antarctica.",
+          "bbox": [
+            116.844,
+            411.171,
+            451.79,
+            429.407
+          ]
+        },
+        {
+          "text": "Only scientists live there for research.",
+          "bbox": [
+            93.055,
+            430.671,
+            351.883,
+            448.907
+          ]
+        },
+        {
+          "text": "The Pacific Ocean is the largest and the most geologically",
+          "bbox": [
+            116.844,
+            450.171,
+            521.821,
+            468.407
+          ]
+        },
+        {
+          "text": "active ocean.",
+          "bbox": [
+            116.844,
+            469.671,
+            207.486,
+            487.907
+          ]
+        },
+        {
+          "text": "Asia is the most populous continent.",
+          "bbox": [
+            116.844,
+            489.171,
+            372.02,
+            507.407
+          ]
+        },
+        {
+          "text": "South America is the wettest continent.",
+          "bbox": [
+            116.844,
+            508.671,
+            394.184,
+            526.906
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 18,
+        "region": [
+          90,
+          408,
+          740,
+          529
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p20-records-left",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "Africa has the longest river — the Nile.* Asia has the highest mountain — Mount Everest."
+      },
+      "sourceLines": [
+        {
+          "text": "Africa has the longest",
+          "bbox": [
+            141.234,
+            381.27,
+            316.266,
+            402.114
+          ]
+        },
+        {
+          "text": "river — the Nile.*",
+          "bbox": [
+            141.234,
+            406.77,
+            272.245,
+            427.614
+          ]
+        },
+        {
+          "text": "Asia has the highest",
+          "bbox": [
+            141.234,
+            432.27,
+            302.814,
+            453.114
+          ]
+        },
+        {
+          "text": "mountain — Mount",
+          "bbox": [
+            141.234,
+            457.77,
+            298.702,
+            478.614
+          ]
+        },
+        {
+          "text": "Everest.",
+          "bbox": [
+            141.234,
+            483.27,
+            203.587,
+            504.114
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          135,
+          378,
+          410,
+          511
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p20-nile-note"
+      ]
+    },
+    {
+      "id": "source-l1-p20-records-right",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Pacific Ocean contains the deepest point on Earth. South America has the world’s longest continental mountain range — the Andes."
+      },
+      "sourceLines": [
+        {
+          "text": "The Pacific Ocean contains the",
+          "bbox": [
+            430.857,
+            381.27,
+            678.961,
+            402.114
+          ]
+        },
+        {
+          "text": "deepest point on Earth.",
+          "bbox": [
+            430.857,
+            406.77,
+            619.167,
+            427.614
+          ]
+        },
+        {
+          "text": "South America has the world’s",
+          "bbox": [
+            430.857,
+            432.27,
+            674.098,
+            453.114
+          ]
+        },
+        {
+          "text": "longest continental mountain",
+          "bbox": [
+            430.857,
+            457.77,
+            671.187,
+            478.614
+          ]
+        },
+        {
+          "text": "range — the Andes.",
+          "bbox": [
+            430.857,
+            483.27,
+            587.702,
+            504.114
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          425,
+          378,
+          740,
+          511
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l1-p20-nile-note"
+      ]
+    },
+    {
+      "id": "source-l1-p20-nile-note",
+      "status": "editorial_pending",
+      "category": "caveat",
+      "text": {
+        "en": "*Some scientists say the Amazon River may be the longest."
+      },
+      "sourceLines": [
+        {
+          "text": "*Some scientists say the Amazon River may be the longest.",
+          "bbox": [
+            74.54,
+            521.335,
+            428.036,
+            536.971
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 20,
+        "region": [
+          50,
+          518,
+          740,
+          550
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p22-deserts",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The largest desert in the world is Antarctica. It is a cold desert! The continent with the largest hot desert is Africa."
+      },
+      "sourceLines": [
+        {
+          "text": "The largest desert in the world is",
+          "bbox": [
+            134.645,
+            420.575,
+            378.688,
+            440.11
+          ]
+        },
+        {
+          "text": "Antarctica. It is a cold desert!",
+          "bbox": [
+            134.645,
+            443.825,
+            349.549,
+            463.36
+          ]
+        },
+        {
+          "text": "The continent with the largest hot",
+          "bbox": [
+            134.645,
+            467.075,
+            391.397,
+            486.61
+          ]
+        },
+        {
+          "text": "desert is Africa.",
+          "bbox": [
+            134.645,
+            490.325,
+            249.187,
+            509.86
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 22,
+        "region": [
+          130,
+          415,
+          415,
+          518
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p22-coldest-settlement",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The coldest place where people live is in Asia (Oymyakon, Russia). Africa is the hottest continent."
+      },
+      "sourceLines": [
+        {
+          "text": "The coldest place where people",
+          "bbox": [
+            457.54,
+            420.575,
+            695.003,
+            440.11
+          ]
+        },
+        {
+          "text": "live is in Asia (Oymyakon, Russia).",
+          "bbox": [
+            457.54,
+            443.825,
+            704.699,
+            463.36
+          ]
+        },
+        {
+          "text": "Africa is the hottest continent.",
+          "bbox": [
+            457.54,
+            467.075,
+            684.63,
+            486.61
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 22,
+        "region": [
+          450,
+          415,
+          740,
+          518
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p24-appalachians",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Appalachian Mountains in North America are among the oldest mountain ranges in the world."
+      },
+      "sourceLines": [
+        {
+          "text": "The Appalachian Mountains in North",
+          "bbox": [
+            109.071,
+            451.363,
+            367.117,
+            469.599
+          ]
+        },
+        {
+          "text": "America are among the oldest mountain",
+          "bbox": [
+            109.071,
+            470.863,
+            395.633,
+            489.099
+          ]
+        },
+        {
+          "text": "ranges in the world.",
+          "bbox": [
+            109.071,
+            490.363,
+            247.65,
+            508.599
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 24,
+        "region": [
+          105,
+          448,
+          415,
+          519
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l1-p24-himalayas",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Himalayas in Asia are among the youngest mountain ranges in the world."
+      },
+      "sourceLines": [
+        {
+          "text": "The Himalayas in Asia are among the",
+          "bbox": [
+            428.556,
+            451.363,
+            687.945,
+            469.599
+          ]
+        },
+        {
+          "text": "youngest mountain ranges in the world.",
+          "bbox": [
+            428.556,
+            470.863,
+            709.813,
+            489.099
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 24,
+        "region": [
+          425,
+          448,
+          740,
+          519
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p07-nile-mediterranean",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Nile is the longest river in the world*. The Nile flows through Africa. The Nile flows into the Mediterranean Sea. The Mediterranean Sea is between Europe, Africa, and Asia."
+      },
+      "sourceLines": [
+        {
+          "text": "The Nile is the longest river in the world*.",
+          "bbox": [
+            372.859,
+            374.637,
+            718.497,
+            396.782
+          ]
+        },
+        {
+          "text": "The Nile flows through Africa.",
+          "bbox": [
+            372.859,
+            401.637,
+            623.307,
+            423.782
+          ]
+        },
+        {
+          "text": "The Nile flows into the Mediterranean Sea.",
+          "bbox": [
+            372.859,
+            428.637,
+            730.17,
+            450.782
+          ]
+        },
+        {
+          "text": "The Mediterranean Sea is between",
+          "bbox": [
+            372.859,
+            455.637,
+            666.672,
+            477.782
+          ]
+        },
+        {
+          "text": "Europe, Africa, and Asia.",
+          "bbox": [
+            372.859,
+            482.637,
+            576.953,
+            504.782
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 7,
+        "region": [
+          365,
+          370,
+          740,
+          511
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l2-p07-nile-note"
+      ]
+    },
+    {
+      "id": "source-l2-p07-nile-note",
+      "status": "editorial_pending",
+      "category": "caveat",
+      "text": {
+        "en": "*Some measurements suggest that the Amazon River may be longer."
+      },
+      "sourceLines": [
+        {
+          "text": "*Some measurements suggest that the Amazon River may be longer.",
+          "bbox": [
+            99.635,
+            518.846,
+            516.394,
+            534.482
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 7,
+        "region": [
+          90,
+          515,
+          740,
+          536
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p09-amazon-volume",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Amazon River carries more water than any other river in the world."
+      },
+      "sourceLines": [
+        {
+          "text": "The Amazon River carries more",
+          "bbox": [
+            141.311,
+            476.465,
+            343.869,
+            493.4
+          ]
+        },
+        {
+          "text": "water than any other river in the",
+          "bbox": [
+            141.311,
+            496.715,
+            350.707,
+            513.65
+          ]
+        },
+        {
+          "text": "world.",
+          "bbox": [
+            141.311,
+            516.965,
+            180.859,
+            533.901
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 9,
+        "region": [
+          135,
+          472,
+          380,
+          536
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p09-amazon-location",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Amazon River flows through South America. The Amazon River flows into the Atlantic Ocean."
+      },
+      "sourceLines": [
+        {
+          "text": "The Amazon River flows through South America.",
+          "bbox": [
+            403.021,
+            477.965,
+            718.204,
+            494.9
+          ]
+        },
+        {
+          "text": "The Amazon River flows into the Atlantic Ocean.",
+          "bbox": [
+            403.021,
+            501.215,
+            714.58,
+            518.151
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 9,
+        "region": [
+          400,
+          472,
+          740,
+          530
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p11-mississippi-gulf",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Mississippi River is one of the longest rivers in North America. The Mississippi River flows through North America. The Mississippi River flows into the Gulf of Mexico. The Gulf of Mexico is a large body of water bordered by North America."
+      },
+      "sourceLines": [
+        {
+          "text": "The Mississippi River is one of the longest rivers in North America.",
+          "bbox": [
+            102.003,
+            410.495,
+            591.583,
+            430.03
+          ]
+        },
+        {
+          "text": "The Mississippi River flows through North America.",
+          "bbox": [
+            102.003,
+            433.745,
+            482.141,
+            453.28
+          ]
+        },
+        {
+          "text": "The Mississippi River flows into the Gulf of Mexico.",
+          "bbox": [
+            102.003,
+            456.995,
+            473.654,
+            476.53
+          ]
+        },
+        {
+          "text": "The Gulf of Mexico is a large body of water bordered by North America.",
+          "bbox": [
+            102.003,
+            480.245,
+            630.073,
+            499.78
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 11,
+        "region": [
+          95,
+          405,
+          740,
+          505
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p13-yangtze",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Yangtze River is the longest river in Asia. The Yangtze River flows through China. The Yangtze River has played an important role in Chinese history."
+      },
+      "sourceLines": [
+        {
+          "text": "The Yangtze River is the longest river",
+          "bbox": [
+            134.932,
+            408.016,
+            410.796,
+            427.561
+          ]
+        },
+        {
+          "text": "in Asia.",
+          "bbox": [
+            134.932,
+            429.016,
+            187.132,
+            448.561
+          ]
+        },
+        {
+          "text": "The Yangtze River flows through",
+          "bbox": [
+            134.932,
+            450.016,
+            377.662,
+            469.561
+          ]
+        },
+        {
+          "text": "China.",
+          "bbox": [
+            134.932,
+            471.016,
+            182.092,
+            490.561
+          ]
+        },
+        {
+          "text": "The Yangtze River has played an",
+          "bbox": [
+            134.932,
+            492.016,
+            376.237,
+            511.561
+          ]
+        },
+        {
+          "text": "important role in Chinese history.",
+          "bbox": [
+            134.932,
+            513.016,
+            384.501,
+            532.561
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 13,
+        "region": [
+          130,
+          405,
+          425,
+          536
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p13-direction-tips",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "“North” means up on the map. “South” means down. “East” is right. “West” is left."
+      },
+      "sourceLines": [
+        {
+          "text": "“North” means up on the map.",
+          "bbox": [
+            522.989,
+            432.736,
+            707.176,
+            448.828
+          ]
+        },
+        {
+          "text": "“South” means down.",
+          "bbox": [
+            522.989,
+            449.632,
+            652.037,
+            465.268
+          ]
+        },
+        {
+          "text": "“East” is right.",
+          "bbox": [
+            522.989,
+            466.132,
+            605.129,
+            481.768
+          ]
+        },
+        {
+          "text": "“West” is left.",
+          "bbox": [
+            522.989,
+            482.632,
+            600.557,
+            498.268
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 13,
+        "region": [
+          515,
+          425,
+          740,
+          508
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p15-ganges",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Ganges River is one of the most important rivers in India."
+      },
+      "sourceLines": [
+        {
+          "text": "The Ganges River is one of the most",
+          "bbox": [
+            134.932,
+            463.882,
+            404.092,
+            483.427
+          ]
+        },
+        {
+          "text": "important rivers in India.",
+          "bbox": [
+            134.932,
+            484.882,
+            318.996,
+            504.427
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 15,
+        "region": [
+          130,
+          460,
+          415,
+          510
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p15-rituals",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "Many people believe the river is sacred and use it for special rituals."
+      },
+      "sourceLines": [
+        {
+          "text": "Many people believe the river is",
+          "bbox": [
+            438.765,
+            463.882,
+            674.415,
+            483.427
+          ]
+        },
+        {
+          "text": "sacred and use it for special rituals.",
+          "bbox": [
+            438.765,
+            484.882,
+            699.69,
+            504.427
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 15,
+        "region": [
+          430,
+          460,
+          740,
+          510
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p17-danube",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Danube River is the second-longest river in Europe. It flows through many countries. In the Middle Ages, it was an important border between the Roman Empire and other lands."
+      },
+      "sourceLines": [
+        {
+          "text": "The Danube River is the second-longest",
+          "bbox": [
+            102.548,
+            382.016,
+            361.945,
+            398.951
+          ]
+        },
+        {
+          "text": "river in Europe.",
+          "bbox": [
+            102.548,
+            402.266,
+            200.12,
+            419.201
+          ]
+        },
+        {
+          "text": "It flows through many countries.",
+          "bbox": [
+            102.548,
+            422.516,
+            313.554,
+            439.451
+          ]
+        },
+        {
+          "text": "In the Middle Ages, it was an important",
+          "bbox": [
+            102.548,
+            442.766,
+            358.211,
+            459.701
+          ]
+        },
+        {
+          "text": "border between the Roman Empire and",
+          "bbox": [
+            102.548,
+            463.016,
+            363.719,
+            479.951
+          ]
+        },
+        {
+          "text": "other lands.",
+          "bbox": [
+            102.548,
+            483.266,
+            179.174,
+            500.201
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 17,
+        "region": [
+          95,
+          378,
+          380,
+          508
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p17-roman-forts",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "Long ago, Roman soldiers built forts along the Danube River to protect their empire. These forts formed a long defensive line along the border. They helped guard the empire from tribes living beyond the river."
+      },
+      "sourceLines": [
+        {
+          "text": "Long ago, Roman soldiers built",
+          "bbox": [
+            498.882,
+            396.424,
+            638.431,
+            408.151
+          ]
+        },
+        {
+          "text": "forts along the Danube River to",
+          "bbox": [
+            498.882,
+            410.487,
+            640.087,
+            422.213
+          ]
+        },
+        {
+          "text": "protect their empire.",
+          "bbox": [
+            498.882,
+            424.548,
+            592.016,
+            436.275
+          ]
+        },
+        {
+          "text": "These forts formed a long",
+          "bbox": [
+            556.457,
+            440.001,
+            671.765,
+            451.728
+          ]
+        },
+        {
+          "text": "defensive line along the border.",
+          "bbox": [
+            556.457,
+            452.001,
+            698.378,
+            463.728
+          ]
+        },
+        {
+          "text": "They helped guard the empire",
+          "bbox": [
+            510.371,
+            471.992,
+            647.684,
+            483.719
+          ]
+        },
+        {
+          "text": "from tribes living beyond the",
+          "bbox": [
+            510.371,
+            483.992,
+            641.483,
+            495.719
+          ]
+        },
+        {
+          "text": "river.",
+          "bbox": [
+            510.371,
+            495.992,
+            531.935,
+            507.719
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 17,
+        "region": [
+          490,
+          393,
+          740,
+          513
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p19-volga",
+      "status": "editorial_pending",
+      "category": "bridge",
+      "text": {
+        "en": "The Volga River is the longest river in Europe*. It flows through Russia and empties into the Caspian Sea. It has been an important trade route for centuries"
+      },
+      "sourceLines": [
+        {
+          "text": "The Volga River is the longest river in Europe*.",
+          "bbox": [
+            138.62,
+            399.933,
+            412.412,
+            415.569
+          ]
+        },
+        {
+          "text": "It flows through Russia and empties into the",
+          "bbox": [
+            138.62,
+            418.683,
+            404.996,
+            434.319
+          ]
+        },
+        {
+          "text": "Caspian Sea.",
+          "bbox": [
+            138.62,
+            437.433,
+            213.884,
+            453.069
+          ]
+        },
+        {
+          "text": "It has been an important trade route for",
+          "bbox": [
+            138.62,
+            456.183,
+            378.224,
+            471.819
+          ]
+        },
+        {
+          "text": "centuries",
+          "bbox": [
+            138.62,
+            474.933,
+            194.648,
+            490.569
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          130,
+          397,
+          435,
+          497
+        ]
+      },
+      "caveatBlockIds": [
+        "source-l2-p19-volga-kama-note"
+      ]
+    },
+    {
+      "id": "source-l2-p19-caspian",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "The Caspian Sea is the largest lake in the world, even though it is called a sea."
+      },
+      "sourceLines": [
+        {
+          "text": "The Caspian Sea is the",
+          "bbox": [
+            512.655,
+            408.473,
+            646.77,
+            422.8
+          ]
+        },
+        {
+          "text": "largest lake in the world,",
+          "bbox": [
+            505.764,
+            425.723,
+            653.648,
+            440.05
+          ]
+        },
+        {
+          "text": "even though it is called a",
+          "bbox": [
+            504.37,
+            442.973,
+            655.04,
+            457.3
+          ]
+        },
+        {
+          "text": "sea.",
+          "bbox": [
+            568.553,
+            460.223,
+            590.876,
+            474.55
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          490,
+          405,
+          740,
+          481
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p19-volga-kama-note",
+      "status": "editorial_pending",
+      "category": "caveat",
+      "text": {
+        "en": "*The Volga is traditionally considered the longest river in Europe. However, the Kama is longer than the Volga before the two rivers meet."
+      },
+      "sourceLines": [
+        {
+          "text": "*The Volga is traditionally considered the longest river in Europe. However, the Kama is longer than the Volga before the",
+          "bbox": [
+            82.644,
+            501.903,
+            680.933,
+            514.93
+          ]
+        },
+        {
+          "text": "two rivers meet.",
+          "bbox": [
+            82.644,
+            515.403,
+            162.504,
+            528.43
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 19,
+        "region": [
+          75,
+          499,
+          740,
+          531
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p21-civilizations",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "Many of the world’s first civilizations began near rivers."
+      },
+      "sourceLines": [
+        {
+          "text": "Many of the world’s first",
+          "bbox": [
+            263.157,
+            353.874,
+            420.993,
+            369.51
+          ]
+        },
+        {
+          "text": "civilizations began near",
+          "bbox": [
+            264.563,
+            372.624,
+            419.579,
+            388.26
+          ]
+        },
+        {
+          "text": "rivers.",
+          "bbox": [
+            322.922,
+            391.374,
+            361.214,
+            407.01
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 21,
+        "region": [
+          250,
+          350,
+          435,
+          413
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p21-hydronyms",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "You learned 7 new river names, also called hydronyms. A hydronym is the name of a body of water on a map."
+      },
+      "sourceLines": [
+        {
+          "text": "You learned 7 new river names,",
+          "bbox": [
+            509.713,
+            424.192,
+            713.797,
+            439.828
+          ]
+        },
+        {
+          "text": "also called hydronyms.",
+          "bbox": [
+            537.474,
+            442.942,
+            686.034,
+            458.578
+          ]
+        },
+        {
+          "text": "A hydronym is the name of a",
+          "bbox": [
+            514.423,
+            461.296,
+            709.079,
+            477.388
+          ]
+        },
+        {
+          "text": "body of water on a map.",
+          "bbox": [
+            532.752,
+            480.442,
+            690.744,
+            496.078
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 21,
+        "region": [
+          500,
+          420,
+          740,
+          503
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p23-river-benefits",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "Rivers give people fresh water, food, and ways to travel."
+      },
+      "sourceLines": [
+        {
+          "text": "Rivers give people fresh",
+          "bbox": [
+            323.05,
+            425.475,
+            479.866,
+            441.111
+          ]
+        },
+        {
+          "text": "water, food, and ways to",
+          "bbox": [
+            322.57,
+            444.225,
+            480.346,
+            459.861
+          ]
+        },
+        {
+          "text": "travel.",
+          "bbox": [
+            381.714,
+            462.975,
+            421.194,
+            478.611
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 23,
+        "region": [
+          310,
+          421,
+          500,
+          486
+        ]
+      },
+      "caveatBlockIds": []
+    },
+    {
+      "id": "source-l2-p25-care-for-rivers",
+      "status": "editorial_pending",
+      "category": "context",
+      "text": {
+        "en": "Rivers are important for our planet. Let’s help keep them clean and healthy!"
+      },
+      "sourceLines": [
+        {
+          "text": "Rivers are important for our planet.",
+          "bbox": [
+            247.3,
+            453.527,
+            518.021,
+            473.062
+          ]
+        },
+        {
+          "text": "Let’s help keep them clean and healthy!",
+          "bbox": [
+            233.331,
+            478.277,
+            531.975,
+            497.812
+          ]
+        }
+      ],
+      "provenance": {
+        "source": "GeoWords Level 2 Rivers-2.pdf",
+        "pdfPage": 25,
+        "region": [
+          225,
+          450,
+          550,
+          505
+        ]
+      },
+      "caveatBlockIds": []
+    }
+  ],
+  "lessons": [
+    {
+      "id": "l1-intro",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "before",
+        "stepId": "l1-01-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p06-continents",
+        "source-l1-p06-eurasia",
+        "source-l1-p06-oceans",
+        "source-l1-p06-land-water",
+        "source-l1-p06-pacific-map"
+      ],
+      "requiredBlockIds": null
+    },
+    {
+      "id": "l1-01-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-01-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p08-continent-properties"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-02"
+    },
+    {
+      "id": "l1-02-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-02-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p10-oceans-left",
+        "source-l1-p10-oceans-right",
+        "source-l1-p10-salinity-note"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-03"
+    },
+    {
+      "id": "l1-03-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-03-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p12-directions"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-04"
+    },
+    {
+      "id": "l1-04-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-04-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p14-equator",
+        "source-l1-p14-prime-meridian"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-05"
+    },
+    {
+      "id": "l1-05-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-05-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p16-islands-left",
+        "source-l1-p16-islands-right",
+        "source-l1-p16-island-continent-note"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-06"
+    },
+    {
+      "id": "l1-06-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-06-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p18-residents-climate-population"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-07"
+    },
+    {
+      "id": "l1-07-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-07-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p20-records-left",
+        "source-l1-p20-records-right",
+        "source-l1-p20-nile-note"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-08"
+    },
+    {
+      "id": "l1-08-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-08-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p22-deserts",
+        "source-l1-p22-coldest-settlement"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-09"
+    },
+    {
+      "id": "l1-09-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-09-step"
+      },
+      "sourceBlockIds": [
+        "source-l1-p24-appalachians",
+        "source-l1-p24-himalayas"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l1-10"
+    },
+    {
+      "id": "l1-10-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l1-10-step"
+      },
+      "sourceBlockIds": [],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": null
+    },
+    {
+      "id": "l2-01-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-01-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p07-nile-mediterranean",
+        "source-l2-p07-nile-note"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-02"
+    },
+    {
+      "id": "l2-02-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-02-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p09-amazon-volume",
+        "source-l2-p09-amazon-location"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-03"
+    },
+    {
+      "id": "l2-03-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-03-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p11-mississippi-gulf"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-04"
+    },
+    {
+      "id": "l2-04-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-04-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p13-yangtze",
+        "source-l2-p13-direction-tips"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-05"
+    },
+    {
+      "id": "l2-05-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-05-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p15-ganges",
+        "source-l2-p15-rituals"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-06"
+    },
+    {
+      "id": "l2-06-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-06-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p17-danube",
+        "source-l2-p17-roman-forts"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-07"
+    },
+    {
+      "id": "l2-07-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-07-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p19-volga",
+        "source-l2-p19-caspian",
+        "source-l2-p19-volga-kama-note"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-08"
+    },
+    {
+      "id": "l2-08-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-08-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p21-civilizations",
+        "source-l2-p21-hydronyms"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-09"
+    },
+    {
+      "id": "l2-09-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-09-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p23-river-benefits"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": "l2-10"
+    },
+    {
+      "id": "l2-10-after",
+      "status": "editorial_pending",
+      "candidateBinding": {
+        "phase": "after",
+        "stepId": "l2-10-step"
+      },
+      "sourceBlockIds": [
+        "source-l2-p25-care-for-rivers"
+      ],
+      "requiredBlockIds": null,
+      "nextAuthoredPuzzleId": null
+    }
+  ]
+}

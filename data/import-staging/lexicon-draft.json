@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "warning": "Global lexicon draft: existing Rivers vocabulary plus proposed L1 additions. No teaching facts are unlocked by these definitions. Plans are not generated puzzles.",
+  "entries": [
+    {
+      "id": "aquifer",
+      "status": "editorial_pending",
+      "word": "AQUIFER",
+      "definition": {
+        "en": "AQUIFER — a layer of permeable rock or sediment that holds groundwater."
+      },
+      "conceptFamily": "aquifer",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "alluvium",
+      "status": "editorial_pending",
+      "word": "ALLUVIUM",
+      "definition": {
+        "en": "ALLUVIUM — loose material deposited by rivers."
+      },
+      "conceptFamily": "alluvium",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "riparian",
+      "status": "editorial_pending",
+      "word": "RIPARIAN",
+      "definition": {
+        "en": "RIPARIAN — relating to land beside rivers or streams."
+      },
+      "conceptFamily": "riparian",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "wetland",
+      "status": "editorial_pending",
+      "word": "WETLAND",
+      "definition": {
+        "en": "WETLAND — land saturated with water for some or all of the year."
+      },
+      "conceptFamily": "wetland",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "fluvial",
+      "status": "editorial_pending",
+      "word": "FLUVIAL",
+      "definition": {
+        "en": "FLUVIAL — relating to rivers and their processes."
+      },
+      "conceptFamily": "fluvial",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "estuary",
+      "status": "editorial_pending",
+      "word": "ESTUARY",
+      "definition": {
+        "en": "ESTUARY — a place where river freshwater and seawater meet."
+      },
+      "conceptFamily": "estuary",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "humidity",
+      "status": "editorial_pending",
+      "word": "HUMIDITY",
+      "definition": {
+        "en": "HUMIDITY — the amount of water vapor in the air."
+      },
+      "conceptFamily": "humidity",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "ecology",
+      "status": "editorial_pending",
+      "word": "ECOLOGY",
+      "definition": {
+        "en": "ECOLOGY — the study of living things and their environment."
+      },
+      "conceptFamily": "ecology",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "biomass",
+      "status": "editorial_pending",
+      "word": "BIOMASS",
+      "definition": {
+        "en": "BIOMASS — the mass of living organisms in a given area."
+      },
+      "conceptFamily": "biomass",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "canopy",
+      "status": "editorial_pending",
+      "word": "CANOPY",
+      "definition": {
+        "en": "CANOPY — the upper layer of branches and leaves in a forest."
+      },
+      "conceptFamily": "canopy",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "endemic",
+      "status": "editorial_pending",
+      "word": "ENDEMIC",
+      "definition": {
+        "en": "ENDEMIC — native to and found naturally in a particular geographic region."
+      },
+      "conceptFamily": "endemic",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "habitat",
+      "status": "editorial_pending",
+      "word": "HABITAT",
+      "definition": {
+        "en": "HABITAT — the natural home of a plant or animal."
+      },
+      "conceptFamily": "habitat",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "erosion",
+      "status": "editorial_pending",
+      "word": "EROSION",
+      "definition": {
+        "en": "EROSION — the wearing away and transport of soil or rock."
+      },
+      "conceptFamily": "erosion",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "rapids",
+      "status": "editorial_pending",
+      "word": "RAPIDS",
+      "definition": {
+        "en": "RAPIDS — fast-moving rough water in a river."
+      },
+      "conceptFamily": "rapids",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "freight",
+      "status": "editorial_pending",
+      "word": "FREIGHT",
+      "definition": {
+        "en": "FREIGHT — goods carried by boat, train, truck, or other transport."
+      },
+      "conceptFamily": "freight",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "deposit",
+      "status": "editorial_pending",
+      "word": "DEPOSIT",
+      "definition": {
+        "en": "DEPOSIT — to leave or lay down material moved by water or wind."
+      },
+      "conceptFamily": "deposit",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "dredge",
+      "status": "editorial_pending",
+      "word": "DREDGE",
+      "definition": {
+        "en": "DREDGE — to remove mud or sand from the bottom of a waterway."
+      },
+      "conceptFamily": "dredge",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "brackish",
+      "status": "editorial_pending",
+      "word": "BRACKISH",
+      "definition": {
+        "en": "BRACKISH — having a mixture of saltwater and freshwater."
+      },
+      "conceptFamily": "brackish",
+      "guessabilityProposal": "medium",
+      "origin": "existing_pilot_draft",
+      "sourceReference": "data/dictionary.js",
+      "introducedFacts": null
+    },
+    {
+      "id": "atlas",
+      "status": "editorial_pending",
+      "word": "ATLAS",
+      "definition": {
+        "en": "A book or collection of maps."
+      },
+      "conceptFamily": "atlas",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "globe",
+      "status": "editorial_pending",
+      "word": "GLOBE",
+      "definition": {
+        "en": "A round model of Earth."
+      },
+      "conceptFamily": "globe",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "mapping",
+      "status": "editorial_pending",
+      "word": "MAPPING",
+      "definition": {
+        "en": "Making a map of a place or area."
+      },
+      "conceptFamily": "mapping",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "region",
+      "status": "editorial_pending",
+      "word": "REGION",
+      "definition": {
+        "en": "An area with a feature or group of features in common."
+      },
+      "conceptFamily": "region",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "border",
+      "status": "editorial_pending",
+      "word": "BORDER",
+      "definition": {
+        "en": "A line separating two areas."
+      },
+      "conceptFamily": "border",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "sphere",
+      "status": "editorial_pending",
+      "word": "SPHERE",
+      "definition": {
+        "en": "A round three-dimensional shape like a ball."
+      },
+      "conceptFamily": "sphere",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "tropics",
+      "status": "editorial_pending",
+      "word": "TROPICS",
+      "definition": {
+        "en": "The region of Earth around the Equator."
+      },
+      "conceptFamily": "tropics",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "polar",
+      "status": "editorial_pending",
+      "word": "POLAR",
+      "definition": {
+        "en": "Relating to the areas around Earth's poles."
+      },
+      "conceptFamily": "polar",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "temperate",
+      "status": "editorial_pending",
+      "word": "TEMPERATE",
+      "definition": {
+        "en": "Relating to regions between the tropics and the polar regions."
+      },
+      "conceptFamily": "temperate",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "climate",
+      "status": "editorial_pending",
+      "word": "CLIMATE",
+      "definition": {
+        "en": "The usual patterns of weather in a place over many years."
+      },
+      "conceptFamily": "climate",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "latitude",
+      "status": "editorial_pending",
+      "word": "LATITUDE",
+      "definition": {
+        "en": "The angle that tells how far north or south a place is from the Equator."
+      },
+      "conceptFamily": "latitude",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "azimuth",
+      "status": "editorial_pending",
+      "word": "AZIMUTH",
+      "definition": {
+        "en": "The angle of a direction, measured clockwise from north."
+      },
+      "conceptFamily": "azimuth",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "salinity",
+      "status": "editorial_pending",
+      "word": "SALINITY",
+      "definition": {
+        "en": "The amount of dissolved salts in water."
+      },
+      "conceptFamily": "salinity",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "seawater",
+      "status": "editorial_pending",
+      "word": "SEAWATER",
+      "definition": {
+        "en": "The salty water in seas and oceans."
+      },
+      "conceptFamily": "seawater",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "seafloor",
+      "status": "editorial_pending",
+      "word": "SEAFLOOR",
+      "definition": {
+        "en": "The bottom of a sea or ocean."
+      },
+      "conceptFamily": "seafloor",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "current",
+      "status": "editorial_pending",
+      "word": "CURRENT",
+      "definition": {
+        "en": "Water moving in a particular direction."
+      },
+      "conceptFamily": "current",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "upwelling",
+      "status": "editorial_pending",
+      "word": "UPWELLING",
+      "definition": {
+        "en": "The movement of deeper water toward the surface."
+      },
+      "conceptFamily": "upwelling",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "abyssal",
+      "status": "editorial_pending",
+      "word": "ABYSSAL",
+      "definition": {
+        "en": "Relating to a very deep part of the ocean."
+      },
+      "conceptFamily": "abyssal",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "compass",
+      "status": "editorial_pending",
+      "word": "COMPASS",
+      "definition": {
+        "en": "An instrument used to find directions."
+      },
+      "conceptFamily": "compass",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "bearing",
+      "status": "editorial_pending",
+      "word": "BEARING",
+      "definition": {
+        "en": "A direction expressed as an angle from a reference direction."
+      },
+      "conceptFamily": "bearing",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "horizon",
+      "status": "editorial_pending",
+      "word": "HORIZON",
+      "definition": {
+        "en": "The line where the sky seems to meet land or water."
+      },
+      "conceptFamily": "horizon",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "distance",
+      "status": "editorial_pending",
+      "word": "DISTANCE",
+      "definition": {
+        "en": "How far apart two places are."
+      },
+      "conceptFamily": "distance",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "locator",
+      "status": "editorial_pending",
+      "word": "LOCATOR",
+      "definition": {
+        "en": "A tool or map that helps find a place."
+      },
+      "conceptFamily": "locator",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "topography",
+      "status": "editorial_pending",
+      "word": "TOPOGRAPHY",
+      "definition": {
+        "en": "The shapes and features of the land's surface."
+      },
+      "conceptFamily": "topography",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "meridian",
+      "status": "editorial_pending",
+      "word": "MERIDIAN",
+      "definition": {
+        "en": "An imaginary line running from pole to pole on Earth."
+      },
+      "conceptFamily": "meridian",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "parallel",
+      "status": "editorial_pending",
+      "word": "PARALLEL",
+      "definition": {
+        "en": "An imaginary line joining places with the same latitude."
+      },
+      "conceptFamily": "parallel",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "grid",
+      "status": "editorial_pending",
+      "word": "GRID",
+      "definition": {
+        "en": "A pattern of lines used to locate positions on a map."
+      },
+      "conceptFamily": "grid",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "position",
+      "status": "editorial_pending",
+      "word": "POSITION",
+      "definition": {
+        "en": "The location of a place or object."
+      },
+      "conceptFamily": "position",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "coordinate",
+      "status": "editorial_pending",
+      "word": "COORDINATE",
+      "definition": {
+        "en": "One of the values used to describe a position."
+      },
+      "conceptFamily": "coordinate",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "reference",
+      "status": "editorial_pending",
+      "word": "REFERENCE",
+      "definition": {
+        "en": "A point or system used to describe a position or direction."
+      },
+      "conceptFamily": "reference",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "islet",
+      "status": "editorial_pending",
+      "word": "ISLET",
+      "definition": {
+        "en": "A small island."
+      },
+      "conceptFamily": "islet",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "peninsula",
+      "status": "editorial_pending",
+      "word": "PENINSULA",
+      "definition": {
+        "en": "Land surrounded by water on most sides and joined to other land."
+      },
+      "conceptFamily": "peninsula",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "isthmus",
+      "status": "editorial_pending",
+      "word": "ISTHMUS",
+      "definition": {
+        "en": "A narrow strip of land joining two larger land areas."
+      },
+      "conceptFamily": "isthmus",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "volcanism",
+      "status": "editorial_pending",
+      "word": "VOLCANISM",
+      "definition": {
+        "en": "The processes that move magma and volcanic material toward or onto the surface."
+      },
+      "conceptFamily": "volcanism",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "magma",
+      "status": "editorial_pending",
+      "word": "MAGMA",
+      "definition": {
+        "en": "Molten rock beneath Earth's surface."
+      },
+      "conceptFamily": "magma",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "lava",
+      "status": "editorial_pending",
+      "word": "LAVA",
+      "definition": {
+        "en": "Molten rock that has reached Earth's surface."
+      },
+      "conceptFamily": "lava",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "density",
+      "status": "editorial_pending",
+      "word": "DENSITY",
+      "definition": {
+        "en": "How much of something is found in a given space or area."
+      },
+      "conceptFamily": "density",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "settlement",
+      "status": "editorial_pending",
+      "word": "SETTLEMENT",
+      "definition": {
+        "en": "A place where people live."
+      },
+      "conceptFamily": "settlement",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "migration",
+      "status": "editorial_pending",
+      "word": "MIGRATION",
+      "definition": {
+        "en": "Movement from one place to another."
+      },
+      "conceptFamily": "migration",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "urban",
+      "status": "editorial_pending",
+      "word": "URBAN",
+      "definition": {
+        "en": "Relating to towns and cities."
+      },
+      "conceptFamily": "urban",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "rural",
+      "status": "editorial_pending",
+      "word": "RURAL",
+      "definition": {
+        "en": "Relating to the countryside."
+      },
+      "conceptFamily": "rural",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "watershed",
+      "status": "editorial_pending",
+      "word": "WATERSHED",
+      "definition": {
+        "en": "An area of land whose water drains to a common outlet."
+      },
+      "conceptFamily": "watershed",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "catchment",
+      "status": "editorial_pending",
+      "word": "CATCHMENT",
+      "definition": {
+        "en": "An area from which water flows toward a particular river, lake or other outlet."
+      },
+      "conceptFamily": "catchment",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "confluence",
+      "status": "editorial_pending",
+      "word": "CONFLUENCE",
+      "definition": {
+        "en": "A place where two streams or rivers meet."
+      },
+      "conceptFamily": "confluence",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "summit",
+      "status": "editorial_pending",
+      "word": "SUMMIT",
+      "definition": {
+        "en": "The highest point of a hill or mountain."
+      },
+      "conceptFamily": "summit",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "ridgeline",
+      "status": "editorial_pending",
+      "word": "RIDGELINE",
+      "definition": {
+        "en": "A line along the top of a ridge."
+      },
+      "conceptFamily": "ridgeline",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "headwater",
+      "status": "editorial_pending",
+      "word": "HEADWATER",
+      "definition": {
+        "en": "A stream or source area at the beginning of a river."
+      },
+      "conceptFamily": "headwater",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "aridity",
+      "status": "editorial_pending",
+      "word": "ARIDITY",
+      "definition": {
+        "en": "The condition of having very little moisture."
+      },
+      "conceptFamily": "aridity",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "drought",
+      "status": "editorial_pending",
+      "word": "DROUGHT",
+      "definition": {
+        "en": "An unusually long period with too little rain or snow for an area."
+      },
+      "conceptFamily": "drought",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "dunefield",
+      "status": "editorial_pending",
+      "word": "DUNEFIELD",
+      "definition": {
+        "en": "An area containing many dunes."
+      },
+      "conceptFamily": "dunefield",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "oasis",
+      "status": "editorial_pending",
+      "word": "OASIS",
+      "definition": {
+        "en": "A place in a desert where water is available."
+      },
+      "conceptFamily": "oasis",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "permafrost",
+      "status": "editorial_pending",
+      "word": "PERMAFROST",
+      "definition": {
+        "en": "Ground that stays frozen for at least two years in a row."
+      },
+      "conceptFamily": "permafrost",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "precipitation",
+      "status": "editorial_pending",
+      "word": "PRECIPITATION",
+      "definition": {
+        "en": "Water that falls from clouds as rain, snow or other forms."
+      },
+      "conceptFamily": "precipitation",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "plateau",
+      "status": "editorial_pending",
+      "word": "PLATEAU",
+      "definition": {
+        "en": "An area of high land with a fairly level surface."
+      },
+      "conceptFamily": "plateau",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "canyon",
+      "status": "editorial_pending",
+      "word": "CANYON",
+      "definition": {
+        "en": "A deep valley with steep sides."
+      },
+      "conceptFamily": "canyon",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "terrain",
+      "status": "editorial_pending",
+      "word": "TERRAIN",
+      "definition": {
+        "en": "The physical features of a piece of land."
+      },
+      "conceptFamily": "terrain",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "basin",
+      "status": "editorial_pending",
+      "word": "BASIN",
+      "definition": {
+        "en": "A low area of land or an area drained by a river system."
+      },
+      "conceptFamily": "basin",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "ridge",
+      "status": "editorial_pending",
+      "word": "RIDGE",
+      "definition": {
+        "en": "A long, narrow raised part of the land."
+      },
+      "conceptFamily": "ridge",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    },
+    {
+      "id": "slope",
+      "status": "editorial_pending",
+      "word": "SLOPE",
+      "definition": {
+        "en": "A surface that rises or falls at an angle."
+      },
+      "conceptFamily": "slope",
+      "guessabilityProposal": null,
+      "origin": "codex_proposal_not_authored",
+      "sourceReference": "data/import-staging/l1-practice-vocabulary-proposals.json",
+      "introducedFacts": null
+    }
+  ],
+  "practicePlans": [
+    {
+      "stepId": "l1-01-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "atlas",
+        "globe",
+        "mapping",
+        "region",
+        "border",
+        "sphere"
+      ],
+      "themeProposal": "Maps and regions",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-02-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "tropics",
+        "polar",
+        "temperate",
+        "climate",
+        "latitude",
+        "azimuth"
+      ],
+      "themeProposal": "Regions and location",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-03-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "salinity",
+        "seawater",
+        "seafloor",
+        "current",
+        "upwelling",
+        "abyssal"
+      ],
+      "themeProposal": "Oceans",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-04-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "compass",
+        "bearing",
+        "horizon",
+        "distance",
+        "locator",
+        "topography"
+      ],
+      "themeProposal": "Directions and maps",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-05-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "meridian",
+        "parallel",
+        "grid",
+        "position",
+        "coordinate",
+        "reference"
+      ],
+      "themeProposal": "Map references",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-06-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "islet",
+        "peninsula",
+        "isthmus",
+        "volcanism",
+        "magma",
+        "lava"
+      ],
+      "themeProposal": "Islands and volcanoes",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-07-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "density",
+        "settlement",
+        "migration",
+        "urban",
+        "rural",
+        "habitat"
+      ],
+      "themeProposal": "People and environments",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-08-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "watershed",
+        "catchment",
+        "confluence",
+        "summit",
+        "ridgeline",
+        "headwater"
+      ],
+      "themeProposal": "Rivers and mountain records",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-09-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "aridity",
+        "drought",
+        "dunefield",
+        "oasis",
+        "permafrost",
+        "precipitation"
+      ],
+      "themeProposal": "Dry and cold regions",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l1-10-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "plateau",
+        "canyon",
+        "terrain",
+        "basin",
+        "ridge",
+        "slope"
+      ],
+      "themeProposal": "Landforms",
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+ "section": "countries-east-and-southeast-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "indonesia-largest-island-country",
+   "order": 1,
+   "object": "cty-indonesia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Indonesia",
+    "ru": "Индонезия"
+   },
+   "fact": {
+    "ru": "Индонезия — самое большое островное государство мира: около 17 тысяч островов.",
+    "en": "Indonesia is the largest island country in the world, with about 17,000 islands."
+   },
+   "figure": {
+    "value": 17000,
+    "unit": "islands"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "8cbc5172e7ac3ccb"
+   }
+  },
+  {
+   "id": "ulaanbaatar-coldest-capital",
+   "order": 2,
+   "object": "cty-mongolia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Mongolia",
+    "ru": "Монголия"
+   },
+   "fact": {
+    "ru": "Улан-Батор считается самой холодной столицей мира по среднегодовой температуре.",
+    "en": "Ulaanbaatar is widely regarded as the world’s coldest national capital by average annual temperature."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "00871889095c015c"
+   }
+  },
+  {
+   "id": "great-wall-longest-fortification",
+   "order": 3,
+   "object": "cty-china",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "China",
+    "ru": "Китай"
+   },
+   "fact": {
+    "ru": "Великая Китайская стена — самая протяжённая система оборонительных укреплений в мире. Её общая длина превышает 20 тысяч километров.",
+    "en": "The Great Wall of China is the world’s longest system of defensive fortifications, stretching over 20,000 kilometres in total."
+   },
+   "figure": {
+    "value": 20000,
+    "unit": "km",
+    "more": true
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq",
+    "note": "block 3 section 6 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "dda974dfeae59eb6"
+   }
+  }
+ ]
+}

@@ -1,0 +1,721 @@
+{
+ "section": "countries-west-asia-and-transcaucasia",
+ "block": 3,
+ "use": "introduction cards, one fact per country and its capital, and four historical regions shown on cards only; ids match data/maps/asia-countries-8.json",
+ "decisions": [
+  "Svetlana 01.11.2026 11:33: 18 countries of West Asia (UN geoscheme) and Iran in three units — the South Caucasus and Iran / Anatolia and the Eastern Mediterranean / Mesopotamia and the Arabian Peninsula; Palestine is a state with limited international recognition.",
+  "Svetlana 31.10.2026 15:23 and 01.11.2026 11:46: Israel and Palestine are included with neutral notes on the disputed borders and the status of Jerusalem; their capitals are on the cards, but they never appear in capital questions (capitalQuestions false).",
+  "Svetlana 01.11.2026 11:33: Yemen — Sanaa is the constitutional capital (the answer in capital questions); the internationally recognised government works mainly from Aden. Cyprus belongs to West Asia by the UN classification.",
+  "Geographic objects are shown regardless of political disputes (Svetlana, 31.10.2026 and 01.11.2026 12:10): Georgia and Cyprus within the borders recognised by the UN, lines of de facto control and disputed lines dashed; the Golan Heights and the Shebaa Farms hatched as territories of disputed status and in no tap area. Map source: Natural Earth 1:10m Admin 0, version 5.2 (natural-earth-vector master ca96624).",
+  "Svetlana 01.11.2026 11:33: four historical regions on the map — the Iranian (Persian) Plateau, Mesopotamia, the Levant, Arabia (kind region): shown on a card at the start of their lesson, never asked in tasks.",
+  "Svetlana 01.11.2026 12:10: Iran is studied with West Asia for its geographic and historical ties; its card notes that the UN statistical classification puts it in Southern Asia.",
+  "disputed true marks the cards with a «Есть нюанс» note. The note opens only on a tap and is never asked in tasks."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Закавказье и Иран",
+    "en": "The South Caucasus and Iran"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Анатолия и Восточное Средиземноморье",
+    "en": "Anatolia and the Eastern Mediterranean"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Месопотамия и Аравийский полуостров",
+    "en": "Mesopotamia and the Arabian Peninsula"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "cty-georgia",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Georgia",
+    "ru": "Грузия"
+   },
+   "capital": {
+    "en": "Tbilisi",
+    "ru": "Тбилиси"
+   },
+   "fact": {
+    "en": "Georgia lies in the Caucasus, on the eastern coast of the Black Sea. Tbilisi stands on the Kura River.",
+    "ru": "Грузия расположена на Кавказе, у восточного побережья Чёрного моря. Тбилиси стоит на реке Куре."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Абхазия и Южная Осетия — регионы на севере Грузии, которые не подчиняются её правительству и объявили себя независимыми. Их независимость признали лишь несколько государств; большинство стран считают их частью Грузии. На карте Грузия показана в границах, признанных ООН, а границы этих регионов — пунктиром; спор мы не решаем.",
+    "en": "Abkhazia and South Ossetia are regions in the north of Georgia that are not governed by its government and have declared independence. Only a few countries recognise them; most consider them part of Georgia. The map shows Georgia within the borders recognised by the UN, with the borders of these regions dashed; we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "a7598b23f7b61cd1"
+   }
+  },
+  {
+   "id": "cty-armenia",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Armenia",
+    "ru": "Армения"
+   },
+   "capital": {
+    "en": "Yerevan",
+    "ru": "Ереван"
+   },
+   "fact": {
+    "en": "Armenia is a mountain country with no coast; most of it lies more than 1,000 m above sea level. On a clear day Mount Ararat, which stands in Turkey, can be seen from Yerevan.",
+    "ru": "Армения — горная страна без выхода к морю: большая её часть лежит выше 1000 м. Из Еревана в ясную погоду видна гора Арарат, которая находится на территории Турции."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "65da47bdc65c58cc"
+   }
+  },
+  {
+   "id": "cty-azerbaijan",
+   "order": 3,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Azerbaijan",
+    "ru": "Азербайджан"
+   },
+   "capital": {
+    "en": "Baku",
+    "ru": "Баку"
+   },
+   "fact": {
+    "en": "Azerbaijan lies on the western shore of the Caspian Sea, with the Greater Caucasus in the north. Baku stands on the Absheron Peninsula, where oil was already being drilled in the 19th century.",
+    "ru": "Азербайджан лежит на западном берегу Каспийского моря, на севере страны поднимается Большой Кавказ. Баку стоит на Апшеронском полуострове, где нефть добывали уже в XIX веке."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "653f54a94c2fbb61"
+   }
+  },
+  {
+   "id": "cty-iran",
+   "order": 4,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Iran",
+    "ru": "Иран"
+   },
+   "capital": {
+    "en": "Tehran",
+    "ru": "Тегеран"
+   },
+   "fact": {
+    "en": "Most of Iran lies on the Iranian Plateau, between the Caspian Sea and the Persian Gulf. Tehran lies at the foot of the Elburz Mountains. Until 1935 the country was usually called Persia in other countries.",
+    "ru": "Большая часть территории Ирана расположена на Иранском нагорье, между Каспийским морем и Персидским заливом. Тегеран лежит у подножия гор Эльбурс. До 1935 года в других странах Иран обычно называли Персией."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "В этом разделе Иран изучается вместе с Западной Азией из-за его географических и исторических связей с соседними регионами. В статистической классификации ООН Иран относится к Южной Азии.",
+    "en": "This unit includes Iran alongside West Asia because of its geographic and historical connections with the region. In the UN statistical classification, Iran is grouped with Southern Asia."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "5d70b77f491ddf39"
+   }
+  },
+  {
+   "id": "cty-turkey",
+   "order": 5,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Turkey",
+    "ru": "Турция"
+   },
+   "capital": {
+    "en": "Ankara",
+    "ru": "Анкара"
+   },
+   "fact": {
+    "en": "Most of Turkey lies on the Anatolian peninsula (Asia Minor), and a small part in the north-west is in Europe. The capital is Ankara; the largest city, Istanbul, stands on both shores of the Bosporus.",
+    "ru": "Большая часть Турции лежит на полуострове Малая Азия (Анатолия), а небольшая часть на северо-западе — в Европе. Столица — Анкара, а крупнейший город Стамбул стоит на обоих берегах Босфора."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "b806c6ff8ec4128e"
+   }
+  },
+  {
+   "id": "cty-cyprus",
+   "order": 6,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Cyprus",
+    "ru": "Кипр"
+   },
+   "capital": {
+    "en": "Nicosia",
+    "ru": "Никосия"
+   },
+   "fact": {
+    "en": "Cyprus is an island in the eastern Mediterranean Sea. By the UN classification it belongs to West Asia, but politically and culturally it is closely tied to Europe and is a member of the European Union.",
+    "ru": "Кипр — остров на востоке Средиземного моря. По классификации ООН он относится к Западной Азии, но политически и культурно тесно связан с Европой и входит в Европейский союз."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "С 1974 года остров разделён. Северную часть Кипра контролируют власти, которых признаёт только Турция. Между частями острова проходит буферная зона ООН, она пересекает и Никосию. На карте весь остров показан как Кипр — в границах, признанных ООН, а линия раздела — пунктиром; спор мы не решаем.",
+    "en": "Since 1974 the island has been divided. The northern part of Cyprus is run by authorities recognised only by Turkey. A UN buffer zone runs between the two parts, through Nicosia too. The map shows the whole island as Cyprus, within the borders recognised by the UN, with the dividing line dashed; we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "0e93b991bdd00f22"
+   }
+  },
+  {
+   "id": "cty-syria",
+   "order": 7,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Syria",
+    "ru": "Сирия"
+   },
+   "capital": {
+    "en": "Damascus",
+    "ru": "Дамаск"
+   },
+   "fact": {
+    "en": "Damascus is thought to be one of the oldest continuously inhabited cities in the world. The Euphrates flows across eastern Syria, and in the west the country reaches the Mediterranean Sea.",
+    "ru": "Дамаск считается одним из древнейших городов мира, где люди живут непрерывно. По востоку Сирии течёт Евфрат, а на западе страна выходит к Средиземному морю."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Голанские высоты на юго-западе Сирии с 1967 года контролирует Израиль. Большинство государств считают их территорией Сирии. На карте этот район заштрихован как территория со спорным статусом; спор мы не решаем.",
+    "en": "The Golan Heights in south-western Syria have been controlled by Israel since 1967. Most countries consider them Syrian territory. On the map this area is hatched as a territory of disputed status; we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "d95afc5e1af2063f"
+   }
+  },
+  {
+   "id": "cty-lebanon",
+   "order": 8,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Lebanon",
+    "ru": "Ливан"
+   },
+   "capital": {
+    "en": "Beirut",
+    "ru": "Бейрут"
+   },
+   "fact": {
+    "en": "Lebanon is a small mountainous country on the Mediterranean Sea, and its capital, Beirut, is a big port. The Lebanon cedar appears on the national flag.",
+    "ru": "Ливан — небольшая горная страна на берегу Средиземного моря, а его столица Бейрут — крупный порт. Ливанский кедр изображён на флаге страны."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "353a7a4ac2e3604c"
+   }
+  },
+  {
+   "id": "cty-israel",
+   "order": 9,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Israel",
+    "ru": "Израиль"
+   },
+   "capital": {
+    "en": "Jerusalem",
+    "ru": "Иерусалим"
+   },
+   "fact": {
+    "en": "Israel lies on the eastern shore of the Mediterranean Sea, with the Negev Desert in the south. The Jordan River runs along part of its eastern border and flows into the Dead Sea.",
+    "ru": "Израиль лежит на восточном берегу Средиземного моря, на юге страны — пустыня Негев. Река Иордан проходит вдоль части восточной границы Израиля и впадает в Мёртвое море."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Израиль провозгласил своей столицей Иерусалим. Статус Иерусалима — предмет международного спора: Палестина считает своей столицей Восточный Иерусалим, а многие государства держат посольства в Тель-Авиве. Границы Израиля и Палестины тоже спорные. На карте они показаны по Natural Earth 1:10m (Admin 0, версия 5.2): Западный берег и сектор Газа, линии со спорным статусом — пунктиром; Голанские высоты заштрихованы как территория со спорным статусом. Спор мы не решаем, поэтому в вопросах о столицах Израиль и Палестина не встречаются.",
+    "en": "Israel has proclaimed Jerusalem its capital. The status of Jerusalem is the subject of an international dispute: Palestine considers East Jerusalem its capital, and many countries keep their embassies in Tel Aviv. The borders of Israel and Palestine are disputed too. The map follows Natural Earth 1:10m (Admin 0, version 5.2): the West Bank and the Gaza Strip, with disputed lines dashed; the Golan Heights are hatched as a territory of disputed status. We do not settle the dispute, so Israel and Palestine never appear in capital questions."
+   },
+   "capitalQuestions": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "9b9632c8aaa73a46"
+   }
+  },
+  {
+   "id": "cty-palestine",
+   "order": 10,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Palestine",
+    "ru": "Палестина"
+   },
+   "capital": {
+    "en": "East Jerusalem",
+    "ru": "Восточный Иерусалим"
+   },
+   "fact": {
+    "en": "Palestine has two parts: the West Bank of the Jordan River and the Gaza Strip on the Mediterranean coast. Its administrative centre is Ramallah.",
+    "ru": "Палестина состоит из двух частей: Западного берега реки Иордан и сектора Газа на берегу Средиземного моря. Её административный центр — Рамалла."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Палестина имеет в ООН статус государства-наблюдателя, не являющегося членом организации. Палестинская сторона считает Восточный Иерусалим своей столицей, однако его статус остаётся предметом международного спора. Административные учреждения Палестинской администрации находятся в Рамалле. Границы на карте — по Natural Earth 1:10m (Admin 0, версия 5.2), линии со спорным статусом — пунктиром. Спор мы не решаем, поэтому в вопросах о столицах Израиль и Палестина не встречаются.",
+    "en": "Palestine has the status of a non-member observer state at the United Nations. Palestinians claim East Jerusalem as their capital, but its status remains disputed. The Palestinian Authority’s administrative institutions are based in Ramallah. The borders on the map follow Natural Earth 1:10m (Admin 0, version 5.2), with disputed lines dashed. We do not settle the dispute, so Israel and Palestine never appear in capital questions."
+   },
+   "capitalQuestions": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "cee10718b2b667d5"
+   }
+  },
+  {
+   "id": "cty-jordan",
+   "order": 11,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Jordan",
+    "ru": "Иордания"
+   },
+   "capital": {
+    "en": "Amman",
+    "ru": "Амман"
+   },
+   "fact": {
+    "en": "Jordan has only a short coast on the Red Sea, at Aqaba. In the west lie the valley of the Jordan River and the Dead Sea, and in the south the ancient city of Petra, carved into the rock.",
+    "ru": "У Иордании есть лишь короткий выход к Красному морю у города Акаба. На западе страны — долина реки Иордан и Мёртвое море, а на юге — древний город Петра, высеченный в скалах."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "e9224bdb28554343"
+   }
+  },
+  {
+   "id": "cty-iraq",
+   "order": 12,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Iraq",
+    "ru": "Ирак"
+   },
+   "capital": {
+    "en": "Baghdad",
+    "ru": "Багдад"
+   },
+   "fact": {
+    "en": "Iraq lies in the basin of the Tigris and the Euphrates, where historical Mesopotamia was. Baghdad stands on the Tigris, and the ruins of ancient Ur lie in the south of the country.",
+    "ru": "Ирак лежит в бассейне Тигра и Евфрата, где находилась историческая Месопотамия. Багдад стоит на Тигре, а на юге страны находятся руины древнего города Ур."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "4d286f5defebdb55"
+   }
+  },
+  {
+   "id": "cty-saudi-arabia",
+   "order": 13,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Saudi Arabia",
+    "ru": "Саудовская Аравия"
+   },
+   "capital": {
+    "en": "Riyadh",
+    "ru": "Эр-Рияд"
+   },
+   "fact": {
+    "en": "Saudi Arabia covers most of the Arabian Peninsula, with the Rub al Khali desert in the south. Riyadh lies in the central part of the country.",
+    "ru": "Саудовская Аравия занимает большую часть Аравийского полуострова, на юге страны — пустыня Руб-эль-Хали. Эр-Рияд лежит в центральной части страны."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "42c71f87001fcbcf"
+   }
+  },
+  {
+   "id": "cty-kuwait",
+   "order": 14,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Kuwait",
+    "ru": "Кувейт"
+   },
+   "capital": {
+    "en": "Kuwait City",
+    "ru": "Эль-Кувейт"
+   },
+   "fact": {
+    "en": "Kuwait is a small country rich in oil at the northern end of the Persian Gulf. Its capital shares the country’s name: Kuwait City.",
+    "ru": "Кувейт — небольшая богатая нефтью страна у северного края Персидского залива. Столица носит то же имя, что и страна, — Эль-Кувейт."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "fbff4252131476d4"
+   }
+  },
+  {
+   "id": "cty-bahrain",
+   "order": 15,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Bahrain",
+    "ru": "Бахрейн"
+   },
+   "capital": {
+    "en": "Manama",
+    "ru": "Манама"
+   },
+   "fact": {
+    "en": "Bahrain is an island country in the Persian Gulf, joined to Saudi Arabia by the King Fahd Causeway, a chain of bridges and dams about 25 km long. Bahrain was once famous for its pearls.",
+    "ru": "Бахрейн — островное государство в Персидском заливе; с Саудовской Аравией его соединяет мост Короля Фахда — цепь мостов и дамб длиной около 25 км. Раньше Бахрейн славился жемчугом."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "eaae805440c7a4e0"
+   }
+  },
+  {
+   "id": "cty-qatar",
+   "order": 16,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Qatar",
+    "ru": "Катар"
+   },
+   "capital": {
+    "en": "Doha",
+    "ru": "Доха"
+   },
+   "fact": {
+    "en": "Qatar covers a small peninsula in the Persian Gulf. Almost the whole country is flat stony desert, and Doha lies on its east coast.",
+    "ru": "Катар занимает небольшой полуостров в Персидском заливе. Почти вся страна — плоская каменистая пустыня, а Доха стоит на её восточном берегу."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "3212232e955e7fb4"
+   }
+  },
+  {
+   "id": "cty-uae",
+   "order": 17,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "United Arab Emirates",
+    "ru": "Объединённые Арабские Эмираты"
+   },
+   "capital": {
+    "en": "Abu Dhabi",
+    "ru": "Абу-Даби"
+   },
+   "fact": {
+    "en": "The United Arab Emirates is a union of seven emirates on the Persian Gulf. The capital is Abu Dhabi, and the largest city is Dubai.",
+    "ru": "Объединённые Арабские Эмираты — союз семи эмиратов на берегу Персидского залива. Столица — Абу-Даби, а крупнейший город — Дубай."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "3de3c6bd57e8c6f6"
+   }
+  },
+  {
+   "id": "cty-oman",
+   "order": 18,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Oman",
+    "ru": "Оман"
+   },
+   "capital": {
+    "en": "Muscat",
+    "ru": "Маскат"
+   },
+   "fact": {
+    "en": "Oman lies in the south-east of the Arabian Peninsula, on the Arabian Sea and the Gulf of Oman. Muscat is surrounded by the Hajar Mountains.",
+    "ru": "Оман лежит на юго-востоке Аравийского полуострова, у Аравийского моря и Оманского залива. Маскат окружён горами Хаджар."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "f028c1359c5f2d3a"
+   }
+  },
+  {
+   "id": "cty-yemen",
+   "order": 19,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Yemen",
+    "ru": "Йемен"
+   },
+   "capital": {
+    "en": "Sanaa",
+    "ru": "Сана"
+   },
+   "fact": {
+    "en": "Yemen lies in the south of the Arabian Peninsula, on the Red Sea and the Gulf of Aden. Sanaa stands in the mountains about 2,200 m above sea level; its old town of tall clay houses is a World Heritage Site.",
+    "ru": "Йемен лежит на юге Аравийского полуострова, у Красного моря и Аденского залива. Сана стоит в горах на высоте около 2200 м; её старый город с многоэтажными глиняными домами внесён в список Всемирного наследия."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Сана — столица Йемена, но страна разделена продолжающимся конфликтом. Город контролируют хуситы, а международно признанные органы власти действуют за его пределами, в том числе в Адене. В заданиях правильный ответ — Сана.",
+    "en": "Sanaa is Yemen’s capital, but the country remains divided by conflict. The city is controlled by the Houthis, while internationally recognised authorities operate outside it, including in Aden. In capital questions, the correct answer is Sanaa."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "666afea3813d1e1c"
+   }
+  },
+  {
+   "id": "zone-iranian-plateau",
+   "order": 20,
+   "kind": "region",
+   "unit": 1,
+   "name": {
+    "en": "The Iranian Plateau",
+    "ru": "Иранское нагорье"
+   },
+   "fact": {
+    "en": "The Iranian Plateau is bounded by the Elburz Mountains in the north and the Zagros in the west. Ancient Persia, one of the great empires of the ancient world, grew up here.",
+    "ru": "Иранское (Персидское) нагорье с севера ограничивают горы Эльбурс, а с запада — Загрос. Здесь сложилась древняя Персия — одна из величайших держав древности."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "12fa6567bafa313a"
+   }
+  },
+  {
+   "id": "zone-levant",
+   "order": 21,
+   "kind": "region",
+   "unit": 2,
+   "name": {
+    "en": "The Levant",
+    "ru": "Левант"
+   },
+   "fact": {
+    "en": "The Levant is the land along the eastern shore of the Mediterranean. Trade routes between Egypt, Mesopotamia and Anatolia crossed it, and the Phoenicians sailed from here all over the sea.",
+    "ru": "Левант — земли вдоль восточного берега Средиземного моря. Через них шли торговые пути между Египтом, Месопотамией и Анатолией, а финикийцы отсюда плавали по всему морю."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "c91ed8d11bc3c332"
+   }
+  },
+  {
+   "id": "zone-mesopotamia",
+   "order": 22,
+   "kind": "region",
+   "unit": 3,
+   "name": {
+    "en": "Mesopotamia",
+    "ru": "Месопотамия"
+   },
+   "fact": {
+    "en": "Mesopotamia is a historical region around the Tigris and Euphrates rivers. More than 5,000 years ago, it was home to some of the world’s earliest cities and writing systems.",
+    "ru": "Месопотамия — историческая область в бассейне Тигра и Евфрата. Более 5000 лет назад здесь существовали одни из первых городов мира и возникла одна из древнейших систем письменности."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "51c32155e0873d0c"
+   }
+  },
+  {
+   "id": "zone-arabia",
+   "order": 23,
+   "kind": "region",
+   "unit": 3,
+   "name": {
+    "en": "Arabia",
+    "ru": "Аравия"
+   },
+   "fact": {
+    "en": "Most of the Arabian Peninsula is desert, with oases scattered across it. Caravans carried fragrant frankincense and myrrh from southern Arabia to the Mediterranean.",
+    "ru": "Большую часть Аравийского полуострова занимают пустыни, среди которых разбросаны оазисы. Караваны везли через Аравию ладан и мирру с юга полуострова к Средиземному морю."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/LziKvcsqyX5i9EDP97RH9J",
+    "note": "block 3 section 8 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "8f2249621666617a"
+   }
+  }
+ ]
+}
