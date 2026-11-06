@@ -1,0 +1,97 @@
+{
+ "section": "north-america-on-the-map",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "labrador-largest-peninsula",
+   "order": 1,
+   "object": "na-labrador",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Labrador Peninsula",
+    "ru": "Лабрадор"
+   },
+   "fact": {
+    "en": "Labrador is usually considered the largest peninsula of North America.",
+    "ru": "Лабрадор обычно считается крупнейшим полуостровом Северной Америки."
+   },
+   "figure": {
+    "value": 1400000,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "749027695c0006a5"
+   }
+  },
+  {
+   "id": "cuba-largest-greater-antilles",
+   "order": 2,
+   "object": "na-cuba",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Cuba",
+    "ru": "Куба"
+   },
+   "fact": {
+    "en": "Cuba is the largest of the Greater Antilles.",
+    "ru": "Куба — крупнейший из Больших Антильских островов."
+   },
+   "figure": {
+    "value": 105000,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "92a130420f449154"
+   }
+  },
+  {
+   "id": "murchison-northernmost",
+   "order": 3,
+   "object": "na-boothia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Boothia Peninsula",
+    "ru": "Бутия"
+   },
+   "fact": {
+    "en": "Murchison Promontory is the northernmost point of mainland North America.",
+    "ru": "Мыс Мёрчисон — самая северная точка материковой части Северной Америки."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2PNydakSVWA9tHepD2ZUFq",
+    "note": "block 4 plan v2, section 1"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-02",
+    "contentSha256": "7d6ba97a1d074845"
+   }
+  }
+ ]
+}
