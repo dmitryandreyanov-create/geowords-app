@@ -1,0 +1,620 @@
+{
+ "section": "rivers-of-north-america",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (06.11.2026), replacements approved 12.11.2026: Старатели (not Золотоискатели: repeats the section 1 final), Пароходы / Steamboats (not Колесники), Pelts, Outposts, LASALLE, ГУРОНЫ → ВЕНДАТЫ, Stampeders → PANNERS (Svetlana's choice, 12.11.2026)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters on the learned rivers first, then on the objects of section 1",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); ALGONQUIN: «Algonquian» left out, same root",
+  "draft": "Definitions by Claude with Svetlana's own for МИССИСИПСКИЙ, КАХОКИЯ, КУРГАНЫ, ЛАСАЛЛЬ, САКАГАВЕЯ, ТОМАГАВКИ, АЛГОНКИНЫ, ВЕНДАТЫ, ФАКТОРИЯ, СТАРАТЕЛИ (EN to match); all approved by Svetlana 2026-11-12 («Утверждаю»)."
+ },
+ "units": [
+  {
+   "id": "unit-1-mississippi-basin",
+   "title": {
+    "ru": "Бассейн Миссисипи",
+    "en": "The Mississippi basin"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МИССИСИПСКИЙ",
+      "role": "final",
+      "definition": "Название археологической культуры коренных народов Северной Америки, известной строительством больших земляных курганов. Она существовала приблизительно с IX по XVI век.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "8e1ee6231269c5c1"
+      }
+     },
+     {
+      "answer": "КАХОКИЯ",
+      "role": "review",
+      "definition": "Крупнейший известный доколумбовый городской центр Северной Америки к северу от Мексики, расположенный недалеко от Миссисипи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "a1168e41308cc13e"
+      }
+     },
+     {
+      "answer": "КУРГАНЫ",
+      "role": "review",
+      "definition": "Искусственные земляные сооружения, которые коренные народы долины Миссисипи создавали для церемоний, погребений и размещения важных построек.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "28119ec8966d5e34"
+      }
+     },
+     {
+      "answer": "НАТЧЕЗЫ",
+      "role": "review",
+      "definition": "Индейский народ с нижнего течения Миссисипи; их вождя называли Великим Солнцем.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "ce3008885aacc612"
+      }
+     },
+     {
+      "answer": "ЧИКАСО",
+      "role": "review",
+      "definition": "Индейский народ, живший к востоку от Миссисипи, на землях нынешних штатов Миссисипи и Теннесси.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "98d403444775f91c"
+      }
+     },
+     {
+      "answer": "ЛУИЗИАНА",
+      "role": "review",
+      "definition": "Огромная французская колония в бассейне Миссисипи, названная в честь французского короля; в 1803 году её купили США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "b2a68f8159811e4e"
+      }
+     },
+     {
+      "answer": "ЛАСАЛЛЬ",
+      "role": "review",
+      "definition": "Французский исследователь, который в 1682 году спустился по Миссисипи до Мексиканского залива и объявил обширные земли её бассейна владением Франции.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "5aa80cc4f5ed3851"
+      }
+     },
+     {
+      "answer": "МАРКЕТТ",
+      "role": "review",
+      "definition": "Французский миссионер, который в 1673 году вместе с Луи Жолье проплыл по Миссисипи до устья Арканзаса.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "0ba530280afc5eaa"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MISSISSIPPIAN",
+      "role": "final",
+      "definition": "The name of a Native American archaeological culture known for building large earthen mounds. It existed from about the 9th to the 16th century.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "51441df10a2b133f"
+      }
+     },
+     {
+      "answer": "CAHOKIA",
+      "role": "review",
+      "definition": "The largest known pre-Columbian urban center in North America north of Mexico, located near the Mississippi River.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "10d1e8d98d5e19d9"
+      }
+     },
+     {
+      "answer": "MOUNDS",
+      "role": "review",
+      "definition": "Earthen structures built by Native peoples of the Mississippi Valley for ceremonies, burials, and important buildings.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "8bfcfbeef235b0fd"
+      }
+     },
+     {
+      "answer": "NATCHEZ",
+      "role": "review",
+      "definition": "A Native people of the lower Mississippi whose chief was called the Great Sun.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "e48e90cbac613d60"
+      }
+     },
+     {
+      "answer": "CHICKASAW",
+      "role": "review",
+      "definition": "A Native people who lived east of the Mississippi, in today's Mississippi and Tennessee.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "8f472993fad8f51c"
+      }
+     },
+     {
+      "answer": "LOUISIANA",
+      "role": "review",
+      "definition": "The huge French colony in the Mississippi basin, named after a French king; the USA bought it in 1803.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "062366cf34d7c33c"
+      }
+     },
+     {
+      "answer": "LASALLE",
+      "role": "review",
+      "definition": "A French explorer who traveled down the Mississippi to the Gulf of Mexico in 1682 and claimed the vast lands of its basin for France.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "9bdfafd4e651baeb"
+      }
+     },
+     {
+      "answer": "MARQUETTE",
+      "role": "review",
+      "definition": "A French missionary who in 1673 paddled down the Mississippi with Louis Jolliet as far as the Arkansas River.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "18bb82145f427dd2"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-rivers-of-the-north",
+   "title": {
+    "ru": "Реки севера",
+    "en": "Rivers of the north"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "АЛГОНКИНЫ",
+      "role": "final",
+      "definition": "Коренной народ долины реки Оттавы, участвовавший в торговле пушниной с французами. Не путать со всей большой языковой семьёй, названной по этому народу.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "8bfd4fa1a5f41645"
+      }
+     },
+     {
+      "answer": "ИРОКЕЗЫ",
+      "role": "review",
+      "definition": "Союз индейских народов у Великих озёр и реки Святого Лаврентия; они жили в длинных домах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "2e02b9d98b9078ec"
+      }
+     },
+     {
+      "answer": "ВЕНДАТЫ",
+      "role": "review",
+      "definition": "Коренной народ района Великих озёр, исторически известный европейцам как гуроны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "b1346b381c4c30df"
+      }
+     },
+     {
+      "answer": "ВОЯЖЁРЫ",
+      "role": "review",
+      "definition": "Французские гребцы, которые на больших каноэ возили меха по рекам и озёрам Канады.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "4be95f10226f3a7c"
+      }
+     },
+     {
+      "answer": "ПУШНИНА",
+      "role": "review",
+      "definition": "Шкурки бобров, лис и других зверей, главный товар торговли на реках Канады.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "2c81e955cd2cd9da"
+      }
+     },
+     {
+      "answer": "ФАКТОРИЯ",
+      "role": "review",
+      "definition": "Торговый пункт, где охотники и представители коренных народов обменивали пушнину на привозные товары.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "61804196ddcfb9b0"
+      }
+     },
+     {
+      "answer": "КЛОНДАЙК",
+      "role": "review",
+      "definition": "Приток Юкона, где в 1896 году нашли золото и началась знаменитая золотая лихорадка.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "f4dd8cc6d202457a"
+      }
+     },
+     {
+      "answer": "СТАРАТЕЛИ",
+      "role": "review",
+      "definition": "Люди, которые искали золото в речных отложениях, в том числе во время Клондайкской золотой лихорадки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "f9d05594b7fed37b"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ALGONQUIN",
+      "role": "final",
+      "definition": "A Native people of the Ottawa River Valley who traded furs with the French. Not to be confused with the whole large language family named after them.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "bebe5fe304fb710c"
+      }
+     },
+     {
+      "answer": "IROQUOIS",
+      "role": "review",
+      "definition": "A league of Native nations near the Great Lakes and the St. Lawrence who lived in longhouses.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "7eaa5e87e12ae64d"
+      }
+     },
+     {
+      "answer": "WENDAT",
+      "role": "review",
+      "definition": "A Native people of the Great Lakes region, historically known to Europeans as the Huron.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "de408df3c4873c32"
+      }
+     },
+     {
+      "answer": "VOYAGEURS",
+      "role": "review",
+      "definition": "French-Canadian paddlers who carried furs in big canoes along the rivers and lakes of Canada.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "383141ca0ed5e905"
+      }
+     },
+     {
+      "answer": "PELTS",
+      "role": "review",
+      "definition": "Animal skins with the fur still on, like beaver, the main goods of the Canadian river trade.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "afa6ad9ed31f9480"
+      }
+     },
+     {
+      "answer": "OUTPOSTS",
+      "role": "review",
+      "definition": "Remote trading stations where hunters and Native peoples exchanged furs for imported goods.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "be3d978a8ef49207"
+      }
+     },
+     {
+      "answer": "KLONDIKE",
+      "role": "review",
+      "definition": "A river flowing into the Yukon, where gold was found in 1896 and a famous gold rush began.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "13886569e489d87d"
+      }
+     },
+     {
+      "answer": "PANNERS",
+      "role": "review",
+      "definition": "People who searched for gold by washing river sediments in pans, including during the Klondike Gold Rush.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "7ad7f5bb46e2b725"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-rivers-of-the-west-and-south",
+   "title": {
+    "ru": "Реки запада и юга",
+    "en": "Rivers of the west and south"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "САКАГАВЕЯ",
+      "role": "final",
+      "definition": "Женщина из народа шошонов, которая помогала экспедиции Льюиса и Кларка как переводчица и посредница при общении с коренными народами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "2b1e005ed4d77b8b"
+      }
+     },
+     {
+      "answer": "ЛЬЮИС",
+      "role": "review",
+      "definition": "Американский капитан, который в 1804–1806 годах вместе с другом прошёл по Миссури и Колумбии до Тихого океана.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "e499856a04c0466b"
+      }
+     },
+     {
+      "answer": "КЛАРК",
+      "role": "review",
+      "definition": "Второй командир знаменитой экспедиции 1804–1806 годов, которая по Миссури и Колумбии дошла до Тихого океана.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "7c5bfc73a0daa0cd"
+      }
+     },
+     {
+      "answer": "ЧОКТО",
+      "role": "review",
+      "definition": "Индейский народ юго-востока США, живший на землях нынешних штатов Миссисипи и Алабама.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "79f7e341d08b0eda"
+      }
+     },
+     {
+      "answer": "ПИРОГИ",
+      "role": "review",
+      "definition": "Лодки, выдолбленные из цельного ствола дерева.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "251ee0770ab46d60"
+      }
+     },
+     {
+      "answer": "МОКАСИНЫ",
+      "role": "review",
+      "definition": "Мягкая кожаная обувь без каблука, которую носили многие индейцы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "67f2636514481a61"
+      }
+     },
+     {
+      "answer": "ТОМАГАВКИ",
+      "role": "review",
+      "definition": "Небольшие топоры, которые коренные народы Северной Америки использовали как инструменты и оружие; некоторые имели церемониальное значение.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "0e5bc69f698a1310"
+      }
+     },
+     {
+      "answer": "ПЛОТОГОНЫ",
+      "role": "review",
+      "definition": "Работники, которые сплавляли по рекам брёвна, связанные в плоты.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "c8cfb8d861b30a04"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "SACAGAWEA",
+      "role": "final",
+      "definition": "A Shoshone woman who helped the Lewis and Clark expedition as an interpreter and intermediary with Native peoples.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "a483ab7f7563b027"
+      }
+     },
+     {
+      "answer": "LEWIS",
+      "role": "review",
+      "definition": "An American captain who in 1804–1806 led an expedition up the Missouri and down the Columbia to the Pacific.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "b4243ab86c098ca4"
+      }
+     },
+     {
+      "answer": "CLARK",
+      "role": "review",
+      "definition": "The second leader of the famous 1804–1806 expedition up the Missouri and down the Columbia to the Pacific.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "666d75078e6174e6"
+      }
+     },
+     {
+      "answer": "CHOCTAW",
+      "role": "review",
+      "definition": "A Native people of the southeastern USA, in today's Mississippi and Alabama.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "120f50fc2eded90f"
+      }
+     },
+     {
+      "answer": "DUGOUTS",
+      "role": "review",
+      "definition": "Boats hollowed out of a single tree trunk.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "f345fbd3706512d3"
+      }
+     },
+     {
+      "answer": "MOCCASINS",
+      "role": "review",
+      "definition": "Soft leather shoes without heels, worn by many Native peoples.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "5c734c387bde7ef2"
+      }
+     },
+     {
+      "answer": "TOMAHAWKS",
+      "role": "review",
+      "definition": "Small axes used by Native peoples of North America as tools and weapons; some also had ceremonial uses.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "a77998f1b1f0d21b"
+      }
+     },
+     {
+      "answer": "RAFTERS",
+      "role": "review",
+      "definition": "Workers who floated logs tied into rafts down the rivers.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "40e5eff3487d581f"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПАРОХОДЫ",
+      "role": "section-final",
+      "definition": "Колёсные суда с паровой машиной, которые в XIX веке ходили по Миссисипи; о них писал Марк Твен.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "463dfe92ed5e75f3"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "STEAMBOATS",
+      "role": "section-final",
+      "definition": "Paddle-wheel boats with steam engines that sailed the Mississippi in the 1800s; Mark Twain wrote about them.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-12",
+       "contentSha256": "5b4e7e3cdedd5936"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-12"
+}
