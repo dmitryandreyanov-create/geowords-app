@@ -61,6 +61,11 @@ for it in items:
     best = max((longest.interpolate(t / 100, normalized=True) for t in range(15, 86)), key=lambda q: others.distance(squash(q)))
     it['label'] = {'x': round(best.x, 2), 'y': round(best.y, 2)}
 
+# 12.11.2026: the Missouri is labelled on its upper course (North Dakota): at its lower course its letter would sit too close to the
+# Mississippi and the Arkansas for all four rivers of unit 1 to share one GeoWords puzzle
+LABEL = {'na-missouri': {'x': 46.93, 'y': 53.31}}
+for it in items: it['label'] = LABEL.get(it['id'], it['label'])
+
 im = Image.open(B.ROOT / 'assets/namerica-blank.webp').convert('RGB'); W, H = im.size
 mask = Image.new('L', (W * SS, H * SS), 0); dr = ImageDraw.Draw(mask)
 for it in items:
