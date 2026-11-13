@@ -4,8 +4,8 @@
 (Svetlana's brief of 13.11.2026: 6 deserts and dry regions, 6 canyons).
 
 The deserts are shaded on the North America rivers map (assets/namerica-rivers.webp, shared base tools/namerica_base.py), so the
-Colorado and the Rio Grande that cross them stay in sight, as in tools/build_asia_deserts.py. Three looks, so a child sees the
-difference: hot deserts (Sonora, Mojave, Chihuahua, Vizcaíno) yellow with sand dots; the cold Great Basin desert grey-lilac with
+Colorado and the Rio Grande that cross them stay in sight, as in tools/build_asia_deserts.py. Four looks, so a child sees the
+difference: hot deserts (Sonora, Mojave, Chihuahua) yellow with sand dots; the coastal Vizcaíno pale sand with blue-grey fog strokes; the cold Great Basin desert grey-lilac with
 small frost crosses; the Okanagan Valley, a dry valley and not a desert of its own (Svetlana), pale olive with hatching.
 Canyons are round marks (a dark red disc with a light V, a cut in the land) of MARK_R px, tapped within CANYON_TAP px.
 
@@ -37,6 +37,7 @@ LOOK = {  # fill, mark colour
   'hot': ((246, 214, 120), (196, 136, 52)),
   'cold': ((206, 196, 206), (112, 104, 132)),
   'valley': ((206, 204, 140), (128, 128, 70)),
+  'coast': ((240, 222, 168), (120, 150, 172)),  # a coastal fog desert: pale sand with blue-grey fog strokes (Svetlana, 13.11.2026: «прибрежная», not «жаркая»)
 }
 MOJAVE = [(-118.45, 35.1), (-117.9, 35.75), (-117.55, 36.2), (-117.0, 36.85), (-116.2, 36.9), (-115.3, 36.75), (-114.6, 37.05),
           (-113.75, 37.15), (-113.95, 36.5), (-114.1, 35.95), (-113.85, 35.35), (-114.25, 34.75), (-114.55, 34.3), (-115.3, 33.95),
@@ -51,7 +52,7 @@ OBJECTS = [
  ('na-mojave', 1, 'desert', 'hot', MOJAVE, 'Mojave Desert', 'Мохаве'),
  ('na-chihuahuan', 1, 'desert', 'hot', ['CHIHUAHUAN DESERT'], 'Chihuahuan Desert', 'Чиуауа'),
  ('na-great-basin', 1, 'desert', 'cold', ['GREAT BASIN'], 'Great Basin Desert', 'Большой Бассейн'),
- ('na-vizcaino', 1, 'desert', 'hot', VIZCAINO, 'Vizcaíno Desert', 'Вискаино'),
+ ('na-vizcaino', 1, 'desert', 'coast', VIZCAINO, 'Vizcaíno Desert', 'Вискаино'),
  ('na-okanagan', 1, 'valley', 'valley', OKANAGAN, 'Okanagan Valley', 'Долина Оканаган'),
  ('na-grand-canyon', 2, 'canyon', None, (-112.12, 36.1), 'Grand Canyon', 'Большой каньон'),
  ('na-antelope-canyon', 2, 'canyon', None, (-111.37, 36.86), 'Antelope Canyon', 'Каньон Антилопы'),
@@ -107,7 +108,7 @@ def paint(im, land_, tf, scale, w, h, rng):
         mk = mask([shapes[i] for i in ids], 1.5 * scale, w, h, tf, land_)
         im.paste(Image.new('RGB', (w, h), fill), (0, 0), mk.point(lambda v: v * 0.95))
         tex = Image.new('L', (w * SS, h * SS), 0); dt = ImageDraw.Draw(tex)
-        step = {'hot': 9, 'cold': 13, 'valley': 5}[look] * max(1, scale / 3)
+        step = {'hot': 9, 'cold': 13, 'valley': 5, 'coast': 7}[look] * max(1, scale / 3)
         for i in ids:
             g = shapes[i]
             if look == 'valley':  # hatching
@@ -130,6 +131,9 @@ def paint(im, land_, tf, scale, w, h, rng):
                     if X < 0 or Y < 0 or X >= w * SS or Y >= h * SS or not land_.getpixel((int(X / SS), int(Y / SS))): continue
                     if look == 'hot':
                         r = 1.3 * SS * scale; dt.ellipse([X - r, Y - r, X + r, Y + r], fill=255)
+                    elif look == 'coast':  # a short wavy fog stroke
+                        r = 3.2 * SS * scale; lw = round(1.2 * SS * scale)
+                        dt.line([(X - r, Y), (X - r / 2, Y - r / 3), (X, Y), (X + r / 2, Y - r / 3), (X + r, Y)], fill=255, width=lw, joint='curve')
                     else:  # a small frost cross
                         r = 2.6 * SS * scale; lw = round(1.1 * SS * scale)
                         dt.line([(X - r, Y), (X + r, Y)], fill=255, width=lw); dt.line([(X, Y - r), (X, Y + r)], fill=255, width=lw)
@@ -240,7 +244,7 @@ out = {
   'coordinateSystem': 'label and tapArea in % of image width/height from top-left; same for every namerica-*.webp (shared base, tools/namerica_base.py)',
   'source': 'Natural Earth 1:10m geography regions (Sonoran, Chihuahuan, Great Basin); Mojave, Vizcaíno and Okanagan outlines and canyon points from tools/build_namerica_deserts.py',
   'notes': ['Built by tools/build_namerica_deserts.py, which also draws assets/namerica-deserts.webp on assets/namerica-rivers.webp.',
-            'Looks: hot deserts yellow with sand dots, the cold Great Basin desert grey-lilac with frost crosses, the Okanagan Valley (a dry valley, not a desert of its own) olive with hatching.',
+            'Looks: hot deserts yellow with sand dots, the coastal Vizcaíno pale sand with fog strokes, the cold Great Basin desert grey-lilac with frost crosses, the Okanagan Valley (a dry valley, not a desert of its own) olive with hatching.',
             'Canyons are marks of %d px, tapped within %d px. Grand, Antelope, de Chelly and the Black Canyon of the Gunnison are also on the large map data/maps/namerica-canyons.json.' % (MARK_R, CANYON_TAP)],
   'items': items,
 }
