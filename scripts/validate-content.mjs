@@ -128,6 +128,14 @@ const RELEASE = {
     section: "lakes-of-north-america",
     ids: ["superior-largest-freshwater", "great-slave-deepest", "great-bear-largest-in-canada"],
   },
+  "b4-section-4-facts.json": {
+    section: "mountains-and-plains-of-north-america",
+    ids: ["namerica-mountains-intro", "namerica-yellowstone", "na-rockies", "na-coast-ranges", "na-alaska-range", "na-denali", "na-cascades", "na-sierra-nevada", "na-sierra-madre-occidental", "na-sierra-madre-oriental", "na-mexican-plateau", "na-orizaba", "na-popocatepetl", "na-appalachians", "na-laurentian-upland", "na-great-plains", "na-central-lowland"],
+  },
+  "b4-section-4-records.json": {
+    section: "mountains-and-plains-of-north-america",
+    ids: ["denali-highest", "orizaba-highest-volcano", "canadian-shield-oldest-rocks"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],
