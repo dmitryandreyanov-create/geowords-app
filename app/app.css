@@ -287,3 +287,6 @@ h1,h2,h3,p{margin:0}
 .zoom-inset .eu-river{stroke-width:calc(2.5px / var(--z))}
 .zoom-frame{fill:none;stroke:#fff;stroke-width:1.6;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 1px rgba(0,0,0,.7))}
 .eu-river{fill:none;stroke:#2f7fa8;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+/* explanation cards (Yellowstone, Hawaii): an orange ring around the place, open in the middle so the map under it stays visible */
+.mk.spot{pointer-events:none}
+.mk.spot span{width:26px;height:26px;background:transparent;border:3px solid var(--fox);box-shadow:0 0 0 2px #fff,inset 0 0 0 2px #fff;font-size:0}

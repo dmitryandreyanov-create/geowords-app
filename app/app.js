@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.13-namerica-4';
+const BUILD='2026.11.13-namerica-4b';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -1275,6 +1275,8 @@ function hlFocus(o){if(!ASCTY()||lvAll(o)||!o.tapArea||!o.tapArea.length)return 
 const hlMap=(o,opts={})=>{const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true,focus:hlFocus(o),...opts});return m};
 const hlOpen=(m,o)=>{if(m.levant&&lvAll(o))m.openLevant()};
 const lvHint=()=>lvOn()?`<p class="rotate-hint">${t().lvHint}</p>`:'';
+// where an explanation card points on the map (% of the image, tools/namerica_base.py pct): the card has no map object of its own
+const NOTE_PINS={'namerica-hawaii':{x:6.7,y:61.4},'namerica-yellowstone':{x:42.1,y:56.0}};
 function euMap(host,opts){const m=mapWidget(host,{...opts,levant:(opts.onTap||opts.levant)&&lvOn()?{...D.lv,name:t().lvName}:null,base:EUSEC===25?IMG.naMountains:EUSEC===24?IMG.naLakes:EUSEC===23?IMG.naRivers:EUSEC===22?IMG.naBase:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
   // sections 4 and 5 use the capitals map with the rivers of section 2 drawn in: a river and the outline of a country together (Svetlana, 28.10.2026)
@@ -1620,7 +1622,7 @@ function lesson(step){
     // ---- block 2 section 1: Europe on the map (Europe base; the Ural River and Mountains always drawn; a tap is judged against every object of the section) ----
     if(q.k==='introEurope'){const I=q.note?(EUD().notes||{})[q.note]:EUD().intro;if(!I){done++;return next()}
       frame(x.intro,`<div class="card"><div class="intro-pip"><img src="${IMG.hello}" alt=""><h3>${esc(I.name[lang])}</h3></div><p>${esc(I.fact[lang])}</p></div><div class="mapslot"></div>`);
-      euMap(app.querySelector('.mapslot'),{zoom:false});return gotIt(()=>learn(I.id))}
+      const pin=q.note&&NOTE_PINS[q.note];euMap(app.querySelector('.mapslot'),{zoom:false,markers:pin?[{id:q.note,x:pin.x,y:pin.y,cls:'tip spot pulse',label:'',aria:I.name[lang]}]:[]});return gotIt(()=>learn(I.id))}
     if(q.k==='introEu'||q.k==='introEuRec'){const rec=q.rec&&EUD().records.find(r=>r.id===q.rec);const o=E(rec?rec.object:q.id);
       frame(rec?x.record:x.intro,`<div class="card"><div class="intro-pip"><img src="${rec?IMG.wonder:IMG.map}" alt=""><h3>${esc(o.name[lang])}${o.capital&&!rec?` <small>· ${esc(o.capital.name[lang])}</small>`:''}</h3></div><p>${esc(rec?rec.fact[lang]:o.fact(lang))}</p>${rec?'':nuanceBtn(o)}</div><div class="mapslot"></div>`);
       const m=euMap(app.querySelector('.mapslot'),{zoom:false});showEu(m,o,'hl-shape pulse');if(o.capital){m.shape(capRing(o.capital),'hl-shape good');if(!ASCTY()||AS6_INSET.has(o.id))countryInset(m,app.querySelector('.mapslot'),o)}else if(o.zoomInset)countryInset(m,app.querySelector('.mapslot'),o);if(!rec)wireNuance(o);
