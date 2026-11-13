@@ -78,6 +78,13 @@ im.paste(Image.new('RGB', (W, H), (255, 255, 255)), (0, 0), falls)  # the falls 
 im.paste(Image.new('RGB', (W, H), SHORE), (0, 0), ring)
 im.save(B.ROOT / 'assets/namerica-lakes.webp', 'WEBP', quality=90, method=6)
 
+# 13.11.2026: the Great Lakes lie close together; these label points (inside the lakes) keep Superior, Michigan and Ontario at least
+# 4.5% of the map apart, so three of the Great Lakes can share one GeoWords puzzle (at the centroids only one or two could)
+LABEL = {'na-superior': {'x': 54.93, 'y': 52.31}, 'na-michigan': {'x': 55.37, 'y': 58.96}, 'na-ontario': {'x': 60.59, 'y': 56.28}}
+for it in items:
+    if it['id'] in LABEL:
+        q = LABEL[it['id']]; assert any(p.contains(Point(q['x'] * B.W / 100, q['y'] * B.H / 100)) for p in it['_g']), it['id']
+        it['label'] = q
 items = [{k: it[k] for k in ('id', 'order', 'kind', 'unit', 'name', 'label', 'tapArea', 'zoomInset') if k in it} for it in items]
 out = {
   'map': './assets/namerica-lakes.webp',

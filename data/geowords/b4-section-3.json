@@ -1,0 +1,915 @@
+{
+ "section": "lakes-of-north-america",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the lakes and Niagara Falls of data/maps/namerica-lakes.json learned by the end of the unit (section final: all 14), at the label point, first; a lake-name word never on the same lake; then on the objects of data/maps/namerica-overview.json (section 1); one letter per object",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b4_geowords.mjs = NA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 6 (% of map width), wider than sections 1–2: the Great Lakes are close together",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-3-unit-1-en",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "FREIGHTER",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "F"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "R"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "E"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "I"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "G"
+    },
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "H"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "T"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "E"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "R"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 4,
+     "text": "Find the fourth letter in the Gulf of California."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 2,
+     "text": "Find the second letter on the Florida peninsula."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 5,
+     "text": "Find the fifth letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 7,
+     "text": "Find the seventh letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 3,
+     "text": "Find the third letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 1,
+     "text": "Find the first letter in Lake Ontario."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 6,
+     "text": "Find the sixth letter in Lake Superior."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 8,
+     "text": "Find the eighth letter on the Yucatán Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-unit-1-ru",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СУХОГРУЗ",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "С"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "У"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "Х"
+    },
+    {
+     "id": "na-baja-california",
+     "x": 37.07,
+     "y": 68.9,
+     "letter": "О"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "Г"
+    },
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "Р"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "У"
+    },
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "З"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 5,
+     "text": "Найди пятую букву на полуострове Аляска."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 2,
+     "text": "Найди вторую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 6,
+     "text": "Найди шестую букву в озере Онтарио."
+    },
+    {
+     "markerId": "na-baja-california",
+     "position": 4,
+     "text": "Найди четвёртую букву на полуострове Калифорния."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 7,
+     "text": "Найди седьмую букву на Кубе."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 1,
+     "text": "Найди первую букву в Калифорнийском заливе."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 8,
+     "text": "Найди восьмую букву в озере Верхнем."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 3,
+     "text": "Найди третью букву на острове Ньюфаундленд."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-unit-2-en",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ATHABASCA",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "A"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "T"
+    },
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "H"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "A"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "B"
+    },
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "A"
+    },
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "S"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "C"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-bering-strait",
+     "position": 2,
+     "text": "Find the second letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 6,
+     "text": "Find the sixth letter in Great Bear Lake."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 4,
+     "text": "Find the fourth letter on the Florida peninsula."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 7,
+     "text": "Find the seventh letter in Lake Superior."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 3,
+     "text": "Find the third letter in Lake Ontario."
+    },
+    {
+     "markerId": "na-winnipeg",
+     "position": 9,
+     "text": "Find the ninth letter in Lake Winnipeg."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 5,
+     "text": "Find the fifth letter in the Gulf of California."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-unit-2-ru",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АТАБАСКА",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "А"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Т"
+    },
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "А"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "Б"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "А"
+    },
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "С"
+    },
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "К"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "А"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-winnipeg",
+     "position": 4,
+     "text": "Найди четвёртую букву в озере Виннипег."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 2,
+     "text": "Найди вторую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 6,
+     "text": "Найди шестую букву в озере Онтарио."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 3,
+     "text": "Найди третью букву в Большом Медвежьем озере."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 5,
+     "text": "Найди пятую букву на Кубе."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 1,
+     "text": "Найди первую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 7,
+     "text": "Найди седьмую букву в озере Верхнем."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-unit-3-en",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BONNEVILLE",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "B"
+    },
+    {
+     "id": "na-chapala",
+     "x": 44.78,
+     "y": 83.14,
+     "letter": "O"
+    },
+    {
+     "id": "na-nicaragua",
+     "x": 59.42,
+     "y": 92.93,
+     "letter": "N"
+    },
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "N"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "E"
+    },
+    {
+     "id": "na-athabasca",
+     "x": 44.59,
+     "y": 40.09,
+     "letter": "V"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "I"
+    },
+    {
+     "id": "na-great-salt",
+     "x": 40.57,
+     "y": 59.16,
+     "letter": "L"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "L"
+    },
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 7,
+     "text": "Find the seventh letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-winnipeg",
+     "position": 5,
+     "text": "Find the fifth letter in Lake Winnipeg."
+    },
+    {
+     "markerId": "na-nicaragua",
+     "position": 3,
+     "text": "Find the third letter in Lake Nicaragua."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 10,
+     "text": "Find the tenth letter in Lake Ontario."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 4,
+     "text": "Find the fourth letter in Great Bear Lake."
+    },
+    {
+     "markerId": "na-athabasca",
+     "position": 6,
+     "text": "Find the sixth letter in Lake Athabasca."
+    },
+    {
+     "markerId": "na-great-salt",
+     "position": 8,
+     "text": "Find the eighth letter in the Great Salt Lake."
+    },
+    {
+     "markerId": "na-chapala",
+     "position": 2,
+     "text": "Find the second letter in Lake Chapala."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 9,
+     "text": "Find the ninth letter in Hudson Bay."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 1,
+     "text": "Find the first letter in Lake Superior."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-unit-3-ru",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "БОННЕВИЛЬ",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "Б"
+    },
+    {
+     "id": "na-athabasca",
+     "x": 44.59,
+     "y": 40.09,
+     "letter": "О"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "Н"
+    },
+    {
+     "id": "na-nicaragua",
+     "x": 59.42,
+     "y": 92.93,
+     "letter": "Н"
+    },
+    {
+     "id": "na-chapala",
+     "x": 44.78,
+     "y": 83.14,
+     "letter": "Е"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "В"
+    },
+    {
+     "id": "na-superior",
+     "x": 54.93,
+     "y": 52.31,
+     "letter": "И"
+    },
+    {
+     "id": "na-tahoe",
+     "x": 35.83,
+     "y": 59.91,
+     "letter": "Л"
+    },
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-athabasca",
+     "position": 2,
+     "text": "Найди вторую букву в озере Атабаска."
+    },
+    {
+     "markerId": "na-chapala",
+     "position": 5,
+     "text": "Найди пятую букву в озере Чапала."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Атлантическом океане."
+    },
+    {
+     "markerId": "na-superior",
+     "position": 7,
+     "text": "Найди седьмую букву в озере Верхнем."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 9,
+     "text": "Найди девятую букву в Большом Медвежьем озере."
+    },
+    {
+     "markerId": "na-winnipeg",
+     "position": 6,
+     "text": "Найди шестую букву в озере Виннипег."
+    },
+    {
+     "markerId": "na-tahoe",
+     "position": 8,
+     "text": "Найди восьмую букву в озере Тахо."
+    },
+    {
+     "markerId": "na-nicaragua",
+     "position": 4,
+     "text": "Найди четвёртую букву в озере Никарагуа."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 1,
+     "text": "Найди первую букву в озере Онтарио."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-final-en",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "OJIBWE",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-tahoe",
+     "x": 35.83,
+     "y": 59.91,
+     "letter": "O"
+    },
+    {
+     "id": "na-ontario",
+     "x": 60.59,
+     "y": 56.28,
+     "letter": "J"
+    },
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "I"
+    },
+    {
+     "id": "na-nicaragua",
+     "x": 59.42,
+     "y": 92.93,
+     "letter": "B"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "W"
+    },
+    {
+     "id": "na-chapala",
+     "x": 44.78,
+     "y": 83.14,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-winnipeg",
+     "position": 5,
+     "text": "Find the fifth letter in Lake Winnipeg."
+    },
+    {
+     "markerId": "na-ontario",
+     "position": 2,
+     "text": "Find the second letter in Lake Ontario."
+    },
+    {
+     "markerId": "na-chapala",
+     "position": 6,
+     "text": "Find the sixth letter in Lake Chapala."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 3,
+     "text": "Find the third letter in Great Bear Lake."
+    },
+    {
+     "markerId": "na-tahoe",
+     "position": 1,
+     "text": "Find the first letter in Lake Tahoe."
+    },
+    {
+     "markerId": "na-nicaragua",
+     "position": 4,
+     "text": "Find the fourth letter in Lake Nicaragua."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-3-final-ru",
+   "section": "lakes-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ОДЖИБВЕ",
+   "map": "./assets/namerica-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 6,
+   "markers": [
+    {
+     "id": "na-great-bear",
+     "x": 41.45,
+     "y": 30.91,
+     "letter": "О"
+    },
+    {
+     "id": "na-huron",
+     "x": 57.86,
+     "y": 55.51,
+     "letter": "Д"
+    },
+    {
+     "id": "na-winnipeg",
+     "x": 49.38,
+     "y": 48.03,
+     "letter": "Ж"
+    },
+    {
+     "id": "na-chapala",
+     "x": 44.78,
+     "y": 83.14,
+     "letter": "И"
+    },
+    {
+     "id": "na-athabasca",
+     "x": 44.59,
+     "y": 40.09,
+     "letter": "Б"
+    },
+    {
+     "id": "na-tahoe",
+     "x": 35.83,
+     "y": 59.91,
+     "letter": "В"
+    },
+    {
+     "id": "na-nicaragua",
+     "x": 59.42,
+     "y": 92.93,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-chapala",
+     "position": 4,
+     "text": "Найди четвёртую букву в озере Чапала."
+    },
+    {
+     "markerId": "na-huron",
+     "position": 2,
+     "text": "Найди вторую букву в озере Гурон."
+    },
+    {
+     "markerId": "na-athabasca",
+     "position": 5,
+     "text": "Найди пятую букву в озере Атабаска."
+    },
+    {
+     "markerId": "na-nicaragua",
+     "position": 7,
+     "text": "Найди седьмую букву в озере Никарагуа."
+    },
+    {
+     "markerId": "na-winnipeg",
+     "position": 3,
+     "text": "Найди третью букву в озере Виннипег."
+    },
+    {
+     "markerId": "na-tahoe",
+     "position": 6,
+     "text": "Найди шестую букву в озере Тахо."
+    },
+    {
+     "markerId": "na-great-bear",
+     "position": 1,
+     "text": "Найди первую букву в Большом Медвежьем озере."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

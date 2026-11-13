@@ -1,0 +1,93 @@
+{
+ "section": "lakes-of-north-america",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "superior-largest-freshwater",
+   "order": 1,
+   "object": "na-superior",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Lake Superior",
+    "ru": "Верхнее"
+   },
+   "fact": {
+    "en": "Lake Superior is usually considered the largest freshwater lake in the world by area.",
+    "ru": "Верхнее обычно считается самым большим по площади пресным озером мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "2fdebe6aee909ca0"
+   }
+  },
+  {
+   "id": "great-slave-deepest",
+   "order": 2,
+   "object": "na-great-slave",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Great Slave Lake",
+    "ru": "Большое Невольничье озеро"
+   },
+   "fact": {
+    "en": "Great Slave Lake is the deepest lake in North America, about 614 m.",
+    "ru": "Большое Невольничье — самое глубокое озеро Северной Америки, около 614 м."
+   },
+   "figure": {
+    "value": 614,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "bfe26d9d95e9bcb7"
+   }
+  },
+  {
+   "id": "great-bear-largest-in-canada",
+   "order": 3,
+   "object": "na-great-bear",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Great Bear Lake",
+    "ru": "Большое Медвежье озеро"
+   },
+   "fact": {
+    "en": "Great Bear Lake is the largest lake lying entirely in Canada.",
+    "ru": "Большое Медвежье — самое большое озеро, целиком лежащее в Канаде."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "74183b6cd6a2b2f6"
+   }
+  }
+ ]
+}

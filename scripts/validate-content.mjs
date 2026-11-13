@@ -120,6 +120,14 @@ const RELEASE = {
     section: "rivers-of-north-america",
     ids: ["mississippi-missouri-longest", "mackenzie-longest-canada", "columbia-largest-pacific"],
   },
+  "b4-section-3-facts.json": {
+    section: "lakes-of-north-america",
+    ids: ["namerica-lakes-intro", "na-superior", "na-michigan", "na-huron", "na-erie", "na-ontario", "na-niagara-falls", "na-great-bear", "na-great-slave", "na-winnipeg", "na-athabasca", "na-great-salt", "na-tahoe", "na-chapala", "na-nicaragua"],
+  },
+  "b4-section-3-records.json": {
+    section: "lakes-of-north-america",
+    ids: ["superior-largest-freshwater", "great-slave-deepest", "great-bear-largest-in-canada"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],
