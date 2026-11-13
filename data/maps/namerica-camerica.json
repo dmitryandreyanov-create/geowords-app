@@ -1,0 +1,36 @@
+{
+ "map": "./assets/namerica-camerica.webp",
+ "of": "./assets/namerica-countries.webp",
+ "level": "Central America, large: North America section 6",
+ "coordinateSystem": "frame: the piece of namerica-countries.webp this map shows, in % of that map (x, y = top left; w, h = size). A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so tap areas and capitals of namerica-countries.json apply unchanged.",
+ "source": "Built by tools/build_namerica_camerica.py from Natural Earth 1:10m (land, lakes, admin 0 boundary lines) and data/maps/namerica-rivers.json",
+ "frame": {
+  "x": 52.5,
+  "y": 84.9,
+  "w": 15.0,
+  "h": 15.0
+ },
+ "aspect": "11 / 8",
+ "magnifier": {
+  "x": 60.0,
+  "y": 92.4
+ },
+ "objects": [
+  "cty-guatemala",
+  "cty-belize",
+  "cty-honduras",
+  "cty-el-salvador",
+  "cty-nicaragua",
+  "cty-costa-rica",
+  "cty-panama"
+ ],
+ "capitals": [
+  "guatemala-city",
+  "belmopan",
+  "tegucigalpa",
+  "san-salvador",
+  "managua",
+  "san-jose",
+  "panama-city"
+ ]
+}
