@@ -1,0 +1,410 @@
+{
+ "section": "lakes-of-north-america",
+ "block": 4,
+ "use": "introduction cards (exercise type 0), one fact per lake (and Niagara Falls); ids match data/maps/namerica-lakes.json",
+ "decisions": [
+  "13 lakes and Niagara Falls in 3 units as in plan v2 (approved 02.11.2026); facts, records and word definitions approved by Svetlana 13.11.2026 with her edits (Great Bear: ice most of the year; Tahoe: no depth figure; Great Salt Lake: Bonneville and changing saltiness; Nicaragua: bull sharks can travel up the San Juan).",
+  "Lake Superior is learned in block 1 and reviewed here as the «na-» object. Niagara Falls is a waterfall, not a lake (kind «waterfall»)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Великие озёра",
+    "en": "The Great Lakes"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Озёра Канады",
+    "en": "Lakes of Canada"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Запад и юг",
+    "en": "The west and south"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "namerica-lakes-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Lakes of North America",
+    "ru": "Озёра Северной Америки"
+   },
+   "fact": {
+    "en": "The Great Lakes are the largest group of freshwater lakes on Earth. They hold about a fifth of all the fresh surface water on the planet.",
+    "ru": "Великие озёра — самая большая группа пресных озёр на Земле. В них около пятой части всей пресной воды на поверхности планеты."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "55bde8324b9b6709"
+   }
+  },
+  {
+   "id": "na-superior",
+   "order": 1,
+   "kind": "lake",
+   "unit": 1,
+   "name": {
+    "en": "Lake Superior",
+    "ru": "Верхнее"
+   },
+   "fact": {
+    "en": "Lake Superior is the deepest and coldest of the Great Lakes.",
+    "ru": "Верхнее — самое глубокое и самое холодное из Великих озёр."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "46d8e487271fa176"
+   }
+  },
+  {
+   "id": "na-michigan",
+   "order": 2,
+   "kind": "lake",
+   "unit": 1,
+   "name": {
+    "en": "Lake Michigan",
+    "ru": "Мичиган"
+   },
+   "fact": {
+    "en": "Chicago, one of the largest cities in the United States, stands on the shore of Lake Michigan.",
+    "ru": "На берегу озера Мичиган стоит Чикаго, один из крупнейших городов США."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "1f6eb3e813449f38"
+   }
+  },
+  {
+   "id": "na-huron",
+   "order": 3,
+   "kind": "lake",
+   "unit": 1,
+   "name": {
+    "en": "Lake Huron",
+    "ru": "Гурон"
+   },
+   "fact": {
+    "en": "Manitoulin Island in Lake Huron is the largest island in a freshwater lake on Earth.",
+    "ru": "В озере Гурон лежит остров Манитулин — самый большой остров в пресном озере на Земле."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "11531a10dfce57c0"
+   }
+  },
+  {
+   "id": "na-erie",
+   "order": 4,
+   "kind": "lake",
+   "unit": 1,
+   "name": {
+    "en": "Lake Erie",
+    "ru": "Эри"
+   },
+   "fact": {
+    "en": "Lake Erie is the shallowest of the Great Lakes, so in summer it warms up more than the others.",
+    "ru": "Эри — самое мелкое из Великих озёр, поэтому летом оно прогревается сильнее остальных."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "c3527fbc43d701e8"
+   }
+  },
+  {
+   "id": "na-ontario",
+   "order": 5,
+   "kind": "lake",
+   "unit": 1,
+   "name": {
+    "en": "Lake Ontario",
+    "ru": "Онтарио"
+   },
+   "fact": {
+    "en": "The St. Lawrence River flows out of Lake Ontario and carries the water of the Great Lakes to the Atlantic Ocean.",
+    "ru": "Из озера Онтарио вытекает река Святого Лаврентия и несёт воду Великих озёр в Атлантический океан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "108cba6ed7332568"
+   }
+  },
+  {
+   "id": "na-niagara-falls",
+   "order": 6,
+   "kind": "waterfall",
+   "unit": 1,
+   "name": {
+    "en": "Niagara Falls",
+    "ru": "Ниагарский водопад"
+   },
+   "fact": {
+    "en": "Niagara Falls is on the Niagara River between Lake Erie and Lake Ontario. The United States and Canada share it.",
+    "ru": "Ниагарский водопад стоит на реке Ниагаре между озёрами Эри и Онтарио. Его делят США и Канада."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "edae932ee27a4398"
+   }
+  },
+  {
+   "id": "na-great-bear",
+   "order": 7,
+   "kind": "lake",
+   "unit": 2,
+   "name": {
+    "en": "Great Bear Lake",
+    "ru": "Большое Медвежье озеро"
+   },
+   "fact": {
+    "en": "The Arctic Circle crosses Great Bear Lake. It is covered with ice for most of the year.",
+    "ru": "Большое Медвежье озеро пересекает Северный полярный круг. Большую часть года оно покрыто льдом."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "210afce2bb89da54"
+   }
+  },
+  {
+   "id": "na-great-slave",
+   "order": 8,
+   "kind": "lake",
+   "unit": 2,
+   "name": {
+    "en": "Great Slave Lake",
+    "ru": "Большое Невольничье озеро"
+   },
+   "fact": {
+    "en": "The name of Great Slave Lake comes from the Slavey, an Indigenous people, not from slaves.",
+    "ru": "Название Большого Невольничьего озера связано с индейским народом слейви, а не с рабами."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "bdd981f2f0189644"
+   }
+  },
+  {
+   "id": "na-winnipeg",
+   "order": 9,
+   "kind": "lake",
+   "unit": 2,
+   "name": {
+    "en": "Lake Winnipeg",
+    "ru": "Виннипег"
+   },
+   "fact": {
+    "en": "The Nelson River flows out of Lake Winnipeg and carries its water to Hudson Bay.",
+    "ru": "Из озера Виннипег вытекает река Нельсон и несёт его воду в Гудзонов залив."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "7be5526031f94122"
+   }
+  },
+  {
+   "id": "na-athabasca",
+   "order": 10,
+   "kind": "lake",
+   "unit": 2,
+   "name": {
+    "en": "Lake Athabasca",
+    "ru": "Атабаска"
+   },
+   "fact": {
+    "en": "Some of the northernmost large sand dunes on Earth lie on the south shore of Lake Athabasca.",
+    "ru": "На южном берегу озера Атабаска лежат одни из самых северных больших песчаных дюн на Земле."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "544908ea1967e277"
+   }
+  },
+  {
+   "id": "na-great-salt",
+   "order": 11,
+   "kind": "lake",
+   "unit": 3,
+   "name": {
+    "en": "Great Salt Lake",
+    "ru": "Большое Солёное озеро"
+   },
+   "fact": {
+    "en": "The Great Salt Lake in Utah is what is left of ancient Lake Bonneville, which was many times larger in the Ice Age. Its saltiness changes from year to year and from one part of the lake to another, but it is usually much saltier than the ocean.",
+    "ru": "Большое Солёное озеро в штате Юта — остаток древнего озера Бонневиль, которое в ледниковую эпоху было во много раз больше. Солёность воды меняется по годам и в разных частях озера, но обычно она намного выше океанской."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "6105851516738e6d"
+   }
+  },
+  {
+   "id": "na-tahoe",
+   "order": 12,
+   "kind": "lake",
+   "unit": 3,
+   "name": {
+    "en": "Lake Tahoe",
+    "ru": "Тахо"
+   },
+   "fact": {
+    "en": "Lake Tahoe is a mountain lake in the Sierra Nevada, famous for its exceptionally clear water.",
+    "ru": "Тахо — горное озеро в Сьерра-Неваде, знаменитое исключительно прозрачной водой."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "ddfab16b88b30793"
+   }
+  },
+  {
+   "id": "na-chapala",
+   "order": 13,
+   "kind": "lake",
+   "unit": 3,
+   "name": {
+    "en": "Lake Chapala",
+    "ru": "Чапала"
+   },
+   "fact": {
+    "en": "Lake Chapala is the largest lake in Mexico.",
+    "ru": "Чапала — самое большое озеро Мексики."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "ea3b60c786c10789"
+   }
+  },
+  {
+   "id": "na-nicaragua",
+   "order": 14,
+   "kind": "lake",
+   "unit": 3,
+   "name": {
+    "en": "Lake Nicaragua",
+    "ru": "Никарагуа"
+   },
+   "fact": {
+    "en": "Lake Nicaragua is the largest lake in Central America. Bull sharks, which can live in both salt and fresh water, can travel into it from the Caribbean Sea up the San Juan River.",
+    "ru": "Озеро Никарагуа — самое большое в Центральной Америке. Акулы-быки, которые могут жить и в солёной, и в пресной воде, способны подниматься в него из Карибского моря по реке Сан-Хуан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/XeYXVC3ieyLtPSiQKriEQZ",
+    "note": "block 4 section 3, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "46f184cbbcf62931"
+   }
+  }
+ ]
+}

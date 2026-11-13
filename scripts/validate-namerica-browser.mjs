@@ -1,4 +1,4 @@
-/* Block 4 «North America», section 1 «North America on the map» and section 2 «Rivers of North America» at iPhone width: plays every lesson with right answers on the North America base map,
+/* Block 4 «North America», section 1 «North America on the map» , section 2 «Rivers of North America» and section 3 «Lakes of North America» at iPhone width: plays every lesson with right answers on the North America base map,
    then the unit practice and the finals with the draft words and puzzles treated as approved in memory (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
 import assert from 'node:assert/strict';
@@ -7,7 +7,7 @@ import http from 'node:http';
 import path from 'node:path';
 import {chromium} from 'playwright';
 const root=process.cwd(),shots=process.env.SHOTS;
-// SECTIONS=2 (or 1,2) plays only those sections
+// SECTIONS=3 (or 1,2,3) plays only those sections
 const run=n=>!process.env.SECTIONS||process.env.SECTIONS.split(',').map(Number).includes(n);
 const server=http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost'),pathname=decodeURIComponent(u.pathname),resolved=path.resolve(root,'.'+pathname),file=pathname.endsWith('/')?path.join(resolved,'index.html'):resolved;
   if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){res.writeHead(404);res.end();return}
@@ -142,5 +142,60 @@ try{
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
   }
-  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2')+' play in RU and EN on the North America maps.');
+  // section 3 «Lakes of North America»: lessons on the lakes map (a tap on the lake's label point is right), practice and finals
+  const lMap=JSON.parse(fs.readFileSync('data/maps/namerica-lakes.json','utf8')),lFacts=JSON.parse(fs.readFileSync('data/content/b4-section-3-facts.json','utf8'));
+  const lLab=Object.fromEntries(lMap.items.map(i=>[i.id,i.label])),lUnit=Object.fromEntries(lMap.items.map(i=>[i.id,i.unit])),lFact=id=>lFacts.items.find(i=>i.id===id);
+  const LMAP='assets/namerica-lakes.webp';
+  for(const lang of run(3)?['ru','en']:[]){
+    const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,deviceScaleFactor:2});
+    for(const f of ['data/geowords/b4-section-3.json'])
+      await context.route('**/'+f+'*',r=>r.fulfill({contentType:'application/json',body:approvedCopy(f)}));
+    await context.addInitScript(l=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:l,done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))},lang);
+    const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
+    await page.goto(base+'/app/');await page.waitForSelector('[data-step="n3-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),lang==='ru'?/Озёра Северной Америки/:/Lakes of North America/);
+    const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`n3-${name}-${lang}.png`)})}};
+    const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['n3-u1-l1','n3-u1-l2','n3-u2-l1','n3-u2-l2','n3-u3-l1','n3-u3-l2','n3-u3-l3','n3-u3-l4'];const kinds=new Set(),shotKinds=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith(LMAP),'North America lakes map: '+src);
+        if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
+        if(q.k==='introEurope'){assert.equal(await page.locator('.task .card h3').first().innerText(),lang==='ru'?'Озёра Северной Америки':'Lakes of North America');await page.locator('.fb .btn').click()}
+        else if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),lFact(q.id).fact[lang]);
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){assert(q.id in lUnit,'a lake of section 3: '+q.id);await tapAt(lLab[q.id]);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='whatEu'){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in lUnit),'lake options only');
+          const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)),'options only from taught lessons: '+opts);
+          await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n3-u1-l1"]')}
+    for(const k of ['introEurope','introEu','introEuRec','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
+    for(const u of [1,2,3]){await page.locator(`[data-step="n3-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(LMAP),'practice on the lakes map');
+        for(const m of p.markers)assert(m.id in lUnit?lUnit[m.id]<=u:m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`);
+        assert(p.markers.some(m=>m.id in lUnit),p.answer+': letters on lakes');
+        if(w===0)await shot('practice-u'+u);
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="n3-u1-l1"]')}
+    const lGeo=JSON.parse(fs.readFileSync('data/geowords/b4-section-3.json','utf8')).puzzles;
+    for(const [step,id] of [['n3-u1-final','unit-1'],['n3-u2-final','unit-2'],['n3-u3-final','unit-3'],['n3-final','final']]){
+      const want=lGeo.find(p=>p.id===`b4-section-3-${id}-${lang}`);
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(LMAP),'final on the lakes map');
+      await page.waitForTimeout(400);await shot('final-'+id);
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n3-u1-l1"]')}
+    assert.deepEqual(errs,[],'no page errors');
+    await context.close();
+  }
+  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2,3')+' play in RU and EN on the North America maps.');
 }finally{await browser?.close();server.close()}
