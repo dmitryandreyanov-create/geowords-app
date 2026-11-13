@@ -9,7 +9,7 @@ America maps, so a point of this map is a point of the countries map: x = frame.
 (u, v in % of this map), and the tap areas and capitals of data/maps/namerica-countries.json are used as they are.
 
 Drawn: sea (light near the coast), North American land in sand colour, South America grey, Lake Nicaragua, Lake Managua, Lake
-Izabal and Gatun Lake, dark brown coastlines, the land borders, the rivers of section 2 (data/maps/namerica-rivers.json: the
+Izabal and Gatun Lake, dark brown coastlines, the land borders (Belize – Guatemala dashed), the rivers of section 2 (data/maps/namerica-rivers.json: the
 Usumacinta, the San Juan) and the capital dots of section 6 in this frame.
 
 usage: python3 tools/build_namerica_camerica.py <natural-earth-dir>
@@ -79,15 +79,25 @@ im = Image.fromarray(np.clip(img, 0, 255).astype(np.uint8)).convert('RGBA')
 countries = {}
 for props, g in B.load(NE, 'ne_10m_admin_0_countries', 'ADMIN'):
     if g.intersects(VIEW): countries.setdefault(props['ADMIN'], []).append(g)
-lines = [(p, g, False) for p, g in B.load(NE, 'ne_10m_admin_0_boundary_lines_land') if g.intersects(VIEW)]
+lines = [(p, g, {p.get('ADM0_LEFT'), p.get('ADM0_RIGHT')} == {'Belize', 'Guatemala'}) for p, g in B.load(NE, 'ne_10m_admin_0_boundary_lines_land') if g.intersects(VIEW)]
 bm = Image.new('L', (WS, HS), 0); bd = ImageDraw.Draw(bm)
 from shapely.geometry import LineString
+def dashes(l, on, off):
+    out, t = [], 0.0
+    while t < l.length:
+        seg = shapely.ops.substring(l, t, min(t + on, l.length))
+        if seg.length > 0: out.append(seg)
+        t += on + off
+    return out
+# Belize – Guatemala: dashed, as on the countries map (the territorial dispute stays neutral)
 for props, g, dashed in lines:
-    if props.get('FEATURECLA') == 'Overlay limit': continue
+    if props.get('FEATURECLA') in ('Overlay limit', 'Lease limit'): continue
     g = g.intersection(VIEW)
     for l in getattr(g, 'geoms', [g]):
         if l.geom_type != 'LineString': continue
-        bd.line(ring(l.coords), fill=255, width=round(BORDER_W * SS), joint='curve')
+        lp = LineString(ring(l.coords))
+        for piece in (dashes(lp, 26 * SS, 18 * SS) if dashed else [lp]):
+            bd.line(list(piece.coords), fill=255, width=round((BORDER_W * 0.8 if dashed else BORDER_W) * SS), joint='curve')
 bmask = (np.asarray(bm).astype(float) / 255) * L
 arr = np.asarray(im).astype(float)
 arr[..., :3] = arr[..., :3] * (1 - bmask[..., None]) + np.array(BORDER) * bmask[..., None]

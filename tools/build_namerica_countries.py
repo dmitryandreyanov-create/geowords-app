@@ -75,15 +75,27 @@ ralpha = np.clip((np.abs(rivers - blank).sum(2) - 20) / 80, 0, 1) * (rivers[:, :
 land_ne = unary_union([g for _, g in B.load(NE, 'ne_10m_land')])
 region = B.na_region(land_ne)
 mask = Image.new('L', (W * SS, H * SS), 0); dr = ImageDraw.Draw(mask)
+import shapely.ops
+def dashes(l, on=7, off=5):
+    """the pieces of a projected line (in px) drawn as dashes"""
+    out, t = [], 0.0
+    while t < l.length:
+        seg = shapely.ops.substring(l, t, min(t + on, l.length))
+        if seg.length > 0: out.append(seg)
+        t += on + off
+    return out
+# Belize – Guatemala (Svetlana, 13.11.2026: keep the territorial dispute neutral): Guatemala claims part of Belize, the case is before
+# the International Court of Justice; Natural Earth marks this border «Indefinite» / «Disputed», and it is drawn dashed
+DISPUTED = lambda p: {p.get('ADM0_LEFT'), p.get('ADM0_RIGHT')} == {'Belize', 'Guatemala'}
 for props, g in B.load(NE, 'ne_10m_admin_0_boundary_lines_land'):
-    if props.get('FEATURECLA') == 'Overlay limit': continue
+    if props.get('FEATURECLA') in ('Overlay limit', 'Lease limit'): continue
     g = g.intersection(region)
     if g.is_empty: continue
     g = B.proj(g)
     for l in getattr(g, 'geoms', [g]):
-        if l.geom_type != 'LineString' or l.length < 1: continue
-        l = l.simplify(0.4)
-        dr.line([(x * SS, y * SS) for x, y in l.coords], fill=255, width=round(BW * SS), joint='curve')
+        if l.geom_type != 'LineString' or l.length < (0.3 if DISPUTED(props) else 1): continue
+        for piece in (dashes(l.simplify(0.2)) if DISPUTED(props) else [l.simplify(0.4)]):
+            dr.line([(x * SS, y * SS) for x, y in piece.coords], fill=255, width=round((BW * 0.8 if DISPUTED(props) else BW) * SS), joint='curve')
 mask = np.asarray(mask.resize((W, H), Image.LANCZOS)).astype(float) / 255
 land = ~((blank[:, :, 2] > blank[:, :, 0] + 8))
 mask = mask * land
@@ -155,6 +167,7 @@ out = {
   'coordinateSystem': 'label, capital, tapArea, spots and river points in % of image width/height from top-left; same for every namerica-*.webp (shared base, tools/namerica_base.py)',
   'source': 'Natural Earth 1:10m admin 0 countries and boundary lines (v5.1.2, commit ca96624), projected like namerica-overview.json; capitals from their lon/lat; rivers = data/maps/namerica-rivers.json',
   'notes': ['Built by tools/build_namerica_countries.py, which also draws assets/namerica-countries.webp (borders and capital dots over the rivers map).',
+            'Belize – Guatemala: the border is drawn dashed (Guatemala claims part of Belize; the case is before the International Court of Justice), the dispute is not presented as resolved.',
             'The United States: the tap area is the 48 states and Alaska; Hawaii is Oceania and stays grey. Costa Rica without Cocos Island (outside the frame).',
             'Central America is small on this map: the large map of Central America (data/maps/namerica-camerica.json) is an exact piece of it.',
             'rivers: for each river of section 2 the countries of this section it crosses, and a point on the river inside each country it crosses far enough («on the Rio Grande in Mexico»).',
