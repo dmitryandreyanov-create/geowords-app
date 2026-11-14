@@ -1,0 +1,1030 @@
+{
+ "section": "countries-of-north-and-central-america",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/namerica-countries.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the rivers of section 2 that flow through them («on the Usumacinta»), on a river inside a country it crosses («on the Usumacinta in Guatemala»), and on the objects of section 1 in view; at least half of the letters in the region of the unit, a third on rivers but never more than the rivers in view",
+  "nesting": "a country is named once per puzzle; a river letter «on the Yukon» never shares a puzzle with a country the river crosses; one letter per river; a country never with its island, peninsula, gulf or isthmus; no letter inside the area of another place of the puzzle",
+  "depth": "a letter in a country stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026)",
+  "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-6-unit-1-en",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "DOMINION",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "D"
+    },
+    {
+     "id": "na-ohio@cty-united-states",
+     "x": 54.95,
+     "y": 64.52,
+     "letter": "O"
+    },
+    {
+     "id": "cty-canada",
+     "x": 45,
+     "y": 45.3,
+     "letter": "M"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "I"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 47.77,
+     "y": 75.71,
+     "letter": "N"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 45.88,
+     "y": 63.49,
+     "letter": "I"
+    },
+    {
+     "id": "na-colorado",
+     "x": 38.41,
+     "y": 65.86,
+     "letter": "O"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 51.04,
+     "y": 53.64,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-rio-grande",
+     "position": 5,
+     "text": "Find the fifth letter on the Rio Grande."
+    },
+    {
+     "markerId": "cty-canada",
+     "position": 3,
+     "text": "Find the third letter in Canada."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 6,
+     "text": "Find the sixth letter on the Arkansas."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 8,
+     "text": "Find the eighth letter on the Mississippi."
+    },
+    {
+     "markerId": "na-ohio@cty-united-states",
+     "position": 2,
+     "text": "Find the second letter on the Ohio in the United States."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 1,
+     "text": "Find the first letter in Hudson Bay."
+    },
+    {
+     "markerId": "na-colorado",
+     "position": 7,
+     "text": "Find the seventh letter on the Colorado."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 46,
+    "zoom": 1.2
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-unit-1-ru",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ДОМИНИОН",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "na-colorado",
+     "x": 37.88,
+     "y": 67.73,
+     "letter": "Д"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 50.33,
+     "y": 66.04,
+     "letter": "О"
+    },
+    {
+     "id": "cty-canada",
+     "x": 40.2,
+     "y": 36.6,
+     "letter": "М"
+    },
+    {
+     "id": "na-yukon@cty-united-states",
+     "x": 31.09,
+     "y": 24.92,
+     "letter": "И"
+    },
+    {
+     "id": "na-missouri",
+     "x": 41.82,
+     "y": 53.46,
+     "letter": "Н"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 49.42,
+     "y": 76.98,
+     "letter": "И"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 51.04,
+     "y": 53.64,
+     "letter": "О"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yukon@cty-united-states",
+     "position": 4,
+     "text": "Найди четвёртую букву на Юконе в США."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 2,
+     "text": "Найди вторую букву на Арканзасе."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 6,
+     "text": "Найди шестую букву на Рио-Гранде."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 8,
+     "text": "Найди восьмую букву на Огайо."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 5,
+     "text": "Найди пятую букву на Миссури."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 7,
+     "text": "Найди седьмую букву на Миссисипи."
+    },
+    {
+     "markerId": "cty-canada",
+     "position": 3,
+     "text": "Найди третью букву в Канаде."
+    },
+    {
+     "markerId": "na-colorado",
+     "position": 1,
+     "text": "Найди первую букву на Колорадо."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 46,
+    "zoom": 1.2
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-unit-2-en",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "POPOLVUH",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-mexico",
+     "x": 45.3,
+     "y": 78.9,
+     "letter": "P"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "O"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "P"
+    },
+    {
+     "id": "cty-guatemala",
+     "x": 54.3,
+     "y": 89.4,
+     "letter": "O"
+    },
+    {
+     "id": "cty-belize",
+     "x": 56.1,
+     "y": 86.4,
+     "letter": "L"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 52.32,
+     "y": 66.88,
+     "letter": "V"
+    },
+    {
+     "id": "na-rio-grande@cty-united-states",
+     "x": 43.37,
+     "y": 66.56,
+     "letter": "U"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 54.86,
+     "y": 73.46,
+     "letter": "H"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 2,
+     "text": "Find the second letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "cty-belize",
+     "position": 5,
+     "text": "Find the fifth letter in Belize."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 3,
+     "text": "Find the third letter in the Gulf of California."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 6,
+     "text": "Find the sixth letter on the Arkansas."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 8,
+     "text": "Find the eighth letter on the Mississippi."
+    },
+    {
+     "markerId": "cty-guatemala",
+     "position": 4,
+     "text": "Find the fourth letter in Guatemala."
+    },
+    {
+     "markerId": "na-rio-grande@cty-united-states",
+     "position": 7,
+     "text": "Find the seventh letter on the Rio Grande in the United States."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 1,
+     "text": "Find the first letter in Mexico."
+    }
+   ],
+   "focus": {
+    "x": 47,
+    "y": 80,
+    "zoom": 3.3
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-unit-2-ru",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПОПОЛЬВУХ",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "na-arkansas",
+     "x": 52.32,
+     "y": 66.88,
+     "letter": "П"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "О"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 48.3,
+     "y": 85.2,
+     "letter": "П"
+    },
+    {
+     "id": "cty-guatemala",
+     "x": 54.3,
+     "y": 89.4,
+     "letter": "О"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 46.75,
+     "y": 72.98,
+     "letter": "Л"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "Ь"
+    },
+    {
+     "id": "cty-belize",
+     "x": 56.1,
+     "y": 86.4,
+     "letter": "В"
+    },
+    {
+     "id": "na-colorado@cty-united-states",
+     "x": 38.16,
+     "y": 66.83,
+     "letter": "У"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 53.45,
+     "y": 71.72,
+     "letter": "Х"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-mexico",
+     "position": 3,
+     "text": "Найди третью букву в Мексике."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 6,
+     "text": "Найди шестую букву в Калифорнийском заливе."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 2,
+     "text": "Найди вторую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "cty-belize",
+     "position": 7,
+     "text": "Найди седьмую букву в Белизе."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 9,
+     "text": "Найди девятую букву на Миссисипи."
+    },
+    {
+     "markerId": "cty-guatemala",
+     "position": 4,
+     "text": "Найди четвёртую букву в Гватемале."
+    },
+    {
+     "markerId": "na-colorado@cty-united-states",
+     "position": 8,
+     "text": "Найди восьмую букву на Колорадо в США."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 1,
+     "text": "Найди первую букву на Арканзасе."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 5,
+     "text": "Найди пятую букву на Рио-Гранде."
+    }
+   ],
+   "focus": {
+    "x": 47,
+    "y": 80,
+    "zoom": 3.3
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-unit-3-en",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "GUANACASTE",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-belize",
+     "x": 56.1,
+     "y": 87.3,
+     "letter": "G"
+    },
+    {
+     "id": "cty-el-salvador",
+     "x": 56.1,
+     "y": 90.6,
+     "letter": "U"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 49.42,
+     "y": 76.98,
+     "letter": "A"
+    },
+    {
+     "id": "na-san-juan@cty-nicaragua",
+     "x": 59.23,
+     "y": 92.64,
+     "letter": "N"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 49.2,
+     "y": 86.7,
+     "letter": "A"
+    },
+    {
+     "id": "cty-panama",
+     "x": 64.2,
+     "y": 95.4,
+     "letter": "C"
+    },
+    {
+     "id": "cty-costa-rica",
+     "x": 61.2,
+     "y": 94.8,
+     "letter": "A"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "S"
+    },
+    {
+     "id": "cty-honduras",
+     "x": 58.2,
+     "y": 89.1,
+     "letter": "T"
+    },
+    {
+     "id": "na-usumacinta@cty-guatemala",
+     "x": 54.05,
+     "y": 89.09,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-costa-rica",
+     "position": 7,
+     "text": "Find the seventh letter in Costa Rica."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 5,
+     "text": "Find the fifth letter in Mexico."
+    },
+    {
+     "markerId": "cty-el-salvador",
+     "position": 2,
+     "text": "Find the second letter in El Salvador."
+    },
+    {
+     "markerId": "na-usumacinta@cty-guatemala",
+     "position": 10,
+     "text": "Find the tenth letter on the Usumacinta in Guatemala."
+    },
+    {
+     "markerId": "na-san-juan@cty-nicaragua",
+     "position": 4,
+     "text": "Find the fourth letter on the San Juan in Nicaragua."
+    },
+    {
+     "markerId": "cty-panama",
+     "position": 6,
+     "text": "Find the sixth letter in Panama."
+    },
+    {
+     "markerId": "cty-honduras",
+     "position": 9,
+     "text": "Find the ninth letter in Honduras."
+    },
+    {
+     "markerId": "cty-belize",
+     "position": 1,
+     "text": "Find the first letter in Belize."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 3,
+     "text": "Find the third letter on the Rio Grande."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the Caribbean Sea."
+    }
+   ],
+   "focus": {
+    "x": 60,
+    "y": 90,
+    "zoom": 4
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-unit-3-ru",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГУАНАКАСТЕ",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-el-salvador",
+     "x": 56.1,
+     "y": 90.6,
+     "letter": "Г"
+    },
+    {
+     "id": "cty-panama",
+     "x": 64.2,
+     "y": 95.4,
+     "letter": "У"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 49.5,
+     "y": 86.7,
+     "letter": "А"
+    },
+    {
+     "id": "cty-costa-rica",
+     "x": 61.2,
+     "y": 94.8,
+     "letter": "Н"
+    },
+    {
+     "id": "na-usumacinta@cty-guatemala",
+     "x": 54.05,
+     "y": 89.09,
+     "letter": "А"
+    },
+    {
+     "id": "na-san-juan@cty-nicaragua",
+     "x": 59.23,
+     "y": 92.64,
+     "letter": "К"
+    },
+    {
+     "id": "cty-belize",
+     "x": 56.1,
+     "y": 86.7,
+     "letter": "А"
+    },
+    {
+     "id": "cty-honduras",
+     "x": 58.2,
+     "y": 89.1,
+     "letter": "С"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 49.42,
+     "y": 76.98,
+     "letter": "Т"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-panama",
+     "position": 2,
+     "text": "Найди вторую букву в Панаме."
+    },
+    {
+     "markerId": "cty-costa-rica",
+     "position": 4,
+     "text": "Найди четвёртую букву в Коста-Рике."
+    },
+    {
+     "markerId": "na-san-juan@cty-nicaragua",
+     "position": 6,
+     "text": "Найди шестую букву на Сан-Хуане в Никарагуа."
+    },
+    {
+     "markerId": "cty-honduras",
+     "position": 8,
+     "text": "Найди восьмую букву в Гондурасе."
+    },
+    {
+     "markerId": "na-usumacinta@cty-guatemala",
+     "position": 5,
+     "text": "Найди пятую букву на Усумасинте в Гватемале."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 3,
+     "text": "Найди третью букву в Мексике."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 9,
+     "text": "Найди девятую букву на Рио-Гранде."
+    },
+    {
+     "markerId": "cty-belize",
+     "position": 7,
+     "text": "Найди седьмую букву в Белизе."
+    },
+    {
+     "markerId": "cty-el-salvador",
+     "position": 1,
+     "text": "Найди первую букву в Сальвадоре."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 10,
+     "text": "Найди десятую букву в Карибском море."
+    }
+   ],
+   "focus": {
+    "x": 60,
+    "y": 90,
+    "zoom": 4
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-final-en",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "FEDERATION",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "na-mackenzie@cty-canada",
+     "x": 39.69,
+     "y": 32.13,
+     "letter": "F"
+    },
+    {
+     "id": "na-nelson",
+     "x": 51.64,
+     "y": 43.21,
+     "letter": "E"
+    },
+    {
+     "id": "na-missouri",
+     "x": 51.76,
+     "y": 62.45,
+     "letter": "D"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 54.86,
+     "y": 73.46,
+     "letter": "E"
+    },
+    {
+     "id": "na-rio-grande@cty-united-states",
+     "x": 43.19,
+     "y": 63.45,
+     "letter": "R"
+    },
+    {
+     "id": "cty-panama",
+     "x": 63.59,
+     "y": 96.06,
+     "letter": "A"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 45.6,
+     "y": 77.1,
+     "letter": "T"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 61.95,
+     "y": 54.32,
+     "letter": "I"
+    },
+    {
+     "id": "na-yukon",
+     "x": 31.09,
+     "y": 24.92,
+     "letter": "O"
+    },
+    {
+     "id": "cty-guatemala",
+     "x": 54.69,
+     "y": 89.27,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-mexico",
+     "position": 7,
+     "text": "Find the seventh letter in Mexico."
+    },
+    {
+     "markerId": "na-nelson",
+     "position": 2,
+     "text": "Find the second letter on the Nelson."
+    },
+    {
+     "markerId": "cty-panama",
+     "position": 6,
+     "text": "Find the sixth letter in Panama."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 4,
+     "text": "Find the fourth letter on the Mississippi."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 8,
+     "text": "Find the eighth letter on the St. Lawrence."
+    },
+    {
+     "markerId": "cty-guatemala",
+     "position": 10,
+     "text": "Find the tenth letter in Guatemala."
+    },
+    {
+     "markerId": "na-rio-grande@cty-united-states",
+     "position": 5,
+     "text": "Find the fifth letter on the Rio Grande in the United States."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 9,
+     "text": "Find the ninth letter on the Yukon."
+    },
+    {
+     "markerId": "na-mackenzie@cty-canada",
+     "position": 1,
+     "text": "Find the first letter on the Mackenzie in Canada."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 3,
+     "text": "Find the third letter on the Missouri."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 55,
+    "zoom": 1.1
+   },
+   "inRegion": 9,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-6-final-ru",
+   "section": "countries-of-north-and-central-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ФЕДЕРАЦИЯ",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "na-nelson@cty-canada",
+     "x": 49.4,
+     "y": 47.82,
+     "letter": "Ф"
+    },
+    {
+     "id": "na-columbia@cty-united-states",
+     "x": 37.64,
+     "y": 52.15,
+     "letter": "Е"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 45.6,
+     "y": 81,
+     "letter": "Д"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "Е"
+    },
+    {
+     "id": "na-yukon",
+     "x": 31.09,
+     "y": 24.92,
+     "letter": "Р"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 43.96,
+     "y": 62.02,
+     "letter": "А"
+    },
+    {
+     "id": "cty-panama",
+     "x": 64.2,
+     "y": 95.4,
+     "letter": "Ц"
+    },
+    {
+     "id": "na-usumacinta@cty-guatemala",
+     "x": 54.05,
+     "y": 89.09,
+     "letter": "И"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 54.31,
+     "y": 64.17,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-mackenzie",
+     "position": 4,
+     "text": "Найди четвёртую букву на Маккензи."
+    },
+    {
+     "markerId": "na-columbia@cty-united-states",
+     "position": 2,
+     "text": "Найди вторую букву на Колумбии в США."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 6,
+     "text": "Найди шестую букву на Арканзасе."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 3,
+     "text": "Найди третью букву в Мексике."
+    },
+    {
+     "markerId": "na-usumacinta@cty-guatemala",
+     "position": 8,
+     "text": "Найди восьмую букву на Усумасинте в Гватемале."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 5,
+     "text": "Найди пятую букву на Юконе."
+    },
+    {
+     "markerId": "na-nelson@cty-canada",
+     "position": 1,
+     "text": "Найди первую букву на Нельсоне в Канаде."
+    },
+    {
+     "markerId": "cty-panama",
+     "position": 7,
+     "text": "Найди седьмую букву в Панаме."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 9,
+     "text": "Найди девятую букву на Миссисипи."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 55,
+    "zoom": 1.1
+   },
+   "inRegion": 9,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

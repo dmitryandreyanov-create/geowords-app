@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.13-namerica-5';
+const BUILD='2026.11.14-namerica-6';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -14,7 +14,7 @@ const IMG={
   faceHappy:A+'assets/pip/game/pip-face-happy.webp',faceOops:A+'assets/pip/game/pip-face-oops.webp',faceWow:A+'assets/pip/game/pip-face-wow.webp',
   streak:A+'assets/graphics/game/icon-streak.webp',nuance:A+'assets/graphics/game/icon-nuance.webp',
   medal:A+'assets/graphics/game/medal-unit.webp',medalSection:A+'assets/graphics/game/medal-section.webp',boat:A+'assets/graphics/game/path-pip-boat.webp',
-  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euMountains:A+'assets/europe-mountains.webp',euCapitals:A+'assets/europe-capitals.webp',euCountriesRivers:A+'assets/europe-countries-rivers.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',asBase:A+'assets/asia-blank.webp',naBase:A+'assets/namerica-blank.webp',naRivers:A+'assets/namerica-rivers.webp',naLakes:A+'assets/namerica-lakes.webp',naMountains:A+'assets/namerica-mountains.webp',naDeserts:A+'assets/namerica-deserts.webp',asRivers:A+'assets/asia-rivers.webp',asLakes:A+'assets/asia-lakes.webp',asMountains:A+'assets/asia-mountains.webp',asDeserts:A+'assets/asia-deserts.webp?v=3',asCountries:A+'assets/asia-countries.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
+  stamp:A+'assets/graphics/game/stamp-continents.webp',stamp2:A+'assets/graphics/game/stamp-rivers.webp',stamp3:A+'assets/graphics/game/stamp-mountains.webp',stamp4:A+'assets/graphics/game/stamp-seas.webp',stamp5:A+'assets/graphics/game/stamp-straits.webp',stampBlock:A+'assets/graphics/game/stamp-block-world.webp',euBase:A+'assets/europe-blank.webp',euRivers:A+'assets/europe-rivers.webp',euMountains:A+'assets/europe-mountains.webp',euCapitals:A+'assets/europe-capitals.webp',euCountriesRivers:A+'assets/europe-countries-rivers.webp',euCard:A+'assets/graphics/game/rank-1-map.webp',asBase:A+'assets/asia-blank.webp',naBase:A+'assets/namerica-blank.webp',naRivers:A+'assets/namerica-rivers.webp',naLakes:A+'assets/namerica-lakes.webp',naMountains:A+'assets/namerica-mountains.webp',naDeserts:A+'assets/namerica-deserts.webp',naCountries:A+'assets/namerica-countries.webp',asRivers:A+'assets/asia-rivers.webp',asLakes:A+'assets/asia-lakes.webp',asMountains:A+'assets/asia-mountains.webp',asDeserts:A+'assets/asia-deserts.webp?v=3',asCountries:A+'assets/asia-countries.webp',stampChallenge:A+'assets/graphics/game/stamp-challenge.webp',base:A+'assets/world-base.webp',
   layer:id=>A+'assets/layers/'+id+'.webp'
 };
 
@@ -40,7 +40,7 @@ const T={
   whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
   allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
   whatStrait:'Что это за пролив или канал?',connectsQ:n=>`Что соединяет <b>${n}</b>?`,separatesQ:n=>`Что разделяет <b>${n}</b>?`,connectsT:'Что соединяет',separatesT:'Что разделяет',
-  openMag:'Он маленький — открой лупу 🔍 на карте',lvName:'Восточное Средиземноморье крупно',lvHint:'Страны у восточного берега Средиземного моря маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',
+  openMag:'Он маленький — открой лупу 🔍 на карте',caName:'Центральная Америка крупно',caHint:'Страны Центральной Америки маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',lvName:'Восточное Средиземноморье крупно',lvHint:'Страны у восточного берега Средиземного моря маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',
   whatSea:'Что это за море или залив?',seaOcean:n=>`<b>${n}</b> — часть какого океана?`,seaNone:'Ни какого: это внутренний водоём',
   allIndian:'Нажми на все моря и заливы Индийского океана',allIndianHint:'Отметь моря и заливы и нажми «Проверить».',allIndianOk:'Все моря и заливы Индийского океана найдены!',allIndianBad:'Не совсем. Вот моря и заливы Индийского океана.',
   whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
@@ -54,7 +54,7 @@ const T={
   labelBad:'Не совсем. Вот как правильно:',pairs:'Пары',pairsQ:'Соедини пары',tf:'Правда или нет',tfYes:'Правда',tfNo:'Неправда',tfRight:'Правильно так:',pairsOk:'Все пары найдены!',
   pairsT:{flowsInto:'Река и куда она впадает',inOcean:'Море и его океан',onContinent:'Объект и его континент',separates:'Пролив и что он разделяет',capitalOn:'Столица и её река',crosses:'Река и страна, через которую она течёт',inCountry:'Место и его страна',countryCap:'Страна и её столица'},
   recFind:'Найди его на карте.',recWhatQ:'Что это? Выбери название.',recPairsT:'Место и его рекорд',lessonDesc:'Около 10 заданий, 3–4 минуты.',finalDesc:'Найди буквы на карте по подсказкам и собери слово.',
-  block2:'Блок 2 · Европа',na1Sec:'Блок 4 · Раздел 1',na1Name:'Северная Америка на карте',na2Sec:'Блок 4 · Раздел 2',na2Name:'Реки Северной Америки',na3Sec:'Блок 4 · Раздел 3',na3Name:'Озёра Северной Америки',na4Sec:'Блок 4 · Раздел 4',na4Name:'Горы и равнины Северной Америки',na5Sec:'Блок 4 · Раздел 5',na5Name:'Пустыни и каньоны Северной Америки',cyName:'Каньоны плато Колорадо крупно',cyHint:'Четыре каньона плато Колорадо стоят близко — нажми на них или на лупу 🔍, и откроется крупная карта',block4:'Блок 4 · Северная Америка',as1Sec:'Блок 3 · Раздел 1',as1Name:'Азия на карте',as2Sec:'Блок 3 · Раздел 2',as2Name:'Реки Азии',as3Sec:'Блок 3 · Раздел 3',as3Name:'Озёра Азии',as4Sec:'Блок 3 · Раздел 4',as4Name:'Горы Азии',as5Sec:'Блок 3 · Раздел 5',as5Name:'Пустыни Азии',as6Sec:'Блок 3 · Раздел 6',as6Name:'Страны и столицы: Восточная и Юго-Восточная Азия',as7Sec:'Блок 3 · Раздел 7',as7Name:'Страны и столицы: Южная и Центральная Азия',as8Sec:'Блок 3 · Раздел 8',as8Name:'Страны и столицы: Западная Азия и Закавказье',block3:'Блок 3 · Азия',writeCapQ:'Как называется столица этой страны?',trap:'Подумай',allCheck:'Отметь и нажми «Проверить».',allBadEu:'Не совсем. Правильно так:',euHuntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше стран и рек Европы, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на странах и реках.',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',eu3Name:'Горы Европы',eu3Sec:'Блок 2 · Раздел 3',eu4Name:'Страны и столицы: запад и север',eu4Sec:'Блок 2 · Раздел 4',eu5Name:'Страны и столицы: центр, юг и восток',eu5Sec:'Блок 2 · Раздел 5',eu5Note:'Деление на разделы учебное, а не строго по регионам: по классификации ООН Эстония, Латвия и Литва относятся к Северной Европе, а Германия, Швейцария и Австрия — к Западной.',tapCap:n=>`Нажми на столицу <b>${n}</b>`,capOfQ:n=>`${n} — столица какой страны?`,whatCapQ:'Какая столица у этой страны?',capIs:(c,n)=>`${c} — столица: ${n}.`,
+  block2:'Блок 2 · Европа',na1Sec:'Блок 4 · Раздел 1',na1Name:'Северная Америка на карте',na2Sec:'Блок 4 · Раздел 2',na2Name:'Реки Северной Америки',na3Sec:'Блок 4 · Раздел 3',na3Name:'Озёра Северной Америки',na4Sec:'Блок 4 · Раздел 4',na4Name:'Горы и равнины Северной Америки',na6Sec:'Блок 4 · Раздел 6',na6Name:'Страны Северной и Центральной Америки',na5Sec:'Блок 4 · Раздел 5',na5Name:'Пустыни и каньоны Северной Америки',cyName:'Каньоны плато Колорадо крупно',cyHint:'Четыре каньона плато Колорадо стоят близко — нажми на них или на лупу 🔍, и откроется крупная карта',block4:'Блок 4 · Северная Америка',as1Sec:'Блок 3 · Раздел 1',as1Name:'Азия на карте',as2Sec:'Блок 3 · Раздел 2',as2Name:'Реки Азии',as3Sec:'Блок 3 · Раздел 3',as3Name:'Озёра Азии',as4Sec:'Блок 3 · Раздел 4',as4Name:'Горы Азии',as5Sec:'Блок 3 · Раздел 5',as5Name:'Пустыни Азии',as6Sec:'Блок 3 · Раздел 6',as6Name:'Страны и столицы: Восточная и Юго-Восточная Азия',as7Sec:'Блок 3 · Раздел 7',as7Name:'Страны и столицы: Южная и Центральная Азия',as8Sec:'Блок 3 · Раздел 8',as8Name:'Страны и столицы: Западная Азия и Закавказье',block3:'Блок 3 · Азия',writeCapQ:'Как называется столица этой страны?',trap:'Подумай',allCheck:'Отметь и нажми «Проверить».',allBadEu:'Не совсем. Правильно так:',euHuntDesc:'Две части. Speed Hunt: за 60 секунд найди на карте как можно больше стран и рек Европы, ошибка стоит только времени. Потом 3 слова GeoWords с буквами на странах и реках.',euName:'Европа на карте',euSec:'Блок 2 · Раздел 1',euSoon:'Итоговые GeoWords этого раздела откроются после утверждения. Пока их можно пропустить.',eu2Name:'Реки Европы',eu2Sec:'Блок 2 · Раздел 2',eu3Name:'Горы Европы',eu3Sec:'Блок 2 · Раздел 3',eu4Name:'Страны и столицы: запад и север',eu4Sec:'Блок 2 · Раздел 4',eu5Name:'Страны и столицы: центр, юг и восток',eu5Sec:'Блок 2 · Раздел 5',eu5Note:'Деление на разделы учебное, а не строго по регионам: по классификации ООН Эстония, Латвия и Литва относятся к Северной Европе, а Германия, Швейцария и Австрия — к Западной.',tapCap:n=>`Нажми на столицу <b>${n}</b>`,capOfQ:n=>`${n} — столица какой страны?`,whatCapQ:'Какая столица у этой страны?',capIs:(c,n)=>`${c} — столица: ${n}.`,
   allPen:'Нажми на все полуострова',allPenHint:'Отметь полуострова и нажми «Проверить».',allPenOk:'Все полуострова найдены!',allPenBad:'Не совсем. Вот полуострова Европы.',allPenBadAs:'Не совсем. Вот полуострова Азии.',allPenBadNa:'Не совсем. Вот полуострова Северной Америки.'},
  en:{tag:'An expedition across the world map with Pip the fox',lead:'Short map lessons and a word puzzle at the end of every unit.',words:'Which language for the words?',
   go:'Let’s go',soon:'Soon',notReady:'This unit is still being prepared. Unit 1 is open for now.',nextLesson:'Next lesson',nextFinal:'To the unit final',section:'Section 1',sectionName:'Continents and oceans',unit:'Unit',lessonN:n=>'Lesson '+n,final:'Unit final: GeoWords',
@@ -76,7 +76,7 @@ const T={
   whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
   allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
   whatStrait:'Which strait or canal is this?',connectsQ:n=>`What does <b>${n}</b> connect?`,separatesQ:n=>`What does <b>${n}</b> separate?`,connectsT:'What it connects',separatesT:'What it separates',
-  openMag:'It is tiny — open the magnifier 🔍 on the map',lvName:'The Eastern Mediterranean, enlarged',lvHint:'The countries on the eastern shore of the Mediterranean are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',
+  openMag:'It is tiny — open the magnifier 🔍 on the map',caName:'Central America, enlarged',caHint:'The countries of Central America are small — tap them or the magnifier 🔍 to open a large map',lvName:'The Eastern Mediterranean, enlarged',lvHint:'The countries on the eastern shore of the Mediterranean are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',
   whatSea:'Which sea or bay is this?',seaOcean:n=>`Which ocean is <b>${n}</b> part of?`,seaNone:'None: it is an inland body of water',
   allIndian:'Tap every sea and bay of the Indian Ocean',allIndianHint:'Mark the seas and bays, then tap “Check”.',allIndianOk:'All the seas and bays of the Indian Ocean found!',allIndianBad:'Not quite. Here are the seas and bays of the Indian Ocean.',
   whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
@@ -90,7 +90,7 @@ const T={
   labelBad:'Not quite. Here is the right way:',pairs:'Pairs',pairsQ:'Match the pairs',tf:'True or false',tfYes:'True',tfNo:'False',tfRight:'The right statement:',pairsOk:'All pairs matched!',
   pairsT:{flowsInto:'A river and where it flows',inOcean:'A sea and its ocean',onContinent:'A place and its continent',separates:'A strait and what it separates',capitalOn:'A capital and its river',crosses:'A river and a country it flows through',inCountry:'A place and its country',countryCap:'A country and its capital'},
   recFind:'Find it on the map.',recWhatQ:'What is it? Pick the name.',recPairsT:'A place and its record',lessonDesc:'About 10 tasks, 3–4 minutes.',finalDesc:'Find the letters on the map from the clues and build the word.',
-  block2:'Block 2 · Europe',na1Sec:'Block 4 · Section 1',na1Name:'North America on the map',na2Sec:'Block 4 · Section 2',na2Name:'Rivers of North America',na3Sec:'Block 4 · Section 3',na3Name:'Lakes of North America',na4Sec:'Block 4 · Section 4',na4Name:'Mountains and Plains of North America',na5Sec:'Block 4 · Section 5',na5Name:'Deserts and Canyons of North America',cyName:'The Colorado Plateau canyons, enlarged',cyHint:'The four canyons of the Colorado Plateau lie close together — tap them or the magnifier 🔍 to open a large map',block4:'Block 4 · North America',as1Sec:'Block 3 · Section 1',as1Name:'Asia on the map',as2Sec:'Block 3 · Section 2',as2Name:'Rivers of Asia',as3Sec:'Block 3 · Section 3',as3Name:'Lakes of Asia',as4Sec:'Block 3 · Section 4',as4Name:'Mountains of Asia',as5Sec:'Block 3 · Section 5',as5Name:'Deserts of Asia',as6Sec:'Block 3 · Section 6',as6Name:'Countries and capitals: East and Southeast Asia',as7Sec:'Block 3 · Section 7',as7Name:'Countries and capitals: South and Central Asia',as8Sec:'Block 3 · Section 8',as8Name:'Countries and capitals: West Asia and Transcaucasia',block3:'Block 3 · Asia',writeCapQ:'What is the capital of this country called?',trap:'Think twice',allCheck:'Mark them and tap «Check».',allBadEu:'Not quite. Here is the answer:',euHuntDesc:'Two parts. Speed Hunt: in 60 seconds find as many countries and rivers of Europe as you can; a mistake only costs time. Then 3 GeoWords with letters on countries and rivers.',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',eu3Name:'Mountains of Europe',eu3Sec:'Block 2 · Section 3',eu4Name:'Countries and capitals: west and north',eu4Sec:'Block 2 · Section 4',eu5Name:'Countries and capitals: centre, south and east',eu5Sec:'Block 2 · Section 5',eu5Note:'The sections split Europe for learning, not strictly by region: the UN puts Estonia, Latvia and Lithuania in Northern Europe, and Germany, Switzerland and Austria in Western Europe.',tapCap:n=>`Tap the capital <b>${n}</b>`,capOfQ:n=>`${n} is the capital of which country?`,whatCapQ:'What is the capital of this country?',capIs:(c,n)=>`The capital of ${c} is ${n}.`,
+  block2:'Block 2 · Europe',na1Sec:'Block 4 · Section 1',na1Name:'North America on the map',na2Sec:'Block 4 · Section 2',na2Name:'Rivers of North America',na3Sec:'Block 4 · Section 3',na3Name:'Lakes of North America',na4Sec:'Block 4 · Section 4',na4Name:'Mountains and Plains of North America',na6Sec:'Block 4 · Section 6',na6Name:'Countries of North and Central America',na5Sec:'Block 4 · Section 5',na5Name:'Deserts and Canyons of North America',cyName:'The Colorado Plateau canyons, enlarged',cyHint:'The four canyons of the Colorado Plateau lie close together — tap them or the magnifier 🔍 to open a large map',block4:'Block 4 · North America',as1Sec:'Block 3 · Section 1',as1Name:'Asia on the map',as2Sec:'Block 3 · Section 2',as2Name:'Rivers of Asia',as3Sec:'Block 3 · Section 3',as3Name:'Lakes of Asia',as4Sec:'Block 3 · Section 4',as4Name:'Mountains of Asia',as5Sec:'Block 3 · Section 5',as5Name:'Deserts of Asia',as6Sec:'Block 3 · Section 6',as6Name:'Countries and capitals: East and Southeast Asia',as7Sec:'Block 3 · Section 7',as7Name:'Countries and capitals: South and Central Asia',as8Sec:'Block 3 · Section 8',as8Name:'Countries and capitals: West Asia and Transcaucasia',block3:'Block 3 · Asia',writeCapQ:'What is the capital of this country called?',trap:'Think twice',allCheck:'Mark them and tap «Check».',allBadEu:'Not quite. Here is the answer:',euHuntDesc:'Two parts. Speed Hunt: in 60 seconds find as many countries and rivers of Europe as you can; a mistake only costs time. Then 3 GeoWords with letters on countries and rivers.',euName:'Europe on the map',euSec:'Block 2 · Section 1',euSoon:'The final GeoWords of this section open once they are approved. Until then the trail goes on past them.',eu2Name:'Rivers of Europe',eu2Sec:'Block 2 · Section 2',eu3Name:'Mountains of Europe',eu3Sec:'Block 2 · Section 3',eu4Name:'Countries and capitals: west and north',eu4Sec:'Block 2 · Section 4',eu5Name:'Countries and capitals: centre, south and east',eu5Sec:'Block 2 · Section 5',eu5Note:'The sections split Europe for learning, not strictly by region: the UN puts Estonia, Latvia and Lithuania in Northern Europe, and Germany, Switzerland and Austria in Western Europe.',tapCap:n=>`Tap the capital <b>${n}</b>`,capOfQ:n=>`${n} is the capital of which country?`,whatCapQ:'What is the capital of this country?',capIs:(c,n)=>`The capital of ${c} is ${n}.`,
   allPen:'Tap every peninsula',allPenHint:'Mark the peninsulas, then tap “Check”.',allPenOk:'All the peninsulas found!',allPenBad:'Not quite. Here are the peninsulas of Europe.',allPenBadAs:'Not quite. Here are the peninsulas of Asia.',allPenBadNa:'Not quite. Here are the peninsulas of North America.'}
 };
 // Accusative forms for «Нажми на …» (grammar of the question, not content).
@@ -288,10 +288,11 @@ async function loadData(){
   // Block 3 section 6 «Countries and capitals: East and Southeast Asia»: country outlines and capital dots on the Asia countries map (the rivers map with
   // borders and capitals, data/maps/asia-countries-6.json); Taiwan is a place on the map with a note on its status, never in capital questions (noCap)
   // Section 7 «Countries and capitals: South and Central Asia» is loaded the same way (data/maps/asia-countries-7.json, the same map)
-  const ctySec=async n=>{const [a6f,a6r,a6m,a6d,a6g]=await Promise.all([`data/content/b3-section-${n}-facts.json`,`data/content/b3-section-${n}-records.json`,`data/maps/asia-countries-${n}.json`,
-    `data/dictionary/b3-section-${n}.json`,`data/geowords/b3-section-${n}.json`].map(get));
+  // Block 4 section 6 is loaded the same way from its own files (b = 'b4', its map data/maps/namerica-countries.json)
+  const ctySec=async(n,b='b3',mp=`data/maps/asia-countries-${n}.json`)=>{const [a6f,a6r,a6m,a6d,a6g]=await Promise.all([`data/content/${b}-section-${n}-facts.json`,`data/content/${b}-section-${n}-records.json`,mp,
+    `data/dictionary/${b}-section-${n}.json`,`data/geowords/${b}-section-${n}.json`].map(get));
   const a6={};for(const it of a6m.items){const f=a6f.items.find(i=>i.id===it.id);if(f?.approval?.status!=='approved')continue;
-    a6[it.id]={id:it.id,kind:'country',name:it.name,unit:it.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],soft:[],path:null,noCap:f.capitalQuestions===false,
+    a6[it.id]={id:it.id,kind:'country',name:it.name,unit:it.unit,x:it.label.x,y:it.label.y,tapArea:it.tapArea,holes:[],soft:[],path:null,noCap:f.capitalQuestions===false,sameCap:f.capitalSameName===true,
       capital:{id:it.capital.id,name:f.capital,x:it.capital.x,y:it.capital.y},fact:lang=>f.fact[lang],disputed:f.disputed,caveat:f.caveat}}
   // section 8: the historical regions (the Iranian Plateau, the Levant, Mesopotamia, Arabia) are cards of their own — shown, never asked about
   for(const it of a6m.regions||[]){const f=a6f.items.find(i=>i.id===it.id);if(f?.approval?.status!=='approved')continue;
@@ -299,7 +300,7 @@ async function loadData(){
   for(const o of Object.values(a6))o.area=o.tapArea.reduce((a,p)=>a+Math.abs(p.reduce((s,q,i)=>{const r=p[(i+1)%p.length];return s+q[0]*r[1]-r[0]*q[1]},0))/2,0);
   return {facts:a6f,records:a6r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:a6,intro:null,dict:a6d,geo:a6g,
     rivers:a6m.rivers,// section 8: Jerusalem / East Jerusalem is never a capital answer, and its dot lies a few pixels from Amman — a tap there is judged as Amman or a miss
-    dots:a6m.items.filter(it=>n!==8||a6f.items.find(i=>i.id===it.id)?.capitalQuestions!==false).map(it=>({id:it.capital.id,x:it.capital.x,y:it.capital.y})),frames:a6m.frames,spots:Object.fromEntries(a6m.items.map(it=>[it.id,it.spots])),
+    dots:a6m.items.filter(it=>n!==8||b!=='b3'||a6f.items.find(i=>i.id===it.id)?.capitalQuestions!==false).map(it=>({id:it.capital.id,x:it.capital.x,y:it.capital.y})),frames:a6m.frames,spots:Object.fromEntries(a6m.items.map(it=>[it.id,it.spots])),
     zones:Object.fromEntries((a6m.regions||[]).map(it=>[it.id,{tapArea:it.tapArea,holes:[]}]))}};
   // section 8 «Countries and capitals: West Asia and Transcaucasia» (data/maps/asia-countries-8.json, the same map, with its historical regions)
   [D.s18,D.s19,D.s20]=await Promise.all([ctySec(6),ctySec(7),ctySec(8)]);
@@ -358,12 +359,18 @@ async function loadData(){
   D.s26={facts:n5f,records:n5r.items.filter(r=>r.approval?.status==='approved'&&!r.disputed&&r.category!=='changing'),eu:ndc,
     intro:n5Ok('namerica-deserts-intro'),notes:{'namerica-hot-cold-deserts':n5Ok('namerica-hot-cold-deserts')},dict:n5d,geo:n5g};
   D.cy=await get('data/maps/namerica-canyons.json');D.cy.image=A+D.cy.map.replace(/^\.\//,'');D.cy.set=new Set(D.cy.objects);
+  // Block 4 section 6 «Countries of North and Central America» (facts, records and words approved by Svetlana 13.11.2026): country outlines and
+  // capital dots on the North America countries map (the rivers map with borders and capitals, data/maps/namerica-countries.json); the capitals of
+  // Guatemala and Panama share the country's name — «город Гватемала», «город Панама» — and are never asked «capital of which country?» (sameCap)
+  D.s27=await ctySec(6,'b4','data/maps/namerica-countries.json');
+  // the large map of Central America: an exact piece of the countries map, as the Levant (tools/build_namerica_camerica.py)
+  D.ca=await get('data/maps/namerica-camerica.json');D.ca.image=A+D.ca.map.replace(/^\.\//,'');D.ca.set=new Set(D.ca.objects);
   // the large map of the Levant (Svetlana, 02.11.2026): an exact piece of the countries map drawn ten times larger (tools/build_asia_levant.py)
   D.lv=await get('data/maps/asia-levant.json');D.lv.image=A+D.lv.map.replace(/^\.\//,'');D.lv.set=new Set(D.lv.objects);
 }
 const dir=id=>D.dirs.find(d=>d.id===id);
 const O=id=>D.objs[id];
-const nm=id=>(D.s26&&D.s26.eu[id]?D.s26.eu[id].name:D.s25&&D.s25.eu[id]?D.s25.eu[id].name:D.s24&&D.s24.eu[id]?D.s24.eu[id].name:D.s23&&D.s23.eu[id]?D.s23.eu[id].name:D.s22&&D.s22.eu[id]?D.s22.eu[id].name:D.s20&&D.s20.eu[id]?D.s20.eu[id].name:D.s19&&D.s19.eu[id]?D.s19.eu[id].name:D.s18&&D.s18.eu[id]?D.s18.eu[id].name:D.s17&&D.s17.eu[id]?D.s17.eu[id].name:D.s16&&D.s16.eu[id]?D.s16.eu[id].name:D.s15&&D.s15.eu[id]?D.s15.eu[id].name:D.s14&&D.s14.eu[id]?D.s14.eu[id].name:D.s13&&D.s13.eu[id]?D.s13.eu[id].name:D.s7&&D.s7.eu[id]?D.s7.eu[id].name:D.s8&&D.s8.eu[id]?D.s8.eu[id].name:D.s9&&D.s9.eu[id]?D.s9.eu[id].name:D.s10&&D.s10.eu[id]?D.s10.eu[id].name:D.s11&&D.s11.eu[id]?D.s11.eu[id].name:D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
+const nm=id=>(D.s27&&D.s27.eu[id]?D.s27.eu[id].name:D.s26&&D.s26.eu[id]?D.s26.eu[id].name:D.s25&&D.s25.eu[id]?D.s25.eu[id].name:D.s24&&D.s24.eu[id]?D.s24.eu[id].name:D.s23&&D.s23.eu[id]?D.s23.eu[id].name:D.s22&&D.s22.eu[id]?D.s22.eu[id].name:D.s20&&D.s20.eu[id]?D.s20.eu[id].name:D.s19&&D.s19.eu[id]?D.s19.eu[id].name:D.s18&&D.s18.eu[id]?D.s18.eu[id].name:D.s17&&D.s17.eu[id]?D.s17.eu[id].name:D.s16&&D.s16.eu[id]?D.s16.eu[id].name:D.s15&&D.s15.eu[id]?D.s15.eu[id].name:D.s14&&D.s14.eu[id]?D.s14.eu[id].name:D.s13&&D.s13.eu[id]?D.s13.eu[id].name:D.s7&&D.s7.eu[id]?D.s7.eu[id].name:D.s8&&D.s8.eu[id]?D.s8.eu[id].name:D.s9&&D.s9.eu[id]?D.s9.eu[id].name:D.s10&&D.s10.eu[id]?D.s10.eu[id].name:D.s11&&D.s11.eu[id]?D.s11.eu[id].name:D.s5&&D.s5.straits[id]?D.s5.straits[id].name:D.s4&&D.s4.seas[id]?D.s4.seas[id].name:D.s3&&D.s3.mtns[id]?D.s3.mtns[id].name:D.s2&&D.s2.rivers[id]?D.s2.rivers[id].name:O(id)?O(id).name:dir(id)?dir(id).name:D.lines[id]?D.lines[id].name:D.hemis[id].name)[L()];
 const acc=id=>L()==='ru'?(ACC_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
 // a name inside a sentence («That is the Atlantic Ocean.»): English takes the article, Russian the plain name
 const nameIn=id=>L()==='ru'?(IN_SENT_RU[id]||nm(id)):(ACC_EN[id]||nm(id));
@@ -591,7 +598,7 @@ const EU_IDS=['atlantic-ocean','arctic-ocean','mediterranean-sea','ural-mountain
   'iberian-peninsula','apennine-peninsula','balkan-peninsula','crimean-peninsula','great-britain','ireland','iceland','sicily','baltic-sea','north-sea','barents-sea'];
 // the map section being played (7: Europe on the map, … 13: Asia on the map — block 3 runs on the same machinery, 8: Rivers of Europe, 9: Mountains of Europe, 10: Countries and capitals: west and north); set when a lesson, practice or final starts
 let EUSEC=7;
-const E=id=>D.s7.eu[id]||D.s8.eu[id]||D.s9.eu[id]||D.s10.eu[id]||D.s11.eu[id]||D.s13.eu[id]||D.s14.eu[id]||D.s15.eu[id]||D.s16.eu[id]||D.s17.eu[id]||D.s18.eu[id]||D.s19.eu[id]||D.s20.eu[id]||D.s22.eu[id]||D.s23.eu[id]||D.s24.eu[id]||D.s25.eu[id]||D.s26.eu[id];
+const E=id=>D.s7.eu[id]||D.s8.eu[id]||D.s9.eu[id]||D.s10.eu[id]||D.s11.eu[id]||D.s13.eu[id]||D.s14.eu[id]||D.s15.eu[id]||D.s16.eu[id]||D.s17.eu[id]||D.s18.eu[id]||D.s19.eu[id]||D.s20.eu[id]||D.s22.eu[id]||D.s23.eu[id]||D.s24.eu[id]||D.s25.eu[id]||D.s26.eu[id]||D.s27.eu[id];
 // Block 3 «Asia», section 1: every object on the Asia base map (ids «as-…», data/maps/asia-overview.json)
 const AS1_IDS=['as-arctic-ocean','as-pacific-ocean','as-indian-ocean','as-ural-mountains','as-bosporus','as-suez-canal','as-bering-strait',
   'as-asia-minor','as-arabian-peninsula','as-hindustan','as-indochina','as-malay-peninsula','as-korean-peninsula','as-kamchatka','as-taimyr','as-chukotka',
@@ -628,7 +635,10 @@ const NA2_IDS=['na-mississippi','na-missouri','na-ohio','na-arkansas','na-yukon'
   'na-usumacinta','na-san-juan'];
 const AS8_IDS=['cty-georgia','cty-armenia','cty-azerbaijan','cty-iran','cty-turkey','cty-cyprus','cty-syria','cty-lebanon','cty-israel','cty-palestine','cty-jordan',
   'cty-iraq','cty-saudi-arabia','cty-kuwait','cty-bahrain','cty-qatar','cty-uae','cty-oman','cty-yemen'];
-const ASCTY=()=>EUSEC===18||EUSEC===19||EUSEC===20;
+// Block 4 «North America», section 6: the countries of North and Central America (data/maps/namerica-countries.json); it follows the rules of
+// the Asian country sections (ASCTY) on its own map, with the large map of Central America in place of the Levant
+const NA6_IDS=['cty-canada','cty-united-states','cty-mexico','cty-guatemala','cty-belize','cty-honduras','cty-el-salvador','cty-nicaragua','cty-costa-rica','cty-panama'];
+const ASCTY=()=>EUSEC===18||EUSEC===19||EUSEC===20||EUSEC===27;
 const AS5_IDS=['as-taklamakan','as-ordos','as-gobi','as-kyzylkum','as-karakum','as-kavir','as-lut','as-thar','as-rub-al-khali','as-negev'];
 // the river rules (the nearest drawn river answers a tap) are those of the rivers sections of Europe and Asia
 const EURIV=()=>EUSEC===8||EUSEC===14||EUSEC===23;
@@ -642,7 +652,7 @@ const EU10_IDS=['united-kingdom','ireland-country','france','netherlands','belgi
 // section 4 judges a tap against its countries only
 const EU11_IDS=['germany','switzerland','austria','czechia','poland','hungary','italy','greece','serbia','romania','estonia','latvia','lithuania','belarus','ukraine','russia'];
 // section 5 asks about its countries; a tap is judged against the countries of sections 4 and 5 (EU_JUDGE)
-const EU=()=>EUSEC===26?NA5_IDS.filter(id=>D.s26.eu[id]):EUSEC===25?NA4_IDS.filter(id=>D.s25.eu[id]):EUSEC===24?NA3_IDS.filter(id=>D.s24.eu[id]):EUSEC===23?NA2_IDS.filter(id=>D.s23.eu[id]):EUSEC===22?NA1_IDS.filter(id=>D.s22.eu[id]):EUSEC===20?AS8_IDS.filter(id=>D.s20.eu[id]):EUSEC===19?AS7_IDS.filter(id=>D.s19.eu[id]):EUSEC===18?AS6_IDS.filter(id=>D.s18.eu[id]):EUSEC===17?AS5_IDS.filter(id=>D.s17.eu[id]):EUSEC===16?AS4_IDS.filter(id=>D.s16.eu[id]):EUSEC===15?AS3_IDS.filter(id=>D.s15.eu[id]):EUSEC===14?AS2_IDS.filter(id=>D.s14.eu[id]):EUSEC===13?AS1_IDS.filter(id=>D.s13.eu[id]):EUSEC===11?EU11_IDS.filter(id=>E(id)):EUSEC===10?EU10_IDS.filter(id=>E(id)):EUSEC===9?[...EU9_IDS,'ural-mountains'].filter(id=>E(id)):EUSEC===8?[...EU8_IDS,'ural-river'].filter(id=>E(id)):EU_IDS.filter(id=>D.s7.eu[id]);
+const EU=()=>EUSEC===27?NA6_IDS.filter(id=>D.s27.eu[id]):EUSEC===26?NA5_IDS.filter(id=>D.s26.eu[id]):EUSEC===25?NA4_IDS.filter(id=>D.s25.eu[id]):EUSEC===24?NA3_IDS.filter(id=>D.s24.eu[id]):EUSEC===23?NA2_IDS.filter(id=>D.s23.eu[id]):EUSEC===22?NA1_IDS.filter(id=>D.s22.eu[id]):EUSEC===20?AS8_IDS.filter(id=>D.s20.eu[id]):EUSEC===19?AS7_IDS.filter(id=>D.s19.eu[id]):EUSEC===18?AS6_IDS.filter(id=>D.s18.eu[id]):EUSEC===17?AS5_IDS.filter(id=>D.s17.eu[id]):EUSEC===16?AS4_IDS.filter(id=>D.s16.eu[id]):EUSEC===15?AS3_IDS.filter(id=>D.s15.eu[id]):EUSEC===14?AS2_IDS.filter(id=>D.s14.eu[id]):EUSEC===13?AS1_IDS.filter(id=>D.s13.eu[id]):EUSEC===11?EU11_IDS.filter(id=>E(id)):EUSEC===10?EU10_IDS.filter(id=>E(id)):EUSEC===9?[...EU9_IDS,'ural-mountains'].filter(id=>E(id)):EUSEC===8?[...EU8_IDS,'ural-river'].filter(id=>E(id)):EU_IDS.filter(id=>D.s7.eu[id]);
 const EUD=()=>D['s'+EUSEC];
 const EU_JUDGE=()=>EUSEC===11?[...EU(),...EU10_IDS.filter(id=>E(id))]:EU();
 const eu=k=>id=>({k,id});
@@ -951,7 +961,9 @@ STEPS.push({id:'a5-final',sec:17,kind:'section',unit:'S'});
 // Block 3 section 6 «Countries and capitals: East and Southeast Asia»: 16 countries and Taiwan in 3 units, the lessons of Europe sections 4 and 5 on the
 // Asia countries map (the rivers of section 2 drawn in). Taiwan: its card, «find it» and «what is it?» only — never a capital question (Svetlana, 31.10.2026).
 const U18=n=>AS6_IDS.filter(id=>E(id)&&E(id).unit===n);
-const capK=id=>E(id).noCap?pickKind(['findEu','whatEu']):pickKind(['capOf','whatCap']);
+// a capital with the country's name (город Гватемала, город Панама) is found on the map, never named from options (sameCap)
+const capK=id=>E(id).noCap?pickKind(['findEu','whatEu']):E(id).sameCap?'whatEu':pickKind(['capOf','whatCap']);
+const capQ=ids=>ids.filter(id=>E(id)&&!E(id).noCap&&!E(id).sameCap);
 const cty6=(ids,rev)=>()=>[...ids.map(eu('introEu')),...shuffle(ids.flatMap(id=>E(id).noCap?[eu('findEu')(id),eu('whatEu')(id)]:[eu('findEu')(id),eu('findCap')(id),eu(capK(id))(id)])),...rev()];
 const withCap=ids=>ids.filter(id=>E(id)&&!E(id).noCap);
 const R18={
@@ -1170,6 +1182,32 @@ const COURSE26=[
 COURSE26.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:26,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
   STEPS.push({id:`n5-u${u.n}-practice`,sec:26,kind:'practice',unit:u.n});STEPS.push({id:`n5-u${u.n}-final`,sec:26,kind:'final',unit:u.n})});
 STEPS.push({id:'n5-final',sec:26,kind:'section',unit:'S'});
+// Block 4 «North America», section 6 «Countries of North and Central America» (approved by Svetlana 13.11.2026): 10 countries with capitals in 3 units,
+// as the Asian country sections; Central America opens on its large map
+const U27=n=>NA6_IDS.filter(id=>E(id)&&E(id).unit===n);
+const R27={
+ 'u1-l1':cty6(['cty-canada','cty-united-states'],()=>[]),
+ 'u1-l2':()=>shuffle([...['cty-canada','cty-united-states'].flatMap(id=>[eu('findEu')(id),eu('findCap')(id)]),eu('capOf')(some(U27(1),1)[0]),eu('whatCap')(some(U27(1),1)[0]),...some(U27(1),1).map(eu('whatEu'))]),
+ 'u2-l1':cty6(['cty-mexico'],()=>[...['cty-canada','cty-united-states'].map(eu('findCap')),eu('capOf')(some(U27(1),1)[0])]),
+ 'u2-l2':cty6(['cty-guatemala','cty-belize'],()=>[eu('findCap')('cty-mexico'),...some(U27(1),2).map(eu('findEu'))]),
+ 'u3-l1':cty6(['cty-honduras','cty-el-salvador'],()=>some([...U27(1),...U27(2)],2).map(eu('findEu'))),
+ 'u3-l2':cty6(['cty-nicaragua','cty-costa-rica'],()=>[...['cty-honduras','cty-el-salvador'].map(eu('findCap')),...some(capQ([...U27(1),...U27(2)]),2).map(eu('whatCap'))]),
+ 'u3-l3':cty6(['cty-panama'],()=>[...['cty-nicaragua','cty-costa-rica'].map(eu('findCap')),...some([...U27(1),...U27(2)],2).map(eu('findEu'))]),
+ 'u3-l4':()=>[...D.s27.records.flatMap(r=>[{k:'introEuRec',rec:r.id},{k:'findEu',id:r.object,rec:r.id}]),...some(withCap(NA6_IDS).filter(id=>!D.s27.records.some(r=>r.object===id)),4).map(eu('findCap'))],
+ 'u3-l5':()=>shuffle(EU().map(id=>({k:E(id).sameCap?pickKind(['findEu','findCap','whatEu']):pickKind(['findEu','findCap','capOf','whatCap']),id})))
+};
+const COURSE27=[
+ {n:1,lessons:[{id:'n6-u1-l1',title:{ru:'Канада и США',en:'Canada and the United States'},plan:R27['u1-l1']},
+   {id:'n6-u1-l2',title:{ru:'Канада и США: столицы',en:'Canada and the United States: capitals'},plan:R27['u1-l2']}]},
+ {n:2,lessons:[{id:'n6-u2-l1',title:{ru:'Мексика',en:'Mexico'},plan:R27['u2-l1']},{id:'n6-u2-l2',title:{ru:'Гватемала и Белиз',en:'Guatemala and Belize'},plan:R27['u2-l2']}]},
+ {n:3,lessons:[{id:'n6-u3-l1',title:{ru:'Гондурас и Сальвадор',en:'Honduras and El Salvador'},plan:R27['u3-l1']},
+   {id:'n6-u3-l2',title:{ru:'Никарагуа и Коста-Рика',en:'Nicaragua and Costa Rica'},plan:R27['u3-l2']},
+   {id:'n6-u3-l3',title:{ru:'Панама',en:'Panama'},plan:R27['u3-l3']},
+   {id:'n6-u3-l4',title:{ru:'Рекорды',en:'Records'},plan:R27['u3-l4']},{id:'n6-u3-l5',title:{ru:'Все страны раздела',en:'All the countries of the section'},plan:R27['u3-l5']}]}
+];
+COURSE27.forEach(u=>{u.lessons.forEach((l,i)=>STEPS.push({id:l.id,sec:27,kind:'lesson',unit:u.n,n:i+1,title:l.title,plan:l.plan}));
+  STEPS.push({id:`n6-u${u.n}-practice`,sec:27,kind:'practice',unit:u.n});STEPS.push({id:`n6-u${u.n}-final`,sec:27,kind:'final',unit:u.n})});
+STEPS.push({id:'n6-final',sec:27,kind:'section',unit:'S'});
 // a review lesson opens once its texts are approved; the block final and the Challenge once Svetlana approved them
 const ready12=s=>{const R_=D.eb.rev;if(s.kind==='block')return !!D.eb.geo.puzzles.find(p=>p.language===L()&&ebOk(p))&&ebOk(D.eb.dict.units[0].words[L()][0]);
   if(s.kind==='challenge')return D.eb.challenge.status==='approved'&&ebOk(D.eb.challenge);
@@ -1184,7 +1222,7 @@ const READY_S4=[1,2,3,'S'];
 const READY_S5=[1,2,3,'S'];
 // Europe finals open once Svetlana has approved the puzzle in the chosen language
 const euFinal=s=>SD(s).geo.puzzles.find(p=>p.language===L()&&p.approval?.status==='approved'&&(s.kind==='section'?p.role==='section-final':p.role==='unit-final'&&p.unit===s.unit));
-const ready=s=>s.sec===26?ready26(s):s.sec===25?ready25(s):s.sec===24?ready24(s):s.sec===23?ready23(s):s.sec===22?ready22(s):s.sec===20?ready20(s):s.sec===19?ready19(s):s.sec===18?ready18(s):s.sec===17?ready17(s):s.sec===16?ready16(s):s.sec===15?ready15(s):s.sec===14?ready14(s):s.sec===13?ready13(s):s.sec===12?ready12(s):s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===9?ready9(s):s.sec===10?ready10(s):s.sec===11?ready11(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
+const ready=s=>s.sec===27?ready27(s):s.sec===26?ready26(s):s.sec===25?ready25(s):s.sec===24?ready24(s):s.sec===23?ready23(s):s.sec===22?ready22(s):s.sec===20?ready20(s):s.sec===19?ready19(s):s.sec===18?ready18(s):s.sec===17?ready17(s):s.sec===16?ready16(s):s.sec===15?ready15(s):s.sec===14?ready14(s):s.sec===13?ready13(s):s.sec===12?ready12(s):s.sec===6?true:s.sec===7?(s.kind==='final'||s.kind==='section'?!!euFinal(s):true):s.sec===8?ready8(s):s.sec===9?ready9(s):s.sec===10?ready10(s):s.sec===11?ready11(s):s.sec===5?READY_S5.includes(s.unit):s.sec===4?READY_S4.includes(s.unit):s.sec===3?READY_S3.includes(s.unit):s.sec===2?READY_S2.includes(s.unit):READY_UNITS.includes(s.unit);
 const SD=st=>D['s'+st.sec];
 // section 2 of Europe: a lesson once its rivers are approved, practice once the unit has approved words, finals once Svetlana approved the puzzle
 const ready8=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s8.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU8_IDS.every(id=>D.s8.eu[id]);
@@ -1209,6 +1247,7 @@ const ready24=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='pra
 const ready25=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s25.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):NA4_IDS.every(id=>D.s25.eu[id]);
 const ready26=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s26.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):NA5_IDS.every(id=>D.s26.eu[id]);
 const ready23=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s23.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):NA2_IDS.every(id=>D.s23.eu[id]);
+const ready27=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s27.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):NA6_IDS.every(id=>D.s27.eu[id]);
 const ready20=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s20.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):AS8_IDS.every(id=>D.s20.eu[id]);
 const ready17=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s17.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):AS5_IDS.every(id=>D.s17.eu[id]);
 const ready11=s=>s.kind==='final'||s.kind==='section'?!!euFinal(s):s.kind==='practice'?D.s11.dict.units[s.unit-1].words[L()].some(w=>w.role==='review'&&w.approval?.status==='approved'):EU11_IDS.every(id=>D.s11.eu[id]);
@@ -1264,7 +1303,8 @@ function euOk(id,x,y,sz){const o=E(id);if(EURIV()&&o.path){const r=riverPx(o,x,y
 let TAUGHT=null;
 function taughtBy(step){const ls=STEPS.filter(s=>s.sec===step.sec&&s.kind==='lesson'&&s.plan),i=ls.findIndex(s=>s.id===step.id);if(i<0)return null;
   const ids=new Set();for(const s of ls.slice(0,i+1))for(const q of s.plan())if(q.k==='introEu'&&q.id)ids.add(q.id);return ids}
-const PREV_SEC={20:()=>AS7_IDS,19:()=>AS6_IDS,18:()=>[...EU10_IDS,...EU11_IDS],11:()=>EU10_IDS};
+// North America section 6, unit 1 (two countries): the countries of West Asia fill in (Svetlana, 13.11.2026: Europe and Asia, never rivers or mountains)
+const PREV_SEC={27:()=>AS8_IDS,20:()=>AS7_IDS,19:()=>AS6_IDS,18:()=>[...EU10_IDS,...EU11_IDS],11:()=>EU10_IDS};
 // North America section 1: the option family of Asia section 1 (same kind or unit 1), only taught places, Baffin never with the archipelago;
 // a lesson that has taught fewer than four fills in from the other taught places, never from untaught ones
 const naFamily=(id,keep)=>{const o=E(id),nest=k=>!(NA_NEST[id]||[]).includes(k)&&(k===id||k!=='na-arctic-archipelago');
@@ -1281,13 +1321,14 @@ const showEu=(m,o,cls)=>o.path?m.line(riverPath(o),cls.replace('hl-shape','hl-ri
 // a ring around a capital dot drawn on the map (round on screen: the map is 2200×1600)
 const capRing=(c,r=1.3)=>({id:'cap-'+c.id,ring:c,tapArea:[Array.from({length:20},(_,i)=>[c.x+r*Math.cos(i*Math.PI/10),c.y+r*2200/1600*Math.sin(i*Math.PI/10)])],holes:[]});
 // the drawn dot a tap lands on: the nearest within 24 px (every dot of the map counts, also those of section 5)
-function capHit(x,y,sz){let hit=null,d=24;for(const c of (ASCTY()?[...D.s18.dots,...D.s19.dots,...D.s20.dots]:D.s10.dots)){const v=Math.hypot((c.x-x)/100*sz.W,(c.y-y)/100*sz.H);if(v<=d){d=v;hit=c.id}}return hit}
+function capHit(x,y,sz){let hit=null,d=24;for(const c of (EUSEC===27?D.s27.dots:ASCTY()?[...D.s18.dots,...D.s19.dots,...D.s20.dots]:D.s10.dots)){const v=Math.hypot((c.x-x)/100*sz.W,(c.y-y)/100*sz.H);if(v<=d){d=v;hit=c.id}}return hit}
 // the zoom inset of a country card (Svetlana, 29.10.2026): a small country is hard to see on the whole map, so a corner inset magnifies it with its capital;
 // the Dead Sea card of «Lakes of Asia» has the same inset, without a capital (Svetlana, 30.10.2026)
 // and a frame on the map shows the magnified piece; Norway and Russia are big enough without it
 // in Asia section 6 only the three smallest countries get the inset (Svetlana, 31.10.2026 17:45)
 const AS6_INSET=new Set(['cty-singapore','cty-brunei','cty-timor-leste','cty-maldives','cty-bhutan',
-  'cty-armenia','cty-lebanon','cty-israel','cty-palestine','cty-kuwait','cty-bahrain','cty-qatar']);// + section 7: the Maldives and Bhutan; + section 8: the small countries
+  'cty-armenia','cty-lebanon','cty-israel','cty-palestine','cty-kuwait','cty-bahrain','cty-qatar',
+  'cty-guatemala','cty-belize','cty-honduras','cty-el-salvador','cty-nicaragua','cty-costa-rica','cty-panama']);// + North America section 6: Central America// + section 7: the Maldives and Bhutan; + section 8: the small countries
 function countryInset(m,host,o){const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=ps.map(p=>p[1]);
   const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),size=Math.max(x1-x0,(y1-y0)*1600/2200);if(size>22)return null;
   const z=Math.min(10,Math.max(2.5,38/size)),hw=50/z,cx=Math.min(100-hw,Math.max(hw,(x0+x1)/2)),cy=Math.min(100-hw,Math.max(hw,(y0+y1)/2));
@@ -1299,16 +1340,17 @@ function countryInset(m,host,o){const ps=o.tapArea.flat(),xs=ps.map(p=>p[0]),ys=
   const zm=euMap(el,{zoom:false,focus:{x:cx,y:cy,zoom:z},maxZoom:10});showEu(zm,o,'hl-shape');if(o.capital)zm.shape(capRing(o.capital,6/z),'cap-ring');
   const ir=[c.l,c.t,c.l+F,c.t+F],pair=(c.l+F/2-cx)*(c.t+F/2-cy)>=0?[[2,1],[0,3]]:[[0,1],[2,3]];
   m.line(`M${fr[0]} ${fr[1]}H${fr[2]}V${fr[3]}H${fr[0]}Z`+pair.map(([i,j])=>`M${fr[i]} ${fr[j]}L${ir[i]} ${ir[j]}`).join(''),'zoom-frame');return zm}
-const capOwner=cid=>[...EU10_IDS,...EU11_IDS,...AS6_IDS,...AS7_IDS,...AS8_IDS].map(E).find(o=>o&&o.capital.id===cid);
+const capOwner=cid=>[...EU10_IDS,...EU11_IDS,...AS6_IDS,...AS7_IDS,...AS8_IDS,...NA6_IDS].map(E).find(o=>o&&o.capital.id===cid);
 // Baffin Island lies in the Canadian Arctic Archipelago: never both among the answers of «What is this?» (the archipelago is an option only when it is the answer)
 const NA_NEST={'na-baffin':['na-arctic-archipelago'],'na-arctic-archipelago':['na-baffin']};
 // the large Levant map joins the countries map whenever a country of the Levant can be the answer (section 8, and a review with its countries)
 // North America section 5: the four canyons of the Colorado Plateau get the same kind of large map (data/maps/namerica-canyons.json)
-const LVD=()=>EUSEC===26?D.cy:D.lv;
+// North America section 6: the large map of Central America (D.ca), every country of Central America opens it
+const LVD=()=>EUSEC===27?D.ca:EUSEC===26?D.cy:D.lv;
 const lvOn=()=>!!((ASCTY()||EUSEC===26)&&LVD()&&EU_JUDGE().some(id=>LVD().set.has(id)));
 // a highlight task opens it at once when the country or capital asked is small there (the frame of the Levant, a small country or a crowded capital)
 const LV_SMALL=new Set(['cty-cyprus','cty-lebanon','cty-israel','cty-palestine']);
-const lvShow=(m,o,cap)=>{if(m.levant&&(cap?D.lv.capitals.includes(o.capital.id):EUSEC===26?D.cy.set.has(o.id):LV_SMALL.has(o.id)))m.openLevant()};
+const lvShow=(m,o,cap)=>{if(m.levant&&(cap?(LVD().capitals||[]).includes(o.capital.id):EUSEC===26||EUSEC===27?LVD().set.has(o.id):LV_SMALL.has(o.id)))m.openLevant()};
 // a highlight task about a country (Svetlana, 02.11.2026 «не видно, о чём речь»): a country of the Levant opens the large map at once,
 // any other small country opens the map zoomed in on it, so the highlighted outline is never a speck on the whole of Asia
 const lvAll=o=>(ASCTY()||EUSEC===26)&&lvOn()&&LVD().set.has(o.id);
@@ -1317,8 +1359,8 @@ function hlFocus(o){if(!(ASCTY()||EUSEC===26)||lvAll(o)||!o.tapArea||!o.tapArea.
   return {x:(x0+x1)/2,y:(y0+y1)/2,zoom:Math.min(4,Math.max(1.8,22/size))}}
 const hlMap=(o,opts={})=>{const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true,focus:hlFocus(o),...opts});return m};
 const hlOpen=(m,o)=>{if(m.levant&&lvAll(o))m.openLevant()};
-const lvHint=()=>lvOn()?`<p class="rotate-hint">${EUSEC===26?t().cyHint:t().lvHint}</p>`:'';
-function euMap(host,opts){const m=mapWidget(host,{...opts,levant:(opts.onTap||opts.levant)&&lvOn()?{...LVD(),name:EUSEC===26?t().cyName:t().lvName}:null,base:EUSEC===26?IMG.naDeserts:EUSEC===25?IMG.naMountains:EUSEC===24?IMG.naLakes:EUSEC===23?IMG.naRivers:EUSEC===22?IMG.naBase:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
+const lvHint=()=>lvOn()?`<p class="rotate-hint">${EUSEC===27?t().caHint:EUSEC===26?t().cyHint:t().lvHint}</p>`:'';
+function euMap(host,opts){const m=mapWidget(host,{...opts,levant:(opts.onTap||opts.levant)&&lvOn()?{...LVD(),name:EUSEC===27?t().caName:EUSEC===26?t().cyName:t().lvName}:null,base:EUSEC===27?IMG.naCountries:EUSEC===26?IMG.naDeserts:EUSEC===25?IMG.naMountains:EUSEC===24?IMG.naLakes:EUSEC===23?IMG.naRivers:EUSEC===22?IMG.naBase:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
   // sections 4 and 5 use the capitals map with the rivers of section 2 drawn in: a river and the outline of a country together (Svetlana, 28.10.2026)
   const statics=()=>{if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
@@ -1534,7 +1576,12 @@ function home(){
      (STEPS.some(s=>s.sec===26&&ready(s))?`<div class="section-card s2"><img src="${IMG.stamp3}" alt=""><div class="t"><span class="eyebrow">${x.na5Sec}</span><h2>${x.na5Name}</h2></div></div>`+
      COURSE26.map(u=>`<div class="unit-head"><span class="eyebrow">${x.na5Sec} · ${x.unit} ${u.n}</span><h3>${esc(D.s26.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===26&&s.unit===u.n).map(stopHtml).join('')).join('')+
      `<div class="unit-head"><span class="eyebrow">${x.na5Sec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('n5-final'))+
-     (STEPS.some(s=>s.sec===26&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:''):'');
+     (STEPS.some(s=>s.sec===26&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:''):'')+
+     // section 6 «Countries of North and Central America» follows once its countries are approved
+     (STEPS.some(s=>s.sec===27&&ready(s))?`<div class="section-card s2"><img src="${IMG.euCard}" alt=""><div class="t"><span class="eyebrow">${x.na6Sec}</span><h2>${x.na6Name}</h2></div></div>`+
+     COURSE27.map(u=>`<div class="unit-head"><span class="eyebrow">${x.na6Sec} · ${x.unit} ${u.n}</span><h3>${esc(D.s27.dict.units[u.n-1].title[L()])}</h3></div>`+STEPS.filter(s=>s.sec===27&&s.unit===u.n).map(stopHtml).join('')).join('')+
+     `<div class="unit-head"><span class="eyebrow">${x.na6Sec}</span><h3>${x.sectionFinal}</h3></div>`+stopHtml(stepOf('n6-final'))+
+     (STEPS.some(s=>s.sec===27&&!ready(s))?`<p class="rotate-hint">${x.euSoon}</p>`:''):'');
   const jump= S.done['u1-final']&&!S.done['u2-l1']&&unlocked('u2-l1') ?
     `<button type="button" class="btn" data-a="continue-unit-2">${x.unit} 2 · ${x.units[1][0]} →</button>` : '';
   h(`<section class="screen home">
@@ -1565,7 +1612,7 @@ function startPractice(st){
 function openStep(id){
   const x=t(),st=stepOf(id);
   if(!unlocked(id)){const s=sheet(`<h3>${esc(titleOf(st))}</h3><p>${ready(st)?x.locked:x.notReady}</p><button type="button" class="btn sand">OK</button>`);s.querySelector('button').onclick=()=>s.remove();return}
-  const es=st.sec===26?x.na5Sec:st.sec===25?x.na4Sec:st.sec===24?x.na3Sec:st.sec===23?x.na2Sec:st.sec===22?x.na1Sec:st.sec===20?x.as8Sec:st.sec===19?x.as7Sec:st.sec===18?x.as6Sec:st.sec===17?x.as5Sec:st.sec===16?x.as4Sec:st.sec===15?x.as3Sec:st.sec===14?x.as2Sec:st.sec===13?x.as1Sec:st.sec===11?x.eu5Sec:st.sec===10?x.eu4Sec:st.sec===9?x.eu3Sec:st.sec===8?x.eu2Sec:x.euSec;
+  const es=st.sec===27?x.na6Sec:st.sec===26?x.na5Sec:st.sec===25?x.na4Sec:st.sec===24?x.na3Sec:st.sec===23?x.na2Sec:st.sec===22?x.na1Sec:st.sec===20?x.as8Sec:st.sec===19?x.as7Sec:st.sec===18?x.as6Sec:st.sec===17?x.as5Sec:st.sec===16?x.as4Sec:st.sec===15?x.as3Sec:st.sec===14?x.as2Sec:st.sec===13?x.as1Sec:st.sec===11?x.eu5Sec:st.sec===10?x.eu4Sec:st.sec===9?x.eu3Sec:st.sec===8?x.eu2Sec:x.euSec;
   const head=st.sec===6?x.blockN+' · '+x.blockName:st.sec===12?x.block2+' · '+x.blockName:st.sec>=7?(st.unit==='S'?es:`${es} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.sec?(st.unit==='S'?x.sectionN(st.sec):`${x.sectionN(st.sec)} · ${x.unit} ${st.unit} · ${SD(st).dict.units[st.unit-1].title[L()]}`):st.unit==='S'?x.section:`${x.unit} ${st.unit} · ${x.units[st.unit-1][0]}`;
   const desc=st.kind==='lesson'?x.lessonDesc:st.kind==='practice'?x.practiceDesc:st.kind==='challenge'?(st.sec===12?x.euHuntDesc:x.huntDesc):x.finalDesc;
   let buttons;
@@ -2004,7 +2051,7 @@ function finalPuzzle(st){if(st.sec>=7)EUSEC=st.sec;const role=st.kind==='section
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,focus:P.focus||null,stamp:st.sec===26?IMG.stamp3:st.sec===25?IMG.stamp3:st.sec===24?IMG.stamp4:st.sec===23?IMG.stamp2:st.sec>=18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',note:w?.note||'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,focus:P.focus||null,stamp:st.sec===27?IMG.euCard:st.sec===26?IMG.stamp3:st.sec===25?IMG.stamp3:st.sec===24?IMG.stamp4:st.sec===23?IMG.stamp2:st.sec>=18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
 function blockPuzzle(st){if(st.sec===12)return euBlockPuzzle(st);const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
@@ -2127,7 +2174,11 @@ const EU_IN={'north-sea':['atlantic-ocean'],'baltic-sea':['atlantic-ocean'],'bar
   // North America section 1 (as tools/build_b4_geowords.mjs): a sea or an island and the ocean or sea it lies in
   'na-caribbean-sea':['na-atlantic-ocean'],'na-gulf-of-mexico':['na-atlantic-ocean'],'na-gulf-of-california':['na-pacific-ocean'],
   'na-cuba':['na-caribbean-sea','na-atlantic-ocean'],'na-hispaniola':['na-caribbean-sea','na-atlantic-ocean'],'na-newfoundland':['na-atlantic-ocean'],
-  'na-baffin':['na-arctic-archipelago','na-arctic-ocean'],'na-arctic-archipelago':['na-arctic-ocean'],'na-greenland':['na-arctic-ocean','na-atlantic-ocean']};
+  'na-baffin':['na-arctic-archipelago','na-arctic-ocean'],'na-arctic-archipelago':['na-arctic-ocean'],'na-greenland':['na-arctic-ocean','na-atlantic-ocean'],
+  // North America section 6 (as tools/build_b4s6_geowords.mjs): a country and the island, peninsula or isthmus that lies in it or bears its name
+  'cty-canada':['na-labrador','na-arctic-archipelago','na-baffin','na-newfoundland','na-boothia'],'cty-united-states':['na-florida','na-alaska-peninsula'],
+  'cty-mexico':['na-baja-california','na-yucatan'],'cty-guatemala':['na-yucatan'],'cty-belize':['na-yucatan'],
+  'cty-panama':['na-isthmus-of-panama'],'cty-costa-rica':['na-isthmus-of-panama']};
 // Block 4 «North America», section 1: the place phrases of the letters (= PLACE in tools/build_b4_geowords.mjs)
 const NA_PLACE={'na-arctic-ocean':['в Северном Ледовитом океане','in the Arctic Ocean'],'na-pacific-ocean':['в Тихом океане','in the Pacific Ocean'],
   'na-atlantic-ocean':['в Атлантическом океане','in the Atlantic Ocean'],'na-bering-strait':['в Беринговом проливе','in the Bering Strait'],
@@ -2159,6 +2210,9 @@ const NA3_IN={'na-superior':['в озере Верхнем','in Lake Superior'],
   'na-great-bear':['в Большом Медвежьем озере','in Great Bear Lake'],'na-great-slave':['в Большом Невольничьем озере','in Great Slave Lake'],
   'na-winnipeg':['в озере Виннипег','in Lake Winnipeg'],'na-athabasca':['в озере Атабаска','in Lake Athabasca'],'na-great-salt':['в Большом Солёном озере','in the Great Salt Lake'],
   'na-tahoe':['в озере Тахо','in Lake Tahoe'],'na-chapala':['в озере Чапала','in Lake Chapala'],'na-nicaragua':['в озере Никарагуа','in Lake Nicaragua']};
+// North America section 6: the places of section 1 that count for the region of a unit (= REGION_OBJ in tools/build_b4s6_geowords.mjs)
+const NA6_REG={1:['na-hudson-bay','na-labrador','na-arctic-archipelago','na-baffin','na-boothia','na-newfoundland','na-florida','na-alaska-peninsula'],
+  2:['na-yucatan','na-baja-california','na-gulf-of-mexico','na-gulf-of-california'],3:['na-isthmus-of-panama','na-caribbean-sea']};
 const NA2_ON={'na-mississippi':['на Миссисипи','on the Mississippi'],'na-missouri':['на Миссури','on the Missouri'],'na-ohio':['на Огайо','on the Ohio'],
   'na-arkansas':['на Арканзасе','on the Arkansas'],'na-yukon':['на Юконе','on the Yukon'],'na-mackenzie':['на Маккензи','on the Mackenzie'],
   'na-nelson':['на Нельсоне','on the Nelson'],'na-st-lawrence':['на реке Святого Лаврентия','on the St. Lawrence'],'na-columbia':['на Колумбии','on the Columbia'],
@@ -2181,6 +2235,9 @@ const AS4_IN={'as-pamirs':['на Памире','in the Pamirs'],'as-tian-shan':[
   'as-fuji':['на вулкане Фудзи','on Mount Fuji'],'as-urals':['в Уральских горах','in the Ural Mountains'],'as-zagros':['в горах Загрос','in the Zagros Mountains'],
   'as-elburz':['в горах Эльбурс','in the Elburz Mountains'],'as-caucasus':['в Кавказских горах','in the Caucasus Mountains'],'as-arakan':['в Араканских горах','in the Arakan Mountains'],
   'as-barisan':['в горах Барисан','in the Barisan Mountains'],'as-krakatoa':['на вулкане Кракатау','on the volcano Krakatoa']};
+const NA6_IN={'cty-canada':['в Канаде','in Canada'],'cty-united-states':['в США','in the United States'],'cty-mexico':['в Мексике','in Mexico'],
+  'cty-guatemala':['в Гватемале','in Guatemala'],'cty-belize':['в Белизе','in Belize'],'cty-honduras':['в Гондурасе','in Honduras'],'cty-el-salvador':['в Сальвадоре','in El Salvador'],
+  'cty-nicaragua':['в Никарагуа','in Nicaragua'],'cty-costa-rica':['в Коста-Рике','in Costa Rica'],'cty-panama':['в Панаме','in Panama']};
 const AS6_IN={'cty-china':['в Китае','in China'],'cty-mongolia':['в Монголии','in Mongolia'],'cty-north-korea':['в Северной Корее','in North Korea'],
   'cty-south-korea':['в Южной Корее','in South Korea'],'cty-japan':['в Японии','in Japan'],'cty-taiwan':['на Тайване','on Taiwan'],'cty-vietnam':['во Вьетнаме','in Vietnam'],
   'cty-laos':['в Лаосе','in Laos'],'cty-cambodia':['в Камбодже','in Cambodia'],'cty-thailand':['в Таиланде','in Thailand'],'cty-myanmar':['в Мьянме','in Myanmar'],
@@ -2301,6 +2358,21 @@ function placesFor(st){
       add({id,place:{ru:AS3_IN[id][0],en:AS3_IN[id][1]},pri:2,eu:true,kind:'object'},[E(id)],q=>IDS.some(c=>U.includes(uOf(c))&&euArea(c)&&inside(euArea(c),q.x,q.y)));
     for(const p of out)if(!p.reg&&p.pri===0)p.pri=1;
     out.frame={x:f.x,y:f.y,zoom:f.zoom};return out}
+  // Countries of North and Central America (block 4 section 6) mirror tools/build_b4s6_geowords.mjs: as the Asian country sections, the puzzle opens
+  // zoomed in on the region of its unit (frames of namerica-countries.json), at least half of the letters in the countries of the unit; letters well
+  // inside the learned countries, on the rivers of section 2 that flow through them, on a river inside a country it crosses; section 1 fills in (pri 2)
+  if(st.sec===27){EUSEC=27;const SX=D.s27,u=st.unit==='S'?3:st.unit,learned=id=>!!(E(id)&&E(id).unit<=u),U=st.unit==='S'?[1,2,3]:[st.unit];
+    const f=SX.frames[st.unit==='S'?'S':String(st.unit)],hw=50/f.zoom,cx=Math.min(100-hw,Math.max(hw,f.x)),cy=Math.min(100-hw,Math.max(hw,f.y)),mg=4/f.zoom;
+    const inView=q=>q.x>=cx-hw+mg&&q.x<=cx+hw-mg&&q.y>=cy-hw+mg&&q.y<=cy+hw-mg,uOf=id=>E(id)&&E(id).unit;
+    const out=[],add=(base,spots,reg)=>{for(const q of spots.filter(inView))out.push({...base,x:q.x,y:q.y,group:base.id,reg:reg(q)})};
+    for(const id of NA6_IDS.filter(learned))add({id,place:{ru:NA6_IN[id][0],en:NA6_IN[id][1]},pri:0,eu:true,kind:'country',country:id},SX.spots[id]||[E(id)],()=>U.includes(uOf(id)));
+    for(const r of SX.rivers){if(!D.s23.eu[r.id])continue;
+      add({id:r.id,place:{ru:NA2_ON[r.id][0],en:NA2_ON[r.id][1]},pri:0,eu:true,kind:'river',river:r.id,crosses:r.crosses},(r.spots||[E(r.id)]).filter(q=>!NA6_IDS.some(c=>uOf(c)>u&&euArea(c)&&inside(euArea(c),q.x,q.y))),q=>NA6_IDS.some(c=>U.includes(uOf(c))&&euArea(c)&&inside(euArea(c),q.x,q.y)));
+      for(const q of r.points)if(learned(q.country))add({id:r.id+'@'+q.country,place:{ru:NA2_ON[r.id][0]+' '+NA6_IN[q.country][0],en:NA2_ON[r.id][1]+' '+NA6_IN[q.country][1]},pri:0,eu:true,kind:'river',river:r.id,country:q.country},q.spots||[q],()=>U.includes(uOf(q.country)))}
+    for(const id of NA1_IDS.filter(id=>D.s22.eu[id]))
+      add({id,place:{ru:NA_PLACE[id][0],en:NA_PLACE[id][1]},pri:2,eu:true,kind:'object'},[E(id)],()=>U.some(k=>NA6_REG[k].includes(id)));
+    for(const p of out)if(!p.reg&&p.pri===0)p.pri=1;
+    out.frame={x:f.x,y:f.y,zoom:f.zoom};return out}
   if(st.sec===17){EUSEC=17;const u=st.unit==='S'?3:st.unit;
     return [...AS5_IDS.filter(id=>E(id)&&E(id).unit<=u).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS5_IN[id][0],en:AS5_IN[id][1]},pri:0,eu:true})),
       ...AS1_IDS.filter(id=>D.s13.eu[id]).map(id=>({id,x:E(id).x,y:E(id).y,place:{ru:AS_PLACE[id][0],en:AS_PLACE[id][1]},pri:1,eu:true}))]}
@@ -2375,10 +2447,11 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=gwLetters(
   const okWith=(p,pick,sep)=>pick.every(q=>(!sep||far(p,q))&&!(eu?(EUSEC===11||ASCTY()?nest11:euNested):nested)(p,q)&&!(p.group&&q.group===p.group));
   // section 5: at least a third of the letters on rivers, so the rivers are taken first up to that share (Svetlana, 28.10.2026)
   // Asia section 8: no more than three — West Asia has only the Tigris, the Euphrates and the Jordan
-  const needR=eu&&(EUSEC===11||ASCTY())?(EUSEC===20?Math.min(3,Math.ceil(n/3)):Math.ceil(n/3)):0;
+  // North America section 6: never more than the rivers in view (unit 3 has only the San Juan)
+  const needR=eu&&(EUSEC===11||ASCTY())?(EUSEC===20?Math.min(3,Math.ceil(n/3)):EUSEC===27?Math.min(Math.ceil(n/3),new Set(usable.filter(p=>p.kind==='river').map(p=>p.river)).size):Math.ceil(n/3)):0;
   const greedy=sep=>{const pick=[];if(needR){for(const p of order_())if(p.kind==='river'&&pick.length<needR&&okWith(p,pick,sep))pick.push(p);if(pick.length<needR)return null}
     // Asia section 8: the region is small and crowded, so its letters are taken next, up to half of the word
-    if(fz&&EUSEC===20)for(const p of order_())if(p.reg&&pick.length<n&&pick.filter(q=>q.reg).length<Math.ceil(n/2)&&!pick.includes(p)&&okWith(p,pick,sep))pick.push(p);
+    if(fz&&(EUSEC===20||EUSEC===27))for(const p of order_())if(p.reg&&pick.length<n&&pick.filter(q=>q.reg).length<Math.ceil(n/2)&&!pick.includes(p)&&okWith(p,pick,sep))pick.push(p);
     for(const p of order_()){if(pick.length>=n||pick.includes(p))continue;
       if(p.pair){if(pick.length+2>n||!usable.includes(p.pair)||!okWith(p,pick,sep)||!okWith(p.pair,pick,sep)||(sep&&!far(p,p.pair)))continue;pick.push(p,p.pair)}
       else if(okWith(p,pick,sep))pick.push(p)}
@@ -2391,7 +2464,7 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=gwLetters(
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
-  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,needsZoom:false,layers,eu,focus:fz||null}}
+  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,note:w.note||'',needsZoom:false,layers,eu,focus:fz||null}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
   const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers){const key=k.id.replace(/-(river|mouth|source)$/,'');usage[key]=(usage[key]||0)+1}}}
@@ -2428,14 +2501,14 @@ function geowords(P){
     const section=P.kind==='section'||P.kind==='block';
     if(P.seq){const {i,total}=P.seq;
       h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?(P.kind==='challenge'?x.cwAll:x.practiceAll):x.practiceDone}</h2>
-       <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
+       <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
        <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
        ${last?nextBtns(P.stepId):`<button type="button" class="btn" data-a="nextword">${x.nextWord(i+2,total)}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button>`}</section>`);
       if(last)wireNext(P.stepId);else{app.querySelector('[data-a=home]').onclick=home;app.querySelector('[data-a=nextword]').onclick=()=>P.seq.next()}
       return}
     h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
      <h2>${P.kind==='practice'?x.practiceDone:P.kind==='block'?x.blockDone:section?x.sectionDone:x.unitDone}</h2>
-     <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>
+     <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
      ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}${P.stepId&&P.kind==='final'&&!stepOf(P.stepId).sec&&canReview(stepOf(P.stepId))?`<button type="button" class="btn ghost" data-a="practice">${x.practice}</button>`:''}${P.stepId?nextBtns(P.stepId):`<button type="button" class="btn" data-a="home">${x.home}</button>`}</section>`);
     if(P.stepId){wireNext(P.stepId);const b=app.querySelector('[data-a=practice]');if(b)b.onclick=()=>startPractice(stepOf(P.stepId))}else app.querySelector('[data-a=home]').onclick=home}
