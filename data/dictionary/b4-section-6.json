@@ -10,7 +10,8 @@
   "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
   "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24): the name of Sandino stands in the card after the answer",
   "draft": "Definitions by Claude from Svetlana's terms, edited by Svetlana; all approved by Svetlana 2026-11-13 («Утверждаю»).",
-  "notes": "note: a card shown after the word is solved (approved in the plan, 13.11.2026), with what the definition may not contain (the same root, the normative spelling); not covered by the approval hash"
+  "notes": "note: a card shown after the word is solved (approved in the plan 13.11.2026, edited by Svetlana 14.11.2026), with what the definition may not contain (the same root, the normative spelling); not covered by the approval hash",
+  "display": "display: how the word is written on the card after it is solved (Пополь-Вух, Popol Vuh, Métis, appliqué); the grid keeps the answer without spaces, hyphens or diacritics (Svetlana, 14.11.2026); not covered by the approval hash"
  },
  "approvedBy": "Svetlana",
  "approvedDate": "2026-11-13",
@@ -38,7 +39,7 @@
       "answer": "МЕТИСЫ",
       "role": "review",
       "definition": "Один из коренных народов Канады, сформировавшийся в результате исторических связей европейских торговцев пушниной и коренных народов Северной Америки. Имеет собственную культуру, историю и традиции",
-      "note": "У метисов есть свой язык мичиф.",
+      "note": "Мичиф — один из традиционных языков метисов.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
@@ -127,9 +128,10 @@
      },
      {
       "answer": "METIS",
+      "display": "MÉTIS",
       "role": "review",
       "definition": "An Indigenous people of Canada with a distinct history and culture, whose communities developed through historical connections between European fur traders and Indigenous peoples",
-      "note": "The word is written Métis. The Métis have their own language, Michif.",
+      "note": "Michif is one of the traditional languages of the Métis.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
@@ -216,6 +218,7 @@
     "ru": [
      {
       "answer": "ПОПОЛЬВУХ",
+      "display": "ПОПОЛЬ-ВУХ",
       "role": "final",
       "definition": "Священная книга народа киче в Гватемале, записанная в XVI веке: мифы о сотворении мира и героях-близнецах",
       "note": "Нормативное написание — Пополь-Вух.",
@@ -307,6 +310,7 @@
     "en": [
      {
       "answer": "POPOLVUH",
+      "display": "POPOL VUH",
       "role": "final",
       "definition": "The sacred book of the K’iche’ Maya of Guatemala, written down in the 16th century: myths of the creation and the Hero Twins",
       "note": "The usual spelling is Popol Vuh.",
@@ -420,7 +424,7 @@
       "answer": "КУСКАТЛАН",
       "role": "review",
       "definition": "Историческое государственное образование народа пипиль на территории современного Сальвадора, существовавшее до испанского завоевания XVI века",
-      "note": "Его создал народ пипили, говорящий на языке науат.",
+      "note": "Кускатлан — историческое государственное образование народа пипиль на территории современного Сальвадора. Пипили говорили на языке науат.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
@@ -513,7 +517,7 @@
       "answer": "CUSCATLAN",
       "role": "review",
       "definition": "A historical Pipil political entity in what is now El Salvador, which existed before the Spanish conquest in the 16th century",
-      "note": "It was founded by the Pipil people, who speak Nawat.",
+      "note": "Cuscatlán was a pre-Columbian polity of the Pipil people in present-day El Salvador. Their language was Nawat.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",
@@ -579,9 +583,10 @@
      },
      {
       "answer": "APPLIQUE",
+      "display": "APPLIQUÉ",
       "role": "review",
       "definition": "A textile decoration technique involving layers or pieces of fabric. Guna women in Panama use a reverse form of it to create traditional molas",
-      "note": "The word is written appliqué. In a mola the pattern is cut into the upper layers of fabric so that the lower layers show through: this is reverse appliqué.",
+      "note": "In a mola the pattern is cut into the upper layers of fabric so that the lower layers show through: this is reverse appliqué.",
       "approval": {
        "status": "approved",
        "by": "Svetlana",

@@ -51,7 +51,9 @@ export const CONTAINERS = {
 // the places of section 1 that count for the region of a unit (NA6_REG in app/app.js)
 const REGION_OBJ = { 1: ["na-hudson-bay", "na-labrador", "na-arctic-archipelago", "na-baffin", "na-boothia", "na-newfoundland", "na-florida", "na-alaska-peninsula"],
   2: ["na-yucatan", "na-baja-california", "na-gulf-of-mexico", "na-gulf-of-california"], 3: ["na-isthmus-of-panama", "na-caribbean-sea"] };
-const ASPECT = 1600 / 2200, SEP = 9;
+// the rivers a unit puzzle may use (the section final and unit 1 use all rivers in view): NA6_RIV in app/app.js
+const RIVERS_OF = { 2: ["na-usumacinta", "na-colorado", "na-rio-grande"], 3: ["na-san-juan", "na-usumacinta"] };
+const ASPECT = 1600 / 2200, SEP = 9, EDGE = Number(process.env.EDGE || 8);
 
 const map = JSON.parse(fs.readFileSync(MAP, "utf8")), C6 = JSON.parse(fs.readFileSync(C6F, "utf8")), dict = JSON.parse(fs.readFileSync(DICT, "utf8"));
 const tpl = JSON.parse(fs.readFileSync("data/geowords/clue-templates.json", "utf8"));
@@ -75,7 +77,11 @@ function revealOrder(n) {
 const frame6 = unit => {
   const k = unit === "section-final" || unit === "S" ? "S" : String(unit), f = { ...C6.frames[k], ...(process.env.FRAMES ? JSON.parse(process.env.FRAMES)[k] : {}) }, hw = 50 / f.zoom;
   const cx = Math.min(100 - hw, Math.max(hw, f.x)), cy = Math.min(100 - hw, Math.max(hw, f.y)), m = 4 / f.zoom;
-  return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m };
+  // a letter outside the region of the unit stands well inside the view, never at its edge (Svetlana, 14.11.2026: Arkansas and Mississippi
+  // at the top edge of unit 2, the Rio Grande at the corner of unit 3); EDGE = 8% of the screen
+  const e = EDGE / f.zoom;
+  return { ...f, inView: p => p.x >= cx - hw + m && p.x <= cx + hw - m && p.y >= cy - hw + m && p.y <= cy + hw - m,
+    inner: p => p.x >= cx - hw + e && p.x <= cx + hw - e && p.y >= cy - hw + e && p.y <= cy + hw - e };
 };
 // a letter in a country stands in the main part of the country (the part with its label), its circle wholly inside the border where it fits
 const R_MARK = 4.5;
@@ -104,11 +110,13 @@ function deepSpots(cid, spots, zoom) {
   const mx = Math.max(...sc.map(([, d]) => d));
   return sc.filter(([, d]) => d >= mx * 0.8).map(([s]) => s);
 }
-function places6(unit, F) {
+function places6(unit, F, final) {
   const out = [], learned = id => C6.items.some(o => o.id === id && o.unit <= unit), uOf = id => C6.items.find(o => o.id === id)?.unit;
   const add = (base, spots) => { const all = spots.filter(F.inView); if (all.length) out.push({ ...base, spots: base.kind === "country" ? deepSpots(base.country, [...all, ...gridSpots(base.country, F)], F.zoom) : base.country ? deepSpots(base.country, all, F.zoom) : all, allSpots: all }); };
   for (const o of C6.items) if (o.unit <= unit) add({ id: o.id, kind: "country", country: o.id, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
+  // units 2 and 3: only the rivers of their own lands (Svetlana, 14.11.2026: no Arkansas or Mississippi in a puzzle about Mexico)
   for (const rc of C6.rivers) {
+    if (!final && RIVERS_OF[unit] && !RIVERS_OF[unit].includes(rc.id)) continue;
     // never a river letter inside a country of a later unit (the San Juan in Nicaragua before Nicaragua is taught)
     add({ id: rc.id, kind: "river", river: rc.id, crosses: rc.crosses, unit: 0, reg: null, place: PLACE[rc.id] }, rc.spots.filter(s => !C6.items.some(o => o.unit > unit && in6(o.id, s))));
     for (const q of rc.points) if (learned(q.country))
@@ -127,15 +135,17 @@ const conflict6 = (a, b) => (a.river && a.river === b.river) || (a.country && a.
 function build6(word, lang, unit, final, tries = Number(process.env.TRIES || 4000)) {
   const li = lang === "ru" ? 0 : 1, letters = [...word], n = letters.length, needReg = Math.ceil(n / 2);
   const F = frame6(final ? "S" : unit), sep = SEP / F.zoom, U = final ? [1, 2, 3] : [unit];
-  const usable = places6(unit, F).filter(p => !fold(p.place[li]).includes(fold(word)));
-  const needR = Math.min(Math.ceil(n / 3), new Set(usable.filter(p => p.kind === "river").map(p => p.river)).size);
+  const usable = places6(unit, F, final).filter(p => !fold(p.place[li]).includes(fold(word)));
   const inReg = p => regOf(p).some(u => U.includes(u));
+  // the rivers that can hold a letter: in the region, or well inside the view
+  const needR = Math.min(Math.ceil(n / 3), !final && unit === 2 ? 2 : 99, new Set(usable.filter(p => p.kind === "river" && p.spots.some(s => F.inner(s) || inReg({ ...p, ...s, sreg: undefined }))).map(p => p.river)).size);
   if (process.env.LIST) console.error(word, F, needR, usable.map(g => `${g.id}:${g.spots.length}/${g.spots.filter(s => inReg({ ...g, ...s, sreg: undefined })).length}`).join(" "));
   let best = null, bestScore = -Infinity;
   for (let k = 0; k < tries; k++) {
     const pick = [], ok = p => pick.every(q => Math.hypot(p.x - q.x, (p.y - q.y) * ASPECT) >= sep && !conflict6(p, q));
-    const take = (g, want) => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if ((!want || want(p)) && ok(p)) { pick.push(p); return; } } };
-    const groups = shuffle([...usable]);
+    const take = (g, want) => { if (pick.length >= n || pick.some(q => q.id === g.id)) return; for (const s of shuffle([...g.spots])) { const p = { ...g, x: s.x, y: s.y, sreg: undefined }; if ((!want || want(p)) && (F.inner(p) || inReg(p)) && ok(p)) { pick.push(p); return; } } };
+    // in a quarter of the tries some places sit out (a crowded unit fits its word only without, say, the letter in Mexico itself)
+    const groups = shuffle([...usable]).filter(() => k % 4 !== 3 || Math.random() > 0.25);
     // the region of the unit first in half of the tries (Central America is small and crowded), rivers first in the other half
     // (its countries first, then the rivers, then the places of section 1: a peninsula would shut out the countries it lies in)
     const kindOrder = { country: 0, river: 1, object: 2 };

@@ -2051,7 +2051,7 @@ function finalPuzzle(st){if(st.sec>=7)EUSEC=st.sec;const role=st.kind==='section
   const unitIdx=st.kind==='section'?DI.units.length-1:st.unit-1;
   const w=DI.units[unitIdx].words[L()].find(w=>w.role===role||w.role==='final');
   return {kind:st.kind,stepId:st.id,answer:P.answer,markers:P.markers,clues:P.clues.map(c=>({markerId:c.markerId,position:c.position,text:c.text})),
-    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',note:w?.note||'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,focus:P.focus||null,stamp:st.sec===27?IMG.euCard:st.sec===26?IMG.stamp3:st.sec===25?IMG.stamp3:st.sec===24?IMG.stamp4:st.sec===23?IMG.stamp2:st.sec>=18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
+    layers:(P.layers||[]).map(p=>p.split('/').pop().replace('.webp','')),definition:w?w.definition:'',note:w?.note||'',display:w?.display||'',needsZoom:!!P.needsZoom,insets:P.showInsets||[],eu:st.sec>=7,focus:P.focus||null,stamp:st.sec===27?IMG.euCard:st.sec===26?IMG.stamp3:st.sec===25?IMG.stamp3:st.sec===24?IMG.stamp4:st.sec===23?IMG.stamp2:st.sec>=18?IMG.euCard:st.sec===17?IMG.stamp3:st.sec===16?IMG.stamp3:st.sec===15?IMG.stamp4:st.sec===14?IMG.stamp2:st.sec>=10?IMG.euCard:st.sec===9?IMG.stamp3:st.sec===8?IMG.stamp2:st.sec===7?IMG.euCard:st.sec===5?IMG.stamp5:st.sec===4?IMG.stamp4:st.sec===3?IMG.stamp3:st.sec===2?IMG.stamp2:IMG.stamp}}
 // Block final (data/geowords/block-1.json): one approved puzzle per language, letters on objects of all five sections; passport stamp.
 function blockPuzzle(st){if(st.sec===12)return euBlockPuzzle(st);const P=D.b.geo.puzzles.find(p=>p.role==='block-final'&&p.language===L()&&p.approval?.status==='approved');
   const w=D.b.dict.units.find(u=>u.id==='block-final').words[L()].find(w=>w.role==='block-final');
@@ -2364,9 +2364,13 @@ function placesFor(st){
   if(st.sec===27){EUSEC=27;const SX=D.s27,u=st.unit==='S'?3:st.unit,learned=id=>!!(E(id)&&E(id).unit<=u),U=st.unit==='S'?[1,2,3]:[st.unit];
     const f=SX.frames[st.unit==='S'?'S':String(st.unit)],hw=50/f.zoom,cx=Math.min(100-hw,Math.max(hw,f.x)),cy=Math.min(100-hw,Math.max(hw,f.y)),mg=4/f.zoom;
     const inView=q=>q.x>=cx-hw+mg&&q.x<=cx+hw-mg&&q.y>=cy-hw+mg&&q.y<=cy+hw-mg,uOf=id=>E(id)&&E(id).unit;
-    const out=[],add=(base,spots,reg)=>{for(const q of spots.filter(inView))out.push({...base,x:q.x,y:q.y,group:base.id,reg:reg(q)})};
+    // a letter outside the region of the unit stands well inside the view, never at its edge (Svetlana, 14.11.2026; EDGE in tools/build_b4s6_geowords.mjs)
+    const eg=8/f.zoom,inner=q=>q.x>=cx-hw+eg&&q.x<=cx+hw-eg&&q.y>=cy-hw+eg&&q.y<=cy+hw-eg;
+    const out=[],add=(base,spots,reg)=>{for(const q of spots.filter(inView)){const r=reg(q);if(r||inner(q))out.push({...base,x:q.x,y:q.y,group:base.id,reg:r})}};
     for(const id of NA6_IDS.filter(learned))add({id,place:{ru:NA6_IN[id][0],en:NA6_IN[id][1]},pri:0,eu:true,kind:'country',country:id},SX.spots[id]||[E(id)],()=>U.includes(uOf(id)));
-    for(const r of SX.rivers){if(!D.s23.eu[r.id])continue;
+    // units 2 and 3: only the rivers of their own lands, no Arkansas or Mississippi about Mexico (RIVERS_OF in tools/build_b4s6_geowords.mjs)
+    const RIV={2:['na-usumacinta','na-colorado','na-rio-grande'],3:['na-san-juan','na-usumacinta']}[st.unit];
+    for(const r of SX.rivers){if(!D.s23.eu[r.id]||(RIV&&!RIV.includes(r.id)))continue;
       add({id:r.id,place:{ru:NA2_ON[r.id][0],en:NA2_ON[r.id][1]},pri:0,eu:true,kind:'river',river:r.id,crosses:r.crosses},(r.spots||[E(r.id)]).filter(q=>!NA6_IDS.some(c=>uOf(c)>u&&euArea(c)&&inside(euArea(c),q.x,q.y))),q=>NA6_IDS.some(c=>U.includes(uOf(c))&&euArea(c)&&inside(euArea(c),q.x,q.y)));
       for(const q of r.points)if(learned(q.country))add({id:r.id+'@'+q.country,place:{ru:NA2_ON[r.id][0]+' '+NA6_IN[q.country][0],en:NA2_ON[r.id][1]+' '+NA6_IN[q.country][1]},pri:0,eu:true,kind:'river',river:r.id,country:q.country},q.spots||[q],()=>U.includes(uOf(q.country)))}
     for(const id of NA1_IDS.filter(id=>D.s22.eu[id]))
@@ -2464,7 +2468,7 @@ function buildPuzzle(w,places,layers,usage={}){const lang=L(),letters=gwLetters(
   const markers=chosen.map((p,i)=>({id:p.id,x:p.x,y:p.y,letter:letters[i],place:p.place[lang]}));
   const ord=D.tpl.ordinals[lang],tmpl=D.tpl.template[lang];
   const clues=order.map(pos=>{const m=markers[pos-1];return {markerId:m.id,position:pos,text:tmpl.replace('{ordinal}',ord[pos-1]).replace('{place}',m.place)}});
-  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,note:w.note||'',needsZoom:false,layers,eu,focus:fz||null}}
+  return {kind:'practice',answer:w.answer,markers,clues,definition:w.definition,note:w.note||'',display:w.display||'',needsZoom:false,layers,eu,focus:fz||null}}
 function runPractice(st){const places=placesFor(st),layers=layersFor(st),puzzles=[];
   // build the six puzzles first: a word that cannot be laid out by the rules is replaced by the next candidate, so there are always six when possible
   const usage={};for(const w of practiceWords(st)){if(puzzles.length===6)break;const P=buildPuzzle(w,places,layers,usage);if(P){puzzles.push(P);for(const k of P.markers){const key=k.id.replace(/-(river|mouth|source)$/,'');usage[key]=(usage[key]||0)+1}}}
@@ -2501,14 +2505,14 @@ function geowords(P){
     const section=P.kind==='section'||P.kind==='block';
     if(P.seq){const {i,total}=P.seq;
       h(`<section class="screen done"><img class="medal" src="${IMG.faceWow}" alt=""><p class="eyebrow">${x.wordOf(i+1,total)}</p><h2>${last?(P.kind==='challenge'?x.cwAll:x.practiceAll):x.practiceDone}</h2>
-       <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
+       <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...(P.display||P.answer)].length}">${esc(P.display||P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
        <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
        ${last?nextBtns(P.stepId):`<button type="button" class="btn" data-a="nextword">${x.nextWord(i+2,total)}</button><button type="button" class="btn ghost" data-a="home">${x.home}</button>`}</section>`);
       if(last)wireNext(P.stepId);else{app.querySelector('[data-a=home]').onclick=home;app.querySelector('[data-a=nextword]').onclick=()=>P.seq.next()}
       return}
     h(`<section class="screen done">${section?`<img class="medal" src="${P.stamp||IMG.stamp}" alt="" style="transform:rotate(-10deg)"><p class="eyebrow">${x.stampGot}</p>`:`<img class="medal" src="${P.kind==='practice'?IMG.faceWow:IMG.medal}" alt="">`}
      <h2>${P.kind==='practice'?x.practiceDone:P.kind==='block'?x.blockDone:section?x.sectionDone:x.unitDone}</h2>
-     <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...P.answer].length}">${esc(P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
+     <p class="eyebrow">${x.wordDef}</p><p class="word-big" style="--n:${[...(P.display||P.answer)].length}">${esc(P.display||P.answer)}</p><p class="defn">${esc(P.definition)}</p>${P.note?`<p class="defn note">${esc(P.note)}</p>`:''}
      <div class="tiles"><div class="tile"><small>${x.xp}</small><b>+${xp}</b></div><div class="tile"><small>${x.mistakes}</small><b>${wrong}</b></div><div class="tile"><small>${x.time}</small><b>${Math.floor(sec/60)}:${String(sec%60).padStart(2,'0')}</b></div></div>
      ${section?`<img src="${IMG.medalSection}" alt="" style="width:110px">`:`<img src="${IMG.cheer}" alt="" style="width:120px">`}${P.stepId&&P.kind==='final'&&!stepOf(P.stepId).sec&&canReview(stepOf(P.stepId))?`<button type="button" class="btn ghost" data-a="practice">${x.practice}</button>`:''}${P.stepId?nextBtns(P.stepId):`<button type="button" class="btn" data-a="home">${x.home}</button>`}</section>`);
     if(P.stepId){wireNext(P.stepId);const b=app.querySelector('[data-a=practice]');if(b)b.onclick=()=>startPractice(stepOf(P.stepId))}else app.querySelector('[data-a=home]').onclick=home}

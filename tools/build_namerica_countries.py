@@ -157,7 +157,7 @@ for it in items:
     it['spots'] = thin([(it['label']['x'], it['label']['y'])] + grid, 1.0 if it['unit'] == 1 else 0.6)
     print(it['id'], len(it['spots']), 'spots')
 # the zoomed view of the GeoWords puzzles of each unit (S = section final): centre and zoom in % of the map
-FRAMES = {'1': {'x': 50, 'y': 46, 'zoom': 1.2}, '2': {'x': 47, 'y': 80, 'zoom': 3.3}, '3': {'x': 60, 'y': 90, 'zoom': 4}, 'S': {'x': 50, 'y': 55, 'zoom': 1.1}}
+FRAMES = {'1': {'x': 50, 'y': 46, 'zoom': 1.2}, '2': {'x': 52, 'y': 78, 'zoom': 3.0}, '3': {'x': 60, 'y': 90, 'zoom': 4}, 'S': {'x': 50, 'y': 55, 'zoom': 1.1}}
 
 out = {
   'map': './assets/namerica-countries.webp',
