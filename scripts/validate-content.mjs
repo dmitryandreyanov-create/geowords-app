@@ -144,6 +144,14 @@ const RELEASE = {
     section: "deserts-and-canyons-of-north-america",
     ids: ["badwater-lowest", "bristlecone-oldest-trees", "white-sands-gypsum"],
   },
+  "b4-section-6-facts.json": {
+    section: "countries-of-north-and-central-america",
+    ids: ["cty-canada", "cty-united-states", "cty-mexico", "cty-guatemala", "cty-belize", "cty-honduras", "cty-el-salvador", "cty-nicaragua", "cty-costa-rica", "cty-panama"],
+  },
+  "b4-section-6-records.json": {
+    section: "countries-of-north-and-central-america",
+    ids: ["canada-largest", "canada-coastline", "canada-us-border", "mexico-city-agglomeration", "nicaragua-largest", "el-salvador-smallest"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],

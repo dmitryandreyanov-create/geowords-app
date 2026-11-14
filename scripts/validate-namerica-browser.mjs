@@ -1,4 +1,4 @@
-/* Block 4 «North America», section 1 «North America on the map» , section 2 «Rivers of North America», section 3 «Lakes of North America» section 4 «Mountains and Plains of North America» and section 5 «Deserts and Canyons of North America» at iPhone width: plays every lesson with right answers on the North America base map,
+/* Block 4 «North America», section 1 «North America on the map» , section 2 «Rivers of North America», section 3 «Lakes of North America» section 4 «Mountains and Plains of North America» section 5 «Deserts and Canyons of North America» and section 6 «Countries of North and Central America» at iPhone width: plays every lesson with right answers on the North America base map,
    then the unit practice and the finals with the draft words and puzzles treated as approved in memory (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
 import assert from 'node:assert/strict';
@@ -321,5 +321,87 @@ try{
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
   }
-  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2,3,4,5')+' play in RU and EN on the North America maps.');
+  // section 6 «Countries of North and Central America»: lessons on the countries map with the large map of Central America (a tap in its frame
+  // opens it, and the answer is tapped there), capitals of Guatemala and Panama never named from options, practice and finals zoomed in on the unit
+  const cMap=JSON.parse(fs.readFileSync('data/maps/namerica-countries.json','utf8')),cFacts=JSON.parse(fs.readFileSync('data/content/b4-section-6-facts.json','utf8'));
+  const CA=JSON.parse(fs.readFileSync('data/maps/namerica-camerica.json','utf8')),CF=CA.frame,inCa=pt=>pt.x>=CF.x&&pt.x<=CF.x+CF.w&&pt.y>=CF.y&&pt.y<=CF.y+CF.h;
+  const cUnit=Object.fromEntries(cMap.items.map(i=>[i.id,i.unit])),cOf=Object.fromEntries(cMap.items.map(i=>[i.id,i])),SAMECAP=['cty-guatemala','cty-panama'];
+  const CMAP='assets/namerica-countries.webp',cRiv=new Set(cMap.rivers.map(r=>r.id));
+  for(const lang of run(6)?['ru','en']:[]){
+    const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,deviceScaleFactor:2});
+    for(const f of ['data/geowords/b4-section-6.json'])
+      await context.route('**/'+f+'*',r=>r.fulfill({contentType:'application/json',body:approvedCopy(f)}));
+    await context.addInitScript(l=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:l,done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))},lang);
+    const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
+    await page.goto(base+'/app/');await page.waitForSelector('[data-step="n6-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),lang==='ru'?/Страны Северной и Центральной Америки/:/Countries of North and Central America/);
+    const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`n6-${name}-${lang}.png`)})}};
+    const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    let caShots=0;
+    const tapCa=async(pt,name)=>{await tapAt(pt);if(!inCa(pt))return;assert.equal(await page.locator('.task .fb.ok,.task .fb.bad').count(),0,'a tap in the Central America frame is not judged');
+      await page.locator('.task .lv-pop').waitFor();if(caShots<3){caShots++;await page.waitForTimeout(300);await shot('camerica-'+name)}
+      const box=await page.locator('.task .lv-pop').boundingBox();await page.mouse.click(box.x+box.width*(pt.x-CF.x)/CF.w,box.y+box.height*(pt.y-CF.y)/CF.h)};
+    const lessons=['n6-u1-l1','n6-u1-l2','n6-u2-l1','n6-u2-l2','n6-u3-l1','n6-u3-l2','n6-u3-l3','n6-u3-l4','n6-u3-l5'];const kinds=new Set(),shotKinds=new Set();
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<120;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith(CMAP),'North America countries map: '+src);
+        if(['capOf','whatCap'].includes(q.k))assert(!SAMECAP.includes(q.id),q.id+': its capital has the country name, never named from options');
+        const special=q.k==='introEu'&&['cty-guatemala','cty-belize','cty-panama'].includes(q.id);
+        if(!shotKinds.has(q.k)||special){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k+(special?'-'+q.id:''))}
+        if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu'){const f=cFacts.items.find(i=>i.id===q.id);assert.equal(await page.locator('.task .card p').first().innerText(),f.fact[lang]);
+            assert.equal(await page.locator('.task .nuance').count(),f.caveat?1:0,'«Есть нюанс» on '+q.id);
+            assert((await page.locator('.task .card h3').first().innerText()).includes(f.capital[lang]),'capital on the card of '+q.id)}
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){assert(q.id in cUnit,'a country of section 6: '+q.id);await tapCa(cOf[q.id].label,q.id);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='findCap'){await tapCa(cOf[q.id].capital,cOf[q.id].capital.id);await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the capital dot of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(['whatEu','capOf','whatCap'].includes(q.k)){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o.startsWith('cty-')),'country options only');
+          {const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)||!(o in cUnit)),`${id} ${q.k} ${q.id}: options ${opts} not taught yet (${taught})`)}
+          const caOpen=q.k==='capOf'?CA.capitals.includes(cOf[q.id].capital.id):CA.objects.includes(q.id);
+          assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),caOpen?1:0,'large map of Central America open on '+q.k+' '+q.id);
+          if(caOpen&&caShots<6){caShots++;await page.waitForTimeout(300);await shot('camerica-'+q.k+'-'+q.id)}
+          await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n6-u1-l1"]')}
+    for(const k of ['introEu','introEuRec','findEu','whatEu','findCap','capOf','whatCap'])assert(kinds.has(k),'task kind played: '+k);
+    // the dots of Guatemala City and San Salvador are close: a tap on one is never the other
+    const caps=await page.evaluate(([g,s])=>{window.__gwEuSec(27);const sz={W:390,H:284};return [window.__gwCapHit(g.x,g.y,sz),window.__gwCapHit(s.x,s.y,sz)]},[cOf['cty-guatemala'].capital,cOf['cty-el-salvador'].capital]);
+    assert.deepEqual(caps,['guatemala-city','san-salvador']);
+    for(const u of [1,2,3]){await page.locator(`[data-step="n6-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(CMAP),'practice on the countries map');
+        for(const m of p.markers){const [r,c]=m.id.split('@');assert(c?cRiv.has(r)&&cUnit[c]<=u:m.id in cUnit?cUnit[m.id]<=u:cRiv.has(m.id)||m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`)}
+        assert(p.markers.some(m=>cRiv.has(m.id.split('@')[0])),p.answer+': letters on rivers');
+        assert.deepEqual(p.focus,cMap.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
+        await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
+        if(w===0)await shot('practice-u'+u);
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="n6-u1-l1"]')}
+    const cGeo=JSON.parse(fs.readFileSync('data/geowords/b4-section-6.json','utf8')).puzzles;
+    for(const [step,id] of [['n6-u1-final','unit-1'],['n6-u2-final','unit-2'],['n6-u3-final','unit-3'],['n6-final','final']]){
+      const want=cGeo.find(p=>p.id===`b4-section-6-${id}-${lang}`);
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(CMAP),'final on the countries map');
+      assert.deepEqual(p.focus,want.focus,'the final opens zoomed in');assert(want.inRegion>=Math.ceil(want.answer.length/2),'half of the letters in the region');
+      await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,want.id+': every letter in view');
+      await page.waitForTimeout(400);await shot('final-'+id);
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      // every clue names the letter of its own marker (Svetlana, 14.11.2026: check that each clue fits its letter)
+      for(const c of want.clues)assert.equal(want.markers.find(m=>m.id===c.markerId).letter,[...want.answer][c.position-1],want.id+': clue '+c.position);
+      await page.waitForSelector('.screen.done');await shot('done-'+id);
+      // the card spells the word the usual way (Пополь-Вух, Métis), the grid without spaces, hyphens or accents
+      const dw=JSON.parse(fs.readFileSync('data/dictionary/b4-section-6.json','utf8')).units.flatMap(u=>u.words[lang]||[]).find(w=>w.answer===want.answer);
+      if(dw?.display)assert.equal(await page.locator('.screen.done .word-big').innerText(),dw.display,want.id+': display spelling');
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n6-u1-l1"]')}
+    assert.deepEqual(errs,[],'no page errors');
+    await context.close();
+  }
+  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2,3,4,5,6')+' play in RU and EN on the North America maps.');
 }finally{await browser?.close();server.close()}
