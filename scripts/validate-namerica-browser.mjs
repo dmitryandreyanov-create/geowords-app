@@ -393,7 +393,12 @@ try{
       await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,want.id+': every letter in view');
       await page.waitForTimeout(400);await shot('final-'+id);
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
-      await page.waitForSelector('.screen.done');if(['unit-1','final'].includes(id))await shot('done-'+id);
+      // every clue names the letter of its own marker (Svetlana, 14.11.2026: check that each clue fits its letter)
+      for(const c of want.clues)assert.equal(want.markers.find(m=>m.id===c.markerId).letter,[...want.answer][c.position-1],want.id+': clue '+c.position);
+      await page.waitForSelector('.screen.done');await shot('done-'+id);
+      // the card spells the word the usual way (Пополь-Вух, Métis), the grid without spaces, hyphens or accents
+      const dw=JSON.parse(fs.readFileSync('data/dictionary/b4-section-6.json','utf8')).units.flatMap(u=>u.words[lang]||[]).find(w=>w.answer===want.answer);
+      if(dw?.display)assert.equal(await page.locator('.screen.done .word-big').innerText(),dw.display,want.id+': display spelling');
       await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n6-u1-l1"]')}
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
