@@ -152,6 +152,15 @@ const RELEASE = {
     section: "countries-of-north-and-central-america",
     ids: ["canada-largest", "canada-coastline", "canada-us-border", "mexico-city-agglomeration", "nicaragua-largest", "el-salvador-smallest"],
   },
+  "b4-section-7-facts.json": {
+    section: "countries-of-the-caribbean-islands",
+    ids: ["cty-cuba", "cty-bahamas", "cty-jamaica", "cty-haiti", "cty-dominican-republic", "cty-saint-kitts-and-nevis", "cty-antigua-and-barbuda", "cty-dominica",
+      "cty-saint-lucia", "cty-saint-vincent", "cty-grenada", "cty-barbados", "cty-trinidad-and-tobago"],
+  },
+  "b4-section-7-records.json": {
+    section: "countries-of-the-caribbean-islands",
+    ids: ["cuba-largest", "pico-duarte", "saint-kitts-smallest", "pitch-lake"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],
