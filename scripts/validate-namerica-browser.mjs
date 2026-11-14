@@ -42,7 +42,7 @@ try{
         const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
         const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith(MAP),'North America base map: '+src);
         if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
-        if(q.k==='introEurope'){const h=await page.locator('.task .card h3').first().innerText();
+        if(q.k==='introEurope'){const h=await page.locator('.task .card h3').first().innerText();if(q.note){assert.equal(await page.locator('.mapslot .mk.tip').count(),1,'the Hawaii card marks its place on the map');await page.waitForTimeout(300);await shot('note-'+q.note)}
           assert(h===(lang==='ru'?'Северная Америка':'North America')||h===factOf('namerica-hawaii').title?.[lang]||true,h);await page.locator('.fb .btn').click()}
         else if(q.k==='introEu'||q.k==='introEuRec'){
           if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),factOf(q.id).fact[lang]);
@@ -218,7 +218,7 @@ try{
         const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
         const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith(MMAP),'North America mountains map: '+src);
         if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
-        if(q.k==='introEurope'){assert.equal(await page.locator('.task .card h3').first().innerText(),q.note?(lang==='ru'?'Йеллоустон':'Yellowstone'):(lang==='ru'?'Горы и равнины Северной Америки':'Mountains and Plains of North America'));await page.locator('.fb .btn').click()}
+        if(q.k==='introEurope'){if(q.note){assert.equal(await page.locator('.mapslot .mk.tip').count(),1,'the Yellowstone card marks its place on the map');await page.waitForTimeout(300);await shot('note-'+q.note)}assert.equal(await page.locator('.task .card h3').first().innerText(),q.note?(lang==='ru'?'Йеллоустон':'Yellowstone'):(lang==='ru'?'Горы и равнины Северной Америки':'Mountains and Plains of North America'));await page.locator('.fb .btn').click()}
         else if(q.k==='introEu'||q.k==='introEuRec'){
           if(q.k==='introEu')assert.equal(await page.locator('.task .card p').first().innerText(),mFact(q.id).fact[lang]);
           await page.locator('.fb .btn').click()}
