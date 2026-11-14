@@ -136,6 +136,14 @@ const RELEASE = {
     section: "mountains-and-plains-of-north-america",
     ids: ["denali-highest", "orizaba-highest-volcano", "canadian-shield-oldest-rocks"],
   },
+  "b4-section-5-facts.json": {
+    section: "deserts-and-canyons-of-north-america",
+    ids: ["namerica-deserts-intro", "namerica-hot-cold-deserts", "na-sonoran", "na-mojave", "na-chihuahuan", "na-great-basin", "na-vizcaino", "na-okanagan", "na-grand-canyon", "na-antelope-canyon", "na-black-canyon", "na-canyon-de-chelly", "na-copper-canyon", "na-fraser-canyon"],
+  },
+  "b4-section-5-records.json": {
+    section: "deserts-and-canyons-of-north-america",
+    ids: ["badwater-lowest", "bristlecone-oldest-trees", "white-sands-gypsum"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],

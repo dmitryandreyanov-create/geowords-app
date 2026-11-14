@@ -66,6 +66,8 @@ const named=[
   'data/content/b4-section-3-facts.json','data/content/b4-section-3-records.json','data/dictionary/b4-section-3.json','data/geowords/b4-section-3.json',
   // Block 4 section 4 «Mountains and Plains of North America»; its shapes are data/maps/namerica-mountains.json (below).
   'data/content/b4-section-4-facts.json','data/content/b4-section-4-records.json','data/dictionary/b4-section-4.json','data/geowords/b4-section-4.json',
+  // Block 4 section 5 «Deserts and Canyons of North America»; its shapes are data/maps/namerica-deserts.json and the large map namerica-canyons.json (below).
+  'data/content/b4-section-5-facts.json','data/content/b4-section-5-records.json','data/dictionary/b4-section-5.json','data/geowords/b4-section-5.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
@@ -74,7 +76,7 @@ const named=[
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
   'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp','assets/asia-countries.webp','assets/asia-levant.webp',
-  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp',
+  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp','assets/namerica-deserts.webp','assets/namerica-canyons.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){
