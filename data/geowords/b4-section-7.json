@@ -1,0 +1,964 @@
+{
+ "section": "countries-of-the-caribbean-islands",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/namerica-caribbean.json); letters in the island states learned by the end of the unit (spots, main island first), in the countries of section 6 in view, in the seas and the ocean (open water) and on Florida, Yucatán and Hispaniola (Svetlana, 14.11.2026); at least half of the letters in the region of the unit (its island states and the seas around them); a letter outside the region stands well inside the view",
+  "nesting": "a place is named once per puzzle; a country never with its island or peninsula; a sea never with its ocean; no letter inside the area of another place of the puzzle",
+  "depth": "a letter in a country stands in its main part, as deep inside the border as the country allows (Svetlana, 1.11.2026)",
+  "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-7-unit-1-en",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "RASTAFARI",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-united-states",
+     "x": 18.01,
+     "y": 16.61,
+     "letter": "R"
+    },
+    {
+     "id": "cty-honduras",
+     "x": 9.62,
+     "y": 80.59,
+     "letter": "A"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 6.47,
+     "y": 54.37,
+     "letter": "S"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "T"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 45,
+     "y": 82.5,
+     "letter": "A"
+    },
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "F"
+    },
+    {
+     "id": "cty-nicaragua",
+     "x": 19.06,
+     "y": 80.59,
+     "letter": "A"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 13.5,
+     "y": 34.5,
+     "letter": "R"
+    },
+    {
+     "id": "cty-cuba",
+     "x": 32.1,
+     "y": 45.3,
+     "letter": "I"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-bahamas",
+     "position": 4,
+     "text": "Find the fourth letter in the Bahamas."
+    },
+    {
+     "markerId": "cty-honduras",
+     "position": 2,
+     "text": "Find the second letter in Honduras."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 6,
+     "text": "Find the sixth letter in Jamaica."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 3,
+     "text": "Find the third letter in Mexico."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 8,
+     "text": "Find the eighth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "cty-united-states",
+     "position": 1,
+     "text": "Find the first letter in the United States."
+    },
+    {
+     "markerId": "cty-nicaragua",
+     "position": 7,
+     "text": "Find the seventh letter in Nicaragua."
+    },
+    {
+     "markerId": "cty-cuba",
+     "position": 9,
+     "text": "Find the ninth letter in Cuba."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 50,
+    "zoom": 1.2
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-unit-1-ru",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "РАСТАФАРИ",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-cuba",
+     "x": 22.8,
+     "y": 42.3,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "А"
+    },
+    {
+     "id": "cty-honduras",
+     "x": 6.47,
+     "y": 79.55,
+     "letter": "С"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 76.5,
+     "y": 58.5,
+     "letter": "Т"
+    },
+    {
+     "id": "cty-united-states",
+     "x": 20.1,
+     "y": 26.05,
+     "letter": "А"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "Ф"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 6.47,
+     "y": 54.37,
+     "letter": "А"
+    },
+    {
+     "id": "cty-nicaragua",
+     "x": 16.96,
+     "y": 82.69,
+     "letter": "Р"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 4.5,
+     "y": 25.5,
+     "letter": "И"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-bahamas",
+     "position": 6,
+     "text": "Найди шестую букву на Багамах."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Карибском море."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 2,
+     "text": "Найди вторую букву на Ямайке."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 9,
+     "text": "Найди девятую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "cty-honduras",
+     "position": 3,
+     "text": "Найди третью букву в Гондурасе."
+    },
+    {
+     "markerId": "cty-mexico",
+     "position": 7,
+     "text": "Найди седьмую букву в Мексике."
+    },
+    {
+     "markerId": "cty-united-states",
+     "position": 5,
+     "text": "Найди пятую букву в США."
+    },
+    {
+     "markerId": "cty-nicaragua",
+     "position": 8,
+     "text": "Найди восьмую букву в Никарагуа."
+    },
+    {
+     "markerId": "cty-cuba",
+     "position": 1,
+     "text": "Найди первую букву на Кубе."
+    }
+   ],
+   "focus": {
+    "x": 40,
+    "y": 50,
+    "zoom": 1.2
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-unit-2-en",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "DOCKYARD",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-nicaragua",
+     "x": 20.1,
+     "y": 76.4,
+     "letter": "D"
+    },
+    {
+     "id": "cty-saint-kitts-and-nevis",
+     "x": 75.68,
+     "y": 44,
+     "letter": "O"
+    },
+    {
+     "id": "cty-haiti",
+     "x": 48.85,
+     "y": 48.39,
+     "letter": "C"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "K"
+    },
+    {
+     "id": "cty-dominica",
+     "x": 81.48,
+     "y": 48.91,
+     "letter": "Y"
+    },
+    {
+     "id": "cty-cuba",
+     "x": 37.2,
+     "y": 46.2,
+     "letter": "A"
+    },
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "R"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 57,
+     "y": 40.5,
+     "letter": "D"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-cuba",
+     "position": 6,
+     "text": "Find the sixth letter in Cuba."
+    },
+    {
+     "markerId": "cty-saint-kitts-and-nevis",
+     "position": 2,
+     "text": "Find the second letter in Saint Kitts and Nevis."
+    },
+    {
+     "markerId": "cty-dominica",
+     "position": 5,
+     "text": "Find the fifth letter in Dominica."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "cty-haiti",
+     "position": 3,
+     "text": "Find the third letter in Haiti."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 7,
+     "text": "Find the seventh letter in Jamaica."
+    },
+    {
+     "markerId": "cty-bahamas",
+     "position": 4,
+     "text": "Find the fourth letter in the Bahamas."
+    },
+    {
+     "markerId": "cty-nicaragua",
+     "position": 1,
+     "text": "Find the first letter in Nicaragua."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 45,
+    "zoom": 1.4
+   },
+   "inRegion": 4,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-unit-2-ru",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СУДОВЕРФЬ",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-haiti",
+     "x": 48.9,
+     "y": 49.5,
+     "letter": "С"
+    },
+    {
+     "id": "cty-cuba",
+     "x": 25.5,
+     "y": 42.3,
+     "letter": "У"
+    },
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "Д"
+    },
+    {
+     "id": "cty-united-states",
+     "x": 20.1,
+     "y": 26.05,
+     "letter": "О"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "В"
+    },
+    {
+     "id": "cty-dominica",
+     "x": 81.48,
+     "y": 48.91,
+     "letter": "Е"
+    },
+    {
+     "id": "cty-saint-kitts-and-nevis",
+     "x": 75.68,
+     "y": 44,
+     "letter": "Р"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 25.5,
+     "y": 19.5,
+     "letter": "Ф"
+    },
+    {
+     "id": "cty-nicaragua",
+     "x": 20.1,
+     "y": 76.4,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-cuba",
+     "position": 2,
+     "text": "Найди вторую букву на Кубе."
+    },
+    {
+     "markerId": "cty-dominica",
+     "position": 6,
+     "text": "Найди шестую букву на Доминике."
+    },
+    {
+     "markerId": "cty-united-states",
+     "position": 4,
+     "text": "Найди четвёртую букву в США."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 3,
+     "text": "Найди третью букву на Ямайке."
+    },
+    {
+     "markerId": "cty-nicaragua",
+     "position": 9,
+     "text": "Найди девятую букву в Никарагуа."
+    },
+    {
+     "markerId": "cty-bahamas",
+     "position": 5,
+     "text": "Найди пятую букву на Багамах."
+    },
+    {
+     "markerId": "cty-haiti",
+     "position": 1,
+     "text": "Найди первую букву в Гаити."
+    },
+    {
+     "markerId": "cty-saint-kitts-and-nevis",
+     "position": 7,
+     "text": "Найди седьмую букву в Сент-Китсе и Невисе."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 45,
+    "zoom": 1.4
+   },
+   "inRegion": 4,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-unit-3-en",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "NUTMEG",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-antigua-and-barbuda",
+     "x": 78.54,
+     "y": 43.57,
+     "letter": "N"
+    },
+    {
+     "id": "cty-trinidad-and-tobago",
+     "x": 87.95,
+     "y": 68.67,
+     "letter": "U"
+    },
+    {
+     "id": "cty-saint-lucia",
+     "x": 84.43,
+     "y": 54.57,
+     "letter": "T"
+    },
+    {
+     "id": "cty-grenada",
+     "x": 84.59,
+     "y": 62.56,
+     "letter": "M"
+    },
+    {
+     "id": "cty-dominican-republic",
+     "x": 51.9,
+     "y": 49.5,
+     "letter": "E"
+    },
+    {
+     "id": "cty-barbados",
+     "x": 89.19,
+     "y": 54.97,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-trinidad-and-tobago",
+     "position": 2,
+     "text": "Find the second letter in Trinidad and Tobago."
+    },
+    {
+     "markerId": "cty-grenada",
+     "position": 4,
+     "text": "Find the fourth letter in Grenada."
+    },
+    {
+     "markerId": "cty-barbados",
+     "position": 6,
+     "text": "Find the sixth letter in Barbados."
+    },
+    {
+     "markerId": "cty-saint-lucia",
+     "position": 3,
+     "text": "Find the third letter in Saint Lucia."
+    },
+    {
+     "markerId": "cty-dominican-republic",
+     "position": 5,
+     "text": "Find the fifth letter in the Dominican Republic."
+    },
+    {
+     "markerId": "cty-antigua-and-barbuda",
+     "position": 1,
+     "text": "Find the first letter in Antigua and Barbuda."
+    }
+   ],
+   "focus": {
+    "x": 66,
+    "y": 56,
+    "zoom": 1.9
+   },
+   "inRegion": 4,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-unit-3-ru",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МУСКАТНИК",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-trinidad-and-tobago",
+     "x": 87.95,
+     "y": 68.67,
+     "letter": "М"
+    },
+    {
+     "id": "cty-haiti",
+     "x": 48.9,
+     "y": 49.5,
+     "letter": "У"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 49.5,
+     "y": 63,
+     "letter": "С"
+    },
+    {
+     "id": "cty-saint-lucia",
+     "x": 84.43,
+     "y": 54.57,
+     "letter": "К"
+    },
+    {
+     "id": "cty-barbados",
+     "x": 89.19,
+     "y": 54.97,
+     "letter": "А"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 44.1,
+     "y": 42.6,
+     "letter": "Т"
+    },
+    {
+     "id": "cty-grenada",
+     "x": 84.59,
+     "y": 62.56,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-saint-kitts-and-nevis",
+     "x": 75.68,
+     "y": 44,
+     "letter": "И"
+    },
+    {
+     "id": "cty-dominica",
+     "x": 81.48,
+     "y": 48.91,
+     "letter": "К"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-barbados",
+     "position": 5,
+     "text": "Найди пятую букву на Барбадосе."
+    },
+    {
+     "markerId": "cty-haiti",
+     "position": 2,
+     "text": "Найди вторую букву в Гаити."
+    },
+    {
+     "markerId": "cty-bahamas",
+     "position": 6,
+     "text": "Найди шестую букву на Багамах."
+    },
+    {
+     "markerId": "cty-dominica",
+     "position": 9,
+     "text": "Найди девятую букву на Доминике."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 3,
+     "text": "Найди третью букву в Карибском море."
+    },
+    {
+     "markerId": "cty-saint-kitts-and-nevis",
+     "position": 8,
+     "text": "Найди восьмую букву в Сент-Китсе и Невисе."
+    },
+    {
+     "markerId": "cty-saint-lucia",
+     "position": 4,
+     "text": "Найди четвёртую букву на Сент-Люсии."
+    },
+    {
+     "markerId": "cty-grenada",
+     "position": 7,
+     "text": "Найди седьмую букву на Гренаде."
+    },
+    {
+     "markerId": "cty-trinidad-and-tobago",
+     "position": 1,
+     "text": "Найди первую букву в Тринидаде и Тобаго."
+    }
+   ],
+   "focus": {
+    "x": 66,
+    "y": 56,
+    "zoom": 1.9
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-final-en",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "CARNIVAL",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "C"
+    },
+    {
+     "id": "cty-trinidad-and-tobago",
+     "x": 87.95,
+     "y": 68.67,
+     "letter": "A"
+    },
+    {
+     "id": "cty-mexico",
+     "x": 6.47,
+     "y": 54.37,
+     "letter": "R"
+    },
+    {
+     "id": "cty-cuba",
+     "x": 22.8,
+     "y": 42.3,
+     "letter": "N"
+    },
+    {
+     "id": "cty-haiti",
+     "x": 48.85,
+     "y": 48.39,
+     "letter": "I"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "V"
+    },
+    {
+     "id": "cty-saint-lucia",
+     "x": 84.43,
+     "y": 54.57,
+     "letter": "A"
+    },
+    {
+     "id": "cty-saint-kitts-and-nevis",
+     "x": 75.68,
+     "y": 44,
+     "letter": "L"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-mexico",
+     "position": 3,
+     "text": "Find the third letter in Mexico."
+    },
+    {
+     "markerId": "cty-bahamas",
+     "position": 6,
+     "text": "Find the sixth letter in the Bahamas."
+    },
+    {
+     "markerId": "cty-cuba",
+     "position": 4,
+     "text": "Find the fourth letter in Cuba."
+    },
+    {
+     "markerId": "cty-saint-lucia",
+     "position": 7,
+     "text": "Find the seventh letter in Saint Lucia."
+    },
+    {
+     "markerId": "cty-trinidad-and-tobago",
+     "position": 2,
+     "text": "Find the second letter in Trinidad and Tobago."
+    },
+    {
+     "markerId": "cty-saint-kitts-and-nevis",
+     "position": 8,
+     "text": "Find the eighth letter in Saint Kitts and Nevis."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 1,
+     "text": "Find the first letter in Jamaica."
+    },
+    {
+     "markerId": "cty-haiti",
+     "position": 5,
+     "text": "Find the fifth letter in Haiti."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 50,
+    "zoom": 1
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b4-section-7-final-ru",
+   "section": "countries-of-the-caribbean-islands",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "КАРНАВАЛ",
+   "map": "./assets/namerica-caribbean.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-dominican-republic",
+     "x": 54.3,
+     "y": 47.1,
+     "letter": "К"
+    },
+    {
+     "id": "cty-jamaica",
+     "x": 35.34,
+     "y": 57.43,
+     "letter": "А"
+    },
+    {
+     "id": "cty-saint-lucia",
+     "x": 84.43,
+     "y": 54.57,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-trinidad-and-tobago",
+     "x": 87.95,
+     "y": 68.67,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-cuba",
+     "x": 22.8,
+     "y": 42.3,
+     "letter": "А"
+    },
+    {
+     "id": "cty-saint-kitts-and-nevis",
+     "x": 75.68,
+     "y": 44,
+     "letter": "В"
+    },
+    {
+     "id": "cty-nicaragua",
+     "x": 16.96,
+     "y": 82.69,
+     "letter": "А"
+    },
+    {
+     "id": "cty-bahamas",
+     "x": 30.17,
+     "y": 32.52,
+     "letter": "Л"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-trinidad-and-tobago",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тринидаде и Тобаго."
+    },
+    {
+     "markerId": "cty-jamaica",
+     "position": 2,
+     "text": "Найди вторую букву на Ямайке."
+    },
+    {
+     "markerId": "cty-saint-kitts-and-nevis",
+     "position": 6,
+     "text": "Найди шестую букву в Сент-Китсе и Невисе."
+    },
+    {
+     "markerId": "cty-bahamas",
+     "position": 8,
+     "text": "Найди восьмую букву на Багамах."
+    },
+    {
+     "markerId": "cty-saint-lucia",
+     "position": 3,
+     "text": "Найди третью букву на Сент-Люсии."
+    },
+    {
+     "markerId": "cty-dominican-republic",
+     "position": 1,
+     "text": "Найди первую букву в Доминиканской Республике."
+    },
+    {
+     "markerId": "cty-cuba",
+     "position": 5,
+     "text": "Найди пятую букву на Кубе."
+    },
+    {
+     "markerId": "cty-nicaragua",
+     "position": 7,
+     "text": "Найди седьмую букву в Никарагуа."
+    }
+   ],
+   "focus": {
+    "x": 50,
+    "y": 50,
+    "zoom": 1
+   },
+   "inRegion": 7,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
