@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "method": "Visual proposals from original PDF maps and clean backgrounds, indexed by source glyph ID. No clue assignments or answers are used. Region labels are tentative; blank properties are unknown, not negative assertions.",
+  "codes": {"NA":"north-america","SA":"south-america","AF":"africa","AU":"australia","AS":"asia","EU":"europe","EA":"eurasia","AN":"antarctica","AT":"atlantic-ocean","IN":"indian-ocean","PA":"pacific-ocean","AR":"arctic-ocean","SO":"southern-ocean","GL":"greenland","IC":"iceland","MD":"madagascar"},
+  "puzzles": {
+    "l1-01": [
+      ["01","NA"], ["02","NA",null,"NA-SA",null,"isthmus"], ["03","SA"], ["04","AN"], ["05","AU"],
+      ["06",null,null,"AS-AU,AU-EA",null,"island-water"], ["07","AF"], ["08",null,null,"AF-EA",null,"land-junction"], ["09","AS"]
+    ],
+    "l1-02": [
+      ["01","EU"], ["02","AS"], ["03","AN"], ["04","AF"], ["05","AU"], ["06","NA"],
+      ["07","PA",null,"AS-AU",null,"island-water"], ["08","SO",null,"AU-AN",null,"ocean-boundary"], ["09","SA"], ["10","AT",null,"AF-SA"]
+    ],
+    "l1-03": [
+      ["01","AR"], ["02","IN"], ["03","AT"], ["04","PA",null,null,"AS"], ["05","AF"], ["06","SO"], ["07","PA",null,null,"NA"], ["08","AU"]
+    ],
+    "l1-04": [
+      ["01","AF","north"], ["02","SA","south",null,null,"coast"], ["03","NA","north",null,null,"coast"],
+      ["04",null,null,null,null,"asian-coast"], ["05","AF","south",null,null,"coast"], ["06","SA","north"],
+      ["07","EU","north",null,null,"coast"], ["08","AU"], ["09","AS","north"], ["10","NA","south",null,null,"coast"],
+      ["11","AT"], ["12","IN"], ["13","SO"]
+    ],
+    "l1-05": [
+      ["01",null,null,null,null,"hemisphere-only","south,west"], ["02","AS",null,null,null,null,"north,east"],
+      ["03",null,null,null,null,"hemisphere-only","north,west"], ["04","IN",null,null,null,null,"south,east"],
+      ["05",null,null,null,null,"equator-glyph-offset","east","equator"]
+    ],
+    "l1-06": [
+      ["01","PA"], ["02","IN",null,null,null,"arrow-coast",null,null,"MD"], ["03","AS","north",null,null,"coast"], ["04","AT"],
+      ["05","AU"], ["06","AT",null,null,null,"arrow-coast",null,null,"IC"], ["07","SA","north"], ["08","GL"], ["09","IN"],
+      ["10","AF","south",null,null,"coast"], ["11",null,null,null,null,"american-coast"]
+    ],
+    "l1-07": [
+      ["01","GL"], ["02","AS"], ["03","IN",null,null,null,"arrow-coast",null,null,"MD"], ["04","PA"],
+      ["05","AN"], ["06","AU"], ["07","AT"], ["08","EU","north",null,null,"coast"], ["09","AF"]
+    ],
+    "l1-08": [
+      ["01","AF"], ["02","AR"], ["03","GL"], ["04","PA"], ["05","AU"], ["06","SA"], ["07","AS"],
+      ["08",null,null,null,null,"american-coast"], ["09","AT",null,null,null,"arrow-coast",null,null,"IC"]
+    ],
+    "l1-09": [
+      ["01","AN",null,null,null,"coast"], ["02","SA"], ["03","AF"], ["04","AS"], ["05","IN"], ["06","SO"], ["07","PA"],
+      ["08","GL"], ["09","NA",null,"NA-SA",null,"isthmus"], ["10",null,null,null,null,"european-coast"],
+      ["11","AT","north"], ["12","AU"], ["13","IN",null,null,null,"arrow-coast",null,null,"MD"],
+      ["14","AT","south"], ["15","EU","north",null,null,"coast"]
+    ],
+    "l1-10": [
+      ["01","NA"], ["02","AS"], ["03","AF"], ["04","AN",null,null,null,"coast"], ["05","PA"], ["06","SA"], ["07","SO"], ["08","AT"]
+    ]
+  }
+}

@@ -1,0 +1,620 @@
+{
+ "section": "lakes-of-north-america",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (12.11.2026) with agreed replacements: Пароход → Сухогруз/Freighter (repeats the section 2 final), Солончак → Плайя/Playa (Asia section 1), Эриканал → dropped (not one word), Гуроны/Вендат → Вампум/Wampum, Вигвамы/Wigwams (section 2 ВЕНДАТЫ), Оттава → Одава/Odawa; 13.11.2026: Одава, Потаватоми, Меномини, Вигвамы moved to unit 1, new unit 3 terms Ацтеки, Теночтитлан, Чинампы, Тескоко; Онтарио, Мичиган, Водопад, Бечевник dropped to keep 25 (Svetlana's choice); Тахо/Tahoe → Пайюты/Paiutes (ТАХО has 4 letters, no reveal order fits; Svetlana's choice 13.11.2026)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters on the learned lakes first, then on the objects of section 1; a lake-name word never has a letter on the same lake (the place phrase would contain the answer)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); СИМКО: the name left out of the definition; КРЕЙТЕР/CRATER: named through Mount Mazama",
+  "draft": "Definitions by Svetlana with Claude's for the replacement words (EN to match); all approved by Svetlana 2026-11-13 («Утверждаю»)."
+ },
+ "units": [
+  {
+   "id": "unit-1-great-lakes",
+   "title": {
+    "ru": "Великие озёра",
+    "en": "The Great Lakes"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "СУХОГРУЗ",
+      "role": "final",
+      "definition": "Большое грузовое судно для руды, угля и зерна. Такие суда — главный транспорт Великих озёр сегодня.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "54bc1f6b72f75f1a"
+      }
+     },
+     {
+      "answer": "ОДАВА",
+      "role": "review",
+      "definition": "Коренной народ Великих озёр, известный как торговцы. С его именем обычно связывают название реки и города Оттава.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b8a6f51b09f6981d"
+      }
+     },
+     {
+      "answer": "ПОТАВАТОМИ",
+      "role": "review",
+      "definition": "Коренной народ, исторически связанный с районом озера Мичиган.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9582d83ea5328b7f"
+      }
+     },
+     {
+      "answer": "МЕНОМИНИ",
+      "role": "review",
+      "definition": "Коренной народ территории современного Висконсина, связанный с бассейном озера Мичиган.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ee5b49fedee3d013"
+      }
+     },
+     {
+      "answer": "ВИГВАМЫ",
+      "role": "review",
+      "definition": "Куполообразные жилища из жердей, покрытые берёзовой корой или циновками, у народов Великих озёр.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a972fa49b1a88c08"
+      }
+     },
+     {
+      "answer": "ВЕЛЛАНД",
+      "role": "review",
+      "definition": "Канал, позволяющий судам обходить Ниагарский водопад.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "32c801738670be7a"
+      }
+     },
+     {
+      "answer": "ШХУНА",
+      "role": "review",
+      "definition": "Тип парусного судна, широко использовавшегося на Великих озёрах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "471b81db79aebc70"
+      }
+     },
+     {
+      "answer": "МАКИНО",
+      "role": "review",
+      "definition": "Исторический район пролива между озёрами Мичиган и Гурон, важный торговый узел.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b67b8bd4e34bd57a"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "FREIGHTER",
+      "role": "final",
+      "definition": "A large cargo ship for ore, coal and grain. Such ships are the main transport on the Great Lakes today.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "800897d67a39d46e"
+      }
+     },
+     {
+      "answer": "ODAWA",
+      "role": "review",
+      "definition": "An Indigenous people of the Great Lakes, known as traders. The name of the Ottawa River and city is usually linked to their name.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3f488d506bab3a78"
+      }
+     },
+     {
+      "answer": "POTAWATOMI",
+      "role": "review",
+      "definition": "An Indigenous people historically linked to the Lake Michigan area.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e35c6943495fdd16"
+      }
+     },
+     {
+      "answer": "MENOMINEE",
+      "role": "review",
+      "definition": "An Indigenous people of present-day Wisconsin, linked to the Lake Michigan basin.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "186155dbfe959400"
+      }
+     },
+     {
+      "answer": "WIGWAMS",
+      "role": "review",
+      "definition": "Domed homes of poles covered with birch bark or mats, built by peoples of the Great Lakes.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "4fca874c452e2ed3"
+      }
+     },
+     {
+      "answer": "WELLAND",
+      "role": "review",
+      "definition": "A canal that lets ships get around Niagara Falls.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ef2322b5d6418a12"
+      }
+     },
+     {
+      "answer": "SCHOONER",
+      "role": "review",
+      "definition": "A type of sailing ship widely used on the Great Lakes.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "57da0907fdb28064"
+      }
+     },
+     {
+      "answer": "MACKINAC",
+      "role": "review",
+      "definition": "The historic area of the strait between Lakes Michigan and Huron, an important trading hub.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b5ae15155dbc8adb"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-lakes-of-canada",
+   "title": {
+    "ru": "Озёра Канады",
+    "en": "Lakes of Canada"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "АТАБАСКА",
+      "role": "final",
+      "definition": "Озеро на севере Канады, важное для истории торговли мехами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "4fb15b11c5bdc179"
+      }
+     },
+     {
+      "answer": "ВИННИПЕГ",
+      "role": "review",
+      "definition": "Крупное озеро Канады, связанное с торговыми путями Компании Гудзонова залива.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "53db82f361d91adc"
+      }
+     },
+     {
+      "answer": "МАНИТОБА",
+      "role": "review",
+      "definition": "Канадская провинция и озеро в ней. Название пришло из языков коренных народов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "7a2f7d961d2cfd2c"
+      }
+     },
+     {
+      "answer": "НИПИССИНГ",
+      "role": "review",
+      "definition": "Озеро в провинции Онтарио, лежавшее на важном историческом торговом маршруте.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "40ce95095891f6dd"
+      }
+     },
+     {
+      "answer": "СИМКО",
+      "role": "review",
+      "definition": "Озеро в провинции Онтарио. Его назвал первый лейтенант-губернатор Верхней Канады в честь своего отца, британского морского офицера.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c5ec0ace79ff11e5"
+      }
+     },
+     {
+      "answer": "ШАМПЛЕЙН",
+      "role": "review",
+      "definition": "Французский исследователь, основавший Квебек в 1608 году. Его именем названо озеро между штатами Нью-Йорк и Вермонт.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "553ee133b154f0c3"
+      }
+     },
+     {
+      "answer": "АГАССИС",
+      "role": "review",
+      "definition": "Гигантское приледниковое озеро, существовавшее на территории современной Канады и США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "f07f03534e4b59a8"
+      }
+     },
+     {
+      "answer": "ВАМПУМ",
+      "role": "review",
+      "definition": "Бусы и пояса из белых и фиолетовых ракушек. Народы Великих озёр и северо-востока скрепляли ими договоры.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "40389260372cfc16"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ATHABASCA",
+      "role": "final",
+      "definition": "A lake in northern Canada, important in the history of the fur trade.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a43dacd54068a124"
+      }
+     },
+     {
+      "answer": "WINNIPEG",
+      "role": "review",
+      "definition": "A large lake in Canada, linked to the trade routes of the Hudson's Bay Company.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "697defad913bfdc5"
+      }
+     },
+     {
+      "answer": "MANITOBA",
+      "role": "review",
+      "definition": "A Canadian province and a lake in it. The name comes from Indigenous languages.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "606ae180c637efe3"
+      }
+     },
+     {
+      "answer": "NIPISSING",
+      "role": "review",
+      "definition": "A lake in the province of Ontario that lay on an important historic trade route.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3e8d705e69583ab0"
+      }
+     },
+     {
+      "answer": "SIMCOE",
+      "role": "review",
+      "definition": "A lake in the province of Ontario. The first lieutenant governor of Upper Canada named it after his father, a British naval officer.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "868a3a13a1b232bc"
+      }
+     },
+     {
+      "answer": "CHAMPLAIN",
+      "role": "review",
+      "definition": "A French explorer who founded Quebec in 1608. A lake between New York and Vermont bears his name.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "32db1872198a415d"
+      }
+     },
+     {
+      "answer": "AGASSIZ",
+      "role": "review",
+      "definition": "A giant glacial lake that once covered parts of present-day Canada and the United States.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "212dd48872cb76ef"
+      }
+     },
+     {
+      "answer": "WAMPUM",
+      "role": "review",
+      "definition": "Beads and belts of white and purple shells. Peoples of the Great Lakes and the Northeast used them to seal treaties.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e2a7f1446117b60a"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-west-and-south",
+   "title": {
+    "ru": "Запад и юг",
+    "en": "The west and south"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "БОННЕВИЛЬ",
+      "role": "final",
+      "definition": "Огромное древнее озеро, существовавшее на западе Северной Америки в ледниковую эпоху.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "55e9ff3e0d9246fa"
+      }
+     },
+     {
+      "answer": "ПАЙЮТЫ",
+      "role": "review",
+      "definition": "Коренной народ Большого Бассейна, издавна живущий у озёр и рек Невады, Юты и восточной Калифорнии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "552cdd47a6f48679"
+      }
+     },
+     {
+      "answer": "КРЕЙТЕР",
+      "role": "review",
+      "definition": "Озеро в кальдере древнего вулкана Мазама в штате Орегон, самое глубокое озеро США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a133316b18b6f30d"
+      }
+     },
+     {
+      "answer": "ПЛАЙЯ",
+      "role": "review",
+      "definition": "Плоское высохшее дно озера в пустыне, покрытое солью или глиной.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "af07eea6cb2b31ea"
+      }
+     },
+     {
+      "answer": "АЦТЕКИ",
+      "role": "review",
+      "definition": "Народ, создавший могущественное государство в долине Мехико. Их столица стояла на острове посреди озера.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d010e5c1f1615156"
+      }
+     },
+     {
+      "answer": "ТЕНОЧТИТЛАН",
+      "role": "review",
+      "definition": "Столица ацтеков на острове в озере Тескоко. На её месте сейчас стоит Мехико.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3b01c72e6a3280e6"
+      }
+     },
+     {
+      "answer": "ЧИНАМПЫ",
+      "role": "review",
+      "definition": "Рукотворные огородные островки на мелководье озёр долины Мехико, «плавучие сады» ацтеков.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "eefb54fd4a6d7e14"
+      }
+     },
+     {
+      "answer": "ТЕСКОКО",
+      "role": "review",
+      "definition": "Озеро в долине Мехико, почти полностью осушенное после прихода испанцев. На его дне вырос Мехико.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "323a0e5de07bd716"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "BONNEVILLE",
+      "role": "final",
+      "definition": "A huge ancient lake in the west of North America during the Ice Age.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "badf0a2a3ac49811"
+      }
+     },
+     {
+      "answer": "PAIUTES",
+      "role": "review",
+      "definition": "An Indigenous people of the Great Basin who have long lived by the lakes and rivers of Nevada, Utah and eastern California.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b61020fd85dbe0ed"
+      }
+     },
+     {
+      "answer": "CRATER",
+      "role": "review",
+      "definition": "A lake in the caldera of the ancient volcano Mount Mazama in Oregon, the deepest lake in the United States.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9827767f08872b73"
+      }
+     },
+     {
+      "answer": "PLAYA",
+      "role": "review",
+      "definition": "The flat, dried-up bed of a desert lake, covered with salt or clay.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d9e4872a68aa5bdb"
+      }
+     },
+     {
+      "answer": "AZTECS",
+      "role": "review",
+      "definition": "A people who built a powerful state in the Valley of Mexico. Their capital stood on an island in a lake.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5ae2bdcd7c060d7d"
+      }
+     },
+     {
+      "answer": "TENOCHTITLAN",
+      "role": "review",
+      "definition": "The Aztec capital on an island in Lake Texcoco. Mexico City stands on its site today.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "de73fa3f60a9a23d"
+      }
+     },
+     {
+      "answer": "CHINAMPAS",
+      "role": "review",
+      "definition": "Man-made garden plots in the shallow lakes of the Valley of Mexico, the «floating gardens» of the Aztecs.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c6585f8945b2a050"
+      }
+     },
+     {
+      "answer": "TEXCOCO",
+      "role": "review",
+      "definition": "A lake in the Valley of Mexico, almost entirely drained after the Spanish arrived. Mexico City grew on its bed.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "8076c5819db02d55"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ОДЖИБВЕ",
+      "role": "section-final",
+      "definition": "Коренной народ района Великих озёр, особенно озера Верхнего.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d808acf3c7aeee99"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "OJIBWE",
+      "role": "section-final",
+      "definition": "An Indigenous people of the Great Lakes region, especially around Lake Superior.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "4f1a150df3f84eca"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-13"
+}

@@ -623,7 +623,11 @@
       39.52
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 55.1,
+    "y": 38.9
+   }
   },
   {
    "id": "amazon",
@@ -1125,7 +1129,11 @@
       56.14
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 32.82,
+    "y": 55.2
+   }
   },
   {
    "id": "mississippi",
@@ -1557,7 +1565,15 @@
       29.0
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 21.95,
+    "y": 40.36
+   },
+   "source": {
+    "x": 20.52,
+    "y": 29.4
+   }
   },
   {
    "id": "yangtze",
@@ -2049,7 +2065,15 @@
       36.98
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 80.55,
+    "y": 38.93
+   },
+   "source": {
+    "x": 72.49,
+    "y": 37.41
+   }
   },
   {
    "id": "huang-he",
@@ -2587,7 +2611,15 @@
       35.66
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 79.72,
+    "y": 35.31
+   },
+   "source": {
+    "x": 73.39,
+    "y": 36.85
+   }
   },
   {
    "id": "ganges",
@@ -2821,7 +2853,15 @@
       39.13
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 71.77,
+    "y": 44.1
+   },
+   "source": {
+    "x": 68.87,
+    "y": 39.25
+   }
   },
   {
    "id": "indus",
@@ -3189,7 +3229,15 @@
       38.3
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 65.3,
+    "y": 43.12
+   },
+   "source": {
+    "x": 68.8,
+    "y": 38.38
+   }
   },
   {
    "id": "danube",
@@ -3579,7 +3627,15 @@
       28.67
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 54.92,
+    "y": 30.86
+   },
+   "source": {
+    "x": 48.92,
+    "y": 28.98
+   }
   },
   {
    "id": "volga",
@@ -4227,8 +4283,17 @@
       22.51
      ]
     ]
-   ]
+   ],
+   "mouth": {
+    "x": 60.32,
+    "y": 30.56
+   },
+   "source": {
+    "x": 55.74,
+    "y": 22.76
+   }
   }
  ],
- "geometryNote": "label = point on the main stem near mid-length; path = river polylines from the SVG layer (simplified); tapArea = outline of the drawn stroke + 4 px. Geographic geometry only: the app adds screen-space touch tolerance (>= 44 CSS px) and resolves overlaps by screen distance to path."
+ "geometryNote": "label = point on the main stem near mid-length; path = river polylines from the SVG layer (simplified); tapArea = outline of the drawn stroke + 4 px. Geographic geometry only: the app adds screen-space touch tolerance (>= 44 CSS px) and resolves overlaps by screen distance to path.",
+ "endsNote": "mouth = where the river reaches the sea (the point used by «at the mouth of …» letters); source = where the drawn river begins (approved by Svetlana 2026-10-25). The Nile and the Amazon have no source point: their sources are disputed, so they are only asked «on» or «at the mouth». A mouth letter always comes with the source letter of the same river, never with «on» that river."
 }

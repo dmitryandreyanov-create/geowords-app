@@ -1,0 +1,620 @@
+{
+ "section": "countries-east-and-southeast-asia",
+ "block": 3,
+ "status": "draft",
+ "source": "Svetlana's list in the project thread, 31.10.2026 16:54 (25 words RU + EN); repeats of earlier sections (ПАГОДА, МАНГРЫ, КОЧЕВНИКИ, КХМЕРЫ, АНГКОРВАТ, КАРАКОРУМ, МУССОНЫ, АРХИПЕЛАГ) and the pairs she flagged (БАТИК, ДЖОНКА, ИЕРОГЛИФ) replaced by ШВЕДАГОН ХАНГЫЛЬ ЧИНГИСХАН ТЕРАВАДА АПСАРЫ АЮТТХАЯ МАДЖАПАХИТ ШРИВИДЖАЯ ГАЛЕОН ХАЛОНГ ОРАНГУТАН — «Утверждаю» 16:57",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-6.json). At least half of the letters inside the region of the unit: its countries, the rivers inside them («on the Mekong in Cambodia»), its seas and peninsulas; the rest on learned objects of Asia in view (countries of earlier units, rivers of section 2, objects of section 1); never the Arctic Ocean, Chukotka or the Bering Strait; at least a third of the letters on rivers (Svetlana, 28.10.2026 and 31.10.2026 17:45). A letter stands anywhere well inside its country or on its river (spots).",
+  "nesting": "each country is named once per puzzle («on the Mekong in Laos» names Laos). A letter on a river («on the Mekong») and a letter in a country that river flows through («in Laos») are never in the same puzzle: the river letter could lie inside that country, and the child could not tell which place it marks. One letter per river; a country never with its island or peninsula; no letter inside the area of another place of the puzzle.",
+  "spacing": "letter centres at least 9% of the screen width apart: in % of the map, hypot(dx, dy*1600/2200) >= 9 / the zoom of the puzzle",
+  "languages": "EN and RU lists are independent; GENGHIS KHAN written as one (GENGHISKHAN)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Definitions RU and EN drafted by Claude for Svetlana's review (plan doc https://claude.ai/artifact/C59wdScmfvehBWWL2oqLpq)."
+ },
+ "units": [
+  {
+   "id": "unit-1-east-asia",
+   "title": {
+    "ru": "Восточная Азия",
+    "en": "East Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CALLIGRAPHY",
+      "role": "final",
+      "definition": "The art of beautiful writing with brush and ink, highly prized in China and Japan.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f0bca8d6ab83d9b6"
+      }
+     },
+     {
+      "answer": "SAMURAI",
+      "role": "review",
+      "definition": "A member of Japan’s warrior class, associated with the bushido code of honour.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7de9c6ebf31a4429"
+      }
+     },
+     {
+      "answer": "SHOGUNATE",
+      "role": "review",
+      "definition": "A system of military rule in Japan in which the main political power belonged to a military ruler.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a04b8c6b28657957"
+      }
+     },
+     {
+      "answer": "SHINTOISM",
+      "role": "review",
+      "definition": "Japan’s traditional religion, centred on the worship of kami, sacred spirits associated with nature and ancestors.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "71893b359d0e9b86"
+      }
+     },
+     {
+      "answer": "HANGUL",
+      "role": "review",
+      "definition": "The Korean alphabet, created in the 15th century under King Sejong.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "712bca8185187a6a"
+      }
+     },
+     {
+      "answer": "EMPEROR",
+      "role": "review",
+      "definition": "The title of the ruler of an empire. Japan still has one, but the role today is ceremonial.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "50bbade1a5a79aeb"
+      }
+     },
+     {
+      "answer": "MANDARIN",
+      "role": "review",
+      "definition": "What Europeans called an official of imperial China.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ebd3092f8b73efa1"
+      }
+     },
+     {
+      "answer": "TERRACOTTA",
+      "role": "review",
+      "definition": "Baked clay; the army of warriors in the burial complex of Qin Shi Huang, China’s first emperor, is made of it.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "b07783308ea41cee"
+      }
+     },
+     {
+      "answer": "KURULTAI",
+      "role": "review",
+      "definition": "A gathering of Mongol nobles that chose the Great Khan.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "0d3ca10b08047fdb"
+      }
+     },
+     {
+      "answer": "GENGHISKHAN",
+      "role": "review",
+      "definition": "The founder of the Mongol Empire, the largest land empire in history.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "df60f1cb25238151"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "КАЛЛИГРАФИЯ",
+      "role": "final",
+      "definition": "Искусство красивого письма кистью и тушью, особенно ценимое в Китае и Японии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "5c17711b2911a07f"
+      }
+     },
+     {
+      "answer": "САМУРАЙ",
+      "role": "review",
+      "definition": "Представитель военного сословия Японии, с которым связывают кодекс чести бусидо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "1ab78dfb1ff6d4a4"
+      }
+     },
+     {
+      "answer": "СЁГУНАТ",
+      "role": "review",
+      "definition": "Система военного правления в Японии, при которой основная политическая власть принадлежала военному правителю.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "14874d5b78d0a022"
+      }
+     },
+     {
+      "answer": "СИНТОИЗМ",
+      "role": "review",
+      "definition": "Традиционная религия Японии, почитающая духов природы и предков — ками.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a4cdf55911de5bbf"
+      }
+     },
+     {
+      "answer": "ХАНГЫЛЬ",
+      "role": "review",
+      "definition": "Корейский алфавит, созданный в XV веке при короле Седжоне.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "036fcb20d8ad8179"
+      }
+     },
+     {
+      "answer": "ИМПЕРАТОР",
+      "role": "review",
+      "definition": "Титул правителя империи. В Японии такой правитель существует и сегодня, но выполняет церемониальные функции и не управляет государством.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "07e5b33dceb51820"
+      }
+     },
+     {
+      "answer": "МАНДАРИН",
+      "role": "review",
+      "definition": "Так европейцы называли чиновника императорского Китая.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "84eb13df2d2f9466"
+      }
+     },
+     {
+      "answer": "ТЕРРАКОТА",
+      "role": "review",
+      "definition": "Обожжённая глина; из неё сделана армия воинов в погребальном комплексе Цинь Шихуанди, первого императора Китая.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "13e1a2c06443e89d"
+      }
+     },
+     {
+      "answer": "КУРУЛТАЙ",
+      "role": "review",
+      "definition": "Съезд монгольской знати, на котором выбирали великого хана.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8c7a4ef7fab9e09e"
+      }
+     },
+     {
+      "answer": "ЧИНГИСХАН",
+      "role": "review",
+      "definition": "Основатель Монгольской империи — крупнейшей сухопутной державы в истории.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "37b810392dae8123"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-indochina",
+   "title": {
+    "ru": "Индокитай",
+    "en": "Indochina"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "AYUTTHAYA",
+      "role": "final",
+      "definition": "A former capital of the Kingdom of Siam on the Chao Phraya, destroyed in 1767; its ruins are a UNESCO site.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c91d683982adaa3c"
+      }
+     },
+     {
+      "answer": "SHWEDAGON",
+      "role": "review",
+      "definition": "The golden pagoda in Yangon, one of Myanmar’s most sacred Buddhist sites.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "937c2180ff8daad9"
+      }
+     },
+     {
+      "answer": "THERAVADA",
+      "role": "review",
+      "definition": "One of the oldest surviving traditions of Buddhism, the main one in Thailand, Myanmar, Laos and Cambodia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "806f70dbbe9e80d3"
+      }
+     },
+     {
+      "answer": "APSARAS",
+      "role": "review",
+      "definition": "Heavenly dancers carved by the thousand on the walls of the Angkor temples.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8e76cdf8adef37cf"
+      }
+     },
+     {
+      "answer": "HALONG",
+      "role": "review",
+      "definition": "A bay in northern Vietnam with thousands of limestone rock islands.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "e5dcd4fc7c5ae497"
+      }
+     },
+     {
+      "answer": "DYNASTY",
+      "role": "review",
+      "definition": "A line of rulers from one family who follow each other on the throne; in Thailand the Chakri family has reigned since 1782.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c5ac691ceaec2fa9"
+      }
+     },
+     {
+      "answer": "PLANTATION",
+      "role": "review",
+      "definition": "A large farm growing one crop for sale, such as tea, rubber or coffee.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "3119da04f11c7e85"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "АЮТТХАЯ",
+      "role": "final",
+      "definition": "Древняя столица Сиамского королевства на реке Чаупхрая, разрушенная в 1767 году; её руины — объект ЮНЕСКО.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "e27f9ee89bcaeb6f"
+      }
+     },
+     {
+      "answer": "ШВЕДАГОН",
+      "role": "review",
+      "definition": "Золотая пагода в Янгоне, одна из главных святынь буддистов Мьянмы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "a6ee693e29f7a3c9"
+      }
+     },
+     {
+      "answer": "ТЕРАВАДА",
+      "role": "review",
+      "definition": "Одна из древнейших сохранившихся традиций буддизма, главная в Таиланде, Мьянме, Лаосе и Камбодже.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "dffa080a2bfdde59"
+      }
+     },
+     {
+      "answer": "АПСАРЫ",
+      "role": "review",
+      "definition": "Небесные танцовщицы, которых тысячами вырезали на стенах храмов Ангкора.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8e2b05fc4be2c31a"
+      }
+     },
+     {
+      "answer": "ХАЛОНГ",
+      "role": "review",
+      "definition": "Залив на севере Вьетнама с тысячами известняковых островов-скал.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f10e3f079c42b743"
+      }
+     },
+     {
+      "answer": "ДИНАСТИЯ",
+      "role": "review",
+      "definition": "Ряд правителей из одного рода, сменяющих друг друга на троне; в Таиланде с 1782 года правит род Чакри.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "70d8819dd11701f8"
+      }
+     },
+     {
+      "answer": "ПЛАНТАЦИЯ",
+      "role": "review",
+      "definition": "Большое хозяйство, где на продажу выращивают одну культуру: чай, каучук, кофе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "7cde000a01d9f122"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-maritime-southeast-asia",
+   "title": {
+    "ru": "Островная Юго-Восточная Азия",
+    "en": "Maritime Southeast Asia"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "MAJAPAHIT",
+      "role": "final",
+      "definition": "A maritime empire based on Java in the 13th–16th centuries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f112ae08978a0c5d"
+      }
+     },
+     {
+      "answer": "SRIVIJAYA",
+      "role": "review",
+      "definition": "A maritime kingdom based on Sumatra in the 7th–13th centuries that played an important part in trade through the Strait of Malacca.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "593003fa94933727"
+      }
+     },
+     {
+      "answer": "BOROBUDUR",
+      "role": "review",
+      "definition": "One of the largest Buddhist monuments in the world, built on Java around 800 AD.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "998b191e8ef59f86"
+      }
+     },
+     {
+      "answer": "GAMELAN",
+      "role": "review",
+      "definition": "An Indonesian orchestra of gongs, metallophones and drums.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "158ff6eaacb8733d"
+      }
+     },
+     {
+      "answer": "GALLEON",
+      "role": "review",
+      "definition": "A large sailing ship; for 250 years such ships carried goods between Manila and Mexico.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "9b115c8ccf1e597d"
+      }
+     },
+     {
+      "answer": "ORANGUTAN",
+      "role": "review",
+      "definition": "A red-haired great ape that lives only on Borneo and Sumatra.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "20865ab0028d2c71"
+      }
+     },
+     {
+      "answer": "SPICES",
+      "role": "review",
+      "definition": "Aromatic plant products used to flavour food. European sailors travelled to the Moluccas in search of cloves and nutmeg.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "8b2689504e583401"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "МАДЖАПАХИТ",
+      "role": "final",
+      "definition": "Морская империя с центром на Яве в XIII–XVI веках.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "77a1d83199c9febb"
+      }
+     },
+     {
+      "answer": "ШРИВИДЖАЯ",
+      "role": "review",
+      "definition": "Морское царство на Суматре VII–XIII веков, игравшее важную роль в торговле через Малаккский пролив.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "ebf62e4b58cc3512"
+      }
+     },
+     {
+      "answer": "БОРОБУДУР",
+      "role": "review",
+      "definition": "Один из крупнейших буддийских памятников мира, построенный на Яве около 800 года.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "39a2c51b5547d69d"
+      }
+     },
+     {
+      "answer": "ГАМЕЛАН",
+      "role": "review",
+      "definition": "Индонезийский оркестр из гонгов, металлофонов и барабанов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "6fe6308cd85ab177"
+      }
+     },
+     {
+      "answer": "ГАЛЕОН",
+      "role": "review",
+      "definition": "Большой парусный корабль; такие корабли 250 лет возили товары между Манилой и Мексикой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "dcb98c51705a3be9"
+      }
+     },
+     {
+      "answer": "ОРАНГУТАН",
+      "role": "review",
+      "definition": "Рыжая человекообразная обезьяна, которая живёт только на Калимантане и Суматре.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "5940425c18b65c4b"
+      }
+     },
+     {
+      "answer": "ПРЯНОСТИ",
+      "role": "review",
+      "definition": "Ароматные части растений, используемые для приготовления пищи. Ради гвоздики и мускатного ореха европейские мореплаватели отправлялись к Молуккским островам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "f46b7fa8b3781dc8"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "CONFUCIANISM",
+      "role": "section-final",
+      "definition": "The teaching of the ancient Chinese thinker Kong Fuzi on duty, learning and respect for elders; it shaped China, Korea, Japan and Vietnam.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "c94644333e3480b0"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "КОНФУЦИАНСТВО",
+      "role": "section-final",
+      "definition": "Учение древнекитайского мыслителя Кун-цзы о долге, учёбе и почтении к старшим; повлияло на Китай, Корею, Японию и Вьетнам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-31",
+       "contentSha256": "bdfd1e6d53efcb20"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

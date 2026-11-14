@@ -1,0 +1,1164 @@
+{
+ "section": "countries-west-asia-and-transcaucasia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the puzzle opens zoomed in on the region of its unit (frames of data/maps/asia-countries-8.json); letters anywhere well inside the countries learned by the end of the unit (spots), on the Tigris, the Euphrates and the Jordan («on the Euphrates in Syria»), on the Amu Darya, the Syr Darya and the Indus in view (review), and on the objects of section 1 and the Caspian Sea in view; at least half of the letters in the region of the unit (unit 1 also takes in the Iranian Plateau and the Caspian Sea), a third on rivers but no more than three",
+  "nesting": "a country is named once per puzzle; a river letter «on the Euphrates» never shares a puzzle with a country the river crosses; one letter per river; a country never with its peninsula or gulf; no letter inside the area of another place of the puzzle",
+  "depth": "a letter in a country («in India», «on the Ganges in India») stands in the main part of the country, its circle wholly inside the border at the zoom of the puzzle where the country is large enough (4.5% of the screen from the border), else as deep as it can (Svetlana, 1.11.2026); approved puzzles were moved deeper with REPAIR=1, keeping their places and clues, or laid out anew",
+  "spacing": "letter centres at least 9% of the screen apart: hypot(dx, dy * 1600/2200) >= 9 / the zoom of the puzzle",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-8-unit-1-en",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ACHAEMENIDS",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-jordan",
+     "x": 18.97,
+     "y": 40.13,
+     "letter": "A"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 33,
+     "y": 55.2,
+     "letter": "C"
+    },
+    {
+     "id": "as-tigris",
+     "x": 23.87,
+     "y": 42.44,
+     "letter": "H"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 33.3,
+     "y": 50.7,
+     "letter": "A"
+    },
+    {
+     "id": "cty-georgia",
+     "x": 26.65,
+     "y": 36.3,
+     "letter": "E"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "M"
+    },
+    {
+     "id": "as-euphrates",
+     "x": 23.37,
+     "y": 36.26,
+     "letter": "E"
+    },
+    {
+     "id": "cty-iran",
+     "x": 29.7,
+     "y": 50.1,
+     "letter": "N"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 37.49,
+     "y": 44.74,
+     "letter": "I"
+    },
+    {
+     "id": "cty-turkmenistan",
+     "x": 33.3,
+     "y": 44.7,
+     "letter": "D"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-iran",
+     "position": 8,
+     "text": "Find the eighth letter in Iran."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 2,
+     "text": "Find the second letter in Pakistan."
+    },
+    {
+     "markerId": "cty-georgia",
+     "position": 5,
+     "text": "Find the fifth letter in Georgia."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 7,
+     "text": "Find the seventh letter on the Euphrates."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 3,
+     "text": "Find the third letter on the Tigris."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 11,
+     "text": "Find the eleventh letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 9,
+     "text": "Find the ninth letter on the Syr Darya."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 6,
+     "text": "Find the sixth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 4,
+     "text": "Find the fourth letter in Afghanistan."
+    },
+    {
+     "markerId": "cty-turkmenistan",
+     "position": 10,
+     "text": "Find the tenth letter in Turkmenistan."
+    },
+    {
+     "markerId": "as-jordan",
+     "position": 1,
+     "text": "Find the first letter on the Jordan."
+    }
+   ],
+   "focus": {
+    "x": 27,
+    "y": 41,
+    "zoom": 3
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "f36d19d91beff39e"
+   }
+  },
+  {
+   "id": "b3-section-8-unit-1-ru",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АХЕМЕНИДЫ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-syr-darya",
+     "x": 35.31,
+     "y": 38.23,
+     "letter": "А"
+    },
+    {
+     "id": "as-jordan",
+     "x": 18.97,
+     "y": 40.13,
+     "letter": "Х"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 33,
+     "y": 55.2,
+     "letter": "Е"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 34.5,
+     "y": 49.5,
+     "letter": "М"
+    },
+    {
+     "id": "as-tigris",
+     "x": 24.29,
+     "y": 46.02,
+     "letter": "Е"
+    },
+    {
+     "id": "cty-georgia",
+     "x": 26.65,
+     "y": 36.3,
+     "letter": "Н"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "И"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "Д"
+    },
+    {
+     "id": "cty-iran",
+     "x": 27.3,
+     "y": 45,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-pakistan",
+     "position": 3,
+     "text": "Найди третью букву в Пакистане."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 5,
+     "text": "Найди пятую букву на Тигре."
+    },
+    {
+     "markerId": "as-jordan",
+     "position": 2,
+     "text": "Найди вторую букву на Иордане."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 7,
+     "text": "Найди седьмую букву в Каспийском море."
+    },
+    {
+     "markerId": "cty-iran",
+     "position": 9,
+     "text": "Найди девятую букву в Иране."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 4,
+     "text": "Найди четвёртую букву в Афганистане."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 8,
+     "text": "Найди восьмую букву в Персидском заливе."
+    },
+    {
+     "markerId": "cty-georgia",
+     "position": 6,
+     "text": "Найди шестую букву в Грузии."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 1,
+     "text": "Найди первую букву на Сырдарье."
+    }
+   ],
+   "focus": {
+    "x": 27,
+    "y": 41,
+    "zoom": 3
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "ec196903dc4954eb"
+   }
+  },
+  {
+   "id": "b3-section-8-unit-2-en",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CAPPADOCIA",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-euphrates@cty-syria",
+     "x": 22.5,
+     "y": 39.17,
+     "letter": "C"
+    },
+    {
+     "id": "cty-cyprus",
+     "x": 19.42,
+     "y": 36.62,
+     "letter": "A"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32.1,
+     "y": 50.1,
+     "letter": "P"
+    },
+    {
+     "id": "cty-kazakhstan",
+     "x": 32.1,
+     "y": 33.3,
+     "letter": "P"
+    },
+    {
+     "id": "as-jordan",
+     "x": 18.97,
+     "y": 40.13,
+     "letter": "A"
+    },
+    {
+     "id": "cty-azerbaijan",
+     "x": 27.44,
+     "y": 38.64,
+     "letter": "D"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "O"
+    },
+    {
+     "id": "as-tigris",
+     "x": 24.29,
+     "y": 46.02,
+     "letter": "C"
+    },
+    {
+     "id": "cty-turkmenistan",
+     "x": 32.1,
+     "y": 42.6,
+     "letter": "I"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-kazakhstan",
+     "position": 4,
+     "text": "Find the fourth letter in Kazakhstan."
+    },
+    {
+     "markerId": "cty-cyprus",
+     "position": 2,
+     "text": "Find the second letter in Cyprus."
+    },
+    {
+     "markerId": "cty-azerbaijan",
+     "position": 6,
+     "text": "Find the sixth letter in Azerbaijan."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 10,
+     "text": "Find the tenth letter at the Bosporus."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 3,
+     "text": "Find the third letter in Afghanistan."
+    },
+    {
+     "markerId": "cty-turkmenistan",
+     "position": 9,
+     "text": "Find the ninth letter in Turkmenistan."
+    },
+    {
+     "markerId": "as-jordan",
+     "position": 5,
+     "text": "Find the fifth letter on the Jordan."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 8,
+     "text": "Find the eighth letter on the Tigris."
+    },
+    {
+     "markerId": "as-euphrates@cty-syria",
+     "position": 1,
+     "text": "Find the first letter on the Euphrates in Syria."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 7,
+     "text": "Find the seventh letter on the peninsula of Asia Minor."
+    }
+   ],
+   "focus": {
+    "x": 20,
+    "y": 38,
+    "zoom": 3.8
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "a6c24b6a3b42bd02"
+   }
+  },
+  {
+   "id": "b3-section-8-unit-2-ru",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "КАППАДОКИЯ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "К"
+    },
+    {
+     "id": "as-euphrates@cty-syria",
+     "x": 22.5,
+     "y": 39.17,
+     "letter": "А"
+    },
+    {
+     "id": "as-tigris",
+     "x": 23.87,
+     "y": 42.44,
+     "letter": "П"
+    },
+    {
+     "id": "as-jordan",
+     "x": 18.97,
+     "y": 40.13,
+     "letter": "П"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 32.1,
+     "y": 50.1,
+     "letter": "А"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "Д"
+    },
+    {
+     "id": "cty-turkmenistan",
+     "x": 32.1,
+     "y": 42.6,
+     "letter": "О"
+    },
+    {
+     "id": "cty-cyprus",
+     "x": 19.42,
+     "y": 36.62,
+     "letter": "К"
+    },
+    {
+     "id": "cty-azerbaijan",
+     "x": 27.44,
+     "y": 38.64,
+     "letter": "И"
+    },
+    {
+     "id": "cty-iran",
+     "x": 26.1,
+     "y": 45.9,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-afghanistan",
+     "position": 5,
+     "text": "Найди пятую букву в Афганистане."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 3,
+     "text": "Найди третью букву на Тигре."
+    },
+    {
+     "markerId": "cty-turkmenistan",
+     "position": 7,
+     "text": "Найди седьмую букву в Туркменистане."
+    },
+    {
+     "markerId": "cty-azerbaijan",
+     "position": 9,
+     "text": "Найди девятую букву в Азербайджане."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 6,
+     "text": "Найди шестую букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "cty-iran",
+     "position": 10,
+     "text": "Найди десятую букву в Иране."
+    },
+    {
+     "markerId": "as-euphrates@cty-syria",
+     "position": 2,
+     "text": "Найди вторую букву на Евфрате в Сирии."
+    },
+    {
+     "markerId": "cty-cyprus",
+     "position": 8,
+     "text": "Найди восьмую букву на Кипре."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 1,
+     "text": "Найди первую букву у Босфора."
+    },
+    {
+     "markerId": "as-jordan",
+     "position": 4,
+     "text": "Найди четвёртую букву на Иордане."
+    }
+   ],
+   "focus": {
+    "x": 20,
+    "y": 38,
+    "zoom": 3.8
+   },
+   "inRegion": 5,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "c3c801211de30d80"
+   }
+  },
+  {
+   "id": "b3-section-8-unit-3-en",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "INCENSE",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "as-euphrates",
+     "x": 24.47,
+     "y": 47.31,
+     "letter": "I"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 41.89,
+     "y": 44.95,
+     "letter": "N"
+    },
+    {
+     "id": "cty-yemen",
+     "x": 17.1,
+     "y": 57.6,
+     "letter": "C"
+    },
+    {
+     "id": "cty-oman",
+     "x": 23.1,
+     "y": 59.7,
+     "letter": "E"
+    },
+    {
+     "id": "cty-uae",
+     "x": 25.51,
+     "y": 54.98,
+     "letter": "N"
+    },
+    {
+     "id": "as-tigris@cty-iraq",
+     "x": 24.13,
+     "y": 39.82,
+     "letter": "S"
+    },
+    {
+     "id": "cty-saudi-arabia",
+     "x": 20.1,
+     "y": 51,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-syr-darya",
+     "position": 2,
+     "text": "Find the second letter on the Syr Darya."
+    },
+    {
+     "markerId": "cty-uae",
+     "position": 5,
+     "text": "Find the fifth letter in the UAE."
+    },
+    {
+     "markerId": "cty-yemen",
+     "position": 3,
+     "text": "Find the third letter in Yemen."
+    },
+    {
+     "markerId": "cty-saudi-arabia",
+     "position": 7,
+     "text": "Find the seventh letter in Saudi Arabia."
+    },
+    {
+     "markerId": "as-euphrates",
+     "position": 1,
+     "text": "Find the first letter on the Euphrates."
+    },
+    {
+     "markerId": "as-tigris@cty-iraq",
+     "position": 6,
+     "text": "Find the sixth letter on the Tigris in Iraq."
+    },
+    {
+     "markerId": "cty-oman",
+     "position": 4,
+     "text": "Find the fourth letter in Oman."
+    }
+   ],
+   "focus": {
+    "x": 23,
+    "y": 51,
+    "zoom": 2.2
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "6457f7493b143711"
+   }
+  },
+  {
+   "id": "b3-section-8-unit-3-ru",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "БЛАГОВОНИЯ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-turkey",
+     "x": 21.3,
+     "y": 33.9,
+     "letter": "Б"
+    },
+    {
+     "id": "as-amu-darya",
+     "x": 38.64,
+     "y": 48.45,
+     "letter": "Л"
+    },
+    {
+     "id": "cty-uae",
+     "x": 25.51,
+     "y": 54.98,
+     "letter": "А"
+    },
+    {
+     "id": "as-indus",
+     "x": 34.29,
+     "y": 56.22,
+     "letter": "Г"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 41.89,
+     "y": 44.95,
+     "letter": "О"
+    },
+    {
+     "id": "cty-saudi-arabia",
+     "x": 20.1,
+     "y": 51,
+     "letter": "В"
+    },
+    {
+     "id": "as-tigris@cty-iraq",
+     "x": 24.13,
+     "y": 39.82,
+     "letter": "О"
+    },
+    {
+     "id": "cty-yemen",
+     "x": 17.1,
+     "y": 57.6,
+     "letter": "Н"
+    },
+    {
+     "id": "cty-kuwait",
+     "x": 23.85,
+     "y": 47.11,
+     "letter": "И"
+    },
+    {
+     "id": "cty-oman",
+     "x": 23.1,
+     "y": 59.7,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-indus",
+     "position": 4,
+     "text": "Найди четвёртую букву на Инде."
+    },
+    {
+     "markerId": "cty-saudi-arabia",
+     "position": 6,
+     "text": "Найди шестую букву в Саудовской Аравии."
+    },
+    {
+     "markerId": "cty-uae",
+     "position": 3,
+     "text": "Найди третью букву в ОАЭ."
+    },
+    {
+     "markerId": "cty-kuwait",
+     "position": 9,
+     "text": "Найди девятую букву в Кувейте."
+    },
+    {
+     "markerId": "as-amu-darya",
+     "position": 2,
+     "text": "Найди вторую букву на Амударье."
+    },
+    {
+     "markerId": "cty-yemen",
+     "position": 8,
+     "text": "Найди восьмую букву в Йемене."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 5,
+     "text": "Найди пятую букву на Сырдарье."
+    },
+    {
+     "markerId": "cty-turkey",
+     "position": 1,
+     "text": "Найди первую букву в Турции."
+    },
+    {
+     "markerId": "cty-oman",
+     "position": 10,
+     "text": "Найди десятую букву в Омане."
+    },
+    {
+     "markerId": "as-tigris@cty-iraq",
+     "position": 7,
+     "text": "Найди седьмую букву на Тигре в Ираке."
+    }
+   ],
+   "focus": {
+    "x": 23,
+    "y": 51,
+    "zoom": 2.2
+   },
+   "inRegion": 6,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "6a6425f999f6c0c6"
+   }
+  },
+  {
+   "id": "b3-section-8-final-en",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "ZOROASTRIANISM",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-oman",
+     "x": 23.4,
+     "y": 59.4,
+     "letter": "Z"
+    },
+    {
+     "id": "cty-israel",
+     "x": 18.39,
+     "y": 40.33,
+     "letter": "O"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 35.4,
+     "y": 49.5,
+     "letter": "R"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 35.31,
+     "y": 38.23,
+     "letter": "O"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "A"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "S"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "T"
+    },
+    {
+     "id": "cty-yemen",
+     "x": 18.3,
+     "y": 58.5,
+     "letter": "R"
+    },
+    {
+     "id": "cty-iran",
+     "x": 30.8,
+     "y": 46.8,
+     "letter": "I"
+    },
+    {
+     "id": "as-tigris@cty-turkey",
+     "x": 23.57,
+     "y": 37.73,
+     "letter": "A"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "N"
+    },
+    {
+     "id": "cty-saudi-arabia",
+     "x": 18.3,
+     "y": 47.7,
+     "letter": "I"
+    },
+    {
+     "id": "as-euphrates@cty-iraq",
+     "x": 23.33,
+     "y": 44.86,
+     "letter": "S"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 32.7,
+     "y": 55.5,
+     "letter": "M"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-afghanistan",
+     "position": 3,
+     "text": "Find the third letter in Afghanistan."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 6,
+     "text": "Find the sixth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "cty-israel",
+     "position": 2,
+     "text": "Find the second letter in Israel."
+    },
+    {
+     "markerId": "cty-yemen",
+     "position": 8,
+     "text": "Find the eighth letter in Yemen."
+    },
+    {
+     "markerId": "as-euphrates@cty-iraq",
+     "position": 13,
+     "text": "Find the thirteenth letter on the Euphrates in Iraq."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 7,
+     "text": "Find the seventh letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "cty-saudi-arabia",
+     "position": 12,
+     "text": "Find the twelfth letter in Saudi Arabia."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 4,
+     "text": "Find the fourth letter on the Syr Darya."
+    },
+    {
+     "markerId": "cty-iran",
+     "position": 9,
+     "text": "Find the ninth letter in Iran."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 5,
+     "text": "Find the fifth letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-tigris@cty-turkey",
+     "position": 10,
+     "text": "Find the tenth letter on the Tigris in Turkey."
+    },
+    {
+     "markerId": "cty-oman",
+     "position": 1,
+     "text": "Find the first letter in Oman."
+    },
+    {
+     "markerId": "cty-pakistan",
+     "position": 14,
+     "text": "Find the fourteenth letter in Pakistan."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 11,
+     "text": "Find the eleventh letter in the Ural Mountains."
+    }
+   ],
+   "focus": {
+    "x": 23,
+    "y": 45,
+    "zoom": 1.8
+   },
+   "inRegion": 11,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "7a2f18b105a3fac6"
+   }
+  },
+  {
+   "id": "b3-section-8-final-ru",
+   "section": "countries-west-asia-and-transcaucasia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ЗОРОАСТРИЗМ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 9,
+   "markers": [
+    {
+     "id": "cty-qatar",
+     "x": 24.2,
+     "y": 52.45,
+     "letter": "З"
+    },
+    {
+     "id": "as-jordan",
+     "x": 18.97,
+     "y": 40.13,
+     "letter": "О"
+    },
+    {
+     "id": "cty-turkey",
+     "x": 22.2,
+     "y": 33.9,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-saudi-arabia",
+     "x": 19.2,
+     "y": 55.2,
+     "letter": "О"
+    },
+    {
+     "id": "as-syr-darya",
+     "x": 39.74,
+     "y": 44.37,
+     "letter": "А"
+    },
+    {
+     "id": "cty-afghanistan",
+     "x": 35.4,
+     "y": 49.5,
+     "letter": "С"
+    },
+    {
+     "id": "cty-pakistan",
+     "x": 32.7,
+     "y": 55.5,
+     "letter": "Т"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "Р"
+    },
+    {
+     "id": "cty-iran",
+     "x": 30.8,
+     "y": 46.8,
+     "letter": "И"
+    },
+    {
+     "id": "cty-oman",
+     "x": 23.7,
+     "y": 59.4,
+     "letter": "З"
+    },
+    {
+     "id": "as-euphrates@cty-iraq",
+     "x": 23.33,
+     "y": 44.86,
+     "letter": "М"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "cty-pakistan",
+     "position": 7,
+     "text": "Найди седьмую букву в Пакистане."
+    },
+    {
+     "markerId": "cty-turkey",
+     "position": 3,
+     "text": "Найди третью букву в Турции."
+    },
+    {
+     "markerId": "cty-afghanistan",
+     "position": 6,
+     "text": "Найди шестую букву в Афганистане."
+    },
+    {
+     "markerId": "as-euphrates@cty-iraq",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Евфрате в Ираке."
+    },
+    {
+     "markerId": "cty-iran",
+     "position": 9,
+     "text": "Найди девятую букву в Иране."
+    },
+    {
+     "markerId": "as-jordan",
+     "position": 2,
+     "text": "Найди вторую букву на Иордане."
+    },
+    {
+     "markerId": "as-syr-darya",
+     "position": 5,
+     "text": "Найди пятую букву на Сырдарье."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 8,
+     "text": "Найди восьмую букву в Каспийском море."
+    },
+    {
+     "markerId": "cty-qatar",
+     "position": 1,
+     "text": "Найди первую букву в Катаре."
+    },
+    {
+     "markerId": "cty-oman",
+     "position": 10,
+     "text": "Найди десятую букву в Омане."
+    },
+    {
+     "markerId": "cty-saudi-arabia",
+     "position": 4,
+     "text": "Найди четвёртую букву в Саудовской Аравии."
+    }
+   ],
+   "focus": {
+    "x": 23,
+    "y": 45,
+    "zoom": 1.8
+   },
+   "inRegion": 10,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-01",
+    "contentSha256": "782f956298cd8109"
+   }
+  }
+ ]
+}

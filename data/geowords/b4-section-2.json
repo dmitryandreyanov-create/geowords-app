@@ -1,0 +1,1082 @@
+{
+ "section": "rivers-of-north-america",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the rivers of data/maps/namerica-rivers.json learned by the end of the unit (section final: all 13), at the river's label point, first; then on the objects of data/maps/namerica-overview.json (section 1); one letter per object",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b4_geowords.mjs = NA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-2-unit-1-en",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MISSISSIPPIAN",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "M"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "I"
+    },
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "S"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "S"
+    },
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "I"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "S"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "S"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 52.9,
+     "y": 57.37,
+     "letter": "I"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 47.62,
+     "y": 63.96,
+     "letter": "P"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "P"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "I"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "A"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-florida",
+     "position": 6,
+     "text": "Find the sixth letter on the Florida peninsula."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 9,
+     "text": "Find the ninth letter on the Arkansas."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 3,
+     "text": "Find the third letter on the Missouri."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 12,
+     "text": "Find the twelfth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 4,
+     "text": "Find the fourth letter in the Gulf of California."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 11,
+     "text": "Find the eleventh letter on the Ohio."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 7,
+     "text": "Find the seventh letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 5,
+     "text": "Find the fifth letter on the island of Newfoundland."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 2,
+     "text": "Find the second letter in Hudson Bay."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 8,
+     "text": "Find the eighth letter on the Mississippi."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 1,
+     "text": "Find the first letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 10,
+     "text": "Find the tenth letter on Cuba."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "25501cff6afd3973"
+   }
+  },
+  {
+   "id": "b4-section-2-unit-1-ru",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МИССИСИПСКИЙ",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "М"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "И"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "С"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 47.62,
+     "y": 63.96,
+     "letter": "С"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "И"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "С"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "И"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "П"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 52.9,
+     "y": 57.37,
+     "letter": "С"
+    },
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "К"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "И"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "Й"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-mississippi",
+     "position": 9,
+     "text": "Найди девятую букву на Миссисипи."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 3,
+     "text": "Найди третью букву на Огайо."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 7,
+     "text": "Найди седьмую букву на Кубе."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 2,
+     "text": "Найди вторую букву в Калифорнийском заливе."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 4,
+     "text": "Найди четвёртую букву на Арканзасе."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 12,
+     "text": "Найди двенадцатую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 6,
+     "text": "Найди шестую букву на полуострове Аляска."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 8,
+     "text": "Найди восьмую букву на полуострове Лабрадор."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 10,
+     "text": "Найди десятую букву на Миссури."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 5,
+     "text": "Найди пятую букву в Гренландии."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 1,
+     "text": "Найди первую букву на полуострове Бутия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "bf73006df505a6b2"
+   }
+  },
+  {
+   "id": "b4-section-2-unit-2-en",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ALGONQUIN",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "A"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 47.62,
+     "y": 63.96,
+     "letter": "L"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "G"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "O"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "N"
+    },
+    {
+     "id": "na-nelson",
+     "x": 49.4,
+     "y": 46.39,
+     "letter": "Q"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "U"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "I"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 52.9,
+     "y": 57.37,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-nelson",
+     "position": 6,
+     "text": "Find the sixth letter on the Nelson."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 2,
+     "text": "Find the second letter on the Arkansas."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 4,
+     "text": "Find the fourth letter on the Ohio."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 8,
+     "text": "Find the eighth letter on the Yukon."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 3,
+     "text": "Find the third letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 7,
+     "text": "Find the seventh letter on the St. Lawrence."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 1,
+     "text": "Find the first letter on the Missouri."
+    },
+    {
+     "markerId": "na-mackenzie",
+     "position": 5,
+     "text": "Find the fifth letter on the Mackenzie."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 9,
+     "text": "Find the ninth letter on the Mississippi."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "004340ec157feef0"
+   }
+  },
+  {
+   "id": "b4-section-2-unit-2-ru",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АЛГОНКИНЫ",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "А"
+    },
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "Л"
+    },
+    {
+     "id": "na-nelson",
+     "x": 49.4,
+     "y": 46.39,
+     "letter": "Г"
+    },
+    {
+     "id": "na-arkansas",
+     "x": 47.62,
+     "y": 63.96,
+     "letter": "О"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 52.9,
+     "y": 57.37,
+     "letter": "Н"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "К"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "И"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "Н"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-ohio",
+     "position": 6,
+     "text": "Найди шестую букву на Огайо."
+    },
+    {
+     "markerId": "na-arkansas",
+     "position": 4,
+     "text": "Найди четвёртую букву на Арканзасе."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Флорида."
+    },
+    {
+     "markerId": "na-mackenzie",
+     "position": 7,
+     "text": "Найди седьмую букву на Маккензи."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 5,
+     "text": "Найди пятую букву на Миссисипи."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 9,
+     "text": "Найди девятую букву на реке Святого Лаврентия."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 1,
+     "text": "Найди первую букву на Миссури."
+    },
+    {
+     "markerId": "na-nelson",
+     "position": 3,
+     "text": "Найди третью букву на Нельсоне."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 8,
+     "text": "Найди восьмую букву на Юконе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "990d9ffe4cfed7d3"
+   }
+  },
+  {
+   "id": "b4-section-2-unit-3-en",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SACAGAWEA",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "S"
+    },
+    {
+     "id": "na-usumacinta",
+     "x": 53.52,
+     "y": 86.09,
+     "letter": "A"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 45.18,
+     "y": 73.33,
+     "letter": "C"
+    },
+    {
+     "id": "na-colorado",
+     "x": 41.83,
+     "y": 62.57,
+     "letter": "A"
+    },
+    {
+     "id": "na-san-juan",
+     "x": 59.78,
+     "y": 93.26,
+     "letter": "G"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "A"
+    },
+    {
+     "id": "na-columbia",
+     "x": 37.5,
+     "y": 51.1,
+     "letter": "W"
+    },
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "E"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-colorado",
+     "position": 4,
+     "text": "Find the fourth letter on the Colorado."
+    },
+    {
+     "markerId": "na-usumacinta",
+     "position": 2,
+     "text": "Find the second letter on the Usumacinta."
+    },
+    {
+     "markerId": "na-mackenzie",
+     "position": 6,
+     "text": "Find the sixth letter on the Mackenzie."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 3,
+     "text": "Find the third letter on the Rio Grande."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 8,
+     "text": "Find the eighth letter on the Missouri."
+    },
+    {
+     "markerId": "na-san-juan",
+     "position": 5,
+     "text": "Find the fifth letter on the San Juan."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 1,
+     "text": "Find the first letter on the St. Lawrence."
+    },
+    {
+     "markerId": "na-columbia",
+     "position": 7,
+     "text": "Find the seventh letter on the Columbia."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 9,
+     "text": "Find the ninth letter on the Ohio."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "892fec18ff3333fb"
+   }
+  },
+  {
+   "id": "b4-section-2-unit-3-ru",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "САКАГАВЕЯ",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "С"
+    },
+    {
+     "id": "na-columbia",
+     "x": 37.5,
+     "y": 51.1,
+     "letter": "А"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 45.18,
+     "y": 73.33,
+     "letter": "К"
+    },
+    {
+     "id": "na-colorado",
+     "x": 41.83,
+     "y": 62.57,
+     "letter": "А"
+    },
+    {
+     "id": "na-usumacinta",
+     "x": 53.52,
+     "y": 86.09,
+     "letter": "Г"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "А"
+    },
+    {
+     "id": "na-san-juan",
+     "x": 59.78,
+     "y": 93.26,
+     "letter": "В"
+    },
+    {
+     "id": "na-nelson",
+     "x": 49.4,
+     "y": 46.39,
+     "letter": "Е"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-usumacinta",
+     "position": 5,
+     "text": "Найди пятую букву на Усумасинте."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 3,
+     "text": "Найди третью букву на Рио-Гранде."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 6,
+     "text": "Найди шестую букву на Юконе."
+    },
+    {
+     "markerId": "na-nelson",
+     "position": 8,
+     "text": "Найди восьмую букву на Нельсоне."
+    },
+    {
+     "markerId": "na-columbia",
+     "position": 2,
+     "text": "Найди вторую букву на Колумбии."
+    },
+    {
+     "markerId": "na-colorado",
+     "position": 4,
+     "text": "Найди четвёртую букву на Колорадо."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 9,
+     "text": "Найди девятую букву на реке Святого Лаврентия."
+    },
+    {
+     "markerId": "na-san-juan",
+     "position": 7,
+     "text": "Найди седьмую букву на Сан-Хуане."
+    },
+    {
+     "markerId": "na-mackenzie",
+     "position": 1,
+     "text": "Найди первую букву на Маккензи."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "4dc84cba31300e67"
+   }
+  },
+  {
+   "id": "b4-section-2-final-en",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "STEAMBOATS",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-missouri",
+     "x": 46.93,
+     "y": 53.31,
+     "letter": "S"
+    },
+    {
+     "id": "na-columbia",
+     "x": 37.5,
+     "y": 51.1,
+     "letter": "T"
+    },
+    {
+     "id": "na-ohio",
+     "x": 59.08,
+     "y": 61.37,
+     "letter": "E"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "A"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "M"
+    },
+    {
+     "id": "na-usumacinta",
+     "x": 53.52,
+     "y": 86.09,
+     "letter": "B"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 45.18,
+     "y": 73.33,
+     "letter": "O"
+    },
+    {
+     "id": "na-colorado",
+     "x": 41.83,
+     "y": 62.57,
+     "letter": "A"
+    },
+    {
+     "id": "na-san-juan",
+     "x": 59.78,
+     "y": 93.26,
+     "letter": "T"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-columbia",
+     "position": 2,
+     "text": "Find the second letter on the Columbia."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 4,
+     "text": "Find the fourth letter on the St. Lawrence."
+    },
+    {
+     "markerId": "na-usumacinta",
+     "position": 6,
+     "text": "Find the sixth letter on the Usumacinta."
+    },
+    {
+     "markerId": "na-colorado",
+     "position": 8,
+     "text": "Find the eighth letter on the Colorado."
+    },
+    {
+     "markerId": "na-mackenzie",
+     "position": 5,
+     "text": "Find the fifth letter on the Mackenzie."
+    },
+    {
+     "markerId": "na-ohio",
+     "position": 3,
+     "text": "Find the third letter on the Ohio."
+    },
+    {
+     "markerId": "na-san-juan",
+     "position": 9,
+     "text": "Find the ninth letter on the San Juan."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 7,
+     "text": "Find the seventh letter on the Rio Grande."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 1,
+     "text": "Find the first letter on the Missouri."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 10,
+     "text": "Find the tenth letter on the Yukon."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "147b9ba323aca756"
+   }
+  },
+  {
+   "id": "b4-section-2-final-ru",
+   "section": "rivers-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ПАРОХОДЫ",
+   "map": "./assets/namerica-rivers.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-rio-grande",
+     "x": 45.18,
+     "y": 73.33,
+     "letter": "П"
+    },
+    {
+     "id": "na-nelson",
+     "x": 49.4,
+     "y": 46.39,
+     "letter": "А"
+    },
+    {
+     "id": "na-columbia",
+     "x": 37.5,
+     "y": 51.1,
+     "letter": "Р"
+    },
+    {
+     "id": "na-mackenzie",
+     "x": 41.32,
+     "y": 36.54,
+     "letter": "О"
+    },
+    {
+     "id": "na-usumacinta",
+     "x": 53.52,
+     "y": 86.09,
+     "letter": "Х"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 63.57,
+     "y": 51.43,
+     "letter": "О"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "Д"
+    },
+    {
+     "id": "na-mississippi",
+     "x": 52.9,
+     "y": 57.37,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-mackenzie",
+     "position": 4,
+     "text": "Найди четвёртую букву на Маккензи."
+    },
+    {
+     "markerId": "na-nelson",
+     "position": 2,
+     "text": "Найди вторую букву на Нельсоне."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 6,
+     "text": "Найди шестую букву на реке Святого Лаврентия."
+    },
+    {
+     "markerId": "na-mississippi",
+     "position": 8,
+     "text": "Найди восьмую букву на Миссисипи."
+    },
+    {
+     "markerId": "na-columbia",
+     "position": 3,
+     "text": "Найди третью букву на Колумбии."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 1,
+     "text": "Найди первую букву на Рио-Гранде."
+    },
+    {
+     "markerId": "na-usumacinta",
+     "position": 5,
+     "text": "Найди пятую букву на Усумасинте."
+    },
+    {
+     "markerId": "na-yukon",
+     "position": 7,
+     "text": "Найди седьмую букву на Юконе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "af7a0a7e0306c052"
+   }
+  }
+ ]
+}

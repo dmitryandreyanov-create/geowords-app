@@ -14,20 +14,20 @@
     "ru": "Гибралтарский пролив"
    },
    "fact": {
-    "en": "The Strait of Gibraltar is the narrowest gap between Europe and Africa.",
-    "ru": "Гибралтарский пролив — самое узкое место между Европой и Африкой."
+    "en": "The Strait of Gibraltar is the narrowest gap between Europe and Africa. In ancient times, the rocks on either side of it were called the Pillars of Hercules, and people believed they marked the edge of the known world.",
+    "ru": "Гибралтарский пролив — самое узкое место между Европой и Африкой. В древности скалы по обоим его берегам называли Геракловыми столбами: считалось, что за ними кончается известный мир."
    },
    "figure": {
     "value": 13,
     "unit": "km"
    },
-   "source": "Britannica: Strait of Gibraltar",
+   "source": "Britannica: Strait of Gibraltar; Britannica: Pillars of Heracles (two promontories at the eastern end of the strait)",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "6f58d4a999159ef8"
+    "date": "2026-10-26",
+    "contentSha256": "ad0679561a09919a"
    },
    "category": "stable"
   },
@@ -42,20 +42,20 @@
     "ru": "Берингов пролив"
    },
    "fact": {
-    "en": "The Bering Strait is the narrowest gap between Asia and North America.",
-    "ru": "Берингов пролив — самое узкое место между Азией и Северной Америкой."
+    "en": "The Bering Strait is the narrowest gap between Asia and North America. In winter it is covered with ice. For thousands of years, the Indigenous peoples of Chukotka and Alaska crossed it by boat to trade and visit relatives on the other continent.",
+    "ru": "Берингов пролив — самое узкое место между Азией и Северной Америкой. Зимой его сковывает лёд. Коренные народы Чукотки и Аляски тысячи лет переплывали пролив на лодках, чтобы торговать и навещать родственников на другом континенте."
    },
    "figure": {
     "value": 82,
     "unit": "km"
    },
-   "source": "Wikipedia: Bering Strait",
+   "source": "Wikipedia: Bering Strait; Anchorage Daily News, Mission to Chukotka (2016); Last Word on Nothing, To America by Boat (2024) — boat crossings to trade and visit relatives",
    "disputed": false,
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "e0ec41b86bef40c8"
+    "date": "2026-10-26",
+    "contentSha256": "254c29915ef53f10"
    },
    "category": "stable"
   }

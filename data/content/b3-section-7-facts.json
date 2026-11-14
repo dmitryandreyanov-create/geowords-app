@@ -1,0 +1,430 @@
+{
+ "section": "countries-south-and-central-asia",
+ "block": 3,
+ "use": "introduction cards, one fact per country and its capital; ids match data/maps/asia-countries-7.json",
+ "decisions": [
+  "Svetlana 31.10.2026 19:02: 13 countries of South and Central Asia in three units — the Indian subcontinent and the Indian Ocean / the Himalayas and the Hindu Kush / Central Asia; Iran goes to section 8.",
+  "Svetlana 31.10.2026 19:39: an optional note on Afghanistan (government of the Taliban since 2021, limited international recognition, the capital is still Kabul) and a sentence on its place where South Asia meets Central Asia.",
+  "Svetlana 31.10.2026 15:23 and 19:02: geographic objects are shown regardless of political disputes; Kashmir gets a neutral note on the territorial dispute between India and Pakistan, in which China is also involved (on the cards of India and Pakistan). Sri Lanka: Sri Jayawardenepura Kotte is the administrative and legislative capital (the answer in capital questions), Colombo the largest city and main economic centre.",
+  "disputed true marks the cards with a «Есть нюанс» note (India, Pakistan, Sri Lanka, Afghanistan). The note opens only on a tap and is never asked in tasks."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Индостан и Индийский океан",
+    "en": "The Indian Subcontinent and the Indian Ocean"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Гималаи и Гиндукуш",
+    "en": "The Himalayas and the Hindu Kush"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Центральная Азия",
+    "en": "Central Asia"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "cty-india",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "India",
+    "ru": "Индия"
+   },
+   "capital": {
+    "en": "New Delhi",
+    "ru": "Нью-Дели"
+   },
+   "fact": {
+    "en": "New Delhi is part of the huge city of Delhi. The Ganges flows across northern India, and the Godavari crosses the Indian peninsula.",
+    "ru": "Нью-Дели — часть огромного города Дели. По северу Индии течёт Ганг, а по полуострову Индостан — Годавари."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Кашмир — горный регион на севере Индостана. О его границах идёт территориальный спор между Индией и Пакистаном, в котором участвует и Китай: части региона контролируют разные страны. На карте показаны фактические линии раздела; спор мы не решаем.",
+    "en": "Kashmir is a mountain region in the north of the Indian subcontinent. Its borders are the subject of a territorial dispute between India and Pakistan, in which China is also involved: different countries control different parts of the region. The map shows the lines of control as they are on the ground; we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "5daebfd915588703"
+   }
+  },
+  {
+   "id": "cty-pakistan",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Pakistan",
+    "ru": "Пакистан"
+   },
+   "capital": {
+    "en": "Islamabad",
+    "ru": "Исламабад"
+   },
+   "fact": {
+    "en": "Islamabad was built in the 1960s as a new capital. The Indus flows through Pakistan from north to south.",
+    "ru": "Исламабад построили в 1960-х годах как новую столицу. Инд течёт через Пакистан с севера на юг."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Кашмир — горный регион на севере Индостана. О его границах идёт территориальный спор между Индией и Пакистаном, в котором участвует и Китай: части региона контролируют разные страны. На карте показаны фактические линии раздела; спор мы не решаем.",
+    "en": "Kashmir is a mountain region in the north of the Indian subcontinent. Its borders are the subject of a territorial dispute between India and Pakistan, in which China is also involved: different countries control different parts of the region. The map shows the lines of control as they are on the ground; we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "ac6bc7d3c6128f38"
+   }
+  },
+  {
+   "id": "cty-bangladesh",
+   "order": 3,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Bangladesh",
+    "ru": "Бангладеш"
+   },
+   "capital": {
+    "en": "Dhaka",
+    "ru": "Дакка"
+   },
+   "fact": {
+    "en": "Bangladesh lies on the huge delta of the Ganges and the Brahmaputra. Dhaka is one of the most populous cities in the world.",
+    "ru": "Бангладеш лежит в огромной дельте Ганга и Брахмапутры. Дакка — один из самых населённых городов мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "785c0e5c4e4283ba"
+   }
+  },
+  {
+   "id": "cty-sri-lanka",
+   "order": 4,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Sri Lanka",
+    "ru": "Шри-Ланка"
+   },
+   "capital": {
+    "en": "Sri Jayawardenepura Kotte",
+    "ru": "Шри-Джаяварденепура-Котте"
+   },
+   "fact": {
+    "en": "Sri Lanka is an island in the Indian Ocean south of the Indian peninsula. Sri Jayawardenepura Kotte lies next to Colombo, near the west coast.",
+    "ru": "Шри-Ланка — остров в Индийском океане к югу от Индостана. Шри-Джаяварденепура-Котте расположен рядом с Коломбо, недалеко от западного побережья."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Шри-Джаяварденепура-Котте — административная и законодательная столица: здесь заседает парламент. Коломбо — крупнейший город и важнейший экономический центр страны. В вопросах о столицах правильный ответ — Шри-Джаяварденепура-Котте.",
+    "en": "Sri Jayawardenepura Kotte is the administrative and legislative capital, where the parliament sits. Colombo is the largest city and the country’s most important economic centre. In capital questions the answer is Sri Jayawardenepura Kotte."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "f1dcd8615dd87fd4"
+   }
+  },
+  {
+   "id": "cty-maldives",
+   "order": 5,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Maldives",
+    "ru": "Мальдивы"
+   },
+   "capital": {
+    "en": "Malé",
+    "ru": "Мале"
+   },
+   "fact": {
+    "en": "The Maldives are about 1,200 coral islands in the Indian Ocean. The capital, Malé, covers almost all of its small island.",
+    "ru": "Мальдивы — около 1200 коралловых островов в Индийском океане. Столица Мале занимает почти весь свой небольшой остров."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "cf962313c2218ba1"
+   }
+  },
+  {
+   "id": "cty-nepal",
+   "order": 6,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Nepal",
+    "ru": "Непал"
+   },
+   "capital": {
+    "en": "Kathmandu",
+    "ru": "Катманду"
+   },
+   "fact": {
+    "en": "Everest, the highest peak in the world, stands on the border of Nepal and China. Kathmandu lies in a valley among the Himalayas.",
+    "ru": "На границе Непала и Китая стоит Эверест — высочайшая вершина мира. Катманду лежит в долине среди Гималаев."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "01abbd3b9a446af4"
+   }
+  },
+  {
+   "id": "cty-bhutan",
+   "order": 7,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Bhutan",
+    "ru": "Бутан"
+   },
+   "capital": {
+    "en": "Thimphu",
+    "ru": "Тхимпху"
+   },
+   "fact": {
+    "en": "Bhutan is a mountain country in the eastern Himalayas. Its people call it Druk Yul, «the Land of the Thunder Dragon».",
+    "ru": "Бутан — горная страна в восточных Гималаях. Сами жители называют его Друк-Юл — «страна громового дракона»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "21ab6202e4a09156"
+   }
+  },
+  {
+   "id": "cty-afghanistan",
+   "order": 8,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Afghanistan",
+    "ru": "Афганистан"
+   },
+   "capital": {
+    "en": "Kabul",
+    "ru": "Кабул"
+   },
+   "fact": {
+    "en": "Afghanistan lies where South Asia meets Central Asia, so it is placed in different geographic regions. The Hindu Kush runs across the country, and part of its northern border follows the Amu Darya. Kabul stands about 1,800 m above sea level.",
+    "ru": "Афганистан расположен на пересечении Южной и Центральной Азии, поэтому его относят к разным географическим регионам. Через страну тянется хребет Гиндукуш, а часть её северной границы идёт по Амударье. Кабул стоит на высоте около 1800 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "С 2021 года Афганистан находится под властью движения «Талибан». Международное признание его правительства остаётся ограниченным. При этом столица страны не изменилась — Кабул.",
+    "en": "Since 2021, Afghanistan has been governed by the Taliban. International recognition of its government remains limited. The country’s capital is still Kabul."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "eed40c56b6006b73"
+   }
+  },
+  {
+   "id": "cty-kazakhstan",
+   "order": 9,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Kazakhstan",
+    "ru": "Казахстан"
+   },
+   "capital": {
+    "en": "Astana",
+    "ru": "Астана"
+   },
+   "fact": {
+    "en": "Kazakhstan is the largest country of Central Asia; its western part beyond the Ural River lies in Europe. Astana replaced Almaty as the capital in 1997.",
+    "ru": "Казахстан — самая большая страна Центральной Азии; его западная часть за рекой Урал лежит в Европе. Астана стала столицей в 1997 году вместо Алматы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "57105eecbd91dd00"
+   }
+  },
+  {
+   "id": "cty-uzbekistan",
+   "order": 10,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Uzbekistan",
+    "ru": "Узбекистан"
+   },
+   "capital": {
+    "en": "Tashkent",
+    "ru": "Ташкент"
+   },
+   "fact": {
+    "en": "Tashkent is the largest city of Central Asia. Ancient Silk Road cities stand between the Amu Darya and the Syr Darya.",
+    "ru": "Ташкент — крупнейший город Центральной Азии. Между Амударьей и Сырдарьей стоят древние города Великого шёлкового пути."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "761197bb5e8e5860"
+   }
+  },
+  {
+   "id": "cty-turkmenistan",
+   "order": 11,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Turkmenistan",
+    "ru": "Туркменистан"
+   },
+   "capital": {
+    "en": "Ashgabat",
+    "ru": "Ашхабад"
+   },
+   "fact": {
+    "en": "The Karakum Desert covers most of Turkmenistan. Ashgabat is famous for its buildings faced with white marble.",
+    "ru": "Большую часть Туркменистана занимает пустыня Каракумы. Ашхабад известен зданиями, облицованными белым мрамором."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "c061f8c0d332750e"
+   }
+  },
+  {
+   "id": "cty-kyrgyzstan",
+   "order": 12,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Kyrgyzstan",
+    "ru": "Киргизия"
+   },
+   "capital": {
+    "en": "Bishkek",
+    "ru": "Бишкек"
+   },
+   "fact": {
+    "en": "The Tian Shan mountains cover most of Kyrgyzstan. Issyk-Kul, one of the largest mountain lakes in the world, lies here.",
+    "ru": "Большую часть Киргизии занимают горы Тянь-Шаня. Здесь лежит Иссык-Куль — одно из крупнейших горных озёр мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "efd1469684cfaad6"
+   }
+  },
+  {
+   "id": "cty-tajikistan",
+   "order": 13,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Tajikistan",
+    "ru": "Таджикистан"
+   },
+   "capital": {
+    "en": "Dushanbe",
+    "ru": "Душанбе"
+   },
+   "fact": {
+    "en": "Mountains cover more than 90% of Tajikistan, with the Pamirs in the east. Dushanbe means «Monday»: a market was held here on Mondays.",
+    "ru": "Более 90 % территории Таджикистана занимают горы, на востоке — Памир. Душанбе в переводе означает «понедельник»: по понедельникам тут был базар."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/2HtSN3BuhJGi2TuYd6yybz",
+    "note": "block 3 section 7 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-31",
+    "contentSha256": "d7260ae4cb17d042"
+   }
+  }
+ ]
+}

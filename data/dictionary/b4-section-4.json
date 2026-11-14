@@ -1,0 +1,620 @@
+{
+ "section": "mountains-and-plains-of-north-america",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (13.11.2026) with agreed replacements: Клондайк → Чилкут/Chilkoot (section 2), Старатели/Prospectors → Ковбои/Cowboys (sections 1–2), Переселенцы → Фургоны/Wagons (section 1 final), Торнадо → Чинук (section 1), Железнодорожники → Локомотивы/Locomotives (16 letters, EN two words); after her review 13.11.2026 every word has at least 6 letters: Логан → Элберт/Elbert, Чинук → Гризли/Grizzly, Уитни → Йосемити/Yosemite, Пауни → Арапахо/Arapaho, Bison → Buffalo, Sequoia → Sequoiadendron",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "every word at least 6 letters (Svetlana, 13.11.2026); letters on the learned objects first, then on the objects of section 1; a mountain-name word never has a letter on the same object",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); ОГАЛЛАЛА/OGALLALA is the aquifer",
+  "draft": "Definitions by Claude from Svetlana's terms, edited by Svetlana; all approved by Svetlana 2026-11-13 («Утверждаю»)."
+ },
+ "units": [
+  {
+   "id": "unit-1-cordillera",
+   "title": {
+    "ru": "Кордильеры: север и побережье",
+    "en": "The Cordillera: north and coast"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ЧЕРНОНОГИЕ",
+      "role": "final",
+      "definition": "Союз народов у восточных склонов Скалистых гор в Монтане и Альберте, искусные охотники и наездники.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ef2b0d0cbc62160f"
+      }
+     },
+     {
+      "answer": "ДЕНАЛИ",
+      "role": "review",
+      "definition": "Высочайшая вершина Северной Америки (6190 м), в Аляскинском хребте.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "61112e34c40201c4"
+      }
+     },
+     {
+      "answer": "ЭЛБЕРТ",
+      "role": "review",
+      "definition": "Высочайшая вершина Скалистых гор (4401 м), в штате Колорадо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5da0e5110b7fb672"
+      }
+     },
+     {
+      "answer": "ЧИЛКУТ",
+      "role": "review",
+      "definition": "Горный перевал между Аляской и Канадой, через который в 1897–1898 годах шли к Клондайку золотоискатели; канадская полиция пропускала только тех, кто нёс с собой запас еды примерно на год (около тонны груза), и его переносили через перевал по частям, много раз.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c432e34563f81179"
+      }
+     },
+     {
+      "answer": "ГРИЗЛИ",
+      "role": "review",
+      "definition": "Крупный бурый медведь Скалистых гор и Аляски, с горбом на загривке и серебристыми кончиками шерсти.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e2eff3c71df03dd4"
+      }
+     },
+     {
+      "answer": "ФУРГОНЫ",
+      "role": "review",
+      "definition": "Крытые парусиной повозки, на которых семьи переселенцев шли на запад по Орегонской тропе через Скалистые горы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "69c0f3bc3efad707"
+      }
+     },
+     {
+      "answer": "ЛОКОМОТИВЫ",
+      "role": "review",
+      "definition": "Паровые машины, тянувшие поезда. 10 мая 1869 года у Промонтори-Саммит в Юте соединили две железнодорожные линии и завершили первую трансконтинентальную железную дорогу США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a28774f0123df9a9"
+      }
+     },
+     {
+      "answer": "МУСТАНГИ",
+      "role": "review",
+      "definition": "Одичавшие лошади Запада США, потомки коней, привезённых испанцами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ee77cc4bd9eb63f4"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "BLACKFOOT",
+      "role": "final",
+      "definition": "A confederacy of peoples along the eastern edge of the Rocky Mountains in Montana and Alberta, skilled hunters and riders.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "dc6f70cfb191ff4b"
+      }
+     },
+     {
+      "answer": "DENALI",
+      "role": "review",
+      "definition": "The highest peak of North America (6,190 m), in the Alaska Range.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d6af0d84ab84c177"
+      }
+     },
+     {
+      "answer": "ELBERT",
+      "role": "review",
+      "definition": "The highest peak of the Rocky Mountains (4,401 m), in Colorado.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "fa02d43406a0878c"
+      }
+     },
+     {
+      "answer": "CHILKOOT",
+      "role": "review",
+      "definition": "A mountain pass between Alaska and Canada that gold seekers crossed on their way to the Klondike in 1897–98; the Canadian police let through only those who carried about a year's food (around a ton of goods), which they hauled over the pass in many trips.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "455ade7557c3b350"
+      }
+     },
+     {
+      "answer": "GRIZZLY",
+      "role": "review",
+      "definition": "A large brown bear of the Rocky Mountains and Alaska, with a shoulder hump and silver-tipped fur.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c5d27fb49384d8e4"
+      }
+     },
+     {
+      "answer": "WAGONS",
+      "role": "review",
+      "definition": "Canvas-covered carts in which settler families travelled west along the Oregon Trail across the Rocky Mountains.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "486624c01b1b2bc5"
+      }
+     },
+     {
+      "answer": "LOCOMOTIVES",
+      "role": "review",
+      "definition": "Steam engines that pulled trains. On 10 May 1869, at Promontory Summit in Utah, two rail lines were joined, completing the first US transcontinental railroad.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "412380e20bb668a7"
+      }
+     },
+     {
+      "answer": "MUSTANGS",
+      "role": "review",
+      "definition": "Free-roaming horses of the American West, descended from horses brought by the Spanish.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e76348a08798690d"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-west-and-mexico",
+   "title": {
+    "ru": "Запад и Мексика",
+    "en": "The west and Mexico"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПОПОКАТЕПЕТЛЬ",
+      "role": "final",
+      "definition": "Действующий вулкан примерно в 70 км от Мехико; на языке науатль его имя значит «дымящаяся гора».",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "1287143dad642c80"
+      }
+     },
+     {
+      "answer": "ОРИСАБА",
+      "role": "review",
+      "definition": "Высочайшая гора Мексики (5636 м) и самый высокий вулкан Северной Америки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "dc4f86ba52ce9bc3"
+      }
+     },
+     {
+      "answer": "РЕЙНИР",
+      "role": "review",
+      "definition": "Покрытый ледниками вулкан Каскадных гор (4392 м), хорошо видный из Сиэтла.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c0ddd3f9bfb7dda9"
+      }
+     },
+     {
+      "answer": "ЙОСЕМИТИ",
+      "role": "review",
+      "definition": "Долина в Сьерра-Неваде с гранитными стенами почти в километр высотой и высокими водопадами; один из первых охраняемых парков США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "0fc6bc168555b802"
+      }
+     },
+     {
+      "answer": "СЕКВОЙЯДЕНДРОН",
+      "role": "review",
+      "definition": "Гигантское хвойное дерево Сьерра-Невады; одно из них, «Генерал Шерман», считается самым большим деревом Земли по объёму.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "114dc5c7597921b1"
+      }
+     },
+     {
+      "answer": "МЕСКАЛЕРО",
+      "role": "review",
+      "definition": "Группа апачей с гор юга Нью-Мексико; своё имя она получила от запечённой сердцевины агавы, своей важной пищи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "6678ba2d79bd4cc3"
+      }
+     },
+     {
+      "answer": "КОМАНЧИ",
+      "role": "review",
+      "definition": "Народ южных Великих равнин, одни из лучших наездников; в XVIII–XIX веках их могущественный союз контролировал обширные земли на территории нынешних Техаса, Оклахомы, Нью-Мексико, Колорадо и Канзаса.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "cbc3e981c597f829"
+      }
+     },
+     {
+      "answer": "КОВБОИ",
+      "role": "review",
+      "definition": "Конные пастухи, которые перегоняли стада скота с ранчо Техаса к железным дорогам; их ремесло пришло от мексиканских вакеро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "eafa16de89949089"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "POPOCATEPETL",
+      "role": "final",
+      "definition": "An active volcano about 70 km from Mexico City; in Nahuatl its name means “smoking mountain”.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "04035fe17ba210f7"
+      }
+     },
+     {
+      "answer": "ORIZABA",
+      "role": "review",
+      "definition": "The highest mountain of Mexico (5,636 m) and the highest volcano of North America.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9252903d5e2a8caa"
+      }
+     },
+     {
+      "answer": "RAINIER",
+      "role": "review",
+      "definition": "A glacier-covered volcano of the Cascade Range (4,392 m), clearly seen from Seattle.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "f80553bcfc38333b"
+      }
+     },
+     {
+      "answer": "YOSEMITE",
+      "role": "review",
+      "definition": "A valley in the Sierra Nevada with granite walls almost a kilometre high and tall waterfalls; one of the first protected parks in the US.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "7e6f234463d31e6c"
+      }
+     },
+     {
+      "answer": "SEQUOIADENDRON",
+      "role": "review",
+      "definition": "A giant conifer of the Sierra Nevada; one of them, General Sherman, is considered the largest tree on Earth by volume.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "911398eafb6074b7"
+      }
+     },
+     {
+      "answer": "MESCALERO",
+      "role": "review",
+      "definition": "An Apache group from the mountains of southern New Mexico, named after the roasted heart of the agave, an important food of theirs.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "79fdab8073943a30"
+      }
+     },
+     {
+      "answer": "COMANCHES",
+      "role": "review",
+      "definition": "A people of the southern Great Plains, among the finest riders; in the 18th–19th centuries their powerful alliance controlled vast lands in what are now Texas, Oklahoma, New Mexico, Colorado and Kansas.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "078a7be4674cb57d"
+      }
+     },
+     {
+      "answer": "COWBOYS",
+      "role": "review",
+      "definition": "Mounted herders who drove cattle from the ranches of Texas to the railways; their craft came from the Mexican vaqueros.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "2ed865058dcfe9bf"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-east-and-plains",
+   "title": {
+    "ru": "Восток и равнины",
+    "en": "The east and the plains"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГОМСТЕДЫ",
+      "role": "final",
+      "definition": "Участки до 160 акров (около 65 га) по закону США 1862 года: взрослый гражданин или будущий гражданин платил небольшой сбор, пять лет жил на участке, строил дом и обрабатывал землю, а потом получал её в собственность.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "27668bdf29b2c765"
+      }
+     },
+     {
+      "answer": "ОГАЛЛАЛА",
+      "role": "review",
+      "definition": "Один из крупнейших в мире подземных водоносных слоёв, под Великими равнинами; его водой поливают поля.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ed6f2e74c85162f2"
+      }
+     },
+     {
+      "answer": "ШАЙЕННЫ",
+      "role": "review",
+      "definition": "Народ Великих равнин, кочевавший вслед за стадами бизонов; их имя носит столица Вайоминга.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "bf48c4f9d45f72a8"
+      }
+     },
+     {
+      "answer": "МАНДАНЫ",
+      "role": "review",
+      "definition": "Народ с верховьев Миссури (нынешняя Северная Дакота), живший в укреплённых деревнях из куполообразных земляных домов и выращивавший кукурузу; рядом с их деревнями зимовала экспедиция Льюиса и Кларка в 1804–1805 годах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "74d6bc6e926755bb"
+      }
+     },
+     {
+      "answer": "АРАПАХО",
+      "role": "review",
+      "definition": "Народ Великих равнин, кочевавший у подножия Скалистых гор на территории нынешних Колорадо и Вайоминга.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "74314e794ed6556b"
+      }
+     },
+     {
+      "answer": "БИЗОНЫ",
+      "role": "review",
+      "definition": "Крупные дикие быки прерий; в XIX веке их стада в десятки миллионов голов почти полностью истребили.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a67a092d04e07435"
+      }
+     },
+     {
+      "answer": "ТРАВУА",
+      "role": "review",
+      "definition": "Волокуша из двух шестов, которую тащила собака или лошадь; так народы равнин перевозили жилище и вещи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "02885c058ad15dd9"
+      }
+     },
+     {
+      "answer": "БЭДЛЕНДЫ",
+      "role": "review",
+      "definition": "Сильно расчленённая местность из голых холмов, гребней и оврагов, которые дожди и талые воды вымыли в мягких осадочных породах; самые известные такие места — в Южной Дакоте, там много окаменелостей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "f85bf00773923a75"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "HOMESTEADS",
+      "role": "final",
+      "definition": "Plots of up to 160 acres under the US law of 1862: an adult citizen or intending citizen paid a small filing fee, lived on the claim for five years, built a dwelling and farmed it, and then received title to the land.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c45cd05036f5639e"
+      }
+     },
+     {
+      "answer": "OGALLALA",
+      "role": "review",
+      "definition": "One of the largest underground aquifers in the world, beneath the Great Plains; its water irrigates the fields.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9d534c4a50d16163"
+      }
+     },
+     {
+      "answer": "CHEYENNE",
+      "role": "review",
+      "definition": "A people of the Great Plains who followed the bison herds; the capital of Wyoming bears their name.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "0d350805173de7fd"
+      }
+     },
+     {
+      "answer": "MANDANS",
+      "role": "review",
+      "definition": "A people of the upper Missouri (now North Dakota) who lived in fortified villages of domed earth lodges and grew corn; the Lewis and Clark expedition wintered near their villages in 1804–05.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d1176ed78f1e8538"
+      }
+     },
+     {
+      "answer": "ARAPAHO",
+      "role": "review",
+      "definition": "A Great Plains people who roamed the foot of the Rocky Mountains in what are now Colorado and Wyoming.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "07bb534717783e23"
+      }
+     },
+     {
+      "answer": "BUFFALO",
+      "role": "review",
+      "definition": "The everyday American name for the bison, the large wild cattle of the prairies; in the 19th century their herds of tens of millions were almost wiped out.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "db218e43a981ea36"
+      }
+     },
+     {
+      "answer": "TRAVOIS",
+      "role": "review",
+      "definition": "A drag frame of two poles pulled by a dog or a horse, which Plains peoples used to move their tents and goods.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d3eeca662df8a928"
+      }
+     },
+     {
+      "answer": "BADLANDS",
+      "role": "review",
+      "definition": "Rugged terrain of bare hills, ridges and gullies carved by rain and meltwater in soft sedimentary rock; the best known are in South Dakota and are rich in fossils.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e5cc91da139ca6b0"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ДИЛИЖАНСЫ",
+      "role": "section-final",
+      "definition": "Большие конные повозки на четвёрке или шестёрке лошадей, возившие пассажиров и почту по Дикому Западу до прихода железных дорог.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "aa00588fcedfac02"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "STAGECOACHES",
+      "role": "section-final",
+      "definition": "Large horse-drawn carriages pulled by four or six horses that carried passengers and mail across the Wild West before the railways came.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "2d1e506e19ba9d6a"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-13"
+}

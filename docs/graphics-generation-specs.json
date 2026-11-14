@@ -1,0 +1,384 @@
+{
+  "reference": "assets/pip/pip-sheet.png",
+  "mode": "built-in imagegen",
+  "assets": [
+    {
+      "file": "rank-1-map.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed rolled paper map symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "rank-2-boot.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed hiking boot symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "rank-3-compass.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed brass compass symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "rank-4-sail.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed small sailboat symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "rank-5-anchor.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed brass anchor symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "rank-6-globe.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One circular brass rank medallion, warm subtle patina, embossed golden globe symbol centered. No lettering or digits. Consistent circular rim and front view across the rank set. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-continents.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Single globe with meridians, no detailed geographic borders. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-rivers.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Single winding river with a small rowing boat. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-mountains.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Three mountain peaks with snow caps. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-seas.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: A whale above one curved ocean wave. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-straits.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Small lighthouse above a narrow sea passage between two shores. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-block-world.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: A compass rose emblem, no letters or numbers. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-ink-texture.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Sparse distressed red rubber-stamp ink speckles and scratches distributed across transparent square. No object, no frame, no lettering. An overlay texture. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "passport-cover.png",
+      "width": 1024,
+      "height": 1400,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Closed passport in three-quarter near-frontal view, dark teal worn leather cover, small gold globe emblem near upper center. Leave title area blank. No text or lettering. Canvas aspect ratio 1024:1400. Composition designed for 1024x1400 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "passport-page.png",
+      "width": 2048,
+      "height": 1400,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Open passport spread, two blank ivory paper pages with faint watermark of meridians and compass roses. No stamps, no lettering, no page numbers. Wide landscape spread. Canvas aspect ratio 2048:1400. Composition designed for 2048x1400 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "medal-unit.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Round GOLD medal suspended from warm rust-red ribbon, embossed compass emblem at center, no letters or numbers. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "medal-section.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Large gold medal surrounded by a laurel wreath, compass emblem center, rust red ribbon, no letters or numbers. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-lesson.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One round wooden blank sign/stepping-stone, warm honey-brown wood with subtle grain. No digits, no writing. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-lesson-done.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One round wooden blank sign/stepping-stone with small green flag attached, matching honey-brown wooden lesson stop. No check mark or digits, no writing. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-lesson-locked.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One round wooden blank sign/stepping-stone bound with thick rope, matching honey-brown wooden lesson stop. No digits, no writing. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-unit-final.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One small rust-orange flag on wooden flagpole standing firmly, no numbers or letters. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-section-final.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Small wooden treasure chest with open lid, brass details and gentle golden glow, no text. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-pip-boat.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip sitting in a small wooden boat with one cream triangular sail, side view as a you-are-here route marker. Pip's face visible, no letters. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-trail-dot.png",
+      "width": 64,
+      "height": 64,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One small irregular orange watercolor ink droplet/dot, solid center and softly textured edge, no splash spray or extra dots. Canvas aspect ratio 64:64. Composition designed for 64x64 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-star.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One simple warm golden five-point star. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-xp.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One gold coin with simple compass emblem, no letters. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-streak.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One cozy little campfire, orange flames over two crossed logs. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-freeze.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One small campfire under a rounded translucent blue ice dome, two readable simple shapes. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-hint.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One brass and dark brown leather handheld spyglass telescope, diagonal. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-nuance.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One magnifying glass hovering over one small blank cream paper leaf, no writing. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-goal.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One rust-orange flag on a tiny green hill. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "scene-welcome.png",
+      "width": 1600,
+      "height": 1000,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip with backpack stands at the near edge of a large unfolded world map on a wooden surface in a gentle sunrise landscape. Decorative map, no labels. Welcoming warm dawn. Canvas aspect ratio 1600:1000. Composition designed for 1600x1000 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "scene-parents.png",
+      "width": 1600,
+      "height": 1000,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip with his travel passport and exactly three small child-sized backpacks in a cozy expedition campsite, welcoming family illustration, no writing. Canvas aspect ratio 1600:1000. Composition designed for 1600x1000 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "scene-offline.png",
+      "width": 1600,
+      "height": 1000,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip gently holds an unfolded paper map with one corner torn off, mildly puzzled friendly expression, warm simple campsite background, no alarming imagery, no text. Canvas aspect ratio 1600:1000. Composition designed for 1600x1000 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "app-icon.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Square app icon, NO TRANSPARENCY: close-up head of approved Pip orange fox in olive safari hat, large expressive brown eyes and cream muzzle, centered on solid rich teal square with a circular teal medallion and subtle meridian arcs behind head. Face large and readable at 48px. No rounded square outer corners (OS applies mask), no lettering. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-sleep.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip sleeping peacefully inside a sleeping bag beside one small camping tent, olive safari hat tipped over his nose, no Z lettering. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-wave-bye.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip walking away with backpack, three-quarter back view, looking back warmly and waving one paw goodbye. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-gear-continents.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip in unchanged base outfit with globe tucked beneath one paw. Full body relaxed pose, entire character and prop visible. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-gear-rivers.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip in unchanged base outfit with paddle in one paw beside a small inflatable boat. Full body relaxed pose, entire character and prop visible. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-gear-mountains.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip in unchanged base outfit with ice axe held safely and a coiled climbing rope over shoulder. Full body relaxed pose, entire character and prop visible. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-gear-seas.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip in unchanged base outfit with snorkeling mask and snorkel resting on safari hat. Full body relaxed pose, entire character and prop visible. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "pip-gear-straits.png",
+      "width": 1024,
+      "height": 1024,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip in unchanged base outfit with wooden ship's wheel held in front. Full body relaxed pose, entire character and prop visible. Canvas aspect ratio 1024:1024. Composition designed for 1024x1024 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "stamp-challenge.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Hourglass with a lightning bolt. Monochrome RED INK (#a2342a) line emblem in distressed rubber stamp print style, NO circular frame, NO lettering, emblem occupies central 60% of square, surrounding alpha. Only one ink color with alpha, irregular edges and occasional unprinted gaps. App adds frame/date separately. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "medal-unit-silver.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Round SILVER medal suspended from warm rust-red ribbon, embossed compass emblem at center, no letters or numbers. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "path-challenge.png",
+      "width": 256,
+      "height": 256,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One simple wooden and brass hourglass with amber sand. Canvas aspect ratio 256:256. Composition designed for 256x256 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "icon-sound.png",
+      "width": 128,
+      "height": 128,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One seashell shaped like a small speaking horn, one subtle curved sound wave, no letters. Canvas aspect ratio 128:128. Composition designed for 128x128 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "scene-rank-up.png",
+      "width": 1600,
+      "height": 1000,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Celebration BACKGROUND PLATE: top of a grassy hill, flagpole with rust-orange flag, clouds below, warm dawn sky. Leave central foreground clear for Pip COSTUME supplied as separate layer. Do not paint Pip or any character in this background plate. Canvas aspect ratio 1600:1000. Composition designed for 1600x1000 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "scene-streak.png",
+      "width": 1600,
+      "height": 1000,
+      "transparent": false,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: Pip sits beside a cozy small campfire beneath a starry night sky, friendly warm camping scene, peaceful, no lettering. Canvas aspect ratio 1600:1000. Composition designed for 1600x1000 output. Fully painted opaque background filling entire rectangle, no transparent areas. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-owl.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly owl traveler wearing aviator goggles. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-turtle.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly turtle traveler holding a folded map. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-penguin.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly penguin traveler wearing a rust-red scarf. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-whale.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly small blue whale traveler wearing a white captain's cap. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-goat.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly mountain goat traveler holding an ice axe safely. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    },
+    {
+      "file": "avatar-camel.png",
+      "width": 512,
+      "height": 512,
+      "transparent": true,
+      "prompt": "Use case: illustration-story. Production GeoWords Expedition app asset, ONE asset per file. Input reference is approved Pip turnaround; use its soft textured watercolor/gouache medium, warm cream, rust orange, olive, brass and teal palette, clean edges and child-friendly mood. Any Pip depicted must preserve reference face, ears, fur, proportions, olive hat with brown band, rust neckerchief and khaki backpack. Primary subject: One friendly camel traveler with a small canteen on a strap. Head and shoulders portrait in a circular composition, outside the silhouette transparent, no border, same friendly soft watercolor storybook world as Pip, no human. Canvas aspect ratio 512:512. Composition designed for 512x512 output. Genuine transparent background, isolated subject, at least 6% safe margin, no ground shadow patch. No text, no labels, no numbers, no watermark. Icons must remain readable at 24px: bold simple silhouette, avoid tiny details. No multi-panel sheet."
+    }
+  ]
+}

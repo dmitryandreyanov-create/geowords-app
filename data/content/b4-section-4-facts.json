@@ -1,0 +1,460 @@
+{
+ "section": "mountains-and-plains-of-north-america",
+ "block": 4,
+ "use": "introduction cards (exercise type 0), one fact per object; ids match data/maps/namerica-mountains.json; namerica-yellowstone is an explanation card about volcanism (no map task) shown in the volcanoes lesson",
+ "decisions": [
+  "15 objects in 3 units as in plan v2 (approved 02.11.2026); facts, records and word definitions approved by Svetlana 13.11.2026 with her edits (the Continental Divide, the Coast Ranges, the Cascades as a mountain chain with volcanoes, the causes of the Dust Bowl).",
+  "The Cordillera is named in the intro card, not a map object (it is the whole western mountain system). The Rocky Mountains and the Appalachians are learned in block 1 and reviewed here as «na-» objects."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Кордильеры: север и побережье",
+    "en": "The Cordillera: north and coast"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Запад и Мексика",
+    "en": "The west and Mexico"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Восток и равнины",
+    "en": "The east and the plains"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "namerica-mountains-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Mountains and Plains of North America",
+    "ru": "Горы и равнины Северной Америки"
+   },
+   "fact": {
+    "en": "In the west of North America the Cordillera runs from Alaska to Mexico: high mountain ranges with many volcanoes. In the east lie the old, worn-down Appalachians, and between them stretch vast plains.",
+    "ru": "На западе Северной Америки от Аляски до Мексики тянутся Кордильеры — высокие горные хребты, среди которых много вулканов. На востоке лежат древние, сильно сглаженные Аппалачи, а между ними — огромные равнины."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "75e2cacae4f76fc0"
+   }
+  },
+  {
+   "id": "namerica-yellowstone",
+   "order": 0,
+   "kind": "note",
+   "unit": 0,
+   "name": {
+    "en": "Yellowstone",
+    "ru": "Йеллоустон"
+   },
+   "fact": {
+    "en": "Yellowstone in the Rocky Mountains became the world's first national park in 1872. A huge body of magma lies beneath it, and its heat feeds more than 500 geysers, about half of all the geysers on Earth.",
+    "ru": "Йеллоустон в Скалистых горах — первый национальный парк мира, его основали в 1872 году. Под ним лежит огромный очаг магмы, и его тепло питает более 500 гейзеров — около половины всех гейзеров Земли."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "541bc503eb67e812"
+   }
+  },
+  {
+   "id": "na-rockies",
+   "order": 1,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Rocky Mountains",
+    "ru": "Скалистые горы"
+   },
+   "fact": {
+    "en": "The Continental Divide of North America runs along the Rocky Mountains. Most rivers west of it carry their water to the Pacific, and most rivers east of it to the Atlantic and Arctic Ocean basins.",
+    "ru": "Вдоль Скалистых гор проходит Великий (Континентальный) водораздел Северной Америки. Большинство рек к западу от него несут воды в Тихий океан, а к востоку — в бассейны Атлантического и Северного Ледовитого океанов."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "5822e3f5acbffd3e"
+   }
+  },
+  {
+   "id": "na-coast-ranges",
+   "order": 4,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Pacific Coast Ranges",
+    "ru": "Береговые хребты"
+   },
+   "fact": {
+    "en": "The Pacific Coast Ranges here are the mountains along the Pacific coast: the Coast Mountains of southeastern Alaska and Canada and the US Coast Ranges down to California. Off British Columbia the slopes rise straight out of the sea, and the coast is cut by deep fjords.",
+    "ru": "Береговыми хребтами здесь названы горы вдоль Тихоокеанского побережья: Береговые горы на юго-востоке Аляски и в Канаде и Береговые хребты США до Калифорнии. У Британской Колумбии склоны гор поднимаются прямо из моря, а берег изрезан глубокими фьордами."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "17693eda60a5183d"
+   }
+  },
+  {
+   "id": "na-alaska-range",
+   "order": 2,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Alaska Range",
+    "ru": "Аляскинский хребет"
+   },
+   "fact": {
+    "en": "The Alaska Range curves across southern Alaska for about 650 km. The highest mountain of North America stands in it.",
+    "ru": "Аляскинский хребет дугой протянулся по югу Аляски примерно на 650 км. В нём находится самая высокая гора Северной Америки."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "e182988eef1bb3d6"
+   }
+  },
+  {
+   "id": "na-denali",
+   "order": 3,
+   "kind": "peak",
+   "unit": 1,
+   "name": {
+    "en": "Denali",
+    "ru": "Денали"
+   },
+   "fact": {
+    "en": "Denali (6,190 m) is the highest peak of North America. It has two names: the Indigenous peoples of Alaska call it Denali, and its second name, McKinley, honours a US president.",
+    "ru": "Денали (6190 м) — высочайшая вершина Северной Америки. У неё два названия: коренные народы Аляски зовут её Денали, а второе имя, Мак-Кинли, дано в честь президента США."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "56444deb48dbe5b4"
+   }
+  },
+  {
+   "id": "na-cascades",
+   "order": 5,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Cascade Range",
+    "ru": "Каскадные горы"
+   },
+   "fact": {
+    "en": "The Cascade Range is a mountain chain with large volcanoes, from British Columbia in Canada to northern California. In 1980 Mount St. Helens erupted here and lost about 400 m of its height.",
+    "ru": "Каскадные горы — горная цепь с крупными вулканами, от канадской Британской Колумбии до севера Калифорнии. В 1980 году здесь извергся вулкан Сент-Хеленс и стал ниже примерно на 400 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "49b5a39a104e8e08"
+   }
+  },
+  {
+   "id": "na-sierra-nevada",
+   "order": 6,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Sierra Nevada",
+    "ru": "Сьерра-Невада"
+   },
+   "fact": {
+    "en": "The name Sierra Nevada means “snowy range” in Spanish. In 1848 gold was found in its foothills, and the California Gold Rush began.",
+    "ru": "Название Сьерра-Невада по-испански значит «снежный хребет». В 1848 году в её предгорьях нашли золото, и началась Калифорнийская золотая лихорадка."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "a97a80612f54ac92"
+   }
+  },
+  {
+   "id": "na-sierra-madre-occidental",
+   "order": 7,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Sierra Madre Occidental",
+    "ru": "Западная Сьерра-Мадре"
+   },
+   "fact": {
+    "en": "The Tarahumara (Rarámuri), an Indigenous people famous for running very long distances, live in the mountains of the Sierra Madre Occidental.",
+    "ru": "В горах Западной Сьерра-Мадре живёт коренной народ тараумара (рарамури), славящийся бегом на очень длинные дистанции."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "6ed94a86a1b56d14"
+   }
+  },
+  {
+   "id": "na-sierra-madre-oriental",
+   "order": 8,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Sierra Madre Oriental",
+    "ru": "Восточная Сьерра-Мадре"
+   },
+   "fact": {
+    "en": "The Sierra Madre Oriental runs along the Gulf of Mexico. Monterrey, one of the largest cities of Mexico, stands at its foot.",
+    "ru": "Восточная Сьерра-Мадре тянется вдоль Мексиканского залива. У её подножия стоит Монтеррей, один из крупнейших городов Мексики."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "5a8d6faf9e9bdb3f"
+   }
+  },
+  {
+   "id": "na-mexican-plateau",
+   "order": 9,
+   "kind": "plateau",
+   "unit": 2,
+   "name": {
+    "en": "Mexican Plateau",
+    "ru": "Мексиканское нагорье"
+   },
+   "fact": {
+    "en": "The Mexican Plateau lies between the two ranges of the Sierra Madre. Mexico City, one of the largest cities in the world, stands in its south at about 2,240 m.",
+    "ru": "Мексиканское нагорье лежит между двумя хребтами Сьерра-Мадре. На его юге, на высоте около 2240 м, стоит Мехико — один из самых больших городов мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "75736344e93de640"
+   }
+  },
+  {
+   "id": "na-orizaba",
+   "order": 10,
+   "kind": "volcano",
+   "unit": 2,
+   "name": {
+    "en": "Pico de Orizaba",
+    "ru": "Орисаба"
+   },
+   "fact": {
+    "en": "Pico de Orizaba (5,636 m) is the highest mountain of Mexico and the highest volcano of North America. Its old Nahuatl name, Citlaltépetl, means “star mountain”.",
+    "ru": "Орисаба (5636 м) — самая высокая гора Мексики и самый высокий вулкан Северной Америки. Её старое имя на языке науатль, Ситлальтепетль, значит «звёздная гора»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "ed12a621aee6a24c"
+   }
+  },
+  {
+   "id": "na-popocatepetl",
+   "order": 11,
+   "kind": "volcano",
+   "unit": 2,
+   "name": {
+    "en": "Popocatépetl",
+    "ru": "Попокатепетль"
+   },
+   "fact": {
+    "en": "Popocatépetl is one of the most active volcanoes of Mexico, about 70 km from Mexico City. In Nahuatl its name means “smoking mountain”.",
+    "ru": "Попокатепетль — один из самых активных вулканов Мексики, он стоит примерно в 70 км от Мехико. На языке науатль его имя значит «дымящаяся гора»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "eda51d2ae6e6e54d"
+   }
+  },
+  {
+   "id": "na-appalachians",
+   "order": 12,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Appalachian Mountains",
+    "ru": "Аппалачи"
+   },
+   "fact": {
+    "en": "The Appalachians began to rise hundreds of millions of years ago and have worn down a lot since then. Their highest peak, Mount Mitchell, is only 2,037 m.",
+    "ru": "Аппалачи начали подниматься сотни миллионов лет назад и с тех пор сильно разрушились. Их высочайшая вершина, гора Митчелл, всего 2037 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "c239ea758fb683ad"
+   }
+  },
+  {
+   "id": "na-laurentian-upland",
+   "order": 13,
+   "kind": "plateau",
+   "unit": 3,
+   "name": {
+    "en": "Laurentian Upland",
+    "ru": "Лаврентийская возвышенность"
+   },
+   "fact": {
+    "en": "The Laurentian Upland lies on the Canadian Shield, one of the oldest parts of the Earth's crust. Glaciers scraped off its soil and left thousands of lakes.",
+    "ru": "Лаврентийская возвышенность лежит на Канадском щите — одной из древнейших частей земной коры. Ледники стёрли с неё почву и оставили тысячи озёр."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "af3f20823244a9f7"
+   }
+  },
+  {
+   "id": "na-great-plains",
+   "order": 14,
+   "kind": "plain",
+   "unit": 3,
+   "name": {
+    "en": "Great Plains",
+    "ru": "Великие равнины"
+   },
+   "fact": {
+    "en": "The Great Plains are dry grasslands (prairies) east of the Rocky Mountains. In the 1930s the Dust Bowl struck here: a long drought, careless ploughing and the loss of the grass cover led to wind erosion and huge dust storms.",
+    "ru": "Великие равнины — сухие степи (прерии) восточнее Скалистых гор. В 1930-х годах здесь случился «Пыльный котёл»: долгая засуха, нерациональная распашка степей и разрушение травяного покрова привели к ветровой эрозии и громадным пыльным бурям."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "a1b441cf5b3aab32"
+   }
+  },
+  {
+   "id": "na-central-lowland",
+   "order": 15,
+   "kind": "plain",
+   "unit": 3,
+   "name": {
+    "en": "Central Lowland",
+    "ru": "Центральные равнины"
+   },
+   "fact": {
+    "en": "The Central Lowland lies between the Appalachians and the Great Plains. The US Corn Belt, one of the world's main grain regions, is here.",
+    "ru": "Центральные равнины лежат между Аппалачами и Великими равнинами. Здесь находится «Кукурузный пояс» США — один из главных зерновых районов мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d96c037ccb1dff6f"
+   }
+  }
+ ]
+}

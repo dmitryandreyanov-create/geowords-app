@@ -188,7 +188,7 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": true,
-   "minSeparation": 13.6,
+   "minSeparation": 6.2,
    "markers": [
     {
      "id": "nile-river",
@@ -197,9 +197,9 @@
      "letter": "М"
     },
     {
-     "id": "antarctica",
-     "x": 71.18,
-     "y": 97.3,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "У"
     },
     {
@@ -251,9 +251,9 @@
      "text": "Найди шестую букву в Австралии."
     },
     {
-     "markerId": "antarctica",
+     "markerId": "mississippi-source",
      "position": 2,
-     "text": "Найди вторую букву в Антарктиде."
+     "text": "Найди вторую букву в истоке Миссисипи."
     },
     {
      "markerId": "pacific-ocean",
@@ -284,8 +284,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "3cfc22fb9d4210bb"
+    "date": "2026-10-25",
+    "contentSha256": "82721bb8120d6a78"
    },
    "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
@@ -317,7 +317,7 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": true,
-   "minSeparation": 4.6,
+   "minSeparation": 4.4,
    "markers": [
     {
      "id": "huang-he-mouth",
@@ -326,21 +326,21 @@
      "letter": "I"
     },
     {
-     "id": "ganges-mouth",
-     "x": 71.77,
-     "y": 44.1,
+     "id": "indus-source",
+     "x": 68.8,
+     "y": 38.38,
      "letter": "R"
     },
     {
-     "id": "yangtze-river",
-     "x": 76,
-     "y": 40.32,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "R"
     },
     {
-     "id": "atlantic-ocean",
-     "x": 43.18,
-     "y": 12.71,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "I"
     },
     {
@@ -387,9 +387,9 @@
      "text": "Find the sixth letter at the mouth of the Mississippi."
     },
     {
-     "markerId": "yangtze-river",
+     "markerId": "huang-he-source",
      "position": 3,
-     "text": "Find the third letter on the Yangtze."
+     "text": "Find the third letter at the source of the Yellow River."
     },
     {
      "markerId": "nile-river",
@@ -407,14 +407,14 @@
      "text": "Find the eighth letter on the Amazon."
     },
     {
-     "markerId": "atlantic-ocean",
+     "markerId": "mississippi-source",
      "position": 4,
-     "text": "Find the fourth letter in the Atlantic Ocean."
+     "text": "Find the fourth letter at the source of the Mississippi."
     },
     {
-     "markerId": "ganges-mouth",
+     "markerId": "indus-source",
      "position": 2,
-     "text": "Find the second letter at the mouth of the Ganges."
+     "text": "Find the second letter at the source of the Indus."
     },
     {
      "markerId": "australia",
@@ -435,8 +435,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "bdc46f6973670c79"
+    "date": "2026-10-25",
+    "contentSha256": "8bd6cbd919903116"
    },
    "needsZoomReason": "Antarctica is a thin strip at the bottom edge of the map"
   },
@@ -483,9 +483,9 @@
      "letter": "Р"
     },
     {
-     "id": "yangtze-river",
-     "x": 76,
-     "y": 40.32,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "О"
     },
     {
@@ -501,9 +501,9 @@
      "letter": "Е"
     },
     {
-     "id": "indus-mouth",
-     "x": 65.3,
-     "y": 43.12,
+     "id": "indus-river",
+     "x": 67.01,
+     "y": 36.65,
      "letter": "Н"
     },
     {
@@ -513,17 +513,17 @@
      "letter": "И"
     },
     {
-     "id": "ganges-mouth",
-     "x": 71.77,
-     "y": 44.1,
+     "id": "ganges-river",
+     "x": 70.17,
+     "y": 42.09,
      "letter": "Е"
     }
    ],
    "clues": [
     {
-     "markerId": "indus-mouth",
+     "markerId": "indus-river",
      "position": 6,
-     "text": "Найди шестую букву в устье Инда."
+     "text": "Найди шестую букву на Инде."
     },
     {
      "markerId": "pacific-ocean",
@@ -551,21 +551,21 @@
      "text": "Найди первую букву в устье Хуанхэ."
     },
     {
-     "markerId": "ganges-mouth",
+     "markerId": "ganges-river",
      "position": 8,
-     "text": "Найди восьмую букву в устье Ганга."
+     "text": "Найди восьмую букву на Ганге."
     },
     {
-     "markerId": "yangtze-river",
+     "markerId": "huang-he-source",
      "position": 3,
-     "text": "Найди третью букву на Янцзы."
+     "text": "Найди третью букву в истоке Хуанхэ."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "535256b821510c34"
+    "date": "2026-10-25",
+    "contentSha256": "e2aa1667c164ecf4"
    }
   },
   {
@@ -746,12 +746,12 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": false,
-   "minSeparation": 6.7,
+   "minSeparation": 6.2,
    "markers": [
     {
-     "id": "volga-river",
-     "x": 59.43,
-     "y": 23.59,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "В"
     },
     {
@@ -785,9 +785,9 @@
      "letter": "Р"
     },
     {
-     "id": "yangtze-river",
-     "x": 72.95,
-     "y": 37.06,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "Ы"
     }
    ],
@@ -818,21 +818,21 @@
      "text": "Найди третью букву в устье Миссисипи."
     },
     {
-     "markerId": "yangtze-river",
+     "markerId": "huang-he-source",
      "position": 7,
-     "text": "Найди седьмую букву на самой длинной реке Азии."
+     "text": "Найди седьмую букву в истоке Хуанхэ."
     },
     {
-     "markerId": "volga-river",
+     "markerId": "mississippi-source",
      "position": 1,
-     "text": "Найди первую букву на самой длинной реке Европы."
+     "text": "Найди первую букву в истоке Миссисипи."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "6ad7810048f13dda"
+    "date": "2026-10-25",
+    "contentSha256": "5cfe8d5c431935b3"
    }
   },
   {
@@ -866,9 +866,9 @@
    "minSeparation": 4.3,
    "markers": [
     {
-     "id": "indus-mouth",
-     "x": 65.3,
-     "y": 43.12,
+     "id": "indus-river",
+     "x": 67.01,
+     "y": 36.65,
      "letter": "A"
     },
     {
@@ -908,21 +908,21 @@
      "letter": "H"
     },
     {
-     "id": "ganges-mouth",
-     "x": 71.77,
-     "y": 44.1,
+     "id": "ganges-river",
+     "x": 70.17,
+     "y": 42.09,
      "letter": "E"
     },
     {
-     "id": "yangtze-river",
-     "x": 76,
-     "y": 40.32,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "R"
     },
     {
-     "id": "pacific-ocean",
-     "x": 3.55,
-     "y": 87.13,
+     "id": "volga-source",
+     "x": 55.74,
+     "y": 22.76,
      "letter": "E"
     }
    ],
@@ -943,9 +943,9 @@
      "text": "Find the sixth letter on the Nile."
     },
     {
-     "markerId": "yangtze-river",
+     "markerId": "huang-he-source",
      "position": 9,
-     "text": "Find the ninth letter on the Yangtze."
+     "text": "Find the ninth letter at the source of the Yellow River."
     },
     {
      "markerId": "huang-he-mouth",
@@ -953,9 +953,9 @@
      "text": "Find the fifth letter at the mouth of the Yellow River."
     },
     {
-     "markerId": "ganges-mouth",
+     "markerId": "ganges-river",
      "position": 8,
-     "text": "Find the eighth letter at the mouth of the Ganges."
+     "text": "Find the eighth letter on the Ganges."
     },
     {
      "markerId": "mississippi-river",
@@ -963,14 +963,14 @@
      "text": "Find the third letter on the Mississippi."
     },
     {
-     "markerId": "indus-mouth",
+     "markerId": "indus-river",
      "position": 1,
-     "text": "Find the first letter at the mouth of the Indus."
+     "text": "Find the first letter on the Indus."
     },
     {
-     "markerId": "pacific-ocean",
+     "markerId": "volga-source",
      "position": 10,
-     "text": "Find the tenth letter in the Pacific Ocean."
+     "text": "Find the tenth letter at the source of the Volga."
     },
     {
      "markerId": "danube-river",
@@ -981,8 +981,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "8742afd462246201"
+    "date": "2026-10-25",
+    "contentSha256": "9b9183caef608508"
    }
   },
   {
@@ -1013,7 +1013,7 @@
     "./assets/layers/world-river-volga.webp"
    ],
    "needsZoom": true,
-   "minSeparation": 4.4,
+   "minSeparation": 4.3,
    "markers": [
     {
      "id": "nile-mouth",
@@ -1022,21 +1022,21 @@
      "letter": "А"
     },
     {
-     "id": "volga-river",
-     "x": 60.3,
-     "y": 23.85,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "Т"
     },
     {
-     "id": "yangtze-river",
-     "x": 76,
-     "y": 40.32,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "М"
     },
     {
-     "id": "indus-mouth",
-     "x": 65.3,
-     "y": 43.12,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "О"
     },
     {
@@ -1058,9 +1058,9 @@
      "letter": "Е"
     },
     {
-     "id": "ganges-mouth",
-     "x": 71.77,
-     "y": 44.1,
+     "id": "ganges-river",
+     "x": 70.17,
+     "y": 42.09,
      "letter": "Р"
     },
     {
@@ -1077,19 +1077,19 @@
      "text": "Найди пятую букву в устье Дуная."
     },
     {
-     "markerId": "volga-river",
+     "markerId": "danube-source",
      "position": 2,
-     "text": "Найди вторую букву на Волге."
+     "text": "Найди вторую букву в истоке Дуная."
     },
     {
-     "markerId": "indus-mouth",
+     "markerId": "mississippi-source",
      "position": 4,
-     "text": "Найди четвёртую букву в устье Инда."
+     "text": "Найди четвёртую букву в истоке Миссисипи."
     },
     {
-     "markerId": "ganges-mouth",
+     "markerId": "ganges-river",
      "position": 8,
-     "text": "Найди восьмую букву в устье Ганга."
+     "text": "Найди восьмую букву на Ганге."
     },
     {
      "markerId": "huang-he-mouth",
@@ -1097,9 +1097,9 @@
      "text": "Найди шестую букву в устье Хуанхэ."
     },
     {
-     "markerId": "yangtze-river",
+     "markerId": "huang-he-source",
      "position": 3,
-     "text": "Найди третью букву на Янцзы."
+     "text": "Найди третью букву в истоке Хуанхэ."
     },
     {
      "markerId": "amazon-river",
@@ -1120,8 +1120,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "0a0aca7d5d5d4956"
+    "date": "2026-10-25",
+    "contentSha256": "64935337e2b12889"
    }
   }
  ]

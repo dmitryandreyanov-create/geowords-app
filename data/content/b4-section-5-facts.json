@@ -1,0 +1,391 @@
+{
+ "section": "deserts-and-canyons-of-north-america",
+ "block": 4,
+ "use": "introduction cards (exercise type 0), one fact per object; ids match data/maps/namerica-deserts.json; namerica-hot-cold-deserts is an explanation card (no map task) shown at the start of unit 1",
+ "decisions": [
+  "12 objects in 3 units (6 deserts and dry lands; canyons split into «the work of water» and «canyons and people», since a section has three units); facts, records and word definitions approved by Svetlana 13.11.2026 with her edits (the rain shadow is one cause among several, the Great Basin, the Vizcaíno as a coastal desert, the Joshua tree name as a legend, the age of the Grand Canyon, El Chepe).",
+  "The Okanagan is a dry valley, never called a desert (Svetlana). The four Colorado Plateau canyons are also shown on a large map (data/maps/namerica-canyons.json)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Пустыни",
+    "en": "Deserts"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Каньоны: работа воды",
+    "en": "Canyons: the work of water"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Каньоны и люди",
+    "en": "Canyons and people"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "namerica-deserts-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Deserts and Canyons of North America",
+    "ru": "Пустыни и каньоны Северной Америки"
+   },
+   "fact": {
+    "en": "Four large deserts lie in the southwest of North America: the hot Sonoran, Mojave and Chihuahuan deserts and the cold Great Basin Desert. Rivers have cut deep canyons into the plateaus here, and people have lived in these lands for thousands of years.",
+    "ru": "На юго-западе Северной Америки лежат четыре большие пустыни: жаркие Сонора, Мохаве и Чиуауа и холодная пустыня Большого Бассейна. Реки прорезали здесь плато глубокими каньонами, а люди живут в этих местах уже тысячи лет."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "0386960874143fcc"
+   }
+  },
+  {
+   "id": "namerica-hot-cold-deserts",
+   "order": 0,
+   "kind": "note",
+   "unit": 1,
+   "name": {
+    "en": "Hot or cold?",
+    "ru": "Жаркая или холодная?"
+   },
+   "fact": {
+    "en": "A hot desert has very hot summers, mild winters and rare rain. A cold desert has frosty winters, and much of its little moisture falls as snow. Many deserts of western North America lie in the rain shadow of mountain ranges. Atmospheric circulation and ocean currents also contribute to their dry climates.",
+    "ru": "В жаркой пустыне лето очень жаркое, зима мягкая, а редкие осадки выпадают дождём. В холодной пустыне зимой морозы и осадки часто выпадают снегом. Многие пустыни западной части Северной Америки расположены в дождевой тени гор. Горные хребты задерживают часть влажного воздуха, а особенности атмосферной циркуляции и океанические течения также влияют на засушливость климата."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "891fcfb27f6afd81"
+   }
+  },
+  {
+   "id": "na-sonoran",
+   "order": 1,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Sonoran Desert",
+    "ru": "Сонора"
+   },
+   "fact": {
+    "en": "The Sonoran Desert lies in the southwestern US and northwestern Mexico, around the Gulf of California. In the wild the saguaro cactus grows almost only here: it lives for 150–200 years and grows taller than 12 m.",
+    "ru": "Сонора лежит на юго-западе США и северо-западе Мексики, вокруг Калифорнийского залива. В природе кактус сагуаро растёт почти только здесь: он живёт до 150–200 лет и вырастает выше 12 м."
+   },
+   "look": "hot",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "1b7f9f866ffb2646"
+   }
+  },
+  {
+   "id": "na-mojave",
+   "order": 2,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Mojave Desert",
+    "ru": "Мохаве"
+   },
+   "fact": {
+    "en": "The Mojave is the smallest and driest of the four large deserts of the US. Joshua trees, tree-like yuccas, grow here. A legend says that Mormon settlers named them, because the branches reminded them of the biblical Joshua raising his arms in prayer; it is a legend, not a documented fact. Death Valley lies in the Mojave.",
+    "ru": "Мохаве — самая маленькая и самая сухая из четырёх больших пустынь США. Здесь растут деревья Джошуа — древовидные юкки. Существует предание, что имя им дали мормонские переселенцы: ветви будто бы напомнили им руки молящегося библейского Иисуса Навина (Джошуа). Это легенда, а не доказанный исторический факт. В Мохаве лежит Долина Смерти."
+   },
+   "look": "hot",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "14c72a9ebec17bd7"
+   }
+  },
+  {
+   "id": "na-chihuahuan",
+   "order": 3,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Chihuahuan Desert",
+    "ru": "Чиуауа"
+   },
+   "fact": {
+    "en": "The Chihuahuan Desert is a high desert: it lies about 600–1,700 m above the sea between mountain ranges, so its summers are hot and its winters bring frosts. Most of it is in Mexico; in the north it reaches into Texas and New Mexico.",
+    "ru": "Чиуауа — высокогорная пустыня: она лежит на высоте примерно 600–1700 м между горными хребтами, поэтому лето здесь жаркое, а зимой бывают заморозки. Большая её часть в Мексике, на севере она заходит в Техас и Нью-Мексико."
+   },
+   "look": "hot",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "119fc00bbee6c89d"
+   }
+  },
+  {
+   "id": "na-great-basin",
+   "order": 4,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Great Basin Desert",
+    "ru": "Пустыня Большого Бассейна"
+   },
+   "fact": {
+    "en": "The Great Basin Desert has cold winters. It lies within a vast region of internal drainage, where many rivers end in inland lakes or dry up before reaching the ocean.",
+    "ru": "Пустыня Большого Бассейна отличается холодными зимами. Она расположена в пределах обширного бессточного региона, где многие реки заканчиваются во внутренних озёрах или пересыхают, не достигая океана."
+   },
+   "look": "cold",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "f65a7e09c4258b4a"
+   }
+  },
+  {
+   "id": "na-vizcaino",
+   "order": 5,
+   "kind": "desert",
+   "unit": 1,
+   "name": {
+    "en": "Vizcaíno Desert",
+    "ru": "Вискаино"
+   },
+   "fact": {
+    "en": "The Vizcaíno is a coastal desert on the Pacific shore of the Baja California peninsula in Mexico; it is often counted as part of the Sonoran Desert. The Pacific shapes its climate: a cold current offshore cools the air, and frequent coastal fogs bring moisture to its plants. Grey whales give birth in the lagoons off its coast in winter; these lagoons are a UNESCO World Heritage Site.",
+    "ru": "Вискаино — прибрежная пустыня на тихоокеанском берегу полуострова Калифорния в Мексике; её часто считают частью Соноры. Её климат смягчает Тихий океан: холодное течение у берега охлаждает воздух, а частые прибрежные туманы дают растениям влагу. В лагунах у её берегов зимой рождаются детёныши серых китов; эти лагуны входят в список Всемирного наследия ЮНЕСКО."
+   },
+   "look": "coast",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "47a48feda30f43cf"
+   }
+  },
+  {
+   "id": "na-okanagan",
+   "order": 6,
+   "kind": "valley",
+   "unit": 1,
+   "name": {
+    "en": "Okanagan Valley",
+    "ru": "Долина Оканаган"
+   },
+   "fact": {
+    "en": "The Okanagan in British Columbia is a dry valley, not a desert of its own: mountains to the west hold back the moisture of the Pacific. Semi-desert plants and animals live here, such as the prickly pear cactus and the rattlesnake, and grapes and fruit grow on its slopes.",
+    "ru": "Оканаган в Британской Колумбии — засушливая долина, а не отдельная пустыня: горы на западе задерживают влагу с Тихого океана. Здесь встречаются растения и животные полупустынь — кактус опунция и гремучая змея, а на склонах выращивают виноград и фрукты."
+   },
+   "look": "valley",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "38caab85c85a2b8b"
+   }
+  },
+  {
+   "id": "na-grand-canyon",
+   "order": 7,
+   "kind": "canyon",
+   "unit": 2,
+   "name": {
+    "en": "Grand Canyon",
+    "ru": "Большой каньон"
+   },
+   "fact": {
+    "en": "The Grand Canyon in Arizona is about 446 km long and up to 1.8 km deep. The Colorado River carved the deep modern canyon over roughly the last 5–6 million years, but the rocks in its walls are far older: the layers built up over hundreds of millions of years, and the oldest rocks at the bottom are about 1.8 billion years old.",
+    "ru": "Большой каньон в Аризоне длиной около 446 км и глубиной до 1,8 км. Современный глубокий каньон река Колорадо вырезала примерно за последние 5–6 миллионов лет, но породы в его стенах гораздо старше: слои накапливались сотни миллионов лет, а самым древним породам у дна около 1,8 миллиарда лет."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "654f63cb0cc075ed"
+   }
+  },
+  {
+   "id": "na-antelope-canyon",
+   "order": 8,
+   "kind": "canyon",
+   "unit": 2,
+   "name": {
+    "en": "Antelope Canyon",
+    "ru": "Каньон Антилопы"
+   },
+   "fact": {
+    "en": "Antelope Canyon in Arizona is a slot canyon: in places it is narrower than two metres and tens of metres deep. Sudden flash floods polished its wavy sandstone walls; the canyon is on Navajo land, and visitors may enter only with a guide.",
+    "ru": "Каньон Антилопы в Аризоне — щелевой каньон: местами он уже двух метров, а глубиной в десятки метров. Волнистые стены из песчаника отшлифовали внезапные паводки; каньон находится на землях народа навахо, и входить в него можно только с проводником."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d7cf4bb0f4f88560"
+   }
+  },
+  {
+   "id": "na-black-canyon",
+   "order": 9,
+   "kind": "canyon",
+   "unit": 2,
+   "name": {
+    "en": "Black Canyon of the Gunnison",
+    "ru": "Чёрный каньон Ганнисона"
+   },
+   "fact": {
+    "en": "The Gunnison River in Colorado cut through very hard ancient rock, so its canyon is narrow and steep, up to about 830 m deep. It is called “Black” because parts of its floor get only about half an hour of sunlight a day.",
+    "ru": "Река Ганнисон в Колорадо прорезала очень твёрдые древние породы, поэтому каньон получился узким и крутым: глубина достигает около 830 м. Он назван «Чёрным», потому что на некоторые участки его дна солнце попадает всего около получаса в день."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "ea670b41b7fc3134"
+   }
+  },
+  {
+   "id": "na-canyon-de-chelly",
+   "order": 10,
+   "kind": "canyon",
+   "unit": 3,
+   "name": {
+    "en": "Canyon de Chelly",
+    "ru": "Каньон-де-Шей"
+   },
+   "fact": {
+    "en": "Canyon de Chelly in Arizona lies on Navajo land, and Navajo families still live and raise livestock on its floor. Cliff dwellings of the Ancestral Puebloans, built about 800–1,000 years ago, survive in niches of its walls, such as the White House.",
+    "ru": "Каньон-де-Шей в Аризоне лежит на землях навахо, и семьи навахо живут и пасут скот на его дне и сегодня. В нишах его стен сохранились скальные жилища предков пуэбло, построенные примерно 800–1000 лет назад, например «Белый дом»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "b01df29ac8d688ba"
+   }
+  },
+  {
+   "id": "na-copper-canyon",
+   "order": 11,
+   "kind": "canyon",
+   "unit": 3,
+   "name": {
+    "en": "Copper Canyon",
+    "ru": "Медный каньон"
+   },
+   "fact": {
+    "en": "Copper Canyon (Barrancas del Cobre) in northern Mexico is a system of six deep canyons, home to the Rarámuri. The famous Chihuahua–Pacific Railway, known as El Chepe, passes through the Copper Canyon region. Its construction required numerous tunnels and bridges.",
+    "ru": "Медный каньон (Барранкас-дель-Кобре) на севере Мексики — система из шести глубоких каньонов, где живут рарамури. Через горный регион Медного каньона проходит знаменитая железная дорога Чиуауа — Тихий океан, известная как «Чепе». Её строительство потребовало многочисленных тоннелей и мостов."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "eb4701552120bf6e"
+   }
+  },
+  {
+   "id": "na-fraser-canyon",
+   "order": 12,
+   "kind": "canyon",
+   "unit": 3,
+   "name": {
+    "en": "Fraser Canyon",
+    "ru": "Каньон Фрейзер"
+   },
+   "fact": {
+    "en": "The Fraser River cuts through the mountains of British Columbia, in the lands of the Nlakaʼpamux people. A gold rush began here in 1858, and later a road and a railway were built through the gorge. At its narrowest point, Hell’s Gate, the river squeezes to about 35 m.",
+    "ru": "Река Фрейзер прорезает горы Британской Колумбии на землях коренного народа нлакапамукс. В 1858 году здесь началась золотая лихорадка, потом через ущелье проложили дорогу и железную дорогу. В самом узком месте, «Адских воротах», река сужается примерно до 35 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "388bbd4afb22c0ac"
+   }
+  }
+ ]
+}
