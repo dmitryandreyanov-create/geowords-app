@@ -1,0 +1,102 @@
+{
+ "section": "deserts-and-canyons-of-north-america",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "badwater-lowest",
+   "order": 1,
+   "object": "na-mojave",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Badwater Basin",
+    "ru": "Бэдуотер"
+   },
+   "fact": {
+    "en": "Badwater Basin in Death Valley (the Mojave) is the lowest point in North America, about 86 m below sea level.",
+    "ru": "Бэдуотер в Долине Смерти (Мохаве) — самая низкая точка Северной Америки: около 86 м ниже уровня моря."
+   },
+   "figure": {
+    "value": -86,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "71abef340bca3fbf"
+   }
+  },
+  {
+   "id": "bristlecone-oldest-trees",
+   "order": 2,
+   "object": "na-great-basin",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Bristlecone pines",
+    "ru": "Остистые сосны"
+   },
+   "fact": {
+    "en": "Bristlecone pines grow in the mountains of the Great Basin; they are among the oldest known trees on Earth, one of them more than 4,800 years old (the age of a single trunk, not of a root system).",
+    "ru": "В горах Большого Бассейна растут остистые сосны — одни из древнейших известных деревьев Земли: возраст одного дерева больше 4800 лет (считается возраст отдельного ствола, а не корневой системы)."
+   },
+   "figure": {
+    "value": 4800,
+    "unit": "years"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "3a7ea0287f9c1674"
+   }
+  },
+  {
+   "id": "white-sands-gypsum",
+   "order": 3,
+   "object": "na-chihuahuan",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "White Sands",
+    "ru": "Уайт-Сэндс"
+   },
+   "fact": {
+    "en": "White Sands in the Chihuahuan Desert (New Mexico) is the largest gypsum dune field in the world: its white dunes cover about 712 km² (275 square miles; figure of the US National Park Service).",
+    "ru": "Уайт-Сэндс в пустыне Чиуауа (Нью-Мексико) — самое большое в мире поле дюн из гипса: белые дюны занимают примерно 712 км² (275 кв. миль; данные Службы национальных парков США)."
+   },
+   "figure": {
+    "value": 712,
+    "unit": "km²"
+   },
+   "reference": "https://www.nps.gov/whsa/index.htm",
+   "source": {
+    "doc": "https://claude.ai/artifact/QjP85nJCMeabJuRHMLHPb9",
+    "note": "block 4 section 5, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "b1a03124eb823aa1"
+   }
+  }
+ ]
+}

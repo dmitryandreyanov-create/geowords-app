@@ -180,7 +180,9 @@ for i, (id_, unit, kind, look, src, en, ru) in enumerate(OBJECTS):
         y, x = np.unravel_index(dt.argmax(), dt.shape); lab = Point(x, y)
     items.append({'id': id_, 'order': i + 1, 'kind': kind, 'unit': unit, 'name': {'en': en, 'ru': ru},
                   'label': {'x': round(100 * lab.x / W, 2), 'y': round(100 * lab.y / H, 2)},
-                  'tapArea': [pc(p.exterior.coords) for p in parts], **({'look': look} if look else {})})
+                  'tapArea': [pc(p.exterior.coords) for p in parts], **({'look': look} if look else {}),
+                  # a canyon mark and the narrow Okanagan Valley get a zoom inset on their introduction card
+                  **({'zoomInset': True} if kind in ('canyon', 'valley') else {})})
     print(id_, kind, len(parts), 'parts', items[-1]['label'])
 
 # ---- the large map of the Colorado Plateau canyons ----
