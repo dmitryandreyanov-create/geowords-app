@@ -159,6 +159,7 @@ h1,h2,h3,p{margin:0}
 .slots{display:flex;justify-content:center;gap:6px;flex-wrap:nowrap}
 .slot{width:40px;height:48px;display:grid;place-items:center;font-size:26px;font-weight:800;background:rgba(255,255,255,.08);border-bottom:3px solid var(--brass);border-radius:8px 8px 2px 2px;color:var(--sand)}
 .slot.new{animation:pop .45s ease}
+.slot-gap{width:14px;flex:none}
 @keyframes pop{0%{transform:scale(.4)}70%{transform:scale(1.15)}}
 .gw-pip{display:flex;gap:10px;align-items:flex-end;margin-top:auto}
 .gw-pip img{width:92px;flex:0 0 92px}

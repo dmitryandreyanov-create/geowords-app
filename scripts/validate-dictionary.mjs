@@ -87,7 +87,9 @@ const sortKeys = v => Array.isArray(v) ? v.map(sortKeys)
   : v && typeof v === "object" ? Object.fromEntries(Object.keys(v).sort().map(k => [k, sortKeys(v[k])])) : v;
 // Same serialisation as Python json.dumps(..., ensure_ascii=False, sort_keys=True)
 const pyJson = v => JSON.stringify(sortKeys(v)).replace(/":/g, '": ').replace(/,"/g, ', "');
-const LETTERS = { en: /^[A-Z]+$/, ru: /^[А-ЯЁ]+$/ };
+// one word in capitals, or two words joined by one space or one hyphen (CASA GRANDE, КАСА-ГРАНДЕ: Svetlana, 13.11.2026);
+// the space or the hyphen is a gap in the answer row, never a letter on the map (gwLetters in app/app.js)
+const LETTERS = { en: /^[A-Z]+(?:[ -][A-Z]+)?$/, ru: /^[А-ЯЁ]+(?:[ -][А-ЯЁ]+)?$/ };
 // The answer must not appear in its own definition (Svetlana, 2026-10-24): Ё = Е, any letter case;
 // English also catches -s/-es plurals, Russian catches case endings (the stem without its final vowel, ь or й, + up to 3 letters).
 const answerInDefinition = (answer, definition, lang) => {
@@ -149,7 +151,7 @@ for (const file of fs.readdirSync(dir).filter(f => f.endsWith(".json")).sort()) 
         if (a && !STATUSES.has(a.status)) errors.push(`${file}: ${w.answer} unknown approval status "${a.status}"`);
         if (release && !(a?.status === "approved" && a.by && a.date && a.contentSha256))
           errors.push(`${file}: ${w.answer} is in a release package but has no complete approval (status, by, date, contentSha256)`);
-        if (!LETTERS[lang].test(w.answer || "")) errors.push(`${file}: ${u.id} ${lang} "${w.answer}" is not one word in capitals`);
+        if (!LETTERS[lang].test(w.answer || "")) errors.push(`${file}: ${u.id} ${lang} "${w.answer}" is not one word (or two words with a space or a hyphen) in capitals`);
         const key = (w.answer || "").replace(/Ё/g, "Е");
         if (seen.has(key)) errors.push(`${file}: ${lang} answer ${w.answer} is used twice`); seen.add(key);
         if (!w.definition?.trim()) errors.push(`${file}: ${w.answer} has no definition`);

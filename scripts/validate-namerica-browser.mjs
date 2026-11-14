@@ -1,4 +1,4 @@
-/* Block 4 «North America», section 1 «North America on the map» , section 2 «Rivers of North America», section 3 «Lakes of North America» and section 4 «Mountains and Plains of North America» at iPhone width: plays every lesson with right answers on the North America base map,
+/* Block 4 «North America», section 1 «North America on the map» , section 2 «Rivers of North America», section 3 «Lakes of North America» section 4 «Mountains and Plains of North America» and section 5 «Deserts and Canyons of North America» at iPhone width: plays every lesson with right answers on the North America base map,
    then the unit practice and the finals with the draft words and puzzles treated as approved in memory (the data files on disk are never changed).
    SHOTS=<dir> also saves screenshots of sample tasks and of the finals for the author. */
 import assert from 'node:assert/strict';
@@ -252,5 +252,74 @@ try{
     assert.deepEqual(errs,[],'no page errors');
     await context.close();
   }
-  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2,3,4')+' play in RU and EN on the North America maps.');
+  // section 5 «Deserts and Canyons of North America»: lessons on the deserts map; a tap on a canyon of the Colorado Plateau opens the large map first,
+  // and the tap there at the same point of the map is right; practice (two-word answers: a gap, never a letter on the map) and finals
+  const dMap=JSON.parse(fs.readFileSync('data/maps/namerica-deserts.json','utf8')),dFacts=JSON.parse(fs.readFileSync('data/content/b4-section-5-facts.json','utf8'));
+  const cy=JSON.parse(fs.readFileSync('data/maps/namerica-canyons.json','utf8'));
+  const dLab=Object.fromEntries(dMap.items.map(i=>[i.id,i.label])),dUnit=Object.fromEntries(dMap.items.map(i=>[i.id,i.unit])),dFact=id=>dFacts.items.find(i=>i.id===id);
+  const DMAP='assets/namerica-deserts.webp';
+  for(const lang of run(5)?['ru','en']:[]){
+    const context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,deviceScaleFactor:2});
+    for(const f of ['data/geowords/b4-section-5.json'])
+      await context.route('**/'+f+'*',r=>r.fulfill({contentType:'application/json',body:approvedCopy(f)}));
+    await context.addInitScript(l=>{if(sessionStorage.getItem('fx'))return;sessionStorage.setItem('fx','1');
+      localStorage.setItem('geowords_expedition_v1',JSON.stringify({lang:l,done:{},unlockAll:true,introSeen:true,learned:[],recent:[]}))},lang);
+    const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
+    await page.goto(base+'/app/');await page.waitForSelector('[data-step="n5-u1-l1"]');
+    assert.match(await page.locator('.path').innerText(),lang==='ru'?/Пустыни и каньоны Северной Америки/:/Deserts and Canyons of North America/);
+    const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`n5-${name}-${lang}.png`)})}};
+    const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
+    const lessons=['n5-u1-l1','n5-u1-l2','n5-u2-l1','n5-u2-l2','n5-u3-l1','n5-u3-l2','n5-u3-l3','n5-u3-l4'];const kinds=new Set(),shotKinds=new Set();let large=0,notes=0;
+    for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
+      for(let n=0;n<80;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
+        const q=await page.evaluate(()=>{const t=window.__gwTask;window.__gwTask=null;return t});kinds.add(q.k);
+        const src=await page.locator('.task .world img').first().getAttribute('src');assert(src.endsWith(DMAP),'North America deserts map: '+src);
+        if(!shotKinds.has(q.k)){shotKinds.add(q.k);await page.waitForTimeout(300);await shot('task-'+q.k)}
+        if(q.k==='introEurope'){const h=await page.locator('.task .card h3').first().innerText();if(q.note)notes++;
+          assert.equal(h,q.note?(lang==='ru'?'Жаркая или холодная?':'Hot or cold?'):(lang==='ru'?'Пустыни и каньоны Северной Америки':'Deserts and Canyons of North America'));await page.locator('.fb .btn').click()}
+        else if(q.k==='introEu'||q.k==='introEuRec'){
+          if(q.k==='introEu'){assert.equal(await page.locator('.task .card p').first().innerText(),dFact(q.id).fact[lang]);
+            if(dMap.items.find(i=>i.id===q.id).zoomInset)assert.equal(await page.locator('.task .zoom-inset').count(),1,'zoom inset for '+q.id)}
+          await page.locator('.fb .btn').click()}
+        else if(q.k==='findEu'){assert(q.id in dUnit,'an object of section 5: '+q.id);await tapAt(dLab[q.id]);
+          if(cy.objects.includes(q.id)){await page.locator('.task .lv-pop:not([hidden])').waitFor();large++;if(large===1){await page.waitForTimeout(300);await shot('canyons-large')}
+            const F=cy.frame,L=dLab[q.id],box=await page.locator('.task .lv-pop').boundingBox();
+            await page.mouse.click(box.x+box.width*(L.x-F.x)/F.w,box.y+box.height*(L.y-F.y)/F.h)}
+          await page.waitForSelector('.fb.ok,.fb.bad');
+          assert.equal(await page.locator('.fb.ok').count(),1,'a tap on the label of '+q.id+' is right');await page.locator('.fb .btn').click()}
+        else if(q.k==='whatEu'){const opts=await page.locator('.choice').evaluateAll(b=>b.map(x=>x.dataset.o));assert(opts.every(o=>o in dUnit),'section 5 options only');
+          const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)),'options only from taught lessons: '+opts);
+          await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
+        else throw new Error('unexpected task '+q.k)}
+      await page.locator('.screen.done').waitFor();await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n5-u1-l1"]')}
+    for(const k of ['introEurope','introEu','introEuRec','findEu','whatEu'])assert(kinds.has(k),'task kind played: '+k);
+    assert(notes>=1,'the hot / cold card is shown');assert(large>=1,'a canyon of the Colorado Plateau is found on the large map');
+    const letters=a=>[...a].filter(c=>/\p{L}/u.test(c));let twoWords=0;
+    for(const u of [1,2,3]){await page.locator(`[data-step="n5-u${u}-practice"]`).click();await page.locator('.sheet [data-a="go"]').click();const words=new Set();
+      for(let w=0;w<6;w++){await page.waitForFunction(n=>window.__gwPuzzle?.seq?.i===n,w);const p=await page.evaluate(()=>window.__gwPuzzle);
+        assert.equal(p.seq.total,6,'six practice words in unit '+u);words.add(p.answer);
+        const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(DMAP),'practice on the deserts map');
+        for(const m of p.markers)assert(m.id in dUnit?dUnit[m.id]<=u:m.id in unitOf,`${p.answer}: ${m.id} is learned by unit ${u}`);
+        assert(p.markers.some(m=>m.id in dUnit),p.answer+': letters on the objects of section 5');
+        assert.deepEqual(p.markers.map(m=>m.letter).sort(),letters(p.answer).sort(),p.answer+': one marker per letter');
+        assert.equal(await page.locator('.gw .slot').count(),letters(p.answer).length,p.answer+': one slot per letter');
+        assert.equal(await page.locator('.gw .slot-gap').count(),[...p.answer].length-letters(p.answer).length,p.answer+': a gap for the space or the hyphen');
+        if(/[ -]/.test(p.answer)){twoWords++;if(twoWords===1)await shot('practice-two-words')}
+        if(w===0)await shot('practice-u'+u);
+        for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+        if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
+      assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="n5-u1-l1"]')}
+    const dGeo=JSON.parse(fs.readFileSync('data/geowords/b4-section-5.json','utf8')).puzzles;
+    for(const [step,id] of [['n5-u1-final','unit-1'],['n5-u2-final','unit-2'],['n5-u3-final','unit-3'],['n5-final','final']]){
+      const want=dGeo.find(p=>p.id===`b4-section-5-${id}-${lang}`);
+      await page.locator(`[data-step="${step}"]`).click();await page.locator('.sheet [data-a="go"]').click();await page.waitForSelector('.gw-clue');
+      const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
+      const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(DMAP),'final on the deserts map');
+      await page.waitForTimeout(400);await shot('final-'+id);
+      for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
+      await page.locator('.screen.done [data-a="home"]').click();await page.waitForSelector('[data-step="n5-u1-l1"]')}
+    assert.deepEqual(errs,[],'no page errors');
+    await context.close();
+  }
+  console.log('PASS: North America sections '+(process.env.SECTIONS||'1,2,3,4,5')+' play in RU and EN on the North America maps.');
 }finally{await browser?.close();server.close()}
