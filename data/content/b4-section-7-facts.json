@@ -1,0 +1,413 @@
+{
+ "section": "countries-of-the-caribbean-islands",
+ "block": 4,
+ "use": "introduction cards, one fact per country and its capital; ids match data/maps/namerica-caribbean.json",
+ "decisions": [
+  "Svetlana 13.11.2026 22:43 («Согласна») and 14.11.2026 03:40 («Утверждаю», doc rev 33): the 13 independent island states of the Caribbean with capitals in three units — Cuba, Jamaica and the Bahamas / Hispaniola and the northern Lesser Antilles / the southern Lesser Antilles.",
+  "The islands are small on the North America maps, so the section has a large map of the Caribbean of its own (data/maps/namerica-caribbean.json), with a magnifier of the Lesser Antilles (data/maps/namerica-lesser-antilles.json). Dependencies of other countries (Puerto Rico, Guadeloupe, Martinique…) are pale and never asked.",
+  "Dominica and the Dominican Republic are different countries; the Dominica card says so."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Куба, Ямайка, Багамы",
+    "en": "Cuba, Jamaica and the Bahamas"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Остров Гаити и север Малых Антил",
+    "en": "Hispaniola and the northern Lesser Antilles"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Юг Малых Антил",
+    "en": "The southern Lesser Antilles"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "cty-cuba",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Cuba",
+    "ru": "Куба"
+   },
+   "capital": {
+    "en": "Havana",
+    "ru": "Гавана"
+   },
+   "fact": {
+    "ru": "Куба — крупнейший остров Карибского бассейна, площадью около 104 тыс. км². Исторический центр Гаваны и её укрепления включены в список Всемирного наследия ЮНЕСКО.",
+    "en": "Cuba is the largest island in the Caribbean, covering about 104,000 km². Old Havana and its fortifications are a UNESCO World Heritage Site."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "6851cd25d4c2ff15"
+   }
+  },
+  {
+   "id": "cty-bahamas",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "The Bahamas",
+    "ru": "Багамы"
+   },
+   "capital": {
+    "en": "Nassau",
+    "ru": "Нассау"
+   },
+   "fact": {
+    "ru": "Багамы — это около 700 островов и более 2000 рифов и отмелей в Атлантическом океане. Именно здесь, на острове Сан-Сальвадор, в 1492 году высадился Колумб.",
+    "en": "The Bahamas are about 700 islands and more than 2,000 cays in the Atlantic Ocean. Columbus first landed here, on San Salvador, in 1492."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "68f356ef39c8fb64"
+   }
+  },
+  {
+   "id": "cty-jamaica",
+   "order": 3,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Jamaica",
+    "ru": "Ямайка"
+   },
+   "capital": {
+    "en": "Kingston",
+    "ru": "Кингстон"
+   },
+   "fact": {
+    "ru": "Имя Ямайки пришло из языка коренных жителей и значит «земля лесов и вод». На склонах её Голубых гор (до 2256 м) растёт один из самых известных сортов кофе.",
+    "en": "Jamaica's name comes from the language of its first people and means “land of wood and water”. One of the world's best-known coffees grows on the slopes of its Blue Mountains (up to 2,256 m)."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "193767c045dcf7dc"
+   }
+  },
+  {
+   "id": "cty-haiti",
+   "order": 4,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Haiti",
+    "ru": "Гаити"
+   },
+   "capital": {
+    "en": "Port-au-Prince",
+    "ru": "Порт-о-Пренс"
+   },
+   "fact": {
+    "ru": "Гаити занимает западную треть острова Гаити. В 1804 году, после восстания рабов, она стала первой независимой страной Латинской Америки.",
+    "en": "Haiti covers the western third of the island of Hispaniola. In 1804, after a revolt of the enslaved, it became the first independent country of Latin America."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "203e2fd74b6e5ca9"
+   }
+  },
+  {
+   "id": "cty-dominican-republic",
+   "order": 5,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Dominican Republic",
+    "ru": "Доминиканская Республика"
+   },
+   "capital": {
+    "en": "Santo Domingo",
+    "ru": "Санто-Доминго"
+   },
+   "fact": {
+    "ru": "Санто-Доминго был основан испанцами в 1496 году и перенесён на нынешнее место в 1502 году. Его исторический центр — один из старейших сохранившихся европейских колониальных городских центров Америки.",
+    "en": "Santo Domingo was founded by the Spanish in 1496 and moved to its present site in 1502. Its historic centre is one of the oldest surviving European colonial urban centres in the Americas."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "4943a2ca92dd1e07"
+   }
+  },
+  {
+   "id": "cty-saint-kitts-and-nevis",
+   "order": 6,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Saint Kitts and Nevis",
+    "ru": "Сент-Китс и Невис"
+   },
+   "capital": {
+    "en": "Basseterre",
+    "ru": "Бастер"
+   },
+   "fact": {
+    "ru": "Самая маленькая страна Америки: два вулканических острова общей площадью около 260 км². На Невисе родился Александр Гамильтон, один из отцов-основателей США.",
+    "en": "The smallest country of the Americas: two volcanic islands with about 260 km² in all. Alexander Hamilton, one of the founding fathers of the United States, was born on Nevis."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "d785947ad7cf8405"
+   }
+  },
+  {
+   "id": "cty-antigua-and-barbuda",
+   "order": 7,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Antigua and Barbuda",
+    "ru": "Антигуа и Барбуда"
+   },
+   "capital": {
+    "en": "Saint John's",
+    "ru": "Сент-Джонс"
+   },
+   "fact": {
+    "ru": "На Барбуде, в лагуне Кодрингтон, гнездится одна из крупнейших в мире колоний фрегатов — морских птиц, у самцов которых раздувается красный горловой мешок.",
+    "en": "Codrington Lagoon on Barbuda has one of the largest colonies of frigatebirds in the world; the males puff up a red throat pouch."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "2062dadba600808a"
+   }
+  },
+  {
+   "id": "cty-dominica",
+   "order": 8,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Dominica",
+    "ru": "Доминика"
+   },
+   "capital": {
+    "en": "Roseau",
+    "ru": "Розо"
+   },
+   "fact": {
+    "ru": "Доминику зовут «Островом природы»: она покрыта горами и дождевым лесом. Здесь есть Кипящее озеро — одно из самых больших горячих озёр мира, вода в нём бурлит от тепла магмы.",
+    "en": "Dominica is called the Nature Island: it is covered in mountains and rainforest. Its Boiling Lake is one of the largest hot lakes in the world, its water bubbling from the heat of magma."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "addffba2ce380e20"
+   }
+  },
+  {
+   "id": "cty-saint-lucia",
+   "order": 9,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Saint Lucia",
+    "ru": "Сент-Люсия"
+   },
+   "capital": {
+    "en": "Castries",
+    "ru": "Кастри"
+   },
+   "fact": {
+    "ru": "На Сент-Люсии живёт меньше 200 тыс. человек, но у неё два нобелевских лауреата: экономист Артур Льюис (1979) и поэт Дерек Уолкотт (1992).",
+    "en": "Saint Lucia has fewer than 200,000 people but two Nobel laureates: the economist Arthur Lewis (1979) and the poet Derek Walcott (1992)."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "894a85b1ef1be52e"
+   }
+  },
+  {
+   "id": "cty-saint-vincent",
+   "order": 10,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Saint Vincent and the Grenadines",
+    "ru": "Сент-Винсент и Гренадины"
+   },
+   "capital": {
+    "en": "Kingstown",
+    "ru": "Кингстаун"
+   },
+   "fact": {
+    "ru": "Ботанический сад Кингстауна (1765) — самый старый в Западном полушарии. В 1793 году капитан Блай привёз сюда с Таити саженцы хлебного дерева.",
+    "en": "The botanic garden of Kingstown (1765) is the oldest in the Western Hemisphere. In 1793 Captain Bligh brought breadfruit seedlings here from Tahiti."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "d1f67d02a620ff6e"
+   }
+  },
+  {
+   "id": "cty-grenada",
+   "order": 11,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Grenada",
+    "ru": "Гренада"
+   },
+   "capital": {
+    "en": "Saint George's",
+    "ru": "Сент-Джорджес"
+   },
+   "fact": {
+    "ru": "У берегов Гренады в 2006 году открылся один из первых в мире подводных парков скульптур: фигуры людей на дне постепенно зарастают кораллами.",
+    "en": "In 2006 one of the world's first underwater sculpture parks opened off Grenada: human figures on the seabed are slowly overgrown by coral."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "1518053ffc54ed21"
+   }
+  },
+  {
+   "id": "cty-barbados",
+   "order": 12,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Barbados",
+    "ru": "Барбадос"
+   },
+   "capital": {
+    "en": "Bridgetown",
+    "ru": "Бриджтаун"
+   },
+   "fact": {
+    "ru": "Барбадос расположен восточнее основной дуги Малых Антильских островов. В отличие от многих соседних островов вулканического происхождения, значительная часть его поверхности сложена коралловыми известняками.",
+    "en": "Barbados lies east of the main arc of the Lesser Antilles. Unlike many neighbouring islands of volcanic origin, much of its surface consists of coral limestone."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "eb726992c5ae3a0a"
+   }
+  },
+  {
+   "id": "cty-trinidad-and-tobago",
+   "order": 13,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Trinidad and Tobago",
+    "ru": "Тринидад и Тобаго"
+   },
+   "capital": {
+    "en": "Port of Spain",
+    "ru": "Порт-оф-Спейн"
+   },
+   "fact": {
+    "ru": "Тринидад лежит всего в 11 км от берега Венесуэлы. В болоте Карони на закате слетаются на ночёвку тысячи алых ибисов — одной из двух национальных птиц страны.",
+    "en": "Trinidad lies only 11 km from the coast of Venezuela. At sunset thousands of scarlet ibises, one of the country's two national birds, fly in to roost in the Caroni Swamp."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/UvTLiLUDpJE8FQWAqszTJD",
+    "note": "block 4 section 7 plan, approved by Svetlana 14.11.2026 («Утверждаю», rev 33)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-14",
+    "contentSha256": "fb30adfb4e2de6d4"
+   }
+  }
+ ]
+}

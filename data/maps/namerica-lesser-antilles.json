@@ -1,0 +1,36 @@
+{
+ "map": "./assets/namerica-lesser-antilles.webp",
+ "of": "./assets/namerica-caribbean.webp",
+ "level": "The Lesser Antilles, large: North America section 7",
+ "coordinateSystem": "frame: the piece of namerica-caribbean.webp this map shows, in % of that map (x, y = top left; w, h = size). A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so tap areas and capitals of namerica-caribbean.json apply unchanged.",
+ "source": "Built by tools/build_namerica_caribbean.py (an exact piece of the Caribbean map) and tools/build_namerica_caribbean_places.py",
+ "frame": {
+  "x": 69.79,
+  "y": 39.43,
+  "w": 25.35,
+  "h": 25.35
+ },
+ "aspect": "11 / 8",
+ "magnifier": {
+  "x": 82.47,
+  "y": 52.11
+ },
+ "objects": [
+  "cty-antigua-and-barbuda",
+  "cty-barbados",
+  "cty-dominica",
+  "cty-grenada",
+  "cty-saint-kitts-and-nevis",
+  "cty-saint-lucia",
+  "cty-saint-vincent"
+ ],
+ "capitals": [
+  "basseterre",
+  "saint-johns",
+  "roseau",
+  "castries",
+  "kingstown",
+  "saint-georges",
+  "bridgetown"
+ ]
+}

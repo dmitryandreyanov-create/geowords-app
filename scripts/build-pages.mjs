@@ -70,6 +70,8 @@ const named=[
   'data/content/b4-section-5-facts.json','data/content/b4-section-5-records.json','data/dictionary/b4-section-5.json','data/geowords/b4-section-5.json',
   // Block 4 section 6 «Countries of North and Central America»; its outlines are data/maps/namerica-countries.json, the large map namerica-camerica.json (below).
   'data/content/b4-section-6-facts.json','data/content/b4-section-6-records.json','data/dictionary/b4-section-6.json','data/geowords/b4-section-6.json',
+  // Block 4 section 7 «Countries of the Caribbean islands»; its own map data/maps/namerica-caribbean.json, the large map namerica-lesser-antilles.json (below).
+  'data/content/b4-section-7-facts.json','data/content/b4-section-7-records.json','data/dictionary/b4-section-7.json','data/geowords/b4-section-7.json',
   // Map lab (manual tap testing of approved map content).
   'lab/index.html','lab/lab.js','lab/lab.css',
   ...fs.readdirSync(path.join(root,'data/maps')).filter(f=>f.endsWith('.json')).map(f=>`data/maps/${f}`),
@@ -78,7 +80,7 @@ const named=[
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
   'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp','assets/asia-countries.webp','assets/asia-levant.webp',
-  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp','assets/namerica-deserts.webp','assets/namerica-canyons.webp','assets/namerica-countries.webp','assets/namerica-camerica.webp',
+  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp','assets/namerica-deserts.webp','assets/namerica-canyons.webp','assets/namerica-countries.webp','assets/namerica-camerica.webp','assets/namerica-caribbean.webp','assets/namerica-lesser-antilles.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){
