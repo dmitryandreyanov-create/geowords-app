@@ -20,7 +20,10 @@
       "role": "block-final",
       "definition": "People who go first into lands unknown to them and open the way for others. In North America they were Jacques Cartier on the St. Lawrence, La Salle on the Mississippi, Alexander Mackenzie, and Lewis and Clark on the way to the Pacific.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "23ac84c459a8f201"
       }
      }
     ],
@@ -30,7 +33,10 @@
       "role": "block-final",
       "definition": "Люди, которые раньше других отправляются в неизвестные им земли и открывают туда путь. В Северной Америке это Жак Картье на реке Святого Лаврентия, Ласалль на Миссисипи, Александр Маккензи, Льюис и Кларк на пути к Тихому океану.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "6db20934a3259307"
       }
      }
     ]

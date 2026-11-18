@@ -104,7 +104,7 @@ try{
     const deepOk=new Set(await page.evaluate(()=>window.__gwNaWholePlaces().map(p=>p.id+' '+p.x+' '+p.y)));
     for(let r=0;r<25;r++){const ps=await page.evaluate(()=>window.__gwNaChallengeRound());
       assert.equal(ps.length,3,'three Challenge words');assert.equal(new Set(ps.map(p=>p.section)).size,3,'three different sections');
-      for(const p of ps){const n=[...p.answer].length;assert.equal(p.markers.length,n);
+      for(const p of ps){const n=[...p.answer.replace(/[ -]/g,'')].length;assert.equal(p.markers.length,n);
         const rivers=p.markers.filter(m=>RIV.has(m.id.split('@')[0])).length;
         assert(rivers>=Math.ceil(n/3),`${p.answer}: ${rivers} river letters of ${n}`);assert(n-rivers>=Math.floor(n/3),`${p.answer}: ${rivers} river letters of ${n} — a word is never rivers only`);for(const m of p.markers)assert(deepOk.has(m.id+' '+m.x+' '+m.y),`${p.answer}: ${m.id} not on an allowed spot`);
         for(const a of p.markers)for(const b of p.markers)if(a!==b)assert(Math.hypot(a.x-b.x,(a.y-b.y)*1600/2200)>=10,`${p.answer}: ${a.id} and ${b.id} too close`);

@@ -1,6 +1,6 @@
 {
  "block": "namerica-4",
- "status": "draft",
+ "status": "approved",
  "challenge": {
   "parts": [
    "speed-hunt",
@@ -141,5 +141,11 @@
   "words": "approved review words (role review) of data/dictionary/b4-section-1..7.json, each word once; three different sections per round; recently played words last",
   "places": "the countries map of North America (namerica-countries.webp): the 10 countries of section 6 (a letter in the main part of the country, its circle wholly inside the border; a country too small for that takes no letter), the 13 rivers («on the Mississippi») and a river inside a country it crosses, and the section-1 objects (seas, gulfs, peninsulas, islands, oceans); at least a third of the letters on rivers, then the other places first, so a word is never rivers only; a country named once; spacing 10% of map width",
   "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ },
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-11-18",
+  "contentSha256": "1f76106c9e270514"
  }
 }

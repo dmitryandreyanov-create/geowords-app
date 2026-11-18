@@ -1,6 +1,6 @@
 {
  "block": "asia-3",
- "status": "draft",
+ "status": "approved",
  "challenge": {
   "parts": [
    "speed-hunt",
@@ -209,5 +209,11 @@
   "words": "approved review words (role review) of data/dictionary/b3-section-1..8.json, each word once; three different sections per round; recently played words last",
   "places": "the whole countries map of Asia: the 49 countries (a letter in the main part of the country, its circle wholly inside the border; on the whole map of Asia only the largest countries can hold the circle, the others take no letter), the 23 rivers («on the Mekong») and a river inside a country it crosses («on the Mekong in Cambodia»), the four lakes drawn on the map (Caspian, Aral, Balkhash, Issyk-Kul) and the section-1 objects (not the Arctic Ocean, Chukotka or the Bering Strait); at least a third of the letters on rivers, then the lakes, seas, islands, peninsulas and countries first, so a word is never rivers only; a country named once; spacing 10% of map width (at 9 two letters' tap areas can overlap on the whole map)",
   "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ },
+ "approval": {
+  "status": "approved",
+  "by": "Svetlana",
+  "date": "2026-11-18",
+  "contentSha256": "fca778b00cbd488f"
  }
 }

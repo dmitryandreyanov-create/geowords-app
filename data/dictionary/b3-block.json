@@ -20,7 +20,10 @@
       "role": "block-final",
       "definition": "A great variety of things that are not alike, side by side: landscapes, peoples, languages and customs. Asia is a striking example, from taiga and rainforest to deserts and the highest mountains on Earth.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "16bd78196384bd03"
       }
      }
     ],
@@ -30,7 +33,10 @@
       "role": "block-final",
       "definition": "Огромное число разных, непохожих друг на друга видов, форм и явлений рядом: природных зон, народов, языков, обычаев. Азия — яркий пример: тайга и тропические леса, пустыни и высочайшие горы Земли.",
       "approval": {
-       "status": "draft"
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "582556c14467e687"
       }
      }
     ]

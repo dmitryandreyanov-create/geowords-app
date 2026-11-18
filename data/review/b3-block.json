@@ -1,7 +1,7 @@
 {
  "block": "asia-3",
  "unit": "block-review",
- "status": "draft",
+ "status": "approved",
  "rules": {
   "noNewObjects": "only the 138 places of block 3 sections 1-8 (and the Arabian Sea and the Bay of Bengal of block 1 as river mouths); each task opens the map the place was taught on (section 1: Asia base map; rivers, lakes, mountains, deserts maps; countries and capitals on the countries map)",
   "lesson": "about 10 tasks, 3-5 minutes; places are spread over the sections of the lesson",
@@ -339,7 +339,10 @@
    "subject": "as-ob",
    "object": "as-arctic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "b14d671ee577eced"
    }
   },
   {
@@ -348,7 +351,10 @@
    "subject": "as-yenisei",
    "object": "as-arctic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "21d18066a41dcb70"
    }
   },
   {
@@ -357,7 +363,10 @@
    "subject": "as-lena",
    "object": "as-arctic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c74f09299f8edc4e"
    }
   },
   {
@@ -366,7 +375,10 @@
    "subject": "as-kolyma",
    "object": "as-arctic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "74ee3047850ecb2f"
    }
   },
   {
@@ -375,7 +387,10 @@
    "subject": "as-irtysh",
    "object": "as-ob",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "304457df38e08189"
    }
   },
   {
@@ -384,7 +399,10 @@
    "subject": "as-amur",
    "object": "as-sea-of-okhotsk",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "db7d4b3020aba03e"
    }
   },
   {
@@ -393,7 +411,10 @@
    "subject": "as-mekong",
    "object": "as-south-china-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "1a55f6a8f8913cc1"
    }
   },
   {
@@ -402,7 +423,10 @@
    "subject": "as-ganges",
    "object": "bay-of-bengal",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "54ab0c7234c92f54"
    }
   },
   {
@@ -411,7 +435,10 @@
    "subject": "as-brahmaputra",
    "object": "bay-of-bengal",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "93d2a952a22428a4"
    }
   },
   {
@@ -420,7 +447,10 @@
    "subject": "as-godavari",
    "object": "bay-of-bengal",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9cbed735149f0da8"
    }
   },
   {
@@ -429,7 +459,10 @@
    "subject": "as-indus",
    "object": "arabian-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "5a83545c1c52d727"
    }
   },
   {
@@ -442,7 +475,10 @@
     "en": "The Tigris and the Euphrates join into one river, the Shatt al-Arab, which flows into the Persian Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f63084f2163bdb33"
    }
   },
   {
@@ -455,7 +491,10 @@
     "en": "The Tigris and the Euphrates join into one river, the Shatt al-Arab, which flows into the Persian Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e77dcb2f01a2632f"
    }
   },
   {
@@ -472,7 +511,10 @@
     "en": "the Aral Sea (in the past)"
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "707b63cdadc39be8"
    }
   },
   {
@@ -485,7 +527,10 @@
     "en": "For centuries the Amu Darya and the Syr Darya flowed into the Aral Sea. Since the middle of the 20th century their water has been taken to irrigate fields: the Amu Darya now hardly reaches the sea, and the Syr Darya feeds its northern part, which is slowly recovering."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0beb39dd9e559e9b"
    }
   },
   {
@@ -494,7 +539,10 @@
    "subject": "as-ili",
    "object": "as-balkhash",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8bc054d84b84d641"
    }
   },
   {
@@ -503,7 +551,10 @@
    "subject": "as-jordan",
    "object": "as-dead-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "446c509c46de3e53"
    }
   },
   {
@@ -512,7 +563,10 @@
    "subject": "cty-iraq",
    "object": "as-tigris",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7c9ee28b33abf58c"
    }
   },
   {
@@ -521,7 +575,10 @@
    "subject": "cty-thailand",
    "object": "as-chao-phraya",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f3b8c80b9496e792"
    }
   },
   {
@@ -530,7 +587,10 @@
    "subject": "cty-laos",
    "object": "as-mekong",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6719e6faaf238045"
    }
   },
   {
@@ -539,7 +599,10 @@
    "subject": "cty-cambodia",
    "object": "as-mekong",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "49b14416b50c839c"
    }
   },
   {
@@ -548,7 +611,10 @@
    "subject": "cty-azerbaijan",
    "object": "as-caspian",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "bc17cbc2fcb2c85c"
    }
   },
   {
@@ -557,7 +623,10 @@
    "subject": "as-fuji",
    "object": "cty-japan",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a7d872656b8e3a5c"
    }
   },
   {
@@ -566,7 +635,10 @@
    "subject": "as-krakatoa",
    "object": "cty-indonesia",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9d9a4049683c7c00"
    }
   },
   {
@@ -575,7 +647,10 @@
    "subject": "as-elburz",
    "object": "cty-iran",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "38cbf0e8ef100baf"
    }
   },
   {
@@ -584,7 +659,10 @@
    "subject": "as-arakan",
    "object": "cty-myanmar",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "23b727392777f43b"
    }
   },
   {
@@ -593,7 +671,10 @@
    "subject": "as-taklamakan",
    "object": "cty-china",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0b34d5433fe2f825"
    }
   },
   {
@@ -602,7 +683,10 @@
    "subject": "as-karakum",
    "object": "cty-turkmenistan",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "483e82482d5e291e"
    }
   },
   {
@@ -611,7 +695,10 @@
    "subject": "as-lut",
    "object": "cty-iran",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9f47562643b97328"
    }
   },
   {
@@ -623,7 +710,10 @@
     "cty-china"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6b1d6fe7fa0944fa"
    }
   },
   {
@@ -635,7 +725,10 @@
     "cty-pakistan"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "2e14a76ec87a474a"
    }
   },
   {
@@ -644,7 +737,10 @@
    "subject": "as-issyk-kul",
    "object": "cty-kyrgyzstan",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "159fd47255326e57"
    }
   },
   {
@@ -653,7 +749,10 @@
    "subject": "as-balkhash",
    "object": "cty-kazakhstan",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3275bebdbcb7724d"
    }
   },
   {
@@ -662,7 +761,10 @@
    "subject": "as-tonle-sap",
    "object": "cty-cambodia",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "05f01b97b69fe2e7"
    }
   },
   {
@@ -671,7 +773,10 @@
    "subject": "as-van",
    "object": "cty-turkey",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0559eb94b7e633b4"
    }
   },
   {
@@ -680,7 +785,10 @@
    "subject": "as-urmia",
    "object": "cty-iran",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "dcf9b0f8b5eaa65b"
    }
   },
   {
@@ -689,7 +797,10 @@
    "subject": "as-khovsgol",
    "object": "cty-mongolia",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "aaead3c10a28acb0"
    }
   },
   {
@@ -698,7 +809,10 @@
    "subject": "as-qinghai",
    "object": "cty-china",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0d82dcd41205a726"
    }
   },
   {
@@ -710,7 +824,10 @@
     "cty-south-korea"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4a5360651e66306d"
    }
   },
   {
@@ -719,7 +836,10 @@
    "subject": "as-asia-minor",
    "object": "cty-turkey",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3c3b831f49d5a21e"
    }
   },
   {
@@ -736,7 +856,10 @@
     "en": "India covers most of the Indian subcontinent."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "d0ce5a5086af0bf7"
    }
   },
   {
@@ -749,7 +872,10 @@
     "cty-brunei"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "56fada5bfc8d3608"
    }
   }
  ],
@@ -767,7 +893,10 @@
     "en": "The Mekong flows into the Persian Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c98bc47e2cc6f894"
    }
   },
   {
@@ -783,7 +912,10 @@
     "en": "The Ganges flows into the Arabian Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "742aa4542a597797"
    }
   },
   {
@@ -799,7 +931,10 @@
     "en": "The Indus flows into the Bay of Bengal."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "799dab76bced797e"
    }
   },
   {
@@ -815,7 +950,10 @@
     "en": "The Lena flows into the Pacific Ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c91327b267f1b746"
    }
   },
   {
@@ -831,7 +969,10 @@
     "en": "The Amu Darya flows into the Persian Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6da7d4d6d466fef9"
    }
   },
   {
@@ -847,7 +988,10 @@
     "en": "The Ili flows into the Aral Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "2eb78d620f4ce1e5"
    }
   },
   {
@@ -863,7 +1007,10 @@
     "en": "The Jordan flows into the Persian Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "d15ac5d5d7620333"
    }
   },
   {
@@ -879,7 +1026,10 @@
     "en": "The Euphrates flows through Iran."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "cfa7148253bd8e67"
    }
   },
   {
@@ -895,7 +1045,10 @@
     "en": "Baghdad stands on the Indus."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f588417c463a687e"
    }
   },
   {
@@ -911,7 +1064,10 @@
     "en": "Bangkok stands on the Mekong."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "d031a98f503c7504"
    }
   },
   {
@@ -927,7 +1083,10 @@
     "en": "Mount Fuji is in Indonesia."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f3702fdcf1e824c1"
    }
   },
   {
@@ -943,7 +1102,10 @@
     "en": "Lake Issyk-Kul is in Mongolia."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "358ca3bc9f79c8c9"
    }
   },
   {
@@ -959,7 +1121,10 @@
     "en": "The Karakum Desert lies in Saudi Arabia."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f1f24cc8c915c971"
    }
   },
   {
@@ -975,7 +1140,10 @@
     "en": "Pakistan covers the whole of the Indian subcontinent."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "17eda968906a0310"
    }
   },
   {
@@ -991,7 +1159,10 @@
     "en": "The whole island of Borneo belongs to Malaysia."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7befab1d2b1b8397"
    }
   }
  ],
@@ -1017,7 +1188,10 @@
     "en": "Myanmar and Thailand count: the Mekong runs along their border with Laos, and the section card names six countries."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "73feff50e10a08e4"
    }
   },
   {
@@ -1039,7 +1213,10 @@
     "en": "No border cases: the Syr Darya (with the Naryn, its source) flows through all four countries."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8d2fd9bd0ceb6752"
    }
   },
   {
@@ -1060,7 +1237,10 @@
     "en": "No border cases."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "2b8ccaf491de01a3"
    }
   },
   {
@@ -1081,7 +1261,10 @@
     "en": "No border cases: the island is shared by three countries."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3e8c2d888eaf9a2a"
    }
   },
   {
@@ -1109,7 +1292,10 @@
     "en": "Bahrain is an island in the Persian Gulf off the peninsula, and the northern edge of the peninsula is drawn in different ways, so Jordan and Iraq sometimes fall on it. A tap on these three is not a mistake, but they are not needed for the answer."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "afe8f150f457e719"
    }
   },
   {
@@ -1133,7 +1319,10 @@
     "en": "The Irtysh is not a mistake: it flows into the Ob, and with it into the ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f3a97f1dcf95d153"
    }
   }
  ],
@@ -1175,7 +1364,10 @@
     "en": "The capital of Turkey is Ankara. Istanbul is the country's largest city; it stands on both banks of the Bosporus."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f36ab15f9d855fd2"
    }
   },
   {
@@ -1215,7 +1407,10 @@
     "en": "The capital of Myanmar is Naypyidaw, built in the 2000s. Yangon is the former capital and the country's largest city."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "eb74cc5f06848649"
    }
   },
   {
@@ -1245,7 +1440,10 @@
     "en": "It is called a sea, but it is a lake: it is not connected to the World Ocean. It is the largest lake on Earth by area."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c270b65070eac144"
    }
   }
  ],
@@ -1269,7 +1467,10 @@
    "check": "criterion: area (about 3 million km²); «by area» added",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0efd378963ec70f8"
    }
   },
   {
@@ -1290,7 +1491,10 @@
    },
    "check": "criterion: area (about 743,000 km²); New Guinea is larger but belongs to Oceania",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "49cbec599b7bd031"
    }
   },
   {
@@ -1311,7 +1515,10 @@
    },
    "check": "criterion: mainland only (islands not counted); 77°43′ N",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8a609f226bd917d2"
    }
   },
   {
@@ -1332,7 +1539,10 @@
    },
    "check": "criterion: length; Huang He about 5,460 km",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "bffd43c411d64510"
    }
   },
   {
@@ -1354,7 +1564,10 @@
    "check": "criterion: length (4,248 km); «one of» kept on purpose; «it flows into the Ob» added",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3ecbc20e2a85d083"
    }
   },
   {
@@ -1375,7 +1588,10 @@
    },
    "check": "criterion: average discharge (about 19,600 m³/s; the Lena about 17,000)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c6f0f5ff03822714"
    }
   },
   {
@@ -1397,7 +1613,10 @@
    "check": "«the oldest» → «one of the oldest»: the age of the oldest lakes is estimated differently",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4fb0e5a93eb1fe97"
    }
   },
   {
@@ -1419,7 +1638,10 @@
    "check": "«about 430 m» → «more than 430 m, and falling»: the level drops about 1 m a year (about −438 m in 2023)",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "ed86bc7adc6dd028"
    }
   },
   {
@@ -1441,7 +1663,10 @@
    "check": "criterion: area (about 371,000 km²); «by area» added",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9f84aa8a88b99d43"
    }
   },
   {
@@ -1462,7 +1687,10 @@
    },
    "check": "criteria: average height and area (about 2.5 million km²)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "28944125ed7ee807"
    }
   },
   {
@@ -1483,7 +1711,10 @@
    },
    "check": "the split 10/4 is the usual one («usually» kept); the highest peak of the Pamirs is about 7,500 m",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c5031be7cf45de06"
    }
   },
   {
@@ -1504,7 +1735,10 @@
    },
    "check": "criterion: height of an active volcano; Fuji 3,776 m",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c9f24c66fad11760"
    }
   },
   {
@@ -1525,7 +1759,10 @@
    },
    "check": "«one of» kept: loudness of historical sounds cannot be compared exactly",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "10719a8aca7b9f17"
    }
   },
   {
@@ -1546,7 +1783,10 @@
    },
    "check": "criterion: continuous sand area (sand sea), not desert area; the Gobi is mostly stony",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c4e38d76bdf51845"
    }
   },
   {
@@ -1568,7 +1808,10 @@
    "check": "«above 80°C» → «about 80°C»: 70.7°C (MODIS, 2005) and 80.8°C (one study, 2018); surface, not air temperature",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a1f8a66a569c156f"
    }
   },
   {
@@ -1589,7 +1832,10 @@
    },
    "check": "«considered» kept: population density depends on where the desert's edge is drawn",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c8c8d5f769ad46a6"
    }
   },
   {
@@ -1611,7 +1857,10 @@
    "check": "criterion: area (about 1.9 million km²); «by area» added; the count of islands varies, «about» kept",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6599c284f937deb8"
    }
   },
   {
@@ -1632,7 +1881,10 @@
    },
    "check": "criterion: average annual temperature; «considered» kept (Astana is close)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "34acdbed2409aa44"
    }
   },
   {
@@ -1653,7 +1905,10 @@
    },
    "check": "criterion: total length of all its parts (21,196 km, survey of 2012)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "aaa25b88fa6e432d"
    }
   },
   {
@@ -1674,7 +1929,10 @@
    },
    "check": "criterion: area; the Caspian is a lake, so its shore is not a way to the ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e328c533ad557fca"
    }
   },
   {
@@ -1696,7 +1954,10 @@
    "check": "criterion changed to average height (about 1.5 m): the highest point is given as 2.4 m traditionally but higher by newer surveys",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8e94cca27c867d8a"
    }
   },
   {
@@ -1718,7 +1979,10 @@
    "check": "criterion: doubly landlocked; the Caspian counts as a lake (Kazakhstan and Turkmenistan have no way to the ocean)",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3a166119f7d12b93"
    }
   },
   {
@@ -1739,7 +2003,10 @@
    },
    "check": "criterion: height of the capital above sea level (−28 m)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "fb7e9ed8c44db624"
    }
   },
   {
@@ -1760,7 +2027,10 @@
    },
    "check": "criterion: area among countries with no natural permanent river (only seasonal wadis)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a8e468f24c7f025c"
    }
   },
   {
@@ -1782,7 +2052,10 @@
    "check": "criterion: area; «by area» added; the area grows a little with land reclamation",
    "changedFromSection": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "67010d7a4d73536d"
    }
   }
  ]

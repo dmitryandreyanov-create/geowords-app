@@ -1,7 +1,7 @@
 {
  "block": "namerica-4",
  "unit": "block-review",
- "status": "draft",
+ "status": "approved",
  "rules": {
   "noNewObjects": "only the places of block 4: 22 of section 1, 13 rivers, 14 lakes (with Niagara Falls), 15 mountains and plains, 12 deserts and canyons, 23 countries of sections 6-7; each task opens the map the place was taught on (section 1: the North America base map; rivers, lakes, mountains, deserts maps; the 10 countries of section 6 on the countries map with the large map of Central America; the 13 island states on the Caribbean map with the large map of the Lesser Antilles)",
   "lesson": "10 tasks, 3-5 minutes; places are spread over the sections of the lesson; repeats of a mistake come on top of the 10 tasks (at most 20)",
@@ -293,7 +293,10 @@
    "subject": "na-mississippi",
    "object": "na-gulf-of-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4f76ffe53952c7fd"
    }
   },
   {
@@ -302,7 +305,10 @@
    "subject": "na-rio-grande",
    "object": "na-gulf-of-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "5ab2175dd58d2d29"
    }
   },
   {
@@ -311,7 +317,10 @@
    "subject": "na-usumacinta",
    "object": "na-gulf-of-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "aa499fe059139800"
    }
   },
   {
@@ -320,7 +329,10 @@
    "subject": "na-missouri",
    "object": "na-mississippi",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e9c9c58dd70b52c8"
    }
   },
   {
@@ -329,7 +341,10 @@
    "subject": "na-ohio",
    "object": "na-mississippi",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6dd6017a585a73eb"
    }
   },
   {
@@ -338,7 +353,10 @@
    "subject": "na-arkansas",
    "object": "na-mississippi",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "09b281610d47548c"
    }
   },
   {
@@ -347,7 +365,10 @@
    "subject": "na-mackenzie",
    "object": "na-arctic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "89c6a7314a56b59e"
    }
   },
   {
@@ -356,7 +377,10 @@
    "subject": "na-nelson",
    "object": "na-hudson-bay",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0f60776cea572e7e"
    }
   },
   {
@@ -365,7 +389,10 @@
    "subject": "na-st-lawrence",
    "object": "na-atlantic-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "504f1e1ed57f257a"
    }
   },
   {
@@ -374,7 +401,10 @@
    "subject": "na-columbia",
    "object": "na-pacific-ocean",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6649e86babf39d02"
    }
   },
   {
@@ -383,7 +413,10 @@
    "subject": "na-san-juan",
    "object": "na-caribbean-sea",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "10a525543cf6a273"
    }
   },
   {
@@ -392,7 +425,10 @@
    "subject": "na-mackenzie",
    "object": "na-great-slave",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c89c60011bd5a4fc"
    }
   },
   {
@@ -401,7 +437,10 @@
    "subject": "na-nelson",
    "object": "na-winnipeg",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "edd9755526ce339e"
    }
   },
   {
@@ -414,7 +453,10 @@
     "en": "The St. Lawrence flows out of Lake Ontario and carries the water of all the Great Lakes to the ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "79bba2ee6b7baa03"
    }
   },
   {
@@ -423,7 +465,10 @@
    "subject": "na-san-juan",
    "object": "na-nicaragua",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f8ca94145b6e8ebd"
    }
   },
   {
@@ -432,7 +477,10 @@
    "subject": "na-great-bear",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "737c1e297c42247e"
    }
   },
   {
@@ -441,7 +489,10 @@
    "subject": "na-great-slave",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "81284538d82365d5"
    }
   },
   {
@@ -450,7 +501,10 @@
    "subject": "na-winnipeg",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "5bcad5c9917383ff"
    }
   },
   {
@@ -459,7 +513,10 @@
    "subject": "na-athabasca",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "fce15641ff80042f"
    }
   },
   {
@@ -468,7 +525,10 @@
    "subject": "na-labrador",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "db1e6db32a992ac1"
    }
   },
   {
@@ -477,7 +537,10 @@
    "subject": "na-baffin",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "110ee8ed2923331b"
    }
   },
   {
@@ -486,7 +549,10 @@
    "subject": "na-newfoundland",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "123446dda8261812"
    }
   },
   {
@@ -495,7 +561,10 @@
    "subject": "na-okanagan",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "704b9303ab24232f"
    }
   },
   {
@@ -504,7 +573,10 @@
    "subject": "na-fraser-canyon",
    "object": "cty-canada",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "df6378245a3ac9eb"
    }
   },
   {
@@ -513,7 +585,10 @@
    "subject": "na-michigan",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "155262a896547c04"
    }
   },
   {
@@ -522,7 +597,10 @@
    "subject": "na-great-salt",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8201a1161d46ab05"
    }
   },
   {
@@ -531,7 +609,10 @@
    "subject": "na-tahoe",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "310767c13c46e817"
    }
   },
   {
@@ -540,7 +621,10 @@
    "subject": "na-denali",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "ba6d12ed6e8c1d9c"
    }
   },
   {
@@ -549,7 +633,10 @@
    "subject": "na-mojave",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "ad9400d7aeba8f56"
    }
   },
   {
@@ -558,7 +645,10 @@
    "subject": "na-great-basin",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4bba252eafaad38b"
    }
   },
   {
@@ -567,7 +657,10 @@
    "subject": "na-grand-canyon",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "dfaa4f0bddcc4888"
    }
   },
   {
@@ -576,7 +669,10 @@
    "subject": "na-florida",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "11ccb09b02fe4f4e"
    }
   },
   {
@@ -585,7 +681,10 @@
    "subject": "na-alaska-peninsula",
    "object": "cty-united-states",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "366dcc493c2bc2fd"
    }
   },
   {
@@ -594,7 +693,10 @@
    "subject": "na-chapala",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a464c5dc2b61fb6a"
    }
   },
   {
@@ -603,7 +705,10 @@
    "subject": "na-orizaba",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "aa3dabdbfc40a1e1"
    }
   },
   {
@@ -612,7 +717,10 @@
    "subject": "na-popocatepetl",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9a4c8f28921f33a0"
    }
   },
   {
@@ -621,7 +729,10 @@
    "subject": "na-mexican-plateau",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "87f44bd66aad5dad"
    }
   },
   {
@@ -630,7 +741,10 @@
    "subject": "na-vizcaino",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "b1551f8e00344df0"
    }
   },
   {
@@ -639,7 +753,10 @@
    "subject": "na-copper-canyon",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "446476aeb07c16f8"
    }
   },
   {
@@ -648,7 +765,10 @@
    "subject": "na-baja-california",
    "object": "cty-mexico",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7c69db5882266337"
    }
   },
   {
@@ -657,7 +777,10 @@
    "subject": "na-nicaragua",
    "object": "cty-nicaragua",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "d9b6da583a440a30"
    }
   },
   {
@@ -669,7 +792,10 @@
     "cty-united-states"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "ddefbbe9e5260764"
    }
   },
   {
@@ -681,7 +807,10 @@
     "cty-united-states"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9414cd8e0bbe60c3"
    }
   },
   {
@@ -693,7 +822,10 @@
     "cty-united-states"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a8463277d139c728"
    }
   },
   {
@@ -705,7 +837,10 @@
     "cty-united-states"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e55d5db16db80cd1"
    }
   },
   {
@@ -717,7 +852,10 @@
     "cty-mexico"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c33198c7479150ec"
    }
   },
   {
@@ -729,7 +867,10 @@
     "cty-united-states"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f81991130e017a08"
    }
   },
   {
@@ -746,7 +887,10 @@
     "en": "Mexico, Guatemala and Belize"
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "f1af97c3a41d2c77"
    }
   },
   {
@@ -758,7 +902,10 @@
     "cty-dominican-republic"
    ],
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0e2ca4ef58f41f42"
    }
   }
  ],
@@ -776,7 +923,10 @@
     "en": "The Mississippi flows into Hudson Bay."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "38710e8e969c6647"
    }
   },
   {
@@ -792,7 +942,10 @@
     "en": "The Nelson flows into the Pacific Ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3226c16548dcceb9"
    }
   },
   {
@@ -808,7 +961,10 @@
     "en": "The Mackenzie flows into the Gulf of Mexico."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "af709efd206c535d"
    }
   },
   {
@@ -824,7 +980,10 @@
     "en": "The Columbia flows into the Atlantic Ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "532b14accc3b0125"
    }
   },
   {
@@ -840,7 +999,10 @@
     "en": "The St. Lawrence carries the water of the Great Lakes to the Pacific Ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8af319659d1498d4"
    }
   },
   {
@@ -856,7 +1018,10 @@
     "en": "The Missouri is a tributary of the St. Lawrence."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "c2754e2535268458"
    }
   },
   {
@@ -872,7 +1037,10 @@
     "en": "The San Juan flows into the Pacific Ocean."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "fb1185094419ae6f"
    }
   },
   {
@@ -888,7 +1056,10 @@
     "en": "The Rio Grande runs along the border of the United States and Canada."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "229205952f92668f"
    }
   },
   {
@@ -904,7 +1075,10 @@
     "en": "Lake Michigan lies on the border of the United States and Canada."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "5fce6d5d326b44aa"
    }
   },
   {
@@ -920,7 +1094,10 @@
     "en": "Great Bear Lake is in Mexico."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "666ff4271e80650f"
    }
   },
   {
@@ -936,7 +1113,10 @@
     "en": "Lake Chapala is in Canada."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "551f756229d620e3"
    }
   },
   {
@@ -952,7 +1132,10 @@
     "en": "Denali is in Mexico."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8254d27c298f81e4"
    }
   },
   {
@@ -968,7 +1151,10 @@
     "en": "Popocatépetl is in Canada."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "6b6d381a4f59dcb2"
    }
   },
   {
@@ -984,7 +1170,10 @@
     "en": "The whole Yucatán Peninsula belongs to Guatemala."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9b21b823898c5c9f"
    }
   },
   {
@@ -1000,7 +1189,10 @@
     "en": "Cuba covers the whole island of Hispaniola."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "59d637223e88826d"
    }
   },
   {
@@ -1016,7 +1208,10 @@
     "en": "The Copper Canyon is in Canada."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "ab0da41e151bdfdb"
    }
   }
  ],
@@ -1040,7 +1235,10 @@
     "en": "Guatemala counts: its northern part, the Petén, lies on the peninsula."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "018f6a4ce29a506d"
    }
   },
   {
@@ -1065,7 +1263,10 @@
     "en": "Mexico counts: the eastern coast of the Yucatán is on the Caribbean Sea. Honduras reaches the Pacific through the Gulf of Fonseca. El Salvador has only a Pacific coast, Belize only a Caribbean one, and the United States has no coast on the Caribbean Sea."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "5f420ace2afe83c0"
    }
   },
   {
@@ -1088,7 +1289,10 @@
     "en": "Puerto Rico is a Greater Antilles island too, but it is a territory of the United States, not a separate country. The Bahamas lie in the Atlantic Ocean and are not counted among the Antilles."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7f47193eb021c83a"
    }
   },
   {
@@ -1114,7 +1318,10 @@
     "en": "The Missouri, the Ohio and the Arkansas are not a mistake: they flow into the Mississippi, and with it into the Gulf."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "fefe6b416c909053"
    }
   }
  ],
@@ -1156,7 +1363,10 @@
     "en": "The capital of the United States is Washington. New York is the country's largest city."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e4156c75a801f65a"
    }
   },
   {
@@ -1196,7 +1406,10 @@
     "en": "The capital of Canada is Ottawa. Toronto is the country's largest city."
    },
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7626125f4fe186dd"
    }
   }
  ],
@@ -1219,7 +1432,10 @@
    },
    "check": "true text = approved section-1 record; Florida about 150,000 km² vs Labrador about 1.4 million km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "fce25b9e6e482cc2"
    }
   },
   {
@@ -1241,7 +1457,10 @@
    "check": "NEW, replaces the section-1 Cuba record (Svetlana 18.11: one Cuba record only); Greenland about 2.17 million km², Baffin about 507,000 km² (5th)",
    "newInReview": true,
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "64a099f42f1f7bfc"
    }
   },
   {
@@ -1262,7 +1481,10 @@
    },
    "check": "true text = approved section-1 record; Murchison Promontory is on the Boothia Peninsula (71°58′ N); Point Barrow in Alaska is 71°23′ N",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e8da7f967eaeb351"
    }
   },
   {
@@ -1283,7 +1505,10 @@
    },
    "check": "true text = approved section-2 record; the Yukon is about 3,190 km",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "12e86977bcbf3270"
    }
   },
   {
@@ -1304,7 +1529,10 @@
    },
    "check": "true text = approved section-2 record; Mackenzie system about 4,240 km, Nelson–Saskatchewan about 2,575 km",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8af81ac56d34d3c3"
    }
   },
   {
@@ -1325,7 +1553,10 @@
    },
    "check": "true text = approved section-2 record; the Colorado usually does not reach the sea (its card)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "13dcea863226c542"
    }
   },
   {
@@ -1346,7 +1577,10 @@
    },
    "check": "true text = approved section-3 record; Superior about 82,100 km², Michigan about 58,000 km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "794ee45cdafe2082"
    }
   },
   {
@@ -1367,7 +1601,10 @@
    },
    "check": "true text = approved section-3 record; the Great Salt Lake is shallow (about 10 m)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "d746dd053d0114aa"
    }
   },
   {
@@ -1388,7 +1625,10 @@
    },
    "check": "true text = approved section-3 record; Great Bear about 31,000 km², Winnipeg about 24,500 km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4b09a76b7eb60bfb"
    }
   },
   {
@@ -1409,7 +1649,10 @@
    },
    "check": "true text = approved section-4 record; Orizaba 5,636 m",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a6f3763b18a2c532"
    }
   },
   {
@@ -1430,7 +1673,10 @@
    },
    "check": "true text = approved section-4 record; Popocatépetl about 5,400 m",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "119eee3237f3d9fc"
    }
   },
   {
@@ -1451,7 +1697,10 @@
    },
    "check": "true text = approved section-4 record (Acasta gneiss about 4.0 billion years); the false one is a thousand times younger",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e2d152dd32d568bb"
    }
   },
   {
@@ -1472,7 +1721,10 @@
    },
    "check": "true text = approved section-5 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8cfb002bbeba5a59"
    }
   },
   {
@@ -1493,7 +1745,10 @@
    },
    "check": "true text = approved section-5 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "0416df85196c88e4"
    }
   },
   {
@@ -1514,7 +1769,10 @@
    },
    "check": "true text = approved section-5 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "73b2f6af860039cd"
    }
   },
   {
@@ -1535,7 +1793,10 @@
    },
    "check": "true text = approved section-6 record; the US about 9.8 million km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "e07db2c5c551d2f0"
    }
   },
   {
@@ -1556,7 +1817,10 @@
    },
    "check": "true text = approved section-6 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "4493750f97857030"
    }
   },
   {
@@ -1577,7 +1841,10 @@
    },
    "check": "true text = approved section-6 record; the US–Mexico border is about 3,150 km",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "45a04ff074925995"
    }
   },
   {
@@ -1598,7 +1865,10 @@
    },
    "check": "true text = approved section-6 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "221ee0219045e4c3"
    }
   },
   {
@@ -1619,7 +1889,10 @@
    },
    "check": "true text = approved section-6 record; Panama about 75,000 km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "8f948054f3231788"
    }
   },
   {
@@ -1640,7 +1913,10 @@
    },
    "check": "true text = approved section-6 record; Belize about 23,000 km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "3a3d25093fc10292"
    }
   },
   {
@@ -1661,7 +1937,10 @@
    },
    "check": "true text = approved section-7 record (the one Cuba record kept, Svetlana 18.11)",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "9f930c2cbc8209fb"
    }
   },
   {
@@ -1682,7 +1961,10 @@
    },
    "check": "true text = approved section-7 record; Blue Mountain Peak in Jamaica 2,256 m",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "a25e5f28e1825a9d"
    }
   },
   {
@@ -1703,7 +1985,10 @@
    },
    "check": "true text = approved section-7 record; Barbados about 430 km², Saint Kitts and Nevis about 260 km²",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "22bd544a5dbe1eb8"
    }
   },
   {
@@ -1724,7 +2009,10 @@
    },
    "check": "true text = approved section-7 record",
    "approval": {
-    "status": "draft"
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "7d2e094021b6fe89"
    }
   }
  ]
