@@ -1,0 +1,145 @@
+{
+ "block": "namerica-4",
+ "status": "draft",
+ "challenge": {
+  "parts": [
+   "speed-hunt",
+   "geowords"
+  ],
+  "geowords": "three app-generated words per round from the approved review words of block 4 sections 1-7, three words from three different sections; letters on the countries map of North America with its rivers"
+ },
+ "speedHunt": {
+  "durationSeconds": 60,
+  "map": "./assets/namerica-countries.webp",
+  "prompt": {
+   "en": "Find:",
+   "ru": "Найди:",
+   "object": "the country or river name as on the cards; no capitals, records or facts"
+  },
+  "order": "difficulty alternates easy, medium, easy, hard… (random inside a tier, no object repeats within a round); after a tier runs out the others go on in turn",
+  "difficulty": {
+   "countries": {
+    "easy": [
+     "cty-canada",
+     "cty-united-states",
+     "cty-mexico",
+     "cty-cuba"
+    ],
+    "medium": [
+     "cty-guatemala",
+     "cty-honduras",
+     "cty-nicaragua",
+     "cty-panama",
+     "cty-haiti",
+     "cty-dominican-republic"
+    ],
+    "hard": [
+     "cty-belize",
+     "cty-el-salvador",
+     "cty-costa-rica",
+     "cty-jamaica",
+     "cty-bahamas"
+    ]
+   },
+   "rivers": {
+    "easy": [
+     "na-mississippi",
+     "na-missouri",
+     "na-yukon",
+     "na-mackenzie",
+     "na-st-lawrence",
+     "na-rio-grande",
+     "na-colorado"
+    ],
+    "medium": [
+     "na-ohio",
+     "na-columbia",
+     "na-nelson",
+     "na-arkansas"
+    ],
+    "hard": [
+     "na-usumacinta",
+     "na-san-juan"
+    ]
+   }
+  },
+  "islands": {
+   "ids": [
+    "cty-cuba",
+    "cty-jamaica",
+    "cty-haiti",
+    "cty-dominican-republic",
+    "cty-bahamas"
+   ],
+   "from": "data/maps/namerica-caribbean.json",
+   "how": "their tap areas are carried onto the countries map through the frame of the Caribbean map (the same base, tools/namerica_base.py)"
+  },
+  "correct": "+1 and the next object at once",
+  "wrong": "the right place lights up for 0.5 s; no penalty except time; the object goes into the weak list",
+  "skip": "allowed",
+  "hit": "a river counts within 8 CSS px of its drawn line; a country counts inside its outline or within 22 CSS px of it; the small countries (the hard tier) within 36 CSS px — an enlarged tap area that lies only over the sea, never over a neighbour: a tap inside another country's outline answers that country (only a tap within 2 px of the asked country's own border line still counts for it), and the nearest object of the pool wins, so two enlarged areas never overlap",
+  "excluded": {
+   "ids": [
+    "cty-saint-kitts-and-nevis",
+    "cty-antigua-and-barbuda",
+    "cty-dominica",
+    "cty-saint-lucia",
+    "cty-saint-vincent",
+    "cty-grenada",
+    "cty-barbados",
+    "cty-trinidad-and-tobago"
+   ],
+   "why": "the eight small states of the Lesser Antilles cannot be seen on the map of the whole continent, even enlarged (Svetlana 18.11.2026: they are reviewed in lesson 3); lakes, mountains, deserts and section-1 places are on other maps; no capitals"
+  },
+  "score": "objects found in the round + personal best",
+  "stars": {
+   "thresholds": [
+    10,
+    15,
+    20
+   ],
+   "provisional": true,
+   "note": "the same as Europe and Asia; tune after testing with children"
+  },
+  "pool": {
+   "countries": [
+    "cty-canada",
+    "cty-united-states",
+    "cty-mexico",
+    "cty-cuba",
+    "cty-guatemala",
+    "cty-honduras",
+    "cty-nicaragua",
+    "cty-panama",
+    "cty-haiti",
+    "cty-dominican-republic",
+    "cty-belize",
+    "cty-el-salvador",
+    "cty-costa-rica",
+    "cty-jamaica",
+    "cty-bahamas"
+   ],
+   "rivers": [
+    "na-mississippi",
+    "na-missouri",
+    "na-yukon",
+    "na-mackenzie",
+    "na-st-lawrence",
+    "na-rio-grande",
+    "na-colorado",
+    "na-ohio",
+    "na-columbia",
+    "na-nelson",
+    "na-arkansas",
+    "na-usumacinta",
+    "na-san-juan"
+   ]
+  },
+  "poolSize": 28
+ },
+ "geowords": {
+  "words": "approved review words (role review) of data/dictionary/b4-section-1..7.json, each word once; three different sections per round; recently played words last",
+  "places": "the countries map of North America (namerica-countries.webp): the 10 countries of section 6 (a letter in the main part of the country, its circle wholly inside the border; a country too small for that takes no letter), the 13 rivers («on the Mississippi») and a river inside a country it crosses, and the section-1 objects (seas, gulfs, peninsulas, islands, oceans); at least a third of the letters on rivers, then the other places first, so a word is never rivers only; a country named once; spacing 10% of map width",
+  "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ }
+}

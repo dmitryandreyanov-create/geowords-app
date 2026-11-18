@@ -1,0 +1,1731 @@
+{
+ "block": "namerica-4",
+ "unit": "block-review",
+ "status": "draft",
+ "rules": {
+  "noNewObjects": "only the places of block 4: 22 of section 1, 13 rivers, 14 lakes (with Niagara Falls), 15 mountains and plains, 12 deserts and canyons, 23 countries of sections 6-7; each task opens the map the place was taught on (section 1: the North America base map; rivers, lakes, mountains, deserts maps; the 10 countries of section 6 on the countries map with the large map of Central America; the 13 island states on the Caribbean map with the large map of the Lesser Antilles)",
+  "lesson": "10 tasks, 3-5 minutes; places are spread over the sections of the lesson; repeats of a mistake come on top of the 10 tasks (at most 20)",
+  "adaptive": "no mistakes yet: the places asked longest ago (or never) come first, taken in turn from each section; a few mistakes: up to 60% of the places are the child's weakest (most mistakes first), the rest as with no mistakes; repeated mistakes: a wrong answer comes back once at the end of the lesson, and a second mistake shows the answer and moves on (the place stays weak for the next lesson); a place is asked at most once per lesson (a country and its capital count as one place), and a weak place's weight is capped at 3 so one place never fills a lesson",
+  "neutral": "Greenland and the dependencies of other countries are geographic places only: never a country in a task; Puerto Rico is named only in the note of the Greater Antilles task",
+  "mouths": "a river is tied only to a water body taught on its card: no Yukon (the Bering Sea is not taught, Svetlana 18.11.2026) and no Colorado (by its card it usually does not reach the Gulf of California); the Missouri, the Ohio and the Arkansas flow into the Mississippi",
+  "crosses": "river → country pairs use «through» only; «along» (a border stretch: the Rio Grande for Mexico, the Usumacinta for Guatemala, the San Juan for Costa Rica, the St. Lawrence for the United States) is never a pair and never a wrong answer",
+  "approval": "each relation, true/false pair, select-all task, trap and record: approval.contentSha256 = first 16 hex of sha256 over the item without its approval (tools/approve.mjs); an item shows only when approved"
+ },
+ "lessons": [
+  {
+   "id": "lesson-1-map-rivers",
+   "title": {
+    "ru": "Северная Америка на карте и реки",
+    "en": "North America on the map and rivers"
+   },
+   "objects": [
+    "section-1",
+    "rivers"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-2-lakes-mountains-deserts",
+   "title": {
+    "ru": "Озёра, горы, пустыни и каньоны",
+    "en": "Lakes, mountains, deserts and canyons"
+   },
+   "objects": [
+    "lakes",
+    "mountains",
+    "deserts"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-3-countries",
+   "title": {
+    "ru": "Страны и столицы",
+    "en": "Countries and capitals"
+   },
+   "objects": [
+    "countries-north-central",
+    "countries-caribbean"
+   ],
+   "tasks": [
+    {
+     "type": "find-country",
+     "count": 3
+    },
+    {
+     "type": "find-capital",
+     "count": 2
+    },
+    {
+     "type": "which-country",
+     "count": 2
+    },
+    {
+     "type": "pairs-country-capital",
+     "count": 1
+    },
+    {
+     "type": "write-capital",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-4-relations",
+   "title": {
+    "ru": "Связи",
+    "en": "Connections"
+   },
+   "objects": [
+    "relations"
+   ],
+   "tasks": [
+    {
+     "type": "pairs",
+     "count": 4,
+     "kinds": [
+      "flowsInto",
+      "flowsOutOf",
+      "crosses",
+      "inCountry"
+     ]
+    },
+    {
+     "type": "select-all",
+     "count": 3
+    },
+    {
+     "type": "true-false",
+     "count": 2
+    },
+    {
+     "type": "trap",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "lesson-5-records",
+   "title": {
+    "ru": "Рекорды",
+    "en": "Records"
+   },
+   "objects": [
+    "records"
+   ],
+   "tasks": [
+    {
+     "type": "true-false",
+     "count": 4
+    },
+    {
+     "type": "pairs",
+     "count": 2
+    },
+    {
+     "type": "find-by-record",
+     "count": 2
+    },
+    {
+     "type": "what-is-it-by-record",
+     "count": 2
+    }
+   ],
+   "note": "25 records: 4 + 2x3 + 2 + 2 = 14 different records per lesson"
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "ru": "Итог блока",
+    "en": "Block final"
+   },
+   "geowords": [
+    "b4-block-final-en",
+    "b4-block-final-ru"
+   ],
+   "reward": "passport stamp"
+  }
+ ],
+ "crosses": [
+  {
+   "river": "na-mississippi",
+   "through": [
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-missouri",
+   "through": [
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-ohio",
+   "through": [
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-arkansas",
+   "through": [
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-yukon",
+   "through": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-columbia",
+   "through": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-colorado",
+   "through": [
+    "cty-united-states",
+    "cty-mexico"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-mackenzie",
+   "through": [
+    "cty-canada"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-nelson",
+   "through": [
+    "cty-canada"
+   ],
+   "along": []
+  },
+  {
+   "river": "na-st-lawrence",
+   "through": [
+    "cty-canada"
+   ],
+   "along": [
+    "cty-united-states"
+   ]
+  },
+  {
+   "river": "na-rio-grande",
+   "through": [
+    "cty-united-states"
+   ],
+   "along": [
+    "cty-mexico"
+   ]
+  },
+  {
+   "river": "na-usumacinta",
+   "through": [
+    "cty-mexico"
+   ],
+   "along": [
+    "cty-guatemala"
+   ]
+  },
+  {
+   "river": "na-san-juan",
+   "through": [
+    "cty-nicaragua"
+   ],
+   "along": [
+    "cty-costa-rica"
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "id": "flowsInto-mississippi",
+   "relation": "flowsInto",
+   "subject": "na-mississippi",
+   "object": "na-gulf-of-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-rio-grande",
+   "relation": "flowsInto",
+   "subject": "na-rio-grande",
+   "object": "na-gulf-of-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-usumacinta",
+   "relation": "flowsInto",
+   "subject": "na-usumacinta",
+   "object": "na-gulf-of-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-missouri",
+   "relation": "flowsInto",
+   "subject": "na-missouri",
+   "object": "na-mississippi",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-ohio",
+   "relation": "flowsInto",
+   "subject": "na-ohio",
+   "object": "na-mississippi",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-arkansas",
+   "relation": "flowsInto",
+   "subject": "na-arkansas",
+   "object": "na-mississippi",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-mackenzie",
+   "relation": "flowsInto",
+   "subject": "na-mackenzie",
+   "object": "na-arctic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-nelson",
+   "relation": "flowsInto",
+   "subject": "na-nelson",
+   "object": "na-hudson-bay",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-st-lawrence",
+   "relation": "flowsInto",
+   "subject": "na-st-lawrence",
+   "object": "na-atlantic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-columbia",
+   "relation": "flowsInto",
+   "subject": "na-columbia",
+   "object": "na-pacific-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-san-juan",
+   "relation": "flowsInto",
+   "subject": "na-san-juan",
+   "object": "na-caribbean-sea",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsOutOf-mackenzie",
+   "relation": "flowsOutOf",
+   "subject": "na-mackenzie",
+   "object": "na-great-slave",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsOutOf-nelson",
+   "relation": "flowsOutOf",
+   "subject": "na-nelson",
+   "object": "na-winnipeg",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsOutOf-st-lawrence",
+   "relation": "flowsOutOf",
+   "subject": "na-st-lawrence",
+   "object": "na-ontario",
+   "note": {
+    "ru": "Река Святого Лаврентия вытекает из озера Онтарио и выносит в океан воду всех Великих озёр.",
+    "en": "The St. Lawrence flows out of Lake Ontario and carries the water of all the Great Lakes to the ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsOutOf-san-juan",
+   "relation": "flowsOutOf",
+   "subject": "na-san-juan",
+   "object": "na-nicaragua",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-great-bear",
+   "relation": "inCountry",
+   "subject": "na-great-bear",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-great-slave",
+   "relation": "inCountry",
+   "subject": "na-great-slave",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-winnipeg",
+   "relation": "inCountry",
+   "subject": "na-winnipeg",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-athabasca",
+   "relation": "inCountry",
+   "subject": "na-athabasca",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-labrador",
+   "relation": "inCountry",
+   "subject": "na-labrador",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-baffin",
+   "relation": "inCountry",
+   "subject": "na-baffin",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-newfoundland",
+   "relation": "inCountry",
+   "subject": "na-newfoundland",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-okanagan",
+   "relation": "inCountry",
+   "subject": "na-okanagan",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-fraser-canyon",
+   "relation": "inCountry",
+   "subject": "na-fraser-canyon",
+   "object": "cty-canada",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-michigan",
+   "relation": "inCountry",
+   "subject": "na-michigan",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-great-salt",
+   "relation": "inCountry",
+   "subject": "na-great-salt",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-tahoe",
+   "relation": "inCountry",
+   "subject": "na-tahoe",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-denali",
+   "relation": "inCountry",
+   "subject": "na-denali",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-mojave",
+   "relation": "inCountry",
+   "subject": "na-mojave",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-great-basin",
+   "relation": "inCountry",
+   "subject": "na-great-basin",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-grand-canyon",
+   "relation": "inCountry",
+   "subject": "na-grand-canyon",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-florida",
+   "relation": "inCountry",
+   "subject": "na-florida",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-alaska-peninsula",
+   "relation": "inCountry",
+   "subject": "na-alaska-peninsula",
+   "object": "cty-united-states",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-chapala",
+   "relation": "inCountry",
+   "subject": "na-chapala",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-orizaba",
+   "relation": "inCountry",
+   "subject": "na-orizaba",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-popocatepetl",
+   "relation": "inCountry",
+   "subject": "na-popocatepetl",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-mexican-plateau",
+   "relation": "inCountry",
+   "subject": "na-mexican-plateau",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-vizcaino",
+   "relation": "inCountry",
+   "subject": "na-vizcaino",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-copper-canyon",
+   "relation": "inCountry",
+   "subject": "na-copper-canyon",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-baja-california",
+   "relation": "inCountry",
+   "subject": "na-baja-california",
+   "object": "cty-mexico",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-nicaragua",
+   "relation": "inCountry",
+   "subject": "na-nicaragua",
+   "object": "cty-nicaragua",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-superior",
+   "relation": "inCountry",
+   "subject": "na-superior",
+   "object": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-huron",
+   "relation": "inCountry",
+   "subject": "na-huron",
+   "object": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-erie",
+   "relation": "inCountry",
+   "subject": "na-erie",
+   "object": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-ontario",
+   "relation": "inCountry",
+   "subject": "na-ontario",
+   "object": [
+    "cty-canada",
+    "cty-united-states"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-sonoran",
+   "relation": "inCountry",
+   "subject": "na-sonoran",
+   "object": [
+    "cty-united-states",
+    "cty-mexico"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-chihuahuan",
+   "relation": "inCountry",
+   "subject": "na-chihuahuan",
+   "object": [
+    "cty-mexico",
+    "cty-united-states"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-yucatan",
+   "relation": "inCountry",
+   "subject": "na-yucatan",
+   "object": [
+    "cty-mexico",
+    "cty-guatemala",
+    "cty-belize"
+   ],
+   "label": {
+    "ru": "Мексика, Гватемала и Белиз",
+    "en": "Mexico, Guatemala and Belize"
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-hispaniola",
+   "relation": "inCountry",
+   "subject": "na-hispaniola",
+   "object": [
+    "cty-haiti",
+    "cty-dominican-republic"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "trueFalse": [
+  {
+   "id": "tf-n01",
+   "subject": "na-mississippi",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Миссисипи впадает в Мексиканский залив.",
+    "en": "The Mississippi flows into the Gulf of Mexico."
+   },
+   "false": {
+    "ru": "Миссисипи впадает в Гудзонов залив.",
+    "en": "The Mississippi flows into Hudson Bay."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n02",
+   "subject": "na-nelson",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Река Нельсон впадает в Гудзонов залив.",
+    "en": "The Nelson flows into Hudson Bay."
+   },
+   "false": {
+    "ru": "Река Нельсон впадает в Тихий океан.",
+    "en": "The Nelson flows into the Pacific Ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n03",
+   "subject": "na-mackenzie",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Маккензи впадает в Северный Ледовитый океан.",
+    "en": "The Mackenzie flows into the Arctic Ocean."
+   },
+   "false": {
+    "ru": "Маккензи впадает в Мексиканский залив.",
+    "en": "The Mackenzie flows into the Gulf of Mexico."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n04",
+   "subject": "na-columbia",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Колумбия впадает в Тихий океан.",
+    "en": "The Columbia flows into the Pacific Ocean."
+   },
+   "false": {
+    "ru": "Колумбия впадает в Атлантический океан.",
+    "en": "The Columbia flows into the Atlantic Ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n05",
+   "subject": "na-st-lawrence",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Река Святого Лаврентия выносит воду Великих озёр в Атлантический океан.",
+    "en": "The St. Lawrence carries the water of the Great Lakes to the Atlantic Ocean."
+   },
+   "false": {
+    "ru": "Река Святого Лаврентия выносит воду Великих озёр в Тихий океан.",
+    "en": "The St. Lawrence carries the water of the Great Lakes to the Pacific Ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n06",
+   "subject": "na-missouri",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Миссури — приток Миссисипи.",
+    "en": "The Missouri is a tributary of the Mississippi."
+   },
+   "false": {
+    "ru": "Миссури — приток реки Святого Лаврентия.",
+    "en": "The Missouri is a tributary of the St. Lawrence."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n07",
+   "subject": "na-san-juan",
+   "relation": "flowsOutOf",
+   "true": {
+    "ru": "Река Сан-Хуан вытекает из озера Никарагуа и впадает в Карибское море.",
+    "en": "The San Juan flows out of Lake Nicaragua into the Caribbean Sea."
+   },
+   "false": {
+    "ru": "Река Сан-Хуан впадает в Тихий океан.",
+    "en": "The San Juan flows into the Pacific Ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n08",
+   "subject": "na-rio-grande",
+   "relation": "crosses",
+   "true": {
+    "ru": "Рио-Гранде течёт по границе США и Мексики.",
+    "en": "The Rio Grande runs along the border of the United States and Mexico."
+   },
+   "false": {
+    "ru": "Рио-Гранде течёт по границе США и Канады.",
+    "en": "The Rio Grande runs along the border of the United States and Canada."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n09",
+   "subject": "na-michigan",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Озеро Мичиган целиком лежит в США.",
+    "en": "Lake Michigan lies wholly in the United States."
+   },
+   "false": {
+    "ru": "Озеро Мичиган лежит на границе США и Канады.",
+    "en": "Lake Michigan lies on the border of the United States and Canada."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n10",
+   "subject": "na-great-bear",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Большое Медвежье озеро лежит в Канаде.",
+    "en": "Great Bear Lake is in Canada."
+   },
+   "false": {
+    "ru": "Большое Медвежье озеро лежит в Мексике.",
+    "en": "Great Bear Lake is in Mexico."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n11",
+   "subject": "na-chapala",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Озеро Чапала находится в Мексике.",
+    "en": "Lake Chapala is in Mexico."
+   },
+   "false": {
+    "ru": "Озеро Чапала находится в Канаде.",
+    "en": "Lake Chapala is in Canada."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n12",
+   "subject": "na-denali",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Гора Денали находится на Аляске, в США.",
+    "en": "Denali is in Alaska, in the United States."
+   },
+   "false": {
+    "ru": "Гора Денали находится в Мексике.",
+    "en": "Denali is in Mexico."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n13",
+   "subject": "na-popocatepetl",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Вулкан Попокатепетль находится в Мексике.",
+    "en": "Popocatépetl is in Mexico."
+   },
+   "false": {
+    "ru": "Вулкан Попокатепетль находится в Канаде.",
+    "en": "Popocatépetl is in Canada."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n14",
+   "subject": "na-yucatan",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Полуостров Юкатан поделён между тремя странами: Мексикой, Гватемалой и Белизом.",
+    "en": "The Yucatán Peninsula is shared by three countries: Mexico, Guatemala and Belize."
+   },
+   "false": {
+    "ru": "Весь полуостров Юкатан принадлежит Гватемале.",
+    "en": "The whole Yucatán Peninsula belongs to Guatemala."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n15",
+   "subject": "na-hispaniola",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Остров Гаити поделён между двумя странами: Гаити и Доминиканской Республикой.",
+    "en": "The island of Hispaniola is shared by two countries: Haiti and the Dominican Republic."
+   },
+   "false": {
+    "ru": "Весь остров Гаити занимает Куба.",
+    "en": "Cuba covers the whole island of Hispaniola."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-n16",
+   "subject": "na-copper-canyon",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Медный каньон находится в Мексике.",
+    "en": "The Copper Canyon is in Mexico."
+   },
+   "false": {
+    "ru": "Медный каньон находится в Канаде.",
+    "en": "The Copper Canyon is in Canada."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "selectAll": [
+  {
+   "id": "all-yucatan-countries",
+   "map": "countries",
+   "sec": 27,
+   "want": [
+    "cty-mexico",
+    "cty-guatemala",
+    "cty-belize"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, которые лежат на полуострове Юкатан",
+    "en": "Tap every country on the Yucatán Peninsula"
+   },
+   "borderCases": {
+    "ru": "Гватемала считается: на полуостров заходит её северная часть, Петен.",
+    "en": "Guatemala counts: its northern part, the Petén, lies on the peninsula."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-pacific-caribbean",
+   "map": "countries",
+   "sec": 27,
+   "want": [
+    "cty-mexico",
+    "cty-guatemala",
+    "cty-honduras",
+    "cty-nicaragua",
+    "cty-costa-rica",
+    "cty-panama"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, которые омывают и Тихий океан, и Карибское море",
+    "en": "Tap every country with coasts on both the Pacific Ocean and the Caribbean Sea"
+   },
+   "borderCases": {
+    "ru": "Мексика считается: восточный берег Юкатана омывает Карибское море. Гондурас выходит к Тихому океану заливом Фонсека. Сальвадор выходит только к Тихому океану, Белиз — только к Карибскому морю, у США нет берега Карибского моря.",
+    "en": "Mexico counts: the eastern coast of the Yucatán is on the Caribbean Sea. Honduras reaches the Pacific through the Gulf of Fonseca. El Salvador has only a Pacific coast, Belize only a Caribbean one, and the United States has no coast on the Caribbean Sea."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-greater-antilles",
+   "map": "caribbean",
+   "sec": 28,
+   "want": [
+    "cty-cuba",
+    "cty-jamaica",
+    "cty-haiti",
+    "cty-dominican-republic"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны Больших Антильских островов",
+    "en": "Tap every country of the Greater Antilles"
+   },
+   "borderCases": {
+    "ru": "Пуэрто-Рико — тоже Большой Антильский остров, но это территория США, а не отдельная страна. Багамы лежат в Атлантическом океане, к Антильским островам их не относят.",
+    "en": "Puerto Rico is a Greater Antilles island too, but it is a territory of the United States, not a separate country. The Bahamas lie in the Atlantic Ocean and are not counted among the Antilles."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-gulf-rivers",
+   "map": "rivers",
+   "sec": 23,
+   "want": [
+    "na-mississippi",
+    "na-rio-grande",
+    "na-usumacinta"
+   ],
+   "neutral": [
+    "na-missouri",
+    "na-ohio",
+    "na-arkansas"
+   ],
+   "task": {
+    "ru": "Нажми на все реки, которые впадают в Мексиканский залив",
+    "en": "Tap every river that flows into the Gulf of Mexico"
+   },
+   "borderCases": {
+    "ru": "Миссури, Огайо и Арканзас не считаются ошибкой: они впадают в Миссисипи, а с ней — в залив.",
+    "en": "The Missouri, the Ohio and the Arkansas are not a mistake: they flow into the Mississippi, and with it into the Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "traps": [
+  {
+   "id": "trap-us-capital",
+   "country": "cty-united-states",
+   "answer": "cap-washington",
+   "options": [
+    "cap-washington",
+    "cap-new-york",
+    "cap-ottawa",
+    "cap-mexico-city"
+   ],
+   "labels": {
+    "cap-washington": {
+     "ru": "Вашингтон",
+     "en": "Washington"
+    },
+    "cap-new-york": {
+     "ru": "Нью-Йорк",
+     "en": "New York"
+    },
+    "cap-ottawa": {
+     "ru": "Оттава",
+     "en": "Ottawa"
+    },
+    "cap-mexico-city": {
+     "ru": "Мехико",
+     "en": "Mexico City"
+    }
+   },
+   "question": {
+    "ru": "Какой город — столица США?",
+    "en": "Which city is the capital of the United States?"
+   },
+   "explain": {
+    "ru": "Столица США — Вашингтон. Нью-Йорк — самый большой город страны.",
+    "en": "The capital of the United States is Washington. New York is the country's largest city."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "trap-canada-capital",
+   "country": "cty-canada",
+   "answer": "cap-ottawa",
+   "options": [
+    "cap-ottawa",
+    "cap-toronto",
+    "cap-washington",
+    "cap-havana"
+   ],
+   "labels": {
+    "cap-ottawa": {
+     "ru": "Оттава",
+     "en": "Ottawa"
+    },
+    "cap-toronto": {
+     "ru": "Торонто",
+     "en": "Toronto"
+    },
+    "cap-washington": {
+     "ru": "Вашингтон",
+     "en": "Washington"
+    },
+    "cap-havana": {
+     "ru": "Гавана",
+     "en": "Havana"
+    }
+   },
+   "question": {
+    "ru": "Какой город — столица Канады?",
+    "en": "Which city is the capital of Canada?"
+   },
+   "explain": {
+    "ru": "Столица Канады — Оттава. Торонто — самый большой город страны.",
+    "en": "The capital of Canada is Ottawa. Toronto is the country's largest city."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "records": [
+  {
+   "id": "labrador-largest-peninsula",
+   "object": "na-labrador",
+   "section": 1,
+   "clue": {
+    "ru": "Обычно считается крупнейшим полуостровом Северной Америки",
+    "en": "Usually considered the largest peninsula of North America"
+   },
+   "true": {
+    "ru": "Лабрадор обычно считается крупнейшим полуостровом Северной Америки.",
+    "en": "Labrador is usually considered the largest peninsula of North America."
+   },
+   "false": {
+    "ru": "Флорида обычно считается крупнейшим полуостровом Северной Америки.",
+    "en": "Florida is usually considered the largest peninsula of North America."
+   },
+   "check": "true text = approved section-1 record; Florida about 150,000 km² vs Labrador about 1.4 million km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "greenland-largest-island",
+   "object": "na-greenland",
+   "section": 1,
+   "clue": {
+    "ru": "Самый большой остров мира",
+    "en": "The largest island in the world"
+   },
+   "true": {
+    "ru": "Гренландия — самый большой остров мира (Австралию считают материком).",
+    "en": "Greenland is the largest island in the world (Australia counts as a continent)."
+   },
+   "false": {
+    "ru": "Самый большой остров мира — Баффинова Земля.",
+    "en": "The largest island in the world is Baffin Island."
+   },
+   "check": "NEW, replaces the section-1 Cuba record (Svetlana 18.11: one Cuba record only); Greenland about 2.17 million km², Baffin about 507,000 km² (5th)",
+   "newInReview": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "murchison-northernmost",
+   "object": "na-boothia",
+   "section": 1,
+   "clue": {
+    "ru": "Полуостров, на котором лежит самая северная точка материковой части Северной Америки",
+    "en": "The peninsula with the northernmost point of mainland North America"
+   },
+   "true": {
+    "ru": "Мыс Мёрчисон — самая северная точка материковой части Северной Америки.",
+    "en": "Murchison Promontory is the northernmost point of mainland North America."
+   },
+   "false": {
+    "ru": "Самая северная точка материковой части Северной Америки лежит на Аляске.",
+    "en": "The northernmost point of mainland North America is in Alaska."
+   },
+   "check": "true text = approved section-1 record; Murchison Promontory is on the Boothia Peninsula (71°58′ N); Point Barrow in Alaska is 71°23′ N",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "mississippi-longest-system",
+   "object": "na-mississippi",
+   "section": 2,
+   "clue": {
+    "ru": "Вместе со своим самым длинным притоком образует самую длинную речную систему Северной Америки",
+    "en": "Together with its longest tributary it forms the longest river system of North America"
+   },
+   "true": {
+    "ru": "Миссисипи и Миссури вместе образуют самую длинную речную систему Северной Америки: больше 6 000 км.",
+    "en": "Together the Mississippi and the Missouri form the longest river system in North America: more than 6,000 km."
+   },
+   "false": {
+    "ru": "Самая длинная речная система Северной Америки — Юкон.",
+    "en": "The longest river system in North America is the Yukon."
+   },
+   "check": "true text = approved section-2 record; the Yukon is about 3,190 km",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "mackenzie-longest-canada",
+   "object": "na-mackenzie",
+   "section": 2,
+   "clue": {
+    "ru": "Вместе с притоками и верховьями образует самую длинную речную систему Канады",
+    "en": "Together with its tributaries and headwaters it forms the longest river system in Canada"
+   },
+   "true": {
+    "ru": "Маккензи вместе с притоками и верховьями образует самую длинную речную систему Канады.",
+    "en": "The Mackenzie, together with its tributaries and headwaters, forms the longest river system in Canada."
+   },
+   "false": {
+    "ru": "Самая длинная речная система Канады — река Нельсон.",
+    "en": "The longest river system in Canada is the Nelson."
+   },
+   "check": "true text = approved section-2 record; Mackenzie system about 4,240 km, Nelson–Saskatchewan about 2,575 km",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "columbia-most-water-pacific",
+   "object": "na-columbia",
+   "section": 2,
+   "clue": {
+    "ru": "Самая полноводная из рек Северной Америки, впадающих в Тихий океан",
+    "en": "The North American river with the highest average discharge into the Pacific Ocean"
+   },
+   "true": {
+    "ru": "Колумбия имеет самый большой средний расход воды среди рек Северной Америки, впадающих в Тихий океан.",
+    "en": "The Columbia has the highest average discharge of any North American river flowing into the Pacific Ocean."
+   },
+   "false": {
+    "ru": "Самая полноводная из рек Северной Америки, впадающих в Тихий океан, — Колорадо.",
+    "en": "The North American river with the highest discharge into the Pacific is the Colorado."
+   },
+   "check": "true text = approved section-2 record; the Colorado usually does not reach the sea (its card)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "superior-largest-freshwater",
+   "object": "na-superior",
+   "section": 3,
+   "clue": {
+    "ru": "Обычно считается самым большим по площади пресным озером мира",
+    "en": "Usually considered the largest freshwater lake in the world by area"
+   },
+   "true": {
+    "ru": "Верхнее обычно считается самым большим по площади пресным озером мира.",
+    "en": "Lake Superior is usually considered the largest freshwater lake in the world by area."
+   },
+   "false": {
+    "ru": "Самым большим по площади пресным озером мира считают озеро Мичиган.",
+    "en": "Lake Michigan is considered the largest freshwater lake in the world by area."
+   },
+   "check": "true text = approved section-3 record; Superior about 82,100 km², Michigan about 58,000 km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "great-slave-deepest",
+   "object": "na-great-slave",
+   "section": 3,
+   "clue": {
+    "ru": "Самое глубокое озеро Северной Америки, около 614 м",
+    "en": "The deepest lake in North America, about 614 m"
+   },
+   "true": {
+    "ru": "Большое Невольничье — самое глубокое озеро Северной Америки, около 614 м.",
+    "en": "Great Slave Lake is the deepest lake in North America, about 614 m."
+   },
+   "false": {
+    "ru": "Самое глубокое озеро Северной Америки — Большое Солёное озеро.",
+    "en": "The deepest lake in North America is the Great Salt Lake."
+   },
+   "check": "true text = approved section-3 record; the Great Salt Lake is shallow (about 10 m)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "great-bear-largest-in-canada",
+   "object": "na-great-bear",
+   "section": 3,
+   "clue": {
+    "ru": "Самое большое озеро, целиком лежащее в Канаде",
+    "en": "The largest lake lying entirely in Canada"
+   },
+   "true": {
+    "ru": "Большое Медвежье — самое большое озеро, целиком лежащее в Канаде.",
+    "en": "Great Bear Lake is the largest lake lying entirely in Canada."
+   },
+   "false": {
+    "ru": "Самое большое озеро, целиком лежащее в Канаде, — Виннипег.",
+    "en": "The largest lake lying entirely in Canada is Lake Winnipeg."
+   },
+   "check": "true text = approved section-3 record; Great Bear about 31,000 km², Winnipeg about 24,500 km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "denali-highest",
+   "object": "na-denali",
+   "section": 4,
+   "clue": {
+    "ru": "Высочайшая вершина Северной Америки, 6190 м",
+    "en": "The highest peak of North America, 6,190 m"
+   },
+   "true": {
+    "ru": "Денали — высочайшая вершина Северной Америки, 6190 м.",
+    "en": "Denali is the highest peak of North America, 6,190 m."
+   },
+   "false": {
+    "ru": "Высочайшая вершина Северной Америки — Орисаба.",
+    "en": "The highest peak of North America is Pico de Orizaba."
+   },
+   "check": "true text = approved section-4 record; Orizaba 5,636 m",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "orizaba-highest-volcano",
+   "object": "na-orizaba",
+   "section": 4,
+   "clue": {
+    "ru": "Самый высокий вулкан Северной Америки, 5636 м",
+    "en": "The highest volcano of North America, 5,636 m"
+   },
+   "true": {
+    "ru": "Орисаба — самый высокий вулкан Северной Америки, 5636 м.",
+    "en": "Pico de Orizaba is the highest volcano of North America, 5,636 m."
+   },
+   "false": {
+    "ru": "Самый высокий вулкан Северной Америки — Попокатепетль.",
+    "en": "The highest volcano of North America is Popocatépetl."
+   },
+   "check": "true text = approved section-4 record; Popocatépetl about 5,400 m",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "canadian-shield-oldest-rocks",
+   "object": "na-laurentian-upland",
+   "section": 4,
+   "clue": {
+    "ru": "Здесь найдены одни из самых древних горных пород Земли, около 4 млрд лет",
+    "en": "Some of the oldest rocks on Earth, about 4 billion years old, were found here"
+   },
+   "true": {
+    "ru": "На Канадском щите найдены одни из самых древних горных пород Земли: их возраст около 4 млрд лет.",
+    "en": "Some of the oldest rocks on Earth, about 4 billion years old, have been found on the Canadian Shield."
+   },
+   "false": {
+    "ru": "Самым древним породам Канадского щита около 4 миллионов лет.",
+    "en": "The oldest rocks of the Canadian Shield are about 4 million years old."
+   },
+   "check": "true text = approved section-4 record (Acasta gneiss about 4.0 billion years); the false one is a thousand times younger",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "death-valley-lowest",
+   "object": "na-mojave",
+   "section": 5,
+   "clue": {
+    "ru": "Пустыня, где в Долине Смерти лежит самая низкая точка Северной Америки",
+    "en": "The desert where Death Valley holds the lowest point in North America"
+   },
+   "true": {
+    "ru": "Бэдуотер в Долине Смерти (Мохаве) — самая низкая точка Северной Америки: около 86 м ниже уровня моря.",
+    "en": "Badwater Basin in Death Valley (the Mojave) is the lowest point in North America, about 86 m below sea level."
+   },
+   "false": {
+    "ru": "Самая низкая точка Северной Америки лежит в пустыне Чиуауа.",
+    "en": "The lowest point in North America is in the Chihuahuan Desert."
+   },
+   "check": "true text = approved section-5 record",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "bristlecone-oldest-trees",
+   "object": "na-great-basin",
+   "section": 5,
+   "clue": {
+    "ru": "Пустыня, в горах которой растут одни из древнейших известных деревьев Земли",
+    "en": "The desert whose mountains hold some of the oldest known trees on Earth"
+   },
+   "true": {
+    "ru": "В горах Большого Бассейна растут остистые сосны — одни из древнейших известных деревьев Земли: возраст одного дерева больше 4800 лет (считается возраст отдельного ствола, а не корневой системы).",
+    "en": "Bristlecone pines grow in the mountains of the Great Basin; they are among the oldest known trees on Earth, one of them more than 4,800 years old (the age of a single trunk, not of a root system)."
+   },
+   "false": {
+    "ru": "Остистые сосны Большого Бассейна живут не дольше 100 лет.",
+    "en": "The bristlecone pines of the Great Basin live no longer than 100 years."
+   },
+   "check": "true text = approved section-5 record",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "white-sands-gypsum",
+   "object": "na-chihuahuan",
+   "section": 5,
+   "clue": {
+    "ru": "Пустыня, где лежит самое большое в мире поле дюн из гипса",
+    "en": "The desert with the largest gypsum dune field in the world"
+   },
+   "true": {
+    "ru": "Уайт-Сэндс в пустыне Чиуауа (Нью-Мексико) — самое большое в мире поле дюн из гипса: белые дюны занимают примерно 712 км² (275 кв. миль; данные Службы национальных парков США).",
+    "en": "White Sands in the Chihuahuan Desert (New Mexico) is the largest gypsum dune field in the world: its white dunes cover about 712 km² (275 square miles; figure of the US National Park Service)."
+   },
+   "false": {
+    "ru": "Самое большое в мире поле дюн из гипса лежит в пустыне Мохаве.",
+    "en": "The largest gypsum dune field in the world is in the Mojave Desert."
+   },
+   "check": "true text = approved section-5 record",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "canada-largest-country",
+   "object": "cty-canada",
+   "section": 6,
+   "clue": {
+    "ru": "Самая большая страна Северной Америки",
+    "en": "The largest country of North America"
+   },
+   "true": {
+    "ru": "Канада — самая большая страна Северной Америки, около 10 млн км².",
+    "en": "Canada is the largest country of North America, about 10 million km²."
+   },
+   "false": {
+    "ru": "Самая большая страна Северной Америки — США.",
+    "en": "The largest country of North America is the United States."
+   },
+   "check": "true text = approved section-6 record; the US about 9.8 million km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "canada-longest-coastline",
+   "object": "cty-canada",
+   "section": 6,
+   "clue": {
+    "ru": "Страна с самой длинной береговой линией в мире",
+    "en": "The country with the longest coastline in the world"
+   },
+   "true": {
+    "ru": "У Канады самая длинная береговая линия в мире.",
+    "en": "Canada has the longest coastline in the world."
+   },
+   "false": {
+    "ru": "Самая длинная береговая линия в мире — у Мексики.",
+    "en": "Mexico has the longest coastline in the world."
+   },
+   "check": "true text = approved section-6 record",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "canada-us-longest-border",
+   "object": "cty-united-states",
+   "section": 6,
+   "clue": {
+    "ru": "Страна, граница которой с Канадой — самая длинная граница между двумя государствами",
+    "en": "The country whose border with Canada is the longest border between two countries"
+   },
+   "true": {
+    "ru": "Граница Канады и США — самая длинная международная граница между двумя государствами, около 8 900 км, включая участок между Канадой и Аляской.",
+    "en": "The Canada–United States border is the world’s longest international border between two countries, measuring about 8,900 km, including the Alaska–Canada section."
+   },
+   "false": {
+    "ru": "Самая длинная граница между двумя государствами — граница США и Мексики.",
+    "en": "The longest border between two countries is the one between the United States and Mexico."
+   },
+   "check": "true text = approved section-6 record; the US–Mexico border is about 3,150 km",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "mexico-city-metropolis",
+   "object": "cty-mexico",
+   "section": 6,
+   "clue": {
+    "ru": "Страна, столица которой — одна из крупнейших городских агломераций Северной Америки, больше 20 млн человек",
+    "en": "The country whose capital is one of the largest metropolitan areas in North America, over 20 million people"
+   },
+   "true": {
+    "ru": "Мехико — одна из крупнейших городских агломераций Северной Америки. В ней проживает более 20 миллионов человек.",
+    "en": "Mexico City is one of the largest metropolitan areas in North America, with a population of more than 20 million people."
+   },
+   "false": {
+    "ru": "В агломерации Мехико живёт около 2 миллионов человек.",
+    "en": "About 2 million people live in the Mexico City metropolitan area."
+   },
+   "check": "true text = approved section-6 record",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "nicaragua-largest-central",
+   "object": "cty-nicaragua",
+   "section": 6,
+   "clue": {
+    "ru": "Самая большая страна Центральной Америки",
+    "en": "The largest country of Central America"
+   },
+   "true": {
+    "ru": "Никарагуа — самая большая страна Центральной Америки, около 130 тысяч км².",
+    "en": "Nicaragua is the largest country of Central America, about 130,000 km²."
+   },
+   "false": {
+    "ru": "Самая большая страна Центральной Америки — Панама.",
+    "en": "The largest country of Central America is Panama."
+   },
+   "check": "true text = approved section-6 record; Panama about 75,000 km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "el-salvador-smallest-central",
+   "object": "cty-el-salvador",
+   "section": 6,
+   "clue": {
+    "ru": "Самая маленькая страна Центральной Америки",
+    "en": "The smallest country of Central America"
+   },
+   "true": {
+    "ru": "Сальвадор — самая маленькая страна Центральной Америки, около 21 тысячи км².",
+    "en": "El Salvador is the smallest country of Central America, about 21,000 km²."
+   },
+   "false": {
+    "ru": "Самая маленькая страна Центральной Америки — Белиз.",
+    "en": "The smallest country of Central America is Belize."
+   },
+   "check": "true text = approved section-6 record; Belize about 23,000 km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "cuba-largest-caribbean-island",
+   "object": "cty-cuba",
+   "section": 7,
+   "clue": {
+    "ru": "Страна на крупнейшем острове Карибского бассейна",
+    "en": "The country on the largest island in the Caribbean"
+   },
+   "true": {
+    "ru": "Куба — крупнейший остров Карибского бассейна.",
+    "en": "Cuba is the largest island in the Caribbean region."
+   },
+   "false": {
+    "ru": "Крупнейший остров Карибского бассейна — Ямайка.",
+    "en": "The largest island in the Caribbean region is Jamaica."
+   },
+   "check": "true text = approved section-7 record (the one Cuba record kept, Svetlana 18.11)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "pico-duarte-highest",
+   "object": "cty-dominican-republic",
+   "section": 7,
+   "clue": {
+    "ru": "Страна, где стоит высочайшая вершина островов Карибского бассейна, 3098 м",
+    "en": "The country with the highest peak of the Caribbean islands, 3,098 m"
+   },
+   "true": {
+    "ru": "Пико-Дуарте (3098 м) в Доминиканской Республике — высочайшая вершина островов Карибского бассейна.",
+    "en": "Pico Duarte (3,098 m) in the Dominican Republic is the highest peak of the Caribbean islands."
+   },
+   "false": {
+    "ru": "Высочайшая вершина островов Карибского бассейна стоит на Ямайке.",
+    "en": "The highest peak of the Caribbean islands is in Jamaica."
+   },
+   "check": "true text = approved section-7 record; Blue Mountain Peak in Jamaica 2,256 m",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "saint-kitts-smallest",
+   "object": "cty-saint-kitts-and-nevis",
+   "section": 7,
+   "clue": {
+    "ru": "Самая маленькая страна Америки и по площади, и по населению",
+    "en": "The smallest country of the Americas both in area and in population"
+   },
+   "true": {
+    "ru": "Сент-Китс и Невис — самая маленькая страна Америки и по площади, и по населению.",
+    "en": "Saint Kitts and Nevis is the smallest country of the Americas both in area and in population."
+   },
+   "false": {
+    "ru": "Самая маленькая страна Америки — Барбадос.",
+    "en": "The smallest country of the Americas is Barbados."
+   },
+   "check": "true text = approved section-7 record; Barbados about 430 km², Saint Kitts and Nevis about 260 km²",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "pitch-lake-asphalt",
+   "object": "cty-trinidad-and-tobago",
+   "section": 7,
+   "clue": {
+    "ru": "Страна, где лежит крупнейшее в мире природное скопление асфальта",
+    "en": "The country with the largest natural deposit of asphalt in the world"
+   },
+   "true": {
+    "ru": "На Тринидаде лежит Асфальтовое озеро (Питч-Лейк) — крупнейшее в мире природное скопление асфальта.",
+    "en": "Pitch Lake on Trinidad is the largest natural deposit of asphalt in the world."
+   },
+   "false": {
+    "ru": "Асфальтовое озеро Питч-Лейк лежит на Кубе.",
+    "en": "Pitch Lake lies in Cuba."
+   },
+   "check": "true text = approved section-7 record",
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

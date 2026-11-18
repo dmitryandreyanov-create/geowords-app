@@ -160,6 +160,7 @@ jobs:
           node scripts/validate-review.mjs
           node scripts/validate-review-b2.mjs
           node scripts/validate-review-b3.mjs
+          node scripts/validate-review-b4.mjs
           node scripts/test-validate-review.mjs
 
   deploy:

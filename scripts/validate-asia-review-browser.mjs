@@ -29,7 +29,10 @@ try{
     const page=await context.newPage();const errs=[];page.on('pageerror',e=>errs.push(e.message));
     await page.goto(base+'/app/');await page.waitForSelector('[data-step="ab-l1"]');
     assert.match(await page.locator('.path').innerText(),lang==='ru'?/Повторение блока/:/Block review/);
-    const tapMap=async(x,y)=>{const b=await page.locator('.mapslot .map').first().boundingBox();await page.mouse.click(b.x+x/100*b.width,b.y+y/100*b.height)};
+    // a tap inside the frame of the Levant opens the large map first (PR #97): then the same point is tapped on the large map
+    const tapMap=async(x,y)=>{const b=await page.locator('.mapslot .map').first().boundingBox();await page.mouse.click(b.x+x/100*b.width,b.y+y/100*b.height);
+      await page.waitForTimeout(80);const pop=page.locator('.task .lv-pop:not([hidden])');if(!(await pop.count())||(await page.locator('.fb.ok,.fb.bad').count()))return;
+      const F=(await page.evaluate(()=>window.__gwLv())).frame,r=await pop.boundingBox();await page.mouse.click(r.x+r.width*(x-F.x)/F.w,r.y+r.height*(y-F.y)/F.h)};
     const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`${name}-${lang}.png`)})}};
     const seenKinds=new Set();
     // answers every task right, from the task the app exposes

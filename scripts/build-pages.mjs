@@ -60,6 +60,8 @@ const named=[
   'data/content/b3-section-8-facts.json','data/content/b3-section-8-records.json','data/dictionary/b3-section-8.json','data/geowords/b3-section-8.json','data/maps/asia-countries-8.json',
   // Block 3 review «Asia»: review texts, block-final GeoWords and its word, the Challenge rules.
   'data/review/b3-block.json','data/dictionary/b3-block.json','data/geowords/b3-block.json','data/challenge/b3-block.json',
+  // Block 4 review «North America»: review texts, block-final GeoWords and its word, the Challenge rules.
+  'data/review/b4-block.json','data/dictionary/b4-block.json','data/geowords/b4-block.json','data/challenge/b4-block.json',
   // Block 4 «North America», section 1 «North America on the map»; its outlines are data/maps/namerica-overview.json (below).
   'data/content/b4-section-1-facts.json','data/content/b4-section-1-records.json','data/dictionary/b4-section-1.json','data/geowords/b4-section-1.json',
   // Block 4 section 2 «Rivers of North America»; its river lines are data/maps/namerica-rivers.json (below).
