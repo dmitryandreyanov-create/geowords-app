@@ -1,0 +1,1789 @@
+{
+ "block": "asia-3",
+ "unit": "block-review",
+ "status": "draft",
+ "rules": {
+  "noNewObjects": "only the 138 places of block 3 sections 1-8 (and the Arabian Sea and the Bay of Bengal of block 1 as river mouths); each task opens the map the place was taught on (section 1: Asia base map; rivers, lakes, mountains, deserts maps; countries and capitals on the countries map)",
+  "lesson": "about 10 tasks, 3-5 minutes; places are spread over the sections of the lesson",
+  "adaptive": "no mistakes yet: the places asked longest ago (or never) come first, taken in turn from each section; a few mistakes: up to 60% of the places are the child's weakest, the rest as with no mistakes; repeated mistakes: a wrong answer comes back once at the end of the lesson, and a second mistake shows the answer and moves on (the place stays weak for the next lesson); a place is asked at most once per lesson (a country and its capital count as one place), and a weak place's weight is capped at 3 so one place never fills a lesson",
+  "neutral": "no capital questions about Taiwan, Israel or Palestine (their cards keep the approved notes); Kashmir, Northern Cyprus, Abkhazia and South Ossetia are never an answer in a «tap all…» task; Russia is not a country of the course, so no relation ties a place to Russia",
+  "mouths": "a river is tied only to a water body the child has learned: no Andaman Sea (Irrawaddy, Salween), East China Sea (Yangtze), Bohai (Huang He) or Gulf of Thailand (Chao Phraya); the Amu Darya and the Syr Darya carry the Aral Sea note",
+  "crosses": "river → country pairs use «through» only; «along» (a border stretch) is never a pair and never a wrong answer",
+  "approval": "each relation, true/false pair, select-all task, trap and record: approval.contentSha256 = first 16 hex of sha256 over the item without its approval (tools/approve.mjs); an item shows only when approved"
+ },
+ "lessons": [
+  {
+   "id": "lesson-1-map-rivers",
+   "title": {
+    "ru": "Азия на карте и реки",
+    "en": "Asia on the map and rivers"
+   },
+   "objects": [
+    "section-1",
+    "rivers"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-2-lakes-mountains-deserts",
+   "title": {
+    "ru": "Озёра, горы и пустыни",
+    "en": "Lakes, mountains and deserts"
+   },
+   "objects": [
+    "lakes",
+    "mountains",
+    "deserts"
+   ],
+   "tasks": [
+    {
+     "type": "find-on-map",
+     "count": 4
+    },
+    {
+     "type": "what-is-it",
+     "count": 3
+    },
+    {
+     "type": "label-map",
+     "count": 1,
+     "labels": 4
+    },
+    {
+     "type": "write-name",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-3-countries",
+   "title": {
+    "ru": "Страны и столицы",
+    "en": "Countries and capitals"
+   },
+   "objects": [
+    "countries-east",
+    "countries-south-central",
+    "countries-west"
+   ],
+   "tasks": [
+    {
+     "type": "find-country",
+     "count": 3
+    },
+    {
+     "type": "find-capital",
+     "count": 2
+    },
+    {
+     "type": "which-country",
+     "count": 2
+    },
+    {
+     "type": "pairs-country-capital",
+     "count": 1
+    },
+    {
+     "type": "write-capital",
+     "count": 2
+    }
+   ]
+  },
+  {
+   "id": "lesson-4-relations",
+   "title": {
+    "ru": "Связи",
+    "en": "Connections"
+   },
+   "objects": [
+    "relations"
+   ],
+   "tasks": [
+    {
+     "type": "pairs",
+     "count": 4,
+     "kinds": [
+      "flowsInto",
+      "capitalOn",
+      "crosses",
+      "inCountry"
+     ]
+    },
+    {
+     "type": "select-all",
+     "count": 3
+    },
+    {
+     "type": "true-false",
+     "count": 2
+    },
+    {
+     "type": "trap",
+     "count": 1
+    }
+   ]
+  },
+  {
+   "id": "lesson-5-records",
+   "title": {
+    "ru": "Рекорды",
+    "en": "Records"
+   },
+   "objects": [
+    "records"
+   ],
+   "tasks": [
+    {
+     "type": "true-false",
+     "count": 4
+    },
+    {
+     "type": "pairs",
+     "count": 2
+    },
+    {
+     "type": "find-by-record",
+     "count": 2
+    },
+    {
+     "type": "what-is-it-by-record",
+     "count": 2
+    }
+   ],
+   "note": "25 records: 4 + 2x3 + 2 + 2 = 14 different records per lesson"
+  },
+  {
+   "id": "block-final",
+   "title": {
+    "ru": "Итог блока",
+    "en": "Block final"
+   },
+   "geowords": [
+    "b3-block-final-en",
+    "b3-block-final-ru"
+   ],
+   "reward": "passport stamp"
+  }
+ ],
+ "crosses": [
+  {
+   "river": "as-irtysh",
+   "through": [
+    "cty-china",
+    "cty-kazakhstan"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-yangtze",
+   "through": [
+    "cty-china"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-huang-he",
+   "through": [
+    "cty-china"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-tarim",
+   "through": [
+    "cty-china"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-ili",
+   "through": [
+    "cty-china",
+    "cty-kazakhstan"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-mekong",
+   "through": [
+    "cty-china",
+    "cty-laos",
+    "cty-cambodia",
+    "cty-vietnam"
+   ],
+   "along": [
+    "cty-myanmar",
+    "cty-thailand"
+   ]
+  },
+  {
+   "river": "as-chao-phraya",
+   "through": [
+    "cty-thailand"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-salween",
+   "through": [
+    "cty-china",
+    "cty-myanmar"
+   ],
+   "along": [
+    "cty-thailand"
+   ]
+  },
+  {
+   "river": "as-irrawaddy",
+   "through": [
+    "cty-myanmar"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-brahmaputra",
+   "through": [
+    "cty-china",
+    "cty-india",
+    "cty-bangladesh"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-ganges",
+   "through": [
+    "cty-india",
+    "cty-bangladesh"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-indus",
+   "through": [
+    "cty-china",
+    "cty-india",
+    "cty-pakistan"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-godavari",
+   "through": [
+    "cty-india"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-amu-darya",
+   "through": [
+    "cty-turkmenistan",
+    "cty-uzbekistan"
+   ],
+   "along": [
+    "cty-tajikistan",
+    "cty-afghanistan"
+   ]
+  },
+  {
+   "river": "as-syr-darya",
+   "through": [
+    "cty-kyrgyzstan",
+    "cty-uzbekistan",
+    "cty-tajikistan",
+    "cty-kazakhstan"
+   ],
+   "along": []
+  },
+  {
+   "river": "as-tigris",
+   "through": [
+    "cty-turkey",
+    "cty-iraq"
+   ],
+   "along": [
+    "cty-syria"
+   ]
+  },
+  {
+   "river": "as-euphrates",
+   "through": [
+    "cty-turkey",
+    "cty-syria",
+    "cty-iraq"
+   ],
+   "along": []
+  }
+ ],
+ "relations": [
+  {
+   "id": "flowsInto-ob",
+   "relation": "flowsInto",
+   "subject": "as-ob",
+   "object": "as-arctic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-yenisei",
+   "relation": "flowsInto",
+   "subject": "as-yenisei",
+   "object": "as-arctic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-lena",
+   "relation": "flowsInto",
+   "subject": "as-lena",
+   "object": "as-arctic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-kolyma",
+   "relation": "flowsInto",
+   "subject": "as-kolyma",
+   "object": "as-arctic-ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-irtysh",
+   "relation": "flowsInto",
+   "subject": "as-irtysh",
+   "object": "as-ob",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-amur",
+   "relation": "flowsInto",
+   "subject": "as-amur",
+   "object": "as-sea-of-okhotsk",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-mekong",
+   "relation": "flowsInto",
+   "subject": "as-mekong",
+   "object": "as-south-china-sea",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-ganges",
+   "relation": "flowsInto",
+   "subject": "as-ganges",
+   "object": "bay-of-bengal",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-brahmaputra",
+   "relation": "flowsInto",
+   "subject": "as-brahmaputra",
+   "object": "bay-of-bengal",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-godavari",
+   "relation": "flowsInto",
+   "subject": "as-godavari",
+   "object": "bay-of-bengal",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-indus",
+   "relation": "flowsInto",
+   "subject": "as-indus",
+   "object": "arabian-sea",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-tigris",
+   "relation": "flowsInto",
+   "subject": "as-tigris",
+   "object": "as-persian-gulf",
+   "note": {
+    "ru": "Тигр и Евфрат сливаются в одну реку, Шатт-эль-Араб, и она впадает в Персидский залив.",
+    "en": "The Tigris and the Euphrates join into one river, the Shatt al-Arab, which flows into the Persian Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-euphrates",
+   "relation": "flowsInto",
+   "subject": "as-euphrates",
+   "object": "as-persian-gulf",
+   "note": {
+    "ru": "Тигр и Евфрат сливаются в одну реку, Шатт-эль-Араб, и она впадает в Персидский залив.",
+    "en": "The Tigris and the Euphrates join into one river, the Shatt al-Arab, which flows into the Persian Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-amu-darya",
+   "relation": "flowsInto",
+   "subject": "as-amu-darya",
+   "object": "as-aral",
+   "note": {
+    "ru": "Амударья и Сырдарья веками впадали в Аральское море. С середины XX века их воду забирают на орошение полей: Амударья теперь почти не доходит до моря, а Сырдарья питает его северную часть, которая понемногу восстанавливается.",
+    "en": "For centuries the Amu Darya and the Syr Darya flowed into the Aral Sea. Since the middle of the 20th century their water has been taken to irrigate fields: the Amu Darya now hardly reaches the sea, and the Syr Darya feeds its northern part, which is slowly recovering."
+   },
+   "label": {
+    "ru": "Аральское море (раньше)",
+    "en": "the Aral Sea (in the past)"
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-syr-darya",
+   "relation": "flowsInto",
+   "subject": "as-syr-darya",
+   "object": "as-aral",
+   "note": {
+    "ru": "Амударья и Сырдарья веками впадали в Аральское море. С середины XX века их воду забирают на орошение полей: Амударья теперь почти не доходит до моря, а Сырдарья питает его северную часть, которая понемногу восстанавливается.",
+    "en": "For centuries the Amu Darya and the Syr Darya flowed into the Aral Sea. Since the middle of the 20th century their water has been taken to irrigate fields: the Amu Darya now hardly reaches the sea, and the Syr Darya feeds its northern part, which is slowly recovering."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-ili",
+   "relation": "flowsInto",
+   "subject": "as-ili",
+   "object": "as-balkhash",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "flowsInto-jordan",
+   "relation": "flowsInto",
+   "subject": "as-jordan",
+   "object": "as-dead-sea",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "capitalOn-iraq",
+   "relation": "capitalOn",
+   "subject": "cty-iraq",
+   "object": "as-tigris",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "capitalOn-thailand",
+   "relation": "capitalOn",
+   "subject": "cty-thailand",
+   "object": "as-chao-phraya",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "capitalOn-laos",
+   "relation": "capitalOn",
+   "subject": "cty-laos",
+   "object": "as-mekong",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "capitalOn-cambodia",
+   "relation": "capitalOn",
+   "subject": "cty-cambodia",
+   "object": "as-mekong",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "capitalOn-azerbaijan",
+   "relation": "capitalOn",
+   "subject": "cty-azerbaijan",
+   "object": "as-caspian",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-fuji",
+   "relation": "inCountry",
+   "subject": "as-fuji",
+   "object": "cty-japan",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-krakatoa",
+   "relation": "inCountry",
+   "subject": "as-krakatoa",
+   "object": "cty-indonesia",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-elburz",
+   "relation": "inCountry",
+   "subject": "as-elburz",
+   "object": "cty-iran",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-arakan",
+   "relation": "inCountry",
+   "subject": "as-arakan",
+   "object": "cty-myanmar",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-taklamakan",
+   "relation": "inCountry",
+   "subject": "as-taklamakan",
+   "object": "cty-china",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-karakum",
+   "relation": "inCountry",
+   "subject": "as-karakum",
+   "object": "cty-turkmenistan",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-lut",
+   "relation": "inCountry",
+   "subject": "as-lut",
+   "object": "cty-iran",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-gobi",
+   "relation": "inCountry",
+   "subject": "as-gobi",
+   "object": [
+    "cty-mongolia",
+    "cty-china"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-thar",
+   "relation": "inCountry",
+   "subject": "as-thar",
+   "object": [
+    "cty-india",
+    "cty-pakistan"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-issyk-kul",
+   "relation": "inCountry",
+   "subject": "as-issyk-kul",
+   "object": "cty-kyrgyzstan",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-balkhash",
+   "relation": "inCountry",
+   "subject": "as-balkhash",
+   "object": "cty-kazakhstan",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-tonle-sap",
+   "relation": "inCountry",
+   "subject": "as-tonle-sap",
+   "object": "cty-cambodia",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-van",
+   "relation": "inCountry",
+   "subject": "as-van",
+   "object": "cty-turkey",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-urmia",
+   "relation": "inCountry",
+   "subject": "as-urmia",
+   "object": "cty-iran",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-khovsgol",
+   "relation": "inCountry",
+   "subject": "as-khovsgol",
+   "object": "cty-mongolia",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-qinghai",
+   "relation": "inCountry",
+   "subject": "as-qinghai",
+   "object": "cty-china",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-korean-peninsula",
+   "relation": "inCountry",
+   "subject": "as-korean-peninsula",
+   "object": [
+    "cty-north-korea",
+    "cty-south-korea"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-asia-minor",
+   "relation": "inCountry",
+   "subject": "as-asia-minor",
+   "object": "cty-turkey",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-hindustan",
+   "relation": "inCountry",
+   "subject": "as-hindustan",
+   "object": "cty-india",
+   "label": {
+    "ru": "Индия — бо́льшая часть полуострова",
+    "en": "India — most of the subcontinent"
+   },
+   "note": {
+    "ru": "Индия занимает бо́льшую часть полуострова Индостан.",
+    "en": "India covers most of the Indian subcontinent."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "inCountry-borneo",
+   "relation": "inCountry",
+   "subject": "as-borneo",
+   "object": [
+    "cty-indonesia",
+    "cty-malaysia",
+    "cty-brunei"
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "trueFalse": [
+  {
+   "id": "tf-a01",
+   "subject": "as-mekong",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Меконг впадает в Южно-Китайское море.",
+    "en": "The Mekong flows into the South China Sea."
+   },
+   "false": {
+    "ru": "Меконг впадает в Персидский залив.",
+    "en": "The Mekong flows into the Persian Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a02",
+   "subject": "as-ganges",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Ганг впадает в Бенгальский залив.",
+    "en": "The Ganges flows into the Bay of Bengal."
+   },
+   "false": {
+    "ru": "Ганг впадает в Аравийское море.",
+    "en": "The Ganges flows into the Arabian Sea."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a03",
+   "subject": "as-indus",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Инд впадает в Аравийское море.",
+    "en": "The Indus flows into the Arabian Sea."
+   },
+   "false": {
+    "ru": "Инд впадает в Бенгальский залив.",
+    "en": "The Indus flows into the Bay of Bengal."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a04",
+   "subject": "as-lena",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Лена впадает в Северный Ледовитый океан.",
+    "en": "The Lena flows into the Arctic Ocean."
+   },
+   "false": {
+    "ru": "Лена впадает в Тихий океан.",
+    "en": "The Lena flows into the Pacific Ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a05",
+   "subject": "as-amu-darya",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Амударья веками впадала в Аральское море, а теперь из-за орошения полей почти не доходит до него.",
+    "en": "For centuries the Amu Darya flowed into the Aral Sea; now, because its water irrigates fields, it hardly reaches the sea."
+   },
+   "false": {
+    "ru": "Амударья впадает в Персидский залив.",
+    "en": "The Amu Darya flows into the Persian Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a06",
+   "subject": "as-ili",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Река Или впадает в озеро Балхаш.",
+    "en": "The Ili flows into Lake Balkhash."
+   },
+   "false": {
+    "ru": "Река Или впадает в Аральское море.",
+    "en": "The Ili flows into the Aral Sea."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a07",
+   "subject": "as-jordan",
+   "relation": "flowsInto",
+   "true": {
+    "ru": "Иордан впадает в Мёртвое море.",
+    "en": "The Jordan flows into the Dead Sea."
+   },
+   "false": {
+    "ru": "Иордан впадает в Персидский залив.",
+    "en": "The Jordan flows into the Persian Gulf."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a08",
+   "subject": "as-euphrates",
+   "relation": "crosses",
+   "true": {
+    "ru": "Евфрат течёт через Турцию, Сирию и Ирак.",
+    "en": "The Euphrates flows through Turkey, Syria and Iraq."
+   },
+   "false": {
+    "ru": "Евфрат течёт через Иран.",
+    "en": "The Euphrates flows through Iran."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a09",
+   "subject": "cty-iraq",
+   "relation": "capitalOn",
+   "true": {
+    "ru": "Багдад стоит на Тигре.",
+    "en": "Baghdad stands on the Tigris."
+   },
+   "false": {
+    "ru": "Багдад стоит на Инде.",
+    "en": "Baghdad stands on the Indus."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a10",
+   "subject": "cty-thailand",
+   "relation": "capitalOn",
+   "true": {
+    "ru": "Бангкок стоит на реке Чаупхрая.",
+    "en": "Bangkok stands on the Chao Phraya."
+   },
+   "false": {
+    "ru": "Бангкок стоит на Меконге.",
+    "en": "Bangkok stands on the Mekong."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a11",
+   "subject": "as-fuji",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Вулкан Фудзи находится в Японии.",
+    "en": "Mount Fuji is in Japan."
+   },
+   "false": {
+    "ru": "Вулкан Фудзи находится в Индонезии.",
+    "en": "Mount Fuji is in Indonesia."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a12",
+   "subject": "as-issyk-kul",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Озеро Иссык-Куль находится в Киргизии.",
+    "en": "Lake Issyk-Kul is in Kyrgyzstan."
+   },
+   "false": {
+    "ru": "Озеро Иссык-Куль находится в Монголии.",
+    "en": "Lake Issyk-Kul is in Mongolia."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a13",
+   "subject": "as-karakum",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Пустыня Каракумы занимает бо́льшую часть Туркменистана.",
+    "en": "The Karakum Desert covers most of Turkmenistan."
+   },
+   "false": {
+    "ru": "Пустыня Каракумы лежит в Саудовской Аравии.",
+    "en": "The Karakum Desert lies in Saudi Arabia."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a14",
+   "subject": "as-hindustan",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Индия занимает бо́льшую часть полуострова Индостан.",
+    "en": "India covers most of the Indian subcontinent."
+   },
+   "false": {
+    "ru": "Весь полуостров Индостан занимает Пакистан.",
+    "en": "Pakistan covers the whole of the Indian subcontinent."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tf-a15",
+   "subject": "as-borneo",
+   "relation": "inCountry",
+   "true": {
+    "ru": "Остров Калимантан поделён между тремя странами: Индонезией, Малайзией и Брунеем.",
+    "en": "The island of Borneo is shared by three countries: Indonesia, Malaysia and Brunei."
+   },
+   "false": {
+    "ru": "Весь остров Калимантан принадлежит Малайзии.",
+    "en": "The whole island of Borneo belongs to Malaysia."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "selectAll": [
+  {
+   "id": "all-mekong-countries",
+   "map": "countries",
+   "want": [
+    "cty-china",
+    "cty-myanmar",
+    "cty-laos",
+    "cty-thailand",
+    "cty-cambodia",
+    "cty-vietnam"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, через которые течёт Меконг",
+    "en": "Tap every country the Mekong flows through"
+   },
+   "borderCases": {
+    "ru": "Мьянма и Таиланд считаются: Меконг течёт по их границе с Лаосом, а карточка раздела называет шесть стран.",
+    "en": "Myanmar and Thailand count: the Mekong runs along their border with Laos, and the section card names six countries."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-syr-darya-countries",
+   "map": "countries",
+   "want": [
+    "cty-kyrgyzstan",
+    "cty-uzbekistan",
+    "cty-tajikistan",
+    "cty-kazakhstan"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, через которые течёт Сырдарья",
+    "en": "Tap every country the Syr Darya flows through"
+   },
+   "borderCases": {
+    "ru": "Пограничных случаев нет: Сырдарья (с её истоком Нарыном) течёт через все четыре страны.",
+    "en": "No border cases: the Syr Darya (with the Naryn, its source) flows through all four countries."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-euphrates-countries",
+   "map": "countries",
+   "want": [
+    "cty-turkey",
+    "cty-syria",
+    "cty-iraq"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, через которые течёт Евфрат",
+    "en": "Tap every country the Euphrates flows through"
+   },
+   "borderCases": {
+    "ru": "Пограничных случаев нет.",
+    "en": "No border cases."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-borneo-countries",
+   "map": "countries",
+   "want": [
+    "cty-indonesia",
+    "cty-malaysia",
+    "cty-brunei"
+   ],
+   "neutral": [],
+   "task": {
+    "ru": "Нажми на все страны, которые лежат на острове Калимантан",
+    "en": "Tap every country on the island of Borneo"
+   },
+   "borderCases": {
+    "ru": "Пограничных случаев нет: остров поделён между тремя странами.",
+    "en": "No border cases: the island is shared by three countries."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-arabian-countries",
+   "map": "countries",
+   "want": [
+    "cty-saudi-arabia",
+    "cty-yemen",
+    "cty-oman",
+    "cty-uae",
+    "cty-qatar",
+    "cty-kuwait"
+   ],
+   "neutral": [
+    "cty-bahrain",
+    "cty-jordan",
+    "cty-iraq"
+   ],
+   "task": {
+    "ru": "Нажми на все страны Аравийского полуострова",
+    "en": "Tap every country on the Arabian Peninsula"
+   },
+   "borderCases": {
+    "ru": "Бахрейн — остров в Персидском заливе у берега полуострова, а северную границу полуострова проводят по-разному, так что Иордания и Ирак иногда попадают на его край. Нажатие на эти три страны не считается ошибкой, но и не нужно для ответа.",
+    "en": "Bahrain is an island in the Persian Gulf off the peninsula, and the northern edge of the peninsula is drawn in different ways, so Jordan and Iraq sometimes fall on it. A tap on these three is not a mistake, but they are not needed for the answer."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "all-arctic-rivers",
+   "map": "rivers",
+   "want": [
+    "as-ob",
+    "as-yenisei",
+    "as-lena",
+    "as-kolyma"
+   ],
+   "neutral": [
+    "as-irtysh"
+   ],
+   "task": {
+    "ru": "Нажми на все реки, которые впадают в Северный Ледовитый океан",
+    "en": "Tap every river that flows into the Arctic Ocean"
+   },
+   "borderCases": {
+    "ru": "Иртыш не считается ошибкой: он впадает в Обь, а с ней — в океан.",
+    "en": "The Irtysh is not a mistake: it flows into the Ob, and with it into the ocean."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "traps": [
+  {
+   "id": "trap-turkey-capital",
+   "country": "cty-turkey",
+   "answer": "cap-ankara",
+   "options": [
+    "cap-ankara",
+    "cap-istanbul",
+    "cap-tehran",
+    "cap-baghdad"
+   ],
+   "labels": {
+    "cap-ankara": {
+     "ru": "Анкара",
+     "en": "Ankara"
+    },
+    "cap-istanbul": {
+     "ru": "Стамбул",
+     "en": "Istanbul"
+    },
+    "cap-tehran": {
+     "ru": "Тегеран",
+     "en": "Tehran"
+    },
+    "cap-baghdad": {
+     "ru": "Багдад",
+     "en": "Baghdad"
+    }
+   },
+   "question": {
+    "ru": "Какой город — столица Турции?",
+    "en": "Which city is the capital of Turkey?"
+   },
+   "explain": {
+    "ru": "Столица Турции — Анкара. Стамбул — самый большой город страны, он стоит на обоих берегах Босфора.",
+    "en": "The capital of Turkey is Ankara. Istanbul is the country's largest city; it stands on both banks of the Bosporus."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "trap-myanmar-capital",
+   "country": "cty-myanmar",
+   "answer": "cap-naypyidaw",
+   "options": [
+    "cap-naypyidaw",
+    "cap-yangon",
+    "cap-bangkok",
+    "cap-hanoi"
+   ],
+   "labels": {
+    "cap-naypyidaw": {
+     "ru": "Нейпьидо",
+     "en": "Naypyidaw"
+    },
+    "cap-yangon": {
+     "ru": "Янгон",
+     "en": "Yangon"
+    },
+    "cap-bangkok": {
+     "ru": "Бангкок",
+     "en": "Bangkok"
+    },
+    "cap-hanoi": {
+     "ru": "Ханой",
+     "en": "Hanoi"
+    }
+   },
+   "question": {
+    "ru": "Какой город — столица Мьянмы?",
+    "en": "Which city is the capital of Myanmar?"
+   },
+   "explain": {
+    "ru": "Столица Мьянмы — Нейпьидо, её построили в 2000-х годах. Янгон — прежняя столица и самый большой город страны.",
+    "en": "The capital of Myanmar is Naypyidaw, built in the 2000s. Yangon is the former capital and the country's largest city."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "trap-caspian-lake",
+   "country": "as-caspian",
+   "answer": "lake",
+   "options": [
+    "lake",
+    "sea"
+   ],
+   "labels": {
+    "lake": {
+     "ru": "Озеро",
+     "en": "A lake"
+    },
+    "sea": {
+     "ru": "Море",
+     "en": "A sea"
+    }
+   },
+   "question": {
+    "ru": "Каспийское море — это море или озеро?",
+    "en": "Is the Caspian Sea a sea or a lake?"
+   },
+   "explain": {
+    "ru": "Его называют морем, но это озеро: оно не соединяется с Мировым океаном. Это самое большое по площади озеро на Земле.",
+    "en": "It is called a sea, but it is a lake: it is not connected to the World Ocean. It is the largest lake on Earth by area."
+   },
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ],
+ "records": [
+  {
+   "id": "arabian-largest-peninsula",
+   "object": "as-arabian-peninsula",
+   "section": 1,
+   "clue": {
+    "ru": "Самый большой полуостров мира по площади",
+    "en": "The largest peninsula in the world by area"
+   },
+   "true": {
+    "ru": "Аравийский полуостров — самый большой полуостров мира по площади.",
+    "en": "The Arabian Peninsula is the largest peninsula in the world by area."
+   },
+   "false": {
+    "ru": "Индокитай — самый большой полуостров мира по площади.",
+    "en": "Indochina is the largest peninsula in the world by area."
+   },
+   "check": "criterion: area (about 3 million km²); «by area» added",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "borneo-largest-island-asia",
+   "object": "as-borneo",
+   "section": 1,
+   "clue": {
+    "ru": "Самый большой остров Азии",
+    "en": "The largest island in Asia"
+   },
+   "true": {
+    "ru": "Калимантан — самый большой остров Азии.",
+    "en": "Borneo is the largest island in Asia."
+   },
+   "false": {
+    "ru": "Сахалин — самый большой остров Азии.",
+    "en": "Sakhalin is the largest island in Asia."
+   },
+   "check": "criterion: area (about 743,000 km²); New Guinea is larger but belongs to Oceania",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "chelyuskin-northernmost",
+   "object": "as-taimyr",
+   "section": 1,
+   "clue": {
+    "ru": "Полуостров, на котором лежит самая северная точка материка Евразия",
+    "en": "The peninsula with the northernmost point of mainland Eurasia"
+   },
+   "true": {
+    "ru": "Мыс Челюскин на Таймыре — самая северная точка материка Евразия.",
+    "en": "Cape Chelyuskin on the Taimyr Peninsula is the northernmost point of mainland Eurasia."
+   },
+   "false": {
+    "ru": "Самая северная точка материка Евразия лежит на Чукотке.",
+    "en": "The northernmost point of mainland Eurasia is on the Chukchi Peninsula."
+   },
+   "check": "criterion: mainland only (islands not counted); 77°43′ N",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "yangtze-longest-asia",
+   "object": "as-yangtze",
+   "section": 2,
+   "clue": {
+    "ru": "Самая длинная река Азии",
+    "en": "The longest river in Asia"
+   },
+   "true": {
+    "ru": "Янцзы — самая длинная река Азии, около 6300 км.",
+    "en": "The Yangtze is the longest river in Asia, about 6,300 km."
+   },
+   "false": {
+    "ru": "Хуанхэ — самая длинная река Азии.",
+    "en": "The Huang He is the longest river in Asia."
+   },
+   "check": "criterion: length; Huang He about 5,460 km",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "irtysh-long-tributary",
+   "object": "as-irtysh",
+   "section": 2,
+   "clue": {
+    "ru": "Один из самых длинных притоков в мире: больше 4200 км",
+    "en": "One of the longest tributaries in the world, over 4,200 km"
+   },
+   "true": {
+    "ru": "Иртыш — один из самых длинных притоков в мире: больше 4200 км. Он впадает в Обь.",
+    "en": "The Irtysh is one of the longest tributaries in the world, over 4,200 km. It flows into the Ob."
+   },
+   "false": {
+    "ru": "Иртыш — приток Енисея.",
+    "en": "The Irtysh is a tributary of the Yenisei."
+   },
+   "check": "criterion: length (4,248 km); «one of» kept on purpose; «it flows into the Ob» added",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "yenisei-most-water-russia",
+   "object": "as-yenisei",
+   "section": 2,
+   "clue": {
+    "ru": "Самая полноводная река России",
+    "en": "The river of Russia with the largest average flow"
+   },
+   "true": {
+    "ru": "Енисей — самая полноводная река России: у него самый большой средний расход воды.",
+    "en": "The Yenisei has the largest average flow of any river in Russia."
+   },
+   "false": {
+    "ru": "Самая полноводная река России — Лена.",
+    "en": "The Lena has the largest average flow of any river in Russia."
+   },
+   "check": "criterion: average discharge (about 19,600 m³/s; the Lena about 17,000)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "baikal-deepest-oldest",
+   "object": "as-baikal",
+   "section": 3,
+   "clue": {
+    "ru": "Самое глубокое озеро мира",
+    "en": "The deepest lake in the world"
+   },
+   "true": {
+    "ru": "Байкал — самое глубокое озеро мира: 1642 м. Это и одно из самых древних озёр: ему около 25 миллионов лет.",
+    "en": "Lake Baikal is the deepest lake in the world: 1,642 m. It is also one of the oldest lakes, about 25 million years old."
+   },
+   "false": {
+    "ru": "Иссык-Куль — самое глубокое озеро мира.",
+    "en": "Issyk-Kul is the deepest lake in the world."
+   },
+   "check": "«the oldest» → «one of the oldest»: the age of the oldest lakes is estimated differently",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "dead-sea-lowest-land",
+   "object": "as-dead-sea",
+   "section": 3,
+   "clue": {
+    "ru": "Самое низкое место на суше",
+    "en": "The lowest place on land"
+   },
+   "true": {
+    "ru": "Берег Мёртвого моря — самое низкое место на суше: больше 430 м ниже уровня океана, и уровень продолжает понижаться.",
+    "en": "The shore of the Dead Sea is the lowest place on land: more than 430 m below the level of the ocean, and the level keeps falling."
+   },
+   "false": {
+    "ru": "Самое низкое место на суше — берег Каспийского моря.",
+    "en": "The lowest place on land is the shore of the Caspian Sea."
+   },
+   "check": "«about 430 m» → «more than 430 m, and falling»: the level drops about 1 m a year (about −438 m in 2023)",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "caspian-largest-lake",
+   "object": "as-caspian",
+   "section": 3,
+   "clue": {
+    "ru": "Самое большое озеро мира по площади",
+    "en": "The largest lake in the world by area"
+   },
+   "true": {
+    "ru": "Каспийское море — самое большое озеро мира по площади.",
+    "en": "The Caspian Sea is the largest lake in the world by area."
+   },
+   "false": {
+    "ru": "Балхаш — самое большое озеро мира по площади.",
+    "en": "Lake Balkhash is the largest lake in the world by area."
+   },
+   "check": "criterion: area (about 371,000 km²); «by area» added",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "tibet-highest-plateau",
+   "object": "as-tibet",
+   "section": 4,
+   "clue": {
+    "ru": "Самое высокое и самое большое нагорье мира",
+    "en": "The highest and the largest plateau in the world"
+   },
+   "true": {
+    "ru": "Тибетское нагорье — самое высокое и самое большое нагорье мира: его средняя высота больше 4000 м.",
+    "en": "The Tibetan Plateau is the highest and the largest plateau in the world: its average height is over 4,000 m."
+   },
+   "false": {
+    "ru": "Средняя высота Тибетского нагорья — около 1000 м.",
+    "en": "The average height of the Tibetan Plateau is about 1,000 m."
+   },
+   "check": "criteria: average height and area (about 2.5 million km²)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "himalaya-karakoram-eight-thousanders",
+   "object": "as-karakoram",
+   "section": 4,
+   "clue": {
+    "ru": "Горы, где стоят четыре из четырнадцати вершин Земли выше 8000 м",
+    "en": "The mountains with four of the fourteen peaks on Earth higher than 8,000 m"
+   },
+   "true": {
+    "ru": "Все 14 вершин Земли выше 8000 м стоят в Гималаях и Каракоруме: обычно десять относят к Гималаям, а четыре — к Каракоруму.",
+    "en": "All 14 peaks on Earth higher than 8,000 m are in the Himalayas and the Karakoram: ten are usually counted in the Himalayas and four in the Karakoram."
+   },
+   "false": {
+    "ru": "Вершины выше 8000 м есть на Памире.",
+    "en": "There are peaks higher than 8,000 m in the Pamirs."
+   },
+   "check": "the split 10/4 is the usual one («usually» kept); the highest peak of the Pamirs is about 7,500 m",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "klyuchevskaya-highest-active-volcano",
+   "object": "as-klyuchevskaya",
+   "section": 4,
+   "clue": {
+    "ru": "Самый высокий действующий вулкан Евразии",
+    "en": "The highest active volcano in Eurasia"
+   },
+   "true": {
+    "ru": "Ключевская Сопка — самый высокий действующий вулкан Евразии: около 4750 м, после извержений высота меняется.",
+    "en": "Klyuchevskaya Sopka is the highest active volcano in Eurasia: about 4,750 m, and its height changes after eruptions."
+   },
+   "false": {
+    "ru": "Самый высокий действующий вулкан Евразии — Фудзи.",
+    "en": "The highest active volcano in Eurasia is Mount Fuji."
+   },
+   "check": "criterion: height of an active volcano; Fuji 3,776 m",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "krakatoa-loudest-sound",
+   "object": "as-krakatoa",
+   "section": 4,
+   "clue": {
+    "ru": "Вулкан, грохот извержения которого в 1883 году слышали за 4800 км",
+    "en": "The volcano whose 1883 eruption was heard 4,800 km away"
+   },
+   "true": {
+    "ru": "Грохот извержения Кракатау в 1883 году слышали за 4800 км — это один из самых громких звуков в истории.",
+    "en": "The blast of the 1883 eruption of Krakatoa was heard 4,800 km away, one of the loudest sounds in history."
+   },
+   "false": {
+    "ru": "Грохот извержения Кракатау в 1883 году слышали только на соседних островах.",
+    "en": "The blast of Krakatoa in 1883 was heard only on the nearby islands."
+   },
+   "check": "«one of» kept: loudness of historical sounds cannot be compared exactly",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "rub-al-khali-largest-sand-sea",
+   "object": "as-rub-al-khali",
+   "section": 5,
+   "clue": {
+    "ru": "Крупнейший сплошной массив песков на Земле",
+    "en": "The largest continuous body of sand on Earth"
+   },
+   "true": {
+    "ru": "Руб-эль-Хали — крупнейший сплошной массив песков на Земле: больше 600 000 км² почти сплошных дюн.",
+    "en": "The Rub’ al Khali is the largest continuous body of sand on Earth: more than 600,000 km² of almost unbroken dunes."
+   },
+   "false": {
+    "ru": "Крупнейший сплошной массив песков на Земле — пустыня Гоби.",
+    "en": "The largest continuous body of sand on Earth is the Gobi Desert."
+   },
+   "check": "criterion: continuous sand area (sand sea), not desert area; the Gobi is mostly stony",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "lut-hottest-surface",
+   "object": "as-lut",
+   "section": 5,
+   "clue": {
+    "ru": "Пустыня, где спутники зафиксировали одну из самых высоких температур поверхности на Земле",
+    "en": "The desert where satellites recorded one of the highest surface temperatures on Earth"
+   },
+   "true": {
+    "ru": "Спутники зафиксировали в пустыне Деште-Лут температуру поверхности земли около 80 °C — одну из самых высоких на планете.",
+    "en": "Satellites have recorded land surface temperatures of about 80°C in the Dasht-e Lut, one of the highest on Earth."
+   },
+   "false": {
+    "ru": "Деште-Лут — самая холодная пустыня Азии.",
+    "en": "The Dasht-e Lut is the coldest desert in Asia."
+   },
+   "check": "«above 80°C» → «about 80°C»: 70.7°C (MODIS, 2005) and 80.8°C (one study, 2018); surface, not air temperature",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "thar-most-populated-desert",
+   "object": "as-thar",
+   "section": 5,
+   "clue": {
+    "ru": "Пустыня, которую считают самой густонаселённой в мире",
+    "en": "The desert considered the most densely populated in the world"
+   },
+   "true": {
+    "ru": "Тар считается самой густонаселённой пустыней мира.",
+    "en": "The Thar is considered the most densely populated desert in the world."
+   },
+   "false": {
+    "ru": "Самой густонаселённой пустыней мира считают Руб-эль-Хали.",
+    "en": "The Rub’ al Khali is considered the most densely populated desert in the world."
+   },
+   "check": "«considered» kept: population density depends on where the desert's edge is drawn",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "indonesia-largest-island-country",
+   "object": "cty-indonesia",
+   "section": 6,
+   "clue": {
+    "ru": "Самое большое островное государство мира по площади",
+    "en": "The largest island country in the world by area"
+   },
+   "true": {
+    "ru": "Индонезия — самое большое островное государство мира по площади: около 17 тысяч островов.",
+    "en": "Indonesia is the largest island country in the world by area, with about 17,000 islands."
+   },
+   "false": {
+    "ru": "Самое большое островное государство мира — Япония.",
+    "en": "The largest island country in the world is Japan."
+   },
+   "check": "criterion: area (about 1.9 million km²); «by area» added; the count of islands varies, «about» kept",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "ulaanbaatar-coldest-capital",
+   "object": "cty-mongolia",
+   "section": 6,
+   "clue": {
+    "ru": "Страна, столицу которой считают самой холодной в мире",
+    "en": "The country whose capital is considered the coldest in the world"
+   },
+   "true": {
+    "ru": "Улан-Батор считается самой холодной столицей мира по среднегодовой температуре.",
+    "en": "Ulaanbaatar is widely regarded as the world’s coldest national capital by average annual temperature."
+   },
+   "false": {
+    "ru": "Самой холодной столицей мира считают Пекин.",
+    "en": "Beijing is considered the coldest capital in the world."
+   },
+   "check": "criterion: average annual temperature; «considered» kept (Astana is close)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "great-wall-longest-fortification",
+   "object": "cty-china",
+   "section": 6,
+   "clue": {
+    "ru": "Страна, где стоит самая протяжённая система оборонительных укреплений в мире",
+    "en": "The country with the world’s longest system of defensive fortifications"
+   },
+   "true": {
+    "ru": "Великая Китайская стена — самая протяжённая система оборонительных укреплений в мире. Её общая длина превышает 20 тысяч километров.",
+    "en": "The Great Wall of China is the world’s longest system of defensive fortifications, stretching over 20,000 kilometres in total."
+   },
+   "false": {
+    "ru": "Великая Китайская стена — одна непрерывная стена длиной около 1000 км.",
+    "en": "The Great Wall of China is one unbroken wall about 1,000 km long."
+   },
+   "check": "criterion: total length of all its parts (21,196 km, survey of 2012)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "kazakhstan-largest-landlocked",
+   "object": "cty-kazakhstan",
+   "section": 7,
+   "clue": {
+    "ru": "Самая большая страна мира без выхода к Мировому океану",
+    "en": "The largest landlocked country in the world"
+   },
+   "true": {
+    "ru": "Казахстан — самая большая в мире страна без выхода к Мировому океану: более 2,7 млн км².",
+    "en": "Kazakhstan is the largest landlocked country in the world, with more than 2.7 million km²."
+   },
+   "false": {
+    "ru": "Самая большая страна мира без выхода к Мировому океану — Монголия.",
+    "en": "The largest landlocked country in the world is Mongolia."
+   },
+   "check": "criterion: area; the Caspian is a lake, so its shore is not a way to the ocean",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "maldives-lowest-country",
+   "object": "cty-maldives",
+   "section": 7,
+   "clue": {
+    "ru": "Самая низменная страна мира",
+    "en": "The lowest-lying country in the world"
+   },
+   "true": {
+    "ru": "Мальдивы — самая низменная страна мира: в среднем острова поднимаются над морем всего примерно на полтора метра.",
+    "en": "The Maldives are the lowest-lying country in the world: on average the islands rise only about 1.5 m above the sea."
+   },
+   "false": {
+    "ru": "Самая низменная страна мира — Бангладеш.",
+    "en": "The lowest-lying country in the world is Bangladesh."
+   },
+   "check": "criterion changed to average height (about 1.5 m): the highest point is given as 2.4 m traditionally but higher by newer surveys",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "uzbekistan-doubly-landlocked",
+   "object": "cty-uzbekistan",
+   "section": 7,
+   "clue": {
+    "ru": "Страна, все соседи которой тоже не имеют выхода к Мировому океану",
+    "en": "The country whose neighbours are all landlocked too"
+   },
+   "true": {
+    "ru": "Узбекистан — одна из двух стран мира, все соседи которых тоже не имеют выхода к Мировому океану. Вторая такая страна — Лихтенштейн.",
+    "en": "Uzbekistan is one of only two countries whose neighbours are all landlocked too. The other is Liechtenstein."
+   },
+   "false": {
+    "ru": "Все соседи Казахстана тоже не имеют выхода к Мировому океану.",
+    "en": "All the neighbours of Kazakhstan are landlocked too."
+   },
+   "check": "criterion: doubly landlocked; the Caspian counts as a lake (Kazakhstan and Turkmenistan have no way to the ocean)",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "baku-lowest-capital",
+   "object": "cty-azerbaijan",
+   "section": 8,
+   "clue": {
+    "ru": "Страна, столица которой — самая низко расположенная столица мира",
+    "en": "The country with the lowest-lying capital in the world"
+   },
+   "true": {
+    "ru": "Баку — самая низко расположенная столица мира: около 28 м ниже уровня океана.",
+    "en": "Baku is the lowest-lying capital in the world, about 28 m below sea level."
+   },
+   "false": {
+    "ru": "Баку стоит выше 1000 м над уровнем моря.",
+    "en": "Baku stands more than 1,000 m above sea level."
+   },
+   "check": "criterion: height of the capital above sea level (−28 m)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "saudi-arabia-largest-without-rivers",
+   "object": "cty-saudi-arabia",
+   "section": 8,
+   "clue": {
+    "ru": "Самая большая страна мира без постоянных рек",
+    "en": "The largest country in the world without permanent rivers"
+   },
+   "true": {
+    "ru": "Саудовская Аравия — самая большая страна мира без естественных постоянных рек: более 2 млн км².",
+    "en": "Saudi Arabia is the largest country in the world without natural permanent rivers, with more than 2 million km²."
+   },
+   "false": {
+    "ru": "Через Саудовскую Аравию течёт Евфрат.",
+    "en": "The Euphrates flows through Saudi Arabia."
+   },
+   "check": "criterion: area among countries with no natural permanent river (only seasonal wadis)",
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "bahrain-smallest-west-asia",
+   "object": "cty-bahrain",
+   "section": 8,
+   "clue": {
+    "ru": "Самая маленькая страна Западной Азии по площади",
+    "en": "The smallest country of West Asia by area"
+   },
+   "true": {
+    "ru": "Бахрейн — самая маленькая страна Западной Азии по площади: около 790 км².",
+    "en": "Bahrain is the smallest country of West Asia by area, about 790 km²."
+   },
+   "false": {
+    "ru": "Самая маленькая страна Западной Азии — Катар.",
+    "en": "The smallest country of West Asia is Qatar."
+   },
+   "check": "criterion: area; «by area» added; the area grows a little with land reclamation",
+   "changedFromSection": true,
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}

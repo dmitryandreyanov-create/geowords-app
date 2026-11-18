@@ -133,6 +133,9 @@ jobs:
       - name: Expedition replay and locked-unit regression at phone width
         run: node scripts/validate-expedition-browser.mjs
 
+      - name: Asia block review, block final and Challenge at phone width
+        run: node scripts/validate-asia-review-browser.mjs
+
       - name: Validate dictionary
         run: |
           node scripts/validate-dictionary.mjs
@@ -156,6 +159,7 @@ jobs:
           node scripts/test-validate-challenge.mjs
           node scripts/validate-review.mjs
           node scripts/validate-review-b2.mjs
+          node scripts/validate-review-b3.mjs
           node scripts/test-validate-review.mjs
 
   deploy:

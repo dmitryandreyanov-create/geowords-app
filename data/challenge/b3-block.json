@@ -1,0 +1,213 @@
+{
+ "block": "asia-3",
+ "status": "draft",
+ "challenge": {
+  "parts": [
+   "speed-hunt",
+   "geowords"
+  ],
+  "geowords": "three app-generated words per round from the approved review words of block 3 sections 1-8, three words from three different sections; letters on the countries map of Asia with its rivers"
+ },
+ "speedHunt": {
+  "durationSeconds": 60,
+  "map": "./assets/asia-countries.webp",
+  "prompt": {
+   "en": "Find:",
+   "ru": "Найди:",
+   "object": "the country or river name as on the cards; no capitals, records or facts"
+  },
+  "order": "difficulty alternates easy, medium, easy, hard… (random inside a tier, no object repeats within a round); after a tier runs out the others go on in turn",
+  "difficulty": {
+   "countries": {
+    "easy": [
+     "cty-china",
+     "cty-mongolia",
+     "cty-japan",
+     "cty-vietnam",
+     "cty-thailand",
+     "cty-myanmar",
+     "cty-malaysia",
+     "cty-indonesia",
+     "cty-philippines",
+     "cty-india",
+     "cty-pakistan",
+     "cty-afghanistan",
+     "cty-kazakhstan",
+     "cty-uzbekistan",
+     "cty-turkmenistan",
+     "cty-iran",
+     "cty-turkey",
+     "cty-iraq",
+     "cty-saudi-arabia",
+     "cty-oman",
+     "cty-yemen"
+    ],
+    "medium": [
+     "cty-north-korea",
+     "cty-south-korea",
+     "cty-laos",
+     "cty-cambodia",
+     "cty-bangladesh",
+     "cty-sri-lanka",
+     "cty-nepal",
+     "cty-kyrgyzstan",
+     "cty-tajikistan",
+     "cty-syria",
+     "cty-jordan",
+     "cty-azerbaijan",
+     "cty-georgia",
+     "cty-uae"
+    ],
+    "hard": [
+     "cty-taiwan",
+     "cty-singapore",
+     "cty-brunei",
+     "cty-timor-leste",
+     "cty-maldives",
+     "cty-bhutan",
+     "cty-armenia",
+     "cty-cyprus",
+     "cty-lebanon",
+     "cty-israel",
+     "cty-palestine",
+     "cty-kuwait",
+     "cty-bahrain",
+     "cty-qatar"
+    ]
+   },
+   "rivers": {
+    "easy": [
+     "as-yangtze",
+     "as-huang-he",
+     "as-ob",
+     "as-yenisei",
+     "as-lena",
+     "as-amur",
+     "as-mekong",
+     "as-ganges",
+     "as-indus",
+     "as-tigris",
+     "as-euphrates"
+    ],
+    "medium": [
+     "as-irtysh",
+     "as-kolyma",
+     "as-brahmaputra",
+     "as-amu-darya",
+     "as-syr-darya",
+     "as-irrawaddy"
+    ],
+    "hard": [
+     "as-chao-phraya",
+     "as-salween",
+     "as-godavari",
+     "as-jordan",
+     "as-ili",
+     "as-tarim"
+    ]
+   }
+  },
+  "correct": "+1 and the next object at once",
+  "wrong": "the right place lights up for 0.5 s; no penalty except time; the object goes into the weak list",
+  "skip": "allowed",
+  "hit": "a river counts within 8 CSS px of its drawn line; a country counts inside its outline or within 22 CSS px of it; the small countries (the hard tier) within 36 CSS px — an enlarged tap area that lies only over the sea, never over a neighbour: a tap inside another country's outline answers that country (only a tap within 2 px of the asked country's own border line still counts for it), and the nearest object of the pool wins, so two enlarged areas never overlap",
+  "excluded": {
+   "ids": [],
+   "why": "mountains, lakes, deserts and section-1 places are on other maps (no time to switch maps in 60 s); no capitals: their dots are too small on the map of Asia for a timed game"
+  },
+  "score": "objects found in the round + personal best",
+  "stars": {
+   "thresholds": [
+    10,
+    15,
+    20
+   ],
+   "provisional": true,
+   "note": "the same as Europe; tune after testing with children"
+  },
+  "pool": {
+   "countries": [
+    "cty-china",
+    "cty-mongolia",
+    "cty-japan",
+    "cty-vietnam",
+    "cty-thailand",
+    "cty-myanmar",
+    "cty-malaysia",
+    "cty-indonesia",
+    "cty-philippines",
+    "cty-india",
+    "cty-pakistan",
+    "cty-afghanistan",
+    "cty-kazakhstan",
+    "cty-uzbekistan",
+    "cty-turkmenistan",
+    "cty-iran",
+    "cty-turkey",
+    "cty-iraq",
+    "cty-saudi-arabia",
+    "cty-oman",
+    "cty-yemen",
+    "cty-north-korea",
+    "cty-south-korea",
+    "cty-laos",
+    "cty-cambodia",
+    "cty-bangladesh",
+    "cty-sri-lanka",
+    "cty-nepal",
+    "cty-kyrgyzstan",
+    "cty-tajikistan",
+    "cty-syria",
+    "cty-jordan",
+    "cty-azerbaijan",
+    "cty-georgia",
+    "cty-uae",
+    "cty-taiwan",
+    "cty-singapore",
+    "cty-brunei",
+    "cty-timor-leste",
+    "cty-maldives",
+    "cty-bhutan",
+    "cty-armenia",
+    "cty-cyprus",
+    "cty-lebanon",
+    "cty-israel",
+    "cty-palestine",
+    "cty-kuwait",
+    "cty-bahrain",
+    "cty-qatar"
+   ],
+   "rivers": [
+    "as-yangtze",
+    "as-huang-he",
+    "as-ob",
+    "as-yenisei",
+    "as-lena",
+    "as-amur",
+    "as-mekong",
+    "as-ganges",
+    "as-indus",
+    "as-tigris",
+    "as-euphrates",
+    "as-irtysh",
+    "as-kolyma",
+    "as-brahmaputra",
+    "as-amu-darya",
+    "as-syr-darya",
+    "as-irrawaddy",
+    "as-chao-phraya",
+    "as-salween",
+    "as-godavari",
+    "as-jordan",
+    "as-ili",
+    "as-tarim"
+   ]
+  },
+  "poolSize": 72
+ },
+ "geowords": {
+  "words": "approved review words (role review) of data/dictionary/b3-section-1..8.json, each word once; three different sections per round; recently played words last",
+  "places": "the whole countries map of Asia: the 49 countries (a letter in the main part of the country, its circle wholly inside the border; on the whole map of Asia only the largest countries can hold the circle, the others take no letter), the 23 rivers («on the Mekong») and a river inside a country it crosses («on the Mekong in Cambodia»), the four lakes drawn on the map (Caspian, Aral, Balkhash, Issyk-Kul) and the section-1 objects (not the Arctic Ocean, Chukotka or the Bering Strait); at least a third of the letters on rivers, then the lakes, seas, islands, peninsulas and countries first, so a word is never rivers only; a country named once; spacing 10% of map width (at 9 two letters' tap areas can overlap on the whole map)",
+  "fallback": "a word that cannot be laid out is replaced by the next word of another section"
+ }
+}

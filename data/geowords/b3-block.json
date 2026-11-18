@@ -1,0 +1,287 @@
+{
+ "block": "asia-3",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the whole countries map of Asia: letters in the 49 countries of sections 6–8 (in the main part of the country, the circle wholly inside the border; a country too small for that takes no letter), on the 23 rivers of section 2 («on the Mekong») and on a river inside a country it crosses («on the Mekong in Cambodia»), in the four lakes of section 3 drawn on the map, and on the objects of section 1 (not the Arctic Ocean, Chukotka or the Bering Strait); at least a third of the letters on rivers (Svetlana, 28.10.2026). Mountains and deserts are not drawn on this map",
+  "nesting": "as b3-section-8.json: a country named once per puzzle; one letter per river; «on the Mekong» never with a country the Mekong crosses; a country or a river in it never with its island or peninsula; no letter inside the area of another place",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 10 (% of map width; at 9 two tap areas can overlap on the whole map)",
+  "languages": "RU and EN are laid out separately; each layout is checked on its own by this tool (check())",
+  "role": "block-final: the final GeoWords of the block 3 review (passport stamp)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-block-final-en",
+   "block": "asia-3",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "en",
+   "answer": "DIVERSITY",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 10,
+   "markers": [
+    {
+     "id": "as-ganges",
+     "x": 41.65,
+     "y": 55.12,
+     "letter": "D"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "I"
+    },
+    {
+     "id": "as-tigris",
+     "x": 24.29,
+     "y": 46.02,
+     "letter": "V"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "E"
+    },
+    {
+     "id": "cty-china",
+     "x": 57.6,
+     "y": 56,
+     "letter": "R"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "S"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "I"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "T"
+    },
+    {
+     "id": "as-japanese-islands",
+     "x": 72.45,
+     "y": 44.16,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-aral",
+     "position": 4,
+     "text": "Find the fourth letter in the Aral Sea."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 2,
+     "text": "Find the second letter in the South China Sea."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 6,
+     "text": "Find the sixth letter on the Taimyr Peninsula."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 3,
+     "text": "Find the third letter on the Tigris."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 8,
+     "text": "Find the eighth letter on the Kolyma."
+    },
+    {
+     "markerId": "cty-china",
+     "position": 5,
+     "text": "Find the fifth letter in China."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 1,
+     "text": "Find the first letter on the Ganges."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 7,
+     "text": "Find the seventh letter on the island of Sri Lanka."
+    },
+    {
+     "markerId": "as-japanese-islands",
+     "position": 9,
+     "text": "Find the ninth letter on the Japanese Islands."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  },
+  {
+   "id": "b3-block-final-ru",
+   "block": "asia-3",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "ru",
+   "answer": "МНОГООБРАЗИЕ",
+   "map": "./assets/asia-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 10,
+   "markers": [
+    {
+     "id": "as-ganges",
+     "x": 40.47,
+     "y": 57.21,
+     "letter": "М"
+    },
+    {
+     "id": "as-yangtze@cty-china",
+     "x": 58.88,
+     "y": 54.99,
+     "letter": "Н"
+    },
+    {
+     "id": "as-balkhash",
+     "x": 40.68,
+     "y": 40.91,
+     "letter": "О"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "Г"
+    },
+    {
+     "id": "as-salween",
+     "x": 52.2,
+     "y": 69.78,
+     "letter": "О"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "О"
+    },
+    {
+     "id": "as-tigris",
+     "x": 23.29,
+     "y": 36.92,
+     "letter": "Б"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "Р"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "А"
+    },
+    {
+     "id": "as-kolyma",
+     "x": 67.85,
+     "y": 16.61,
+     "letter": "З"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "И"
+    },
+    {
+     "id": "as-amur",
+     "x": 68.36,
+     "y": 30.49,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на Аравийском полуострове."
+    },
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 9,
+     "text": "Найди девятую букву в Тихом океане."
+    },
+    {
+     "markerId": "as-balkhash",
+     "position": 3,
+     "text": "Найди третью букву в озере Балхаш."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Таймыре."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 8,
+     "text": "Найди восьмую букву на Корейском полуострове."
+    },
+    {
+     "markerId": "as-salween",
+     "position": 5,
+     "text": "Найди пятую букву на Салуине."
+    },
+    {
+     "markerId": "as-yangtze@cty-china",
+     "position": 2,
+     "text": "Найди вторую букву на Янцзы в Китае."
+    },
+    {
+     "markerId": "as-tigris",
+     "position": 7,
+     "text": "Найди седьмую букву на Тигре."
+    },
+    {
+     "markerId": "as-kolyma",
+     "position": 10,
+     "text": "Найди десятую букву на Колыме."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Индийском океане."
+    },
+    {
+     "markerId": "as-amur",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Амуре."
+    },
+    {
+     "markerId": "as-ganges",
+     "position": 1,
+     "text": "Найди первую букву на Ганге."
+    }
+   ],
+   "approval": {
+    "status": "draft"
+   }
+  }
+ ]
+}
