@@ -1,0 +1,326 @@
+{
+ "block": "namerica-4",
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "the whole countries map of North America: letters in the 10 countries of section 6 (in the main part of the country, the circle wholly inside the border; a country too small for that takes no letter), on the 13 rivers of section 2 («on the Mississippi») and on a river inside a country it crosses («on the Rio Grande in Mexico»), and on the objects of section 1 (not the Bering and Denmark straits); at least a third of the letters on rivers (Svetlana, 28.10.2026). Lakes, mountains and deserts are not drawn on this map; the Caribbean island states are on their own map",
+  "nesting": "as b4-section-6.json: a country named once per puzzle; one letter per river; «on the Mississippi» never with a country the Mississippi crosses; a country or a river in it never with its island or peninsula; no letter inside the area of another place",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 10 (% of map width; at 9 two tap areas can overlap on the whole map)",
+  "languages": "RU and EN are laid out separately; each layout is checked on its own by this tool (check())",
+  "role": "block-final: the final GeoWords of the block 4 review (passport stamp)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-block-final-en",
+   "block": "namerica-4",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "en",
+   "answer": "PATHFINDERS",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 10,
+   "markers": [
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "P"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "A"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "T"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 61.95,
+     "y": 54.32,
+     "letter": "H"
+    },
+    {
+     "id": "na-missouri",
+     "x": 41.82,
+     "y": 53.46,
+     "letter": "F"
+    },
+    {
+     "id": "na-mackenzie@cty-canada",
+     "x": 39.79,
+     "y": 35.02,
+     "letter": "I"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "N"
+    },
+    {
+     "id": "na-arkansas@cty-united-states",
+     "x": 50.48,
+     "y": 66.15,
+     "letter": "D"
+    },
+    {
+     "id": "na-gulf-of-california",
+     "x": 40.82,
+     "y": 78.02,
+     "letter": "E"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "R"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yukon",
+     "position": 7,
+     "text": "Find the seventh letter on the Yukon."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 4,
+     "text": "Find the fourth letter on the St. Lawrence."
+    },
+    {
+     "markerId": "na-arkansas@cty-united-states",
+     "position": 8,
+     "text": "Find the eighth letter on the Arkansas in the United States."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 11,
+     "text": "Find the eleventh letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-mackenzie@cty-canada",
+     "position": 6,
+     "text": "Find the sixth letter on the Mackenzie in Canada."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "na-missouri",
+     "position": 5,
+     "text": "Find the fifth letter on the Missouri."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-gulf-of-california",
+     "position": 9,
+     "text": "Find the ninth letter in the Gulf of California."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 1,
+     "text": "Find the first letter on the Yucatán Peninsula."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 10,
+     "text": "Find the tenth letter in Hudson Bay."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "193b80930b1fd0a4"
+   }
+  },
+  {
+   "id": "b4-block-final-ru",
+   "block": "namerica-4",
+   "unit": "block-final",
+   "role": "block-final",
+   "language": "ru",
+   "answer": "ПЕРВОПРОХОДЦЫ",
+   "map": "./assets/namerica-countries.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 10,
+   "markers": [
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "П"
+    },
+    {
+     "id": "na-columbia",
+     "x": 37.5,
+     "y": 51.1,
+     "letter": "Е"
+    },
+    {
+     "id": "na-baja-california",
+     "x": 37.07,
+     "y": 68.9,
+     "letter": "Р"
+    },
+    {
+     "id": "na-rio-grande",
+     "x": 47.77,
+     "y": 75.71,
+     "letter": "В"
+    },
+    {
+     "id": "na-missouri@cty-united-states",
+     "x": 52.26,
+     "y": 62.74,
+     "letter": "О"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "П"
+    },
+    {
+     "id": "na-yukon",
+     "x": 26.09,
+     "y": 24.12,
+     "letter": "Р"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "О"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "Х"
+    },
+    {
+     "id": "na-mackenzie@cty-canada",
+     "x": 41.53,
+     "y": 36.63,
+     "letter": "О"
+    },
+    {
+     "id": "na-st-lawrence",
+     "x": 61.95,
+     "y": 54.32,
+     "letter": "Д"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "Ц"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yukon",
+     "position": 7,
+     "text": "Найди седьмую букву на Юконе."
+    },
+    {
+     "markerId": "na-baja-california",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Калифорния."
+    },
+    {
+     "markerId": "na-missouri@cty-united-states",
+     "position": 5,
+     "text": "Найди пятую букву на Миссури в США."
+    },
+    {
+     "markerId": "na-mackenzie@cty-canada",
+     "position": 10,
+     "text": "Найди десятую букву на Маккензи в Канаде."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "na-rio-grande",
+     "position": 4,
+     "text": "Найди четвёртую букву на Рио-Гранде."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 9,
+     "text": "Найди девятую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-st-lawrence",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на реке Святого Лаврентия."
+    },
+    {
+     "markerId": "na-columbia",
+     "position": 2,
+     "text": "Найди вторую букву на Колумбии."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 8,
+     "text": "Найди восьмую букву в Гренландии."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Тихом океане."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 6,
+     "text": "Найди шестую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 1,
+     "text": "Найди первую букву на Кубе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-18",
+    "contentSha256": "142b61824dc291f6"
+   }
+  }
+ ]
+}
