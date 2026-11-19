@@ -119,6 +119,22 @@ for (const file of files) {
   try { j = JSON.parse(fs.readFileSync(path.join(dir, file), "utf8")); }
   catch (e) { fail(file, "invalid JSON: " + e.message); continue; }
 
+  // several enlarged pieces of one map (namerica-lesser-antilles.json: the north and the south): each part is checked as an enlarged piece,
+  // and the frames never overlap, so a tap on the map opens exactly one
+  if (Array.isArray(j.parts) && j.of) {
+    const ofRel = exists(file, j.of, "parent map"), p = ofRel && webpInfo(ofRel);
+    for (const part of j.parts) {
+      const rel = exists(file, part.map, `part ${part.id} map`), f = part.frame;
+      if (rel && p) { const im = webpInfo(rel), want = (f.w / 100 * p.w) / (f.h / 100 * p.h);
+        if (Math.abs(im.w / im.h - want) > 0.01) fail(file, `part ${part.id}: frame ${f.w}%×${f.h}% does not have the shape of ${im.w}×${im.h}`); }
+      if (!(f.x >= 0 && f.y >= 0 && f.x + f.w <= 100 && f.y + f.h <= 100)) fail(file, `part ${part.id}: frame outside the parent map`);
+    }
+    for (const a of j.parts) for (const b of j.parts) if (a !== b) {
+      const ox = Math.min(a.frame.x + a.frame.w, b.frame.x + b.frame.w) - Math.max(a.frame.x, b.frame.x), oy = Math.min(a.frame.y + a.frame.h, b.frame.y + b.frame.h) - Math.max(a.frame.y, b.frame.y);
+      if (ox > 1e-6 && oy > 1e-6) fail(file, `parts ${a.id} and ${b.id} overlap`);
+    }
+    continue;
+  }
   const baseRel = exists(file, j.map, "base map");
   let base = null;
   if (baseRel) { try { base = webpInfo(baseRel); } catch (e) { fail(file, `base map: ${e.message}`); } }
@@ -138,6 +154,16 @@ for (const file of files) {
     if (Math.abs(j.size[0] / j.size[1] - aspect) > 0.002) fail(file, `size ${j.size.join("×")} has a different aspect than the base map`);
   }
 
+  // an enlarged piece of another map (asia-levant.json): the frame must keep the shape of the image, and the parent map must exist
+  if (j.frame && j.of) {
+    const ofRel = exists(file, j.of, "parent map"), f = j.frame;
+    if (ofRel && base) {
+      const p = webpInfo(ofRel), want = (f.w / 100 * p.w) / (f.h / 100 * p.h);
+      if (Math.abs(base.w / base.h - want) > 0.01) fail(file, `frame ${f.w}%×${f.h}% of ${ofRel} does not have the shape of ${base.w}×${base.h}`);
+    }
+    if (!(f.x >= 0 && f.y >= 0 && f.x + f.w <= 100 && f.y + f.h <= 100)) fail(file, "frame outside the parent map");
+    continue;
+  }
   const key = Object.keys(j).find(k => Array.isArray(j[k]) && j[k].length && j[k][0] && typeof j[k][0] === "object" && "id" in j[k][0]);
   if (!key) { fail(file, "no list of objects with ids"); continue; }
   const items = j[key];

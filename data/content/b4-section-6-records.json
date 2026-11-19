@@ -1,0 +1,186 @@
+{
+ "section": "countries-of-north-and-central-america",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks; areas by UN data; the length of Canada's coastline is not given (it depends on how it is measured); Mexico City is a fact card with a «find it» task, never a true/false question",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "canada-largest",
+   "order": 1,
+   "object": "cty-canada",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Canada",
+    "ru": "Канада"
+   },
+   "fact": {
+    "ru": "Канада — самая большая страна Северной Америки, около 10 млн км².",
+    "en": "Canada is the largest country of North America, about 10 million km²."
+   },
+   "figure": {
+    "value": 10000000,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "6eabcedf60b1baae"
+   }
+  },
+  {
+   "id": "canada-coastline",
+   "order": 2,
+   "object": "cty-canada",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Canada",
+    "ru": "Канада"
+   },
+   "fact": {
+    "ru": "У Канады самая длинная береговая линия в мире.",
+    "en": "Canada has the longest coastline in the world."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "9985d6aea5a67044"
+   }
+  },
+  {
+   "id": "canada-us-border",
+   "order": 3,
+   "object": "cty-united-states",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "United States",
+    "ru": "США"
+   },
+   "fact": {
+    "ru": "Граница Канады и США — самая длинная международная граница между двумя государствами, около 8 900 км, включая участок между Канадой и Аляской.",
+    "en": "The Canada–United States border is the world’s longest international border between two countries, measuring about 8,900 km, including the Alaska–Canada section."
+   },
+   "figure": {
+    "value": 8900,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "13f76ef67ba382b4"
+   }
+  },
+  {
+   "id": "mexico-city-agglomeration",
+   "order": 4,
+   "object": "cty-mexico",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Mexico",
+    "ru": "Мексика"
+   },
+   "fact": {
+    "ru": "Мехико — одна из крупнейших городских агломераций Северной Америки. В ней проживает более 20 миллионов человек.",
+    "en": "Mexico City is one of the largest metropolitan areas in North America, with a population of more than 20 million people."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "1a3bb839fca4af96"
+   }
+  },
+  {
+   "id": "nicaragua-largest",
+   "order": 5,
+   "object": "cty-nicaragua",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Nicaragua",
+    "ru": "Никарагуа"
+   },
+   "fact": {
+    "ru": "Никарагуа — самая большая страна Центральной Америки, около 130 тысяч км².",
+    "en": "Nicaragua is the largest country of Central America, about 130,000 km²."
+   },
+   "figure": {
+    "value": 130000,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "e5178cfb1174dc4e"
+   }
+  },
+  {
+   "id": "el-salvador-smallest",
+   "order": 6,
+   "object": "cty-el-salvador",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "El Salvador",
+    "ru": "Сальвадор"
+   },
+   "fact": {
+    "ru": "Сальвадор — самая маленькая страна Центральной Америки, около 21 тысячи км².",
+    "en": "El Salvador is the smallest country of Central America, about 21,000 km²."
+   },
+   "figure": {
+    "value": 21000,
+    "unit": "km2"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "1140a60cf44dd024"
+   }
+  }
+ ]
+}

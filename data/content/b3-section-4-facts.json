@@ -1,0 +1,541 @@
+{
+ "section": "mountains-of-asia",
+ "block": 3,
+ "use": "introduction cards, one fact per mountain range, plateau or volcano; asia-mountains-intro opens the section; ids match data/maps/asia-mountains.json",
+ "decisions": [
+  "Mountains are their own section of block 3 (Svetlana, 29.10.2026).",
+  "12 ranges, the Tibetan Plateau and the volcanoes Fuji, Klyuchevskaya Sopka and Krakatoa chosen by Svetlana 30.10.2026; the Himalayas, the Urals and the Caucasus are reviewed with new facts.",
+  "Three units: the mountain knot / Siberia and the Far East / West and South Asia (Svetlana «Согласна», 30.10.2026). Ranges are outlines, volcanoes points.",
+  "Svetlana's review 30.10.2026 22:03: Pamirs, Himalayas (10 + 4 eight-thousanders by the usual classification), Klyuchevskaya (height changes), Zagros, Arakan and Krakatoa facts reworded; the knot ranges are drawn as separate systems that come close, not meeting in one point.",
+  "Facts, records, words and finals approved by Svetlana 30.10.2026 23:15 («Утверждаю»)."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Горный узел Азии",
+    "en": "The mountain knot of Asia"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Сибирь и Дальний Восток",
+    "en": "Siberia and the Far East"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Запад и юг Азии",
+    "en": "West and South Asia"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "asia-mountains-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Mountains of Asia",
+    "ru": "Горы Азии"
+   },
+   "fact": {
+    "en": "The highest mountains on Earth are in Asia. Several huge mountain systems meet in its centre, and in the east and south there are volcanoes that still erupt today.",
+    "ru": "Самые высокие горы Земли находятся в Азии. В её центре сходятся несколько огромных горных систем, а на востоке и юге стоят вулканы, которые извергаются и сегодня."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "d573dc7b9cdecce9"
+   }
+  },
+  {
+   "id": "as-pamirs",
+   "order": 1,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Pamirs",
+    "ru": "Памир"
+   },
+   "fact": {
+    "en": "The Pamirs are called the Roof of the World. They lie where the largest mountain systems of Central Asia come close together.",
+    "ru": "Памир называют «Крышей мира». Он расположен в области сближения крупнейших горных систем Центральной Азии."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "bd1af5ea2cff9a93"
+   }
+  },
+  {
+   "id": "as-tian-shan",
+   "order": 2,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Tian Shan",
+    "ru": "Тянь-Шань"
+   },
+   "fact": {
+    "en": "Tian Shan means Heavenly Mountains in Chinese. It runs through Kyrgyzstan, Kazakhstan and China; its highest point is Jengish Chokusu (Victory Peak), 7,439 m.",
+    "ru": "Тянь-Шань по-китайски значит «Небесные горы». Он тянется через Киргизию, Казахстан и Китай; высшая точка — пик Победы, 7439 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "815f104ff8e36503"
+   }
+  },
+  {
+   "id": "as-hindu-kush",
+   "order": 3,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Hindu Kush",
+    "ru": "Гиндукуш"
+   },
+   "fact": {
+    "en": "The Hindu Kush runs through Afghanistan and Pakistan. Its highest point is Tirich Mir, 7,708 m.",
+    "ru": "Гиндукуш тянется через Афганистан и Пакистан. Его высшая точка — Тиричмир, 7708 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "bce67fd7728b123f"
+   }
+  },
+  {
+   "id": "as-karakoram",
+   "order": 4,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Karakoram",
+    "ru": "Каракорум"
+   },
+   "fact": {
+    "en": "The Karakoram holds K2, the second-highest mountain in the world, 8,611 m. Some of the longest mountain glaciers on Earth are here too.",
+    "ru": "В Каракоруме стоит Чогори (K2) — вторая по высоте вершина мира, 8611 м. Здесь же одни из самых длинных горных ледников Земли."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b532e0f326471883"
+   }
+  },
+  {
+   "id": "as-kunlun",
+   "order": 5,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Kunlun Mountains",
+    "ru": "Куньлунь"
+   },
+   "fact": {
+    "en": "The Kunlun is one of the longest mountain systems in Asia, about 3,000 km. It separates the Tibetan Plateau from the deserts to the north.",
+    "ru": "Куньлунь — одна из самых длинных горных систем Азии, около 3000 км. Он отделяет Тибетское нагорье от пустынь на севере."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e2955356d22f61f3"
+   }
+  },
+  {
+   "id": "as-tibet",
+   "order": 6,
+   "kind": "plateau",
+   "unit": 1,
+   "name": {
+    "en": "Tibetan Plateau",
+    "ru": "Тибетское нагорье"
+   },
+   "fact": {
+    "en": "The Tibetan Plateau is the highest plateau in the world: its average height is over 4,000 m. The Indus, the Brahmaputra, the Yangtze, the Huang He and the Mekong begin here.",
+    "ru": "Тибетское нагорье — самое высокое нагорье мира: его средняя высота больше 4000 м. Здесь начинаются Инд, Брахмапутра, Янцзы, Хуанхэ и Меконг."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "721464705a445c49"
+   }
+  },
+  {
+   "id": "as-himalayas",
+   "order": 7,
+   "kind": "mountain",
+   "unit": 1,
+   "name": {
+    "en": "Himalayas",
+    "ru": "Гималаи"
+   },
+   "fact": {
+    "en": "Of the 14 peaks on Earth higher than 8,000 m, ten are usually counted in the Himalayas and four in the Karakoram. Everest, 8,849 m, is one of the Himalayan ones.",
+    "ru": "Из 14 вершин Земли выше 8000 м десять обычно относят к Гималаям, а четыре — к Каракоруму. Среди гималайских — Эверест (Джомолунгма), 8849 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "review": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "5a3a7939c1a49f5e"
+   }
+  },
+  {
+   "id": "as-altai",
+   "order": 8,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Altai Mountains",
+    "ru": "Алтай"
+   },
+   "fact": {
+    "en": "The Altai lies where Russia, Kazakhstan, China and Mongolia meet. Its highest point is Belukha, 4,506 m.",
+    "ru": "Алтай лежит там, где сходятся Россия, Казахстан, Китай и Монголия. Его высшая точка — гора Белуха, 4506 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a18ea22a4238cab3"
+   }
+  },
+  {
+   "id": "as-sayan",
+   "order": 9,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Sayan Mountains",
+    "ru": "Саяны"
+   },
+   "fact": {
+    "en": "The Sayan Mountains rise in southern Siberia, near the border of Russia and Mongolia. The Yenisei cuts through the Western Sayan, where the Sayano-Shushenskaya dam stands.",
+    "ru": "Саяны — горы на юге Сибири, у границы России и Монголии. Через Западный Саян пробивается Енисей, там стоит Саяно-Шушенская ГЭС."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "c6c12d5ac615a9e4"
+   }
+  },
+  {
+   "id": "as-sikhote-alin",
+   "order": 10,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Sikhote-Alin",
+    "ru": "Сихотэ-Алинь"
+   },
+   "fact": {
+    "en": "The Sikhote-Alin runs along the Sea of Japan in Primorye. The Amur tiger lives in its forests.",
+    "ru": "Сихотэ-Алинь тянется вдоль Японского моря в Приморье. В его лесах живёт амурский тигр."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "7aaa3ec68afdd57c"
+   }
+  },
+  {
+   "id": "as-klyuchevskaya",
+   "order": 11,
+   "kind": "volcano",
+   "unit": 2,
+   "name": {
+    "en": "Klyuchevskaya Sopka",
+    "ru": "Ключевская Сопка"
+   },
+   "fact": {
+    "en": "Klyuchevskaya Sopka on Kamchatka is the highest active volcano in Eurasia. It is about 4,750 m high; its height changes after eruptions.",
+    "ru": "Ключевская Сопка на Камчатке — самый высокий действующий вулкан Евразии. Его высота около 4750 м; после извержений она меняется."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a57a570d30685da7"
+   }
+  },
+  {
+   "id": "as-fuji",
+   "order": 12,
+   "kind": "volcano",
+   "unit": 2,
+   "name": {
+    "en": "Mount Fuji",
+    "ru": "Фудзи"
+   },
+   "fact": {
+    "en": "Mount Fuji is the highest mountain in Japan, 3,776 m. It is a volcano; it last erupted in 1707.",
+    "ru": "Фудзи — самая высокая гора Японии, 3776 м. Это вулкан; последний раз он извергался в 1707 году."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "e49916965ae20f42"
+   }
+  },
+  {
+   "id": "as-urals",
+   "order": 13,
+   "kind": "mountain",
+   "unit": 2,
+   "name": {
+    "en": "Ural Mountains",
+    "ru": "Уральские горы"
+   },
+   "fact": {
+    "en": "The Ural Mountains are very old, so they are not high: their highest point, Mount Narodnaya, is 1,895 m.",
+    "ru": "Уральские горы очень древние и поэтому невысокие: высшая точка — гора Народная, 1895 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "review": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "27a91ff19951a2b0"
+   }
+  },
+  {
+   "id": "as-zagros",
+   "order": 14,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Zagros Mountains",
+    "ru": "Загрос"
+   },
+   "fact": {
+    "en": "The Zagros runs for almost 1,600 km through Iran and Iraq along the Persian Gulf. It is one of the largest mountain systems in Iran.",
+    "ru": "Загрос тянется почти на 1600 км через Иран и Ирак вдоль Персидского залива. Это одна из крупнейших горных систем Ирана."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "684842bada3bcee5"
+   }
+  },
+  {
+   "id": "as-elburz",
+   "order": 15,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Elburz Mountains",
+    "ru": "Эльбурс"
+   },
+   "fact": {
+    "en": "The Elburz runs along the southern shore of the Caspian Sea. It holds the volcano Damavand, 5,610 m, the highest point of Iran.",
+    "ru": "Эльбурс тянется вдоль южного берега Каспийского моря. В нём стоит вулкан Демавенд, 5610 м — высшая точка Ирана."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "7b4e8c4bf60168ec"
+   }
+  },
+  {
+   "id": "as-caucasus",
+   "order": 16,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Caucasus Mountains",
+    "ru": "Кавказ"
+   },
+   "fact": {
+    "en": "The Caucasus is the Greater and the Lesser Caucasus. Its highest point is Elbrus, 5,642 m; it is a dormant volcano.",
+    "ru": "Кавказ — это Большой и Малый Кавказ. Высшая точка — Эльбрус, 5642 м; это спящий вулкан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "review": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "39223d482cfe210a"
+   }
+  },
+  {
+   "id": "as-arakan",
+   "order": 17,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Arakan Mountains",
+    "ru": "Араканские горы"
+   },
+   "fact": {
+    "en": "The Arakan Mountains run along the western coast of Myanmar and separate the central part of the country from the coastal region of Rakhine.",
+    "ru": "Араканские горы тянутся вдоль западного берега Мьянмы и отделяют центральные районы страны от прибрежной области Ракхайн."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "a8e98a1f5d5a9221"
+   }
+  },
+  {
+   "id": "as-barisan",
+   "order": 18,
+   "kind": "mountain",
+   "unit": 3,
+   "name": {
+    "en": "Barisan Mountains",
+    "ru": "Барисан"
+   },
+   "fact": {
+    "en": "The Barisan Mountains run along the whole island of Sumatra. They have many volcanoes; the highest point is the volcano Kerinci, 3,805 m.",
+    "ru": "Барисан тянется вдоль всего острова Суматра. В нём много вулканов; высшая точка — вулкан Керинчи, 3805 м."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b1e8f25896f89bfa"
+   }
+  },
+  {
+   "id": "as-krakatoa",
+   "order": 19,
+   "kind": "volcano",
+   "unit": 3,
+   "name": {
+    "en": "Krakatoa",
+    "ru": "Кракатау"
+   },
+   "fact": {
+    "en": "Krakatoa is a volcano in the strait between Sumatra and Java. Its eruption in 1883 was one of the largest volcanic eruptions in recorded history: the blast was heard 4,800 km away.",
+    "ru": "Кракатау — вулкан в проливе между Суматрой и Явой. Его извержение в 1883 году — одно из крупнейших вулканических извержений исторического времени: грохот слышали за 4800 км."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1c71fMUYnaadQMujadvQZU",
+    "note": "block 3 section 4 plan"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "b32b878b3c4c6a6c"
+   }
+  }
+ ]
+}

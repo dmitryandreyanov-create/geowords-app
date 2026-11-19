@@ -1,0 +1,93 @@
+{
+ "section": "rivers-of-north-america",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "mississippi-missouri-longest",
+   "order": 1,
+   "object": "na-mississippi",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Mississippi",
+    "ru": "Миссисипи"
+   },
+   "fact": {
+    "en": "Together the Mississippi and the Missouri form the longest river system in North America: more than 6,000 km.",
+    "ru": "Миссисипи и Миссури вместе образуют самую длинную речную систему Северной Америки: больше 6 000 км."
+   },
+   "figure": {
+    "value": 6000,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "67e7d8651a8e3a3b"
+   }
+  },
+  {
+   "id": "mackenzie-longest-canada",
+   "order": 2,
+   "object": "na-mackenzie",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Mackenzie",
+    "ru": "Маккензи"
+   },
+   "fact": {
+    "en": "The Mackenzie, together with its tributaries and headwaters, forms the longest river system in Canada.",
+    "ru": "Маккензи вместе с притоками и верховьями образует самую длинную речную систему Канады."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "9c21eaf9fb06c6f1"
+   }
+  },
+  {
+   "id": "columbia-largest-pacific",
+   "order": 3,
+   "object": "na-columbia",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Columbia",
+    "ru": "Колумбия"
+   },
+   "fact": {
+    "en": "The Columbia has the highest average discharge of any North American river flowing into the Pacific Ocean.",
+    "ru": "Колумбия имеет самый большой средний расход воды среди рек Северной Америки, впадающих в Тихий океан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "d812a29de7b790a3"
+   }
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "map": "./assets/asia-levant.webp",
+ "of": "./assets/asia-countries.webp",
+ "level": "The Levant, large: Asia section 8 (Svetlana, 02.11.2026)",
+ "coordinateSystem": "frame: the piece of asia-countries.webp this map shows, in % of that map (x, y = top left; w, h = size). A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so tap areas and capitals of asia-countries-8.json apply unchanged.",
+ "source": "Built by tools/build_asia_levant.py from Natural Earth 1:10m (land, lakes, admin 0 boundary lines, disputed areas) and data/maps/asia-rivers.json",
+ "frame": {
+  "x": 16.6,
+  "y": 35.9,
+  "w": 6.6,
+  "h": 6.6
+ },
+ "aspect": "11 / 8",
+ "magnifier": {
+  "x": 19.9,
+  "y": 39.2
+ },
+ "objects": [
+  "cty-cyprus",
+  "cty-syria",
+  "cty-lebanon",
+  "cty-israel",
+  "cty-palestine",
+  "cty-jordan"
+ ],
+ "capitals": [
+  "nicosia",
+  "damascus",
+  "beirut",
+  "jerusalem",
+  "amman"
+ ]
+}

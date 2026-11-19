@@ -1,0 +1,1225 @@
+{
+ "section": "mountains-of-europe",
+ "block": 2,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the ranges of data/maps/europe-mountains.json learned by the end of the unit (section final: all 9), at the point of the range farthest from its edge, first; then on the objects of data/maps/europe-overview.json except the Ural River (not drawn on the mountains map)",
+  "nesting": "as section 1, and a range never shares a puzzle with the land of the same name: the Scandinavian Mountains / Peninsula, the Balkan Mountains / Peninsula, the Apennines / Apennine Peninsula, the Pyrenees / Iberian Peninsula, the Scottish Highlands / Great Britain",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b2-section-3-unit-1-en",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MATTERHORN",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "M"
+    },
+    {
+     "id": "jutland",
+     "x": 45.52,
+     "y": 52.1,
+     "letter": "A"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "T"
+    },
+    {
+     "id": "balkan-peninsula",
+     "x": 55.84,
+     "y": 81.15,
+     "letter": "T"
+    },
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "E"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "R"
+    },
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "H"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "O"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "R"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pyrenees",
+     "position": 7,
+     "text": "Find the seventh letter in the Pyrenees."
+    },
+    {
+     "markerId": "jutland",
+     "position": 2,
+     "text": "Find the second letter on the Jutland Peninsula."
+    },
+    {
+     "markerId": "balkan-peninsula",
+     "position": 4,
+     "text": "Find the fourth letter on the Balkan Peninsula."
+    },
+    {
+     "markerId": "apennines",
+     "position": 10,
+     "text": "Find the tenth letter in the Apennines."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Scandinavian Peninsula."
+    },
+    {
+     "markerId": "alps",
+     "position": 9,
+     "text": "Find the ninth letter in the Alps."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 5,
+     "text": "Find the fifth letter in the Barents Sea."
+    },
+    {
+     "markerId": "iceland",
+     "position": 8,
+     "text": "Find the eighth letter on the island of Iceland."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 1,
+     "text": "Find the first letter in the Ural Mountains."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 3,
+     "text": "Find the third letter on the Kola Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "c1848a8de1676410"
+   }
+  },
+  {
+   "id": "b2-section-3-unit-1-ru",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МАТТЕРХОРН",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "barents-sea",
+     "x": 62.81,
+     "y": 14.13,
+     "letter": "М"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "А"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "Т"
+    },
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "Т"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "Е"
+    },
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "Р"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "Х"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "О"
+    },
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "Р"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "ural-mountains",
+     "position": 4,
+     "text": "Найди четвёртую букву в Уральских горах."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Средиземном море."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Северном море."
+    },
+    {
+     "markerId": "iceland",
+     "position": 8,
+     "text": "Найди восьмую букву на острове Исландия."
+    },
+    {
+     "markerId": "apennines",
+     "position": 3,
+     "text": "Найди третью букву в Апеннинах."
+    },
+    {
+     "markerId": "alps",
+     "position": 10,
+     "text": "Найди десятую букву в Альпах."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 5,
+     "text": "Найди пятую букву на Скандинавском полуострове."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 9,
+     "text": "Найди девятую букву в Пиренеях."
+    },
+    {
+     "markerId": "ireland",
+     "position": 7,
+     "text": "Найди седьмую букву на острове Ирландия."
+    },
+    {
+     "markerId": "barents-sea",
+     "position": 1,
+     "text": "Найди первую букву в Баренцевом море."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "7d3c1c9c4df358b3"
+   }
+  },
+  {
+   "id": "b2-section-3-unit-2-en",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "TRANSYLVANIA",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "T"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "R"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "A"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "N"
+    },
+    {
+     "id": "arctic-ocean",
+     "x": 43.57,
+     "y": 27.01,
+     "letter": "S"
+    },
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "Y"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "L"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "V"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "A"
+    },
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "N"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "I"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "A"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dinaric-alps",
+     "position": 2,
+     "text": "Find the second letter in the Dinaric Alps."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 6,
+     "text": "Find the sixth letter in the Pyrenees."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 3,
+     "text": "Find the third letter in the Mediterranean Sea."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 8,
+     "text": "Find the eighth letter in the Balkan Mountains."
+    },
+    {
+     "markerId": "alps",
+     "position": 4,
+     "text": "Find the fourth letter in the Alps."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 7,
+     "text": "Find the seventh letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "ireland",
+     "position": 12,
+     "text": "Find the twelfth letter on the island of Ireland."
+    },
+    {
+     "markerId": "carpathians",
+     "position": 9,
+     "text": "Find the ninth letter in the Carpathians."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 11,
+     "text": "Find the eleventh letter in the Caspian Sea."
+    },
+    {
+     "markerId": "arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 10,
+     "text": "Find the tenth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "apennines",
+     "position": 1,
+     "text": "Find the first letter in the Apennines."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "db67475a305babef"
+   }
+  },
+  {
+   "id": "b2-section-3-unit-2-ru",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ТРАНСИЛЬВАНИЯ",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "Т"
+    },
+    {
+     "id": "north-sea",
+     "x": 40.84,
+     "y": 50.4,
+     "letter": "Р"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "А"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "Н"
+    },
+    {
+     "id": "iceland",
+     "x": 32.46,
+     "y": 26.21,
+     "letter": "С"
+    },
+    {
+     "id": "ireland",
+     "x": 31.16,
+     "y": 50.23,
+     "letter": "И"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "Л"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "Ь"
+    },
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "В"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "А"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "Н"
+    },
+    {
+     "id": "scandinavian-peninsula",
+     "x": 49.37,
+     "y": 41.66,
+     "letter": "И"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "apennines",
+     "position": 7,
+     "text": "Найди седьмую букву в Апеннинах."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 9,
+     "text": "Найди девятую букву в Уральских горах."
+    },
+    {
+     "markerId": "alps",
+     "position": 3,
+     "text": "Найди третью букву в Альпах."
+    },
+    {
+     "markerId": "carpathians",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Карпатах."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Средиземном море."
+    },
+    {
+     "markerId": "iceland",
+     "position": 5,
+     "text": "Найди пятую букву на острове Исландия."
+    },
+    {
+     "markerId": "north-sea",
+     "position": 2,
+     "text": "Найди вторую букву в Северном море."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 10,
+     "text": "Найди десятую букву в Балканских горах."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 8,
+     "text": "Найди восьмую букву на Кольском полуострове."
+    },
+    {
+     "markerId": "scandinavian-peninsula",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Скандинавском полуострове."
+    },
+    {
+     "markerId": "ireland",
+     "position": 6,
+     "text": "Найди шестую букву на острове Ирландия."
+    },
+    {
+     "markerId": "dinaric-alps",
+     "position": 4,
+     "text": "Найди четвёртую букву на Динарском нагорье."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Найди первую букву в Пиренеях."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "f08c0e305b95260c"
+   }
+  },
+  {
+   "id": "b2-section-3-unit-3-en",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "GALDHOPIGGEN",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "G"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "A"
+    },
+    {
+     "id": "baltic-sea",
+     "x": 52.96,
+     "y": 54.23,
+     "letter": "L"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "D"
+    },
+    {
+     "id": "crimean-peninsula",
+     "x": 67.74,
+     "y": 74.04,
+     "letter": "H"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "O"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "P"
+    },
+    {
+     "id": "scottish-highlands",
+     "x": 35.77,
+     "y": 46.12,
+     "letter": "I"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "G"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "G"
+    },
+    {
+     "id": "scandinavian-mountains",
+     "x": 46.64,
+     "y": 41.44,
+     "letter": "E"
+    },
+    {
+     "id": "caucasus",
+     "x": 77.18,
+     "y": 75.88,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "dinaric-alps",
+     "position": 6,
+     "text": "Find the sixth letter in the Dinaric Alps."
+    },
+    {
+     "markerId": "carpathians",
+     "position": 9,
+     "text": "Find the ninth letter in the Carpathians."
+    },
+    {
+     "markerId": "baltic-sea",
+     "position": 3,
+     "text": "Find the third letter in the Baltic Sea."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 12,
+     "text": "Find the twelfth letter in the Caucasus."
+    },
+    {
+     "markerId": "alps",
+     "position": 4,
+     "text": "Find the fourth letter in the Alps."
+    },
+    {
+     "markerId": "scandinavian-mountains",
+     "position": 11,
+     "text": "Find the eleventh letter in the Scandinavian Mountains."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 7,
+     "text": "Find the seventh letter in the Balkan Mountains."
+    },
+    {
+     "markerId": "apennines",
+     "position": 10,
+     "text": "Find the tenth letter in the Apennines."
+    },
+    {
+     "markerId": "crimean-peninsula",
+     "position": 5,
+     "text": "Find the fifth letter on the Crimean Peninsula."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 2,
+     "text": "Find the second letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "scottish-highlands",
+     "position": 8,
+     "text": "Find the eighth letter in the Scottish Highlands."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Find the first letter in the Pyrenees."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "42c1285e180447f3"
+   }
+  },
+  {
+   "id": "b2-section-3-unit-3-ru",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГАЛЛХЁПИГГЕН",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "Г"
+    },
+    {
+     "id": "caucasus",
+     "x": 77.18,
+     "y": 75.88,
+     "letter": "А"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "Л"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "Л"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "Х"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "Ё"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "П"
+    },
+    {
+     "id": "mediterranean-sea",
+     "x": 50.38,
+     "y": 95.08,
+     "letter": "И"
+    },
+    {
+     "id": "jutland",
+     "x": 45.52,
+     "y": 52.1,
+     "letter": "Г"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "Г"
+    },
+    {
+     "id": "scandinavian-mountains",
+     "x": 46.64,
+     "y": 41.44,
+     "letter": "Е"
+    },
+    {
+     "id": "scottish-highlands",
+     "x": 35.77,
+     "y": 46.12,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "carpathians",
+     "position": 7,
+     "text": "Найди седьмую букву в Карпатах."
+    },
+    {
+     "markerId": "alps",
+     "position": 3,
+     "text": "Найди третью букву в Альпах."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 5,
+     "text": "Найди пятую букву в Балканских горах."
+    },
+    {
+     "markerId": "apennines",
+     "position": 10,
+     "text": "Найди десятую букву в Апеннинах."
+    },
+    {
+     "markerId": "scottish-highlands",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Шотландском нагорье."
+    },
+    {
+     "markerId": "kola-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на Кольском полуострове."
+    },
+    {
+     "markerId": "jutland",
+     "position": 9,
+     "text": "Найди девятую букву на полуострове Ютландия."
+    },
+    {
+     "markerId": "scandinavian-mountains",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Скандинавских горах."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 2,
+     "text": "Найди вторую букву на Кавказе."
+    },
+    {
+     "markerId": "mediterranean-sea",
+     "position": 8,
+     "text": "Найди восьмую букву в Средиземном море."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Найди первую букву в Пиренеях."
+    },
+    {
+     "markerId": "dinaric-alps",
+     "position": 6,
+     "text": "Найди шестую букву на Динарском нагорье."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "dc31e111e032d061"
+   }
+  },
+  {
+   "id": "b2-section-3-final-en",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "MOUNTAINEERING",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "M"
+    },
+    {
+     "id": "kola-peninsula",
+     "x": 64.33,
+     "y": 30.3,
+     "letter": "O"
+    },
+    {
+     "id": "scandinavian-mountains",
+     "x": 46.64,
+     "y": 41.44,
+     "letter": "U"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "N"
+    },
+    {
+     "id": "crimean-peninsula",
+     "x": 67.74,
+     "y": 74.04,
+     "letter": "T"
+    },
+    {
+     "id": "scottish-highlands",
+     "x": 35.77,
+     "y": 46.12,
+     "letter": "A"
+    },
+    {
+     "id": "caucasus",
+     "x": 77.18,
+     "y": 75.88,
+     "letter": "I"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "N"
+    },
+    {
+     "id": "ural-mountains",
+     "x": 83.91,
+     "y": 44.04,
+     "letter": "E"
+    },
+    {
+     "id": "jutland",
+     "x": 45.52,
+     "y": 52.1,
+     "letter": "E"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "R"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "I"
+    },
+    {
+     "id": "caspian-sea",
+     "x": 88.77,
+     "y": 80.74,
+     "letter": "N"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "kola-peninsula",
+     "position": 2,
+     "text": "Find the second letter on the Kola Peninsula."
+    },
+    {
+     "markerId": "ural-mountains",
+     "position": 9,
+     "text": "Find the ninth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 4,
+     "text": "Find the fourth letter in the Balkan Mountains."
+    },
+    {
+     "markerId": "apennines",
+     "position": 8,
+     "text": "Find the eighth letter in the Apennines."
+    },
+    {
+     "markerId": "dinaric-alps",
+     "position": 14,
+     "text": "Find the fourteenth letter in the Dinaric Alps."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 7,
+     "text": "Find the seventh letter in the Caucasus."
+    },
+    {
+     "markerId": "alps",
+     "position": 11,
+     "text": "Find the eleventh letter in the Alps."
+    },
+    {
+     "markerId": "caspian-sea",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "crimean-peninsula",
+     "position": 5,
+     "text": "Find the fifth letter on the Crimean Peninsula."
+    },
+    {
+     "markerId": "scandinavian-mountains",
+     "position": 3,
+     "text": "Find the third letter in the Scandinavian Mountains."
+    },
+    {
+     "markerId": "scottish-highlands",
+     "position": 6,
+     "text": "Find the sixth letter in the Scottish Highlands."
+    },
+    {
+     "markerId": "jutland",
+     "position": 10,
+     "text": "Find the tenth letter on the Jutland Peninsula."
+    },
+    {
+     "markerId": "pyrenees",
+     "position": 1,
+     "text": "Find the first letter in the Pyrenees."
+    },
+    {
+     "markerId": "carpathians",
+     "position": 12,
+     "text": "Find the twelfth letter in the Carpathians."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "f96295eb73ce989d"
+   }
+  },
+  {
+   "id": "b2-section-3-final-ru",
+   "section": "mountains-of-europe",
+   "block": 2,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "АЛЬПИНИЗМ",
+   "map": "./assets/europe-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "scottish-highlands",
+     "x": 35.77,
+     "y": 46.12,
+     "letter": "А"
+    },
+    {
+     "id": "carpathians",
+     "x": 53.59,
+     "y": 67.81,
+     "letter": "Л"
+    },
+    {
+     "id": "balkan-mountains",
+     "x": 59.5,
+     "y": 79.94,
+     "letter": "Ь"
+    },
+    {
+     "id": "alps",
+     "x": 44.86,
+     "y": 70.44,
+     "letter": "П"
+    },
+    {
+     "id": "pyrenees",
+     "x": 32.73,
+     "y": 74.94,
+     "letter": "И"
+    },
+    {
+     "id": "caucasus",
+     "x": 77.18,
+     "y": 75.88,
+     "letter": "Н"
+    },
+    {
+     "id": "dinaric-alps",
+     "x": 52.45,
+     "y": 78.62,
+     "letter": "И"
+    },
+    {
+     "id": "scandinavian-mountains",
+     "x": 46.64,
+     "y": 41.44,
+     "letter": "З"
+    },
+    {
+     "id": "apennines",
+     "x": 45.77,
+     "y": 80.75,
+     "letter": "М"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "pyrenees",
+     "position": 5,
+     "text": "Найди пятую букву в Пиренеях."
+    },
+    {
+     "markerId": "carpathians",
+     "position": 2,
+     "text": "Найди вторую букву в Карпатах."
+    },
+    {
+     "markerId": "alps",
+     "position": 4,
+     "text": "Найди четвёртую букву в Альпах."
+    },
+    {
+     "markerId": "scandinavian-mountains",
+     "position": 8,
+     "text": "Найди восьмую букву в Скандинавских горах."
+    },
+    {
+     "markerId": "balkan-mountains",
+     "position": 3,
+     "text": "Найди третью букву в Балканских горах."
+    },
+    {
+     "markerId": "dinaric-alps",
+     "position": 7,
+     "text": "Найди седьмую букву на Динарском нагорье."
+    },
+    {
+     "markerId": "scottish-highlands",
+     "position": 1,
+     "text": "Найди первую букву на Шотландском нагорье."
+    },
+    {
+     "markerId": "apennines",
+     "position": 9,
+     "text": "Найди девятую букву в Апеннинах."
+    },
+    {
+     "markerId": "caucasus",
+     "position": 6,
+     "text": "Найди шестую букву на Кавказе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-28",
+    "contentSha256": "a0a6fab650a4c2dc"
+   }
+  }
+ ]
+}

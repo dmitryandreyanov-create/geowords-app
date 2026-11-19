@@ -1,0 +1,7044 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "bookId": "l2",
+  "courseId": "rivers",
+  "requiresCourses": [
+    "oceans-continents"
+  ],
+  "warning": "Source proposals only. L1 knowledge is not assumed learned. Near a river is distinct from on a river; all geography, lesson timing and word distribution remain pending.",
+  "places": [
+    {
+      "id": "place-africa",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Africa"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-antarctica",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Antarctica"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-asia",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Asia"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-australia",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Australia"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-europe",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Europe"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-eurasia",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "Eurasia"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-north-america",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "North America"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-south-america",
+      "status": "editorial_pending",
+      "kind": "continent",
+      "label": {
+        "en": "South America"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-arctic-ocean",
+      "status": "editorial_pending",
+      "kind": "ocean",
+      "label": {
+        "en": "Arctic Ocean"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-atlantic-ocean",
+      "status": "editorial_pending",
+      "kind": "ocean",
+      "label": {
+        "en": "Atlantic Ocean"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-indian-ocean",
+      "status": "editorial_pending",
+      "kind": "ocean",
+      "label": {
+        "en": "Indian Ocean"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-pacific-ocean",
+      "status": "editorial_pending",
+      "kind": "ocean",
+      "label": {
+        "en": "Pacific Ocean"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-southern-ocean",
+      "status": "editorial_pending",
+      "kind": "ocean",
+      "label": {
+        "en": "Southern Ocean"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-greenland",
+      "status": "editorial_pending",
+      "kind": "island",
+      "label": {
+        "en": "Greenland"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-iceland",
+      "status": "editorial_pending",
+      "kind": "island",
+      "label": {
+        "en": "Iceland"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-madagascar",
+      "status": "editorial_pending",
+      "kind": "island",
+      "label": {
+        "en": "Madagascar"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-nile",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Nile"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-andes",
+      "status": "editorial_pending",
+      "kind": "mountain-range",
+      "label": {
+        "en": "Andes"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-everest",
+      "status": "editorial_pending",
+      "kind": "mountain",
+      "label": {
+        "en": "Everest"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-appalachians",
+      "status": "editorial_pending",
+      "kind": "mountain-range",
+      "label": {
+        "en": "Appalachians"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-himalayas",
+      "status": "editorial_pending",
+      "kind": "mountain-range",
+      "label": {
+        "en": "Himalayas"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-amazon",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Amazon"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-mississippi",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Mississippi"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-yangtze",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Yangtze"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-ganges",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Ganges"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-danube",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Danube"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-volga",
+      "status": "editorial_pending",
+      "kind": "river",
+      "label": {
+        "en": "Volga"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-mediterranean-sea",
+      "status": "editorial_pending",
+      "kind": "sea",
+      "label": {
+        "en": "Mediterranean Sea"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-caspian-sea",
+      "status": "editorial_pending",
+      "kind": "lake",
+      "label": {
+        "en": "Caspian Sea"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-gulf-of-mexico",
+      "status": "editorial_pending",
+      "kind": "gulf",
+      "label": {
+        "en": "Gulf Of Mexico"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-china",
+      "status": "editorial_pending",
+      "kind": "country",
+      "label": {
+        "en": "China"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-india",
+      "status": "editorial_pending",
+      "kind": "country",
+      "label": {
+        "en": "India"
+      },
+      "introducedBy": null,
+      "anchors": []
+    },
+    {
+      "id": "place-russia",
+      "status": "editorial_pending",
+      "kind": "country",
+      "label": {
+        "en": "Russia"
+      },
+      "introducedBy": null,
+      "anchors": []
+    }
+  ],
+  "anchors": [
+    {
+      "id": "l2-01-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "C",
+      "x": 62.711,
+      "y": 54.879,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "descriptorId": "l2-descriptor-01",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "H",
+      "x": 53.515,
+      "y": 5.987,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "descriptorId": "l2-descriptor-02",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "A",
+      "x": 89.718,
+      "y": 34.561,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "descriptorId": "l2-descriptor-03",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "N",
+      "x": 34.688,
+      "y": 29.235,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "descriptorId": "l2-descriptor-04",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "N",
+      "x": 48.424,
+      "y": 44.226,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-africa",
+      "descriptorId": "l2-descriptor-05",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "E",
+      "x": 61.168,
+      "y": 80.079,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "descriptorId": "l2-descriptor-06",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-01-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-01",
+      "mapId": "./assets/import-staging/l2-clean-map-1.webp",
+      "letter": "L",
+      "x": 39.252,
+      "y": 63.552,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "descriptorId": "l2-descriptor-07",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "F",
+      "x": 79.048,
+      "y": 66.329,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-australia",
+      "descriptorId": "l2-descriptor-08",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "L",
+      "x": 25.562,
+      "y": 57.655,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-south-america",
+      "descriptorId": "l2-descriptor-09",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "O",
+      "x": 54.731,
+      "y": 6.652,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "descriptorId": "l2-descriptor-02",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "O",
+      "x": 65.383,
+      "y": 91.901,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-antarctica",
+      "descriptorId": "l2-descriptor-10",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "D",
+      "x": 41.819,
+      "y": 48.403,
+      "pointsTo": {
+        "x": 49.998,
+        "y": 46.014,
+        "from": {
+          "x": 45.603,
+          "y": 47.895
+        },
+        "shaftEnd": {
+          "x": 48.673,
+          "y": 46.581
+        },
+        "headPoints": [
+          {
+            "x": 48.568,
+            "y": 45.192
+          },
+          {
+            "x": 49.998,
+            "y": 46.014
+          },
+          {
+            "x": 49.072,
+            "y": 47.844
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "P",
+      "x": 18.395,
+      "y": 23.409,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-north-america",
+      "descriptorId": "l2-descriptor-12",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "L",
+      "x": 64.299,
+      "y": 57.076,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "descriptorId": "l2-descriptor-01",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "A",
+      "x": 52.373,
+      "y": 21.609,
+      "pointsTo": {
+        "x": 49.045,
+        "y": 33.674,
+        "from": {
+          "x": 50.83,
+          "y": 27.359
+        },
+        "shaftEnd": {
+          "x": 49.583,
+          "y": 31.77
+        },
+        "headPoints": [
+          {
+            "x": 50.369,
+            "y": 32.52
+          },
+          {
+            "x": 49.045,
+            "y": 33.674
+          },
+          {
+            "x": 48.678,
+            "y": 31.442
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "I",
+      "x": 31.319,
+      "y": 37.719,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "descriptorId": "l2-descriptor-14",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-02-glyph-10",
+      "status": "editorial_pending",
+      "puzzleId": "l2-02",
+      "mapId": "./assets/import-staging/l2-clean-map-2.webp",
+      "letter": "N",
+      "x": 51.496,
+      "y": 81.249,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "descriptorId": "l2-descriptor-06",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "R",
+      "x": 42.87,
+      "y": 44.807,
+      "pointsTo": {
+        "x": 50.813,
+        "y": 42.165,
+        "from": {
+          "x": 46.418,
+          "y": 44.047
+        },
+        "shaftEnd": {
+          "x": 49.488,
+          "y": 42.733
+        },
+        "headPoints": [
+          {
+            "x": 49.383,
+            "y": 41.343
+          },
+          {
+            "x": 50.813,
+            "y": 42.165
+          },
+          {
+            "x": 49.887,
+            "y": 43.996
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-15",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "A",
+      "x": 27.305,
+      "y": 67.102,
+      "pointsTo": {
+        "x": 25.114,
+        "y": 55.574,
+        "from": {
+          "x": 26.31,
+          "y": 62.195
+        },
+        "shaftEnd": {
+          "x": 25.474,
+          "y": 57.571
+        },
+        "headPoints": [
+          {
+            "x": 24.548,
+            "y": 57.71
+          },
+          {
+            "x": 25.114,
+            "y": 55.574
+          },
+          {
+            "x": 26.321,
+            "y": 56.988
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "I",
+      "x": 51.078,
+      "y": 22.023,
+      "pointsTo": {
+        "x": 47.658,
+        "y": 33.989,
+        "from": {
+          "x": 49.59,
+          "y": 27.772
+        },
+        "shaftEnd": {
+          "x": 48.241,
+          "y": 32.114
+        },
+        "headPoints": [
+          {
+            "x": 49.009,
+            "y": 32.905
+          },
+          {
+            "x": 47.658,
+            "y": 33.989
+          },
+          {
+            "x": 47.343,
+            "y": 31.739
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "N",
+      "x": 40.442,
+      "y": 10.231,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-greenland",
+      "descriptorId": "l2-descriptor-17",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "F",
+      "x": 65.488,
+      "y": 56.449,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "descriptorId": "l2-descriptor-18",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "O",
+      "x": 87.059,
+      "y": 36.292,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "descriptorId": "l2-descriptor-19",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "R",
+      "x": 30.326,
+      "y": 38.112,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "descriptorId": "l2-descriptor-20",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "E",
+      "x": 79.788,
+      "y": 67.102,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-australia",
+      "descriptorId": "l2-descriptor-21",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "S",
+      "x": 59.556,
+      "y": 82.241,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "descriptorId": "l2-descriptor-22",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-03-glyph-10",
+      "status": "editorial_pending",
+      "puzzleId": "l2-03",
+      "mapId": "./assets/import-staging/l2-clean-map-3.webp",
+      "letter": "T",
+      "x": 56.006,
+      "y": 5.028,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "descriptorId": "l2-descriptor-23",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "M",
+      "x": 26.972,
+      "y": 65.686,
+      "pointsTo": {
+        "x": 25.808,
+        "y": 54.672,
+        "from": {
+          "x": 26.421,
+          "y": 61.066
+        },
+        "shaftEnd": {
+          "x": 25.993,
+          "y": 56.6
+        },
+        "headPoints": [
+          {
+            "x": 25.116,
+            "y": 56.571
+          },
+          {
+            "x": 25.808,
+            "y": 54.672
+          },
+          {
+            "x": 26.828,
+            "y": 56.201
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-24",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "U",
+      "x": 17.923,
+      "y": 17.245,
+      "pointsTo": {
+        "x": 19.372,
+        "y": 28.898,
+        "from": {
+          "x": 18.259,
+          "y": 22.658
+        },
+        "shaftEnd": {
+          "x": 19.036,
+          "y": 27.016
+        },
+        "headPoints": [
+          {
+            "x": 19.909,
+            "y": 26.889
+          },
+          {
+            "x": 19.372,
+            "y": 28.898
+          },
+          {
+            "x": 18.238,
+            "y": 27.561
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-25",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "D",
+      "x": 44.193,
+      "y": 41.347,
+      "pointsTo": {
+        "x": 51.332,
+        "y": 45.734,
+        "from": {
+          "x": 47.271,
+          "y": 43.608
+        },
+        "shaftEnd": {
+          "x": 50.107,
+          "y": 45.093
+        },
+        "headPoints": [
+          {
+            "x": 50.528,
+            "y": 43.938
+          },
+          {
+            "x": 51.332,
+            "y": 45.734
+          },
+          {
+            "x": 49.959,
+            "y": 46.391
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-15",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "D",
+      "x": 50.927,
+      "y": 21.35,
+      "pointsTo": {
+        "x": 49.042,
+        "y": 33.061,
+        "from": {
+          "x": 50.004,
+          "y": 26.764
+        },
+        "shaftEnd": {
+          "x": 49.332,
+          "y": 31.162
+        },
+        "headPoints": [
+          {
+            "x": 50.143,
+            "y": 31.663
+          },
+          {
+            "x": 49.042,
+            "y": 33.061
+          },
+          {
+            "x": 48.457,
+            "y": 31.082
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "I",
+      "x": 40.594,
+      "y": 9.078,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-greenland",
+      "descriptorId": "l2-descriptor-26",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "N",
+      "x": 63.66,
+      "y": 55.656,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "descriptorId": "l2-descriptor-18",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "E",
+      "x": 11.197,
+      "y": 50.641,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "descriptorId": "l2-descriptor-19",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "S",
+      "x": 31.497,
+      "y": 40.611,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "descriptorId": "l2-descriptor-20",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-04-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-04",
+      "mapId": "./assets/import-staging/l2-clean-map-4.webp",
+      "letter": "S",
+      "x": 56.282,
+      "y": 5.264,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "descriptorId": "l2-descriptor-23",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "I",
+      "x": 26.532,
+      "y": 65.906,
+      "pointsTo": {
+        "x": 23.534,
+        "y": 55.465,
+        "from": {
+          "x": 25.364,
+          "y": 61.296
+        },
+        "shaftEnd": {
+          "x": 24.086,
+          "y": 57.224
+        },
+        "headPoints": [
+          {
+            "x": 23.244,
+            "y": 57.58
+          },
+          {
+            "x": 23.534,
+            "y": 55.465
+          },
+          {
+            "x": 24.806,
+            "y": 56.476
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-24",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "R",
+      "x": 44.33,
+      "y": 41.189,
+      "pointsTo": {
+        "x": 50.979,
+        "y": 46.685,
+        "from": {
+          "x": 47.298,
+          "y": 43.364
+        },
+        "shaftEnd": {
+          "x": 49.869,
+          "y": 45.683
+        },
+        "headPoints": [
+          {
+            "x": 50.437,
+            "y": 44.684
+          },
+          {
+            "x": 50.979,
+            "y": 46.685
+          },
+          {
+            "x": 49.547,
+            "y": 46.905
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-27",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "R",
+      "x": 63.086,
+      "y": 57.245,
+      "pointsTo": {
+        "x": 55.748,
+        "y": 62.477,
+        "from": {
+          "x": 59.698,
+          "y": 59.951
+        },
+        "shaftEnd": {
+          "x": 56.939,
+          "y": 61.715
+        },
+        "headPoints": [
+          {
+            "x": 57.145,
+            "y": 62.992
+          },
+          {
+            "x": 55.748,
+            "y": 62.477
+          },
+          {
+            "x": 56.468,
+            "y": 60.608
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-madagascar",
+      "descriptorId": "l2-descriptor-28",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "I",
+      "x": 70.289,
+      "y": 24.424,
+      "pointsTo": {
+        "x": 71.092,
+        "y": 36.158,
+        "from": {
+          "x": 70.289,
+          "y": 29.826
+        },
+        "shaftEnd": {
+          "x": 70.85,
+          "y": 34.248
+        },
+        "headPoints": [
+          {
+            "x": 71.725,
+            "y": 34.218
+          },
+          {
+            "x": 71.092,
+            "y": 36.158
+          },
+          {
+            "x": 70.029,
+            "y": 34.703
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-29",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "G",
+      "x": 16.226,
+      "y": 19.42,
+      "pointsTo": {
+        "x": 19.653,
+        "y": 30.199,
+        "from": {
+          "x": 17.674,
+          "y": 24.478
+        },
+        "shaftEnd": {
+          "x": 19.056,
+          "y": 28.474
+        },
+        "headPoints": [
+          {
+            "x": 19.889,
+            "y": 28.068
+          },
+          {
+            "x": 19.653,
+            "y": 30.199
+          },
+          {
+            "x": 18.356,
+            "y": 29.263
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-25",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "A",
+      "x": 48.951,
+      "y": 20.936,
+      "pointsTo": {
+        "x": 47.554,
+        "y": 33.538,
+        "from": {
+          "x": 48.344,
+          "y": 27.202
+        },
+        "shaftEnd": {
+          "x": 47.792,
+          "y": 31.627
+        },
+        "headPoints": [
+          {
+            "x": 48.614,
+            "y": 32.078
+          },
+          {
+            "x": 47.554,
+            "y": 33.538
+          },
+          {
+            "x": 46.917,
+            "y": 31.601
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "T",
+      "x": 66.418,
+      "y": 90.148,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-antarctica",
+      "descriptorId": "l2-descriptor-30",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "I",
+      "x": 89.48,
+      "y": 31.809,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "descriptorId": "l2-descriptor-19",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "O",
+      "x": 79.804,
+      "y": 65.906,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-australia",
+      "descriptorId": "l2-descriptor-21",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-05-glyph-10",
+      "status": "editorial_pending",
+      "puzzleId": "l2-05",
+      "mapId": "./assets/import-staging/l2-clean-map-5.webp",
+      "letter": "N",
+      "x": 40.031,
+      "y": 7.691,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-greenland",
+      "descriptorId": "l2-descriptor-31",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "H",
+      "x": 76.347,
+      "y": 26.698,
+      "pointsTo": {
+        "x": 70.598,
+        "y": 35.914,
+        "from": {
+          "x": 73.301,
+          "y": 31.65
+        },
+        "shaftEnd": {
+          "x": 71.413,
+          "y": 34.628
+        },
+        "headPoints": [
+          {
+            "x": 71.894,
+            "y": 35.587
+          },
+          {
+            "x": 70.598,
+            "y": 35.914
+          },
+          {
+            "x": 70.751,
+            "y": 33.955
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-32",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "I",
+      "x": 51.203,
+      "y": 15.242,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-europe",
+      "descriptorId": "l2-descriptor-33",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "N",
+      "x": 46.834,
+      "y": 47.46,
+      "pointsTo": {
+        "x": 50.821,
+        "y": 40.464,
+        "from": {
+          "x": 48.158,
+          "y": 44.785
+        },
+        "shaftEnd": {
+          "x": 50.018,
+          "y": 41.767
+        },
+        "headPoints": [
+          {
+            "x": 49.529,
+            "y": 40.819
+          },
+          {
+            "x": 50.821,
+            "y": 40.464
+          },
+          {
+            "x": 50.686,
+            "y": 42.426
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "D",
+      "x": 17.212,
+      "y": 19.812,
+      "pointsTo": {
+        "x": 18.834,
+        "y": 30.606,
+        "from": {
+          "x": 17.939,
+          "y": 24.875
+        },
+        "shaftEnd": {
+          "x": 18.564,
+          "y": 28.878
+        },
+        "headPoints": [
+          {
+            "x": 19.362,
+            "y": 28.8
+          },
+          {
+            "x": 18.834,
+            "y": 30.606
+          },
+          {
+            "x": 17.827,
+            "y": 29.34
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-34",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "U",
+      "x": 59.702,
+      "y": 47.902,
+      "pointsTo": {
+        "x": 64.49,
+        "y": 40.196,
+        "from": {
+          "x": 61.827,
+          "y": 44.517
+        },
+        "shaftEnd": {
+          "x": 63.687,
+          "y": 41.499
+        },
+        "headPoints": [
+          {
+            "x": 63.198,
+            "y": 40.551
+          },
+          {
+            "x": 64.49,
+            "y": 40.196
+          },
+          {
+            "x": 64.355,
+            "y": 42.158
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-ganges",
+      "descriptorId": "l2-descriptor-35",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "I",
+      "x": 24.814,
+      "y": 65.752,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "S",
+      "x": 54.135,
+      "y": 26.825,
+      "pointsTo": {
+        "x": 48.22,
+        "y": 33.629,
+        "from": {
+          "x": 50.939,
+          "y": 29.386
+        },
+        "shaftEnd": {
+          "x": 49.04,
+          "y": 32.349
+        },
+        "headPoints": [
+          {
+            "x": 49.517,
+            "y": 33.312
+          },
+          {
+            "x": 48.22,
+            "y": 33.629
+          },
+          {
+            "x": 48.381,
+            "y": 31.671
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-06-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-06",
+      "mapId": "./assets/import-staging/l2-clean-map-6.webp",
+      "letter": "M",
+      "x": 72.602,
+      "y": 11.804,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-asia",
+      "descriptorId": "l2-descriptor-36",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "B",
+      "x": 44.335,
+      "y": 43.302,
+      "pointsTo": {
+        "x": 47.427,
+        "y": 33.745,
+        "from": {
+          "x": 45.669,
+          "y": 39.059
+        },
+        "shaftEnd": {
+          "x": 46.897,
+          "y": 35.348
+        },
+        "headPoints": [
+          {
+            "x": 46.244,
+            "y": 34.639
+          },
+          {
+            "x": 47.427,
+            "y": 33.745
+          },
+          {
+            "x": 47.667,
+            "y": 35.7
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "A",
+      "x": 14.141,
+      "y": 22.998,
+      "pointsTo": {
+        "x": 19.45,
+        "y": 30.538,
+        "from": {
+          "x": 16.522,
+          "y": 26.553
+        },
+        "shaftEnd": {
+          "x": 18.567,
+          "y": 29.336
+        },
+        "headPoints": [
+          {
+            "x": 19.199,
+            "y": 28.586
+          },
+          {
+            "x": 19.45,
+            "y": 30.538
+          },
+          {
+            "x": 18.132,
+            "y": 30.354
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-34",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "R",
+      "x": 28.912,
+      "y": 64.879,
+      "pointsTo": {
+        "x": 24.909,
+        "y": 56.03,
+        "from": {
+          "x": 27.401,
+          "y": 60.636
+        },
+        "shaftEnd": {
+          "x": 25.661,
+          "y": 57.419
+        },
+        "headPoints": [
+          {
+            "x": 24.961,
+            "y": 58.017
+          },
+          {
+            "x": 24.909,
+            "y": 56.03
+          },
+          {
+            "x": 26.194,
+            "y": 56.513
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "B",
+      "x": 40.395,
+      "y": 8.651,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-greenland",
+      "descriptorId": "l2-descriptor-31",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "A",
+      "x": 61.509,
+      "y": 49.468,
+      "pointsTo": {
+        "x": 64.296,
+        "y": 39.757,
+        "from": {
+          "x": 62.761,
+          "y": 45.225
+        },
+        "shaftEnd": {
+          "x": 63.833,
+          "y": 41.406
+        },
+        "headPoints": [
+          {
+            "x": 63.152,
+            "y": 40.759
+          },
+          {
+            "x": 64.296,
+            "y": 39.757
+          },
+          {
+            "x": 64.617,
+            "y": 41.686
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-ganges",
+      "descriptorId": "l2-descriptor-37",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "R",
+      "x": 54.699,
+      "y": 19.575,
+      "pointsTo": {
+        "x": 49.32,
+        "y": 27.548,
+        "from": {
+          "x": 51.891,
+          "y": 23.041
+        },
+        "shaftEnd": {
+          "x": 50.095,
+          "y": 26.189
+        },
+        "headPoints": [
+          {
+            "x": 50.613,
+            "y": 27.116
+          },
+          {
+            "x": 49.32,
+            "y": 27.548
+          },
+          {
+            "x": 49.406,
+            "y": 25.564
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-danube",
+      "descriptorId": "l2-descriptor-38",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "I",
+      "x": 56.033,
+      "y": 56.969,
+      "pointsTo": {
+        "x": 51.796,
+        "y": 48.831,
+        "from": {
+          "x": 54.288,
+          "y": 53.437
+        },
+        "shaftEnd": {
+          "x": 52.547,
+          "y": 50.22
+        },
+        "headPoints": [
+          {
+            "x": 51.847,
+            "y": 50.818
+          },
+          {
+            "x": 51.796,
+            "y": 48.831
+          },
+          {
+            "x": 53.081,
+            "y": 49.314
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "A",
+      "x": 72.667,
+      "y": 24.181,
+      "pointsTo": {
+        "x": 72.228,
+        "y": 35.244,
+        "from": {
+          "x": 72.449,
+          "y": 29.321
+        },
+        "shaftEnd": {
+          "x": 72.294,
+          "y": 33.458
+        },
+        "headPoints": [
+          {
+            "x": 73.08,
+            "y": 33.723
+          },
+          {
+            "x": 72.228,
+            "y": 35.244
+          },
+          {
+            "x": 71.494,
+            "y": 33.59
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-32",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "N",
+      "x": 65.831,
+      "y": 66.181,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "descriptorId": "l2-descriptor-39",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-07-glyph-10",
+      "status": "editorial_pending",
+      "puzzleId": "l2-07",
+      "mapId": "./assets/import-staging/l2-clean-map-7.webp",
+      "letter": "S",
+      "x": 56.433,
+      "y": 4.045,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "descriptorId": "l2-descriptor-40",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "M",
+      "x": 64.08,
+      "y": 15.6,
+      "pointsTo": {
+        "x": 56.957,
+        "y": 22.016,
+        "from": {
+          "x": 60.431,
+          "y": 18.4
+        },
+        "shaftEnd": {
+          "x": 58.004,
+          "y": 20.926
+        },
+        "headPoints": [
+          {
+            "x": 58.372,
+            "y": 22.096
+          },
+          {
+            "x": 56.957,
+            "y": 22.016
+          },
+          {
+            "x": 57.404,
+            "y": 19.997
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-volga",
+      "descriptorId": "l2-descriptor-41",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "E",
+      "x": 57.923,
+      "y": 44.734,
+      "pointsTo": {
+        "x": 64.86,
+        "y": 40.408,
+        "from": {
+          "x": 61.206,
+          "y": 43.601
+        },
+        "shaftEnd": {
+          "x": 63.758,
+          "y": 41.371
+        },
+        "headPoints": [
+          {
+            "x": 63.453,
+            "y": 40.161
+          },
+          {
+            "x": 64.86,
+            "y": 40.408
+          },
+          {
+            "x": 64.308,
+            "y": 42.367
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-ganges",
+      "descriptorId": "l2-descriptor-37",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "A",
+      "x": 26.224,
+      "y": 36.707,
+      "pointsTo": {
+        "x": 21.322,
+        "y": 28.213,
+        "from": {
+          "x": 23.758,
+          "y": 33.402
+        },
+        "shaftEnd": {
+          "x": 22.056,
+          "y": 29.778
+        },
+        "headPoints": [
+          {
+            "x": 21.28,
+            "y": 30.34
+          },
+          {
+            "x": 21.322,
+            "y": 28.213
+          },
+          {
+            "x": 22.669,
+            "y": 28.868
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-34",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "N",
+      "x": 43.524,
+      "y": 54.58,
+      "pointsTo": {
+        "x": 50.46,
+        "y": 48.803,
+        "from": {
+          "x": 46.806,
+          "y": 51.997
+        },
+        "shaftEnd": {
+          "x": 49.358,
+          "y": 49.766
+        },
+        "headPoints": [
+          {
+            "x": 49.053,
+            "y": 48.556
+          },
+          {
+            "x": 50.46,
+            "y": 48.803
+          },
+          {
+            "x": 49.908,
+            "y": 50.762
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "D",
+      "x": 45.268,
+      "y": 13.396,
+      "pointsTo": {
+        "x": 47.693,
+        "y": 25.524,
+        "from": {
+          "x": 46.942,
+          "y": 19.275
+        },
+        "shaftEnd": {
+          "x": 47.466,
+          "y": 23.639
+        },
+        "headPoints": [
+          {
+            "x": 48.328,
+            "y": 23.622
+          },
+          {
+            "x": 47.693,
+            "y": 25.524
+          },
+          {
+            "x": 46.655,
+            "y": 24.076
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-danube",
+      "descriptorId": "l2-descriptor-42",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "E",
+      "x": 20.928,
+      "y": 65.649,
+      "pointsTo": {
+        "x": 23.886,
+        "y": 55.408,
+        "from": {
+          "x": 22.022,
+          "y": 61.107
+        },
+        "shaftEnd": {
+          "x": 23.324,
+          "y": 57.127
+        },
+        "headPoints": [
+          {
+            "x": 22.624,
+            "y": 56.373
+          },
+          {
+            "x": 23.886,
+            "y": 55.408
+          },
+          {
+            "x": 24.15,
+            "y": 57.499
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-08-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-08",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "R",
+      "x": 76.319,
+      "y": 46.934,
+      "pointsTo": {
+        "x": 72.793,
+        "y": 37.991,
+        "from": {
+          "x": 75.328,
+          "y": 43.073
+        },
+        "shaftEnd": {
+          "x": 73.558,
+          "y": 39.523
+        },
+        "headPoints": [
+          {
+            "x": 72.792,
+            "y": 40.118
+          },
+          {
+            "x": 72.793,
+            "y": 37.991
+          },
+          {
+            "x": 74.153,
+            "y": 38.588
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-32",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "A",
+      "x": 25.686,
+      "y": 37.601,
+      "pointsTo": {
+        "x": 21.893,
+        "y": 27.257,
+        "from": {
+          "x": 24.403,
+          "y": 32.805
+        },
+        "shaftEnd": {
+          "x": 22.65,
+          "y": 28.93
+        },
+        "headPoints": [
+          {
+            "x": 21.823,
+            "y": 29.502
+          },
+          {
+            "x": 21.893,
+            "y": 27.257
+          },
+          {
+            "x": 23.309,
+            "y": 27.987
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-34",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "T",
+      "x": 44.677,
+      "y": 39.357,
+      "pointsTo": {
+        "x": 47.22,
+        "y": 28.411,
+        "from": {
+          "x": 45.436,
+          "y": 34.56
+        },
+        "shaftEnd": {
+          "x": 46.682,
+          "y": 30.266
+        },
+        "headPoints": [
+          {
+            "x": 45.918,
+            "y": 29.522
+          },
+          {
+            "x": 47.22,
+            "y": 28.411
+          },
+          {
+            "x": 47.565,
+            "y": 30.598
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-danube",
+      "descriptorId": "l2-descriptor-42",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "M",
+      "x": 49.179,
+      "y": 61.819,
+      "pointsTo": {
+        "x": 50.71,
+        "y": 50.539,
+        "from": {
+          "x": 49.566,
+          "y": 57.022
+        },
+        "shaftEnd": {
+          "x": 50.365,
+          "y": 52.494
+        },
+        "headPoints": [
+          {
+            "x": 49.535,
+            "y": 51.932
+          },
+          {
+            "x": 50.71,
+            "y": 50.539
+          },
+          {
+            "x": 51.271,
+            "y": 52.622
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "O",
+      "x": 27.715,
+      "y": 67.025,
+      "pointsTo": {
+        "x": 24.145,
+        "y": 56.369,
+        "from": {
+          "x": 26.655,
+          "y": 61.917
+        },
+        "shaftEnd": {
+          "x": 24.902,
+          "y": 58.042
+        },
+        "headPoints": [
+          {
+            "x": 24.075,
+            "y": 58.614
+          },
+          {
+            "x": 24.145,
+            "y": 56.369
+          },
+          {
+            "x": 25.561,
+            "y": 57.099
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "S",
+      "x": 62.221,
+      "y": 16.37,
+      "pointsTo": {
+        "x": 55.328,
+        "y": 22.74,
+        "from": {
+          "x": 59.043,
+          "y": 19.015
+        },
+        "shaftEnd": {
+          "x": 56.448,
+          "y": 21.617
+        },
+        "headPoints": [
+          {
+            "x": 56.823,
+            "y": 22.863
+          },
+          {
+            "x": 55.328,
+            "y": 22.74
+          },
+          {
+            "x": 55.825,
+            "y": 20.62
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-volga",
+      "descriptorId": "l2-descriptor-43",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "P",
+      "x": 60.261,
+      "y": 48.512,
+      "pointsTo": {
+        "x": 64.904,
+        "y": 39.857,
+        "from": {
+          "x": 62.386,
+          "y": 45.397
+        },
+        "shaftEnd": {
+          "x": 64.145,
+          "y": 41.528
+        },
+        "headPoints": [
+          {
+            "x": 63.487,
+            "y": 40.582
+          },
+          {
+            "x": 64.904,
+            "y": 39.857
+          },
+          {
+            "x": 64.971,
+            "y": 42.102
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-ganges",
+      "descriptorId": "l2-descriptor-37",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "H",
+      "x": 55.842,
+      "y": 92.575,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-antarctica",
+      "descriptorId": "l2-descriptor-44",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-10",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "E",
+      "x": 47.974,
+      "y": 82.162,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "descriptorId": "l2-descriptor-22",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "R",
+      "x": 90.241,
+      "y": 32.395,
+      "pointsTo": null,
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "descriptorId": "l2-descriptor-19",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-09-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-09",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "E",
+      "x": 76.154,
+      "y": 48.881,
+      "pointsTo": {
+        "x": 71.887,
+        "y": 38.235,
+        "from": {
+          "x": 74.397,
+          "y": 43.783
+        },
+        "shaftEnd": {
+          "x": 72.644,
+          "y": 39.908
+        },
+        "headPoints": [
+          {
+            "x": 71.817,
+            "y": 40.479
+          },
+          {
+            "x": 71.887,
+            "y": 38.235
+          },
+          {
+            "x": 73.303,
+            "y": 38.965
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-32",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-01",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "H",
+      "x": 29.281,
+      "y": 20.889,
+      "pointsTo": {
+        "x": 22.424,
+        "y": 25.927,
+        "from": {
+          "x": 25.875,
+          "y": 22.466
+        },
+        "shaftEnd": {
+          "x": 23.464,
+          "y": 24.883
+        },
+        "headPoints": [
+          {
+            "x": 23.812,
+            "y": 26.041
+          },
+          {
+            "x": 22.424,
+            "y": 25.927
+          },
+          {
+            "x": 22.885,
+            "y": 23.958
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mississippi",
+      "descriptorId": "l2-descriptor-34",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-02",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "I",
+      "x": 46.137,
+      "y": 55.034,
+      "pointsTo": {
+        "x": 50.652,
+        "y": 46.48,
+        "from": {
+          "x": 47.881,
+          "y": 51.119
+        },
+        "shaftEnd": {
+          "x": 49.816,
+          "y": 47.879
+        },
+        "headPoints": [
+          {
+            "x": 49.288,
+            "y": 46.888
+          },
+          {
+            "x": 50.652,
+            "y": 46.48
+          },
+          {
+            "x": 50.531,
+            "y": 48.56
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-nile",
+      "descriptorId": "l2-descriptor-11",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-03",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "M",
+      "x": 28.135,
+      "y": 63.451,
+      "pointsTo": {
+        "x": 23.88,
+        "y": 55.736,
+        "from": {
+          "x": 26.534,
+          "y": 60.526
+        },
+        "shaftEnd": {
+          "x": 24.68,
+          "y": 57.181
+        },
+        "headPoints": [
+          {
+            "x": 23.95,
+            "y": 57.821
+          },
+          {
+            "x": 23.88,
+            "y": 55.736
+          },
+          {
+            "x": 25.233,
+            "y": 56.219
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-amazon",
+      "descriptorId": "l2-descriptor-16",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-04",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "A",
+      "x": 38.895,
+      "y": 33.603,
+      "pointsTo": {
+        "x": 45.826,
+        "y": 31.816,
+        "from": {
+          "x": 41.709,
+          "y": 32.614
+        },
+        "shaftEnd": {
+          "x": 44.584,
+          "y": 32.056
+        },
+        "headPoints": [
+          {
+            "x": 44.615,
+            "y": 30.787
+          },
+          {
+            "x": 45.826,
+            "y": 31.816
+          },
+          {
+            "x": 44.829,
+            "y": 33.272
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "descriptorId": "l2-descriptor-13",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-05",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "L",
+      "x": 44.932,
+      "y": 14.81,
+      "pointsTo": {
+        "x": 47.522,
+        "y": 25.62,
+        "from": {
+          "x": 46.044,
+          "y": 19.799
+        },
+        "shaftEnd": {
+          "x": 47.076,
+          "y": 23.865
+        },
+        "headPoints": [
+          {
+            "x": 47.905,
+            "y": 23.614
+          },
+          {
+            "x": 47.522,
+            "y": 25.62
+          },
+          {
+            "x": 46.346,
+            "y": 24.506
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-danube",
+      "descriptorId": "l2-descriptor-42",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-06",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "A",
+      "x": 63.607,
+      "y": 50.545,
+      "pointsTo": {
+        "x": 64.955,
+        "y": 39.972,
+        "from": {
+          "x": 64.167,
+          "y": 46.089
+        },
+        "shaftEnd": {
+          "x": 64.717,
+          "y": 41.817
+        },
+        "headPoints": [
+          {
+            "x": 63.925,
+            "y": 41.374
+          },
+          {
+            "x": 64.955,
+            "y": 39.972
+          },
+          {
+            "x": 65.563,
+            "y": 41.85
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-ganges",
+      "descriptorId": "l2-descriptor-37",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-07",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "Y",
+      "x": 63.044,
+      "y": 16.101,
+      "pointsTo": {
+        "x": 56.215,
+        "y": 22.041,
+        "from": {
+          "x": 59.667,
+          "y": 18.581
+        },
+        "shaftEnd": {
+          "x": 57.256,
+          "y": 20.997
+        },
+        "headPoints": [
+          {
+            "x": 57.604,
+            "y": 22.155
+          },
+          {
+            "x": 56.215,
+            "y": 22.041
+          },
+          {
+            "x": 56.677,
+            "y": 20.072
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-volga",
+      "descriptorId": "l2-descriptor-43",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-08",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "A",
+      "x": 79.468,
+      "y": 42.669,
+      "pointsTo": {
+        "x": 72.625,
+        "y": 37.593,
+        "from": {
+          "x": 76.245,
+          "y": 40.64
+        },
+        "shaftEnd": {
+          "x": 73.717,
+          "y": 38.512
+        },
+        "headPoints": [
+          {
+            "x": 73.187,
+            "y": 39.502
+          },
+          {
+            "x": 72.625,
+            "y": 37.593
+          },
+          {
+            "x": 74.004,
+            "y": 37.317
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-yangtze",
+      "descriptorId": "l2-descriptor-32",
+      "mappingBasis": "user_selected_marker",
+      "geographicReview": "pending"
+    },
+    {
+      "id": "l2-10-glyph-09",
+      "status": "editorial_pending",
+      "puzzleId": "l2-10",
+      "mapId": "./assets/import-staging/l2-clean-map-8.webp",
+      "letter": "S",
+      "x": 63.894,
+      "y": 29.592,
+      "pointsTo": {
+        "x": 56.51,
+        "y": 29.95,
+        "from": {
+          "x": 60.654,
+          "y": 29.587
+        },
+        "shaftEnd": {
+          "x": 57.759,
+          "y": 29.84
+        },
+        "headPoints": [
+          {
+            "x": 57.669,
+            "y": 31.103
+          },
+          {
+            "x": 56.51,
+            "y": 29.95
+          },
+          {
+            "x": 57.572,
+            "y": 28.602
+          }
+        ]
+      },
+      "sitsIn": null,
+      "pointsToPlaceId": null,
+      "candidateTargetPlaceId": "place-caspian-sea",
+      "descriptorId": "l2-descriptor-45",
+      "mappingBasis": "unique_source_symbol",
+      "geographicReview": "pending"
+    }
+  ],
+  "descriptors": [
+    {
+      "id": "l2-descriptor-01",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Indian Ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is in the Indian Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-02",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the Indian Ocean."
+          },
+          "selectedAnchorId": "l2-02-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-indian-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-indian-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-02",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Arctic Ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is in the Arctic Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-02",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is in the Arctic Ocean."
+          },
+          "selectedAnchorId": "l2-02-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-arctic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-arctic-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-03",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Pacific Ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is in the Pacific Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-pacific-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-04",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the northern part of the Atlantic Ocean"
+      },
+      "kind": "directional",
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans",
+        "f-l1-p12-directions"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is in the northern part of the Atlantic Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans",
+          "f-l1-p12-directions"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "region",
+        "placeId": "place-atlantic-ocean",
+        "direction": "north"
+      }
+    },
+    {
+      "id": "l2-descriptor-05",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in Africa"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-africa",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is in Africa."
+          },
+          "selectedAnchorId": "l2-01-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-africa"
+        ],
+        "op": "place",
+        "placeId": "place-africa"
+      }
+    },
+    {
+      "id": "l2-descriptor-06",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Southern Ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is in the Southern Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-02",
+          "position": 10,
+          "sourceText": {
+            "en": "The tenth letter is in the Southern Ocean."
+          },
+          "selectedAnchorId": "l2-02-glyph-10",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-southern-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-southern-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-07",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the southern part of the Atlantic Ocean"
+      },
+      "kind": "directional",
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans",
+        "f-l1-p12-directions"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-01",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the southern part of the Atlantic Ocean."
+          },
+          "selectedAnchorId": "l2-01-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 6,
+            "cluesPdfPage": 7,
+            "pdfMapRect": [
+              151.29,
+              224.72,
+              641.04,
+              550.97
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans",
+          "f-l1-p12-directions"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "region",
+        "placeId": "place-atlantic-ocean",
+        "direction": "south"
+      }
+    },
+    {
+      "id": "l2-descriptor-08",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on Australia"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-australia",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is on Australia."
+          },
+          "selectedAnchorId": "l2-02-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-australia"
+        ],
+        "op": "place",
+        "placeId": "place-australia"
+      }
+    },
+    {
+      "id": "l2-descriptor-09",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on South America"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-south-america",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is on South America."
+          },
+          "selectedAnchorId": "l2-02-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-south-america"
+        ],
+        "op": "place",
+        "placeId": "place-south-america"
+      }
+    },
+    {
+      "id": "l2-descriptor-10",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in Antarctica"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-antarctica",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is in Antarctica."
+          },
+          "selectedAnchorId": "l2-02-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
+    },
+    {
+      "id": "l2-descriptor-11",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Nile River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-nile",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p07-nile-mediterranean",
+        "f-l2-p07-nile-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-02-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-06",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-06-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-07-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-08",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-08-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-09-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the Nile River."
+          },
+          "selectedAnchorId": "l2-10-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p07-nile-mediterranean",
+          "f-l2-p07-nile-note"
+        ],
+        "requiredPlaces": [
+          "place-nile"
+        ],
+        "op": "near",
+        "placeId": "place-nile"
+      }
+    },
+    {
+      "id": "l2-descriptor-12",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on North America"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-north-america",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is on North America."
+          },
+          "selectedAnchorId": "l2-02-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents"
+        ],
+        "requiredPlaces": [
+          "place-north-america"
+        ],
+        "op": "place",
+        "placeId": "place-north-america"
+      }
+    },
+    {
+      "id": "l2-descriptor-13",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Mediterranean Sea"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-mediterranean-sea",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p07-nile-mediterranean",
+        "f-l2-p07-nile-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-02-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-03",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-03-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-04-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-05",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-05-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-06",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-06-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-07-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is in the Mediterranean Sea."
+          },
+          "selectedAnchorId": "l2-10-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p07-nile-mediterranean",
+          "f-l2-p07-nile-note"
+        ],
+        "requiredPlaces": [
+          "place-mediterranean-sea"
+        ],
+        "op": "place",
+        "placeId": "place-mediterranean-sea"
+      }
+    },
+    {
+      "id": "l2-descriptor-14",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Atlantic Ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-oceans"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-02",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the Atlantic Ocean."
+          },
+          "selectedAnchorId": "l2-02-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 8,
+            "cluesPdfPage": 9,
+            "pdfMapRect": [
+              161.18,
+              232.22,
+              650.93,
+              558.47
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-oceans"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-atlantic-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-15",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the longest river in the world"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-nile",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p07-nile-mediterranean",
+        "f-l2-p07-nile-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the longest river in the world."
+          },
+          "selectedAnchorId": "l2-03-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the longest river in the world."
+          },
+          "selectedAnchorId": "l2-04-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p07-nile-mediterranean",
+          "f-l2-p07-nile-note"
+        ],
+        "requiredPlaces": [
+          "place-nile"
+        ],
+        "op": "near",
+        "placeId": "place-nile"
+      }
+    },
+    {
+      "id": "l2-descriptor-16",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Amazon River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-amazon",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p09-amazon-volume",
+        "f-l2-p09-amazon-location"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-03-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-06",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-06-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-07-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-08",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-08-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-09-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the Amazon River."
+          },
+          "selectedAnchorId": "l2-10-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p09-amazon-volume",
+          "f-l2-p09-amazon-location"
+        ],
+        "requiredPlaces": [
+          "place-amazon"
+        ],
+        "op": "near",
+        "placeId": "place-amazon"
+      }
+    },
+    {
+      "id": "l2-descriptor-17",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on Greenland"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-greenland",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p16-islands-left"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is on Greenland."
+          },
+          "selectedAnchorId": "l2-03-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left"
+        ],
+        "requiredPlaces": [
+          "place-greenland"
+        ],
+        "op": "place",
+        "placeId": "place-greenland"
+      }
+    },
+    {
+      "id": "l2-descriptor-18",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the warmest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is in the warmest ocean."
+          },
+          "selectedAnchorId": "l2-03-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is in the warmest ocean."
+          },
+          "selectedAnchorId": "l2-04-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-indian-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-indian-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-19",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the largest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-pacific-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p18-residents-climate-population"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is in the largest ocean."
+          },
+          "selectedAnchorId": "l2-03-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the largest ocean."
+          },
+          "selectedAnchorId": "l2-04-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-05",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is in the largest ocean."
+          },
+          "selectedAnchorId": "l2-05-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the largest ocean."
+          },
+          "selectedAnchorId": "l2-09-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p18-residents-climate-population"
+        ],
+        "requiredPlaces": [
+          "place-pacific-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-pacific-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-20",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the saltiest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-atlantic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the saltiest ocean."
+          },
+          "selectedAnchorId": "l2-03-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is in the saltiest ocean."
+          },
+          "selectedAnchorId": "l2-04-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-atlantic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-atlantic-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-21",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on the smallest continent"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-australia",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p08-continent-properties"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is on the smallest continent."
+          },
+          "selectedAnchorId": "l2-03-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-05",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is on the smallest continent."
+          },
+          "selectedAnchorId": "l2-05-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p08-continent-properties"
+        ],
+        "requiredPlaces": [
+          "place-australia"
+        ],
+        "op": "place",
+        "placeId": "place-australia"
+      }
+    },
+    {
+      "id": "l2-descriptor-22",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the coldest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-southern-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the coldest ocean."
+          },
+          "selectedAnchorId": "l2-03-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is in the coldest ocean."
+          },
+          "selectedAnchorId": "l2-09-glyph-10",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-left",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-southern-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-southern-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-23",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the smallest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-03",
+          "position": 10,
+          "sourceText": {
+            "en": "The tenth letter is in the smallest ocean."
+          },
+          "selectedAnchorId": "l2-03-glyph-10",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 10,
+            "cluesPdfPage": 11,
+            "pdfMapRect": [
+              151.76,
+              213.16,
+              641.52,
+              539.41
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-04",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the smallest ocean."
+          },
+          "selectedAnchorId": "l2-04-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-left",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-arctic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-arctic-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-24",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the river that carries more water than any other river in the world"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-amazon",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p09-amazon-volume",
+        "f-l2-p09-amazon-location"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-04",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the river that carries more water than any other river in the world."
+          },
+          "selectedAnchorId": "l2-04-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-05",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the river that carries more water than any other river in the world."
+          },
+          "selectedAnchorId": "l2-05-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p09-amazon-volume",
+          "f-l2-p09-amazon-location"
+        ],
+        "requiredPlaces": [
+          "place-amazon"
+        ],
+        "op": "near",
+        "placeId": "place-amazon"
+      }
+    },
+    {
+      "id": "l2-descriptor-25",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to one of the longest rivers in North America"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-mississippi",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p11-mississippi-gulf"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-04",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to one of the longest rivers in North America."
+          },
+          "selectedAnchorId": "l2-04-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-05",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to one of the longest rivers in North America."
+          },
+          "selectedAnchorId": "l2-05-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p11-mississippi-gulf"
+        ],
+        "requiredPlaces": [
+          "place-mississippi"
+        ],
+        "op": "near",
+        "placeId": "place-mississippi"
+      }
+    },
+    {
+      "id": "l2-descriptor-26",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on the largest island"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-greenland",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p16-islands-left"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-04",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is on the largest island."
+          },
+          "selectedAnchorId": "l2-04-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 12,
+            "cluesPdfPage": 13,
+            "pdfMapRect": [
+              126.91,
+              204.04,
+              647.41,
+              550.54
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left"
+        ],
+        "requiredPlaces": [
+          "place-greenland"
+        ],
+        "op": "place",
+        "placeId": "place-greenland"
+      }
+    },
+    {
+      "id": "l2-descriptor-27",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the world’s longest river"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-nile",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p07-nile-mediterranean",
+        "f-l2-p07-nile-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-05",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the world’s longest river."
+          },
+          "selectedAnchorId": "l2-05-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p07-nile-mediterranean",
+          "f-l2-p07-nile-note"
+        ],
+        "requiredPlaces": [
+          "place-nile"
+        ],
+        "op": "near",
+        "placeId": "place-nile"
+      }
+    },
+    {
+      "id": "l2-descriptor-28",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on the island of Madagascar"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-madagascar",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p16-islands-left"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-05",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is on the island of Madagascar."
+          },
+          "selectedAnchorId": "l2-05-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left"
+        ],
+        "requiredPlaces": [
+          "place-madagascar"
+        ],
+        "op": "place",
+        "placeId": "place-madagascar"
+      }
+    },
+    {
+      "id": "l2-descriptor-29",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the longest river in Asia"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-yangtze",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p13-yangtze"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-05",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is next to the longest river in Asia."
+          },
+          "selectedAnchorId": "l2-05-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p13-yangtze"
+        ],
+        "requiredPlaces": [
+          "place-yangtze"
+        ],
+        "op": "near",
+        "placeId": "place-yangtze"
+      }
+    },
+    {
+      "id": "l2-descriptor-30",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on the continent with the world’s largest desert"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-antarctica",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p22-deserts"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-05",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is on the continent with the world’s largest desert."
+          },
+          "selectedAnchorId": "l2-05-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-deserts"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
+    },
+    {
+      "id": "l2-descriptor-31",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is on the island of Greenland"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-greenland",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p16-islands-left"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-05",
+          "position": 10,
+          "sourceText": {
+            "en": "The tenth letter is on the island of Greenland."
+          },
+          "selectedAnchorId": "l2-05-glyph-10",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 14,
+            "cluesPdfPage": 15,
+            "pdfMapRect": [
+              139.22,
+              214.46,
+              660.47,
+              561.71
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is on the island of Greenland."
+          },
+          "selectedAnchorId": "l2-07-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p16-islands-left"
+        ],
+        "requiredPlaces": [
+          "place-greenland"
+        ],
+        "op": "place",
+        "placeId": "place-greenland"
+      }
+    },
+    {
+      "id": "l2-descriptor-32",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Yangtze River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-yangtze",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p13-yangtze"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-06",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the Yangtze River."
+          },
+          "selectedAnchorId": "l2-06-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is next to the Yangtze River."
+          },
+          "selectedAnchorId": "l2-07-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-08",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is next to the Yangtze River."
+          },
+          "selectedAnchorId": "l2-08-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 10,
+          "sourceText": {
+            "en": "The tenth letter is next to the Yangtze River."
+          },
+          "selectedAnchorId": "l2-09-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is next to the Yangtze River."
+          },
+          "selectedAnchorId": "l2-10-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p13-yangtze"
+        ],
+        "requiredPlaces": [
+          "place-yangtze"
+        ],
+        "op": "near",
+        "placeId": "place-yangtze"
+      }
+    },
+    {
+      "id": "l2-descriptor-33",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in Northern Europe"
+      },
+      "kind": "directional",
+      "candidateTargetPlaceId": "place-europe",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents",
+        "f-l1-p12-directions"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-06",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is in Northern Europe."
+          },
+          "selectedAnchorId": "l2-06-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents",
+          "f-l1-p12-directions"
+        ],
+        "requiredPlaces": [
+          "place-europe"
+        ],
+        "op": "region",
+        "placeId": "place-europe",
+        "direction": "north"
+      }
+    },
+    {
+      "id": "l2-descriptor-34",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Mississippi River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-mississippi",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p11-mississippi-gulf"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-06",
+          "position": 4,
+          "sourceText": {
+            "en": "The fourth letter is next to the Mississippi River."
+          },
+          "selectedAnchorId": "l2-06-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-07",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the Mississippi River."
+          },
+          "selectedAnchorId": "l2-07-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-08",
+          "position": 3,
+          "sourceText": {
+            "en": "The third letter is next to the Mississippi River."
+          },
+          "selectedAnchorId": "l2-08-glyph-03",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the Mississippi River."
+          },
+          "selectedAnchorId": "l2-09-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the Mississippi River."
+          },
+          "selectedAnchorId": "l2-10-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p11-mississippi-gulf"
+        ],
+        "requiredPlaces": [
+          "place-mississippi"
+        ],
+        "op": "near",
+        "placeId": "place-mississippi"
+      }
+    },
+    {
+      "id": "l2-descriptor-35",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to one of the most important rivers in India"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-ganges",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p15-ganges"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-06",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to one of the most important rivers in India."
+          },
+          "selectedAnchorId": "l2-06-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p15-ganges"
+        ],
+        "requiredPlaces": [
+          "place-ganges"
+        ],
+        "op": "near",
+        "placeId": "place-ganges"
+      }
+    },
+    {
+      "id": "l2-descriptor-36",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in Northern Asia"
+      },
+      "kind": "directional",
+      "candidateTargetPlaceId": "place-asia",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p06-continents",
+        "f-l1-p12-directions"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-06",
+          "position": 8,
+          "sourceText": {
+            "en": "The eighth letter is in Northern Asia."
+          },
+          "selectedAnchorId": "l2-06-glyph-08",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 16,
+            "cluesPdfPage": 17,
+            "pdfMapRect": [
+              113.03,
+              192.19,
+              683.78,
+              572.44
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p06-continents",
+          "f-l1-p12-directions"
+        ],
+        "requiredPlaces": [
+          "place-asia"
+        ],
+        "op": "region",
+        "placeId": "place-asia",
+        "direction": "north"
+      }
+    },
+    {
+      "id": "l2-descriptor-37",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Ganges River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-ganges",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p15-ganges"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-07",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to the Ganges River."
+          },
+          "selectedAnchorId": "l2-07-glyph-04",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-08",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the Ganges River."
+          },
+          "selectedAnchorId": "l2-08-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is next to the Ganges River."
+          },
+          "selectedAnchorId": "l2-09-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is next to the Ganges River."
+          },
+          "selectedAnchorId": "l2-10-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p15-ganges"
+        ],
+        "requiredPlaces": [
+          "place-ganges"
+        ],
+        "op": "near",
+        "placeId": "place-ganges"
+      }
+    },
+    {
+      "id": "l2-descriptor-38",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the second-longest river in Europe"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-danube",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p17-danube"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-07",
+          "position": 6,
+          "sourceText": {
+            "en": "The sixth letter is next to the second-longest river in Europe."
+          },
+          "selectedAnchorId": "l2-07-glyph-06",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p17-danube"
+        ],
+        "requiredPlaces": [
+          "place-danube"
+        ],
+        "op": "near",
+        "placeId": "place-danube"
+      }
+    },
+    {
+      "id": "l2-descriptor-39",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the world’s warmest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-indian-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-07",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the world’s warmest ocean."
+          },
+          "selectedAnchorId": "l2-07-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-right",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-indian-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-indian-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-40",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the world’s smallest ocean"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-arctic-ocean",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-07",
+          "position": 10,
+          "sourceText": {
+            "en": "The tenth letter is in the world’s smallest ocean."
+          },
+          "selectedAnchorId": "l2-07-glyph-10",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 18,
+            "cluesPdfPage": 19,
+            "pdfMapRect": [
+              125.43,
+              195.48,
+              691.68,
+              572.73
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p10-oceans-left",
+          "f-l1-p10-salinity-note"
+        ],
+        "requiredPlaces": [
+          "place-arctic-ocean"
+        ],
+        "op": "place",
+        "placeId": "place-arctic-ocean"
+      }
+    },
+    {
+      "id": "l2-descriptor-41",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the longest river in Europe"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-volga",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p19-volga",
+        "f-l2-p19-volga-kama-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-08",
+          "position": 1,
+          "sourceText": {
+            "en": "The first letter is next to the longest river in Europe."
+          },
+          "selectedAnchorId": "l2-08-glyph-01",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p19-volga",
+          "f-l2-p19-volga-kama-note"
+        ],
+        "requiredPlaces": [
+          "place-volga"
+        ],
+        "op": "near",
+        "placeId": "place-volga"
+      }
+    },
+    {
+      "id": "l2-descriptor-42",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Danube River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-danube",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p17-danube"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-08",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to the Danube River."
+          },
+          "selectedAnchorId": "l2-08-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 20,
+            "cluesPdfPage": 21,
+            "pdfMapRect": [
+              131.24,
+              198.01,
+              660.74,
+              550.51
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-09",
+          "position": 2,
+          "sourceText": {
+            "en": "The second letter is next to the Danube River."
+          },
+          "selectedAnchorId": "l2-09-glyph-02",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to the Danube River."
+          },
+          "selectedAnchorId": "l2-10-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p17-danube"
+        ],
+        "requiredPlaces": [
+          "place-danube"
+        ],
+        "op": "near",
+        "placeId": "place-danube"
+      }
+    },
+    {
+      "id": "l2-descriptor-43",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is next to the Volga River"
+      },
+      "kind": "relational",
+      "candidateTargetPlaceId": "place-volga",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p19-volga",
+        "f-l2-p19-volga-kama-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-09",
+          "position": 5,
+          "sourceText": {
+            "en": "The fifth letter is next to the Volga River."
+          },
+          "selectedAnchorId": "l2-09-glyph-05",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        },
+        {
+          "puzzleId": "l2-10",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is next to the Volga River."
+          },
+          "selectedAnchorId": "l2-10-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p19-volga",
+          "f-l2-p19-volga-kama-note"
+        ],
+        "requiredPlaces": [
+          "place-volga"
+        ],
+        "op": "near",
+        "placeId": "place-volga"
+      }
+    },
+    {
+      "id": "l2-descriptor-44",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the largest desert in the world"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-antarctica",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l1-p22-deserts"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-09",
+          "position": 7,
+          "sourceText": {
+            "en": "The seventh letter is in the largest desert in the world."
+          },
+          "selectedAnchorId": "l2-09-glyph-07",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 22,
+            "cluesPdfPage": 23,
+            "pdfMapRect": [
+              163.59,
+              217.11,
+              664.59,
+              550.86
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l1-p22-deserts"
+        ],
+        "requiredPlaces": [
+          "place-antarctica"
+        ],
+        "op": "place",
+        "placeId": "place-antarctica"
+      }
+    },
+    {
+      "id": "l2-descriptor-45",
+      "status": "editorial_pending",
+      "sourcePredicate": {
+        "en": "is in the Caspian Sea, where the Volga River empties"
+      },
+      "kind": "name",
+      "candidateTargetPlaceId": "place-caspian-sea",
+      "candidateRelatedPlaceIds": [],
+      "candidateRequiresFacts": [
+        "f-l2-p19-volga",
+        "f-l2-p19-volga-kama-note"
+      ],
+      "requires": null,
+      "resolvesTo": null,
+      "geographicReview": "pending",
+      "occurrences": [
+        {
+          "puzzleId": "l2-10",
+          "position": 9,
+          "sourceText": {
+            "en": "The ninth letter is in the Caspian Sea, where the Volga River empties."
+          },
+          "selectedAnchorId": "l2-10-glyph-09",
+          "provenance": {
+            "source": "GeoWords Level 2 Rivers-2.pdf",
+            "mapPdfPage": 24,
+            "cluesPdfPage": 25,
+            "pdfMapRect": [
+              138.22,
+              201.28,
+              677.47,
+              560.53
+            ]
+          }
+        }
+      ],
+      "candidateQuery": {
+        "status": "editorial_pending",
+        "channel": "either",
+        "requires": [
+          "f-l2-p19-volga",
+          "f-l2-p19-volga-kama-note"
+        ],
+        "requiredPlaces": [
+          "place-caspian-sea"
+        ],
+        "op": "place",
+        "placeId": "place-caspian-sea"
+      }
+    }
+  ],
+  "audit": [
+    {
+      "puzzleId": "l2-01",
+      "position": 1,
+      "descriptorId": "l2-descriptor-01",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 2,
+      "descriptorId": "l2-descriptor-02",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 3,
+      "descriptorId": "l2-descriptor-03",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 4,
+      "descriptorId": "l2-descriptor-04",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans",
+        "f-l1-p12-directions"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 5,
+      "descriptorId": "l2-descriptor-05",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 6,
+      "descriptorId": "l2-descriptor-06",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-01",
+      "position": 7,
+      "descriptorId": "l2-descriptor-07",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans",
+        "f-l1-p12-directions"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 1,
+      "descriptorId": "l2-descriptor-08",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 2,
+      "descriptorId": "l2-descriptor-09",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 3,
+      "descriptorId": "l2-descriptor-02",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 4,
+      "descriptorId": "l2-descriptor-10",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 5,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 6,
+      "descriptorId": "l2-descriptor-12",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 7,
+      "descriptorId": "l2-descriptor-01",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 8,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 9,
+      "descriptorId": "l2-descriptor-14",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-02",
+      "position": 10,
+      "descriptorId": "l2-descriptor-06",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-oceans"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 1,
+      "descriptorId": "l2-descriptor-15",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 2,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 3,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 4,
+      "descriptorId": "l2-descriptor-17",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p16-islands-left"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 5,
+      "descriptorId": "l2-descriptor-18",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 6,
+      "descriptorId": "l2-descriptor-19",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p18-residents-climate-population"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 7,
+      "descriptorId": "l2-descriptor-20",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 8,
+      "descriptorId": "l2-descriptor-21",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p08-continent-properties"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 9,
+      "descriptorId": "l2-descriptor-22",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-03",
+      "position": 10,
+      "descriptorId": "l2-descriptor-23",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 1,
+      "descriptorId": "l2-descriptor-24",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 2,
+      "descriptorId": "l2-descriptor-25",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 3,
+      "descriptorId": "l2-descriptor-15",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 4,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 5,
+      "descriptorId": "l2-descriptor-26",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p16-islands-left"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 6,
+      "descriptorId": "l2-descriptor-18",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 7,
+      "descriptorId": "l2-descriptor-19",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p18-residents-climate-population"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 8,
+      "descriptorId": "l2-descriptor-20",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-04",
+      "position": 9,
+      "descriptorId": "l2-descriptor-23",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 1,
+      "descriptorId": "l2-descriptor-24",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 2,
+      "descriptorId": "l2-descriptor-27",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 3,
+      "descriptorId": "l2-descriptor-28",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p16-islands-left"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 4,
+      "descriptorId": "l2-descriptor-29",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 5,
+      "descriptorId": "l2-descriptor-25",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 6,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 7,
+      "descriptorId": "l2-descriptor-30",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p22-deserts"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 8,
+      "descriptorId": "l2-descriptor-19",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p18-residents-climate-population"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 9,
+      "descriptorId": "l2-descriptor-21",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p08-continent-properties"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-05",
+      "position": 10,
+      "descriptorId": "l2-descriptor-31",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p16-islands-left"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 1,
+      "descriptorId": "l2-descriptor-32",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 2,
+      "descriptorId": "l2-descriptor-33",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents",
+        "f-l1-p12-directions"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 3,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 4,
+      "descriptorId": "l2-descriptor-34",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 5,
+      "descriptorId": "l2-descriptor-35",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 6,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 7,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-06",
+      "position": 8,
+      "descriptorId": "l2-descriptor-36",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p06-continents",
+        "f-l1-p12-directions"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 1,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 2,
+      "descriptorId": "l2-descriptor-34",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 3,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 4,
+      "descriptorId": "l2-descriptor-31",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p16-islands-left"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 5,
+      "descriptorId": "l2-descriptor-37",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 6,
+      "descriptorId": "l2-descriptor-38",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 7,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 8,
+      "descriptorId": "l2-descriptor-32",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 9,
+      "descriptorId": "l2-descriptor-39",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-right",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-07",
+      "position": 10,
+      "descriptorId": "l2-descriptor-40",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 1,
+      "descriptorId": "l2-descriptor-41",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 2,
+      "descriptorId": "l2-descriptor-37",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 3,
+      "descriptorId": "l2-descriptor-34",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 4,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 5,
+      "descriptorId": "l2-descriptor-42",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 6,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-08",
+      "position": 7,
+      "descriptorId": "l2-descriptor-32",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 1,
+      "descriptorId": "l2-descriptor-34",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 2,
+      "descriptorId": "l2-descriptor-42",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 3,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 4,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 5,
+      "descriptorId": "l2-descriptor-43",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 6,
+      "descriptorId": "l2-descriptor-37",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 7,
+      "descriptorId": "l2-descriptor-44",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p22-deserts"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 8,
+      "descriptorId": "l2-descriptor-22",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p10-oceans-left",
+        "f-l1-p10-salinity-note"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 9,
+      "descriptorId": "l2-descriptor-19",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [
+        "f-l1-p18-residents-climate-population"
+      ],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-09",
+      "position": 10,
+      "descriptorId": "l2-descriptor-32",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 1,
+      "descriptorId": "l2-descriptor-34",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 2,
+      "descriptorId": "l2-descriptor-11",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 3,
+      "descriptorId": "l2-descriptor-16",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 4,
+      "descriptorId": "l2-descriptor-13",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 5,
+      "descriptorId": "l2-descriptor-42",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 6,
+      "descriptorId": "l2-descriptor-37",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 7,
+      "descriptorId": "l2-descriptor-43",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 8,
+      "descriptorId": "l2-descriptor-32",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    },
+    {
+      "puzzleId": "l2-10",
+      "position": 9,
+      "descriptorId": "l2-descriptor-45",
+      "status": "candidate_timing_only",
+      "externalPrerequisiteFactIds": [],
+      "missingEarlierLocalFactIds": [],
+      "geographicResolution": "not_verified"
+    }
+  ]
+}

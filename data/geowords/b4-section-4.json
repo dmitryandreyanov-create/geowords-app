@@ -1,0 +1,1126 @@
+{
+ "section": "mountains-and-plains-of-north-america",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the objects of data/maps/namerica-mountains.json learned by the end of the unit (section final: all 15), at the label point, first; a mountain-name word never on the same object; then on the objects of data/maps/namerica-overview.json (section 1); one letter per object",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b4_geowords.mjs = NA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width), as sections 1–2",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-4-unit-1-en",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "BLACKFOOT",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-florida",
+     "x": 59.62,
+     "y": 71.62,
+     "letter": "B"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "L"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "A"
+    },
+    {
+     "id": "na-coast-ranges",
+     "x": 36.77,
+     "y": 47.69,
+     "letter": "C"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "K"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "F"
+    },
+    {
+     "id": "na-denali",
+     "x": 30.33,
+     "y": 27.25,
+     "letter": "O"
+    },
+    {
+     "id": "na-hispaniola",
+     "x": 69.79,
+     "y": 80.81,
+     "letter": "O"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "T"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-rockies",
+     "position": 6,
+     "text": "Find the sixth letter in the Rocky Mountains."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 5,
+     "text": "Find the fifth letter on the Boothia Peninsula."
+    },
+    {
+     "markerId": "na-denali",
+     "position": 7,
+     "text": "Find the seventh letter on Denali."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 3,
+     "text": "Find the third letter on the Yucatán Peninsula."
+    },
+    {
+     "markerId": "na-hispaniola",
+     "position": 8,
+     "text": "Find the eighth letter on the island of Hispaniola."
+    },
+    {
+     "markerId": "na-florida",
+     "position": 1,
+     "text": "Find the first letter on the Florida peninsula."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 9,
+     "text": "Find the ninth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-coast-ranges",
+     "position": 4,
+     "text": "Find the fourth letter in the Pacific Coast Ranges."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "a35e7ff2d617a804"
+   }
+  },
+  {
+   "id": "b4-section-4-unit-1-ru",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ЧЕРНОНОГИЕ",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-coast-ranges",
+     "x": 36.77,
+     "y": 47.69,
+     "letter": "Ч"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "Е"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "Р"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "Н"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "О"
+    },
+    {
+     "id": "na-hispaniola",
+     "x": 69.79,
+     "y": 80.81,
+     "letter": "Н"
+    },
+    {
+     "id": "na-denali",
+     "x": 30.33,
+     "y": 27.25,
+     "letter": "О"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Г"
+    },
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "И"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-denali",
+     "position": 7,
+     "text": "Найди седьмую букву на Денали."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 5,
+     "text": "Найди пятую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 3,
+     "text": "Найди третью букву в Тихом океане."
+    },
+    {
+     "markerId": "na-hispaniola",
+     "position": 6,
+     "text": "Найди шестую букву на острове Гаити."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 8,
+     "text": "Найди восьмую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 10,
+     "text": "Найди десятую букву в Мексиканском заливе."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 4,
+     "text": "Найди четвёртую букву в Скалистых горах."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 2,
+     "text": "Найди вторую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 9,
+     "text": "Найди девятую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "na-coast-ranges",
+     "position": 1,
+     "text": "Найди первую букву в Береговых хребтах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d645c644459284da"
+   }
+  },
+  {
+   "id": "b4-section-4-unit-2-en",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "POPOCATEPETL",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-newfoundland",
+     "x": 70.18,
+     "y": 46,
+     "letter": "P"
+    },
+    {
+     "id": "na-alaska-range",
+     "x": 32,
+     "y": 28.38,
+     "letter": "O"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "P"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "O"
+    },
+    {
+     "id": "na-cascades",
+     "x": 37.23,
+     "y": 50.31,
+     "letter": "C"
+    },
+    {
+     "id": "na-gulf-of-mexico",
+     "x": 53.23,
+     "y": 77.19,
+     "letter": "A"
+    },
+    {
+     "id": "na-orizaba",
+     "x": 49.24,
+     "y": 84.82,
+     "letter": "T"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "E"
+    },
+    {
+     "id": "na-sierra-madre-occidental",
+     "x": 41.05,
+     "y": 71.81,
+     "letter": "P"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "E"
+    },
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "T"
+    },
+    {
+     "id": "na-sierra-madre-oriental",
+     "x": 45.86,
+     "y": 75.75,
+     "letter": "L"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-orizaba",
+     "position": 7,
+     "text": "Find the seventh letter on Pico de Orizaba."
+    },
+    {
+     "markerId": "na-cascades",
+     "position": 5,
+     "text": "Find the fifth letter in the Cascade Range."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 8,
+     "text": "Find the eighth letter on the Yucatán Peninsula."
+    },
+    {
+     "markerId": "na-gulf-of-mexico",
+     "position": 6,
+     "text": "Find the sixth letter in the Gulf of Mexico."
+    },
+    {
+     "markerId": "na-sierra-madre-occidental",
+     "position": 9,
+     "text": "Find the ninth letter in the Sierra Madre Occidental."
+    },
+    {
+     "markerId": "na-alaska-range",
+     "position": 2,
+     "text": "Find the second letter in the Alaska Range."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 4,
+     "text": "Find the fourth letter in the Rocky Mountains."
+    },
+    {
+     "markerId": "na-sierra-madre-oriental",
+     "position": 12,
+     "text": "Find the twelfth letter in the Sierra Madre Oriental."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 10,
+     "text": "Find the tenth letter on the Labrador Peninsula."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 3,
+     "text": "Find the third letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-newfoundland",
+     "position": 1,
+     "text": "Find the first letter on the island of Newfoundland."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 11,
+     "text": "Find the eleventh letter in the Sierra Nevada."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "cecdf9df2428c96f"
+   }
+  },
+  {
+   "id": "b4-section-4-unit-2-ru",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПОПОКАТЕПЕТЛЬ",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "П"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "О"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "П"
+    },
+    {
+     "id": "na-sierra-madre-oriental",
+     "x": 45.86,
+     "y": 75.75,
+     "letter": "О"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "К"
+    },
+    {
+     "id": "na-sierra-madre-occidental",
+     "x": 41.05,
+     "y": 71.81,
+     "letter": "А"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "Т"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "Е"
+    },
+    {
+     "id": "na-cascades",
+     "x": 37.23,
+     "y": 50.31,
+     "letter": "П"
+    },
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "Е"
+    },
+    {
+     "id": "na-orizaba",
+     "x": 49.24,
+     "y": 84.82,
+     "letter": "Т"
+    },
+    {
+     "id": "na-alaska-range",
+     "x": 32,
+     "y": 28.38,
+     "letter": "Л"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-sierra-madre-occidental",
+     "position": 6,
+     "text": "Найди шестую букву в Западной Сьерра-Мадре."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 10,
+     "text": "Найди десятую букву в Сьерра-Неваде."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 7,
+     "text": "Найди седьмую букву на Кубе."
+    },
+    {
+     "markerId": "na-alaska-range",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Аляскинском хребте."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-sierra-madre-oriental",
+     "position": 4,
+     "text": "Найди четвёртую букву в Восточной Сьерра-Мадре."
+    },
+    {
+     "markerId": "na-cascades",
+     "position": 9,
+     "text": "Найди девятую букву в Каскадных горах."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Лабрадор."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 5,
+     "text": "Найди пятую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 8,
+     "text": "Найди восьмую букву в Канадском Арктическом архипелаге."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 1,
+     "text": "Найди первую букву в Гренландии."
+    },
+    {
+     "markerId": "na-orizaba",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на вулкане Орисаба."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Скалистых горах."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "7ff56d8f7dacec94"
+   }
+  },
+  {
+   "id": "b4-section-4-unit-3-en",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "HOMESTEADS",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-appalachians",
+     "x": 57.05,
+     "y": 65.56,
+     "letter": "H"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "O"
+    },
+    {
+     "id": "na-central-lowland",
+     "x": 52.82,
+     "y": 60.81,
+     "letter": "M"
+    },
+    {
+     "id": "na-great-plains",
+     "x": 45.18,
+     "y": 51,
+     "letter": "E"
+    },
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "S"
+    },
+    {
+     "id": "na-denali",
+     "x": 30.33,
+     "y": 27.25,
+     "letter": "T"
+    },
+    {
+     "id": "na-laurentian-upland",
+     "x": 47.45,
+     "y": 36.25,
+     "letter": "E"
+    },
+    {
+     "id": "na-orizaba",
+     "x": 49.24,
+     "y": 84.82,
+     "letter": "A"
+    },
+    {
+     "id": "na-sierra-madre-occidental",
+     "x": 41.05,
+     "y": 71.81,
+     "letter": "D"
+    },
+    {
+     "id": "na-sierra-madre-oriental",
+     "x": 45.86,
+     "y": 75.75,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-rockies",
+     "position": 2,
+     "text": "Find the second letter in the Rocky Mountains."
+    },
+    {
+     "markerId": "na-great-plains",
+     "position": 4,
+     "text": "Find the fourth letter on the Great Plains."
+    },
+    {
+     "markerId": "na-denali",
+     "position": 6,
+     "text": "Find the sixth letter on Denali."
+    },
+    {
+     "markerId": "na-orizaba",
+     "position": 8,
+     "text": "Find the eighth letter on Pico de Orizaba."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 5,
+     "text": "Find the fifth letter in the Sierra Nevada."
+    },
+    {
+     "markerId": "na-central-lowland",
+     "position": 3,
+     "text": "Find the third letter on the Central Lowland."
+    },
+    {
+     "markerId": "na-sierra-madre-occidental",
+     "position": 9,
+     "text": "Find the ninth letter in the Sierra Madre Occidental."
+    },
+    {
+     "markerId": "na-laurentian-upland",
+     "position": 7,
+     "text": "Find the seventh letter on the Laurentian Upland."
+    },
+    {
+     "markerId": "na-appalachians",
+     "position": 1,
+     "text": "Find the first letter in the Appalachians."
+    },
+    {
+     "markerId": "na-sierra-madre-oriental",
+     "position": 10,
+     "text": "Find the tenth letter in the Sierra Madre Oriental."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d21890e13cc1aafe"
+   }
+  },
+  {
+   "id": "b4-section-4-unit-3-ru",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГОМСТЕДЫ",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "Г"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "О"
+    },
+    {
+     "id": "na-great-plains",
+     "x": 45.18,
+     "y": 51,
+     "letter": "М"
+    },
+    {
+     "id": "na-alaska-range",
+     "x": 32,
+     "y": 28.38,
+     "letter": "С"
+    },
+    {
+     "id": "na-sierra-madre-occidental",
+     "x": 41.05,
+     "y": 71.81,
+     "letter": "Т"
+    },
+    {
+     "id": "na-laurentian-upland",
+     "x": 47.45,
+     "y": 36.25,
+     "letter": "Е"
+    },
+    {
+     "id": "na-central-lowland",
+     "x": 52.82,
+     "y": 60.81,
+     "letter": "Д"
+    },
+    {
+     "id": "na-appalachians",
+     "x": 57.05,
+     "y": 65.56,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-alaska-range",
+     "position": 4,
+     "text": "Найди четвёртую букву в Аляскинском хребте."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 2,
+     "text": "Найди вторую букву в Скалистых горах."
+    },
+    {
+     "markerId": "na-laurentian-upland",
+     "position": 6,
+     "text": "Найди шестую букву на Лаврентийской возвышенности."
+    },
+    {
+     "markerId": "na-appalachians",
+     "position": 8,
+     "text": "Найди восьмую букву в Аппалачах."
+    },
+    {
+     "markerId": "na-great-plains",
+     "position": 3,
+     "text": "Найди третью букву на Великих равнинах."
+    },
+    {
+     "markerId": "na-sierra-madre-occidental",
+     "position": 5,
+     "text": "Найди пятую букву в Западной Сьерра-Мадре."
+    },
+    {
+     "markerId": "na-central-lowland",
+     "position": 7,
+     "text": "Найди седьмую букву на Центральных равнинах."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 1,
+     "text": "Найди первую букву в Сьерра-Неваде."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "ad585c8a075a753b"
+   }
+  },
+  {
+   "id": "b4-section-4-final-en",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "STAGECOACHES",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-laurentian-upland",
+     "x": 47.45,
+     "y": 36.25,
+     "letter": "S"
+    },
+    {
+     "id": "na-sierra-madre-oriental",
+     "x": 45.86,
+     "y": 75.75,
+     "letter": "T"
+    },
+    {
+     "id": "na-alaska-range",
+     "x": 32,
+     "y": 28.38,
+     "letter": "A"
+    },
+    {
+     "id": "na-cascades",
+     "x": 37.23,
+     "y": 50.31,
+     "letter": "G"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "E"
+    },
+    {
+     "id": "na-great-plains",
+     "x": 45.18,
+     "y": 51,
+     "letter": "C"
+    },
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "O"
+    },
+    {
+     "id": "na-sierra-madre-occidental",
+     "x": 41.05,
+     "y": 71.81,
+     "letter": "A"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "C"
+    },
+    {
+     "id": "na-central-lowland",
+     "x": 52.82,
+     "y": 60.81,
+     "letter": "H"
+    },
+    {
+     "id": "na-popocatepetl",
+     "x": 48.17,
+     "y": 84.79,
+     "letter": "E"
+    },
+    {
+     "id": "na-appalachians",
+     "x": 57.05,
+     "y": 65.56,
+     "letter": "S"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-cascades",
+     "position": 4,
+     "text": "Find the fourth letter in the Cascade Range."
+    },
+    {
+     "markerId": "na-sierra-madre-oriental",
+     "position": 2,
+     "text": "Find the second letter in the Sierra Madre Oriental."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 5,
+     "text": "Find the fifth letter in Greenland."
+    },
+    {
+     "markerId": "na-central-lowland",
+     "position": 10,
+     "text": "Find the tenth letter on the Central Lowland."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 7,
+     "text": "Find the seventh letter in the Sierra Nevada."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 9,
+     "text": "Find the ninth letter in the Rocky Mountains."
+    },
+    {
+     "markerId": "na-great-plains",
+     "position": 6,
+     "text": "Find the sixth letter on the Great Plains."
+    },
+    {
+     "markerId": "na-appalachians",
+     "position": 12,
+     "text": "Find the twelfth letter in the Appalachians."
+    },
+    {
+     "markerId": "na-alaska-range",
+     "position": 3,
+     "text": "Find the third letter in the Alaska Range."
+    },
+    {
+     "markerId": "na-laurentian-upland",
+     "position": 1,
+     "text": "Find the first letter on the Laurentian Upland."
+    },
+    {
+     "markerId": "na-sierra-madre-occidental",
+     "position": 8,
+     "text": "Find the eighth letter in the Sierra Madre Occidental."
+    },
+    {
+     "markerId": "na-popocatepetl",
+     "position": 11,
+     "text": "Find the eleventh letter on Popocatépetl."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "e7a1aa2857f872e0"
+   }
+  },
+  {
+   "id": "b4-section-4-final-ru",
+   "section": "mountains-and-plains-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ДИЛИЖАНСЫ",
+   "map": "./assets/namerica-mountains.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "na-denali",
+     "x": 30.33,
+     "y": 27.25,
+     "letter": "Д"
+    },
+    {
+     "id": "na-orizaba",
+     "x": 49.24,
+     "y": 84.82,
+     "letter": "И"
+    },
+    {
+     "id": "na-great-plains",
+     "x": 45.18,
+     "y": 51,
+     "letter": "Л"
+    },
+    {
+     "id": "na-mexican-plateau",
+     "x": 43.73,
+     "y": 73.56,
+     "letter": "И"
+    },
+    {
+     "id": "na-rockies",
+     "x": 42.86,
+     "y": 58.88,
+     "letter": "Ж"
+    },
+    {
+     "id": "na-coast-ranges",
+     "x": 36.77,
+     "y": 47.69,
+     "letter": "А"
+    },
+    {
+     "id": "na-central-lowland",
+     "x": 52.82,
+     "y": 60.81,
+     "letter": "Н"
+    },
+    {
+     "id": "na-sierra-nevada",
+     "x": 35.82,
+     "y": 61.25,
+     "letter": "С"
+    },
+    {
+     "id": "na-laurentian-upland",
+     "x": 47.45,
+     "y": 36.25,
+     "letter": "Ы"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-coast-ranges",
+     "position": 6,
+     "text": "Найди шестую букву в Береговых хребтах."
+    },
+    {
+     "markerId": "na-orizaba",
+     "position": 2,
+     "text": "Найди вторую букву на вулкане Орисаба."
+    },
+    {
+     "markerId": "na-rockies",
+     "position": 5,
+     "text": "Найди пятую букву в Скалистых горах."
+    },
+    {
+     "markerId": "na-laurentian-upland",
+     "position": 9,
+     "text": "Найди девятую букву на Лаврентийской возвышенности."
+    },
+    {
+     "markerId": "na-central-lowland",
+     "position": 7,
+     "text": "Найди седьмую букву на Центральных равнинах."
+    },
+    {
+     "markerId": "na-great-plains",
+     "position": 3,
+     "text": "Найди третью букву на Великих равнинах."
+    },
+    {
+     "markerId": "na-denali",
+     "position": 1,
+     "text": "Найди первую букву на Денали."
+    },
+    {
+     "markerId": "na-sierra-nevada",
+     "position": 8,
+     "text": "Найди восьмую букву в Сьерра-Неваде."
+    },
+    {
+     "markerId": "na-mexican-plateau",
+     "position": 4,
+     "text": "Найди четвёртую букву на Мексиканском нагорье."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "a9d564960088d69b"
+   }
+  }
+ ]
+}

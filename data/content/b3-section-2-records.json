@@ -1,0 +1,97 @@
+{
+ "section": "rivers-of-asia",
+ "block": 3,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "yangtze-longest-asia",
+   "order": 1,
+   "object": "as-yangtze",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Yangtze",
+    "ru": "Янцзы"
+   },
+   "fact": {
+    "en": "The Yangtze is the longest river in Asia, about 6,300 km.",
+    "ru": "Янцзы — самая длинная река Азии, около 6300 км."
+   },
+   "figure": {
+    "value": 6300,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3Wwy5QS9GJ5aRX3kPLNePF",
+    "note": "block 3 section 2 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "975bc2fd971c56a8"
+   }
+  },
+  {
+   "id": "irtysh-long-tributary",
+   "order": 2,
+   "object": "as-irtysh",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Irtysh",
+    "ru": "Иртыш"
+   },
+   "fact": {
+    "en": "The Irtysh is one of the longest tributaries in the world, stretching over 4,200 km.",
+    "ru": "Иртыш — один из самых длинных притоков в мире. Его длина превышает 4200 км."
+   },
+   "figure": {
+    "value": 4248,
+    "unit": "km"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3Wwy5QS9GJ5aRX3kPLNePF",
+    "note": "block 3 section 2 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "d62113054114c415"
+   }
+  },
+  {
+   "id": "yenisei-most-water-russia",
+   "order": 3,
+   "object": "as-yenisei",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Yenisei",
+    "ru": "Енисей"
+   },
+   "fact": {
+    "en": "The Yenisei has the largest average flow of any river in Russia.",
+    "ru": "Енисей — самая полноводная река России: у него самый большой средний расход воды."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3Wwy5QS9GJ5aRX3kPLNePF",
+    "note": "block 3 section 2 plan"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2f3452445685a50f"
+   }
+  }
+ ]
+}

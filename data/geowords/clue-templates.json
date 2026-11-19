@@ -18,7 +18,13 @@
    "ninth",
    "tenth",
    "eleventh",
-   "twelfth"
+   "twelfth",
+   "thirteenth",
+   "fourteenth",
+   "fifteenth",
+   "sixteenth",
+   "seventeenth",
+   "eighteenth"
   ],
   "ru": [
    "первую",
@@ -32,7 +38,13 @@
    "девятую",
    "десятую",
    "одиннадцатую",
-   "двенадцатую"
+   "двенадцатую",
+   "тринадцатую",
+   "четырнадцатую",
+   "пятнадцатую",
+   "шестнадцатую",
+   "семнадцатую",
+   "восемнадцатую"
   ]
  },
  "rules": [
@@ -49,7 +61,8 @@
   "status": "approved",
   "by": "Svetlana",
   "date": "2026-10-23",
-  "scope": "rules and phrases; review puzzles are spot-checked"
+  "scope": "rules and phrases; review puzzles are spot-checked",
+  "ordinals13to18": "ordinals 13-18 (RU and EN) for Challenge words up to 18 letters approved by Svetlana 2026-10-26"
  },
  "objects": [
   {

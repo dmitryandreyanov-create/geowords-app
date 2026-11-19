@@ -1,0 +1,1291 @@
+{
+ "section": "lakes-of-asia",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the lakes of data/maps/asia-lakes.json learned by the end of the unit (section final: all 13), at the lake's label point, the newest unit's lakes first; then on the objects of data/maps/asia-overview.json (section 1); one letter per object",
+  "nesting": "no letter inside the area of another object of the puzzle (Lake Taymyr's letter never with the Taimyr Peninsula); a marginal sea or an island never with the ocean it lies in",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-3-unit-1-en",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SEISMICITY",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "S"
+    },
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "E"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "I"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "S"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "M"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "I"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "C"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "I"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "T"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Y"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-baikal",
+     "position": 4,
+     "text": "Find the fourth letter in Lake Baikal."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 2,
+     "text": "Find the second letter at the Suez Canal."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 6,
+     "text": "Find the sixth letter in Qinghai Lake."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the South China Sea."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 3,
+     "text": "Find the third letter on the Arabian Peninsula."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 10,
+     "text": "Find the tenth letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 5,
+     "text": "Find the fifth letter in Lake Taymyr."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 9,
+     "text": "Find the ninth letter on the island of Borneo."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 7,
+     "text": "Find the seventh letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 1,
+     "text": "Find the first letter in Lake Khanka."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "456764d0eb44ae7d"
+   }
+  },
+  {
+   "id": "b3-section-3-unit-1-ru",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "СЕЙСМИЧНОСТЬ",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "С"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "Е"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "Й"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "С"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "М"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "И"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "Ч"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "Н"
+    },
+    {
+     "id": "as-chukotka",
+     "x": 70.82,
+     "y": 6.85,
+     "letter": "О"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "С"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "Т"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-chukotka",
+     "position": 9,
+     "text": "Найди девятую букву на Чукотке."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 7,
+     "text": "Найди седьмую букву в Персидском заливе."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 2,
+     "text": "Найди вторую букву в озере Ханка."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 5,
+     "text": "Найди пятую букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 12,
+     "text": "Найди двенадцатую букву на острове Шри-Ланка."
+    },
+    {
+     "markerId": "as-baikal",
+     "position": 6,
+     "text": "Найди шестую букву в Байкале."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 8,
+     "text": "Найди восьмую букву в озере Кукунор."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 10,
+     "text": "Найди десятую букву в озере Таймыр."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 3,
+     "text": "Найди третью букву в Уральских горах."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 1,
+     "text": "Найди первую букву в Южно-Китайском море."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "2d28a4aaa3d0efd4"
+   }
+  },
+  {
+   "id": "b3-section-3-unit-2-en",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ENDORHEISM",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-issyk-kul",
+     "x": 41.74,
+     "y": 44.39,
+     "letter": "E"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "N"
+    },
+    {
+     "id": "as-kamchatka",
+     "x": 72.85,
+     "y": 21.34,
+     "letter": "D"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "O"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "R"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "H"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "E"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "I"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "S"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "M"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-khanka",
+     "position": 6,
+     "text": "Find the sixth letter in Lake Khanka."
+    },
+    {
+     "markerId": "as-baikal",
+     "position": 2,
+     "text": "Find the second letter in Lake Baikal."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 4,
+     "text": "Find the fourth letter in the Caspian Sea."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the South China Sea."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 7,
+     "text": "Find the seventh letter in the Aral Sea."
+    },
+    {
+     "markerId": "as-kamchatka",
+     "position": 3,
+     "text": "Find the third letter on Kamchatka."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 5,
+     "text": "Find the fifth letter in Qinghai Lake."
+    },
+    {
+     "markerId": "as-issyk-kul",
+     "position": 1,
+     "text": "Find the first letter in Issyk-Kul."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 10,
+     "text": "Find the tenth letter in Lake Taymyr."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "5d5f5974f9c32009"
+   }
+  },
+  {
+   "id": "b3-section-3-unit-2-ru",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "БЕССТОЧНОСТЬ",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "Б"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Е"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "С"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "С"
+    },
+    {
+     "id": "as-balkhash",
+     "x": 40.68,
+     "y": 40.91,
+     "letter": "Т"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "О"
+    },
+    {
+     "id": "as-caspian",
+     "x": 29.37,
+     "y": 38.81,
+     "letter": "Ч"
+    },
+    {
+     "id": "as-khovsgol",
+     "x": 52.66,
+     "y": 37.57,
+     "letter": "Н"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "О"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "С"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "Т"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "Ь"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-indian-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в Индийском океане."
+    },
+    {
+     "markerId": "as-caspian",
+     "position": 7,
+     "text": "Найди седьмую букву в Каспийском море."
+    },
+    {
+     "markerId": "as-balkhash",
+     "position": 5,
+     "text": "Найди пятую букву в озере Балхаш."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Аральском море."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 3,
+     "text": "Найди третью букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 12,
+     "text": "Найди двенадцатую букву в озере Ханка."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 9,
+     "text": "Найди девятую букву в озере Кукунор."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 4,
+     "text": "Найди четвёртую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 6,
+     "text": "Найди шестую букву в озере Таймыр."
+    },
+    {
+     "markerId": "as-khovsgol",
+     "position": 8,
+     "text": "Найди восьмую букву в озере Хубсугул."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 1,
+     "text": "Найди первую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 10,
+     "text": "Найди десятую букву на полуострове Малая Азия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "9d9829db49091ee8"
+   }
+  },
+  {
+   "id": "b3-section-3-unit-3-en",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "MINERALIZATION",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-tonle-sap",
+     "x": 56.9,
+     "y": 73.05,
+     "letter": "M"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "I"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "N"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "E"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "R"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "A"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "L"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "I"
+    },
+    {
+     "id": "as-urmia",
+     "x": 25.71,
+     "y": 40.01,
+     "letter": "Z"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "A"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "T"
+    },
+    {
+     "id": "as-issyk-kul",
+     "x": 41.74,
+     "y": 44.39,
+     "letter": "I"
+    },
+    {
+     "id": "as-dead-sea",
+     "x": 18.85,
+     "y": 40.26,
+     "letter": "O"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-south-china-sea",
+     "position": 4,
+     "text": "Find the fourth letter in the South China Sea."
+    },
+    {
+     "markerId": "as-urmia",
+     "position": 9,
+     "text": "Find the ninth letter in Lake Urmia."
+    },
+    {
+     "markerId": "as-baikal",
+     "position": 6,
+     "text": "Find the sixth letter in Lake Baikal."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 3,
+     "text": "Find the third letter at the Bosporus."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 14,
+     "text": "Find the fourteenth letter in Lake Taymyr."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 11,
+     "text": "Find the eleventh letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 7,
+     "text": "Find the seventh letter in the Aral Sea."
+    },
+    {
+     "markerId": "as-issyk-kul",
+     "position": 12,
+     "text": "Find the twelfth letter in Issyk-Kul."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 2,
+     "text": "Find the second letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 5,
+     "text": "Find the fifth letter in Qinghai Lake."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 8,
+     "text": "Find the eighth letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 10,
+     "text": "Find the tenth letter in Lake Khanka."
+    },
+    {
+     "markerId": "as-tonle-sap",
+     "position": 1,
+     "text": "Find the first letter in Tonlé Sap."
+    },
+    {
+     "markerId": "as-dead-sea",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Dead Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "3f8176d68441e51c"
+   }
+  },
+  {
+   "id": "b3-section-3-unit-3-ru",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "МИНЕРАЛИЗАЦИЯ",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "М"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "И"
+    },
+    {
+     "id": "as-issyk-kul",
+     "x": 41.74,
+     "y": 44.39,
+     "letter": "Н"
+    },
+    {
+     "id": "as-dead-sea",
+     "x": 18.85,
+     "y": 40.26,
+     "letter": "Е"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "Р"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "А"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "Л"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "И"
+    },
+    {
+     "id": "as-tonle-sap",
+     "x": 56.9,
+     "y": 73.05,
+     "letter": "З"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "А"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "Ц"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "И"
+    },
+    {
+     "id": "as-urmia",
+     "x": 25.71,
+     "y": 40.01,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-dead-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Мёртвом море."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 7,
+     "text": "Найди седьмую букву на острове Шри-Ланка."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 5,
+     "text": "Найди пятую букву в озере Кукунор."
+    },
+    {
+     "markerId": "as-tonle-sap",
+     "position": 9,
+     "text": "Найди девятую букву в озере Тонлесап."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 6,
+     "text": "Найди шестую букву в озере Ханка."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 12,
+     "text": "Найди двенадцатую букву в озере Таймыр."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 2,
+     "text": "Найди вторую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 11,
+     "text": "Найди одиннадцатую букву у Босфора."
+    },
+    {
+     "markerId": "as-baikal",
+     "position": 8,
+     "text": "Найди восьмую букву в Байкале."
+    },
+    {
+     "markerId": "as-issyk-kul",
+     "position": 3,
+     "text": "Найди третью букву в озере Иссык-Куль."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 1,
+     "text": "Найди первую букву в Аральском море."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 10,
+     "text": "Найди десятую букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-urmia",
+     "position": 13,
+     "text": "Найди тринадцатую букву в озере Урмия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "2961ff3e4390cb17"
+   }
+  },
+  {
+   "id": "b3-section-3-final-en",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "STRATIFICATION",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "S"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "T"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "R"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "A"
+    },
+    {
+     "id": "as-tonle-sap",
+     "x": 56.9,
+     "y": 73.05,
+     "letter": "T"
+    },
+    {
+     "id": "as-chukotka",
+     "x": 70.82,
+     "y": 6.85,
+     "letter": "I"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "F"
+    },
+    {
+     "id": "as-urmia",
+     "x": 25.71,
+     "y": 40.01,
+     "letter": "I"
+    },
+    {
+     "id": "as-issyk-kul",
+     "x": 41.74,
+     "y": 44.39,
+     "letter": "C"
+    },
+    {
+     "id": "as-dead-sea",
+     "x": 18.85,
+     "y": 40.26,
+     "letter": "A"
+    },
+    {
+     "id": "as-khovsgol",
+     "x": 52.66,
+     "y": 37.57,
+     "letter": "T"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "I"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "O"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-urmia",
+     "position": 8,
+     "text": "Find the eighth letter in Lake Urmia."
+    },
+    {
+     "markerId": "as-dead-sea",
+     "position": 10,
+     "text": "Find the tenth letter in the Dead Sea."
+    },
+    {
+     "markerId": "as-chukotka",
+     "position": 6,
+     "text": "Find the sixth letter on the Chukchi Peninsula."
+    },
+    {
+     "markerId": "as-issyk-kul",
+     "position": 9,
+     "text": "Find the ninth letter in Issyk-Kul."
+    },
+    {
+     "markerId": "as-khovsgol",
+     "position": 11,
+     "text": "Find the eleventh letter in Lake Khövsgöl."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 3,
+     "text": "Find the third letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 12,
+     "text": "Find the twelfth letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 7,
+     "text": "Find the seventh letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 13,
+     "text": "Find the thirteenth letter in the Aral Sea."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 4,
+     "text": "Find the fourth letter at the Bosporus."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 14,
+     "text": "Find the fourteenth letter in Lake Taymyr."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 2,
+     "text": "Find the second letter in Qinghai Lake."
+    },
+    {
+     "markerId": "as-tonle-sap",
+     "position": 5,
+     "text": "Find the fifth letter in Tonlé Sap."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 1,
+     "text": "Find the first letter in Lake Khanka."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "66b8dec44886afe9"
+   }
+  },
+  {
+   "id": "b3-section-3-final-ru",
+   "section": "lakes-of-asia",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "СТРАТИФИКАЦИЯ",
+   "map": "./assets/asia-lakes.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "С"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "Т"
+    },
+    {
+     "id": "as-dead-sea",
+     "x": 18.85,
+     "y": 40.26,
+     "letter": "Р"
+    },
+    {
+     "id": "as-baikal",
+     "x": 55.45,
+     "y": 35.01,
+     "letter": "А"
+    },
+    {
+     "id": "as-qinghai",
+     "x": 53.1,
+     "y": 50.54,
+     "letter": "Т"
+    },
+    {
+     "id": "as-urmia",
+     "x": 25.71,
+     "y": 40.01,
+     "letter": "И"
+    },
+    {
+     "id": "as-taymyr",
+     "x": 51.94,
+     "y": 13.89,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-issyk-kul",
+     "x": 41.74,
+     "y": 44.39,
+     "letter": "И"
+    },
+    {
+     "id": "as-khanka",
+     "x": 67.38,
+     "y": 38.18,
+     "letter": "К"
+    },
+    {
+     "id": "as-kamchatka",
+     "x": 72.85,
+     "y": 21.34,
+     "letter": "А"
+    },
+    {
+     "id": "as-tonle-sap",
+     "x": 56.9,
+     "y": 73.05,
+     "letter": "Ц"
+    },
+    {
+     "id": "as-aral",
+     "x": 35,
+     "y": 37.75,
+     "letter": "И"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "Я"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-dead-sea",
+     "position": 3,
+     "text": "Найди третью букву в Мёртвом море."
+    },
+    {
+     "markerId": "as-qinghai",
+     "position": 5,
+     "text": "Найди пятую букву в озере Кукунор."
+    },
+    {
+     "markerId": "as-issyk-kul",
+     "position": 8,
+     "text": "Найди восьмую букву в озере Иссык-Куль."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-khanka",
+     "position": 9,
+     "text": "Найди девятую букву в озере Ханка."
+    },
+    {
+     "markerId": "as-baikal",
+     "position": 4,
+     "text": "Найди четвёртую букву в Байкале."
+    },
+    {
+     "markerId": "as-taymyr",
+     "position": 7,
+     "text": "Найди седьмую букву в озере Таймыр."
+    },
+    {
+     "markerId": "as-aral",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Аральском море."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-kamchatka",
+     "position": 10,
+     "text": "Найди десятую букву на Камчатке."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 1,
+     "text": "Найди первую букву на острове Калимантан."
+    },
+    {
+     "markerId": "as-tonle-sap",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в озере Тонлесап."
+    },
+    {
+     "markerId": "as-urmia",
+     "position": 6,
+     "text": "Найди шестую букву в озере Урмия."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-30",
+    "contentSha256": "1ded26ae45026b71"
+   }
+  }
+ ]
+}

@@ -17,6 +17,8 @@ const edit = f => { const d = structuredClone(base); f(d); return d; };
 const rel = (d, subject, relation) => d.relations.find(r => JSON.stringify(r.subject) === JSON.stringify(subject) && r.relation === relation);
 const cases = {
   "package missing": null,
+  "card text edited after approval": edit(d => { d.cards[0].text.ru += " "; }),
+  "card without Russian text": edit(d => { delete d.cards[0].text.ru; }),
   "lesson removed": edit(d => { d.lessons.splice(2, 1); }),
   "relation removed under a true/false pair": edit(d => { d.relations = d.relations.filter(r => !(r.subject === "volga" && r.relation === "flowsInto")); }),
   "neutral relation turned into an answer": edit(d => { const r = rel(d, "hudson-bay", "inOcean"); r.use = "yes"; }),
@@ -25,6 +27,12 @@ const cases = {
   "true/false text changed after approval": edit(d => { d.trueFalse.pairs[0].true.ru += "!"; }),
   "true/false pair without approval": edit(d => { delete d.trueFalse.pairs[1].approval; }),
   "true/false missing a language": edit(d => { delete d.trueFalse.pairs[2].false.en; }),
+  "record clue edited after approval": edit(d => { d.records.items[0].clue.ru += " "; }),
+  "record false statement edited after approval": edit(d => { d.records.items[11].false.en = d.records.items[11].false.en.replace("K2", "К2"); }),
+  "record without approval": edit(d => { delete d.records.items[3].approval; }),
+  "record on an unknown object": edit(d => { d.records.items[5].object = "atlantis"; }),
+  "record missing a language": edit(d => { delete d.records.items[7].true.en; }),
+  "too few records for lesson 4": edit(d => { d.records.items.splice(10); }),
 };
 const failed = [];
 if (run(base) !== 0) failed.push("unchanged data should pass");

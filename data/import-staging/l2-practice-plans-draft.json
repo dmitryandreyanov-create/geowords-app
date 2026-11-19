@@ -1,0 +1,639 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "courseId": "rivers",
+  "warning": "Sixty candidate slots using existing global definitions, not generated puzzles. Cross-course reuse, explicit source map/focus, geography, age suitability and teaching order require review. No facts are learned by these proposals.",
+  "practicePlans": [
+    {
+      "stepId": "l2-01-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "aquifer",
+        "alluvium",
+        "riparian",
+        "wetland",
+        "fluvial",
+        "estuary"
+      ],
+      "wordProposalOrigin": "existing_pilot_plan",
+      "candidateL1RepeatedWordIds": [],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-02",
+        "asset": "./assets/import-staging/l2-clean-map-2.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "aff35aaa8498aecfab500555d41a42545fd98ce3efc4d8945991291466d831cd",
+        "anchorIds": [
+          "l2-02-glyph-01",
+          "l2-02-glyph-02",
+          "l2-02-glyph-04",
+          "l2-02-glyph-03",
+          "l2-02-glyph-05",
+          "l2-02-glyph-06",
+          "l2-02-glyph-07",
+          "l2-02-glyph-08",
+          "l2-02-glyph-09",
+          "l2-02-glyph-10"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 8,
+          "cluesPdfPage": 9,
+          "pdfMapRect": [
+            161.18,
+            232.22,
+            650.93,
+            558.47
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-nile"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-02-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "humidity",
+        "ecology",
+        "biomass",
+        "canopy",
+        "endemic",
+        "habitat"
+      ],
+      "wordProposalOrigin": "existing_pilot_plan",
+      "candidateL1RepeatedWordIds": [
+        "habitat"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-03",
+        "asset": "./assets/import-staging/l2-clean-map-3.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "727b8a10aafb1664c3bf777dd09c2f76cfc0213ff05592d3e63530bc1c945acf",
+        "anchorIds": [
+          "l2-03-glyph-01",
+          "l2-03-glyph-02",
+          "l2-03-glyph-03",
+          "l2-03-glyph-04",
+          "l2-03-glyph-05",
+          "l2-03-glyph-06",
+          "l2-03-glyph-07",
+          "l2-03-glyph-08",
+          "l2-03-glyph-09",
+          "l2-03-glyph-10"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 10,
+          "cluesPdfPage": 11,
+          "pdfMapRect": [
+            151.76,
+            213.16,
+            641.52,
+            539.41
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-amazon"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-03-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "erosion",
+        "rapids",
+        "freight",
+        "deposit",
+        "dredge",
+        "brackish"
+      ],
+      "wordProposalOrigin": "existing_pilot_plan",
+      "candidateL1RepeatedWordIds": [],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-04",
+        "asset": "./assets/import-staging/l2-clean-map-4.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "e4dc899c8f9af48de2240eabe0932621a2f84739448af959d287e5f63d972221",
+        "anchorIds": [
+          "l2-04-glyph-01",
+          "l2-04-glyph-02",
+          "l2-04-glyph-03",
+          "l2-04-glyph-04",
+          "l2-04-glyph-05",
+          "l2-04-glyph-06",
+          "l2-04-glyph-07",
+          "l2-04-glyph-09",
+          "l2-04-glyph-08"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 12,
+          "cluesPdfPage": 13,
+          "pdfMapRect": [
+            126.91,
+            204.04,
+            647.41,
+            550.54
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-mississippi"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-04-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "watershed",
+        "catchment",
+        "confluence",
+        "headwater",
+        "basin",
+        "distance"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "watershed",
+        "catchment",
+        "confluence",
+        "headwater",
+        "basin",
+        "distance"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-05",
+        "asset": "./assets/import-staging/l2-clean-map-5.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "61c216585c1d7393bf669ec04a3e2843a87c567d67bfbdd194b0ce90e119e451",
+        "anchorIds": [
+          "l2-05-glyph-04",
+          "l2-05-glyph-02",
+          "l2-05-glyph-03",
+          "l2-05-glyph-01",
+          "l2-05-glyph-05",
+          "l2-05-glyph-06",
+          "l2-05-glyph-07",
+          "l2-05-glyph-08",
+          "l2-05-glyph-09",
+          "l2-05-glyph-10"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 14,
+          "cluesPdfPage": 15,
+          "pdfMapRect": [
+            139.22,
+            214.46,
+            660.47,
+            561.71
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-yangtze"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-05-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "aridity",
+        "drought",
+        "oasis",
+        "climate",
+        "tropics",
+        "islet"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "aridity",
+        "drought",
+        "oasis",
+        "climate",
+        "tropics",
+        "islet"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-06",
+        "asset": "./assets/import-staging/l2-clean-map-6.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "fa2cbfe44ce1270ff600c50d0785903b243b30ba4b94c348c61282575563eee7",
+        "anchorIds": [
+          "l2-06-glyph-01",
+          "l2-06-glyph-06",
+          "l2-06-glyph-03",
+          "l2-06-glyph-04",
+          "l2-06-glyph-05",
+          "l2-06-glyph-02",
+          "l2-06-glyph-07",
+          "l2-06-glyph-08"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 16,
+          "cluesPdfPage": 17,
+          "pdfMapRect": [
+            113.03,
+            192.19,
+            683.78,
+            572.44
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-ganges"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-06-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "settlement",
+        "migration",
+        "urban",
+        "rural",
+        "density",
+        "region"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "settlement",
+        "migration",
+        "urban",
+        "rural",
+        "density",
+        "region"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-07",
+        "asset": "./assets/import-staging/l2-clean-map-7.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "74ff294144250a26d92433b43ab5f56bc021379794be87559b100177a564bf86",
+        "anchorIds": [
+          "l2-07-glyph-01",
+          "l2-07-glyph-02",
+          "l2-07-glyph-03",
+          "l2-07-glyph-05",
+          "l2-07-glyph-04",
+          "l2-07-glyph-06",
+          "l2-07-glyph-07",
+          "l2-07-glyph-08",
+          "l2-07-glyph-09",
+          "l2-07-glyph-10"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 18,
+          "cluesPdfPage": 19,
+          "pdfMapRect": [
+            125.43,
+            195.48,
+            691.68,
+            572.73
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-danube"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-07-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "border",
+        "mapping",
+        "atlas",
+        "globe",
+        "compass",
+        "bearing"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "border",
+        "mapping",
+        "atlas",
+        "globe",
+        "compass",
+        "bearing"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-08",
+        "asset": "./assets/import-staging/l2-clean-map-8.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "71bd1196d64ccc5896d7cc03f0e5a01114fbc8e50701cadf438c3f50727c56e1",
+        "anchorIds": [
+          "l2-08-glyph-01",
+          "l2-08-glyph-02",
+          "l2-08-glyph-03",
+          "l2-08-glyph-04",
+          "l2-08-glyph-05",
+          "l2-08-glyph-06",
+          "l2-08-glyph-07"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 20,
+          "cluesPdfPage": 21,
+          "pdfMapRect": [
+            131.24,
+            198.01,
+            660.74,
+            550.51
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-volga"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-08-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "terrain",
+        "canyon",
+        "plateau",
+        "ridge",
+        "ridgeline",
+        "summit"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "terrain",
+        "canyon",
+        "plateau",
+        "ridge",
+        "ridgeline",
+        "summit"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-09",
+        "asset": "./assets/import-staging/l2-clean-map-8.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "71bd1196d64ccc5896d7cc03f0e5a01114fbc8e50701cadf438c3f50727c56e1",
+        "anchorIds": [
+          "l2-09-glyph-01",
+          "l2-09-glyph-02",
+          "l2-09-glyph-03",
+          "l2-09-glyph-04",
+          "l2-09-glyph-05",
+          "l2-09-glyph-06",
+          "l2-09-glyph-07",
+          "l2-09-glyph-10",
+          "l2-09-glyph-09",
+          "l2-09-glyph-08"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 22,
+          "cluesPdfPage": 23,
+          "pdfMapRect": [
+            163.59,
+            217.11,
+            664.59,
+            550.86
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-nile",
+          "place-amazon",
+          "place-mississippi",
+          "place-yangtze",
+          "place-ganges",
+          "place-danube",
+          "place-volga"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-09-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "temperate",
+        "polar",
+        "slope",
+        "salinity",
+        "seawater",
+        "current"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "temperate",
+        "polar",
+        "slope",
+        "salinity",
+        "seawater",
+        "current"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-10",
+        "asset": "./assets/import-staging/l2-clean-map-8.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "71bd1196d64ccc5896d7cc03f0e5a01114fbc8e50701cadf438c3f50727c56e1",
+        "anchorIds": [
+          "l2-10-glyph-01",
+          "l2-10-glyph-02",
+          "l2-10-glyph-03",
+          "l2-10-glyph-04",
+          "l2-10-glyph-05",
+          "l2-10-glyph-06",
+          "l2-10-glyph-07",
+          "l2-10-glyph-08",
+          "l2-10-glyph-09"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 24,
+          "cluesPdfPage": 25,
+          "pdfMapRect": [
+            138.22,
+            201.28,
+            677.47,
+            560.53
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-nile",
+          "place-amazon",
+          "place-mississippi",
+          "place-yangtze",
+          "place-ganges",
+          "place-danube",
+          "place-volga"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    },
+    {
+      "stepId": "l2-10-step",
+      "status": "editorial_pending",
+      "authoredFirst": true,
+      "target": 7,
+      "practiceCount": 6,
+      "candidateWordIds": [
+        "latitude",
+        "meridian",
+        "parallel",
+        "grid",
+        "position",
+        "reference"
+      ],
+      "wordProposalOrigin": "codex_global_lexicon_selection_not_authored",
+      "candidateL1RepeatedWordIds": [
+        "latitude",
+        "meridian",
+        "parallel",
+        "grid",
+        "position",
+        "reference"
+      ],
+      "crossCourseReuseStatus": "editorial_pending",
+      "candidatePracticeMap": {
+        "status": "editorial_pending",
+        "sourcePuzzleId": "l2-10",
+        "asset": "./assets/import-staging/l2-clean-map-8.webp",
+        "aspect": "1587 / 1057",
+        "mapSha256": "71bd1196d64ccc5896d7cc03f0e5a01114fbc8e50701cadf438c3f50727c56e1",
+        "anchorIds": [
+          "l2-10-glyph-01",
+          "l2-10-glyph-02",
+          "l2-10-glyph-03",
+          "l2-10-glyph-04",
+          "l2-10-glyph-05",
+          "l2-10-glyph-06",
+          "l2-10-glyph-07",
+          "l2-10-glyph-08",
+          "l2-10-glyph-09"
+        ],
+        "provenance": {
+          "source": "GeoWords Level 2 Rivers-2.pdf",
+          "mapPdfPage": 24,
+          "cluesPdfPage": 25,
+          "pdfMapRect": [
+            138.22,
+            201.28,
+            677.47,
+            560.53
+          ]
+        },
+        "candidateFocusPlaceIds": [
+          "place-nile",
+          "place-amazon",
+          "place-mississippi",
+          "place-yangtze",
+          "place-ganges",
+          "place-danube",
+          "place-volga"
+        ],
+        "focusStatus": "editorial_pending",
+        "capacityStatus": "word_length_within_source_anchor_count_only",
+        "geographicResolution": "not_verified"
+      },
+      "geometryStatus": "not_verified",
+      "teachingOrderStatus": "editorial_pending",
+      "generatedPuzzles": []
+    }
+  ]
+}

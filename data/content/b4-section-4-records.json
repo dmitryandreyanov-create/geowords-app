@@ -1,0 +1,97 @@
+{
+ "section": "mountains-and-plains-of-north-america",
+ "block": 4,
+ "use": "unit 3 records: record cards and «find it» tasks",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "denali-highest",
+   "order": 1,
+   "object": "na-denali",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Denali",
+    "ru": "Денали"
+   },
+   "fact": {
+    "en": "Denali is the highest peak of North America, 6,190 m.",
+    "ru": "Денали — высочайшая вершина Северной Америки, 6190 м."
+   },
+   "figure": {
+    "value": 6190,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "2f97f45700e32e38"
+   }
+  },
+  {
+   "id": "orizaba-highest-volcano",
+   "order": 2,
+   "object": "na-orizaba",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Pico de Orizaba",
+    "ru": "Орисаба"
+   },
+   "fact": {
+    "en": "Pico de Orizaba is the highest volcano of North America, 5,636 m.",
+    "ru": "Орисаба — самый высокий вулкан Северной Америки, 5636 м."
+   },
+   "figure": {
+    "value": 5636,
+    "unit": "m"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "04ccd3cf1e2303b4"
+   }
+  },
+  {
+   "id": "canadian-shield-oldest-rocks",
+   "order": 3,
+   "object": "na-laurentian-upland",
+   "kind": "record",
+   "unit": 3,
+   "name": {
+    "en": "Laurentian Upland",
+    "ru": "Лаврентийская возвышенность"
+   },
+   "fact": {
+    "en": "Some of the oldest rocks on Earth, about 4 billion years old, have been found on the Canadian Shield.",
+    "ru": "На Канадском щите найдены одни из самых древних горных пород Земли: их возраст около 4 млрд лет."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/1kjPTwWMLRzPgTifxWUBhu",
+    "note": "block 4 section 4, approved 13.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "2b5284d80eade2e8"
+   }
+  }
+ ]
+}

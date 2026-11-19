@@ -1,0 +1,620 @@
+{
+ "section": "lakes-of-asia",
+ "block": 3,
+ "status": "approved",
+ "source": "Svetlana's list in the project thread, 30.10.2026 (25 words; duplicates СОЛЁНОСТЬ, ТЕКТОНИКА, ПЛАНКТОН, СОЛОНЧАК replaced by ЭПИШУРА, НЕРПА, ТРАВЕРТИНЫ and Claude's ГОЛОМЯНКА; ДЕЛЬТОВИДНОСТЬ → ПАЛЕООЗЕРО)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "letters on the learned lakes first, then on the objects of section 1",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "Definitions RU + EN by Svetlana (30.10.2026, 17:34). Claude's edits for the same-root rule, approved by Svetlana 2026-10-30 17:35 («Утверждаю»): SEAL → NERPA (the answer was in the definition, 4 letters), GOLYOMYANKA → GOLOMYANKA; ИСПАРЕНИЕ/EVAPORATION, ЗАСОЛЕНИЕ/SALINIZATION, ПАЛЕООЗЕРО/PALEOLAKE, ВОДОСБОР, МИНЕРАЛИЗАЦИЯ/MINERALIZATION reworded. Words of a unit belong to its lakes (Svetlana, 29.10.2026)."
+ },
+ "units": [
+  {
+   "id": "unit-1-north-east",
+   "title": {
+    "ru": "Байкал и озёра Севера и Востока",
+    "en": "Baikal and the lakes of the North and East"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "СЕЙСМИЧНОСТЬ",
+      "role": "final",
+      "definition": "Частота и сила землетрясений в определённом районе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4f2d5820433ab3b6"
+      }
+     },
+     {
+      "answer": "ЭПИШУРА",
+      "role": "review",
+      "definition": "Крошечный рачок, обитающий в Байкале и питающийся микроскопическими водорослями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "de756794dfa83524"
+      }
+     },
+     {
+      "answer": "НЕРПА",
+      "role": "review",
+      "definition": "Пресноводный тюлень, обитающий в озере Байкал.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "014fc19b06b3c0cd"
+      }
+     },
+     {
+      "answer": "ГОЛОМЯНКА",
+      "role": "review",
+      "definition": "Полупрозрачная живородящая рыба, обитающая только в озере Байкал.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "45bef4ef4e8ff360"
+      }
+     },
+     {
+      "answer": "ЭНДЕМИК",
+      "role": "review",
+      "definition": "Вид растения или животного, который в природе встречается только в определённом районе.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "c605206e5a27c24c"
+      }
+     },
+     {
+      "answer": "РЕЛИКТ",
+      "role": "review",
+      "definition": "Вид организма, сохранившийся с древних геологических эпох.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e36d0d1a7bf7d9c3"
+      }
+     },
+     {
+      "answer": "КОТЛОВИНА",
+      "role": "review",
+      "definition": "Углубление земной поверхности, в котором может образоваться озеро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "39950d20d7cd48a5"
+      }
+     },
+     {
+      "answer": "ТЕРМОКЛИН",
+      "role": "review",
+      "definition": "Слой воды в озере, где температура быстро меняется с глубиной.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4560e5f65673b18c"
+      }
+     },
+     {
+      "answer": "ЛИМНОЛОГИЯ",
+      "role": "review",
+      "definition": "Наука, изучающая озёра и другие внутренние водоёмы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "054dba08fdfdfd7a"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "SEISMICITY",
+      "role": "final",
+      "definition": "How often earthquakes occur in an area and how strong they are.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "c45fe5b7ea3ec5f2"
+      }
+     },
+     {
+      "answer": "EPISCHURA",
+      "role": "review",
+      "definition": "A tiny crustacean found in Lake Baikal that feeds on microscopic algae.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "40a3b7c6211afb8f"
+      }
+     },
+     {
+      "answer": "NERPA",
+      "role": "review",
+      "definition": "A freshwater seal that lives in Lake Baikal.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "130ba177eb5b9c84"
+      }
+     },
+     {
+      "answer": "GOLOMYANKA",
+      "role": "review",
+      "definition": "A nearly transparent fish found only in Lake Baikal that gives birth to live young.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "1110d184c63fb5bc"
+      }
+     },
+     {
+      "answer": "ENDEMIC",
+      "role": "review",
+      "definition": "A plant or animal species that naturally lives only in a particular area.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "522a7c80594bab85"
+      }
+     },
+     {
+      "answer": "RELICT",
+      "role": "review",
+      "definition": "A species that has survived from an earlier period of Earth’s history.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "07bc4f1d74beb852"
+      }
+     },
+     {
+      "answer": "BASIN",
+      "role": "review",
+      "definition": "A low area or depression in the Earth’s surface where a lake can form.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e8550056baa87588"
+      }
+     },
+     {
+      "answer": "THERMOCLINE",
+      "role": "review",
+      "definition": "A layer of lake water where temperature changes rapidly with depth.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "bbd64e3b2fb5aed0"
+      }
+     },
+     {
+      "answer": "LIMNOLOGY",
+      "role": "review",
+      "definition": "The scientific study of lakes and other inland waters.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "18cac006826c3f3f"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-central",
+   "title": {
+    "ru": "Озёра Средней Азии и Каспий",
+    "en": "The lakes of Central Asia and the Caspian"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "БЕССТОЧНОСТЬ",
+      "role": "final",
+      "definition": "Особенность озера или водосборного бассейна, из которого вода не стекает в океан по рекам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "d2414f3ebe50c745"
+      }
+     },
+     {
+      "answer": "ОБМЕЛЕНИЕ",
+      "role": "review",
+      "definition": "Уменьшение глубины озера из-за снижения уровня воды или накопления донных отложений.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "796f06383b0bbb4c"
+      }
+     },
+     {
+      "answer": "ЗАСОЛЕНИЕ",
+      "role": "review",
+      "definition": "Накопление в воде или почве растворённых минеральных веществ, от которого вода становится непригодной для питья.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "da6e15e707495c8d"
+      }
+     },
+     {
+      "answer": "ИСПАРЕНИЕ",
+      "role": "review",
+      "definition": "Процесс, при котором вода превращается в невидимый газ и уходит в воздух.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "0d59492568311741"
+      }
+     },
+     {
+      "answer": "ПАЛЕООЗЕРО",
+      "role": "review",
+      "definition": "Водоём, существовавший в далёком прошлом и позднее исчезнувший или сильно изменившийся.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "f6958df5a9ef7821"
+      }
+     },
+     {
+      "answer": "ВОДОСБОР",
+      "role": "review",
+      "definition": "Территория, с которой дождевые и талые потоки попадают в определённую реку или озеро.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "129448074a0a400a"
+      }
+     },
+     {
+      "answer": "ГИДРОЛОГИЯ",
+      "role": "review",
+      "definition": "Наука, изучающая природные воды Земли, их движение и свойства.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "d1048c5be55972cc"
+      }
+     },
+     {
+      "answer": "САПРОПЕЛЬ",
+      "role": "review",
+      "definition": "Богатые органическим веществом донные отложения, образующиеся преимущественно в пресноводных водоёмах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "8fd07000c02cc47c"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ENDORHEISM",
+      "role": "final",
+      "definition": "A condition in which water from a lake or drainage basin does not flow into the ocean through rivers.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9560a160ae8efe4e"
+      }
+     },
+     {
+      "answer": "SHALLOWING",
+      "role": "review",
+      "definition": "A decrease in a lake’s depth caused by falling water levels or the buildup of sediment.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "007deb0acc63aef3"
+      }
+     },
+     {
+      "answer": "SALINIZATION",
+      "role": "review",
+      "definition": "The build-up of dissolved minerals in water or soil, making it unfit for drinking or farming.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "33a5f7c21d91c296"
+      }
+     },
+     {
+      "answer": "EVAPORATION",
+      "role": "review",
+      "definition": "The process by which liquid water turns into a gas and rises into the air.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e41108a1ad1fc639"
+      }
+     },
+     {
+      "answer": "PALEOLAKE",
+      "role": "review",
+      "definition": "A body of water that existed long ago and later disappeared or changed greatly.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "6312985cce38333e"
+      }
+     },
+     {
+      "answer": "CATCHMENT",
+      "role": "review",
+      "definition": "An area of land where water drains into a particular river or lake.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "b4902c6840aaf3f7"
+      }
+     },
+     {
+      "answer": "HYDROLOGY",
+      "role": "review",
+      "definition": "The scientific study of Earth’s water, including its movement and properties.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "2eebb518c2201a30"
+      }
+     },
+     {
+      "answer": "SAPROPEL",
+      "role": "review",
+      "definition": "Organic-rich sediment that forms at the bottom of lakes, especially freshwater lakes.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4f66f381b4d5364d"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-west-south-east",
+   "title": {
+    "ru": "Озёра Западной и Юго-Восточной Азии",
+    "en": "The lakes of West and South-East Asia"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МИНЕРАЛИЗАЦИЯ",
+      "role": "final",
+      "definition": "Количество солей и других веществ, растворённых в воде.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "ffe3cef4b759ccb4"
+      }
+     },
+     {
+      "answer": "АРТЕМИЯ",
+      "role": "review",
+      "definition": "Мелкий рачок, способный жить в очень солёной воде, например в озере Урмия.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "3decebe11a9a2a51"
+      }
+     },
+     {
+      "answer": "КАЛЬДЕРА",
+      "role": "review",
+      "definition": "Большая вулканическая впадина, образующаяся после обрушения поверхности над опустевшим магматическим очагом.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "202077ddf34ebe2e"
+      }
+     },
+     {
+      "answer": "ТРАВЕРТИНЫ",
+      "role": "review",
+      "definition": "Пористые известковые отложения, образующиеся при выпадении карбоната кальция из воды, часто возле минеральных источников.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "d578dd7c1fffa552"
+      }
+     },
+     {
+      "answer": "СЕДИМЕНТАЦИЯ",
+      "role": "review",
+      "definition": "Процесс оседания частиц песка, ила и других веществ на дно водоёма.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "e01360e9441979ab"
+      }
+     },
+     {
+      "answer": "БЕНТОС",
+      "role": "review",
+      "definition": "Совокупность организмов, живущих на дне водоёма или внутри донных отложений.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "7e69c871fa7fbdbe"
+      }
+     },
+     {
+      "answer": "ЭВТРОФИКАЦИЯ",
+      "role": "review",
+      "definition": "Обогащение водоёма питательными веществами, которое может вызывать чрезмерный рост водорослей и недостаток кислорода.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "68db9ef76b26f5e0"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MINERALIZATION",
+      "role": "final",
+      "definition": "The amount of salts and other substances dissolved in water.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "da03dba264ed391d"
+      }
+     },
+     {
+      "answer": "ARTEMIA",
+      "role": "review",
+      "definition": "A small crustacean that can live in very salty water, such as Lake Urmia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "2b45f7bc3878e936"
+      }
+     },
+     {
+      "answer": "CALDERA",
+      "role": "review",
+      "definition": "A large volcanic depression formed when the ground collapses above a partly emptied magma chamber.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "4e703094a6cb7835"
+      }
+     },
+     {
+      "answer": "TRAVERTINES",
+      "role": "review",
+      "definition": "Porous limestone deposits formed when calcium carbonate separates from water, often near mineral springs.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "29fde4d54384ba14"
+      }
+     },
+     {
+      "answer": "SEDIMENTATION",
+      "role": "review",
+      "definition": "The process in which particles such as sand and silt settle to the bottom of a body of water.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "529fc938145b5555"
+      }
+     },
+     {
+      "answer": "BENTHOS",
+      "role": "review",
+      "definition": "Organisms that live on or in the bottom sediments of a body of water.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "c7d6cefbc43e6f9d"
+      }
+     },
+     {
+      "answer": "EUTROPHICATION",
+      "role": "review",
+      "definition": "The buildup of nutrients in a body of water, which can cause excessive algae growth and low oxygen levels.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "cd27cee1edbd6c07"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "СТРАТИФИКАЦИЯ",
+      "role": "section-final",
+      "definition": "Разделение воды озера на слои, различающиеся температурой, плотностью или химическими свойствами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "9142a8fc57e12d18"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "STRATIFICATION",
+      "role": "section-final",
+      "definition": "The formation of layers in lake water that differ in temperature, density, or chemical properties.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-30",
+       "contentSha256": "2fa5edee656342e9"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-30"
+}

@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "origin": "user_decisions_in_chat",
+  "date": "2026-10-13",
+  "scope": "l1-01-place-memberships-in-confirmed-scope",
+  "coveredPlaceIds": [
+    "place-north-america",
+    "place-south-america",
+    "place-antarctica",
+    "place-australia",
+    "place-africa",
+    "place-asia",
+    "place-eurasia"
+  ],
+  "warning": "Only the six stated continent memberships within this seven-ID scope are confirmed. Other fields, other places, three between anchors, facts, definitions and release remain unapproved.",
+  "claims": [
+    {
+      "anchorId": "l1-01-glyph-05",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 86.796,
+        "y": 72.117,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-australia"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    },
+    {
+      "anchorId": "l1-01-glyph-07",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 50.97,
+        "y": 58.261,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-africa"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    },
+    {
+      "anchorId": "l1-01-glyph-09",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 68.66,
+        "y": 33.481,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-asia",
+        "place-eurasia"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    },
+    {
+      "anchorId": "l1-01-glyph-03",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 24.89,
+        "y": 67.862,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-south-america"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    },
+    {
+      "anchorId": "l1-01-glyph-01",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 17.343,
+        "y": 35.062,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-north-america"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    },
+    {
+      "anchorId": "l1-01-glyph-04",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 58.48,
+        "y": 95.316,
+        "pointsTo": null
+      },
+      "status": "place_membership_confirmed_in_scope",
+      "physicalPlaces": [
+        "place-antarctica"
+      ],
+      "coveredPlaceIds": [
+        "place-north-america",
+        "place-south-america",
+        "place-antarctica",
+        "place-australia",
+        "place-africa",
+        "place-asia",
+        "place-eurasia"
+      ],
+      "complete": false,
+      "otherFields": null,
+      "reviewedBy": "user_in_chat"
+    }
+  ]
+}
+

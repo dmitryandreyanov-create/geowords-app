@@ -1,0 +1,620 @@
+{
+ "section": "deserts-and-canyons-of-north-america",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (13.11.2026) with agreed replacements: Бьютт → Останец/Erosional remnant, Бэдленды → Тафони (section 4), Питхаус → Полуземлянка/Pithouse, Гранарий → Зернохранилище/Granary, Хоган → Хоганы/Hogans, Травертин → Эрозия → Куэста/Cuesta (regional term, Asia section 3), Петроглиф → Навахо (Asia section 5); Адобе/Adobe kept as an agreed 5-letter exception",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent",
+  "length": "every word at least 6 letters (Svetlana, 13.11.2026), except АДОБЕ/ADOBE (agreed); a space or hyphen in a two-word answer is shown as a gap, never as a letter on the map",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24); Hohokam, Mogollon and Sinagua are archaeological cultures, not peoples",
+  "draft": "Definitions by Claude from Svetlana's terms (АДОБЕ, ОСТАНЕЦ, ХОГАНЫ, СИНАГУА, КОКОПЕЛЛИ by Svetlana); all approved by Svetlana 2026-11-13 («Утверждаю»)."
+ },
+ "units": [
+  {
+   "id": "unit-1-deserts",
+   "title": {
+    "ru": "Пустыни",
+    "en": "Deserts"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ИНЗЕЛЬБЕРГ",
+      "role": "final",
+      "definition": "Одиночная крутая скалистая гора, которая поднимается над плоской пустынной равниной, как остров над морем.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "cfd61f8409aa1615"
+      }
+     },
+     {
+      "answer": "БАХАДА",
+      "role": "review",
+      "definition": "Широкий пологий шлейф из песка и гальки у подножия пустынных гор: сюда сливаются наносы многих временных потоков.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "fafd6ca7fd30a2a6"
+      }
+     },
+     {
+      "answer": "ПЕДИМЕНТ",
+      "role": "review",
+      "definition": "Пологая каменная равнина у подножия пустынных гор, которую выровняли выветривание и текущая вода; сверху её покрывает тонкий слой обломков.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "226f03837debfcef"
+      }
+     },
+     {
+      "answer": "КАЛИЧЕ",
+      "role": "review",
+      "definition": "Твёрдая известковая корка, которая образуется в почве засушливых районов, когда вода испаряется; её использовали и как строительный материал.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "92fc572147ac3f55"
+      }
+     },
+     {
+      "answer": "АРРОЙО",
+      "role": "review",
+      "definition": "Сухое русло с крутыми берегами на юго-западе США и в Мексике; вода бежит по нему только после ливней.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3dd5d03b559e2100"
+      }
+     },
+     {
+      "answer": "ХОХОКАМ",
+      "role": "review",
+      "definition": "Археологическая культура пустыни Сонора (примерно 300–1450 гг.): её земледельцы прокладывали длинные оросительные каналы в долинах рек Солт и Хила.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ccf72356dd6bfb28"
+      }
+     },
+     {
+      "answer": "КАСА-ГРАНДЕ",
+      "role": "review",
+      "definition": "Древний памятник в Аризоне, чьё испанское название значит «Большой дом»: многоэтажное здание из уплотнённой земли, построенное около 1350 года; в 1892 году оно стало первым археологическим заповедником США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "cdd0f2f20e9ea10b"
+      }
+     },
+     {
+      "answer": "АДОБЕ",
+      "role": "review",
+      "definition": "Высушенный на солнце кирпич из глины с добавлением песка и растительных волокон. Из таких кирпичей строили дома в засушливых районах Северной Америки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "99eef93c7708bb6c"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "INSELBERG",
+      "role": "final",
+      "definition": "A lone steep rocky hill rising from a flat desert plain like an island from the sea.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "0af691a4ab230619"
+      }
+     },
+     {
+      "answer": "BAJADA",
+      "role": "review",
+      "definition": "A broad gentle apron of sand and gravel at the foot of desert mountains, where the deposits of many flash-flood streams merge.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "8a60f78b60452072"
+      }
+     },
+     {
+      "answer": "PEDIMENT",
+      "role": "review",
+      "definition": "A gently sloping rock surface at the foot of desert mountains, planed by weathering and running water and thinly covered with debris.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a994cb4c98b01944"
+      }
+     },
+     {
+      "answer": "CALICHE",
+      "role": "review",
+      "definition": "A hard crust of lime that forms in the soil of dry lands as water evaporates; it was also used for building.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "97406c85bc466fb6"
+      }
+     },
+     {
+      "answer": "ARROYO",
+      "role": "review",
+      "definition": "A dry, steep-sided stream bed of the US Southwest and Mexico that carries water only after heavy rain.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3d76db9009ea8ad1"
+      }
+     },
+     {
+      "answer": "HOHOKAM",
+      "role": "review",
+      "definition": "An archaeological culture of the Sonoran Desert (about AD 300–1450) whose farmers dug long irrigation canals in the Salt and Gila river valleys.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "95465000902c37c5"
+      }
+     },
+     {
+      "answer": "CASA GRANDE",
+      "role": "review",
+      "definition": "An ancient site in Arizona whose Spanish name means “big house”: a multi-storey building of packed earth raised around 1350; in 1892 it became the first archaeological reserve in the US.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "368476e34210b9c0"
+      }
+     },
+     {
+      "answer": "ADOBE",
+      "role": "review",
+      "definition": "A sun-dried brick made from earth, often mixed with sand and plant fibres, traditionally used to build houses in dry regions of North America.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "991366ca364e7e66"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-work-of-water",
+   "title": {
+    "ru": "Каньоны: работа воды",
+    "en": "Canyons: the work of water"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПЕСЧАНИК",
+      "role": "final",
+      "definition": "Горная порода из скреплённых мелких зёрнышек кварца; из красной и оранжевой породы этого типа сложены стены многих каньонов плато Колорадо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "37a8c8e271097b4d"
+      }
+     },
+     {
+      "answer": "КУЭСТА",
+      "role": "review",
+      "definition": "Несимметричная гряда: один её склон пологий и идёт по наклону пластов породы, другой обрывается крутым уступом; такие гряды и уступы типичны для плато Колорадо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d5305dddb6845f79"
+      }
+     },
+     {
+      "answer": "ТАФОНИ",
+      "role": "review",
+      "definition": "Небольшие ячеистые углубления и ниши в скалах, которые выедает выветривание; их много в скалах юго-запада США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ceee135d275d627b"
+      }
+     },
+     {
+      "answer": "ОСТАНЕЦ",
+      "role": "review",
+      "definition": "Изолированная возвышенность или скала, сохранившаяся после разрушения окружающих горных пород. Такие формы характерны для пустынных ландшафтов Юго-Запада США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c648920bd360daea"
+      }
+     },
+     {
+      "answer": "МОНОЛИТ",
+      "role": "review",
+      "definition": "Огромная цельная скала, одиноко стоящая над равниной, например Шипрок в Нью-Мексико — остаток древнего вулкана.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b37d3a14479878a2"
+      }
+     },
+     {
+      "answer": "МОГОЛЬОН",
+      "role": "review",
+      "definition": "Археологическая культура гор юга Аризоны и Нью-Мексико (примерно 200–1450 гг.), известная расписной чёрно-белой керамикой Мимбрес.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "088cf64d5d33410e"
+      }
+     },
+     {
+      "answer": "СИНАГУА",
+      "role": "review",
+      "definition": "Название археологической культуры центральной Аризоны, существовавшей примерно с VI по XV век. Её представители занимались земледелием и строили поселения, в том числе в скальных нишах. Название в 1939 году дал археолог Гарольд Колтон по старому испанскому имени соседних гор, означавшему «горы без воды».",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "2a9c772463970336"
+      }
+     },
+     {
+      "answer": "ПОЛУЗЕМЛЯНКА",
+      "role": "review",
+      "definition": "Жилище, наполовину углублённое в грунт, с крышей из жердей и глины; в таких домах жили древние земледельцы юго-запада до появления многоэтажных посёлков.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "13b1f49910049910"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "SANDSTONE",
+      "role": "final",
+      "definition": "Rock made of grains of sand bound together; the red and orange walls of many Colorado Plateau canyons are built of it.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "caacd997142d20bc"
+      }
+     },
+     {
+      "answer": "CUESTA",
+      "role": "review",
+      "definition": "An asymmetric ridge with one gentle slope that follows tilted rock layers and one steep cliff; such ridges and cliffs are typical of the Colorado Plateau.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ead5f4b647ea6e3a"
+      }
+     },
+     {
+      "answer": "TAFONI",
+      "role": "review",
+      "definition": "Small honeycomb-like hollows and niches that weathering carves in rock; they are common in the cliffs of the US Southwest.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ce46a17efd50d14b"
+      }
+     },
+     {
+      "answer": "EROSIONAL REMNANT",
+      "role": "review",
+      "definition": "An isolated hill or rock formation left standing after the surrounding rock has been worn away by water and wind.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "03ef5ed92f722b37"
+      }
+     },
+     {
+      "answer": "MONOLITH",
+      "role": "review",
+      "definition": "A huge single block of rock standing alone above a plain, such as Shiprock in New Mexico, the remains of an ancient volcano.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "531ab0b83dd8bfd3"
+      }
+     },
+     {
+      "answer": "MOGOLLON",
+      "role": "review",
+      "definition": "An archaeological culture of the mountains of southern Arizona and New Mexico (about AD 200–1450), known for the painted black-on-white Mimbres pottery.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "47d01a65e49c75af"
+      }
+     },
+     {
+      "answer": "SINAGUA",
+      "role": "review",
+      "definition": "The name of an archaeological culture of central Arizona, dating from approximately the 6th to the 15th century. Its communities practised farming and built settlements, including cliff dwellings. The archaeologist Harold Colton gave the name in 1939, after an old Spanish name of nearby mountains meaning “mountains without water”.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9a6cb8afc564ece3"
+      }
+     },
+     {
+      "answer": "PITHOUSE",
+      "role": "review",
+      "definition": "A dwelling dug halfway into the ground, with a roof of poles and mud; the early farmers of the Southwest lived in such dwellings before they built many-storeyed villages.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "318b6d15710f3a50"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-canyons-and-people",
+   "title": {
+    "ru": "Каньоны и люди",
+    "en": "Canyons and people"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПУЭБЛО",
+      "role": "final",
+      "definition": "Посёлок из многоэтажных домов из камня или глиняного кирпича, а также народы, которые их строят (хопи, зуни и другие); в посёлке Таос люди живут уже около тысячи лет.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "eccc9320b0cc6243"
+      }
+     },
+     {
+      "answer": "ХОГАНЫ",
+      "role": "review",
+      "definition": "Традиционные жилища народа навахо, которые строят из дерева, земли и других местных материалов. Они могут иметь разную форму; вход традиционно обращён на восток.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e6e377f28461ccd4"
+      }
+     },
+     {
+      "answer": "НАВАХО",
+      "role": "review",
+      "definition": "Один из самых многочисленных коренных народов США, его земли в Аризоне, Нью-Мексико и Юте; во Второй мировой войне язык этого народа служил армии США шифром, который противник так и не разгадал.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c7aad7c4798f8dc7"
+      }
+     },
+     {
+      "answer": "ЗЕРНОХРАНИЛИЩЕ",
+      "role": "review",
+      "definition": "Маленькая кладовая для кукурузы, которую древние земледельцы каньонов строили в труднодоступных нишах скал, чтобы уберечь урожай от сырости и грызунов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "017d366ca27377f4"
+      }
+     },
+     {
+      "answer": "ПИКТОГРАММА",
+      "role": "review",
+      "definition": "Рисунок, нанесённый на скалу краской, — в отличие от рисунка, выбитого в камне; такие рисунки сохранились в каньонах юго-запада США.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "7d76b1ffbe82d607"
+      }
+     },
+     {
+      "answer": "РАРАМУРИ",
+      "role": "review",
+      "definition": "Коренной народ Медного каньона на севере Мексики, известный также как тараумара; его люди славятся бегом на очень длинные дистанции.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e2c62aa8780cad27"
+      }
+     },
+     {
+      "answer": "МЕТАТЕ",
+      "role": "review",
+      "definition": "Плоский или вогнутый камень, на котором ручным камнем растирали зёрна кукурузы в муку.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "cfbeba75bda267ce"
+      }
+     },
+     {
+      "answer": "РАМАДА",
+      "role": "review",
+      "definition": "Навес на столбах, покрытый ветками, который даёт тень в жару; под ним летом готовят, работают и отдыхают.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d01abacc25321946"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "PUEBLO",
+      "role": "final",
+      "definition": "A village of many-storeyed houses of stone or mud brick, and also the peoples who build them (the Hopi, the Zuni and others); people have lived in Taos for about a thousand years.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a7876abeb4bd6f62"
+      }
+     },
+     {
+      "answer": "HOGANS",
+      "role": "review",
+      "definition": "Traditional Navajo dwellings built from wood, earth and other local materials. They can have different shapes, and their entrances traditionally face east.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "090bdac48f1ce35d"
+      }
+     },
+     {
+      "answer": "NAVAJO",
+      "role": "review",
+      "definition": "One of the largest Indigenous peoples of the US, with lands in Arizona, New Mexico and Utah; in the Second World War their language served the US forces as a code the enemy never broke.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a2300ec473d9c03f"
+      }
+     },
+     {
+      "answer": "GRANARY",
+      "role": "review",
+      "definition": "A small storeroom for corn that the ancient farmers of the canyons built in hard-to-reach cliff niches, to keep the harvest safe from damp and rodents.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "876e8263f3896923"
+      }
+     },
+     {
+      "answer": "PICTOGRAPH",
+      "role": "review",
+      "definition": "An image made on rock with colour, unlike one pecked into the stone; such images survive in the canyons of the US Southwest.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9ada860be124cd4e"
+      }
+     },
+     {
+      "answer": "RARAMURI",
+      "role": "review",
+      "definition": "An Indigenous people of Copper Canyon in northern Mexico, also called the Tarahumara; they are famous for running very long distances.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5d1aba7df826fd18"
+      }
+     },
+     {
+      "answer": "METATE",
+      "role": "review",
+      "definition": "A flat or hollowed stone on which corn was ground into flour with a hand stone.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "7e3ee062f39f3aec"
+      }
+     },
+     {
+      "answer": "RAMADA",
+      "role": "review",
+      "definition": "A shade shelter of posts roofed with branches; in summer people cook, work and rest beneath it.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "8dcdbcd11f647abe"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КОКОПЕЛЛИ",
+      "role": "section-final",
+      "definition": "Горбатая фигура, часто изображаемая с флейтой, известная по наскальному искусству Юго-Запада Северной Америки. Её значение различается в традициях коренных народов региона.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d663ae18215297a6"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "KOKOPELLI",
+      "role": "section-final",
+      "definition": "A humpbacked figure often depicted playing a flute in the rock art of the North American Southwest. Its meaning varies among Indigenous traditions.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9a2b002fccb53f75"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-13"
+}

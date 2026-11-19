@@ -1,0 +1,342 @@
+{
+ "section": "countries-of-north-and-central-america",
+ "block": 4,
+ "use": "introduction cards, one fact per country and its capital; ids match data/maps/namerica-countries.json",
+ "decisions": [
+  "Svetlana 13.11.2026 22:43 («Согласна») and 23:03 («Утверждаю», doc rev 14): 10 countries with capitals in three units — Canada and the United States / Mexico, Guatemala and Belize / from Honduras to Panama. Greenland is not part of this section (a geographic object of the block only) and stays on the map without a capital dot.",
+  "The capitals of Guatemala and Panama share the country's name: cards and tasks say «город Гватемала» / «город Панама» (Guatemala City, Panama City), and there is no «capital of which country?» or «what is this capital?» question for them (capitalSameName true).",
+  "Central America is small on the countries map, so it has a large map of its own (data/maps/namerica-camerica.json), as the Levant in Asia section 8.",
+  "Belize–Guatemala: the border is drawn dashed (Natural Earth marks it as indefinite and disputed); the Belize card has a neutral note. Hawaii is grey (Oceania), as in section 1.",
+  "disputed true marks the cards with a «Есть нюанс» note. The note opens only on a tap and is never asked in tasks."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Канада и США",
+    "en": "Canada and the United States"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Мексика, Гватемала и Белиз",
+    "en": "Mexico, Guatemala and Belize"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "От Гондураса до Панамы",
+    "en": "From Honduras to Panama"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "cty-canada",
+   "order": 1,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "Canada",
+    "ru": "Канада"
+   },
+   "capital": {
+    "en": "Ottawa",
+    "ru": "Оттава"
+   },
+   "fact": {
+    "ru": "Вторая по площади страна мира и самая большая в Северной Америке. У Канады два официальных языка — английский и французский. В 1857 году королева Виктория выбрала Оттаву столицей провинции Канада. После образования Канадской конфедерации в 1867 году город стал столицей нового государства.",
+    "en": "The second-largest country in the world and the largest in North America. Canada has two official languages, English and French. In 1857, Queen Victoria chose Ottawa as the capital of the Province of Canada. When the Canadian Confederation was formed in 1867, Ottawa became the capital of the new country."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "f0eb7f78b2d442a9"
+   }
+  },
+  {
+   "id": "cty-united-states",
+   "order": 2,
+   "kind": "country",
+   "unit": 1,
+   "name": {
+    "en": "United States",
+    "ru": "США"
+   },
+   "capital": {
+    "en": "Washington",
+    "ru": "Вашингтон"
+   },
+   "fact": {
+    "ru": "Соединённые Штаты Америки состоят из 50 штатов. Столица Вашингтон не входит ни в один штат: это особый федеральный округ Колумбия. Город назван в честь первого президента Джорджа Вашингтона и стал столицей в 1800 году.",
+    "en": "The United States of America is made up of 50 states. The capital, Washington, belongs to none of them: it is a special federal district, the District of Columbia. The city is named after the first president, George Washington, and became the capital in 1800."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Гавайи — штат США, но на карте Северной Америки они серые (Океания), как в разделе 1. США и Китай в разных источниках делят 3-е и 4-е место по площади, поэтому место США не называем.",
+    "en": "Hawaii is a US state, but on the map of North America it is grey (Oceania), as in section 1. Sources differ on whether the United States or China is third or fourth by area, so we do not give the US a rank."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "c0f78472fd9d2831"
+   }
+  },
+  {
+   "id": "cty-mexico",
+   "order": 3,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Mexico",
+    "ru": "Мексика"
+   },
+   "capital": {
+    "en": "Mexico City",
+    "ru": "Мехико"
+   },
+   "fact": {
+    "ru": "В Мексике живёт больше всего в мире людей, для которых испанский — родной язык. Мехико построен на месте столицы ацтеков Теночтитлана, основанной на острове озера Тескоко. Значительная часть озера была осушена. Сегодня некоторые районы города постепенно оседают из-за уплотнения грунтов и интенсивной откачки подземных вод.",
+    "en": "Mexico has more native Spanish speakers than any other country. Mexico City stands on the site of Tenochtitlan, the Aztec capital founded on an island in Lake Texcoco. Much of the lake was drained. Today, parts of the city are sinking because of soil compaction and extensive groundwater extraction."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "b27b6fb28e6e9f08"
+   }
+  },
+  {
+   "id": "cty-guatemala",
+   "order": 4,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Guatemala",
+    "ru": "Гватемала"
+   },
+   "capital": {
+    "en": "Guatemala City",
+    "ru": "город Гватемала"
+   },
+   "fact": {
+    "ru": "В северных лесах Гватемалы стоит Тикаль — один из крупнейших городов древних майя. Вулкан Тахумулько (4220 м) — высочайшая вершина Центральной Америки. После разрушительных землетрясений 1773 года власти решили перенести столицу из сильно пострадавшей Антигуа. Новая столица была основана на нынешнем месте в 1776 году.",
+    "en": "Tikal, one of the largest cities of the ancient Maya, lies in the northern forests of Guatemala. The Tajumulco volcano (4,220 m) is the highest peak of Central America. After devastating earthquakes in 1773, the authorities decided to move the capital from the badly damaged city of Antigua. The new capital was established at its present location in 1776."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "capitalSameName": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "66237fa53006c328"
+   }
+  },
+  {
+   "id": "cty-belize",
+   "order": 5,
+   "kind": "country",
+   "unit": 2,
+   "name": {
+    "en": "Belize",
+    "ru": "Белиз"
+   },
+   "capital": {
+    "en": "Belmopan",
+    "ru": "Бельмопан"
+   },
+   "fact": {
+    "ru": "Единственная страна Центральной Америки, где официальный язык — английский: до 1981 года это была британская колония Британский Гондурас. После того как ураган Хэтти в 1961 году сильно разрушил прибрежный Белиз-Сити, власти решили построить новую столицу дальше от побережья. Так появился Бельмопан, ставший столицей в 1970 году.",
+    "en": "The only country of Central America where the official language is English: until 1981 it was the British colony of British Honduras. After Hurricane Hattie severely damaged coastal Belize City in 1961, the government decided to build a new capital farther inland. Belmopan became the capital in 1970."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Гватемала претендует на часть территории Белиза; спор рассматривает Международный суд ООН. На карте — граница по Natural Earth (пунктиром), спор не решаем.",
+    "en": "Guatemala claims part of the territory of Belize; the dispute is before the International Court of Justice. The map shows the Natural Earth border (dashed); we do not settle the dispute."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "6e0ccd64f28cfb5f"
+   }
+  },
+  {
+   "id": "cty-honduras",
+   "order": 6,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Honduras",
+    "ru": "Гондурас"
+   },
+   "capital": {
+    "en": "Tegucigalpa",
+    "ru": "Тегусигальпа"
+   },
+   "fact": {
+    "ru": "На западе Гондураса лежит Копан, город майя с самой длинной известной надписью майя — Иероглифической лестницей. Тегусигальпа — столица с 1880 года; вместе с соседним городом Комаягуэла она образует столичный Центральный округ.",
+    "en": "Copan in western Honduras holds the longest known Maya inscription, the Hieroglyphic Stairway. Tegucigalpa has been the capital since 1880; together with the neighbouring town of Comayagüela it forms the capital Central District."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "e1db838202aaf4df"
+   }
+  },
+  {
+   "id": "cty-el-salvador",
+   "order": 7,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "El Salvador",
+    "ru": "Сальвадор"
+   },
+   "capital": {
+    "en": "San Salvador",
+    "ru": "Сан-Сальвадор"
+   },
+   "fact": {
+    "ru": "Самая маленькая страна Центральной Америки и единственная без выхода к Карибскому морю. Её называют «страной вулканов»: столица Сан-Сальвадор стоит у подножия вулкана Сан-Сальвадор и не раз страдала от землетрясений.",
+    "en": "The smallest country of Central America and the only one without a Caribbean coast. It is called the “land of volcanoes”: the capital, San Salvador, lies at the foot of the San Salvador volcano and has often been hit by earthquakes."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "550b114f68681395"
+   }
+  },
+  {
+   "id": "cty-nicaragua",
+   "order": 8,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Nicaragua",
+    "ru": "Никарагуа"
+   },
+   "capital": {
+    "en": "Managua",
+    "ru": "Манагуа"
+   },
+   "fact": {
+    "ru": "Самая большая страна Центральной Америки. Манагуа стала столицей в 1852 году как компромисс между двумя соперниками — Леоном и Гранадой. Город стоит на берегу озера Манагуа.",
+    "en": "The largest country of Central America. Managua became the capital in 1852 as a compromise between two rival cities, León and Granada. The city lies on the shore of Lake Managua."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "29f66b151dbfa0f2"
+   }
+  },
+  {
+   "id": "cty-costa-rica",
+   "order": 9,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Costa Rica",
+    "ru": "Коста-Рика"
+   },
+   "capital": {
+    "en": "San José",
+    "ru": "Сан-Хосе"
+   },
+   "fact": {
+    "ru": "В 1948 году Коста-Рика приняла решение об упразднении постоянной армии. В 1949 году это решение закрепили в конституции. Около четверти её территории — национальные парки и заповедники. Сан-Хосе стоит в горной долине и в 1884 году одним из первых городов мира получил электрическое уличное освещение.",
+    "en": "Costa Rica decided to abolish its standing army in 1948. This decision was formally established in the country’s 1949 Constitution. About a quarter of its land is national parks and reserves. San José lies in a mountain valley and in 1884 became one of the first cities in the world with electric street lighting."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "629be920e5a83836"
+   }
+  },
+  {
+   "id": "cty-panama",
+   "order": 10,
+   "kind": "country",
+   "unit": 3,
+   "name": {
+    "en": "Panama",
+    "ru": "Панама"
+   },
+   "capital": {
+    "en": "Panama City",
+    "ru": "город Панама"
+   },
+   "fact": {
+    "ru": "Панамский канал (82 км), открытый в 1914 году, соединяет Атлантический и Тихий океаны. Основанный в 1519 году город Панама считается первым постоянным европейским поселением на тихоокеанском побережье материковой Америки.",
+    "en": "The Panama Canal (82 km), opened in 1914, links the Atlantic and Pacific Oceans. Founded in 1519, Panama City is considered the first permanent European settlement on the Pacific coast of mainland America."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/Bpo83A2uoMBTtnR4zWMzeB",
+    "note": "block 4 section 6 plan, approved by Svetlana 13.11.2026 («Утверждаю», rev 14)"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Границу Северной и Южной Америки проводим по границе Панамы и Колумбии, как в разделе 1.",
+    "en": "We draw the border between North and South America along the border of Panama and Colombia, as in section 1."
+   },
+   "capitalSameName": true,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d9387491e98beb43"
+   }
+  }
+ ]
+}

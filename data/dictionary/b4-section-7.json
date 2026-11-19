@@ -1,0 +1,635 @@
+{
+ "section": "countries-of-the-caribbean-islands",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (13.11.2026) with agreed replacements: Плантация → Гарнизон/Garrison (Plantation in Asia section 6), Гренадины → Маранта/Arrowroot (part of a country name); EN one-word answers CREOLE, CITADELLE, SOUFRIERE, NUTMEG, DOCKYARD, BRIMSTONE; after her review 14.11.2026: Адмиралтейство → Судоверфь/Dockyard",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "RU and EN words name the same thing (Svetlana, 13.11.2026); МУСКАТНИК is the tree and NUTMEG the spice from its seed, the definitions say so (Svetlana, 14.11.2026)",
+  "length": "every word at least 6 letters; exception ТАИНО/TAINO (5 letters, Svetlana 13.11.2026)",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24): Gros Piton, nutmeg, Brimstone Hill stand in the note after the answer",
+  "notes": "note: a card shown after the word is solved; not covered by the approval hash",
+  "display": "display: how the word is written on the card after it is solved (Santería, Taíno, Soufrière); the grid keeps plain letters; not covered by the approval hash"
+ },
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-14",
+ "units": [
+  {
+   "id": "unit-1-cuba-jamaica-bahamas",
+   "title": {
+    "ru": "Куба, Ямайка, Багамы",
+    "en": "Cuba, Jamaica and the Bahamas"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РАСТАФАРИ",
+      "role": "final",
+      "definition": "Религиозное движение, возникшее на Ямайке в 1930-х годах; его последователи почитают эфиопского императора Хайле Селассие I и часто носят дреды.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "1866e4cb2410cc24"
+      }
+     },
+     {
+      "answer": "ЛУКАЙЦЫ",
+      "role": "review",
+      "definition": "Коренной аравакоязычный народ Багамских островов, родственный таино. С представителями этого народа встретился Колумб во время своего первого путешествия в 1492 году.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "fd333e03e8493c12"
+      }
+     },
+     {
+      "answer": "ДЖАНКАНУ",
+      "role": "review",
+      "definition": "Уличное шествие Багам в костюмах из цветной бумаги, с барабанами, колокольчиками и свистками; проходит 26 декабря и 1 января.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "750c5ed93dfd6d54"
+      }
+     },
+     {
+      "answer": "МАРОНЫ",
+      "role": "review",
+      "definition": "Беглые рабы и их потомки, создавшие свободные общины в горах Ямайки; в 1739 году британцы признали их свободу договором.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "359d81614d4a098e"
+      }
+     },
+     {
+      "answer": "РЕГГЕЙ",
+      "role": "review",
+      "definition": "Музыкальный стиль, родившийся на Ямайке в конце 1960-х годов; самый известный исполнитель — Боб Марли. С 2018 года в списке нематериального наследия ЮНЕСКО.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "51f1adcc697bcf92"
+      }
+     },
+     {
+      "answer": "САНТЕРИЯ",
+      "role": "review",
+      "definition": "Кубинская религия, соединившая верования народа йоруба из Западной Африки с почитанием католических святых.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "85d7edc3e2b66763"
+      }
+     },
+     {
+      "answer": "ГУАЯБЕРА",
+      "role": "review",
+      "definition": "Лёгкая мужская рубашка навыпуск с четырьмя карманами и вертикальными складками, традиционная одежда Кубы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "917e5ba9bbbe312c"
+      }
+     },
+     {
+      "answer": "ТАИНО",
+      "role": "review",
+      "definition": "Коренной народ Больших Антильских островов, говоривший на аравакском языке. Через испанский язык в европейские языки вошли слова «гамак», «ураган» и «барбекю».",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "9e7cf7f4c6ce2d51"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "RASTAFARI",
+      "role": "final",
+      "definition": "A religious movement that arose in Jamaica in the 1930s; its followers revere the Ethiopian Emperor Haile Selassie I and often wear dreadlocks.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "6b69380b37c6b5dc"
+      }
+     },
+     {
+      "answer": "LUCAYANS",
+      "role": "review",
+      "definition": "An Arawakan-speaking Indigenous people of the Bahamas, closely related to the Taíno. Columbus encountered them during his first voyage in 1492.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "c8aca1e4e7efffee"
+      }
+     },
+     {
+      "answer": "JUNKANOO",
+      "role": "review",
+      "definition": "A street parade of the Bahamas with costumes of coloured paper, goatskin drums, cowbells and whistles, held on 26 December and 1 January.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "6998ecaa19e10eb8"
+      }
+     },
+     {
+      "answer": "MAROONS",
+      "role": "review",
+      "definition": "Escaped enslaved Africans and their descendants who built free communities in the mountains of Jamaica; in 1739 the British recognised their freedom by treaty.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "adbd738a1a76068f"
+      }
+     },
+     {
+      "answer": "REGGAE",
+      "role": "review",
+      "definition": "A music style born in Jamaica in the late 1960s; its best-known performer is Bob Marley. On UNESCO's intangible heritage list since 2018.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "7c37d5cf0fd34fc7"
+      }
+     },
+     {
+      "answer": "SANTERIA",
+      "role": "review",
+      "definition": "A Cuban religion that blends the beliefs of the Yoruba people of West Africa with the worship of Catholic saints.",
+      "display": "SANTERÍA",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "8d1e2877e5d8c8a8"
+      }
+     },
+     {
+      "answer": "GUAYABERA",
+      "role": "review",
+      "definition": "A light men's shirt worn untucked, with four pockets and vertical pleats, a traditional garment of Cuba.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "9a73e1828f015714"
+      }
+     },
+     {
+      "answer": "TAINO",
+      "role": "review",
+      "definition": "An Arawakan-speaking Indigenous people of the Greater Antilles. Words such as hammock, hurricane and barbecue entered European languages through Spanish.",
+      "display": "TAÍNO",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "bb8122c8842a83c5"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-hispaniola-northern-lesser-antilles",
+   "title": {
+    "ru": "Остров Гаити и север Малых Антил",
+    "en": "Hispaniola and the northern Lesser Antilles"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "СУДОВЕРФЬ",
+      "role": "final",
+      "definition": "Место, где строят и чинят корабли. Британская военно-морская база XVIII века в гавани Инглиш-Харбор на Антигуа, где в 1784–1787 годах служил молодой Горацио Нельсон, включена в список Всемирного наследия ЮНЕСКО.",
+      "note": "Верфь Нельсона на Антигуа.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "3198bf1e662bfc42"
+      }
+     },
+     {
+      "answer": "КРЕОЛЬСКИЙ",
+      "role": "review",
+      "definition": "Один из двух официальных языков Гаити. Сформировался на французской лексической основе под влиянием западноафриканских языков.",
+      "note": "Гаитянский креольский язык.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "a859970752c21da4"
+      }
+     },
+     {
+      "answer": "ЦИТАДЕЛЬ",
+      "role": "review",
+      "definition": "Огромная крепость на вершине горы на севере Гаити, построенная после обретения независимости для защиты от возвращения французов; объект ЮНЕСКО.",
+      "note": "Цитадель Лаферьер.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "780426745dd70418"
+      }
+     },
+     {
+      "answer": "МЕРЕНГЕ",
+      "role": "review",
+      "definition": "Быстрый парный танец и музыка Доминиканской Республики; с 2016 года в списке нематериального наследия ЮНЕСКО.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "485ea3cdde1914f9"
+      }
+     },
+     {
+      "answer": "БАЧАТА",
+      "role": "review",
+      "definition": "Романтичная музыка и танец под гитару, родившиеся в бедных кварталах Доминиканской Республики; с 2019 года в списке ЮНЕСКО.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "e89eb1dacbbb640f"
+      }
+     },
+     {
+      "answer": "БРИМСТОУН",
+      "role": "review",
+      "definition": "Часть названия исторической британской крепости на острове Сент-Китс, известной как «Гибралтар Вест-Индии». Крепость включена в список Всемирного наследия ЮНЕСКО.",
+      "note": "Крепость Бримстоун-Хилл.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "b6048ceef450b8e6"
+      }
+     },
+     {
+      "answer": "КАЛИНАГО",
+      "role": "review",
+      "definition": "Коренной народ Малых Антильских островов (раньше их называли карибами); на Доминике у них есть своя территория площадью около 15 км².",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "aef36b1393af532c"
+      }
+     },
+     {
+      "answer": "КВАДРИЛЬ",
+      "role": "review",
+      "definition": "Старинный европейский танец для четырёх пар, который на Доминике и Сент-Люсии танцуют в национальных костюмах под местный оркестр.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "9d4c953379c98869"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "DOCKYARD",
+      "role": "final",
+      "definition": "A place where ships are built and repaired. The 18th-century British naval base at English Harbour, Antigua, where young Horatio Nelson served in 1784–87, is a UNESCO World Heritage Site.",
+      "note": "Nelson's Dockyard on Antigua.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "bdd3c539fb0f5635"
+      }
+     },
+     {
+      "answer": "CREOLE",
+      "role": "review",
+      "definition": "One of Haiti’s two official languages, developed primarily from French vocabulary with influences from West African languages.",
+      "note": "Haitian Creole.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "216288b71d87b0c2"
+      }
+     },
+     {
+      "answer": "CITADELLE",
+      "role": "review",
+      "definition": "A huge mountaintop fortress in northern Haiti, built after independence to defend the country against a French return; a UNESCO site.",
+      "note": "Citadelle Laferrière.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "956166d2bf14b016"
+      }
+     },
+     {
+      "answer": "MERENGUE",
+      "role": "review",
+      "definition": "A fast couple dance and music of the Dominican Republic; on UNESCO's intangible heritage list since 2016.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "7793ed4c833f810f"
+      }
+     },
+     {
+      "answer": "BACHATA",
+      "role": "review",
+      "definition": "Romantic guitar music and dance born in the poor neighbourhoods of the Dominican Republic; on UNESCO's list since 2019.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "6a92b3780b9b5913"
+      }
+     },
+     {
+      "answer": "BRIMSTONE",
+      "role": "review",
+      "definition": "Part of the name of a historic British fortress on Saint Kitts, known as the Gibraltar of the West Indies and listed as a UNESCO World Heritage Site.",
+      "note": "Brimstone Hill Fortress.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "1b2a418a63e16ab7"
+      }
+     },
+     {
+      "answer": "KALINAGO",
+      "role": "review",
+      "definition": "The native people of the Lesser Antilles (once called the Island Caribs); on Dominica they have their own territory of about 15 km².",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "3057ed0634428ccf"
+      }
+     },
+     {
+      "answer": "QUADRILLE",
+      "role": "review",
+      "definition": "An old European dance for four couples, danced on Dominica and Saint Lucia in national dress to a local band.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "651f58d9a3383492"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-southern-lesser-antilles",
+   "title": {
+    "ru": "Юг Малых Антил",
+    "en": "The southern Lesser Antilles"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МУСКАТНИК",
+      "role": "final",
+      "definition": "Тропическое дерево, семена которого используют как пряность. Гренада — один из известных производителей этой пряности, она изображена на флаге страны.",
+      "note": "Его семена — мускатный орех.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "74e602558ca35314"
+      }
+     },
+     {
+      "answer": "ПИТОНЫ",
+      "role": "review",
+      "definition": "Собственное географическое название двух крутых вулканических вершин на острове Сент-Люсия. Они входят в объект Всемирного наследия ЮНЕСКО.",
+      "note": "Гро-Питон и Пти-Питон — горы, а не змеи.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "cfd31442a5fea882"
+      }
+     },
+     {
+      "answer": "СУФРИЕР",
+      "role": "review",
+      "definition": "Действующий вулкан на севере острова Сент-Винсент, высшая точка страны (около 1230 м); последнее большое извержение было в 2021 году.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "57127a907e965ac4"
+      }
+     },
+     {
+      "answer": "МАРАНТА",
+      "role": "review",
+      "definition": "Тропическое растение, из корневищ которого делают тонкий крахмал; долгое время Сент-Винсент был крупнейшим в мире его производителем.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "8b898b1278ffc0a7"
+      }
+     },
+     {
+      "answer": "СПАЙСМАС",
+      "role": "review",
+      "definition": "Главный ежегодный праздник Гренады в августе, с костюмами, музыкой и уличными шествиями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "e8680bcc51c24e3f"
+      }
+     },
+     {
+      "answer": "ГАРНИЗОН",
+      "role": "review",
+      "definition": "Войска, стоявшие в крепости или городе; британский военный городок с фортами и плацем у Бриджтауна — объект ЮНЕСКО, там в 1751 году жил юный Джордж Вашингтон.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "46789cac885981c0"
+      }
+     },
+     {
+      "answer": "КАЛИПСО",
+      "role": "review",
+      "definition": "Песенный жанр Тринидада с острыми, часто насмешливыми текстами о жизни и политике.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "e905b0f3409455ee"
+      }
+     },
+     {
+      "answer": "СТИЛПЭН",
+      "role": "review",
+      "definition": "Музыкальный инструмент из металлической бочки из-под нефти, придуманный на Тринидаде в 1930–1940-х годах; национальный инструмент страны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "597d50c3b44587bd"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "NUTMEG",
+      "role": "final",
+      "definition": "A spice obtained from the seed of a tropical evergreen tree. Grenada is a major producer, and the spice is depicted on its national flag.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "1d713aef42e0a2ee"
+      }
+     },
+     {
+      "answer": "PITONS",
+      "role": "review",
+      "definition": "The proper name of two steep volcanic peaks on Saint Lucia, protected as part of a UNESCO World Heritage Site.",
+      "note": "Gros Piton and Petit Piton.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "5688ab3db1e09fbc"
+      }
+     },
+     {
+      "answer": "SOUFRIERE",
+      "role": "review",
+      "definition": "An active volcano in the north of Saint Vincent and the country's highest point (about 1,230 m); its last big eruption was in 2021.",
+      "display": "SOUFRIÈRE",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "1c961ec894be5e83"
+      }
+     },
+     {
+      "answer": "ARROWROOT",
+      "role": "review",
+      "definition": "A tropical plant whose rootstocks give a fine starch; for a long time Saint Vincent was its largest producer in the world.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "f4af85b06e272065"
+      }
+     },
+     {
+      "answer": "SPICEMAS",
+      "role": "review",
+      "definition": "Grenada's main yearly festival in August, with costumes, music and street parades.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "c507e10532222aeb"
+      }
+     },
+     {
+      "answer": "GARRISON",
+      "role": "review",
+      "definition": "Troops stationed in a fort or town; the British military quarter with forts and a parade ground near Bridgetown is a UNESCO site, and young George Washington stayed there in 1751.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "cf32a82b4ffb228c"
+      }
+     },
+     {
+      "answer": "CALYPSO",
+      "role": "review",
+      "definition": "A song style of Trinidad with sharp, often mocking lyrics about life and politics.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "55a04ff5c7da6e7a"
+      }
+     },
+     {
+      "answer": "STEELPAN",
+      "role": "review",
+      "definition": "A musical instrument made from an oil drum, invented in Trinidad in the 1930s–40s; the country's national instrument.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "ec50c9b8fc2ea5db"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КАРНАВАЛ",
+      "role": "section-final",
+      "definition": "Праздник с костюмированными шествиями и музыкой перед Великим постом; самый большой в Карибском бассейне проходит на Тринидаде.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "744f326b4e074b01"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CARNIVAL",
+      "role": "section-final",
+      "definition": "A festival of costumed parades and music before Lent; the biggest in the Caribbean is held in Trinidad.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-14",
+       "contentSha256": "43b9bd19089ae0d9"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

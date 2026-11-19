@@ -1,0 +1,940 @@
+{
+ "section": "deserts-and-canyons-of-north-america",
+ "block": 4,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters on the objects of data/maps/namerica-deserts.json learned by the end of the unit (section final: all 12), at the label point, first; a place phrase never contains the answer; then on the objects of data/maps/namerica-overview.json (section 1); one letter per object",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b4_geowords.mjs = NA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 7 (% of map width): the objects crowd the southwest and a marker is ~8% of the map wide on a phone",
+  "twoWords": "a space or a hyphen of a two-word answer is a gap in the answer row, never a letter on the map (Svetlana, 13.11.2026)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b4-section-5-unit-1-en",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "INSELBERG",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "I"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "N"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "S"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "E"
+    },
+    {
+     "id": "na-okanagan",
+     "x": 38.5,
+     "y": 48.56,
+     "letter": "L"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "B"
+    },
+    {
+     "id": "na-great-basin",
+     "x": 38,
+     "y": 59.88,
+     "letter": "E"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "R"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yucatan",
+     "position": 4,
+     "text": "Find the fourth letter on the Yucatán Peninsula."
+    },
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 2,
+     "text": "Find the second letter in the Canadian Arctic Archipelago."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 3,
+     "text": "Find the third letter in the Chihuahuan Desert."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 8,
+     "text": "Find the eighth letter in the Vizcaíno Desert."
+    },
+    {
+     "markerId": "na-okanagan",
+     "position": 5,
+     "text": "Find the fifth letter in the Okanagan Valley."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "na-great-basin",
+     "position": 7,
+     "text": "Find the seventh letter in the Great Basin Desert."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 9,
+     "text": "Find the ninth letter in the Caribbean Sea."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "7344c0d243a6ae63"
+   }
+  },
+  {
+   "id": "b4-section-5-unit-1-ru",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ИНЗЕЛЬБЕРГ",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "И"
+    },
+    {
+     "id": "na-cuba",
+     "x": 65.38,
+     "y": 80.78,
+     "letter": "Н"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "З"
+    },
+    {
+     "id": "na-baffin",
+     "x": 59.65,
+     "y": 32.19,
+     "letter": "Е"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "Л"
+    },
+    {
+     "id": "na-great-basin",
+     "x": 38,
+     "y": 59.88,
+     "letter": "Ь"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "Б"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "Е"
+    },
+    {
+     "id": "na-okanagan",
+     "x": 38.5,
+     "y": 48.56,
+     "letter": "Р"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "Г"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-labrador",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Лабрадор."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 7,
+     "text": "Найди седьмую букву в пустыне Чиуауа."
+    },
+    {
+     "markerId": "na-cuba",
+     "position": 2,
+     "text": "Найди вторую букву на Кубе."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 10,
+     "text": "Найди десятую букву в Гренландии."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 5,
+     "text": "Найди пятую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-okanagan",
+     "position": 9,
+     "text": "Найди девятую букву в долине Оканаган."
+    },
+    {
+     "markerId": "na-great-basin",
+     "position": 6,
+     "text": "Найди шестую букву в пустыне Большого Бассейна."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 8,
+     "text": "Найди восьмую букву в пустыне Вискаино."
+    },
+    {
+     "markerId": "na-baffin",
+     "position": 4,
+     "text": "Найди четвёртую букву на Баффиновой Земле."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 1,
+     "text": "Найди первую букву в Гудзоновом заливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "222ef34938c0a70a"
+   }
+  },
+  {
+   "id": "b4-section-5-unit-2-en",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "SANDSTONE",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-antelope-canyon",
+     "x": 40.64,
+     "y": 63.91,
+     "letter": "S"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "A"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "N"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "D"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "S"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "T"
+    },
+    {
+     "id": "na-bering-strait",
+     "x": 26.97,
+     "y": 18.74,
+     "letter": "O"
+    },
+    {
+     "id": "na-okanagan",
+     "x": 38.5,
+     "y": 48.56,
+     "letter": "N"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-denmark-strait",
+     "position": 4,
+     "text": "Find the fourth letter in the Denmark Strait."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 2,
+     "text": "Find the second letter in the Vizcaíno Desert."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "na-okanagan",
+     "position": 8,
+     "text": "Find the eighth letter in the Okanagan Valley."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 3,
+     "text": "Find the third letter in the Chihuahuan Desert."
+    },
+    {
+     "markerId": "na-bering-strait",
+     "position": 7,
+     "text": "Find the seventh letter in the Bering Strait."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 5,
+     "text": "Find the fifth letter in Greenland."
+    },
+    {
+     "markerId": "na-antelope-canyon",
+     "position": 1,
+     "text": "Find the first letter in Antelope Canyon."
+    },
+    {
+     "markerId": "na-yucatan",
+     "position": 9,
+     "text": "Find the ninth letter on the Yucatán Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "71fe13abb7b00c1f"
+   }
+  },
+  {
+   "id": "b4-section-5-unit-2-ru",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПЕСЧАНИК",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "П"
+    },
+    {
+     "id": "na-atlantic-ocean",
+     "x": 84.71,
+     "y": 58.51,
+     "letter": "Е"
+    },
+    {
+     "id": "na-okanagan",
+     "x": 38.5,
+     "y": 48.56,
+     "letter": "С"
+    },
+    {
+     "id": "na-antelope-canyon",
+     "x": 40.64,
+     "y": 63.91,
+     "letter": "Ч"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "А"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "Н"
+    },
+    {
+     "id": "na-hudson-bay",
+     "x": 53.76,
+     "y": 39.4,
+     "letter": "И"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "К"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-antelope-canyon",
+     "position": 4,
+     "text": "Найди четвёртую букву в каньоне Антилопы."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 6,
+     "text": "Найди шестую букву в пустыне Чиуауа."
+    },
+    {
+     "markerId": "na-atlantic-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "na-hudson-bay",
+     "position": 7,
+     "text": "Найди седьмую букву в Гудзоновом заливе."
+    },
+    {
+     "markerId": "na-okanagan",
+     "position": 3,
+     "text": "Найди третью букву в долине Оканаган."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 8,
+     "text": "Найди восьмую букву в Датском проливе."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 1,
+     "text": "Найди первую букву в пустыне Вискаино."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 5,
+     "text": "Найди пятую букву на полуострове Лабрадор."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "4ca038186ced3e29"
+   }
+  },
+  {
+   "id": "b4-section-5-unit-3-en",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "PUEBLO",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-canyon-de-chelly",
+     "x": 41.75,
+     "y": 64.96,
+     "letter": "P"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "U"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "E"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "B"
+    },
+    {
+     "id": "na-fraser-canyon",
+     "x": 37.43,
+     "y": 48.46,
+     "letter": "L"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-vizcaino",
+     "position": 4,
+     "text": "Find the fourth letter in the Vizcaíno Desert."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 2,
+     "text": "Find the second letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Alaska Peninsula."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 3,
+     "text": "Find the third letter in the Chihuahuan Desert."
+    },
+    {
+     "markerId": "na-fraser-canyon",
+     "position": 5,
+     "text": "Find the fifth letter in Fraser Canyon."
+    },
+    {
+     "markerId": "na-canyon-de-chelly",
+     "position": 1,
+     "text": "Find the first letter in Canyon de Chelly."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "d82fb139a26e0dd3"
+   }
+  },
+  {
+   "id": "b4-section-5-unit-3-ru",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ПУЭБЛО",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-fraser-canyon",
+     "x": 37.43,
+     "y": 48.46,
+     "letter": "П"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "У"
+    },
+    {
+     "id": "na-canyon-de-chelly",
+     "x": 41.75,
+     "y": 64.96,
+     "letter": "Э"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "Б"
+    },
+    {
+     "id": "na-denmark-strait",
+     "x": 72.08,
+     "y": 19.42,
+     "letter": "Л"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-vizcaino",
+     "position": 2,
+     "text": "Найди вторую букву в пустыне Вискаино."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 4,
+     "text": "Найди четвёртую букву в пустыне Чиуауа."
+    },
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 6,
+     "text": "Найди шестую букву в Карибском море."
+    },
+    {
+     "markerId": "na-canyon-de-chelly",
+     "position": 3,
+     "text": "Найди третью букву в Каньоне-де-Шей."
+    },
+    {
+     "markerId": "na-fraser-canyon",
+     "position": 1,
+     "text": "Найди первую букву в каньоне Фрейзер."
+    },
+    {
+     "markerId": "na-denmark-strait",
+     "position": 5,
+     "text": "Найди пятую букву в Датском проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "61d4bd1b6fb30bce"
+   }
+  },
+  {
+   "id": "b4-section-5-final-en",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "KOKOPELLI",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-arctic-ocean",
+     "x": 42.12,
+     "y": 8.81,
+     "letter": "K"
+    },
+    {
+     "id": "na-caribbean-sea",
+     "x": 67.96,
+     "y": 86.56,
+     "letter": "O"
+    },
+    {
+     "id": "na-pacific-ocean",
+     "x": 17.99,
+     "y": 78.25,
+     "letter": "K"
+    },
+    {
+     "id": "na-labrador",
+     "x": 63.32,
+     "y": 42.6,
+     "letter": "O"
+    },
+    {
+     "id": "na-isthmus-of-panama",
+     "x": 63.61,
+     "y": 96.02,
+     "letter": "P"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "E"
+    },
+    {
+     "id": "na-antelope-canyon",
+     "x": 40.64,
+     "y": 63.91,
+     "letter": "L"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "L"
+    },
+    {
+     "id": "na-fraser-canyon",
+     "x": 37.43,
+     "y": 48.46,
+     "letter": "I"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-caribbean-sea",
+     "position": 2,
+     "text": "Find the second letter in the Caribbean Sea."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 6,
+     "text": "Find the sixth letter in the Chihuahuan Desert."
+    },
+    {
+     "markerId": "na-pacific-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 8,
+     "text": "Find the eighth letter in the Vizcaíno Desert."
+    },
+    {
+     "markerId": "na-labrador",
+     "position": 4,
+     "text": "Find the fourth letter on the Labrador Peninsula."
+    },
+    {
+     "markerId": "na-antelope-canyon",
+     "position": 7,
+     "text": "Find the seventh letter in Antelope Canyon."
+    },
+    {
+     "markerId": "na-arctic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "na-fraser-canyon",
+     "position": 9,
+     "text": "Find the ninth letter in Fraser Canyon."
+    },
+    {
+     "markerId": "na-isthmus-of-panama",
+     "position": 5,
+     "text": "Find the fifth letter on the Isthmus of Panama."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "f1920a9281c0b571"
+   }
+  },
+  {
+   "id": "b4-section-5-final-ru",
+   "section": "deserts-and-canyons-of-north-america",
+   "block": 4,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "КОКОПЕЛЛИ",
+   "map": "./assets/namerica-deserts.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 7,
+   "markers": [
+    {
+     "id": "na-fraser-canyon",
+     "x": 37.43,
+     "y": 48.46,
+     "letter": "К"
+    },
+    {
+     "id": "na-boothia",
+     "x": 50.73,
+     "y": 27.52,
+     "letter": "О"
+    },
+    {
+     "id": "na-arctic-archipelago",
+     "x": 53.98,
+     "y": 9.93,
+     "letter": "К"
+    },
+    {
+     "id": "na-alaska-peninsula",
+     "x": 26.54,
+     "y": 29.76,
+     "letter": "О"
+    },
+    {
+     "id": "na-vizcaino",
+     "x": 37.77,
+     "y": 73.62,
+     "letter": "П"
+    },
+    {
+     "id": "na-yucatan",
+     "x": 55.09,
+     "y": 86.2,
+     "letter": "Е"
+    },
+    {
+     "id": "na-chihuahuan",
+     "x": 44.68,
+     "y": 75.25,
+     "letter": "Л"
+    },
+    {
+     "id": "na-black-canyon",
+     "x": 43.09,
+     "y": 62.57,
+     "letter": "Л"
+    },
+    {
+     "id": "na-greenland",
+     "x": 61.85,
+     "y": 12.48,
+     "letter": "И"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "na-yucatan",
+     "position": 6,
+     "text": "Найди шестую букву на полуострове Юкатан."
+    },
+    {
+     "markerId": "na-alaska-peninsula",
+     "position": 4,
+     "text": "Найди четвёртую букву на полуострове Аляска."
+    },
+    {
+     "markerId": "na-boothia",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Бутия."
+    },
+    {
+     "markerId": "na-black-canyon",
+     "position": 8,
+     "text": "Найди восьмую букву в Чёрном каньоне Ганнисона."
+    },
+    {
+     "markerId": "na-vizcaino",
+     "position": 5,
+     "text": "Найди пятую букву в пустыне Вискаино."
+    },
+    {
+     "markerId": "na-chihuahuan",
+     "position": 7,
+     "text": "Найди седьмую букву в пустыне Чиуауа."
+    },
+    {
+     "markerId": "na-fraser-canyon",
+     "position": 1,
+     "text": "Найди первую букву в каньоне Фрейзер."
+    },
+    {
+     "markerId": "na-greenland",
+     "position": 9,
+     "text": "Найди девятую букву в Гренландии."
+    },
+    {
+     "markerId": "na-arctic-archipelago",
+     "position": 3,
+     "text": "Найди третью букву в Канадском Арктическом архипелаге."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-13",
+    "contentSha256": "4053b5cc0838dfdf"
+   }
+  }
+ ]
+}

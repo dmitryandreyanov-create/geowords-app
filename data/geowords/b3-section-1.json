@@ -1,0 +1,1126 @@
+{
+ "section": "asia-on-the-map",
+ "block": 3,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters only on objects of data/maps/asia-overview.json learned by the end of the unit, one letter per object, at the object's label point (the finals approved 29.10.2026 were laid out on the 23 objects before the Chukchi Peninsula was added the same evening)",
+  "nesting": "an object never shares a puzzle with the object that contains it: the Seas of Japan and Okhotsk, the South China Sea, the Japanese Islands, Sakhalin and Borneo with the Pacific; the Persian Gulf and Sri Lanka with the Indian Ocean; no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b3-section-1-unit-1-en",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "TYPHOON",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "T"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "Y"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "P"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "H"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "O"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "O"
+    },
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "N"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 5,
+     "text": "Find the fifth letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 2,
+     "text": "Find the second letter in the Bering Strait."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 4,
+     "text": "Find the fourth letter at the Bosporus."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 6,
+     "text": "Find the sixth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 7,
+     "text": "Find the seventh letter at the Suez Canal."
+    },
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Pacific Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "992a98c52bd357a9"
+   }
+  },
+  {
+   "id": "b3-section-1-unit-1-ru",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ТАЙФУН",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-suez-canal",
+     "x": 17.1,
+     "y": 39.27,
+     "letter": "Т"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "А"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "Й"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "Ф"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "У"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Н"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Тихом океане."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 5,
+     "text": "Найди пятую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 3,
+     "text": "Найди третью букву в Уральских горах."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Индийском океане."
+    },
+    {
+     "markerId": "as-suez-canal",
+     "position": 1,
+     "text": "Найди первую букву у Суэцкого канала."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "5ee83a73786736c8"
+   }
+  },
+  {
+   "id": "b3-section-1-unit-2-en",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "CARAVANSERAI",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "C"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "A"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "R"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "A"
+    },
+    {
+     "id": "as-kamchatka",
+     "x": 72.85,
+     "y": 21.34,
+     "letter": "V"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "A"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "N"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "S"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "E"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "R"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "A"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "I"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-taimyr",
+     "position": 2,
+     "text": "Find the second letter on the Taimyr Peninsula."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 8,
+     "text": "Find the eighth letter on the peninsula of Asia Minor."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 6,
+     "text": "Find the sixth letter on the Arabian Peninsula."
+    },
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 4,
+     "text": "Find the fourth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 10,
+     "text": "Find the tenth letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 3,
+     "text": "Find the third letter in the Indian Ocean."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 11,
+     "text": "Find the eleventh letter on the Korean Peninsula."
+    },
+    {
+     "markerId": "as-kamchatka",
+     "position": 5,
+     "text": "Find the fifth letter on Kamchatka."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 7,
+     "text": "Find the seventh letter on the Indochina Peninsula."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 9,
+     "text": "Find the ninth letter in the Bering Strait."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 1,
+     "text": "Find the first letter on the Malay Peninsula."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 12,
+     "text": "Find the twelfth letter in the Ural Mountains."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "da3aafc3fb6e98b4"
+   }
+  },
+  {
+   "id": "b3-section-1-unit-2-ru",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "КАРАВАНСАРАЙ",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "К"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "А"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "Р"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "А"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "В"
+    },
+    {
+     "id": "as-pacific-ocean",
+     "x": 86.58,
+     "y": 33.36,
+     "letter": "А"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "Н"
+    },
+    {
+     "id": "as-arabian-peninsula",
+     "x": 20.7,
+     "y": 56.12,
+     "letter": "С"
+    },
+    {
+     "id": "as-korean-peninsula",
+     "x": 65.76,
+     "y": 43.78,
+     "letter": "А"
+    },
+    {
+     "id": "as-indian-ocean",
+     "x": 41.96,
+     "y": 89.58,
+     "letter": "Р"
+    },
+    {
+     "id": "as-kamchatka",
+     "x": 72.85,
+     "y": 21.34,
+     "letter": "А"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "Й"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-asia-minor",
+     "position": 2,
+     "text": "Найди вторую букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 7,
+     "text": "Найди седьмую букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 5,
+     "text": "Найди пятую букву на полуострове Индокитай."
+    },
+    {
+     "markerId": "as-kamchatka",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на Камчатке."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 3,
+     "text": "Найди третью букву на Таймыре."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 12,
+     "text": "Найди двенадцатую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "as-korean-peninsula",
+     "position": 9,
+     "text": "Найди девятую букву на Корейском полуострове."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 4,
+     "text": "Найди четвёртую букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-pacific-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Тихом океане."
+    },
+    {
+     "markerId": "as-arabian-peninsula",
+     "position": 8,
+     "text": "Найди восьмую букву на Аравийском полуострове."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 1,
+     "text": "Найди первую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-indian-ocean",
+     "position": 10,
+     "text": "Найди десятую букву в Индийском океане."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "03c1f250f2cf0699"
+   }
+  },
+  {
+   "id": "b3-section-1-unit-3-en",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "TERRACING",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "T"
+    },
+    {
+     "id": "as-japanese-islands",
+     "x": 72.45,
+     "y": 44.16,
+     "letter": "E"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "R"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "R"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "A"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "C"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "I"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "N"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "G"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-japanese-islands",
+     "position": 2,
+     "text": "Find the second letter on the Japanese Islands."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 4,
+     "text": "Find the fourth letter on the island of Sri Lanka."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 6,
+     "text": "Find the sixth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 8,
+     "text": "Find the eighth letter in the South China Sea."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 5,
+     "text": "Find the fifth letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 3,
+     "text": "Find the third letter on the peninsula of Asia Minor."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 9,
+     "text": "Find the ninth letter on the island of Borneo."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 7,
+     "text": "Find the seventh letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 1,
+     "text": "Find the first letter on the Taimyr Peninsula."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "2aba9d4224ee5ef7"
+   }
+  },
+  {
+   "id": "b3-section-1-unit-3-ru",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ТЕРРАСИРОВАНИЕ",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-sea-of-japan",
+     "x": 69.57,
+     "y": 41.85,
+     "letter": "Т"
+    },
+    {
+     "id": "as-malay-peninsula",
+     "x": 55.97,
+     "y": 82.15,
+     "letter": "Е"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "Р"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "Р"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "А"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "С"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "И"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "Р"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "О"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "В"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "А"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "Н"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "И"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-sri-lanka",
+     "position": 7,
+     "text": "Найди седьмую букву на острове Шри-Ланка."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 3,
+     "text": "Найди третью букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 8,
+     "text": "Найди восьмую букву в Охотском море."
+    },
+    {
+     "markerId": "as-malay-peninsula",
+     "position": 2,
+     "text": "Найди вторую букву на Малаккском полуострове."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 4,
+     "text": "Найди четвёртую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 13,
+     "text": "Найди тринадцатую букву в Южно-Китайском море."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 11,
+     "text": "Найди одиннадцатую букву на полуострове Индокитай."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 5,
+     "text": "Найди пятую букву у Босфора."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 9,
+     "text": "Найди девятую букву на острове Калимантан."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Северном Ледовитом океане."
+    },
+    {
+     "markerId": "as-taimyr",
+     "position": 12,
+     "text": "Найди двенадцатую букву на Таймыре."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 14,
+     "text": "Найди четырнадцатую букву в Беринговом проливе."
+    },
+    {
+     "markerId": "as-sea-of-japan",
+     "position": 1,
+     "text": "Найди первую букву в Японском море."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 10,
+     "text": "Найди десятую букву в Персидском заливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "770267fea1675b37"
+   }
+  },
+  {
+   "id": "b3-section-1-final-en",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "SERICULTURE",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "S"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "E"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "R"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "I"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "C"
+    },
+    {
+     "id": "as-bosporus",
+     "x": 20.48,
+     "y": 30.51,
+     "letter": "U"
+    },
+    {
+     "id": "as-sea-of-japan",
+     "x": 69.57,
+     "y": 41.85,
+     "letter": "L"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "T"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "U"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "R"
+    },
+    {
+     "id": "as-arctic-ocean",
+     "x": 55.86,
+     "y": 5.06,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 4,
+     "text": "Find the fourth letter in the Sea of Okhotsk."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 2,
+     "text": "Find the second letter in the Bering Strait."
+    },
+    {
+     "markerId": "as-bosporus",
+     "position": 6,
+     "text": "Find the sixth letter at the Bosporus."
+    },
+    {
+     "markerId": "as-arctic-ocean",
+     "position": 11,
+     "text": "Find the eleventh letter in the Arctic Ocean."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 8,
+     "text": "Find the eighth letter on the Indian subcontinent."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 3,
+     "text": "Find the third letter in the South China Sea."
+    },
+    {
+     "markerId": "as-sea-of-japan",
+     "position": 7,
+     "text": "Find the seventh letter in the Sea of Japan."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 9,
+     "text": "Find the ninth letter on the island of Borneo."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 5,
+     "text": "Find the fifth letter in the Ural Mountains."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 10,
+     "text": "Find the tenth letter in the Persian Gulf."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 1,
+     "text": "Find the first letter on the island of Sri Lanka."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "4ebb50762fceb574"
+   }
+  },
+  {
+   "id": "b3-section-1-final-ru",
+   "section": "asia-on-the-map",
+   "block": 3,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "ШЕЛКОВОДСТВО",
+   "map": "./assets/asia-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "as-sea-of-japan",
+     "x": 69.57,
+     "y": 41.85,
+     "letter": "Ш"
+    },
+    {
+     "id": "as-taimyr",
+     "x": 50.86,
+     "y": 14.69,
+     "letter": "Е"
+    },
+    {
+     "id": "as-south-china-sea",
+     "x": 64.2,
+     "y": 69.88,
+     "letter": "Л"
+    },
+    {
+     "id": "as-bering-strait",
+     "x": 73.91,
+     "y": 3.61,
+     "letter": "К"
+    },
+    {
+     "id": "as-sri-lanka",
+     "x": 39.48,
+     "y": 78.44,
+     "letter": "О"
+    },
+    {
+     "id": "as-borneo",
+     "x": 65.72,
+     "y": 85.94,
+     "letter": "В"
+    },
+    {
+     "id": "as-indochina",
+     "x": 53.88,
+     "y": 66.02,
+     "letter": "О"
+    },
+    {
+     "id": "as-sea-of-okhotsk",
+     "x": 69.89,
+     "y": 24.98,
+     "letter": "Д"
+    },
+    {
+     "id": "as-ural-mountains",
+     "x": 36.72,
+     "y": 29.34,
+     "letter": "С"
+    },
+    {
+     "id": "as-asia-minor",
+     "x": 21.23,
+     "y": 33.67,
+     "letter": "Т"
+    },
+    {
+     "id": "as-persian-gulf",
+     "x": 25.48,
+     "y": 52.98,
+     "letter": "В"
+    },
+    {
+     "id": "as-hindustan",
+     "x": 41.02,
+     "y": 62.42,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "as-taimyr",
+     "position": 2,
+     "text": "Найди вторую букву на Таймыре."
+    },
+    {
+     "markerId": "as-indochina",
+     "position": 7,
+     "text": "Найди седьмую букву на полуострове Индокитай."
+    },
+    {
+     "markerId": "as-south-china-sea",
+     "position": 3,
+     "text": "Найди третью букву в Южно-Китайском море."
+    },
+    {
+     "markerId": "as-sri-lanka",
+     "position": 5,
+     "text": "Найди пятую букву на острове Шри-Ланка."
+    },
+    {
+     "markerId": "as-ural-mountains",
+     "position": 9,
+     "text": "Найди девятую букву в Уральских горах."
+    },
+    {
+     "markerId": "as-hindustan",
+     "position": 12,
+     "text": "Найди двенадцатую букву на полуострове Индостан."
+    },
+    {
+     "markerId": "as-sea-of-okhotsk",
+     "position": 8,
+     "text": "Найди восьмую букву в Охотском море."
+    },
+    {
+     "markerId": "as-persian-gulf",
+     "position": 11,
+     "text": "Найди одиннадцатую букву в Персидском заливе."
+    },
+    {
+     "markerId": "as-borneo",
+     "position": 6,
+     "text": "Найди шестую букву на острове Калимантан."
+    },
+    {
+     "markerId": "as-asia-minor",
+     "position": 10,
+     "text": "Найди десятую букву на полуострове Малая Азия."
+    },
+    {
+     "markerId": "as-sea-of-japan",
+     "position": 1,
+     "text": "Найди первую букву в Японском море."
+    },
+    {
+     "markerId": "as-bering-strait",
+     "position": 4,
+     "text": "Найди четвёртую букву в Беринговом проливе."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-10-29",
+    "contentSha256": "ccb8d9730e866306"
+   }
+  }
+ ]
+}

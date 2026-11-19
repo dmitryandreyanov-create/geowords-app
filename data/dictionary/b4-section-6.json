@@ -1,0 +1,638 @@
+{
+ "section": "countries-of-north-and-central-america",
+ "block": 4,
+ "status": "approved",
+ "source": "25 words RU + EN from Svetlana's list (13.11.2026) with agreed replacements: Инуиты → Нунавут (Inuit in section 1), Вампум → Лакросс, Чинампа → Конституция (section 3), Какаоводство → Хоккей (Какао in section 1), Касабе → section 7 (Caribbean); after her review 13.11.2026: Пипили → Кускатлан/Cuscatlan, Michif → Métis",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "RU and EN words name the same thing (Svetlana, 13.11.2026)",
+  "length": "every word at least 6 letters; exception METIS (5 letters, Svetlana 13.11.2026: accuracy over length). EN answers are plain letters in the game (METIS, APPLIQUE, POPOLVUH); the cards write Métis, appliqué, Popol Vuh",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24): the name of Sandino stands in the card after the answer",
+  "draft": "Definitions by Claude from Svetlana's terms, edited by Svetlana; all approved by Svetlana 2026-11-13 («Утверждаю»).",
+  "notes": "note: a card shown after the word is solved (approved in the plan 13.11.2026, edited by Svetlana 14.11.2026), with what the definition may not contain (the same root, the normative spelling); not covered by the approval hash",
+  "display": "display: how the word is written on the card after it is solved (Пополь-Вух, Popol Vuh, Métis, appliqué); the grid keeps the answer without spaces, hyphens or diacritics (Svetlana, 14.11.2026); not covered by the approval hash"
+ },
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-11-13",
+ "units": [
+  {
+   "id": "unit-1-canada-usa",
+   "title": {
+    "ru": "Канада и США",
+    "en": "Canada and the United States"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ДОМИНИОН",
+      "role": "final",
+      "definition": "Так называлась Канада после объединения 1867 года: самоуправляемая часть Британской империи",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a1e2315ad73f38ba"
+      }
+     },
+     {
+      "answer": "МЕТИСЫ",
+      "role": "review",
+      "definition": "Один из коренных народов Канады, сформировавшийся в результате исторических связей европейских торговцев пушниной и коренных народов Северной Америки. Имеет собственную культуру, историю и традиции",
+      "note": "Мичиф — один из традиционных языков метисов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "38fc336e45e3fe3f"
+      }
+     },
+     {
+      "answer": "РЕЗЕРВАЦИЯ",
+      "role": "review",
+      "definition": "Территория, выделенная для проживания и самоуправления признанного коренного народа в США. Её правовой статус определяется федеральным, племенным, а в отдельных случаях и законодательством штата",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "0caa60ccee0baffa"
+      }
+     },
+     {
+      "answer": "МЕЙФЛАУЭР",
+      "role": "review",
+      "definition": "Корабль, который в 1620 году привёз английских переселенцев к берегам будущей Новой Англии",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "100202bccfbf0158"
+      }
+     },
+     {
+      "answer": "НУНАВУТ",
+      "role": "review",
+      "definition": "Самая большая и самая северная территория Канады, созданная в 1999 году для инуитов; название значит «наша земля»",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "de969e465f690f19"
+      }
+     },
+     {
+      "answer": "ЛАКРОСС",
+      "role": "review",
+      "definition": "Командная игра с мячом и клюшками с сеткой, происходящая от традиционных игр нескольких коренных народов Северной Америки. В Канаде признана национальным летним видом спорта",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "9c35dc35ee9d2912"
+      }
+     },
+     {
+      "answer": "КОНСТИТУЦИЯ",
+      "role": "review",
+      "definition": "Основной закон США, подписанный в 1787 году и вступивший в действие в 1789 году. Считается старейшим действующим писаным национальным основным законом",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e9dce3047375262f"
+      }
+     },
+     {
+      "answer": "ХОККЕЙ",
+      "role": "review",
+      "definition": "Игра на льду с клюшками и шайбой; первый матч по записанным правилам сыграли в Монреале в 1875 году",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "354dae4b2bd04a07"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "DOMINION",
+      "role": "final",
+      "definition": "What Canada was called after it united in 1867: a self-governing part of the British Empire",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "3924ed8758efe28c"
+      }
+     },
+     {
+      "answer": "METIS",
+      "display": "MÉTIS",
+      "role": "review",
+      "definition": "An Indigenous people of Canada with a distinct history and culture, whose communities developed through historical connections between European fur traders and Indigenous peoples",
+      "note": "Michif is one of the traditional languages of the Métis.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5becc8bd0cdcca41"
+      }
+     },
+     {
+      "answer": "RESERVATION",
+      "role": "review",
+      "definition": "Land set aside for a federally recognized Native American tribe in the United States. Its legal status involves federal and tribal law and, in some cases, state law",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "89f3dee3ed3099ec"
+      }
+     },
+     {
+      "answer": "MAYFLOWER",
+      "role": "review",
+      "definition": "The ship that brought English settlers to the shores of what became New England in 1620",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "1af6eb734bb1ec3d"
+      }
+     },
+     {
+      "answer": "NUNAVUT",
+      "role": "review",
+      "definition": "The largest and northernmost territory of Canada, created in 1999 for the Inuit; the name means “our land”",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "fdcc4ae7042cadb5"
+      }
+     },
+     {
+      "answer": "LACROSSE",
+      "role": "review",
+      "definition": "A team sport played with a ball and netted sticks, developed from traditional games of several Indigenous peoples of North America. It is Canada’s national summer sport",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "368b7a20ece8dfda"
+      }
+     },
+     {
+      "answer": "CONSTITUTION",
+      "role": "review",
+      "definition": "The supreme law of the United States, signed in 1787 and put into effect in 1789. It is considered the oldest written national charter still in force",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c04486c5511c8a02"
+      }
+     },
+     {
+      "answer": "HOCKEY",
+      "role": "review",
+      "definition": "A game on ice with sticks and a puck; the first game under written rules was played in Montreal in 1875",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "7beb6280e1ec5746"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-mexico-guatemala-belize",
+   "title": {
+    "ru": "Мексика, Гватемала и Белиз",
+    "en": "Mexico, Guatemala and Belize"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПОПОЛЬВУХ",
+      "display": "ПОПОЛЬ-ВУХ",
+      "role": "final",
+      "definition": "Священная книга народа киче в Гватемале, записанная в XVI веке: мифы о сотворении мира и героях-близнецах",
+      "note": "Нормативное написание — Пополь-Вух.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "98b0a81ce721daa8"
+      }
+     },
+     {
+      "answer": "ОЛЬМЕКИ",
+      "role": "review",
+      "definition": "Одна из древнейших цивилизаций Мезоамерики, существовавшая на побережье Мексиканского залива и известная гигантскими каменными головами",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a8c94666bf5ef1db"
+      }
+     },
+     {
+      "answer": "САПОТЕКИ",
+      "role": "review",
+      "definition": "Народ долины Оахака на юге Мексики; больше 2000 лет назад построил город на горе Монте-Альбан",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "432d7a0bf074c3f5"
+      }
+     },
+     {
+      "answer": "СЕНОТЫ",
+      "role": "review",
+      "definition": "Природные колодцы Юкатана: провалы в известняке с подземной водой, священные для майя",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c3967fe27b07296a"
+      }
+     },
+     {
+      "answer": "КАРАКОЛЬ",
+      "role": "review",
+      "definition": "Руины крупного города майя в лесах Белиза. Его главная пирамида Каана высотой около 43 метров относится к самым высоким древним сооружениям страны",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "1bfa440b299065ab"
+      }
+     },
+     {
+      "answer": "ГАРИФУНА",
+      "role": "review",
+      "definition": "Народ карибского побережья Белиза, Гондураса и Гватемалы, потомки африканцев и карибских индейцев; их язык, музыка и танцы в списке ЮНЕСКО",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "f24e0de1a897bcef"
+      }
+     },
+     {
+      "answer": "ОБСИДИАН",
+      "role": "review",
+      "definition": "Чёрное вулканическое стекло; майя и ацтеки делали из него острые ножи и наконечники",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "4f4c1f8253a78229"
+      }
+     },
+     {
+      "answer": "ИЕРОГЛИФЫ",
+      "role": "review",
+      "definition": "Знаки письменности майя, вырезанные на стелах и лестницах городов, например Копана и Тикаля",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "95b81a9ee37c3983"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "POPOLVUH",
+      "display": "POPOL VUH",
+      "role": "final",
+      "definition": "The sacred book of the K’iche’ Maya of Guatemala, written down in the 16th century: myths of the creation and the Hero Twins",
+      "note": "The usual spelling is Popol Vuh.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "830b5d92e00de9c7"
+      }
+     },
+     {
+      "answer": "OLMECS",
+      "role": "review",
+      "definition": "One of the earliest civilizations of Mesoamerica, which developed along the Gulf Coast of Mexico and is famous for its colossal stone heads",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "ad6587ad13bcb455"
+      }
+     },
+     {
+      "answer": "ZAPOTECS",
+      "role": "review",
+      "definition": "A people of the Oaxaca Valley in southern Mexico; more than 2,000 years ago they built a city on the hill of Monte Albán",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "da7b79df62907009"
+      }
+     },
+     {
+      "answer": "CENOTES",
+      "role": "review",
+      "definition": "Natural wells of Yucatán: sinkholes in limestone with groundwater, sacred to the Maya",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "2476f71a2d2740e6"
+      }
+     },
+     {
+      "answer": "CARACOL",
+      "role": "review",
+      "definition": "The ruins of a major Maya city in the forests of Belize. Its main pyramid, Caana, stands about 43 metres tall and is among the country’s tallest ancient structures",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "b4df8dc1dc83a2bb"
+      }
+     },
+     {
+      "answer": "GARIFUNA",
+      "role": "review",
+      "definition": "A people of the Caribbean coast of Belize, Honduras and Guatemala, descended from Africans and Island Caribs; their language, music and dance are on a UNESCO list",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a92aae732f4049e6"
+      }
+     },
+     {
+      "answer": "OBSIDIAN",
+      "role": "review",
+      "definition": "Black volcanic glass; the Maya and the Aztecs made sharp knives and blades from it",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "54bd4ee64e500feb"
+      }
+     },
+     {
+      "answer": "HIEROGLYPHS",
+      "role": "review",
+      "definition": "Signs of Maya writing carved on the stelae and stairways of cities such as Copan and Tikal",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "611b763ee78f0a0f"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-honduras-to-panama",
+   "title": {
+    "ru": "От Гондураса до Панамы",
+    "en": "From Honduras to Panama"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГУАНАКАСТЕ",
+      "role": "final",
+      "definition": "Северо-западная провинция Коста-Рики с сухими лесами и пастбищами; названа по дереву, которое стало национальным деревом страны",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "8d240cd9a48f0459"
+      }
+     },
+     {
+      "answer": "КУСКАТЛАН",
+      "role": "review",
+      "definition": "Историческое государственное образование народа пипиль на территории современного Сальвадора, существовавшее до испанского завоевания XVI века",
+      "note": "Кускатлан — историческое государственное образование народа пипиль на территории современного Сальвадора. Пипили говорили на языке науат.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "29e5541d0f8d8313"
+      }
+     },
+     {
+      "answer": "ИЛОПАНГО",
+      "role": "review",
+      "definition": "Озеро в кратере вулкана рядом с Сан-Сальвадором; его извержение около 431 года засыпало пеплом поселения майя",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "fceab99808df6ed5"
+      }
+     },
+     {
+      "answer": "МИСКИТО",
+      "role": "review",
+      "definition": "Народ Москитового берега — карибского побережья Никарагуа и Гондураса",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "c3b9d9ab585644a2"
+      }
+     },
+     {
+      "answer": "САНДИНИСТЫ",
+      "role": "review",
+      "definition": "Политическое движение Никарагуа, названное в честь вождя борьбы против американской оккупации 1927–1933 годов. Его представители пришли к власти после революции 1979 года. Движение продолжает играть важную роль в политической жизни страны",
+      "note": "Движение названо в честь Аугусто Сесара Сандино.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5342ec1d4d071d00"
+      }
+     },
+     {
+      "answer": "ЧОРОТЕГА",
+      "role": "review",
+      "definition": "Древний народ тихоокеанского побережья Никарагуа и Коста-Рики, известный расписной керамикой",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "a4af9d70982749ac"
+      }
+     },
+     {
+      "answer": "БРИБРИ",
+      "role": "review",
+      "definition": "Коренной народ гор Таламанка на юге Коста-Рики и в Панаме; сохраняет свой язык и выращивает какао",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "e8d5dc5830fb54eb"
+      }
+     },
+     {
+      "answer": "АППЛИКАЦИЯ",
+      "role": "review",
+      "definition": "Техника украшения ткани, при которой на основу нашивают или накладывают другие кусочки материала. Женщины народа гуна в Панаме используют многослойную обратную технику этого вида для создания традиционных мола",
+      "note": "В технике мола узор вырезают в верхних слоях ткани, и сквозь них видны нижние — это обратная аппликация.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "07cf111cb2f23fcb"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "GUANACASTE",
+      "role": "final",
+      "definition": "The north-western province of Costa Rica, with dry forests and pastures; named after the tree that became the national tree of the country",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "5f927d678d103e24"
+      }
+     },
+     {
+      "answer": "CUSCATLAN",
+      "role": "review",
+      "definition": "A historical Pipil political entity in what is now El Salvador, which existed before the Spanish conquest in the 16th century",
+      "note": "Cuscatlán was a pre-Columbian polity of the Pipil people in present-day El Salvador. Their language was Nawat.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "23e2638896be85fd"
+      }
+     },
+     {
+      "answer": "ILOPANGO",
+      "role": "review",
+      "definition": "A crater lake next to San Salvador; its volcano erupted around the year 431 and buried Maya villages in ash",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "bff18522f31a7208"
+      }
+     },
+     {
+      "answer": "MISKITO",
+      "role": "review",
+      "definition": "A people of the Mosquito Coast, the Caribbean coast of Nicaragua and Honduras",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "64fee0f58b46dd67"
+      }
+     },
+     {
+      "answer": "SANDINISTAS",
+      "role": "review",
+      "definition": "A Nicaraguan political movement named after the leader of the fight against the US occupation of 1927–1933. It came to power after the 1979 revolution and continues to play a major role in the country’s politics",
+      "note": "The movement is named after Augusto César Sandino.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "d971cd0b36f65089"
+      }
+     },
+     {
+      "answer": "CHOROTEGA",
+      "role": "review",
+      "definition": "An ancient people of the Pacific coast of Nicaragua and Costa Rica, known for painted pottery",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "90d452ed6e53bbe9"
+      }
+     },
+     {
+      "answer": "BRIBRI",
+      "role": "review",
+      "definition": "An Indigenous people of the Talamanca mountains in southern Costa Rica and in Panama; they keep their own language and grow cacao",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "0e911b4f8199c78b"
+      }
+     },
+     {
+      "answer": "APPLIQUE",
+      "display": "APPLIQUÉ",
+      "role": "review",
+      "definition": "A textile decoration technique involving layers or pieces of fabric. Guna women in Panama use a reverse form of it to create traditional molas",
+      "note": "In a mola the pattern is cut into the upper layers of fabric so that the lower layers show through: this is reverse appliqué.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "605848d22ad4fc9c"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ФЕДЕРАЦИЯ",
+      "role": "section-final",
+      "definition": "Союз, в который в 1823–1841 годах входили пять стран Центральной Америки: Гватемала, Сальвадор, Гондурас, Никарагуа и Коста-Рика. Потом он распался на отдельные государства",
+      "note": "Сегодня федерации в этом разделе — Канада, США и Мексика; страны Центральной Америки — унитарные государства.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "1514726838e0109a"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "FEDERATION",
+      "role": "section-final",
+      "definition": "A union of five Central American countries in 1823–1841: Guatemala, El Salvador, Honduras, Nicaragua and Costa Rica. It later broke up into separate states",
+      "note": "Today the federations in this section are Canada, the United States and Mexico; the countries of Central America are unitary states.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-13",
+       "contentSha256": "6afc4940f05244ae"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

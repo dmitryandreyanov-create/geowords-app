@@ -1,0 +1,48 @@
+import assert from 'node:assert/strict';
+import {spawnSync} from 'node:child_process';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import model from '../tools/learning-review-model.js';
+import {loadL1Sources,fingerprint,adaptCatalog,createEditorialTemplate} from '../tools/catalog-adapter.mjs';
+const sources=loadL1Sources(),original=fingerprint(sources),rows=model.sourceRows(sources),sourceHashes=Object.fromEntries(rows.map(r=>[r.key,fingerprint(r.source)]));
+const template=model.create(sources,sourceHashes),state=structuredClone(template);
+assert.equal(rows.length,33);assert(state.records.every(r=>r.status==='editorial_pending'&&Object.values(r.decision).every(v=>v===null)));
+for(const row of rows)assert.equal(await model.hash(row.source),sourceHashes[row.key],'browser digest matches adapter canonical SHA');
+const hashes=data=>Object.fromEntries(data.records.map(r=>[r.key,fingerprint(r.decision)]));
+assert.deepEqual(model.restore(sources,template,state,hashes(state)),state);
+const factKey='fact:f-l1-p06-continents',stepKey='step:l1-01-step',get=key=>state.records.find(r=>r.key===key);
+assert.throws(()=>model.confirm(sources,state,factKey,'SYNTHETIC TEST',fingerprint(get(factKey).decision)),/null/);
+// Mechanical fixture decisions ONLY: source JSON is never changed or written.
+model.edit(sources,state,factKey,{text:{en:'Synthetic review test text, not an approval of source content.'},introducesPlaces:['place-africa'],caveatFactIds:[]});
+model.confirm(sources,state,factKey,'SYNTHETIC TEST ONLY',fingerprint(get(factKey).decision));
+assert.equal(get(factKey).status,'approved');assert.deepEqual(model.restore(sources,template,state,hashes(state)),state);
+const approved=structuredClone(state),bad=structuredClone(state);bad.records.find(r=>r.key===factKey).decision.text.en='Changed';
+assert.throws(()=>model.restore(sources,template,bad,hashes(bad)),/подтверждение/);assert.deepEqual(state,approved,'failed restore cannot mutate current state');
+model.edit(sources,state,factKey,{...get(factKey).decision,text:{en:'Edited mechanical test'}});assert.equal(get(factKey).status,'editorial_pending');assert.equal(get(factKey).evidence,null);
+model.confirm(sources,state,factKey,'SYNTHETIC TEST ONLY',fingerprint(get(factKey).decision));
+for(const mutate of [d=>{d.records.push(d.records[0])},d=>{d.records.pop()},d=>{d.records[0].sourceSha256='a'.repeat(64)},d=>{d.records[0].decision.introducesPlaces=['foreign']},d=>{d.records[0].key='foreign'},d=>{d.scope='other'}]){const d=structuredClone(state);mutate(d);assert.throws(()=>model.restore(sources,template,d,hashes(d)))}
+const caveatKey='fact:f-l1-p10-oceans-left',caveat=state.records.find(r=>r.key===caveatKey);
+model.edit(sources,state,caveatKey,{text:{en:'Synthetic text'},introducesPlaces:[],caveatFactIds:[]});
+assert.throws(()=>model.confirm(sources,state,caveatKey,'SYNTHETIC',fingerprint(caveat.decision)),/оговорки/);
+const plan=sources.lexicon.practicePlans.find(p=>p.stepId==='l1-01-step');
+const decision={requiresFacts:[],learnBefore:[],unlockAfter:['f-l1-p06-continents'],introducedPlaces:[],wordIds:[...plan.candidateWordIds],focusPlaceIds:[]};
+assert.equal(model.wordChoices(sources).length,60);
+assert.throws(()=>model.edit(sources,state,stepKey,{...decision,wordIds:['aquifer',...decision.wordIds.slice(1)]}),/Неизвестная/,'do not offer unsupported Rivers-only vocabulary IDs');
+model.edit(sources,state,stepKey,decision);assert.throws(()=>model.confirm(sources,state,stepKey,'',fingerprint(decision)),/кто проверил/);
+model.confirm(sources,state,stepKey,'SYNTHETIC TEST ONLY',fingerprint(decision));
+const invalidation=structuredClone(state);model.edit(sources,invalidation,factKey,{...get(factKey).decision,text:{en:'Changed fact'}});assert.equal(invalidation.records.find(r=>r.key===stepKey).status,'editorial_pending','changed fact invalidates order confirmation');
+const preview=model.report(sources,state);assert(preview[0].issues.some(i=>i.code==='CLUE_FACT_NOT_LEARNED'&&i.factId==='f-l1-p06-continents'),'after fact cannot explain authored clue');
+assert(preview.every(r=>r.preview&&r.dependencyStatus==='candidate_dependencies_not_approved'));
+assert.deepEqual(preview[1].knownBefore,[],'invalid first step cannot provide facts to the second');
+model.edit(sources,state,stepKey,{...decision,wordIds:decision.wordIds.slice(0,5)});assert.throws(()=>model.confirm(sources,state,stepKey,'SYNTHETIC',fingerprint(get(stepKey).decision)),/шесть/);
+model.edit(sources,state,stepKey,decision);model.confirm(sources,state,stepKey,'SYNTHETIC TEST ONLY',fingerprint(decision));
+const merged=adaptCatalog(sources,{learningReview:state});assert(!merged.ready);assert.equal(merged.curriculum,null);
+assert(!merged.blockers.some(b=>b.code==='EDITORIAL_PENDING'&&[factKey,stepKey].includes(b.key)));
+assert(merged.blockers.some(b=>b.code==='EDITORIAL_PENDING'&&b.key.startsWith('word:')),'lesson decisions never approve vocabulary');
+const ledger=createEditorialTemplate(sources);Object.assign(ledger.records.find(r=>r.key===factKey),approved.records.find(r=>r.key===factKey));
+assert(adaptCatalog(sources,{editorial:ledger,learningReview:state}).blockers.some(b=>b.code==='INVALID_LEARNING_REVIEW'),'conflicting approved ledger cannot be overwritten');
+const dir=fs.mkdtempSync(path.join(os.tmpdir(),'geowords-learning-'));
+try{const file=path.join(dir,'synthetic-review.json');fs.writeFileSync(file,JSON.stringify(state));const cli=spawnSync(process.execPath,['tools/catalog-adapter.mjs','--learning',file,'--require-ready'],{encoding:'utf8'});assert.equal(cli.status,1);assert.equal(JSON.parse(cli.stdout).curriculum,null)}finally{fs.rmSync(dir,{recursive:true,force:true})}
+assert.equal(fingerprint(sources),original,'no real source statuses/text/order changed');
+console.log('PASS: 33 source-bound learning decisions, browser/adapter SHA agreement, null versus [], explicit approvals, edits revoke, atomic stale/foreign import, caveats, six words, future-fact preview and adapter merge without vocabulary/content release.');

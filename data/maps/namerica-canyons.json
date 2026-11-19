@@ -1,0 +1,24 @@
+{
+ "map": "./assets/namerica-canyons.webp",
+ "of": "./assets/namerica-deserts.webp",
+ "level": "The Colorado Plateau canyons, large: North America section 5",
+ "coordinateSystem": "frame: the piece of namerica-deserts.webp this map shows, in % of that map (x, y = top left; w, h = size). A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so the tap areas of namerica-deserts.json apply unchanged.",
+ "source": "Built by tools/build_namerica_deserts.py",
+ "frame": {
+  "x": 39.1,
+  "y": 60.9,
+  "w": 6.0,
+  "h": 6.0
+ },
+ "aspect": "11 / 8",
+ "magnifier": {
+  "x": 42.1,
+  "y": 63.9
+ },
+ "objects": [
+  "na-grand-canyon",
+  "na-antelope-canyon",
+  "na-black-canyon",
+  "na-canyon-de-chelly"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "mapping": {
+    "status": "user_submitted_complete",
+    "ambiguousMapped": 69,
+    "totalMapped": 187
+  },
+  "geographicReview": {
+    "status": "testing_deferred",
+    "confirmedClues": 0,
+    "userStatement": "Мельком посмотрел. Будем потом тестить.",
+    "recordedDate": "2026-10-12"
+  },
+  "factReview": {
+    "status": "editorial_pending",
+    "sourceBlockCount": 41
+  },
+  "publicationAllowed": false
+}

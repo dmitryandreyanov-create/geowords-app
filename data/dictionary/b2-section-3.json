@@ -1,0 +1,619 @@
+{
+ "section": "mountains-of-europe",
+ "block": 2,
+ "status": "approved",
+ "source": "Svetlana's list (28.10.2026) and the doc https://claude.ai/artifact/X5TXYq2ijDoS5S7TEJgtBb",
+ "rules": {
+  "structure": "3 units x (1 final + at least 6 review words) + section final; practice draws 6 of each unit's review words",
+  "places": "letters on the learned ranges of the section first, then on the objects of section 1 (europe-overview.json); rivers are not drawn on the mountains map",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "all words approved by Svetlana 28.10.2026: her list, with repeats of earlier sections removed, NUNATAK/FIRN/ELBRUS/KAZBEK/PROMETHEUS added, SADDLE/СЕДЛОВИНА added, English without Ø and Ý («Согласна»)"
+ },
+ "units": [
+  {
+   "id": "unit-1-mountains-of-western-and-southern-europe",
+   "title": {
+    "ru": "Горы Западной и Южной Европы",
+    "en": "Mountains of Western and Southern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "МАТТЕРХОРН",
+      "role": "final",
+      "definition": "Знаменитая альпийская вершина с характерной пирамидальной формой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e990ad3c17a31688"
+      }
+     },
+     {
+      "answer": "МОНБЛАН",
+      "role": "review",
+      "definition": "Высочайшая вершина Альп.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "61014a30b55c5053"
+      }
+     },
+     {
+      "answer": "ЮНГФРАУ",
+      "role": "review",
+      "definition": "Альпийская вершина, чьё название означает «дева».",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "9dc5db4a88dd84e0"
+      }
+     },
+     {
+      "answer": "ДОЛОМИТЫ",
+      "role": "review",
+      "definition": "Горная область Альп, известная своими скалами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "8c7305cf7b7eb6fa"
+      }
+     },
+     {
+      "answer": "ВЕЗУВИЙ",
+      "role": "review",
+      "definition": "Вулкан возле Неаполя.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "6e60f9ab772042af"
+      }
+     },
+     {
+      "answer": "ЭТНА",
+      "role": "review",
+      "definition": "Действующий вулкан Сицилии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b369ece19fd7769d"
+      }
+     },
+     {
+      "answer": "СТРОМБОЛИ",
+      "role": "review",
+      "definition": "Вулкан на острове к северу от Сицилии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d615873cefde1dcd"
+      }
+     },
+     {
+      "answer": "ЛАВИНА",
+      "role": "review",
+      "definition": "Быстрое движение снежных масс по склону.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "ce47bcc4f55c0ef3"
+      }
+     },
+     {
+      "answer": "СЕДЛОВИНА",
+      "role": "review",
+      "definition": "Понижение в горном хребте между двумя вершинами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "dbc33a6a57754ce3"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MATTERHORN",
+      "role": "final",
+      "definition": "A famous Alpine peak with a distinctive pyramid shape.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "1cac9f12814530bc"
+      }
+     },
+     {
+      "answer": "JUNGFRAU",
+      "role": "review",
+      "definition": "An Alpine peak whose name means \"maiden\".",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0b0dba124e6a6e19"
+      }
+     },
+     {
+      "answer": "DOLOMITES",
+      "role": "review",
+      "definition": "A mountain area of the Alps famous for its rocky cliffs.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "ce5f3a81a3983267"
+      }
+     },
+     {
+      "answer": "VESUVIUS",
+      "role": "review",
+      "definition": "A volcano near Naples.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f463c61df884a8fe"
+      }
+     },
+     {
+      "answer": "ETNA",
+      "role": "review",
+      "definition": "An active volcano in Sicily.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b264290cccb86dd8"
+      }
+     },
+     {
+      "answer": "STROMBOLI",
+      "role": "review",
+      "definition": "A volcano on an island north of Sicily.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "dea059b7429c85aa"
+      }
+     },
+     {
+      "answer": "SADDLE",
+      "role": "review",
+      "definition": "A low point on a ridge between two peaks.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "5d862393de1c2db1"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-mountains-of-central-and-south-eastern-europe",
+   "title": {
+    "ru": "Горы Центральной и Юго-Восточной Европы",
+    "en": "Mountains of Central and South-Eastern Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТРАНСИЛЬВАНИЯ",
+      "role": "final",
+      "definition": "Историческая область Румынии, связанная с Карпатами и легендами о Дракуле.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "edc94e87a24515a7"
+      }
+     },
+     {
+      "answer": "ТАТРЫ",
+      "role": "review",
+      "definition": "Высочайшая часть Карпат.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "4b460e36d42ce558"
+      }
+     },
+     {
+      "answer": "ГЕРЛАХОВСКИ",
+      "role": "review",
+      "definition": "Высочайшая вершина Карпат, она стоит в Словакии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "05231d9441f78837"
+      }
+     },
+     {
+      "answer": "СУДЕТЫ",
+      "role": "review",
+      "definition": "Горы Центральной Европы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "af4b6e9c2e0810be"
+      }
+     },
+     {
+      "answer": "ТРИГЛАВ",
+      "role": "review",
+      "definition": "Высочайшая вершина Словении, национальный символ.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d27d1a7f44ae6f03"
+      }
+     },
+     {
+      "answer": "ДУРМИТОР",
+      "role": "review",
+      "definition": "Горный массив Черногории.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f51d10c93490e322"
+      }
+     },
+     {
+      "answer": "КАРСТ",
+      "role": "review",
+      "definition": "Растворение горных пород водой и образование пещер.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "376e68cb769611ec"
+      }
+     },
+     {
+      "answer": "ОЛИМП",
+      "role": "review",
+      "definition": "Гора в Греции, обитель богов в мифологии.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "64f78b523f188ea6"
+      }
+     },
+     {
+      "answer": "ПАРНАС",
+      "role": "review",
+      "definition": "Гора Аполлона и муз.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3c2c1650386f465e"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TRANSYLVANIA",
+      "role": "final",
+      "definition": "A historic region of Romania linked to the Carpathians and the legends of Dracula.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "5b4b09c83c7fdda1"
+      }
+     },
+     {
+      "answer": "TATRAS",
+      "role": "review",
+      "definition": "The highest part of the Carpathians.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "2ce16ef94ef9a095"
+      }
+     },
+     {
+      "answer": "GERLACHOVSKY",
+      "role": "review",
+      "definition": "The highest peak of the Carpathians, in Slovakia.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "76175905dcc2cec1"
+      }
+     },
+     {
+      "answer": "SUDETES",
+      "role": "review",
+      "definition": "Mountains of Central Europe.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0fed894e69994a6e"
+      }
+     },
+     {
+      "answer": "TRIGLAV",
+      "role": "review",
+      "definition": "The highest peak of Slovenia and a national symbol.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e78ce59d45d912dc"
+      }
+     },
+     {
+      "answer": "DURMITOR",
+      "role": "review",
+      "definition": "A mountain massif in Montenegro.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "3950fc17e8ecd946"
+      }
+     },
+     {
+      "answer": "KARST",
+      "role": "review",
+      "definition": "Rock dissolved by water, forming caves.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f8718f37d1bb82a8"
+      }
+     },
+     {
+      "answer": "OLYMPUS",
+      "role": "review",
+      "definition": "A mountain in Greece, home of the gods in myth.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "b774cc1d7d13b3d4"
+      }
+     },
+     {
+      "answer": "PARNASSUS",
+      "role": "review",
+      "definition": "The mountain of Apollo and the Muses.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "e95a6ceb8bc6f67b"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-mountains-of-the-north-and-east",
+   "title": {
+    "ru": "Горы Севера и Востока",
+    "en": "Mountains of the North and East"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГАЛЛХЁПИГГЕН",
+      "role": "final",
+      "definition": "Высочайшая вершина Скандинавских гор.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "913eedce1908d778"
+      }
+     },
+     {
+      "answer": "ЦИРК",
+      "role": "review",
+      "definition": "Чашеобразное углубление на склоне, созданное ледником.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "278ca17fb76d6080"
+      }
+     },
+     {
+      "answer": "НУНАТАК",
+      "role": "review",
+      "definition": "Скала или вершина, которая торчит над ледником.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "d5d8a7ad96851e5a"
+      }
+     },
+     {
+      "answer": "ФИРН",
+      "role": "review",
+      "definition": "Плотный зернистый снег, из которого постепенно образуется лёд ледника.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "763606d40e1353dc"
+      }
+     },
+     {
+      "answer": "ЭЛЬБРУС",
+      "role": "review",
+      "definition": "Высочайшая вершина Кавказа, двуглавый спящий вулкан.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "736911e7cf1fbe0e"
+      }
+     },
+     {
+      "answer": "КАЗБЕК",
+      "role": "review",
+      "definition": "Спящий вулкан на Кавказе, у которого, по легенде, был прикован Прометей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "a3d92ec08b261ec4"
+      }
+     },
+     {
+      "answer": "ПРОМЕТЕЙ",
+      "role": "review",
+      "definition": "Герой мифа, прикованный к скале Кавказа за то, что подарил людям огонь.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "fb71f110502e9124"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "GALDHOPIGGEN",
+      "role": "final",
+      "definition": "The highest peak of the Scandinavian Mountains.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "cc044163602105f0"
+      }
+     },
+     {
+      "answer": "CIRQUE",
+      "role": "review",
+      "definition": "A bowl-shaped hollow on a slope, carved by a glacier.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "17eee5314a0a2e25"
+      }
+     },
+     {
+      "answer": "NUNATAK",
+      "role": "review",
+      "definition": "A rocky peak that sticks up through a glacier.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "035a2d8bf67ad1f9"
+      }
+     },
+     {
+      "answer": "FIRN",
+      "role": "review",
+      "definition": "Dense, grainy snow that slowly turns into glacier ice.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "425fb273eb075e89"
+      }
+     },
+     {
+      "answer": "ELBRUS",
+      "role": "review",
+      "definition": "The highest peak of the Caucasus, a twin-peaked dormant volcano.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "f359425e3f5cdf48"
+      }
+     },
+     {
+      "answer": "KAZBEK",
+      "role": "review",
+      "definition": "A dormant volcano in the Caucasus where, in legend, Prometheus was chained.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "30f411a974fb12b1"
+      }
+     },
+     {
+      "answer": "PROMETHEUS",
+      "role": "review",
+      "definition": "The hero of a myth, chained to a Caucasus rock for giving fire to people.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "0649a17c17c7aa6b"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "АЛЬПИНИЗМ",
+      "role": "section-final",
+      "definition": "Восхождения на высокие вершины.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "c0e74a323583c311"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "MOUNTAINEERING",
+      "role": "section-final",
+      "definition": "The sport of climbing high peaks.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-28",
+       "contentSha256": "fa40bbe1cf6c0fcf"
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-28"
+}

@@ -1,0 +1,595 @@
+{
+ "section": "south-america-on-the-map",
+ "block": 5,
+ "status": "approved",
+ "source": "25 words RU + 25 EN chosen by Svetlana (19.11.2026); definitions by Claude, approved 19.11.2026 in https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; practice draws 6 of each unit's review words",
+  "languages": "EN words are the same terms without diacritics or apostrophes (SELKNAM, TUPINAMBA, PARAMO, MANTENO)",
+  "length": "letters only on learned objects of the South America map, one per object: unit 1 (8 objects) holds words of up to 7 letters",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)"
+ },
+ "units": [
+  {
+   "id": "unit-1-oceans-and-farthest-points",
+   "title": {
+    "ru": "Океаны и крайние точки",
+    "en": "Oceans and the farthest points"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ГУАРАНИ",
+      "role": "final",
+      "definition": "Народ, чей язык — один из официальных в Парагвае; оттуда пришло слово «ягуар».",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "62b2dd69b38b37f6"
+      }
+     },
+     {
+      "answer": "ПАРАМО",
+      "role": "review",
+      "definition": "Высокогорные луга Анд выше границы леса, где растут пушистые фрайлехоны.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "5f0b0d09da5a9185"
+      }
+     },
+     {
+      "answer": "ЛЬЯНОС",
+      "role": "review",
+      "definition": "Огромные тропические равнины в бассейне Ориноко, которые в сезон дождей заливает водой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "204f4ee5c4b77962"
+      }
+     },
+     {
+      "answer": "ПАМПАСЫ",
+      "role": "review",
+      "definition": "Равнинные травянистые степи Аргентины и Уругвая, родина гаучо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "a4d79839c282a6a6"
+      }
+     },
+     {
+      "answer": "СЕРРАДО",
+      "role": "review",
+      "definition": "Бразильская саванна с низкими кривыми деревьями и высокой травой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "e3d5f0c7eaa8d68e"
+      }
+     },
+     {
+      "answer": "ГВИАНА",
+      "role": "review",
+      "definition": "Историческая область на северо-востоке материка между реками Ориноко и Амазонкой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "43ce45328bda64da"
+      }
+     },
+     {
+      "answer": "АЙМАРА",
+      "role": "review",
+      "definition": "Народ, живущий у озера Титикака в Боливии и Перу.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "9db47e40e3a42659"
+      }
+     },
+     {
+      "answer": "МАПУЧЕ",
+      "role": "review",
+      "definition": "Народ юга Чили и Аргентины, который веками отстаивал свои земли от инков и испанцев.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "c17e19dd6984b790"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "GUARANI",
+      "role": "final",
+      "definition": "A people whose language is one of the official languages of Paraguay; the word “jaguar” comes from it.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "ce0c856649ad03ad"
+      }
+     },
+     {
+      "answer": "PARAMO",
+      "role": "review",
+      "definition": "High meadows of the Andes above the tree line, where fuzzy frailejones grow.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "a59b45fbd2731909"
+      }
+     },
+     {
+      "answer": "LLANOS",
+      "role": "review",
+      "definition": "Huge tropical plains in the Orinoco basin that flood in the rainy season.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "9e171ea4e6eb2367"
+      }
+     },
+     {
+      "answer": "PAMPAS",
+      "role": "review",
+      "definition": "Flat grassy plains of Argentina and Uruguay, the home of the gauchos.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "18641df7ec898344"
+      }
+     },
+     {
+      "answer": "CERRADO",
+      "role": "review",
+      "definition": "The Brazilian savanna with low twisted trees and tall grass.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "f4d73a13f2700a78"
+      }
+     },
+     {
+      "answer": "GUIANA",
+      "role": "review",
+      "definition": "A historical region in the northeast of the continent between the Orinoco and the Amazon.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "5ca4533a80c93355"
+      }
+     },
+     {
+      "answer": "AYMARA",
+      "role": "review",
+      "definition": "A people living around Lake Titicaca in Bolivia and Peru.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "6cd18442ebad9151"
+      }
+     },
+     {
+      "answer": "MAPUCHE",
+      "role": "review",
+      "definition": "A people of southern Chile and Argentina who defended their lands from the Incas and the Spanish for centuries.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "dc771917754ae698"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-equator-tropic-islands",
+   "title": {
+    "ru": "Экватор, тропик и острова",
+    "en": "The equator, the tropic and islands"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "АЛЬТИПЛАНО",
+      "role": "final",
+      "definition": "Высокое плоскогорье в Андах, где лежат озеро Титикака и солончак Уюни.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "9f87185891a0d4d0"
+      }
+     },
+     {
+      "answer": "АМАЗОНИЯ",
+      "role": "review",
+      "definition": "Огромная область тропических лесов в бассейне самой полноводной реки мира.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "184c178daa6f8690"
+      }
+     },
+     {
+      "answer": "ПАТАГОНИЯ",
+      "role": "review",
+      "definition": "Ветреная область на юге материка, в Аргентине и Чили.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "283b36c73dc7292e"
+      }
+     },
+     {
+      "answer": "ТИКУНА",
+      "role": "review",
+      "definition": "Один из самых многочисленных народов тропических лесов; живёт у границы Бразилии, Колумбии и Перу.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "fd505ae5b8fd2e2a"
+      }
+     },
+     {
+      "answer": "МУИСКА",
+      "role": "review",
+      "definition": "Народ гор Колумбии; их обряд с золотом на озере породил легенду об Эльдорадо.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "7da743ce51be0521"
+      }
+     },
+     {
+      "answer": "ЯНОМАМИ",
+      "role": "review",
+      "definition": "Народ тропических лесов на границе Бразилии и Венесуэлы; живёт в больших круглых общих домах.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "ef3d424313740d72"
+      }
+     },
+     {
+      "answer": "СЕЛЬКНАМ",
+      "role": "review",
+      "definition": "Коренной народ Огненной Земли, охотники на гуанако.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "88bc3c03e3be7d75"
+      }
+     },
+     {
+      "answer": "ТУПИНАМБА",
+      "role": "review",
+      "definition": "Народ атлантического побережья Бразилии, с которым первыми встретились португальцы в XVI веке.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "ce7f563be395bf3f"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ALTIPLANO",
+      "role": "final",
+      "definition": "A high plateau in the Andes with Lake Titicaca and the Uyuni salt flat.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "d1d2a398faeb4784"
+      }
+     },
+     {
+      "answer": "AMAZONIA",
+      "role": "review",
+      "definition": "A huge region of rainforest in the basin of the river with the most water in the world.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "c47b7062c9d121a7"
+      }
+     },
+     {
+      "answer": "PATAGONIA",
+      "role": "review",
+      "definition": "A windy region in the south of the continent, in Argentina and Chile.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "fcc15f41f7eb6886"
+      }
+     },
+     {
+      "answer": "TICUNA",
+      "role": "review",
+      "definition": "One of the largest peoples of the rainforest; they live where Brazil, Colombia and Peru meet.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "b7b1a487f41d5046"
+      }
+     },
+     {
+      "answer": "MUISCA",
+      "role": "review",
+      "definition": "A people of the Colombian mountains; their gold ceremony on a lake gave rise to the legend of El Dorado.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "66a4ee7ab89198eb"
+      }
+     },
+     {
+      "answer": "YANOMAMI",
+      "role": "review",
+      "definition": "A rainforest people on the border of Brazil and Venezuela who live in large round shared houses.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "195b2807d3a36e20"
+      }
+     },
+     {
+      "answer": "SELKNAM",
+      "role": "review",
+      "definition": "The native people of Tierra del Fuego, hunters of guanacos.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "54933a60959a5a3a"
+      }
+     },
+     {
+      "answer": "TUPINAMBA",
+      "role": "review",
+      "definition": "A people of the Atlantic coast of Brazil, the first the Portuguese met in the 16th century.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "5106e9e76539ecf8"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-far-south",
+   "title": {
+    "ru": "Юг материка",
+    "en": "The far south"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ТИУАНАКО",
+      "role": "final",
+      "definition": "Древний город у озера Титикака, столица культуры, расцветшей задолго до инков.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "59021313fbd150a8"
+      }
+     },
+     {
+      "answer": "ПАРАКАС",
+      "role": "review",
+      "definition": "Древняя культура южного побережья Перу, известная яркими тканями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "a740097d6c61ae79"
+      }
+     },
+     {
+      "answer": "МОЧИКА",
+      "role": "review",
+      "definition": "Культура северного побережья Перу, мастера глиняных сосудов с портретами людей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "62aec3e66171fdf4"
+      }
+     },
+     {
+      "answer": "ВАЛЬДИВИЯ",
+      "role": "review",
+      "definition": "Одна из древнейших культур Америки на побережье Эквадора; её глиняной посуде около 5000 лет.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "a11dbd1d2b897a12"
+      }
+     },
+     {
+      "answer": "КАЛИМА",
+      "role": "review",
+      "definition": "Древняя культура Колумбии, известная золотыми украшениями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "d3baa902eb0aa175"
+      }
+     },
+     {
+      "answer": "МАНТЕНЬО",
+      "role": "review",
+      "definition": "Культура побережья Эквадора, мореходы на плотах из бальсы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "1562e90af708be01"
+      }
+     },
+     {
+      "answer": "ЧАНКАЙ",
+      "role": "review",
+      "definition": "Культура центрального побережья Перу, известная глиняными фигурками и тканями.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "0b67f9fab2676005"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "TIWANAKU",
+      "role": "final",
+      "definition": "An ancient city near Lake Titicaca, the capital of a culture that flourished long before the Incas.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "76c0760f22414d8c"
+      }
+     },
+     {
+      "answer": "PARACAS",
+      "role": "review",
+      "definition": "An ancient culture of the south coast of Peru, known for its bright textiles.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "ccf3a5ff871a4751"
+      }
+     },
+     {
+      "answer": "MOCHICA",
+      "role": "review",
+      "definition": "A culture of the north coast of Peru, makers of clay vessels with portraits of people.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "e2edff1b88b61f09"
+      }
+     },
+     {
+      "answer": "VALDIVIA",
+      "role": "review",
+      "definition": "One of the oldest cultures of the Americas, on the coast of Ecuador; its pottery is about 5,000 years old.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "cafed490e6704eee"
+      }
+     },
+     {
+      "answer": "CALIMA",
+      "role": "review",
+      "definition": "An ancient culture of Colombia known for its gold jewellery.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "364bf78fa52919e0"
+      }
+     },
+     {
+      "answer": "MANTENO",
+      "role": "review",
+      "definition": "A culture of the coast of Ecuador, seafarers on balsa-wood rafts.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "d3f1b52c22734eb2"
+      }
+     },
+     {
+      "answer": "CHANCAY",
+      "role": "review",
+      "definition": "A culture of the central coast of Peru, known for its clay figurines and textiles.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "4a88e5a70980665d"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "КУПИСНИКЕ",
+      "role": "section-final",
+      "definition": "Древняя культура северного побережья Перу, чтившая ягуара.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "7c046f6dd4fea92e"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "CUPISNIQUE",
+      "role": "section-final",
+      "definition": "An ancient culture of the north coast of Peru that honoured the jaguar.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-19",
+       "contentSha256": "b374be821b984235"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

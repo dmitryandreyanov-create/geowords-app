@@ -1,0 +1,922 @@
+{
+  "schemaVersion": 1,
+  "id": "geowords-l1-first-rehearsal-v1",
+  "status": "not_for_live_use",
+  "scope": "l1-first-step-rehearsal",
+  "sourceHashes": {
+    "data/import-staging/l1-staging.json": "b9390ccd5715bef344c1184066dca9a04a49886a9c68119299e67f5d714691e1",
+    "data/import-staging/review-assignments.json": "fb157418deb2f4c67afe25e279400e19523aed02db3cfaf32f3872235062628b",
+    "data/import-staging/lexicon-draft.json": "163b987f9451a6503a5a6ce54f1503294248213c67c5c8999a8c1df8a32562cb",
+    "data/import-staging/curriculum-draft.json": "7eeac94f1084b6739027176e6450a4bcea0825aeeb597bd5116a0e9b292928b4",
+    "data/import-staging/l1-spatial-review-draft.json": "5e5b578a953f1d27b9781cafcc1252876f82ca29b7f55d12cacedc10ca9253b2"
+  },
+  "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+  "humanReview": {
+    "basis": "user_confirmation_in_chat",
+    "date": "2026-10-13",
+    "markerLocations": true,
+    "wordAssembly": true,
+    "coveredPracticeIds": [
+      "trial:atlas",
+      "trial:globe",
+      "trial:mapping",
+      "trial:region",
+      "trial:border",
+      "trial:sphere"
+    ],
+    "variantSha256": {
+      "trial:atlas": "ae1e5fc03c4b0c1969429487c7c5006041d8d806fb79e5f398c4660fb4ecaf83",
+      "trial:globe": "94050043e4f8f2953966d010a5788a54dac98f84ad5f76ed3bfabeb1056fb8a7",
+      "trial:mapping": "ab0ba1a149bcaeefd9199a15c25a0b31569d9854ec46b7654738ed8ec1fb3f8c",
+      "trial:region": "b9af2bdbf51c2c06735d1e6f0da7d3faeba79b1a472349f4cf73a94dd313c09d",
+      "trial:border": "3047d5f62bc9de7917458c699465a40a18c91d15fba754aa7ae4d77479ad38db",
+      "trial:sphere": "e056e331c90d1e38c6fad28245a593f8652c0ead9eca30dd2befe8d954c85845"
+    },
+    "independentSpatialMemberships": null,
+    "ageSuitability": null,
+    "factAccuracy": null,
+    "futureVariantsCovered": false
+  },
+  "teachingOrder": "author_order_confirmed_in_chat",
+  "beforeFacts": [
+    {
+      "id": "f-l1-p06-continents",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are seven continents on Earth: Asia, Africa, North America, South America, Antarctica, Europe, and Australia."
+      },
+      "sourceBlockId": "source-l1-p06-continents",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          225,
+          115,
+          740,
+          175
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-eurasia",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Sometimes Europe and Asia are counted as one continent. Together, they are called Eurasia."
+      },
+      "sourceBlockId": "source-l1-p06-eurasia",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          180,
+          740,
+          268
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-oceans",
+      "status": "editorial_pending",
+      "text": {
+        "en": "There are five oceans on Earth: the Pacific, Atlantic, Indian, Southern, and Arctic Oceans."
+      },
+      "sourceBlockId": "source-l1-p06-oceans",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          278,
+          740,
+          362
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-land-water",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Continents are very large areas of land. Oceans are very large areas of salt water."
+      },
+      "sourceBlockId": "source-l1-p06-land-water",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          435,
+          375,
+          740,
+          476
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    },
+    {
+      "id": "f-l1-p06-pacific-map",
+      "status": "editorial_pending",
+      "text": {
+        "en": "The Pacific Ocean appears on both sides of the map, but it is one ocean."
+      },
+      "sourceBlockId": "source-l1-p06-pacific-map",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 6,
+        "region": [
+          475,
+          480,
+          740,
+          558
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "intro",
+      "caveatFactIds": []
+    }
+  ],
+  "afterFacts": [
+    {
+      "id": "f-l1-p08-continent-properties",
+      "status": "editorial_pending",
+      "text": {
+        "en": "Eurasia contains Europe and Asia. The largest continent is Asia. The smallest continent is Australia. The hottest continent is Africa. The coldest continent is Antarctica."
+      },
+      "sourceBlockId": "source-l1-p08-continent-properties",
+      "provenance": {
+        "source": "Level 1 Oceans & Continents.pdf",
+        "pdfPage": 8,
+        "region": [
+          300,
+          405,
+          740,
+          532
+        ]
+      },
+      "introducesPlaces": null,
+      "category": "bridge",
+      "caveatFactIds": []
+    }
+  ],
+  "authored": {
+    "id": "l1-01",
+    "source": "authored",
+    "status": "staged_requires_semantic_mapping",
+    "title": "Original L1 Puzzle 1",
+    "answer": "CONTINENT",
+    "map": "./assets/import-staging/l1-clean-map-1.webp",
+    "mapAspect": "1181 / 1024",
+    "provenance": {
+      "source": "Level 1 Oceans & Continents.pdf",
+      "mapPdfPage": 7,
+      "cluesPdfPage": 8,
+      "pdfMapRect": [
+        177.77,
+        142.71,
+        648.13,
+        551.18
+      ]
+    },
+    "markers": [
+      {
+        "id": "l1-01-glyph-01",
+        "letter": "I",
+        "x": 17.343,
+        "y": 35.062
+      },
+      {
+        "id": "l1-01-glyph-02",
+        "letter": "E",
+        "x": 20.018,
+        "y": 53.279
+      },
+      {
+        "id": "l1-01-glyph-03",
+        "letter": "T",
+        "x": 24.89,
+        "y": 67.862
+      },
+      {
+        "id": "l1-01-glyph-04",
+        "letter": "N",
+        "x": 58.48,
+        "y": 95.316
+      },
+      {
+        "id": "l1-01-glyph-05",
+        "letter": "C",
+        "x": 86.796,
+        "y": 72.117
+      },
+      {
+        "id": "l1-01-glyph-06",
+        "letter": "T",
+        "x": 85.404,
+        "y": 59.842
+      },
+      {
+        "id": "l1-01-glyph-07",
+        "letter": "O",
+        "x": 50.97,
+        "y": 58.261
+      },
+      {
+        "id": "l1-01-glyph-08",
+        "letter": "N",
+        "x": 54.786,
+        "y": 49.025
+      },
+      {
+        "id": "l1-01-glyph-09",
+        "letter": "N",
+        "x": 68.66,
+        "y": 33.481
+      }
+    ],
+    "clues": [
+      {
+        "position": 1,
+        "text": "The first letter is in Australia.",
+        "answerLetter": "C",
+        "candidateMarkerIds": [
+          "l1-01-glyph-05"
+        ],
+        "markerId": "l1-01-glyph-05"
+      },
+      {
+        "position": 2,
+        "text": "The second letter is in Africa.",
+        "answerLetter": "O",
+        "candidateMarkerIds": [
+          "l1-01-glyph-07"
+        ],
+        "markerId": "l1-01-glyph-07"
+      },
+      {
+        "position": 3,
+        "text": "The third letter is in Eurasia.",
+        "answerLetter": "N",
+        "candidateMarkerIds": [
+          "l1-01-glyph-04",
+          "l1-01-glyph-08",
+          "l1-01-glyph-09"
+        ],
+        "markerId": "l1-01-glyph-09"
+      },
+      {
+        "position": 4,
+        "text": "The fourth letter is in South America.",
+        "answerLetter": "T",
+        "candidateMarkerIds": [
+          "l1-01-glyph-03",
+          "l1-01-glyph-06"
+        ],
+        "markerId": "l1-01-glyph-03"
+      },
+      {
+        "position": 5,
+        "text": "The fifth letter is in North America.",
+        "answerLetter": "I",
+        "candidateMarkerIds": [
+          "l1-01-glyph-01"
+        ],
+        "markerId": "l1-01-glyph-01"
+      },
+      {
+        "position": 6,
+        "text": "The sixth letter is in Antarctica.",
+        "answerLetter": "N",
+        "candidateMarkerIds": [
+          "l1-01-glyph-04",
+          "l1-01-glyph-08",
+          "l1-01-glyph-09"
+        ],
+        "markerId": "l1-01-glyph-04"
+      },
+      {
+        "position": 7,
+        "text": "The seventh letter is between North and South America.",
+        "answerLetter": "E",
+        "candidateMarkerIds": [
+          "l1-01-glyph-02"
+        ],
+        "markerId": "l1-01-glyph-02"
+      },
+      {
+        "position": 8,
+        "text": "The eighth letter is between Africa and Eurasia.",
+        "answerLetter": "N",
+        "candidateMarkerIds": [
+          "l1-01-glyph-04",
+          "l1-01-glyph-08",
+          "l1-01-glyph-09"
+        ],
+        "markerId": "l1-01-glyph-08"
+      },
+      {
+        "position": 9,
+        "text": "The ninth letter is between Australia and Eurasia.",
+        "answerLetter": "T",
+        "candidateMarkerIds": [
+          "l1-01-glyph-03",
+          "l1-01-glyph-06"
+        ],
+        "markerId": "l1-01-glyph-06"
+      }
+    ],
+    "factsExtract": "For the next quiz you need to know:\n                             Eurasia contains Europe and Asia.\n                         The largest continent is Asia.\n                         The smallest continent is Australia.\n                         The hottest continent is Africa.\n                         The coldest continent is Antarctica.\n8\n\n                                                                                  @letscrafthistory shop",
+    "arrowCount": 0,
+    "courseId": "geowords-l1-first-rehearsal-v1"
+  },
+  "practices": [
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "atlas",
+      "definition": "A book or collection of maps.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "ATLAS",
+      "markers": [
+        {
+          "id": "l1-01-glyph-03",
+          "x": 24.89,
+          "y": 67.862,
+          "letter": "A"
+        },
+        {
+          "id": "l1-01-glyph-02",
+          "x": 20.018,
+          "y": 53.279,
+          "letter": "T"
+        },
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "L"
+        },
+        {
+          "id": "l1-01-glyph-08",
+          "x": 54.786,
+          "y": 49.025,
+          "letter": "A"
+        },
+        {
+          "id": "l1-01-glyph-04",
+          "x": 58.48,
+          "y": 95.316,
+          "letter": "S"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-03",
+          "descriptorId": "source-l1-01-clue-4",
+          "text": "The first letter — is in South America"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-02",
+          "descriptorId": "source-l1-01-clue-7",
+          "text": "The second letter — is between North and South America"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The third letter — is in Eurasia"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-08",
+          "descriptorId": "source-l1-01-clue-8",
+          "text": "The fourth letter — is between Africa and Eurasia"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-04",
+          "descriptorId": "source-l1-01-clue-6",
+          "text": "The fifth letter — is in Antarctica"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-3|source-l1-01-clue-4|source-l1-01-clue-6|source-l1-01-clue-7|source-l1-01-clue-8",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:atlas",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    },
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "globe",
+      "definition": "A round model of Earth.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "GLOBE",
+      "markers": [
+        {
+          "id": "l1-01-glyph-02",
+          "x": 20.018,
+          "y": 53.279,
+          "letter": "G"
+        },
+        {
+          "id": "l1-01-glyph-06",
+          "x": 85.404,
+          "y": 59.842,
+          "letter": "L"
+        },
+        {
+          "id": "l1-01-glyph-04",
+          "x": 58.48,
+          "y": 95.316,
+          "letter": "O"
+        },
+        {
+          "id": "l1-01-glyph-08",
+          "x": 54.786,
+          "y": 49.025,
+          "letter": "B"
+        },
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "E"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-02",
+          "descriptorId": "source-l1-01-clue-7",
+          "text": "The first letter — is between North and South America"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-06",
+          "descriptorId": "source-l1-01-clue-9",
+          "text": "The second letter — is between Australia and Eurasia"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-04",
+          "descriptorId": "source-l1-01-clue-6",
+          "text": "The third letter — is in Antarctica"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-08",
+          "descriptorId": "source-l1-01-clue-8",
+          "text": "The fourth letter — is between Africa and Eurasia"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The fifth letter — is in Eurasia"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-3|source-l1-01-clue-6|source-l1-01-clue-7|source-l1-01-clue-8|source-l1-01-clue-9",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:globe",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    },
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "mapping",
+      "definition": "Making a map of a place or area.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "MAPPING",
+      "markers": [
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "M"
+        },
+        {
+          "id": "l1-01-glyph-08",
+          "x": 54.786,
+          "y": 49.025,
+          "letter": "A"
+        },
+        {
+          "id": "l1-01-glyph-01",
+          "x": 17.343,
+          "y": 35.062,
+          "letter": "P"
+        },
+        {
+          "id": "l1-01-glyph-04",
+          "x": 58.48,
+          "y": 95.316,
+          "letter": "P"
+        },
+        {
+          "id": "l1-01-glyph-02",
+          "x": 20.018,
+          "y": 53.279,
+          "letter": "I"
+        },
+        {
+          "id": "l1-01-glyph-05",
+          "x": 86.796,
+          "y": 72.117,
+          "letter": "N"
+        },
+        {
+          "id": "l1-01-glyph-03",
+          "x": 24.89,
+          "y": 67.862,
+          "letter": "G"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The first letter — is in Eurasia"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-08",
+          "descriptorId": "source-l1-01-clue-8",
+          "text": "The second letter — is between Africa and Eurasia"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-01",
+          "descriptorId": "source-l1-01-clue-5",
+          "text": "The third letter — is in North America"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-04",
+          "descriptorId": "source-l1-01-clue-6",
+          "text": "The fourth letter — is in Antarctica"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-02",
+          "descriptorId": "source-l1-01-clue-7",
+          "text": "The fifth letter — is between North and South America"
+        },
+        {
+          "position": 6,
+          "markerId": "l1-01-glyph-05",
+          "descriptorId": "source-l1-01-clue-1",
+          "text": "The sixth letter — is in Australia"
+        },
+        {
+          "position": 7,
+          "markerId": "l1-01-glyph-03",
+          "descriptorId": "source-l1-01-clue-4",
+          "text": "The seventh letter — is in South America"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-1|source-l1-01-clue-3|source-l1-01-clue-4|source-l1-01-clue-5|source-l1-01-clue-6|source-l1-01-clue-7|source-l1-01-clue-8",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:mapping",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    },
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "region",
+      "definition": "An area with a feature or group of features in common.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "REGION",
+      "markers": [
+        {
+          "id": "l1-01-glyph-05",
+          "x": 86.796,
+          "y": 72.117,
+          "letter": "R"
+        },
+        {
+          "id": "l1-01-glyph-06",
+          "x": 85.404,
+          "y": 59.842,
+          "letter": "E"
+        },
+        {
+          "id": "l1-01-glyph-08",
+          "x": 54.786,
+          "y": 49.025,
+          "letter": "G"
+        },
+        {
+          "id": "l1-01-glyph-01",
+          "x": 17.343,
+          "y": 35.062,
+          "letter": "I"
+        },
+        {
+          "id": "l1-01-glyph-04",
+          "x": 58.48,
+          "y": 95.316,
+          "letter": "O"
+        },
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "N"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-05",
+          "descriptorId": "source-l1-01-clue-1",
+          "text": "The first letter — is in Australia"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-06",
+          "descriptorId": "source-l1-01-clue-9",
+          "text": "The second letter — is between Australia and Eurasia"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-08",
+          "descriptorId": "source-l1-01-clue-8",
+          "text": "The third letter — is between Africa and Eurasia"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-01",
+          "descriptorId": "source-l1-01-clue-5",
+          "text": "The fourth letter — is in North America"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-04",
+          "descriptorId": "source-l1-01-clue-6",
+          "text": "The fifth letter — is in Antarctica"
+        },
+        {
+          "position": 6,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The sixth letter — is in Eurasia"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-1|source-l1-01-clue-3|source-l1-01-clue-5|source-l1-01-clue-6|source-l1-01-clue-8|source-l1-01-clue-9",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:region",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    },
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "border",
+      "definition": "A line separating two areas.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "BORDER",
+      "markers": [
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "B"
+        },
+        {
+          "id": "l1-01-glyph-02",
+          "x": 20.018,
+          "y": 53.279,
+          "letter": "O"
+        },
+        {
+          "id": "l1-01-glyph-07",
+          "x": 50.97,
+          "y": 58.261,
+          "letter": "R"
+        },
+        {
+          "id": "l1-01-glyph-06",
+          "x": 85.404,
+          "y": 59.842,
+          "letter": "D"
+        },
+        {
+          "id": "l1-01-glyph-01",
+          "x": 17.343,
+          "y": 35.062,
+          "letter": "E"
+        },
+        {
+          "id": "l1-01-glyph-05",
+          "x": 86.796,
+          "y": 72.117,
+          "letter": "R"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The first letter — is in Eurasia"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-02",
+          "descriptorId": "source-l1-01-clue-7",
+          "text": "The second letter — is between North and South America"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-07",
+          "descriptorId": "source-l1-01-clue-2",
+          "text": "The third letter — is in Africa"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-06",
+          "descriptorId": "source-l1-01-clue-9",
+          "text": "The fourth letter — is between Australia and Eurasia"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-01",
+          "descriptorId": "source-l1-01-clue-5",
+          "text": "The fifth letter — is in North America"
+        },
+        {
+          "position": 6,
+          "markerId": "l1-01-glyph-05",
+          "descriptorId": "source-l1-01-clue-1",
+          "text": "The sixth letter — is in Australia"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-1|source-l1-01-clue-2|source-l1-01-clue-3|source-l1-01-clue-5|source-l1-01-clue-7|source-l1-01-clue-9",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:border",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    },
+    {
+      "status": "review_draft_not_for_play",
+      "dictionaryId": "sphere",
+      "definition": "A round three-dimensional shape like a ball.",
+      "map": "./assets/import-staging/l1-clean-map-1.webp",
+      "mapAspect": "1181 / 1024",
+      "geographicResolution": "not_verified",
+      "independentAmbiguityCheck": "pending",
+      "focusReview": "pending",
+      "answer": "SPHERE",
+      "markers": [
+        {
+          "id": "l1-01-glyph-01",
+          "x": 17.343,
+          "y": 35.062,
+          "letter": "S"
+        },
+        {
+          "id": "l1-01-glyph-06",
+          "x": 85.404,
+          "y": 59.842,
+          "letter": "P"
+        },
+        {
+          "id": "l1-01-glyph-04",
+          "x": 58.48,
+          "y": 95.316,
+          "letter": "H"
+        },
+        {
+          "id": "l1-01-glyph-02",
+          "x": 20.018,
+          "y": 53.279,
+          "letter": "E"
+        },
+        {
+          "id": "l1-01-glyph-03",
+          "x": 24.89,
+          "y": 67.862,
+          "letter": "R"
+        },
+        {
+          "id": "l1-01-glyph-09",
+          "x": 68.66,
+          "y": 33.481,
+          "letter": "E"
+        }
+      ],
+      "clues": [
+        {
+          "position": 1,
+          "markerId": "l1-01-glyph-01",
+          "descriptorId": "source-l1-01-clue-5",
+          "text": "The first letter — is in North America"
+        },
+        {
+          "position": 2,
+          "markerId": "l1-01-glyph-06",
+          "descriptorId": "source-l1-01-clue-9",
+          "text": "The second letter — is between Australia and Eurasia"
+        },
+        {
+          "position": 3,
+          "markerId": "l1-01-glyph-04",
+          "descriptorId": "source-l1-01-clue-6",
+          "text": "The third letter — is in Antarctica"
+        },
+        {
+          "position": 4,
+          "markerId": "l1-01-glyph-02",
+          "descriptorId": "source-l1-01-clue-7",
+          "text": "The fourth letter — is between North and South America"
+        },
+        {
+          "position": 5,
+          "markerId": "l1-01-glyph-03",
+          "descriptorId": "source-l1-01-clue-4",
+          "text": "The fifth letter — is in South America"
+        },
+        {
+          "position": 6,
+          "markerId": "l1-01-glyph-09",
+          "descriptorId": "source-l1-01-clue-3",
+          "text": "The sixth letter — is in Eurasia"
+        }
+      ],
+      "descriptorSignature": "source-l1-01-clue-3|source-l1-01-clue-4|source-l1-01-clue-5|source-l1-01-clue-6|source-l1-01-clue-7|source-l1-01-clue-9",
+      "freshCount": 0,
+      "requiredFreshCount": 0,
+      "id": "trial:sphere",
+      "courseId": "geowords-l1-first-rehearsal-v1",
+      "source": "generated",
+      "stepIndex": 0
+    }
+  ],
+  "nextSourcePuzzle": {
+    "id": "l1-02",
+    "answer": "HEMISPHERE"
+  },
+  "course": {
+    "id": "geowords-l1-first-rehearsal-v1",
+    "steps": [
+      {
+        "id": "first",
+        "authoredPuzzleId": "l1-01",
+        "wordIds": [
+          "atlas",
+          "globe",
+          "mapping",
+          "region",
+          "border",
+          "sphere"
+        ]
+      },
+      {
+        "id": "next-placeholder",
+        "authoredPuzzleId": "l1-02",
+        "wordIds": []
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "status": "not_for_live_use",
+  "origin": "user_decisions_in_chat",
+  "date": "2026-10-13",
+  "scope": "l1-01-confirmed-between-usage",
+  "warning": "Only these between relations and between-only clue usage were confirmed. Physical continent membership remains null, not a negative assertion. Full geographic evidence, facts, vocabulary and release remain pending.",
+  "decisions": [
+    {
+      "puzzleId": "l1-01",
+      "anchorId": "l1-01-glyph-02",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 20.018,
+        "y": 53.279,
+        "pointsTo": null
+      },
+      "status": "relation_confirmed",
+      "clueUsage": "between_only",
+      "between": [
+        [
+          "place-north-america",
+          "place-south-america"
+        ]
+      ],
+      "physicalPlaces": null,
+      "complete": false,
+      "reviewedBy": "user_in_chat",
+      "futureVariantsApproved": false
+    },
+    {
+      "puzzleId": "l1-01",
+      "anchorId": "l1-01-glyph-08",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 54.786,
+        "y": 49.025,
+        "pointsTo": null
+      },
+      "status": "relation_confirmed",
+      "clueUsage": "between_only",
+      "between": [
+        [
+          "place-africa",
+          "place-eurasia"
+        ]
+      ],
+      "physicalPlaces": null,
+      "complete": false,
+      "reviewedBy": "user_in_chat",
+      "futureVariantsApproved": false
+    },
+    {
+      "puzzleId": "l1-01",
+      "anchorId": "l1-01-glyph-06",
+      "sourceBinding": {
+        "mapId": "./assets/import-staging/l1-clean-map-1.webp",
+        "mapSha256": "a61fd56872aaa086d6c3ec0b71e3c9d865a78902685fb5f0bad439179b2d671e",
+        "x": 85.404,
+        "y": 59.842,
+        "pointsTo": null
+      },
+      "status": "relation_confirmed",
+      "clueUsage": "between_only",
+      "between": [
+        [
+          "place-australia",
+          "place-eurasia"
+        ]
+      ],
+      "physicalPlaces": null,
+      "complete": false,
+      "reviewedBy": "user_in_chat",
+      "futureVariantsApproved": false
+    }
+  ]
+}
+

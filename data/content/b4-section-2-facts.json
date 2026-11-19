@@ -1,0 +1,385 @@
+{
+ "section": "rivers-of-north-america",
+ "block": 4,
+ "use": "introduction cards (exercise type 0), one fact per river; ids match data/maps/namerica-rivers.json",
+ "decisions": [
+  "13 rivers in 3 units as in plan v2 (approved 02.11.2026); facts, records and word definitions approved by Svetlana 12.11.2026 with her edits (Arkansas: Marquette and Jolliet to near the mouth of the Arkansas; Mackenzie reached the Arctic Ocean instead of the Pacific).",
+  "The Mississippi and the Missouri are learned in block 1 and reviewed here as separate «na-» objects."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Бассейн Миссисипи",
+    "en": "The Mississippi basin"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Реки севера",
+    "en": "Rivers of the north"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Реки запада и юга",
+    "en": "Rivers of the west and south"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "namerica-rivers-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "Rivers of North America",
+    "ru": "Реки Северной Америки"
+   },
+   "fact": {
+    "en": "The rivers of North America flow into three oceans. The Mississippi carries its water to the Gulf of Mexico in the Atlantic, the Yukon and the Columbia to the Pacific, the Mackenzie to the Arctic Ocean. The Nelson flows into Hudson Bay.",
+    "ru": "Реки Северной Америки текут в три океана. Миссисипи несёт воду в Мексиканский залив Атлантического океана, Юкон и Колумбия — в Тихий океан, Маккензи — в Северный Ледовитый. Нельсон впадает в Гудзонов залив."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "8b806c8d6b42cf73"
+   }
+  },
+  {
+   "id": "na-mississippi",
+   "order": 1,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Mississippi",
+    "ru": "Миссисипи"
+   },
+   "fact": {
+    "en": "The Ojibwe called it the «Great River». In 1682 the Frenchman La Salle sailed down it to the Gulf of Mexico and named its whole basin Louisiana after King Louis XIV.",
+    "ru": "Индейцы оджибве называли её «Большая река». В 1682 году француз Ласалль спустился по ней до Мексиканского залива и назвал весь её бассейн Луизианой в честь короля Людовика XIV."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "31ee23de1f2a5edd"
+   }
+  },
+  {
+   "id": "na-missouri",
+   "order": 2,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Missouri",
+    "ru": "Миссури"
+   },
+   "fact": {
+    "en": "The longest tributary of the Mississippi, a little longer than the Mississippi itself. In 1804 the Lewis and Clark expedition set off up the Missouri.",
+    "ru": "Самый длинный приток Миссисипи: он даже немного длиннее самой Миссисипи. В 1804 году вверх по Миссури отправилась экспедиция Льюиса и Кларка."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "91de46aff2c034eb"
+   }
+  },
+  {
+   "id": "na-ohio",
+   "order": 3,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Ohio",
+    "ru": "Огайо"
+   },
+   "fact": {
+    "en": "The Mississippi's largest tributary by flow: where they meet, the Ohio carries more water than the Mississippi. Its name comes from an Iroquoian word for «good» or «great river».",
+    "ru": "Самый полноводный приток Миссисипи: в месте их слияния Огайо несёт больше воды, чем сама Миссисипи. Её название пришло из языка ирокезов и означает «прекрасная» или «большая река»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "066e288482fa0026"
+   }
+  },
+  {
+   "id": "na-arkansas",
+   "order": 4,
+   "kind": "river",
+   "unit": 1,
+   "name": {
+    "en": "Arkansas",
+    "ru": "Арканзас"
+   },
+   "fact": {
+    "en": "It rises high in the Rocky Mountains and crosses the Great Plains. In 1673, French explorers Jacques Marquette and Louis Jolliet traveled down the Mississippi to near the mouth of the Arkansas River, then turned back.",
+    "ru": "Начинается высоко в Скалистых горах и пересекает Великие равнины. В 1673 году французские исследователи Жак Маркетт и Луи Жолье спустились по Миссисипи до района впадения реки Арканзас и повернули назад."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "99940c9346d95a2b"
+   }
+  },
+  {
+   "id": "na-yukon",
+   "order": 5,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Yukon",
+    "ru": "Юкон"
+   },
+   "fact": {
+    "en": "It starts in Canada, crosses Alaska and flows into the Bering Sea. In 1896 gold was found on its tributary, the Klondike, and thousands of gold seekers travelled up the Yukon.",
+    "ru": "Начинается в Канаде, пересекает Аляску и впадает в Берингово море. В 1896 году на его притоке Клондайке нашли золото, и по Юкону поплыли тысячи золотоискателей."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "9d4a05f8953fbc78"
+   }
+  },
+  {
+   "id": "na-mackenzie",
+   "order": 6,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Mackenzie",
+    "ru": "Маккензи"
+   },
+   "fact": {
+    "en": "It flows out of Great Slave Lake into the Arctic Ocean. In 1789, Alexander Mackenzie explored this river, hoping to find a route to the Pacific Ocean, but reached the Arctic Ocean instead.",
+    "ru": "Вытекает из Большого Невольничьего озера и впадает в Северный Ледовитый океан. В 1789 году Александр Маккензи исследовал эту реку, надеясь найти путь к Тихому океану, но достиг Северного Ледовитого океана."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "a4fcd7ecf1d044a2"
+   }
+  },
+  {
+   "id": "na-nelson",
+   "order": 7,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "Nelson",
+    "ru": "Нельсон"
+   },
+   "fact": {
+    "en": "It carries the water of Lake Winnipeg to Hudson Bay. Near its mouth stood York Factory, the main trading post of the Hudson's Bay Company, where furs came from all over Canada.",
+    "ru": "Несёт воду озера Виннипег в Гудзонов залив. Рядом с её устьем стояла Йорк-Фактори, главная фактория Компании Гудзонова залива, куда со всей Канады везли пушнину."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "909e94e56e8ef9c8"
+   }
+  },
+  {
+   "id": "na-st-lawrence",
+   "order": 8,
+   "kind": "river",
+   "unit": 2,
+   "name": {
+    "en": "St. Lawrence",
+    "ru": "Река Святого Лаврентия"
+   },
+   "fact": {
+    "en": "It carries the water of the Great Lakes to the Atlantic Ocean. In 1535 the Frenchman Jacques Cartier sailed up it to the place where Montreal now stands.",
+    "ru": "Выносит воду Великих озёр в Атлантический океан. В 1535 году француз Жак Картье поднялся по ней до места, где теперь стоит Монреаль."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "49a63a9f1c0d7ff8"
+   }
+  },
+  {
+   "id": "na-columbia",
+   "order": 9,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Columbia",
+    "ru": "Колумбия"
+   },
+   "fact": {
+    "en": "The largest river by flow of all North American rivers that reach the Pacific. In 1805 the Lewis and Clark expedition followed it to the ocean.",
+    "ru": "Самая полноводная река Северной Америки из тех, что впадают в Тихий океан. В 1805 году по ней экспедиция Льюиса и Кларка вышла к океану."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "f0dfea1831ca769e"
+   }
+  },
+  {
+   "id": "na-colorado",
+   "order": 10,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Colorado",
+    "ru": "Колорадо"
+   },
+   "fact": {
+    "en": "Over millions of years it carved the Grand Canyon. So much of its water is taken for farms and cities that it usually no longer reaches the Gulf of California.",
+    "ru": "За миллионы лет прорезала Большой каньон. Её воду так много забирают на поля и города, что обычно она не доходит до Калифорнийского залива."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "ed35fb34363c3568"
+   }
+  },
+  {
+   "id": "na-rio-grande",
+   "order": 11,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Rio Grande",
+    "ru": "Рио-Гранде"
+   },
+   "fact": {
+    "en": "Much of the border between the USA and Mexico runs along this river. In Mexico it is called the Río Bravo.",
+    "ru": "Большая часть границы США и Мексики проходит по этой реке. В Мексике её называют Рио-Браво."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "292563eeae178d73"
+   }
+  },
+  {
+   "id": "na-usumacinta",
+   "order": 12,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "Usumacinta",
+    "ru": "Усумасинта"
+   },
+   "fact": {
+    "en": "Part of the border between Mexico and Guatemala runs along it. The ruins of ancient Maya cities, such as Yaxchilán, stand on its banks.",
+    "ru": "По ней проходит часть границы Мексики и Гватемалы. На её берегах стоят руины древних городов майя, например Яшчилан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "b55e4c6c889724eb"
+   }
+  },
+  {
+   "id": "na-san-juan",
+   "order": 13,
+   "kind": "river",
+   "unit": 3,
+   "name": {
+    "en": "San Juan",
+    "ru": "Сан-Хуан"
+   },
+   "fact": {
+    "en": "It flows from Lake Nicaragua to the Caribbean Sea, and part of the border between Nicaragua and Costa Rica runs along it. During the gold rush people travelling to California sailed along it.",
+    "ru": "Вытекает из озера Никарагуа в Карибское море, по ней проходит часть границы Никарагуа и Коста-Рики. Во время золотой лихорадки по ней плыли люди, которые добирались в Калифорнию."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/3NeDWo8koULvbGXdF5osps",
+    "note": "block 4 section 2, approved 12.11.2026 with Svetlana's edits"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-12",
+    "contentSha256": "2350a35348bcd713"
+   }
+  }
+ ]
+}

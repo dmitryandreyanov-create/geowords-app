@@ -1,0 +1,24 @@
+{
+ "map": "./assets/samerica-south.webp",
+ "of": "./assets/samerica-blank.webp",
+ "level": "The south of South America, large: South America section 1",
+ "coordinateSystem": "frame: the piece of samerica-blank.webp this map shows, in % of that map (x, y = top left; w, h = size). A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so tap areas of samerica-overview.json apply unchanged.",
+ "source": "Built by tools/build_samerica_blank.py (an exact piece of the South America base drawn at 8.5× scale)",
+ "frame": {
+  "x": 42.99,
+  "y": 86.78,
+  "w": 8.26,
+  "h": 8.26
+ },
+ "aspect": "11 / 8",
+ "magnifier": {
+  "x": 52.39,
+  "y": 92.69
+ },
+ "objects": [
+  "sa-cape-froward",
+  "sa-tierra-del-fuego",
+  "sa-strait-of-magellan",
+  "sa-cape-horn"
+ ]
+}

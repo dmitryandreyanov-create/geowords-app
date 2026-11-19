@@ -1,0 +1,620 @@
+{
+ "section": "europe-on-the-map",
+ "block": 2,
+ "status": "approved",
+ "approvedBy": "Svetlana",
+ "approvedDate": "2026-10-26",
+ "source": "GeoWords_Europe_Updated_Terms.docx (Svetlana, 26.10.2026)",
+ "rules": {
+  "structure": "3 units x (1 final + review words) + section final; Svetlana added ЭЛЛАДА, ПОЛИС (unit 2) and ФИНИКИЙЦЫ (unit 3) on 2026-10-26; practice draws 6 of each unit's review words",
+  "languages": "EN and RU lists are independent (ЛИМАН / TUNDRA, ЛАГУНА / PENINSULA)",
+  "length": "letters only on learned objects of the Europe map: up to 6 after unit 1, 13 after unit 2, 20 after unit 3",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (Svetlana, 2026-10-24)",
+  "draft": "all words approved by Svetlana 2026-10-26 («Утверждаю все»): ЛЕДНИК and ПОЛИС reworded without the same root; EN definitions of HELLAS, POLIS, PHOENICIANS"
+ },
+ "units": [
+  {
+   "id": "unit-1-where-europe-ends",
+   "title": {
+    "ru": "Где кончается Европа",
+    "en": "Where Europe ends"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "РУБЕЖ",
+      "role": "final",
+      "definition": "Линия, отделяющая одну территорию от другой.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "489daab4fbfbb0d3"
+      }
+     },
+     {
+      "answer": "ПРИБОЙ",
+      "role": "review",
+      "definition": "Волны, которые с шумом разбиваются о берег.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "18abeed97e295ce2"
+      }
+     },
+     {
+      "answer": "ШТОРМ",
+      "role": "review",
+      "definition": "Сильная буря на море с мощным ветром и высокими волнами.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "3ccbb046b8e92f93"
+      }
+     },
+     {
+      "answer": "ХРЕБЕТ",
+      "role": "review",
+      "definition": "Вытянутая цепь гор или возвышенностей.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "938c8d0f12ba1eaf"
+      }
+     },
+     {
+      "answer": "ДЕЛЬТА",
+      "role": "review",
+      "definition": "Участок суши из речных наносов, образующийся у устья некоторых рек.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "baaaef3ee8588ef3"
+      }
+     },
+     {
+      "answer": "ОТМЕЛЬ",
+      "role": "review",
+      "definition": "Мелководный участок моря или реки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "fc407d768d8545e0"
+      }
+     },
+     {
+      "answer": "ЛИМАН",
+      "role": "review",
+      "definition": "Залив у морского берега, образовавшийся при затоплении морем устья реки.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "3cb2076a0ce20ae3"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "BORDER",
+      "role": "final",
+      "definition": "A line separating one country or area from another.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "a592eaa347e2f7bb"
+      }
+     },
+     {
+      "answer": "SURF",
+      "role": "review",
+      "definition": "Waves breaking along the shore.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "77f17716da2c9dc4"
+      }
+     },
+     {
+      "answer": "STORM",
+      "role": "review",
+      "definition": "Severe weather with strong winds, often bringing rain or high waves.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "cbcfe864403508e1"
+      }
+     },
+     {
+      "answer": "RIDGE",
+      "role": "review",
+      "definition": "A long, narrow area of high land, often with a line of peaks.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "5766da996a416b63"
+      }
+     },
+     {
+      "answer": "DELTA",
+      "role": "review",
+      "definition": "An area of land built up by sediment where a river enters a larger body of water.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "8f1b1516e81d15c8"
+      }
+     },
+     {
+      "answer": "SHOAL",
+      "role": "review",
+      "definition": "An area of shallow water in a sea or river.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "94457d5d4362b043"
+      }
+     },
+     {
+      "answer": "TUNDRA",
+      "role": "review",
+      "definition": "A cold, mostly treeless region where the ground is often frozen.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "19963bc2897292c8"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-2-peninsulas-of-europe",
+   "title": {
+    "ru": "Полуострова Европы",
+    "en": "Peninsulas of Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ПЕРЕШЕЕК",
+      "role": "final",
+      "definition": "Узкая полоса суши, соединяющая два более крупных участка суши.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "d83a5203f0d0265b"
+      }
+     },
+     {
+      "answer": "ФЬОРД",
+      "role": "review",
+      "definition": "Узкий длинный морской залив с крутыми берегами, образованный ледником.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "312c16e9c65348d8"
+      }
+     },
+     {
+      "answer": "БУХТА",
+      "role": "review",
+      "definition": "Небольшая часть моря, вдающаяся в сушу и обычно защищённая от волн.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "5bde42413c2773b7"
+      }
+     },
+     {
+      "answer": "ВИКИНГ",
+      "role": "review",
+      "definition": "Скандинавский мореход эпохи раннего Средневековья, участник торговых или военных походов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "f3690dc02f6ccc48"
+      }
+     },
+     {
+      "answer": "ПОБЕРЕЖЬЕ",
+      "role": "review",
+      "definition": "Полоса суши вдоль моря.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "705284f586e4ea00"
+      }
+     },
+     {
+      "answer": "ЛАГУНА",
+      "role": "review",
+      "definition": "Мелководный водоём у морского берега, отделённый от моря полосой суши или рифом.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "7fe2515f82166313"
+      }
+     },
+     {
+      "answer": "ГОНДОЛА",
+      "role": "review",
+      "definition": "Узкая длинная лодка, традиционно используемая на каналах Венеции.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "314344e3bd8f6301"
+      }
+     },
+     {
+      "answer": "ЭЛЛАДА",
+      "role": "review",
+      "definition": "Историческое название Древней Греции, расположенной на Балканском полуострове и островах Эгейского моря.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "02e18645f9a52b8a"
+      }
+     },
+     {
+      "answer": "ПОЛИС",
+      "role": "review",
+      "definition": "Город-государство Древней Греции. Горы и море разделяли города, и каждый жил по своим законам.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "c7ae74396f84b515"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ISTHMUS",
+      "role": "final",
+      "definition": "A narrow strip of land connecting two larger land areas.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "d60a6015d446d798"
+      }
+     },
+     {
+      "answer": "FJORD",
+      "role": "review",
+      "definition": "A long, narrow sea inlet with steep sides, carved by a glacier.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "613862e327836c2e"
+      }
+     },
+     {
+      "answer": "HEADLAND",
+      "role": "review",
+      "definition": "An area of land that projects into the sea.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "d8368dd49861ed72"
+      }
+     },
+     {
+      "answer": "VIKING",
+      "role": "review",
+      "definition": "A Scandinavian seafarer of the early Middle Ages, known for trading, exploring, and raiding.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "6aa28772f9f9e9e1"
+      }
+     },
+     {
+      "answer": "COASTLINE",
+      "role": "review",
+      "definition": "The boundary where land meets the sea.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "ac525b9cfbf8ffb2"
+      }
+     },
+     {
+      "answer": "PENINSULA",
+      "role": "review",
+      "definition": "A piece of land surrounded by water on most sides but connected to a larger land area.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "61c34011d7211586"
+      }
+     },
+     {
+      "answer": "GONDOLA",
+      "role": "review",
+      "definition": "A long, narrow boat traditionally used on the canals of Venice.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "9c75521acb66041a"
+      }
+     },
+     {
+      "answer": "HELLAS",
+      "role": "review",
+      "definition": "The historical name of ancient Greece, which lay on the Balkan Peninsula and the islands of the Aegean Sea.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "049d2120f46d0f9b"
+      }
+     },
+     {
+      "answer": "POLIS",
+      "role": "review",
+      "definition": "A city-state of ancient Greece. Mountains and islands kept the cities apart, so each grew into its own small state.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "e0ddb25d66b4b494"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "unit-3-islands-and-seas",
+   "title": {
+    "ru": "Острова и моря у берегов Европы",
+    "en": "Islands and seas off Europe"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "АРХИПЕЛАГ",
+      "role": "final",
+      "definition": "Группа островов, расположенных недалеко друг от друга.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "6f184cd0b821c2ab"
+      }
+     },
+     {
+      "answer": "ГЕЙЗЕР",
+      "role": "review",
+      "definition": "Горячий источник, периодически выбрасывающий воду и пар.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "aec9abe60ee750bf"
+      }
+     },
+     {
+      "answer": "ЯНТАРЬ",
+      "role": "review",
+      "definition": "Окаменевшая смола древних деревьев, которую находят в том числе на берегах Балтики.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "93cf7a846254936c"
+      }
+     },
+     {
+      "answer": "МОРЕНА",
+      "role": "review",
+      "definition": "Скопление камней и другого обломочного материала, перенесённого и оставленного ледником.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "5e0efaf4ac9bd0ee"
+      }
+     },
+     {
+      "answer": "ЛЕДНИК",
+      "role": "review",
+      "definition": "Огромная масса многолетнего снега и замёрзшей воды на суше, которая медленно сползает вниз.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "7e4621fa94fcf270"
+      }
+     },
+     {
+      "answer": "РИФТ",
+      "role": "review",
+      "definition": "Вытянутая зона растяжения земной коры, где образуются разломы.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "1b2fc2ee5f678672"
+      }
+     },
+     {
+      "answer": "МАЯК",
+      "role": "review",
+      "definition": "Башня с сигнальным светом, помогающим кораблям ориентироваться у берегов.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "29ff1802e76d50d6"
+      }
+     },
+     {
+      "answer": "ФИНИКИЙЦЫ",
+      "role": "review",
+      "definition": "Мореплаватели Восточного Средиземноморья, основавшие торговые поселения в разных частях Средиземноморья.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "22cdf539a993e402"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "ARCHIPELAGO",
+      "role": "final",
+      "definition": "A group of islands located close to one another.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "ff7e26445a278bb7"
+      }
+     },
+     {
+      "answer": "GEYSER",
+      "role": "review",
+      "definition": "A hot spring that periodically shoots water and steam into the air.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "b7cb775648e9bb4c"
+      }
+     },
+     {
+      "answer": "AMBER",
+      "role": "review",
+      "definition": "Fossilized tree resin found, among other places, along Baltic shores.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "861776d3946df9c1"
+      }
+     },
+     {
+      "answer": "MORAINE",
+      "role": "review",
+      "definition": "A ridge or deposit of rock and sediment left behind by a glacier.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "09298a2df650ebea"
+      }
+     },
+     {
+      "answer": "GLACIER",
+      "role": "review",
+      "definition": "A large mass of ice on land, formed from snow and moving slowly under its own weight.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "752a951e22054ba8"
+      }
+     },
+     {
+      "answer": "RIFT",
+      "role": "review",
+      "definition": "A long zone where Earth’s crust is being pulled apart.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "7a5380523f48fd5c"
+      }
+     },
+     {
+      "answer": "LIGHTHOUSE",
+      "role": "review",
+      "definition": "A tower with a bright signal light that helps ships navigate near the coast.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "8f81c2d80dd7750c"
+      }
+     },
+     {
+      "answer": "PHOENICIANS",
+      "role": "review",
+      "definition": "Seafarers of the eastern Mediterranean who founded trading settlements in many parts of the Mediterranean.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "ce825e59fed6ae05"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "section-final",
+   "title": {
+    "ru": "Итог раздела",
+    "en": "Section final"
+   },
+   "words": {
+    "ru": [
+     {
+      "answer": "ЭКСПЕДИЦИЯ",
+      "role": "section-final",
+      "definition": "Организованное путешествие группы людей с исследовательской или другой специальной целью.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "ec584780f03a1967"
+      }
+     }
+    ],
+    "en": [
+     {
+      "answer": "EXPEDITION",
+      "role": "section-final",
+      "definition": "An organized journey made for exploration, scientific research, or another specific purpose.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-10-26",
+       "contentSha256": "d7791d3105c60db4"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -60,7 +60,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 9.7,
+   "minSeparation": 8.1,
    "markers": [
     {
      "id": "arctic-ocean",
@@ -99,9 +99,9 @@
      "letter": "S"
     },
     {
-     "id": "asia",
-     "x": 75.36,
-     "y": 7.43,
+     "id": "yangtze-source",
+     "x": 72.49,
+     "y": 37.41,
      "letter": "U"
     },
     {
@@ -159,16 +159,16 @@
      "text": "Find the first letter in the Arctic Ocean."
     },
     {
-     "markerId": "asia",
+     "markerId": "yangtze-source",
      "position": 7,
-     "text": "Find the seventh letter in Asia."
+     "text": "Find the seventh letter at the source of the Yangtze."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "b7bec7cc68796d30"
+    "date": "2026-10-25",
+    "contentSha256": "a77b066cb1a04861"
    }
   },
   {
@@ -215,7 +215,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 14.5,
+   "minSeparation": 6.1,
    "markers": [
     {
      "id": "gulf-of-mexico",
@@ -230,9 +230,9 @@
      "letter": "L"
     },
     {
-     "id": "indian-ocean",
-     "x": 69.64,
-     "y": 86.8,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "I"
     },
     {
@@ -268,9 +268,9 @@
    ],
    "clues": [
     {
-     "markerId": "indian-ocean",
+     "markerId": "danube-source",
      "position": 3,
-     "text": "Find the third letter in the Indian Ocean."
+     "text": "Find the third letter at the source of the Danube."
     },
     {
      "markerId": "andes",
@@ -311,8 +311,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "e6f49a2df5205ae7"
+    "date": "2026-10-25",
+    "contentSha256": "91fb525df6ffb1f6"
    }
   },
   {
@@ -359,7 +359,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 12,
+   "minSeparation": 6.3,
    "markers": [
     {
      "id": "southern-ocean",
@@ -374,9 +374,9 @@
      "letter": "О"
     },
     {
-     "id": "europe",
-     "x": 50,
-     "y": 19.31,
+     "id": "volga-source",
+     "x": 55.74,
+     "y": 22.76,
      "letter": "Л"
     },
     {
@@ -424,9 +424,9 @@
    ],
    "clues": [
     {
-     "markerId": "europe",
+     "markerId": "volga-source",
      "position": 3,
-     "text": "Найди третью букву в Европе."
+     "text": "Найди третью букву в истоке Волги."
     },
     {
      "markerId": "arctic-ocean",
@@ -477,8 +477,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ffcccc73b11a9df4"
+    "date": "2026-10-25",
+    "contentSha256": "52208d57353a7289"
    }
   },
   {
@@ -525,7 +525,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 18.7,
+   "minSeparation": 6.1,
    "markers": [
     {
      "id": "danube-mouth",
@@ -546,9 +546,9 @@
      "letter": "Н"
     },
     {
-     "id": "africa",
-     "x": 53.55,
-     "y": 70.79,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "А"
     },
     {
@@ -566,9 +566,9 @@
    ],
    "clues": [
     {
-     "markerId": "africa",
+     "markerId": "danube-source",
      "position": 4,
-     "text": "Найди четвёртую букву в Африке."
+     "text": "Найди четвёртую букву в истоке Дуная."
     },
     {
      "markerId": "himalayas",
@@ -599,8 +599,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "7905963650f6fc49"
+    "date": "2026-10-25",
+    "contentSha256": "896bf64503684d45"
    }
   },
   {
@@ -647,18 +647,18 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 6.4,
+   "minSeparation": 5.6,
    "markers": [
     {
-     "id": "strait-of-magellan",
-     "x": 27.03,
-     "y": 85.14,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "C"
     },
     {
-     "id": "english-channel",
-     "x": 45.45,
-     "y": 28.07,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "O"
     },
     {
@@ -668,9 +668,9 @@
      "letter": "N"
     },
     {
-     "id": "indus-mouth",
-     "x": 65.3,
-     "y": 43.12,
+     "id": "indus-river",
+     "x": 66,
+     "y": 40.63,
      "letter": "F"
     },
     {
@@ -722,9 +722,9 @@
      "text": "Find the sixth letter on the Nile."
     },
     {
-     "markerId": "english-channel",
+     "markerId": "danube-source",
      "position": 2,
-     "text": "Find the second letter in the English Channel."
+     "text": "Find the second letter at the source of the Danube."
     },
     {
      "markerId": "mississippi-mouth",
@@ -742,9 +742,9 @@
      "text": "Find the ninth letter in the Appalachians."
     },
     {
-     "markerId": "indus-mouth",
+     "markerId": "indus-river",
      "position": 4,
-     "text": "Find the fourth letter at the mouth of the Indus."
+     "text": "Find the fourth letter on the Indus."
     },
     {
      "markerId": "caspian-sea",
@@ -757,16 +757,16 @@
      "text": "Find the tenth letter on the longest river in Asia."
     },
     {
-     "markerId": "strait-of-magellan",
+     "markerId": "mississippi-source",
      "position": 1,
-     "text": "Find the first letter in the Strait of Magellan."
+     "text": "Find the first letter at the source of the Mississippi."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "1ed28479e2c882f3"
+    "date": "2026-10-25",
+    "contentSha256": "1a53f000ddaf3cb8"
    }
   },
   {
@@ -957,9 +957,9 @@
      "letter": "В"
     },
     {
-     "id": "cordillera",
-     "x": 13.64,
-     "y": 25.41,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "О"
     },
     {
@@ -975,9 +975,9 @@
      "letter": "О"
     },
     {
-     "id": "ganges-river",
-     "x": 68.34,
-     "y": 40.41,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "Х"
     },
     {
@@ -1057,9 +1057,9 @@
      "text": "Найди восьмую букву в устье Миссисипи."
     },
     {
-     "markerId": "ganges-river",
+     "markerId": "huang-he-source",
      "position": 5,
-     "text": "Найди пятую букву на Ганге."
+     "text": "Найди пятую букву в истоке Хуанхэ."
     },
     {
      "markerId": "ural",
@@ -1067,9 +1067,9 @@
      "text": "Найди девятую букву на Урале."
     },
     {
-     "markerId": "cordillera",
+     "markerId": "mississippi-source",
      "position": 2,
-     "text": "Найди вторую букву в Кордильерах."
+     "text": "Найди вторую букву в истоке Миссисипи."
     },
     {
      "markerId": "volga-river",
@@ -1100,8 +1100,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "5576b38e6c1373c8"
+    "date": "2026-10-25",
+    "contentSha256": "17bfe104f9f8b780"
    }
   },
   {
@@ -1286,9 +1286,9 @@
      "letter": "L"
     },
     {
-     "id": "indus-mouth",
-     "x": 65.3,
-     "y": 43.12,
+     "id": "indus-river",
+     "x": 67.63,
+     "y": 36.6,
      "letter": "A"
     },
     {
@@ -1318,9 +1318,9 @@
    ],
    "clues": [
     {
-     "markerId": "indus-mouth",
+     "markerId": "indus-river",
      "position": 5,
-     "text": "Find the fifth letter at the mouth of the Indus."
+     "text": "Find the fifth letter on the Indus."
     },
     {
      "markerId": "huang-he-river",
@@ -1366,8 +1366,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "335660e2e6244667"
+    "date": "2026-10-25",
+    "contentSha256": "cf069cad69b62aa4"
    }
   },
   {
@@ -2244,7 +2244,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 5.6,
+   "minSeparation": 4.5,
    "markers": [
     {
      "id": "arctic-ocean",
@@ -2265,9 +2265,9 @@
      "letter": "Р"
     },
     {
-     "id": "europe",
-     "x": 62.64,
-     "y": 15.51,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "А"
     },
     {
@@ -2309,9 +2309,9 @@
    ],
    "clues": [
     {
-     "markerId": "europe",
+     "markerId": "danube-source",
      "position": 4,
-     "text": "Найди четвёртую букву в Европе."
+     "text": "Найди четвёртую букву в истоке Дуная."
     },
     {
      "markerId": "mediterranean-sea",
@@ -2362,8 +2362,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "ba24aa6482e30840"
+    "date": "2026-10-25",
+    "contentSha256": "7e7ff5efa6c736a5"
    }
   },
   {
@@ -2410,7 +2410,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 6.6,
+   "minSeparation": 6.4,
    "markers": [
     {
      "id": "arabian-sea",
@@ -2437,9 +2437,9 @@
      "letter": "У"
     },
     {
-     "id": "bay-of-bengal",
-     "x": 71.64,
-     "y": 47.19,
+     "id": "huang-he-source",
+     "x": 73.39,
+     "y": 36.85,
      "letter": "Н"
     },
     {
@@ -2451,9 +2451,9 @@
    ],
    "clues": [
     {
-     "markerId": "bay-of-bengal",
+     "markerId": "huang-he-source",
      "position": 5,
-     "text": "Найди пятую букву в самом большом заливе мира."
+     "text": "Найди пятую букву в истоке Хуанхэ."
     },
     {
      "markerId": "panama-canal",
@@ -2484,8 +2484,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "761f43769a9fc47a"
+    "date": "2026-10-25",
+    "contentSha256": "a756f169b0521d9c"
    }
   },
   {
@@ -2693,7 +2693,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 6.3,
+   "minSeparation": 6.2,
    "markers": [
     {
      "id": "ural",
@@ -2702,9 +2702,9 @@
      "letter": "D"
     },
     {
-     "id": "south-america",
-     "x": 34.27,
-     "y": 65.18,
+     "id": "mississippi-source",
+     "x": 20.52,
+     "y": 29.4,
      "letter": "E"
     },
     {
@@ -2782,9 +2782,9 @@
      "text": "Find the eighth letter in the Drake Passage."
     },
     {
-     "markerId": "south-america",
+     "markerId": "mississippi-source",
      "position": 2,
-     "text": "Find the second letter in South America."
+     "text": "Find the second letter at the source of the Mississippi."
     },
     {
      "markerId": "mozambique-channel",
@@ -2835,8 +2835,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "79f25508d6dd14f4"
+    "date": "2026-10-25",
+    "contentSha256": "79953ef42130ce89"
    }
   },
   {
@@ -3044,7 +3044,7 @@
    ],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 9.5,
+   "minSeparation": 8.1,
    "markers": [
     {
      "id": "yangtze-mouth",
@@ -3053,9 +3053,9 @@
      "letter": "К"
     },
     {
-     "id": "indus-river",
-     "x": 67.01,
-     "y": 36.65,
+     "id": "yangtze-source",
+     "x": 72.49,
+     "y": 37.41,
      "letter": "О"
     },
     {
@@ -3140,9 +3140,9 @@
      "text": "Найди пятую букву в Дарданеллах."
     },
     {
-     "markerId": "indus-river",
+     "markerId": "yangtze-source",
      "position": 2,
-     "text": "Найди вторую букву на Инде."
+     "text": "Найди вторую букву в истоке Янцзы."
     },
     {
      "markerId": "hudson-bay",
@@ -3198,8 +3198,8 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-23",
-    "contentSha256": "9c28643e8fa9868a"
+    "date": "2026-10-25",
+    "contentSha256": "fa59fec4712e58d4"
    }
   },
   {
@@ -3713,7 +3713,7 @@
    "showInsets": [],
    "needsZoom": true,
    "needsZoomReason": "small objects (straits, small seas) and close circles",
-   "minSeparation": 6.2,
+   "minSeparation": 4.9,
    "markers": [
     {
      "id": "volga-river",
@@ -3734,9 +3734,9 @@
      "letter": "E"
     },
     {
-     "id": "yangtze-mouth",
-     "x": 80.55,
-     "y": 38.93,
+     "id": "yangtze-river",
+     "x": 79.06,
+     "y": 39.69,
      "letter": "C"
     },
     {
@@ -3752,9 +3752,9 @@
      "letter": "P"
     },
     {
-     "id": "english-channel",
-     "x": 45.45,
-     "y": 28.07,
+     "id": "danube-source",
+     "x": 48.92,
+     "y": 28.98,
      "letter": "I"
     },
     {
@@ -3806,9 +3806,9 @@
      "text": "Find the fifth letter in the Drake Passage."
     },
     {
-     "markerId": "english-channel",
+     "markerId": "danube-source",
      "position": 7,
-     "text": "Find the seventh letter in the English Channel."
+     "text": "Find the seventh letter at the source of the Danube."
     },
     {
      "markerId": "strait-of-hormuz",
@@ -3856,16 +3856,16 @@
      "text": "Find the sixth letter on the Yellow River."
     },
     {
-     "markerId": "yangtze-mouth",
+     "markerId": "yangtze-river",
      "position": 4,
-     "text": "Find the fourth letter at the mouth of the Yangtze."
+     "text": "Find the fourth letter on the Yangtze."
     }
    ],
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-10-24",
-    "contentSha256": "bd9b8c0cf09aad39"
+    "date": "2026-10-25",
+    "contentSha256": "55d8ca638df097c8"
    }
   },
   {
