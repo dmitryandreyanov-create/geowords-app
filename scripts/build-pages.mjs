@@ -84,7 +84,7 @@ const named=[
   'assets/world-inset-bering.webp','assets/world-inset-turkish-straits.webp',
   'assets/europe-blank.webp','assets/europe-capitals.webp','assets/europe-countries-rivers.webp','assets/europe-rivers.webp','assets/europe-mountains.webp',
   'assets/asia-blank.webp','assets/asia-rivers.webp','assets/asia-lakes.webp','assets/asia-mountains.webp','assets/asia-deserts.webp','assets/asia-countries.webp','assets/asia-levant.webp',
-  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp','assets/namerica-deserts.webp','assets/namerica-canyons.webp','assets/namerica-countries.webp','assets/namerica-camerica.webp','assets/namerica-caribbean.webp','assets/namerica-lesser-antilles.webp',
+  'assets/namerica-blank.webp','assets/namerica-rivers.webp','assets/namerica-lakes.webp','assets/namerica-mountains.webp','assets/namerica-deserts.webp','assets/namerica-canyons.webp','assets/namerica-countries.webp','assets/namerica-camerica.webp','assets/namerica-caribbean.webp','assets/namerica-lesser-antilles-north.webp','assets/namerica-lesser-antilles-south.webp',
 ];
 if(fs.existsSync(dist))fs.rmSync(dist,{recursive:true,force:true});
 for(const file of named){

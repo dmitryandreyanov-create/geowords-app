@@ -406,7 +406,11 @@ try{
   { // section 7 «Countries of the Caribbean islands»: lessons on the Caribbean map with the large map of the Lesser Antilles (a tap in its frame
   // opens it, and the answer is tapped there), practice and finals zoomed in on the unit, letters on the learned island states and the places of the map
   const cMap=JSON.parse(fs.readFileSync('data/maps/namerica-caribbean.json','utf8')),cFacts=JSON.parse(fs.readFileSync('data/content/b4-section-7-facts.json','utf8'));
-  const CA=JSON.parse(fs.readFileSync('data/maps/namerica-lesser-antilles.json','utf8')),CF=CA.frame,inCa=pt=>pt.x>=CF.x&&pt.x<=CF.x+CF.w&&pt.y>=CF.y&&pt.y<=CF.y+CF.h;
+  // two large maps (north and south, Svetlana 19.11.2026): a point opens the one whose frame it is in; the frames never overlap
+  const CA=JSON.parse(fs.readFileSync('data/maps/namerica-lesser-antilles.json','utf8')),caPart=pt=>CA.parts.find(({frame:F})=>pt.x>=F.x&&pt.x<=F.x+F.w&&pt.y>=F.y&&pt.y<=F.y+F.h),inCa=pt=>!!caPart(pt);
+  {const [a,b]=CA.parts.map(p=>p.frame),items=JSON.parse(fs.readFileSync('data/maps/namerica-caribbean.json','utf8')).items;assert(a.y+a.h<=b.y+1e-6,'the two large maps of the Lesser Antilles never overlap');
+    for(const p of CA.parts)for(const id of p.objects)for(const q of items.find(i=>i.id===id).tapArea.flat())
+      assert(q[0]>=p.frame.x&&q[0]<=p.frame.x+p.frame.w&&q[1]>=p.frame.y&&q[1]<=p.frame.y+p.frame.h,id+': its tap area is inside the large map '+p.id)}
   const cUnit=Object.fromEntries(cMap.items.map(i=>[i.id,i.unit])),cOf=Object.fromEntries(cMap.items.map(i=>[i.id,i])),SAMECAP=[],cPlace=new Set(cMap.places.map(p=>p.id));
   const CMAP='assets/namerica-caribbean.webp';
   for(const lang of run(7)?['ru','en']:[]){
@@ -420,10 +424,19 @@ try{
     assert.match(await page.locator('.path').innerText(),lang==='ru'?/Страны Карибских островов/:/Countries of the Caribbean Islands/);
     const shot=async name=>{if(shots){fs.mkdirSync(shots,{recursive:true});await page.screenshot({path:path.join(shots,`n7-${name}-${lang}.png`)})}};
     const tapAt=async pt=>{const box=await page.locator('.task .map').boundingBox();await page.mouse.click(box.x+box.width*pt.x/100,box.y+box.height*pt.y/100)};
-    let caShots=0;
+    let caShots=0,laShots=0;
+    // GeoWords: a letter inside a frame of the Lesser Antilles stands on that large map, every other letter in view on the map
+    const gwPart=(p,m)=>{const P=caPart(m);return P&&p.markers.some(k=>P.objects.includes(k.id)&&caPart(k)===P)?P:null};
+    const lettersPlaced=async p=>{for(const m of p.markers){const P=gwPart(p,m),el=page.locator('.gw .mk[data-id="'+m.id+'"]');
+      if(P)assert.equal(await el.evaluate(e=>e.closest('.lv-pop')?.dataset.part),P.id,`${p.answer}: ${m.id} on the large map ${P.id}`);
+      else assert.equal(await el.evaluate(e=>!e.hidden&&!e.closest('.lv-pop')),true,`${p.answer}: ${m.id} in view on the map`)}};
+    // a tap at the 🔍 in the middle of a frame (it lets the tap through to the map) opens that large map
+    const openLarge=async p=>{const P=gwPart(p,p.markers.find(m=>gwPart(p,m))),b=await page.locator(`.gw .lv-mag[aria-label="${P.name[lang]}"]`).boundingBox();
+      await page.mouse.click(b.x+b.width/2,b.y+b.height/2);await page.locator(`.gw .lv-pop[data-part="${P.id}"]:not([hidden])`).waitFor();await page.waitForTimeout(300)};
     const tapCa=async(pt,name)=>{await tapAt(pt);if(!inCa(pt))return;assert.equal(await page.locator('.task .fb.ok,.task .fb.bad').count(),0,'a tap in the Lesser Antilles frame is not judged');
-      await page.locator('.task .lv-pop').waitFor();if(caShots<3){caShots++;await page.waitForTimeout(300);await shot('antilles-'+name)}
-      const box=await page.locator('.task .lv-pop').boundingBox();await page.mouse.click(box.x+box.width*(pt.x-CF.x)/CF.w,box.y+box.height*(pt.y-CF.y)/CF.h)};
+      const P=caPart(pt),CF=P.frame,pop=page.locator(`.task .lv-pop[data-part="${P.id}"]`);
+      await pop.waitFor();assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),1,'one large map open');if(caShots<3){caShots++;await page.waitForTimeout(300);await shot('antilles-'+name)}
+      const box=await pop.boundingBox();await page.mouse.click(box.x+box.width*(pt.x-CF.x)/CF.w,box.y+box.height*(pt.y-CF.y)/CF.h)};
     const lessons=['n7-u1-l1','n7-u1-l2','n7-u2-l1','n7-u2-l2','n7-u3-l1','n7-u3-l2','n7-u3-l3','n7-u3-l4'];const kinds=new Set(),shotKinds=new Set();
     for(const id of lessons){await page.locator(`[data-step="${id}"]`).click();await page.locator('.sheet [data-a="go"]').click();
       for(let n=0;n<120;n++){await page.waitForFunction(()=>window.__gwTask||document.querySelector('.screen.done'));if(await page.locator('.screen.done').count())break;
@@ -445,6 +458,8 @@ try{
           {const taught=await page.evaluate(()=>window.__gwTaught);assert(opts.every(o=>taught.includes(o)||!(o in cUnit)),`${id} ${q.k} ${q.id}: options ${opts} not taught yet (${taught})`)}
           const caOpen=q.k==='capOf'?CA.capitals.includes(cOf[q.id].capital.id):CA.objects.includes(q.id);
           assert.equal(await page.locator('.task .lv-pop:not([hidden])').count(),caOpen?1:0,'large map of the Lesser Antilles open on '+q.k+' '+q.id);
+          if(caOpen){const want=CA.parts.find(p=>q.k==='capOf'?p.capitals.includes(cOf[q.id].capital.id):p.objects.includes(q.id)).id;
+            assert.equal(await page.locator('.task .lv-pop:not([hidden])').getAttribute('data-part'),want,'the large map with '+q.id)}
           if(caOpen&&caShots<6){caShots++;await page.waitForTimeout(300);await shot('antilles-'+q.k+'-'+q.id)}
           await page.locator(`.choice[data-o="${q.id}"]`).click();await page.locator('.fb.ok .btn').click()}
         else throw new Error('unexpected task '+q.k)}
@@ -460,8 +475,9 @@ try{
         for(const m of p.markers)assert(m.id in cUnit?cUnit[m.id]<=u:cPlace.has(m.id),`${p.answer}: ${m.id} is learned by unit ${u}`);
         assert(p.markers.filter(m=>m.id in cUnit).length>=2,p.answer+': letters on the island states');
         assert.deepEqual(p.focus,cMap.frames[String(u)],'practice opens zoomed in on the region of unit '+u);
-        await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,p.answer+': every letter in view');
+        await page.waitForTimeout(300);await lettersPlaced(p);
         if(w===0)await shot('practice-u'+u);
+        if(p.markers.some(m=>gwPart(p,m))&&laShots<3){laShots++;await openLarge(p);await shot('practice-u'+u+'-large-'+laShots);await page.locator('.gw .lv-pop:not([hidden]) .inset-x').click()}
         for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
         if(w<5)await page.locator('[data-a="nextword"]').click();else await page.locator('.screen.done [data-a="home"]').click()}
       assert.equal(words.size,6,'six different words in unit '+u);await page.waitForSelector('[data-step="n7-u1-l1"]')}
@@ -472,8 +488,9 @@ try{
       const p=await page.evaluate(()=>window.__gwPuzzle);assert.equal(p.answer,want.answer);assert.deepEqual(p.clues.map(c=>c.text),want.clues.map(c=>c.text));
       const src=await page.locator('.gw .world img').first().getAttribute('src');assert(src.endsWith(CMAP),'final on the Caribbean map');
       assert.deepEqual(p.focus,want.focus,'the final opens zoomed in');assert(want.inRegion>=Math.min(Math.ceil(want.answer.length/2),id==='unit-2'?4:99),'half of the letters in the region (unit 2: four, REG_MAX)');
-      await page.waitForTimeout(300);assert.equal(await page.locator('.gw .mk:not([hidden])').count(),p.markers.length,want.id+': every letter in view');
+      await page.waitForTimeout(300);await lettersPlaced(p);
       await page.waitForTimeout(400);await shot('final-'+id);
+      if(p.markers.some(m=>gwPart(p,m))){await openLarge(p);await shot('final-'+id+'-large');await page.locator('.gw .lv-pop:not([hidden]) .inset-x').click()}
       for(const c of p.clues){await page.locator('.mk[data-id="'+c.markerId+'"]').evaluate(el=>el.click());await page.waitForTimeout(370)}
       // every clue names the letter of its own marker (Svetlana, 14.11.2026: check that each clue fits its letter)
       for(const c of want.clues)assert.equal(want.markers.find(m=>m.id===c.markerId).letter,[...want.answer][c.position-1],want.id+': clue '+c.position);

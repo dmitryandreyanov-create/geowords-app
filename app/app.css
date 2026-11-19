@@ -242,6 +242,16 @@ h1,h2,h3,p{margin:0}
 .lv-pop[hidden]{display:none}
 .lv-pop img{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .lv-pop .shapes{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.lv-pop .imarks{position:absolute;inset:0}/* GeoWords letters on the large maps of the Lesser Antilles */
+.lv-pop .imarks .mk{pointer-events:auto;width:50px;height:36px;margin:-18px 0 0 -50px;place-items:center start}
+/* a letter on a large map is a pin (Svetlana, 19.11.2026): the circle stands beside its island, to the west, and a stem points at it, so the
+   island stays visible; the islands of the chain run north to south, so a pin to the side never covers a neighbour */
+.lv-pop .imarks .mk::after{content:'';position:absolute;top:50%;right:0;width:22px;height:3px;background:#fff;transform:translateY(-50%);box-shadow:0 0 2px rgba(0,0,0,.6);border-radius:2px}
+.lv-pop .imarks .mk::before{content:'';position:absolute;top:50%;right:-3px;width:7px;height:7px;margin-top:-3.5px;border-radius:50%;background:var(--fox);box-shadow:0 0 0 1.5px #fff;z-index:1}
+/* near the left edge the pin points the other way */
+.lv-pop .imarks .mk.pin-east{margin:-18px 0 0 0;place-items:center end}
+.lv-pop .imarks .mk.pin-east::after{right:auto;left:0}
+.lv-pop .imarks .mk.pin-east::before{right:auto;left:-3px}
 .lv-name{position:absolute;left:8px;top:8px;padding:4px 10px;border-radius:999px;background:rgba(15,46,51,.85);color:#fff;font-size:13px;font-weight:700;pointer-events:none}
 .mk.lv-mag{width:22px;height:22px;margin:-11px 0 0 -11px;pointer-events:none}/* in the middle of the frame; a tap goes through to the map, and the frame opens the large map */
 .mk.lv-mag span{width:20px;height:20px;font-size:11px}
