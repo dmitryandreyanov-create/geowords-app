@@ -31,8 +31,10 @@ try{
     assert.match(await page.locator('.path').innerText(),lang==='ru'?/Повторение блока/:/Block review/);
     // a tap inside the frame of a large map (Central America, the Lesser Antilles, the Colorado Plateau canyons) opens it first: then the same
     // point is tapped on the large map; while it is open, a point outside its frame closes it before the tap on the map
-    const tapMap=async(x,y)=>{const pop=page.locator('.task .lv-pop:not([hidden])'),lv=await page.evaluate(()=>window.__gwLv()),F=lv&&lv.frame,inF=!!F&&x>=F.x&&x<=F.x+F.w&&y>=F.y&&y<=F.y+F.h;
-      const inPop=async()=>{const r=await pop.boundingBox();await page.mouse.click(r.x+r.width*(x-F.x)/F.w,r.y+r.height*(y-F.y)/F.h)};
+    // the Lesser Antilles have two large maps (north and south): the frame the point is in, and the frame of the open large map
+    const tapMap=async(x,y)=>{const pop=page.locator('.task .lv-pop:not([hidden])'),lv=await page.evaluate(()=>window.__gwLv()),inside=(F,x,y)=>!!F&&x>=F.x&&x<=F.x+F.w&&y>=F.y&&y<=F.y+F.h;
+      const openF=async()=>{const d=await pop.evaluate(e=>e.dataset);return {x:+d.fx,y:+d.fy,w:+d.fw,h:+d.fh}},inF=await pop.count()?inside(await openF(),x,y):!!lv&&lv.frames.some(F=>inside(F,x,y));
+      const inPop=async()=>{const F=await openF(),r=await pop.boundingBox();await page.mouse.click(r.x+r.width*(x-F.x)/F.w,r.y+r.height*(y-F.y)/F.h)};
       if(await pop.count()){if(inF)return inPop();await pop.locator('.inset-x').click()}
       const b=await page.locator('.mapslot .map').first().boundingBox();await page.mouse.click(b.x+x/100*b.width,b.y+y/100*b.height);
       await page.waitForTimeout(80);if(!(await pop.count())||(await page.locator('.fb.ok,.fb.bad').count()))return;await inPop()};

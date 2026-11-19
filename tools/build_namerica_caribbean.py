@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Builds the large map of the Caribbean for block 4 section 7 «Countries of the Caribbean islands»:
-assets/namerica-caribbean.webp (2200×1600), the Lesser Antilles magnifier assets/namerica-lesser-antilles.webp (1540×1120) and
+assets/namerica-caribbean.webp (2200×1600), the two large maps of the Lesser Antilles
+assets/namerica-lesser-antilles-north.webp and -south.webp (1540×1120 each) and
 data/maps/namerica-caribbean.json.
 
 On the North America maps (2200×1600, tools/namerica_base.py) the Lesser Antilles are a few pixels each, so the section has its own map:
@@ -14,8 +15,9 @@ Land: the 13 island states and the mainland countries of North America in sand c
 grey. Thin land borders, dark coastlines, capital dots of the 13 states (and of the mainland countries of section 6 in the frame).
 The US naval base at Guantánamo is drawn as part of Cuba (no line), as Natural Earth's lease is a few pixels.
 
-The magnifier (the 🔍 mechanism of the Levant map, tools/build_asia_levant.py) is an exact piece of this map around the seven small
-states of the Lesser Antilles, drawn about four times larger; tap areas and capitals in % of this map apply there unchanged.
+The large maps (the 🔍 mechanism of the Levant map, tools/build_asia_levant.py) are exact pieces of this map around the seven small
+states of the Lesser Antilles, the north and the south apart, each drawn about 7 times larger; tap areas and capitals in % of this map
+apply there unchanged.
 
 Tap areas: Natural Earth 1:10m admin 0 countries; a small island state (SMALL) gets its islands widened by WIDEN % (never into a
 neighbour's area), and the card shows it in the zoom inset (zoomInset).
@@ -194,22 +196,36 @@ for i, s in enumerate(STATES, 1):
     items.append(it)
     print(id_, len(ps), 'parts', it['label'], cid, (round(cx, 2), round(cy, 2)), 'area', round(sum(p.area for p in ps), 3))
 
-# ---- the Lesser Antilles magnifier: an exact piece of this map ----
-small = unary_union([raw[i] for i in SMALL])
-x0, y0, x1, y1 = small.bounds
-cx, cy = (x0 + x1) / 2, (y0 + y1) / 2
-MS = max(x1 - x0, y1 - y0) + 3.5        # % of this map, the same in x and y (11:8)
-MX, MY = round(cx - MS / 2, 2), round(cy - MS / 2, 2)
-MS = round(MS, 2)
+# ---- the large maps of the Lesser Antilles: exact pieces of this map ----
+# Svetlana 19.11.2026 «Малые Антильские острова получились очень сложными»: one large map of all seven small states showed each island
+# a few pixels wide on a phone, so the chain is split in two, each drawn about twice as large as the single map was: the north
+# (unit 2: Saint Kitts and Nevis, Antigua and Barbuda, Dominica) and the south (unit 3: Saint Lucia, Saint Vincent, Grenada, Barbados).
+# The two frames never overlap (SPLIT_Y, between Dominica and Saint Lucia), so a tap on the map opens exactly one of them.
+PARTS = [('north', ['cty-saint-kitts-and-nevis', 'cty-antigua-and-barbuda', 'cty-dominica'], {'ru': 'Малые Антилы: север', 'en': 'Lesser Antilles: north'}),
+         ('south', ['cty-saint-lucia', 'cty-saint-vincent', 'cty-grenada', 'cty-barbados'], {'ru': 'Малые Антилы: юг', 'en': 'Lesser Antilles: south'})]
+SPLIT_Y = 51.8      # % of this map: Dominica ends at 51.3, Saint Lucia starts at 52.3
 OW, OH = 1540, 1120
-KM = OW / (MS / 100 * W)                # pixels of the magnifier per pixel of this map
-def mag_px(lon, lat):
-    x, y = pct(lon, lat)
-    return (x - MX) / MS * OW * SS, (y - MY) / MS * OH * SS
-mdots = [(s[8], s[9]) for s in STATES if s[0] in SMALL or (MX < pct(s[8], s[9])[0] < MX + MS and MY < pct(s[8], s[9])[1] < MY + MS)]
-mag = render(mag_px, OW, OH, SS, 4, 3, 20, mdots, K * KM)
-mag.save(ROOT / 'assets/namerica-lesser-antilles.webp', 'WEBP', quality=88, method=6)
-print('wrote assets/namerica-lesser-antilles.webp frame', (MX, MY, MS), 'scale', round(KM, 2))
+magnifiers = []
+for key, ids, name in PARTS:
+    x0, y0, x1, y1 = unary_union([shapes[i] for i in ids]).bounds   # the widened tap areas, so every tap area is inside its frame
+    MS = round(max(x1 - x0, y1 - y0) + 1.6, 2)                         # % of this map, the same in x and y (11:8)
+    MX = round((x0 + x1) / 2 - MS / 2, 2)
+    MY = round(min((y0 + y1) / 2 - MS / 2, SPLIT_Y - MS) if key == 'north' else max((y0 + y1) / 2 - MS / 2, SPLIT_Y), 2)
+    assert MY <= y0 and MY + MS >= y1, (key, MY, MS, y0, y1)
+    KM = OW / (MS / 100 * W)            # pixels of the large map per pixel of this map
+    def mag_px(lon, lat, MX=MX, MY=MY, MS=MS):
+        x, y = pct(lon, lat)
+        return (x - MX) / MS * OW * SS, (y - MY) / MS * OH * SS
+    inside = lambda s: MX < pct(s[8], s[9])[0] < MX + MS and MY < pct(s[8], s[9])[1] < MY + MS
+    mdots = [(s[8], s[9]) for s in STATES if inside(s)]
+    mag = render(mag_px, OW, OH, SS, 4, 3, 20, mdots, K * KM)
+    f = 'assets/namerica-lesser-antilles-%s.webp' % key
+    mag.save(ROOT / f, 'WEBP', quality=88, method=6)
+    print('wrote', f, 'frame', (MX, MY, MS), 'scale', round(KM, 2))
+    magnifiers.append({'id': key, 'name': name, 'map': './' + f, 'frame': {'x': MX, 'y': MY, 'w': MS, 'h': MS},
+                       'at': {'x': round(MX + MS / 2, 2), 'y': round(MY + MS / 2, 2)}, 'objects': ids,
+                       'capitals': [s[5] for s in STATES if inside(s)]})
+assert magnifiers[0]['frame']['y'] + magnifiers[0]['frame']['h'] <= magnifiers[1]['frame']['y'] + 1e-6, 'the two large maps overlap'
 
 # ---- objects of section 1 carried over ----
 S1 = ('na-caribbean-sea', 'na-gulf-of-mexico', 'na-atlantic-ocean', 'na-cuba', 'na-hispaniola', 'na-florida', 'na-yucatan')
@@ -242,11 +258,9 @@ out = {
             'Small island states: the islands widened by %.1f%% of the map width as the tap area (split with the neighbours by distance), a zoom inset on the card, and the magnifier 🔍 of the Lesser Antilles.' % WIDEN,
             'The US naval base at Guantánamo Bay (a lease) is inside the tap area of Cuba, no line drawn.'],
   'frame': {'x': FX, 'y': FY, 'w': SPAN, 'h': SPAN},
-  'magnifier': {'map': './assets/namerica-lesser-antilles.webp', 'frame': {'x': MX, 'y': MY, 'w': MS, 'h': MS},
-                'at': {'x': round(MX + MS / 2, 2), 'y': round(MY + MS / 2, 2)}, 'objects': sorted(SMALL),
-                'capitals': [s[5] for s in STATES if (s[8], s[9]) in mdots]},
   'items': items,
   'review': review,
+  'magnifiers': magnifiers,   # after the items: validate-maps reads the first list of objects with ids
 }
 dst = ROOT / 'data/maps/namerica-caribbean.json'
 dst.write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')).replace('{"id"', '\n{"id"') + '\n')
