@@ -1,0 +1,961 @@
+{
+ "section": "south-america-on-the-map",
+ "block": 5,
+ "rules": {
+  "clues": "clues in reveal order; position = slot the letter fills",
+  "places": "letters only on objects of data/maps/samerica-overview.json learned by the end of the unit, one letter per object, at the object's label point",
+  "nesting": "an object never shares a puzzle with the object that contains it or the ocean an island lies in (CONTAINERS in tools/build_b5s1_geowords.mjs = SA_IN in app/app.js); no letter inside the area of another object of the puzzle",
+  "spacing": "hypot(dx, dy * 1600/2200) >= 4.5 (% of map width)",
+  "approval": "same as section-1.json: the approval covers answer, markers, clues, map, mapAspect, layers, language and showInsets"
+ },
+ "puzzles": [
+  {
+   "id": "b5-section-1-unit-1-en",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "GUARANI",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "G"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "U"
+    },
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "A"
+    },
+    {
+     "id": "sa-cape-froward",
+     "x": 45.95,
+     "y": 90.81,
+     "letter": "R"
+    },
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "A"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "N"
+    },
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "I"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 3,
+     "text": "Find the third letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 5,
+     "text": "Find the fifth letter at Ponta do Seixas."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 2,
+     "text": "Find the second letter at Punta Pariñas."
+    },
+    {
+     "markerId": "sa-cape-froward",
+     "position": 4,
+     "text": "Find the fourth letter at Cape Froward."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 6,
+     "text": "Find the sixth letter at Punta Gallinas."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 7,
+     "text": "Find the seventh letter in the Atlantic Ocean."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "880f382c96ca8772"
+   }
+  },
+  {
+   "id": "b5-section-1-unit-1-ru",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 1,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ГУАРАНИ",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "Г"
+    },
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "У"
+    },
+    {
+     "id": "sa-cape-froward",
+     "x": 45.95,
+     "y": 90.81,
+     "letter": "А"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "Р"
+    },
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "А"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "Н"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "И"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 2,
+     "text": "Найди вторую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 5,
+     "text": "Найди пятую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "sa-cape-froward",
+     "position": 3,
+     "text": "Найди третью букву на мысе Фроуэрд."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Тихом океане."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 1,
+     "text": "Найди первую букву на мысе Понта-ду-Сейшас."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 4,
+     "text": "Найди четвёртую букву на мысе Гальинас."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 7,
+     "text": "Найди седьмую букву на мысе Париньяс."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "e46470ee52007191"
+   }
+  },
+  {
+   "id": "b5-section-1-unit-2-en",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "ALTIPLANO",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "A"
+    },
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "L"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "T"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "I"
+    },
+    {
+     "id": "sa-falklands",
+     "x": 53.64,
+     "y": 87.72,
+     "letter": "P"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "L"
+    },
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "A"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "N"
+    },
+    {
+     "id": "sa-cape-froward",
+     "x": 45.95,
+     "y": 90.81,
+     "letter": "O"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-falklands",
+     "position": 5,
+     "text": "Find the fifth letter on the Falkland Islands (Malvinas)."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 3,
+     "text": "Find the third letter at Punta Gallinas."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 6,
+     "text": "Find the sixth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "sa-equator",
+     "position": 8,
+     "text": "Find the eighth letter on the equator."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 2,
+     "text": "Find the second letter at Ponta do Seixas."
+    },
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 4,
+     "text": "Find the fourth letter on the Tropic of Capricorn."
+    },
+    {
+     "markerId": "sa-cape-froward",
+     "position": 9,
+     "text": "Find the ninth letter at Cape Froward."
+    },
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 7,
+     "text": "Find the seventh letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 1,
+     "text": "Find the first letter at Punta Pariñas."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "ca9c03f1f14d801f"
+   }
+  },
+  {
+   "id": "b5-section-1-unit-2-ru",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 2,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "АЛЬТИПЛАНО",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "А"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "Л"
+    },
+    {
+     "id": "sa-cape-froward",
+     "x": 45.95,
+     "y": 90.81,
+     "letter": "Ь"
+    },
+    {
+     "id": "sa-caribbean-sea",
+     "x": 36.89,
+     "y": 3.05,
+     "letter": "Т"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "И"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "П"
+    },
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "Л"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "А"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "Н"
+    },
+    {
+     "id": "sa-falklands",
+     "x": 53.64,
+     "y": 87.72,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 2,
+     "text": "Найди вторую букву на тропике Козерога."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 6,
+     "text": "Найди шестую букву в Тихом океане."
+    },
+    {
+     "markerId": "sa-caribbean-sea",
+     "position": 4,
+     "text": "Найди четвёртую букву в Карибском море."
+    },
+    {
+     "markerId": "sa-falklands",
+     "position": 10,
+     "text": "Найди десятую букву на Фолклендских (Мальвинских) островах."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 5,
+     "text": "Найди пятую букву на мысе Гальинас."
+    },
+    {
+     "markerId": "sa-cape-froward",
+     "position": 3,
+     "text": "Найди третью букву на мысе Фроуэрд."
+    },
+    {
+     "markerId": "sa-equator",
+     "position": 9,
+     "text": "Найди девятую букву на экваторе."
+    },
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 7,
+     "text": "Найди седьмую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 1,
+     "text": "Найди первую букву на мысе Понта-ду-Сейшас."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 8,
+     "text": "Найди восьмую букву на мысе Париньяс."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "20b40f36ed4e632a"
+   }
+  },
+  {
+   "id": "b5-section-1-unit-3-en",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "en",
+   "answer": "TIWANAKU",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "T"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "I"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "W"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "A"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "N"
+    },
+    {
+     "id": "sa-cape-horn",
+     "x": 48.5,
+     "y": 93.25,
+     "letter": "A"
+    },
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "K"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "U"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-equator",
+     "position": 4,
+     "text": "Find the fourth letter on the equator."
+    },
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 2,
+     "text": "Find the second letter on the Tropic of Capricorn."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 5,
+     "text": "Find the fifth letter at Punta Pariñas."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 3,
+     "text": "Find the third letter at Punta Gallinas."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 7,
+     "text": "Find the seventh letter at Ponta do Seixas."
+    },
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 1,
+     "text": "Find the first letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 8,
+     "text": "Find the eighth letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "sa-cape-horn",
+     "position": 6,
+     "text": "Find the sixth letter at Cape Horn."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "30f0470aceb08431"
+   }
+  },
+  {
+   "id": "b5-section-1-unit-3-ru",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": 3,
+   "role": "unit-final",
+   "language": "ru",
+   "answer": "ТИУАНАКО",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "Т"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "И"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "У"
+    },
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "А"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "Н"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "А"
+    },
+    {
+     "id": "sa-cape-horn",
+     "x": 48.5,
+     "y": 93.25,
+     "letter": "К"
+    },
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "О"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-equator",
+     "position": 3,
+     "text": "Найди третью букву на экваторе."
+    },
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 6,
+     "text": "Найди шестую букву на тропике Козерога."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 2,
+     "text": "Найди вторую букву на мысе Париньяс."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 4,
+     "text": "Найди четвёртую букву на мысе Понта-ду-Сейшас."
+    },
+    {
+     "markerId": "sa-cape-horn",
+     "position": 7,
+     "text": "Найди седьмую букву на мысе Горн."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 1,
+     "text": "Найди первую букву на мысе Гальинас."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 5,
+     "text": "Найди пятую букву в Тихом океане."
+    },
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 8,
+     "text": "Найди восьмую букву в Атлантическом океане."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "103524cc7249f0c9"
+   }
+  },
+  {
+   "id": "b5-section-1-final-en",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "en",
+   "answer": "CUPISNIQUE",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "C"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "U"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "P"
+    },
+    {
+     "id": "sa-strait-of-magellan",
+     "x": 46.11,
+     "y": 89.9,
+     "letter": "I"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "S"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "N"
+    },
+    {
+     "id": "sa-drake-passage",
+     "x": 49.88,
+     "y": 95.73,
+     "letter": "I"
+    },
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "Q"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "U"
+    },
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "E"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-drake-passage",
+     "position": 7,
+     "text": "Find the seventh letter in the Drake Passage."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 2,
+     "text": "Find the second letter in the Pacific Ocean."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 6,
+     "text": "Find the sixth letter at Punta Pariñas."
+    },
+    {
+     "markerId": "sa-strait-of-magellan",
+     "position": 4,
+     "text": "Find the fourth letter in the Strait of Magellan."
+    },
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 8,
+     "text": "Find the eighth letter on the Isthmus of Panama."
+    },
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 10,
+     "text": "Find the tenth letter in the Atlantic Ocean."
+    },
+    {
+     "markerId": "sa-equator",
+     "position": 5,
+     "text": "Find the fifth letter on the equator."
+    },
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 9,
+     "text": "Find the ninth letter on the Tropic of Capricorn."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 1,
+     "text": "Find the first letter at Ponta do Seixas."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 3,
+     "text": "Find the third letter at Punta Gallinas."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "66740492b6d1eb4b"
+   }
+  },
+  {
+   "id": "b5-section-1-final-ru",
+   "section": "south-america-on-the-map",
+   "block": 5,
+   "unit": "section-final",
+   "role": "section-final",
+   "language": "ru",
+   "answer": "КУПИСНИКЕ",
+   "map": "./assets/samerica-blank.webp",
+   "mapAspect": "2200 / 1600",
+   "layers": [],
+   "showInsets": [],
+   "needsZoom": false,
+   "minSeparation": 4.5,
+   "markers": [
+    {
+     "id": "sa-isthmus-of-panama",
+     "x": 32.72,
+     "y": 9.39,
+     "letter": "К"
+    },
+    {
+     "id": "sa-punta-parinas",
+     "x": 32.8,
+     "y": 26.78,
+     "letter": "У"
+    },
+    {
+     "id": "sa-equator",
+     "x": 53.49,
+     "y": 19.5,
+     "letter": "П"
+    },
+    {
+     "id": "sa-atlantic-ocean",
+     "x": 71.45,
+     "y": 76.2,
+     "letter": "И"
+    },
+    {
+     "id": "sa-pacific-ocean",
+     "x": 30.03,
+     "y": 46.42,
+     "letter": "С"
+    },
+    {
+     "id": "sa-cape-gallinas",
+     "x": 42.04,
+     "y": 3.44,
+     "letter": "Н"
+    },
+    {
+     "id": "sa-cape-horn",
+     "x": 48.5,
+     "y": 93.25,
+     "letter": "И"
+    },
+    {
+     "id": "sa-tropic-of-capricorn",
+     "x": 55.98,
+     "y": 50.75,
+     "letter": "К"
+    },
+    {
+     "id": "sa-cabo-branco",
+     "x": 77.56,
+     "y": 31.23,
+     "letter": "Е"
+    }
+   ],
+   "clues": [
+    {
+     "markerId": "sa-atlantic-ocean",
+     "position": 4,
+     "text": "Найди четвёртую букву в Атлантическом океане."
+    },
+    {
+     "markerId": "sa-punta-parinas",
+     "position": 2,
+     "text": "Найди вторую букву на мысе Париньяс."
+    },
+    {
+     "markerId": "sa-pacific-ocean",
+     "position": 5,
+     "text": "Найди пятую букву в Тихом океане."
+    },
+    {
+     "markerId": "sa-cape-horn",
+     "position": 7,
+     "text": "Найди седьмую букву на мысе Горн."
+    },
+    {
+     "markerId": "sa-cabo-branco",
+     "position": 9,
+     "text": "Найди девятую букву на мысе Понта-ду-Сейшас."
+    },
+    {
+     "markerId": "sa-equator",
+     "position": 3,
+     "text": "Найди третью букву на экваторе."
+    },
+    {
+     "markerId": "sa-isthmus-of-panama",
+     "position": 1,
+     "text": "Найди первую букву на Панамском перешейке."
+    },
+    {
+     "markerId": "sa-cape-gallinas",
+     "position": 6,
+     "text": "Найди шестую букву на мысе Гальинас."
+    },
+    {
+     "markerId": "sa-tropic-of-capricorn",
+     "position": 8,
+     "text": "Найди восьмую букву на тропике Козерога."
+    }
+   ],
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "07144adaca3c5214"
+   }
+  }
+ ]
+}

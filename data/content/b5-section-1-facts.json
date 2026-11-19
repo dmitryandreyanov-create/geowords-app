@@ -1,0 +1,466 @@
+{
+ "section": "south-america-on-the-map",
+ "block": 5,
+ "use": "introduction cards (exercise type 0), one fact per object; samerica-intro opens the section; ids match data/maps/samerica-overview.json",
+ "decisions": [
+  "Block 5 «South America» has 7 sections (plan approved by Svetlana 18.11.2026, https://claude.ai/artifact/Hbh3SH9HUP7WFMhBFVE8mn).",
+  "Section 1 lessons regrouped 8 + 4 + 4 so that the 6-letter GeoWords fit (Svetlana, 19.11.2026).",
+  "The Falkland Islands (Malvinas): administered by the United Kingdom, sovereignty disputed with Argentina; grey, neutral note, no record (Svetlana, 18–19.11.2026).",
+  "Cape Horn and the Drake Passage carry no records (Svetlana, 19.11.2026): islands lie south of Cape Horn, the Drake width is approximate."
+ ],
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "units": [
+  {
+   "n": 1,
+   "title": {
+    "ru": "Океаны и крайние точки",
+    "en": "Oceans and the farthest points"
+   }
+  },
+  {
+   "n": 2,
+   "title": {
+    "ru": "Экватор, тропик и острова",
+    "en": "The equator, the tropic and islands"
+   }
+  },
+  {
+   "n": 3,
+   "title": {
+    "ru": "Юг материка",
+    "en": "The far south"
+   }
+  }
+ ],
+ "items": [
+  {
+   "id": "samerica-intro",
+   "order": 0,
+   "kind": "intro",
+   "unit": 0,
+   "name": {
+    "en": "South America",
+    "ru": "Южная Америка"
+   },
+   "fact": {
+    "en": "South America is the fourth-largest continent on Earth. The narrow Isthmus of Panama joins it to North America, and most of the continent lies south of the equator.",
+    "ru": "Южная Америка — четвёртый по площади материк Земли. С Северной Америкой её соединяет узкий Панамский перешеек, а большая часть материка лежит южнее экватора."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "cd160d5bc3d85a87"
+   }
+  },
+  {
+   "id": "sa-pacific-ocean",
+   "order": 1,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Pacific Ocean",
+    "ru": "Тихий океан"
+   },
+   "fact": {
+    "en": "The Pacific Ocean washes the west coast of the continent. The Andes mountains run along this whole coast from end to end.",
+    "ru": "Тихий океан омывает западный берег материка. Вдоль этого берега от края до края тянутся горы Анды."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "43136c732c3492b5"
+   }
+  },
+  {
+   "id": "sa-atlantic-ocean",
+   "order": 2,
+   "kind": "ocean",
+   "unit": 1,
+   "name": {
+    "en": "Atlantic Ocean",
+    "ru": "Атлантический океан"
+   },
+   "fact": {
+    "en": "The Atlantic Ocean washes the continent from the east and the north. The Amazon, the river with the most water in the world, flows into it.",
+    "ru": "Атлантический океан омывает материк с востока и севера. В него впадает Амазонка — самая полноводная река мира."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "606d0605d46475c5"
+   }
+  },
+  {
+   "id": "sa-caribbean-sea",
+   "order": 3,
+   "kind": "sea",
+   "unit": 1,
+   "name": {
+    "en": "Caribbean Sea",
+    "ru": "Карибское море"
+   },
+   "fact": {
+    "en": "The Caribbean Sea washes the north coast of South America. Columbus saw this continent on his voyage of 1498 and sailed into the Gulf of Paria off the coast of today’s Venezuela.",
+    "ru": "Карибское море омывает северный берег Южной Америки. Колумб увидел этот материк во время плавания 1498 года и вошёл в залив Пария у берегов нынешней Венесуэлы."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "1245d169e4dfe673"
+   }
+  },
+  {
+   "id": "sa-isthmus-of-panama",
+   "order": 4,
+   "kind": "isthmus",
+   "unit": 1,
+   "name": {
+    "en": "Isthmus of Panama",
+    "ru": "Панамский перешеек"
+   },
+   "fact": {
+    "en": "The Isthmus of Panama joins South and North America. The two continents are usually divided at the border of Panama and Colombia.",
+    "ru": "Панамский перешеек соединяет Южную и Северную Америку. Материки принято разделять по границе Панамы и Колумбии."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "90204ea0ef4e4e72"
+   }
+  },
+  {
+   "id": "sa-cape-gallinas",
+   "order": 5,
+   "kind": "cape",
+   "unit": 1,
+   "name": {
+    "en": "Punta Gallinas",
+    "ru": "Мыс Гальинас"
+   },
+   "fact": {
+    "en": "Punta Gallinas on the Guajira Peninsula is the northernmost point of South America. The land around it is almost a desert; the Wayuu people live here.",
+    "ru": "Мыс Гальинас на полуострове Гуахира — самая северная точка Южной Америки. Вокруг почти пустыня, здесь живёт народ вайюу."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "4b555ed471611a11"
+   }
+  },
+  {
+   "id": "sa-cabo-branco",
+   "order": 6,
+   "kind": "cape",
+   "unit": 1,
+   "name": {
+    "en": "Ponta do Seixas (Cabo Branco)",
+    "ru": "Понта-ду-Сейшас (Кабу-Бранку)"
+   },
+   "fact": {
+    "en": "Ponta do Seixas, next to Cabo Branco in Brazil, is the easternmost point of the continent. From here Africa is about 3,000 km away — closer than the west coast of South America itself.",
+    "ru": "Понта-ду-Сейшас, рядом с мысом Кабу-Бранку в Бразилии, — самая восточная точка материка. Отсюда до Африки около 3000 км — ближе, чем до западного берега самой Южной Америки."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "2085ab7d28706185"
+   }
+  },
+  {
+   "id": "sa-punta-parinas",
+   "order": 7,
+   "kind": "cape",
+   "unit": 1,
+   "name": {
+    "en": "Punta Pariñas",
+    "ru": "Мыс Париньяс"
+   },
+   "fact": {
+    "en": "Punta Pariñas in Peru is the westernmost point of the continent. Oil was already being drilled near it in the 19th century.",
+    "ru": "Мыс Париньяс в Перу — самая западная точка материка. Рядом с ним ещё в XIX веке начали добывать нефть."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "a554aee42fbf703d"
+   }
+  },
+  {
+   "id": "sa-cape-froward",
+   "order": 8,
+   "kind": "cape",
+   "unit": 1,
+   "name": {
+    "en": "Cape Froward",
+    "ru": "Мыс Фроуэрд"
+   },
+   "fact": {
+    "en": "Cape Froward in Chile is the southernmost point of the mainland itself, without the islands. It stands on the shore of the Strait of Magellan.",
+    "ru": "Мыс Фроуэрд в Чили — самая южная точка самого материка, без островов. Он стоит на берегу Магелланова пролива."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "98369035a9a487c5"
+   }
+  },
+  {
+   "id": "sa-equator",
+   "order": 9,
+   "kind": "line",
+   "unit": 2,
+   "name": {
+    "en": "Equator",
+    "ru": "Экватор"
+   },
+   "fact": {
+    "en": "The equator crosses the north of the continent and passes close to the mouth of the Amazon. One country is even named after it: Ecuador is Spanish for “equator”.",
+    "ru": "Экватор пересекает север материка и проходит рядом с устьем Амазонки. Одна страна даже названа в его честь: Эквадор по-испански значит «экватор»."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "7b732e47ec2ac784"
+   }
+  },
+  {
+   "id": "sa-tropic-of-capricorn",
+   "order": 10,
+   "kind": "line",
+   "unit": 2,
+   "name": {
+    "en": "Tropic of Capricorn",
+    "ru": "Тропик Козерога"
+   },
+   "fact": {
+    "en": "The Tropic of Capricorn is the southernmost line where the Sun can be straight overhead. On the December solstice, 21–22 December, the noon Sun stands right overhead here.",
+    "ru": "Тропик Козерога — самая южная линия, где Солнце бывает прямо над головой. В день декабрьского солнцестояния, 21–22 декабря, Солнце в полдень стоит здесь прямо над головой."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "70a9053ffa72b421"
+   }
+  },
+  {
+   "id": "sa-galapagos",
+   "order": 11,
+   "kind": "island",
+   "unit": 2,
+   "name": {
+    "en": "Galápagos Islands",
+    "ru": "Галапагосские острова"
+   },
+   "fact": {
+    "en": "The Galápagos Islands belong to Ecuador and lie about 1,000 km off the coast. They are named after their giant tortoises (“galápago”), and Charles Darwin visited them in 1835.",
+    "ru": "Галапагосские острова принадлежат Эквадору и лежат примерно в 1000 км от берега. Их назвали по гигантским черепахам («галапаго»), а в 1835 году здесь побывал Чарльз Дарвин."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "2f680e3e5084c0a1"
+   }
+  },
+  {
+   "id": "sa-falklands",
+   "order": 12,
+   "kind": "island",
+   "unit": 2,
+   "name": {
+    "en": "Falkland Islands (Malvinas)",
+    "ru": "Фолклендские (Мальвинские) острова"
+   },
+   "fact": {
+    "en": "The Falkland Islands (Malvinas) lie in the Atlantic Ocean east of Tierra del Fuego. They are administered by the United Kingdom; Argentina and the United Kingdom dispute sovereignty over the islands.",
+    "ru": "Фолклендские (Мальвинские) острова лежат в Атлантическом океане восточнее Огненной Земли. Они управляются Великобританией; Аргентина и Великобритания спорят о суверенитете над островами."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": true,
+   "caveat": {
+    "ru": "Аргентина и Великобритания спорят о суверенитете над островами.",
+    "en": "Argentina and the United Kingdom dispute sovereignty over the islands."
+   },
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "28e03cd886658029"
+   }
+  },
+  {
+   "id": "sa-tierra-del-fuego",
+   "order": 13,
+   "kind": "island",
+   "unit": 3,
+   "name": {
+    "en": "Tierra del Fuego",
+    "ru": "Огненная Земля"
+   },
+   "fact": {
+    "en": "Tierra del Fuego is an archipelago at the south of the continent, shared by Chile and Argentina. In 1520 Magellan named it the Land of Fires after seeing fires on the southern shore of the strait.",
+    "ru": "Огненная Земля — архипелаг на юге материка, его делят Чили и Аргентина. В 1520 году Магеллан назвал этот край Землёй Огней, увидев костры на южном берегу пролива."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "0f01a298e7d77f3b"
+   }
+  },
+  {
+   "id": "sa-strait-of-magellan",
+   "order": 14,
+   "kind": "strait",
+   "unit": 3,
+   "name": {
+    "en": "Strait of Magellan",
+    "ru": "Магелланов пролив"
+   },
+   "fact": {
+    "en": "The Strait of Magellan separates Tierra del Fuego from the mainland and links two oceans. In 1520 Ferdinand Magellan was the first European to sail through it.",
+    "ru": "Магелланов пролив отделяет Огненную Землю от материка и соединяет два океана. В 1520 году его первым из европейцев прошёл Фернан Магеллан."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "6db924152e85f61e"
+   }
+  },
+  {
+   "id": "sa-drake-passage",
+   "order": 15,
+   "kind": "strait",
+   "unit": 3,
+   "name": {
+    "en": "Drake Passage",
+    "ru": "Пролив Дрейка"
+   },
+   "fact": {
+    "en": "The Drake Passage lies between South America and Antarctica. It is about 820–850 km wide. Strong winds and high waves are frequent here.",
+    "ru": "Пролив Дрейка лежит между Южной Америкой и Антарктидой. Ширина пролива около 820–850 км. Здесь часто бывают сильные ветра и высокие волны."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "90128623948b8ee8"
+   }
+  },
+  {
+   "id": "sa-cape-horn",
+   "order": 16,
+   "kind": "cape",
+   "unit": 3,
+   "name": {
+    "en": "Cape Horn",
+    "ru": "Мыс Горн"
+   },
+   "fact": {
+    "en": "Cape Horn is the famous southern tip of the Tierra del Fuego archipelago. Dutch sailors rounded it in 1616 and named it after the town of Hoorn.",
+    "ru": "Мыс Горн — знаменитая южная оконечность архипелага Огненная Земля. Его обогнули голландские моряки в 1616 году и назвали в честь города Хорн."
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "718c8b76eeb273ff"
+   }
+  }
+ ]
+}
