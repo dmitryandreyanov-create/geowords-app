@@ -88,7 +88,8 @@ function deepSpots(id, spots, zoom) {
 function places7(unit, F) {
   const out = [], add = (base, spots) => { const all = spots.filter(F.inView); if (all.length) out.push({ ...base, spots: base.own ? deepSpots(base.id, all, F.zoom) : all }); };
   for (const o of map.items) if (o.unit <= unit) add({ id: o.id, kind: "country", own: true, unit: o.unit, reg: [o.unit], place: PLACE[o.id] }, o.spots);
-  for (const o of map.places) add({ id: o.id, kind: o.kind, unit: 0, reg: Object.keys(REGION_OBJ).filter(u => REGION_OBJ[u].includes(o.id)).map(Number), place: PLACE[o.id] }, o.spots);
+  // a letter in a sea or the ocean stands where its circle does not cover the land: d (distance to land) >= R_MARK / zoom (Svetlana, 19.11.2026)
+  for (const o of map.places) add({ id: o.id, kind: o.kind, unit: 0, reg: Object.keys(REGION_OBJ).filter(u => REGION_OBJ[u].includes(o.id)).map(Number), place: PLACE[o.id] }, o.kind === "water" ? o.spots.filter(s => !(s.d < R_MARK / F.zoom)) : o.spots);
   return out;
 }
 const conflict7 = (a, b) => a.id === b.id || (CONTAINERS[a.id] || []).includes(b.id) || (CONTAINERS[b.id] || []).includes(a.id)

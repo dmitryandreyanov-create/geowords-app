@@ -78,7 +78,7 @@ LAND = unary_union(land)
 # sea keeps 2.2 % of the map from any pixel of land or coastline of assets/namerica-caribbean.webp
 import numpy as np
 from PIL import Image
-from scipy.ndimage import binary_dilation
+from scipy.ndimage import binary_dilation, distance_transform_edt
 IM = np.asarray(Image.open(ROOT / 'assets/namerica-caribbean.webp').convert('RGB').reduce(4)).astype(int)
 R_, G_, B_ = IM[..., 0], IM[..., 1], IM[..., 2]
 LANDPX = (R_ > B_ + 10) | ((abs(R_ - B_) < 14) & (abs(R_ - G_) < 14) & (R_ < 175)) | (R_ + G_ + B_ < 330)
@@ -86,6 +86,10 @@ PH, PW = LANDPX.shape
 rr = int(2.2 / 100 * PW)
 yy, xx = np.ogrid[-rr:rr + 1, -rr:rr + 1]
 NEARLAND = binary_dilation(LANDPX, structure=(xx * xx + yy * yy) <= rr * rr)
+# d of a spot in a sea: its distance to the nearest land in % of the map width. A letter circle (28 px + its white ring, 4.5 % of the
+# screen, R_MARK of tools/build_b4s7_geowords.mjs) hides the coast nearer than that, so the app and the builder of the finals take a spot in
+# a sea only where d >= 4.5 / the zoom of the puzzle: a letter «in the Atlantic Ocean» never covers Cuba (Svetlana, 19.11.2026)
+CLEAR = distance_transform_edt(~LANDPX) * 100 / PW
 def open_water(x, y):
     i, j = int(y / 100 * PH), int(x / 100 * PW)
     return 0 <= i < PH and 0 <= j < PW and not NEARLAND[i, j]
@@ -104,7 +108,8 @@ for r in d['review']:
         if r['id'] == 'na-caribbean-sea': water = water.difference(box(83.5, 0, 100, 66))
         sp = [(r['label']['x'], r['label']['y'])] if water.contains(Point(r['label']['x'], r['label']['y'])) else []
         sp += [(i * 1.5, j * 1.5) for i in range(67) for j in range(67) if water.contains(Point(i * 1.5, j * 1.5))]
-        places.append({'id': r['id'], 'kind': 'water', 'spots': thin([q for q in sp if open_water(*q)], 4.0)})
+        places.append({'id': r['id'], 'kind': 'water', 'spots': [{**q, 'd': round(float(CLEAR[int(q['y'] / 100 * PH), int(q['x'] / 100 * PW)]), 1)}
+                                                                  for q in thin([q for q in sp if open_water(*q)], 4.0)]})
     else:
         places.append({'id': r['id'], 'kind': 'object', 'spots': [dict(r['label'])]})
     print(r['id'], len(places[-1]['spots']), 'spots')
@@ -116,7 +121,7 @@ d['frames'] = {'1': {'x': 40, 'y': 50, 'zoom': 1.2}, '2': {'x': 50, 'y': 45, 'zo
                'S': {'x': 50, 'y': 50, 'zoom': 1.0}}
 d['notes'] = [n for n in d['notes'] if not n.startswith('GeoWords')] + [
     'GeoWords: spots of the island states (label point and a grid inside the main island first); places = the countries of section 6 in the frame '
-    '(carried over from namerica-countries.json) and the objects of section 1 (seas and ocean: a grid in open water); frames = the zoomed view '
+    '(carried over from namerica-countries.json) and the objects of section 1 (seas and ocean: a grid in open water, d = distance to land in % of the map width); frames = the zoomed view '
     'of the puzzles of each unit (S = section final); no rivers. Written by tools/build_namerica_caribbean_places.py.']
 SRC.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')).replace('{"id"', '\n{"id"') + '\n')
 print('wrote', SRC)

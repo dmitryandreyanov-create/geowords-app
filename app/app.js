@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.19-write-letters';
+const BUILD='2026.11.19-sea-letters';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -2558,7 +2558,10 @@ function placesFor(st){
     const out=[],add=(base,spots,reg)=>{for(const q of spots.filter(inView))if(reg||inner(q))out.push({...base,x:q.x,y:q.y,group:base.id,reg})};
     for(const id of NA7_IDS.filter(id=>E(id)&&E(id).unit<=u))add({id,place:{ru:NA7_IN[id][0],en:NA7_IN[id][1]},pri:0,eu:true,kind:'country',country:id},SX.spots[id]||[E(id)],U.includes(E(id).unit));
     for(const p of SX.places){const ph=p.kind==='country'?NA6_IN[p.id]:NA_PLACE[p.id];if(!ph)continue;
-      add({id:p.id,place:{ru:ph[0],en:ph[1]},pri:p.kind==='country'?1:2,eu:true,kind:p.kind==='country'?'country':'object',...(p.kind==='country'?{country:p.id}:{})},p.spots,U.some(k=>NA7_REG[k].includes(p.id)))}
+      // a letter in a sea or the ocean keeps its circle off the land: d (distance to land, % of the map) >= 4.5 % of the screen (R_MARK of
+      // tools/build_b4s7_geowords.mjs; Svetlana 19.11.2026: the letter «in the Atlantic Ocean» covered the tip of Cuba)
+      const sp=p.kind==='water'?p.spots.filter(q=>!(q.d<4.5/f.zoom)):p.spots;
+      add({id:p.id,place:{ru:ph[0],en:ph[1]},pri:p.kind==='country'?1:2,eu:true,kind:p.kind==='country'?'country':'object',...(p.kind==='country'?{country:p.id}:{})},sp,U.some(k=>NA7_REG[k].includes(p.id)))}
     out.frame={x:f.x,y:f.y,zoom:f.zoom};if(st.unit===2)out.regMax=4;return out}
   if(st.sec===27){EUSEC=27;const SX=D.s27,u=st.unit==='S'?3:st.unit,learned=id=>!!(E(id)&&E(id).unit<=u),U=st.unit==='S'?[1,2,3]:[st.unit];
     const f=SX.frames[st.unit==='S'?'S':String(st.unit)],hw=50/f.zoom,cx=Math.min(100-hw,Math.max(hw,f.x)),cy=Math.min(100-hw,Math.max(hw,f.y)),mg=4/f.zoom;

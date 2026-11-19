@@ -51,8 +51,8 @@
     },
     {
      "id": "na-caribbean-sea",
-     "x": 45,
-     "y": 82.5,
+     "x": 42,
+     "y": 78,
      "letter": "A"
     },
     {
@@ -136,8 +136,9 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-11-17",
-    "contentSha256": "dc0e2df80261f9a9"
+    "date": "2026-11-19",
+    "contentSha256": "502f9de472c6caa5",
+    "note": "sea letter moved off the coast (Svetlana 19.11.2026 «Да пожалуйста»)"
    }
   },
   {
@@ -329,8 +330,8 @@
     },
     {
      "id": "na-atlantic-ocean",
-     "x": 57,
-     "y": 40.5,
+     "x": 60,
+     "y": 36,
      "letter": "D"
     }
    ],
@@ -385,8 +386,9 @@
    "approval": {
     "status": "approved",
     "by": "Svetlana",
-    "date": "2026-11-17",
-    "contentSha256": "9b4de1b453b87959"
+    "date": "2026-11-19",
+    "contentSha256": "fc99a1bb2cd93f21",
+    "note": "sea letter moved off the coast (Svetlana 19.11.2026 «Да пожалуйста»)"
    }
   },
   {
