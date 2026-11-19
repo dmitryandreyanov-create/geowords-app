@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.18-reviews-approved';
+const BUILD='2026.11.19-write-letters';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -1997,6 +1997,7 @@ function lesson(step){
         app.querySelectorAll('.lchip').forEach(c=>c.disabled=true);answered(q,ok);
         feedback(ok,ok?x.right:x.labelBad,ok?'':names.map((id,i)=>(i+1)+' — '+anyObj(id).name[lang]).join(', '),ok?IMG.faceHappy:IMG.faceOops,next)};
       return}
+    // write tasks: on a wrong answer the slots keep the child's own letters (wrong ones red) — the right name is in the feedback title (Kukunor, 19.11.2026)
     if(q.k==='write'){const o=anyObj(q.id),name=o.name[lang],chars=[...name],sep=c=>/[\s-]/.test(c);const letters=chars.filter(c=>!sep(c));const typed=[];
       frame(x.write,`<p class="q">${x.writeQ}</p><div class="mapslot"></div><div class="wslots">${name.split(/(\s+)/).filter(Boolean).map(w=>/^\s+$/.test(w)?'':`<span class="wword">${[...w].map(c=>c==='-'?'<span class="wgap">-</span>':'<span class="wslot"></span>').join('')}</span>`).join('')}</div>
         <div class="wtiles">${shuffle(letters.map((c,i)=>({c:c.toUpperCase(),i}))).map(t=>`<button type="button" class="wtile" data-i="${t.i}">${esc(t.c)}</button>`).join('')}<button type="button" class="wtile back" aria-label="⌫">⌫</button></div>`);
@@ -2005,7 +2006,7 @@ function lesson(step){
       const draw=()=>slots.forEach((s_,i)=>s_.textContent=typed[i]?typed[i].c:'');
       app.querySelectorAll('.wtile[data-i]').forEach(b=>b.onclick=()=>{if(typed.length>=letters.length)return;typed.push({c:b.textContent,b});b.disabled=true;draw();
         if(typed.length===letters.length){const ok=fold(typed.map(t=>t.c).join(''))===fold(letters.join(''));app.querySelectorAll('.wtile').forEach(t=>t.disabled=true);
-          slots.forEach((s_,i)=>{s_.textContent=letters[i].toUpperCase();s_.classList.add(ok?'good':'bad')});answered(q,ok);
+          slots.forEach((s_,i)=>{const r=fold(typed[i].c)===fold(letters[i]);s_.textContent=ok?letters[i].toUpperCase():typed[i].c;s_.classList.add(r?'good':'bad')});answered(q,ok);
           feedback(ok,ok?x.right:x.wrongIs(name),ok?(o.disputed?'':o.fact(lang)):'',ok?IMG.faceHappy:IMG.faceOops,next)}});
       app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
       return}
@@ -2068,7 +2069,7 @@ function lesson(step){
       const slots=[...app.querySelectorAll('.wslot')];const draw=()=>slots.forEach((s_,i)=>s_.textContent=typed[i]?typed[i].c:'');
       app.querySelectorAll('.wtile[data-i]').forEach(b=>b.onclick=()=>{if(typed.length>=letters.length)return;typed.push({c:b.textContent,b});b.disabled=true;draw();
         if(typed.length===letters.length){const ok=fold(typed.map(t=>t.c).join(''))===fold(letters.join(''));app.querySelectorAll('.wtile').forEach(t=>t.disabled=true);
-          slots.forEach((s_,i)=>{s_.textContent=letters[i].toUpperCase();s_.classList.add(ok?'good':'bad')});answered(q,ok);
+          slots.forEach((s_,i)=>{const r=fold(typed[i].c)===fold(letters[i]);s_.textContent=ok?letters[i].toUpperCase():typed[i].c;s_.classList.add(r?'good':'bad')});answered(q,ok);
           feedback(ok,ok?x.right:x.wrongIs(name),ok?(q.cap?x.capIs(o.name[lang],name):(o.disputed?'':o.fact(lang))):'',ok?IMG.faceHappy:IMG.faceOops,next)}});
       app.querySelector('.wtile.back').onclick=()=>{const t_=typed.pop();if(t_){t_.b.disabled=false;draw()}};
       return}
