@@ -1,0 +1,46 @@
+{
+ "block": "namerica-4",
+ "status": "draft",
+ "rules": {
+  "structure": "one block-final word per language for the block 4 «North America» review (Svetlana 18.11.2026: ПЕРВОПРОХОДЦЫ / PATHFINDERS); Challenge GeoWords reuse the approved review words of block 4 sections 1-7",
+  "approval": "approval.contentSha256 = first 16 hex of sha256 over {answer, definition}",
+  "definitions": "a definition never contains its answer word, nor a word of the same root (no «первый», «проход», «path», «find»)"
+ },
+ "units": [
+  {
+   "id": "block-final",
+   "title": {
+    "ru": "Итог блока",
+    "en": "Block final"
+   },
+   "words": {
+    "en": [
+     {
+      "answer": "PATHFINDERS",
+      "role": "block-final",
+      "definition": "People who go first into lands unknown to them and open the way for others. In North America they were Jacques Cartier on the St. Lawrence, La Salle on the Mississippi, Alexander Mackenzie, and Lewis and Clark on the way to the Pacific.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "23ac84c459a8f201"
+      }
+     }
+    ],
+    "ru": [
+     {
+      "answer": "ПЕРВОПРОХОДЦЫ",
+      "role": "block-final",
+      "definition": "Люди, которые раньше других отправляются в неизвестные им земли и открывают туда путь. В Северной Америке это Жак Картье на реке Святого Лаврентия, Ласалль на Миссисипи, Александр Маккензи, Льюис и Кларк на пути к Тихому океану.",
+      "approval": {
+       "status": "approved",
+       "by": "Svetlana",
+       "date": "2026-11-18",
+       "contentSha256": "6db20934a3259307"
+      }
+     }
+    ]
+   }
+  }
+ ]
+}
