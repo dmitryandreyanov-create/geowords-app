@@ -38,7 +38,7 @@ pacific_side = Polygon([(-125, 32), (-84, 32), (-83, 10.5), (-79, 9.3), (-77.5, 
                         (-67.27, -55.98), (-67.27, -70), (-125, -70)])
 caribbean = sea('Caribbean Sea', 'Golfo de Urabá', 'Golfo de Venezuela')
 pacific = water.difference(pacific_side.buffer(0).symmetric_difference(pacific_side)).intersection(pacific_side).intersection(box(-125, -60, -60, 32))
-atlantic = water.difference(pacific_side).intersection(box(-70, -60, 5, 32)).difference(caribbean.buffer(0.05))
+atlantic = water.difference(pacific_side).intersection(box(-100, -60, 5, 32))  # the Caribbean is part of the Atlantic, as in North America
 # Tierra del Fuego: Isla Grande and the islands south of the Strait of Magellan down to Cape Horn
 tdf = unary_union([g for g in getattr(land, 'geoms', [land]) if g.intersects(box(-75, -56.1, -63.5, -52.6))
                    and g.representative_point().y < -52.6 and g.area > 0.002])
@@ -59,8 +59,8 @@ POINT = {'sa-cape-gallinas': (-71.67, 12.46), 'sa-cabo-branco': (-34.79, -7.15),
          'sa-cape-froward': (-71.30, -53.90), 'sa-cape-horn': (-67.27, -55.98),
          'sa-strait-of-magellan': (-70.9, -53.2), 'sa-drake-passage': (-65.0, -58.0)}
 RADIUS = {'sa-drake-passage': 3.2, 'sa-strait-of-magellan': 1.4, 'sa-cape-froward': 1.1, 'sa-cape-horn': 1.3}
-# lines across the map: a band of 1.6 % of the map height along the line; the label sits on the line over the ocean
-LINE = {'sa-equator': (0.0, -36.0), 'sa-tropic-of-capricorn': (-23.44, -32.0)}
+# lines across the map: a band of 1.6 % of the map height along the line; the label sits on the line over the land (a letter there is in no ocean)
+LINE = {'sa-equator': (0.0, -60.0), 'sa-tropic-of-capricorn': (-23.44, -57.0)}
 labelOff = {'sa-atlantic-ocean': caribbean, 'sa-pacific-ocean': box(-125, -60, -100, 32)}
 
 def polys(g):

@@ -1,0 +1,194 @@
+{
+ "section": "south-america-on-the-map",
+ "block": 5,
+ "use": "records lesson of unit 3: record cards and «find it» tasks (object null = card only)",
+ "approvalRule": "approval.contentSha256 = first 16 hex of sha256 over {id, name, fact, caveat, disputed} (JSON, sorted keys, UTF-8). If any of these change, the approval no longer matches and the card must be re-approved before it is shown.",
+ "items": [
+  {
+   "id": "samerica-fourth-continent",
+   "order": 1,
+   "object": null,
+   "kind": "record",
+   "unit": 1,
+   "name": {
+    "en": "South America",
+    "ru": "Южная Америка"
+   },
+   "fact": {
+    "en": "South America is the fourth-largest continent on Earth, after Eurasia, Africa and North America.",
+    "ru": "Южная Америка — четвёртый по площади материк Земли после Евразии, Африки и Северной Америки."
+   },
+   "figure": {
+    "value": 17800000,
+    "unit": "km²"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "bdca5698ca7ab68b"
+   }
+  },
+  {
+   "id": "gallinas-northernmost",
+   "order": 2,
+   "object": "sa-cape-gallinas",
+   "kind": "record",
+   "unit": 1,
+   "name": {
+    "en": "Punta Gallinas",
+    "ru": "Мыс Гальинас"
+   },
+   "fact": {
+    "en": "Punta Gallinas is the northernmost point of the continent (12°27′ N).",
+    "ru": "Мыс Гальинас — самая северная точка материка (12°27′ с. ш.)."
+   },
+   "figure": {
+    "value": 12.45,
+    "unit": "°N"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "a60b066a287fc013"
+   }
+  },
+  {
+   "id": "seixas-easternmost",
+   "order": 3,
+   "object": "sa-cabo-branco",
+   "kind": "record",
+   "unit": 1,
+   "name": {
+    "en": "Ponta do Seixas",
+    "ru": "Понта-ду-Сейшас"
+   },
+   "fact": {
+    "en": "Ponta do Seixas, next to Cabo Branco, is the easternmost point of the continent (34°47′ W).",
+    "ru": "Понта-ду-Сейшас, рядом с мысом Кабу-Бранку, — самая восточная точка материка (34°47′ з. д.)."
+   },
+   "figure": {
+    "value": 34.79,
+    "unit": "°W"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "bc59e475465b4e18"
+   }
+  },
+  {
+   "id": "parinas-westernmost",
+   "order": 4,
+   "object": "sa-punta-parinas",
+   "kind": "record",
+   "unit": 1,
+   "name": {
+    "en": "Punta Pariñas",
+    "ru": "Мыс Париньяс"
+   },
+   "fact": {
+    "en": "Punta Pariñas is the westernmost point of the continent (81°20′ W).",
+    "ru": "Мыс Париньяс — самая западная точка материка (81°20′ з. д.)."
+   },
+   "figure": {
+    "value": 81.33,
+    "unit": "°W"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "4a50b7937fff12bc"
+   }
+  },
+  {
+   "id": "froward-southernmost",
+   "order": 5,
+   "object": "sa-cape-froward",
+   "kind": "record",
+   "unit": 1,
+   "name": {
+    "en": "Cape Froward",
+    "ru": "Мыс Фроуэрд"
+   },
+   "fact": {
+    "en": "Cape Froward is the southernmost point of the mainland (53°54′ S).",
+    "ru": "Мыс Фроуэрд — самая южная точка материковой части (53°54′ ю. ш.)."
+   },
+   "figure": {
+    "value": 53.9,
+    "unit": "°S"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "89667b0b2e8b2c4e"
+   }
+  },
+  {
+   "id": "galapagos-tortoises",
+   "order": 6,
+   "object": "sa-galapagos",
+   "kind": "record",
+   "unit": 2,
+   "name": {
+    "en": "Galápagos tortoises",
+    "ru": "Галапагосские черепахи"
+   },
+   "fact": {
+    "en": "Galápagos giant tortoises are among the largest land tortoises in the world: in the wild they can weigh up to 300 kg.",
+    "ru": "Галапагосские гигантские черепахи — одни из крупнейших сухопутных черепах мира: в природе могут весить до 300 кг."
+   },
+   "figure": {
+    "value": 300,
+    "unit": "kg"
+   },
+   "source": {
+    "doc": "https://claude.ai/artifact/J3bJdWxxr2D15UphSdrtsd",
+    "note": "block 5 section 1 texts, approved 19.11.2026"
+   },
+   "disputed": false,
+   "category": "stable",
+   "approval": {
+    "status": "approved",
+    "by": "Svetlana",
+    "date": "2026-11-19",
+    "contentSha256": "bb9e5fecd4128c9f"
+   }
+  }
+ ]
+}

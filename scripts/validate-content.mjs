@@ -161,6 +161,14 @@ const RELEASE = {
     section: "countries-of-the-caribbean-islands",
     ids: ["cuba-largest", "pico-duarte", "saint-kitts-smallest", "pitch-lake"],
   },
+  "b5-section-1-facts.json": {
+    section: "south-america-on-the-map",
+    ids: ["samerica-intro", "sa-pacific-ocean", "sa-atlantic-ocean", "sa-caribbean-sea", "sa-isthmus-of-panama", "sa-cape-gallinas", "sa-cabo-branco", "sa-punta-parinas", "sa-cape-froward", "sa-equator", "sa-tropic-of-capricorn", "sa-galapagos", "sa-falklands", "sa-tierra-del-fuego", "sa-strait-of-magellan", "sa-drake-passage", "sa-cape-horn"],
+  },
+  "b5-section-1-records.json": {
+    section: "south-america-on-the-map",
+    ids: ["samerica-fourth-continent", "gallinas-northernmost", "seixas-easternmost", "parinas-westernmost", "froward-southernmost", "galapagos-tortoises"],
+  },
   "b4-section-1-facts.json": {
     section: "north-america-on-the-map",
     ids: ["namerica-intro", "namerica-hawaii", "na-arctic-ocean", "na-pacific-ocean", "na-atlantic-ocean", "na-bering-strait", "na-denmark-strait", "na-isthmus-of-panama", "na-caribbean-sea", "na-gulf-of-mexico", "na-alaska-peninsula", "na-labrador", "na-boothia", "na-florida", "na-baja-california", "na-yucatan", "na-greenland", "na-arctic-archipelago", "na-baffin", "na-newfoundland", "na-cuba", "na-hispaniola", "na-hudson-bay", "na-gulf-of-california"],
