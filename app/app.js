@@ -5,7 +5,7 @@
 (()=>{
 const A='../';
 const KEY='geowords_expedition_v1';
-const BUILD='2026.11.19-sea-letters';
+const BUILD='2026.11.19-antilles';
 const IMG={
   welcome:A+'assets/graphics/game/scene-welcome.webp',intro:A+'assets/graphics/game/intro-continents-oceans.webp',
   hello:A+'assets/pip/game/pip-hello.webp',yes:A+'assets/pip/game/pip-yes.webp',cheer:A+'assets/pip/game/pip-cheer.webp',
@@ -40,7 +40,7 @@ const T={
   whatRiver:'Какая это река?',riverCont:n=>`По какому континенту течёт <b>${n}</b>?`,riverMouth:n=>`Куда впадает <b>${n}</b>?`,mouth:'Куда впадает',onCont:'Континент',
   allAsia:'Нажми на все реки Азии',allHint:'Отметь реки и нажми «Проверить».',allOk:'Все реки Азии найдены!',allBad:'Не совсем. Вот реки Азии.',riversIntro:'Перед этим разделом тебе нужно знать',
   whatStrait:'Что это за пролив или канал?',connectsQ:n=>`Что соединяет <b>${n}</b>?`,separatesQ:n=>`Что разделяет <b>${n}</b>?`,connectsT:'Что соединяет',separatesT:'Что разделяет',
-  openMag:'Он маленький — открой лупу 🔍 на карте',laName:'Малые Антильские острова крупно',laHint:'Острова Малых Антил маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',caName:'Центральная Америка крупно',caHint:'Страны Центральной Америки маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',lvName:'Восточное Средиземноморье крупно',lvHint:'Страны у восточного берега Средиземного моря маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',
+  openMag:'Он маленький — открой лупу 🔍 на карте',laName:'Малые Антильские острова крупно',laHint:'Острова Малых Антил маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',caName:'Центральная Америка крупно',caHint:'Страны Центральной Америки маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',lvName:'Восточное Средиземноморье крупно',lvHint:'Страны у восточного берега Средиземного моря маленькие — нажми на них или на лупу 🔍, и откроется крупная карта',magHint:'Маленькие проливы — под лупой 🔍',gwLaHint:'Эта буква на маленьком острове. Нажми на рамку с лупой 🔍, и откроется крупная карта',
   whatSea:'Что это за море или залив?',seaOcean:n=>`<b>${n}</b> — часть какого океана?`,seaNone:'Ни какого: это внутренний водоём',
   allIndian:'Нажми на все моря и заливы Индийского океана',allIndianHint:'Отметь моря и заливы и нажми «Проверить».',allIndianOk:'Все моря и заливы Индийского океана найдены!',allIndianBad:'Не совсем. Вот моря и заливы Индийского океана.',
   whatMtn:'Какие это горы?',mtnCont:n=>`Выбери континент, где <b>${n}</b>`,mtnBorder:n=>`<b>${n}</b> — на границе каких частей света?`,mtnOcean:n=>`<b>${n}</b> — на дне какого океана?`,
@@ -76,7 +76,7 @@ const T={
   whatRiver:'Which river is this?',riverCont:n=>`On which continent does <b>${n}</b> flow?`,riverMouth:n=>`Where does <b>${n}</b> flow into?`,mouth:'River mouth',onCont:'Continent',
   allAsia:'Tap every river of Asia',allHint:'Mark the rivers, then tap “Check”.',allOk:'All the rivers of Asia found!',allBad:'Not quite. Here are the rivers of Asia.',riversIntro:'Before this section you need to know',
   whatStrait:'Which strait or canal is this?',connectsQ:n=>`What does <b>${n}</b> connect?`,separatesQ:n=>`What does <b>${n}</b> separate?`,connectsT:'What it connects',separatesT:'What it separates',
-  openMag:'It is tiny — open the magnifier 🔍 on the map',laName:'The Lesser Antilles, enlarged',laHint:'The islands of the Lesser Antilles are small — tap them or the magnifier 🔍 to open a large map',caName:'Central America, enlarged',caHint:'The countries of Central America are small — tap them or the magnifier 🔍 to open a large map',lvName:'The Eastern Mediterranean, enlarged',lvHint:'The countries on the eastern shore of the Mediterranean are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',
+  openMag:'It is tiny — open the magnifier 🔍 on the map',laName:'The Lesser Antilles, enlarged',laHint:'The islands of the Lesser Antilles are small — tap them or the magnifier 🔍 to open a large map',caName:'Central America, enlarged',caHint:'The countries of Central America are small — tap them or the magnifier 🔍 to open a large map',lvName:'The Eastern Mediterranean, enlarged',lvHint:'The countries on the eastern shore of the Mediterranean are small — tap them or the magnifier 🔍 to open a large map',magHint:'Tiny straits are under the magnifier 🔍',gwLaHint:'This letter is on a small island. Tap the frame with the magnifier 🔍 to open a large map',
   whatSea:'Which sea or bay is this?',seaOcean:n=>`Which ocean is <b>${n}</b> part of?`,seaNone:'None: it is an inland body of water',
   allIndian:'Tap every sea and bay of the Indian Ocean',allIndianHint:'Mark the seas and bays, then tap “Check”.',allIndianOk:'All the seas and bays of the Indian Ocean found!',allIndianBad:'Not quite. Here are the seas and bays of the Indian Ocean.',
   whatMtn:'Which mountains are these?',mtnCont:n=>`Choose the continent of <b>${n}</b>`,mtnBorder:n=>`Which two continents meet along <b>${n}</b>?`,mtnOcean:n=>`On the floor of which ocean is <b>${n}</b>?`,
@@ -379,7 +379,7 @@ async function loadData(){
   D.s28.places=D.s28.raw.places;D.s28.areas=Object.fromEntries([...D.s28.raw.items,...D.s28.raw.places.filter(p=>p.tapArea),
     ...D.s28.raw.review.filter(o=>o.kind!=='ocean'&&o.kind!=='sea')].map(o=>[o.id,{tapArea:o.tapArea,holes:o.holes||[]}]));
   // the large map of the Lesser Antilles: an exact piece of the Caribbean map, as the Levant
-  D.la=await get('data/maps/namerica-lesser-antilles.json');D.la.image=A+D.la.map.replace(/^\.\//,'');D.la.set=new Set(D.la.objects);
+  D.la=await get('data/maps/namerica-lesser-antilles.json');for(const p of D.la.parts)p.image=A+p.map.replace(/^\.\//,'');D.la.set=new Set(D.la.objects);
   // the large map of the Levant (Svetlana, 02.11.2026): an exact piece of the countries map drawn ten times larger (tools/build_asia_levant.py)
   D.lv=await get('data/maps/asia-levant.json');D.lv.image=A+D.lv.map.replace(/^\.\//,'');D.lv.set=new Set(D.lv.objects);
 }
@@ -1489,7 +1489,7 @@ const LVD=()=>EUSEC===28?D.la:EUSEC===27?D.ca:EUSEC===26?D.cy:D.lv;
 const lvOn=()=>!!((ASCTY()||EUSEC===26)&&LVD()&&EU_JUDGE().some(id=>LVD().set.has(id)));
 // a highlight task opens it at once when the country or capital asked is small there (the frame of the Levant, a small country or a crowded capital)
 const LV_SMALL=new Set(['cty-cyprus','cty-lebanon','cty-israel','cty-palestine']);
-const lvShow=(m,o,cap)=>{if(m.levant&&(cap?(LVD().capitals||[]).includes(o.capital.id):EUSEC===26||EUSEC===27||EUSEC===28?LVD().set.has(o.id):LV_SMALL.has(o.id)))m.openLevant()};
+const lvShow=(m,o,cap)=>{if(m.levant&&(cap?(LVD().capitals||[]).includes(o.capital.id):EUSEC===26||EUSEC===27||EUSEC===28?LVD().set.has(o.id):LV_SMALL.has(o.id)))m.openLevant(cap?{cap:o.capital.id}:{id:o.id})};
 // a highlight task about a country (Svetlana, 02.11.2026 «не видно, о чём речь»): a country of the Levant opens the large map at once,
 // any other small country opens the map zoomed in on it, so the highlighted outline is never a speck on the whole of Asia
 const lvAll=o=>(ASCTY()||EUSEC===26)&&lvOn()&&LVD().set.has(o.id);
@@ -1497,11 +1497,11 @@ function hlFocus(o){if(!(ASCTY()||EUSEC===26)||lvAll(o)||!o.tapArea||!o.tapArea.
   const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),size=Math.max(x1-x0,(y1-y0)*1600/2200);if(size>=14)return null;
   return {x:(x0+x1)/2,y:(y0+y1)/2,zoom:Math.min(4,Math.max(1.8,22/size))}}
 const hlMap=(o,opts={})=>{const m=euMap(app.querySelector('.mapslot'),{zoom:false,levant:true,focus:hlFocus(o),...opts});return m};
-const hlOpen=(m,o)=>{if(m.levant&&lvAll(o))m.openLevant()};
+const hlOpen=(m,o)=>{if(m.levant&&lvAll(o))m.openLevant({id:o.id})};
 const lvHint=()=>lvOn()?`<p class="rotate-hint">${EUSEC===28?t().laHint:EUSEC===27?t().caHint:EUSEC===26?t().cyHint:t().lvHint}</p>`:'';
 // where an explanation card points on the map (% of the image, tools/namerica_base.py pct): the card has no map object of its own
 const NOTE_PINS={'namerica-hawaii':{x:6.7,y:61.4},'namerica-yellowstone':{x:42.1,y:56.0}};
-function euMap(host,opts){const m=mapWidget(host,{...opts,levant:!opts.noLarge&&(opts.onTap||opts.levant)&&lvOn()?{...LVD(),name:EUSEC===28?t().laName:EUSEC===27?t().caName:EUSEC===26?t().cyName:t().lvName}:null,base:EUSEC===28?IMG.naCaribbean:EUSEC===27?IMG.naCountries:EUSEC===26?IMG.naDeserts:EUSEC===25?IMG.naMountains:EUSEC===24?IMG.naLakes:EUSEC===23?IMG.naRivers:EUSEC===22?IMG.naBase:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
+function euMap(host,opts){const m=mapWidget(host,{...opts,levant:opts.gwParts?{...LVD(),parts:opts.gwParts}:!opts.noLarge&&(opts.onTap||opts.levant)&&lvOn()?{...LVD(),name:EUSEC===28?t().laName:EUSEC===27?t().caName:EUSEC===26?t().cyName:t().lvName}:null,base:EUSEC===28?IMG.naCaribbean:EUSEC===27?IMG.naCountries:EUSEC===26?IMG.naDeserts:EUSEC===25?IMG.naMountains:EUSEC===24?IMG.naLakes:EUSEC===23?IMG.naRivers:EUSEC===22?IMG.naBase:ASCTY()?IMG.asCountries:EUSEC===17?IMG.asDeserts:EUSEC===16?IMG.asMountains:EUSEC===15?IMG.asLakes:EUSEC===14?IMG.asRivers:EUSEC===13?IMG.asBase:EUSEC>=10?IMG.euCountriesRivers:EUSEC===9?IMG.euMountains:EUSEC===8?IMG.euRivers:IMG.euBase,aspect:'2200/1600'});
   // section 1 draws the Ural River and Mountains on the blank map; the rivers map of section 2 has every river drawn already
   // sections 4 and 5 use the capitals map with the rivers of section 2 drawn in: a river and the outline of a country together (Svetlana, 28.10.2026)
   const statics=()=>{if(EUSEC!==7)return;m.shape(E('ural-mountains'),'eu-mtn');m.line(riverPath(E('ural-river')),'eu-river')};statics();
@@ -1534,17 +1534,27 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   // the large map of the Levant (Svetlana, 02.11.2026): Damascus, Beirut, Amman and Nicosia lie a few pixels apart on the countries map, so a 🔍
   // over Lebanon and any tap inside the frame of the Levant open the large map over the whole map box; it is an exact piece of the map
   // (D.lv.frame, % of the map), so a tap there is judged with the same tap areas and capital dots, and every highlight is drawn on it too
-  let lv=null;const LF=levant&&levant.frame,inLv=(x,y)=>!!LF&&x>=LF.x&&x<=LF.x+LF.w&&y>=LF.y&&y<=LF.y+LF.h;
-  const openLv=()=>{if(!lv)return;for(const k in pops)pops[k].hidden=true;lv.hidden=false};
-  if(levant){const b=document.createElement('button');b.type='button';b.className='mk mag lv-mag';b.innerHTML='<span>🔍</span>';b.setAttribute('aria-label',levant.name);
-    b.addEventListener('click',e=>{e.stopPropagation();openLv()});marks.appendChild(b);btn['mag-levant']={el:b,m:levant.magnifier};
-    lv=document.createElement('div');lv.className='lv-pop';lv.hidden=true;
-    lv.innerHTML=`<img src="${levant.image}" alt="" draggable="false"><svg class="shapes" viewBox="${LF.x} ${LF.y} ${LF.w} ${LF.h}" preserveAspectRatio="none"></svg><span class="lv-name">${esc(levant.name)}</span><button type="button" class="inset-x" aria-label="✕">✕</button>`;
-    lv.querySelector('.inset-x').addEventListener('click',e=>{e.stopPropagation();lv.hidden=true});
-    lv.addEventListener('click',e=>{if(e.target.closest('.inset-x'))return;e.stopPropagation();if(!onTap)return;const r=lv.getBoundingClientRect();
-      onTap(LF.x+(e.clientX-r.left)/r.width*LF.w,LF.y+(e.clientY-r.top)/r.height*LF.h,e.clientX-r.left,e.clientY-r.top,{W:r.width*100/LF.w,H:r.height*100/LF.h})});
-    lv.addEventListener('pointerdown',e=>e.stopPropagation());box.appendChild(lv)}
-  const lvSvg=()=>lv&&lv.querySelector('svg');
+  // The Lesser Antilles (Svetlana, 19.11.2026 «очень сложные») have two large maps, the north and the south (levant.parts): each has its own
+  // frame, 🔍 and pop; the frames never overlap, so a tap opens the one it falls in. Every other large map is one part.
+  // Markers with a `large` index (GeoWords letters inside a frame) are drawn on that large map instead of the map.
+  const LP=levant?(levant.parts||[levant]).map((p,i)=>({...p,i,name:p.name&&typeof p.name==='object'?p.name[L()]:p.name||levant.name,image:p.image||levant.image,magnifier:p.magnifier||levant.magnifier})):[];
+  const inPart=(p,x,y)=>x>=p.frame.x&&x<=p.frame.x+p.frame.w&&y>=p.frame.y&&y<=p.frame.y+p.frame.h;
+  const partAt=(x,y)=>LP.find(p=>inPart(p,x,y));const LF=LP.length?LP[0].frame:null,inLv=(x,y)=>!!partAt(x,y);
+  const openLv=k=>{const p=typeof k==='number'?LP[k]:k&&typeof k==='object'?(k.x!=null?partAt(k.x,k.y):LP.find(q=>(q.objects||[]).includes(k.id)||(q.capitals||[]).includes(k.cap))||(LP.length===1?LP[0]:null)):LP[0];
+    if(!p||!p.el)return;for(const k in pops)pops[k].hidden=true;for(const q of LP)if(q.el)q.el.hidden=q!==p;p.el.hidden=false};
+  for(const p of LP){const F=p.frame,b=document.createElement('button');b.type='button';b.className='mk mag lv-mag';b.innerHTML='<span>🔍</span>';b.setAttribute('aria-label',p.name);
+    b.addEventListener('click',e=>{e.stopPropagation();openLv(p.i)});marks.appendChild(b);btn['mag-levant'+(p.i?'-'+p.i:'')]={el:b,m:p.magnifier};
+    const el=document.createElement('div');el.className='lv-pop';el.hidden=true;Object.assign(el.dataset,{part:p.id||String(p.i),fx:F.x,fy:F.y,fw:F.w,fh:F.h});
+    el.innerHTML=`<img src="${p.image}" alt="" draggable="false"><svg class="shapes" viewBox="${F.x} ${F.y} ${F.w} ${F.h}" preserveAspectRatio="none"></svg><div class="imarks"></div><span class="lv-name">${esc(p.name)}</span><button type="button" class="inset-x" aria-label="✕">✕</button>`;
+    el.querySelector('.inset-x').addEventListener('click',e=>{e.stopPropagation();el.hidden=true});
+    el.addEventListener('click',e=>{if(e.target.closest('.inset-x')||e.target.closest('.mk'))return;e.stopPropagation();if(!onTap)return;const r=el.getBoundingClientRect();
+      onTap(F.x+(e.clientX-r.left)/r.width*F.w,F.y+(e.clientY-r.top)/r.height*F.h,e.clientX-r.left,e.clientY-r.top,{W:r.width*100/F.w,H:r.height*100/F.h})});
+    el.addEventListener('pointerdown',e=>e.stopPropagation());box.appendChild(el);p.el=el}
+  const lv=LP.length?LP[0].el:null,lvOpen=()=>LP.find(p=>p.el&&!p.el.hidden);
+  for(const m of markers.filter(m=>m.large!=null&&LP[m.large])){const p=LP[m.large],F=p.frame,b=document.createElement('button');b.type='button';b.className='mk'+(m.cls?' '+m.cls:'')+((m.x-F.x)/F.w<0.2?' pin-east':'');b.dataset.id=m.id;
+    b.innerHTML=`<span>${esc(m.label||'')}</span>`;b.setAttribute('aria-label',m.aria||m.label||m.id);b.style.left=(m.x-F.x)/F.w*100+'%';b.style.top=(m.y-F.y)/F.h*100+'%';
+    b.addEventListener('click',e=>{e.stopPropagation();onMarker&&onMarker(m.id,b)});p.el.querySelector('.imarks').appendChild(b);btn[m.id]={el:b,m,inset:true,large:p.i}}
+  markers=markers.filter(m=>!(m.large!=null&&LP[m.large]));
   for(const m of markers){const b=document.createElement('button');b.type='button';b.className='mk'+(m.cls?' '+m.cls:'');b.dataset.id=m.id;
     b.innerHTML=`<span>${esc(m.label||'')}</span>`;b.setAttribute('aria-label',m.aria||m.label||m.id);marks.appendChild(b);btn[m.id]={el:b,m}}
   const W=()=>mapEl.clientWidth,H=()=>mapEl.clientHeight;const toScreen=(x,y)=>[tx+x/100*W()*sc,ty+y/100*H()*sc];
@@ -1566,21 +1576,22 @@ function mapWidget(host,{layers=[],markers=[],onTap,onMarker,trail=false,zoom=tr
   marks.addEventListener('click',e=>{const b=e.target.closest('.mk');if(!b||moved)return;onMarker&&onMarker(b.dataset.id,b)});
   // a tap inside the frame of the Levant opens the large map in every task, also in a question with answer buttons
   mapEl.addEventListener('click',e=>{if(moved||e.target.closest('.zoom')||!onTap&&!LF)return;const r=mapEl.getBoundingClientRect();
-    const px=(e.clientX-r.left-tx)/sc/W()*100,py=(e.clientY-r.top-ty)/sc/H()*100;if(inLv(px,py)){openLv();return}if(!onTap)return;onTap(px,py,e.clientX-r.left,e.clientY-r.top,{W:W()*sc,H:H()*sc})});
+    const px=(e.clientX-r.left-tx)/sc/W()*100,py=(e.clientY-r.top-ty)/sc/H()*100;if(inLv(px,py)){openLv({x:px,y:py});return}if(!onTap)return;onTap(px,py,e.clientX-r.left,e.clientY-r.top,{W:W()*sc,H:H()*sc})});
   // focus {x,y,zoom}: the map opens zoomed in on that point (percent of the map)
   new ResizeObserver(()=>{if(focus){sc=focus.zoom;tx=W()/2-focus.x/100*W()*sc;ty=H()/2-focus.y/100*H()*sc}apply()}).observe(mapEl);
-  const lvFrame=()=>{if(!LF)return;const f=document.createElementNS('http://www.w3.org/2000/svg','path');f.setAttribute('d',`M${LF.x} ${LF.y}h${LF.w}v${LF.h}h${-LF.w}Z`);f.setAttribute('class','lv-frame');shapes.appendChild(f)};lvFrame();
+  const lvFrame=()=>{for(const {frame:F} of LP){const f=document.createElementNS('http://www.w3.org/2000/svg','path');f.setAttribute('d',`M${F.x} ${F.y}h${F.w}v${F.h}h${-F.w}Z`);f.setAttribute('class','lv-frame');shapes.appendChild(f)}};lvFrame();
   // a highlight drawn on the map is drawn on the large Levant map too; a capital ring there is small, as the dots are
-  const lvCopy=(p,o)=>{const sv=lvSvg();if(!sv)return;const q=p.cloneNode();if(o&&o.ring)q.setAttribute('d',areaPath(capRing(o.ring,0.3)));sv.appendChild(q)};
-  return {btn,levant:!!lv,openLevant:openLv,inLevant:inLv,
+  const lvCopy=(p,o)=>{for(const {el} of LP){const q=p.cloneNode();if(o&&o.ring)q.setAttribute('d',areaPath(capRing(o.ring,0.3)));el.querySelector('svg').appendChild(q)}};
+  return {btn,levant:!!lv,openLevant:openLv,inLevant:inLv,largeAt:partAt,
     addLayer(id){const i=document.createElement('img');i.src=IMG.layer(id);i.alt='';i.className='hl';world.insertBefore(i,shapes);return i},
     shape(o,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',areaPath(o));p.setAttribute('class',cls||'hl-shape');p.dataset.id=o.id;shapes.appendChild(p);lvCopy(p,o);return p},
     line(d,cls){const p=document.createElementNS('http://www.w3.org/2000/svg','path');p.setAttribute('d',d);p.setAttribute('class',cls||'hl-river');shapes.appendChild(p);lvCopy(p);return p},
     openInset,
     insetShape(id,polys,cls){const sv=pops[id]&&pops[id].querySelector('svg');if(!sv)return;const p=document.createElementNS('http://www.w3.org/2000/svg','path');
       p.setAttribute('d',polys.map(q=>'M'+q.map(v=>v[0]+' '+v[1]).join('L')+'Z').join(''));p.setAttribute('class',cls||'hl-shape');sv.appendChild(p);return p},
-    clearShapes(){shapes.innerHTML='';for(const k in pops)pops[k].querySelector('svg').innerHTML='';if(lv)lvSvg().innerHTML='';lvFrame()},
-    dot(sx,sy,ok){const d=document.createElement('div');d.className='tapdot '+(ok?'ok':'bad');d.style.left=sx+'px';d.style.top=sy+'px';(lv&&!lv.hidden?lv:mapEl).appendChild(d);setTimeout(()=>d.remove(),1300)},
+    clearShapes(){shapes.innerHTML='';for(const k in pops)pops[k].querySelector('svg').innerHTML='';for(const {el} of LP)el.querySelector('svg').innerHTML='';lvFrame()},
+    dot(sx,sy,ok){const d=document.createElement('div');d.className='tapdot '+(ok?'ok':'bad');d.style.left=sx+'px';d.style.top=sy+'px';(lvOpen()?lvOpen().el:mapEl).appendChild(d);setTimeout(()=>d.remove(),1300)},
+    closeLarge(){for(const p of LP)if(p.el)p.el.hidden=true},
     route(id){route.push(id);place()}};
 }
 
@@ -2691,16 +2702,22 @@ function geowords(P){
   app.querySelector('.l-x').onclick=()=>{const s=sheet(`<h3>${x.quitT}</h3><div class="row"><button type="button" class="btn ghost" data-a="q">${x.quit}</button><button type="button" class="btn" data-a="s">${x.stay}</button></div>`);
     s.querySelector('[data-a=q]').onclick=()=>{s.remove();home()};s.querySelector('[data-a=s]').onclick=()=>s.remove()};
   const slots=[...app.querySelectorAll('.slot')];
-  const m=(P.eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset})),onMarker:choose,...(P.focus?{focus:P.focus}:{})});
+  // Countries of the Caribbean islands (Svetlana, 19.11.2026 «Малые Антильские острова получились очень сложными»): the letters on the small
+  // islands of the Lesser Antilles stand on its large maps (north and south), each on its own island; the map shows the frames with a 🔍
+  // (a frame with no letter on its island states has no large map: a letter in the ocean there stays on the map)
+  const inF=(p,k)=>k.x>=p.frame.x&&k.x<=p.frame.x+p.frame.w&&k.y>=p.frame.y&&k.y<=p.frame.y+p.frame.h;
+  const LA=P.eu&&EUSEC===28&&D.la?D.la.parts.filter(p=>P.markers.some(k=>p.objects.includes(k.id)&&inF(p,k))):[];
+  for(const k of P.markers){const i=LA.findIndex(p=>inF(p,k));if(i>=0)k.large=i;else delete k.large}
+  const m=(P.eu?euMap:mapWidget)(app.querySelector('.mapslot'),{layers:P.layers,trail:true,insets:P.insets||[],markers:P.markers.map(k=>({id:k.id,x:k.x,y:k.y,label:k.letter,inset:k.inset,large:k.large})),onMarker:choose,gwParts:LA.length?LA:null,...(P.focus?{focus:P.focus}:{})});
   if(P.eu)app.querySelector('.gw .mapbox').style.aspectRatio='2200/1600';
   const pip=(img,txt)=>{app.querySelector('.gw-pip img').src=img;app.querySelector('.bubble').textContent=txt};
   function clue(){const c=P.clues[step];app.querySelector('.gw-clue').innerHTML=esc(c.text).replace(/(\S+ букву|the \S+ letter)/,'<b>$1</b>');
-    if(P.markers.find(k=>k.id===c.markerId)?.inset)pip(IMG.spy,x.magHint);
+    const mk=P.markers.find(k=>k.id===c.markerId);if(mk?.inset)pip(IMG.spy,x.magHint);else if(mk?.large!=null)pip(IMG.spy,x.gwLaHint);
     app.querySelector('.l-bar i').style.width=(step/P.clues.length*100)+'%'}
   function choose(id,el){if(step>=P.clues.length||el.classList.contains('done'))return;const c=P.clues[step];
     if(id!==c.markerId){wrong++;here++;el.classList.remove('shake');void el.offsetWidth;el.classList.add('shake');
-      if(here>=3){m.btn[c.markerId].el.classList.add('pulse');pip(IMG.spy,x.pipHint)}else pip(IMG.left,x.pipBad);return}
-    here=0;el.classList.remove('pulse');el.classList.add('done');m.route(id);if(m.btn[id]&&m.btn[id].inset)setTimeout(()=>m.openInset(null),600);const k=P.markers.find(q=>q.id===id);const s=slots[c.position-1];s.textContent=k.letter;s.classList.add('new');
+      if(here>=3){const b=m.btn[c.markerId];b.el.classList.add('pulse');if(b.large!=null)m.openLevant(b.large);pip(IMG.spy,x.pipHint)}else pip(IMG.left,x.pipBad);return}
+    here=0;el.classList.remove('pulse');el.classList.add('done');m.route(id);if(m.btn[id]&&m.btn[id].inset){const nx=P.clues[step+1]&&m.btn[P.clues[step+1].markerId];setTimeout(()=>{m.openInset(null);if(m.btn[id].large!=null&&!(nx&&nx.large===m.btn[id].large))m.closeLarge()},600)}const k=P.markers.find(q=>q.id===id);const s=slots[c.position-1];s.textContent=k.letter;s.classList.add('new');
     pip(IMG.yes,x.pipOk(k.letter));step++;
     if(step===P.clues.length){app.querySelector('.l-bar i').style.width='100%';setTimeout(finish,800)}else setTimeout(clue,350)}
   function finish(){const sec=Math.round((Date.now()-t0)/1000);const xp=(P.kind==='practice'?10:20)+Math.max(0,6-wrong);
@@ -2847,7 +2864,7 @@ function naChallengeRound(){const lang=L(),recent=S.recentCwNa||[],places=naWhol
 window.__gwNbPlans=()=>Object.fromEntries(COURSE_NB.slice(0,3).map(l=>[l.id,l.plan()]));window.__gwNaChallengeRound=()=>naChallengeRound();window.__gwNaWholePlaces=()=>naWholePlaces();// read by the automated rules test
 window.__gwEuChallengeRound=()=>euChallengeRound();// read by the automated rules test
 window.__gwChallengeRound=()=>challengeRound();// read by the automated rules test
-window.__gwLv=()=>{const d=LVD();return d&&d.frame?{frame:d.frame}:null};// read by the automated review tests (a tap in the frame of a large map opens it)
+window.__gwLv=()=>{const d=LVD();return d&&(d.parts||d.frame)?{frame:(d.parts?d.parts[0]:d).frame,frames:(d.parts||[d]).map(p=>p.frame)}:null};// read by the automated review tests (a tap in the frame of a large map opens it)
 window.__gwE=id=>{const o=E(id);return o&&{x:o.x,y:o.y,capital:o.capital,path:!!o.path}};window.__gwEuSec=n=>{EUSEC=n};window.__gwEuOk=(id,x,y,sz)=>euOk(id,x,y,sz);window.__gwEuHit=(x,y,sz)=>euHit(x,y,sz);window.__gwCapHit=(x,y,sz)=>capHit(x,y,sz);// read by the automated Europe test
 function challengeWords(st){const puzzles=st.sec===12?euChallengeRound():st.sec===21?asChallengeRound():st.sec===29?naChallengeRound():challengeRound();puzzles.forEach(P=>P.stepId=st.id);
   let i=0;const go=()=>{const P=puzzles[i];P.seq={i,total:puzzles.length,next:()=>{i++;go()}};geowords(P)};go()}

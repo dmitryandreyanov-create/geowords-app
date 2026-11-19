@@ -126,13 +126,16 @@ d['notes'] = [n for n in d['notes'] if not n.startswith('GeoWords')] + [
 SRC.write_text(json.dumps(d, ensure_ascii=False, separators=(',', ':')).replace('{"id"', '\n{"id"') + '\n')
 print('wrote', SRC)
 
-m = d['magnifier']
+# the large maps of the Lesser Antilles (north and south, tools/build_namerica_caribbean.py): one 🔍 and one frame each
+ms = d['magnifiers']
 la = {
-    'map': m['map'], 'of': d['map'], 'level': 'The Lesser Antilles, large: North America section 7',
-    'coordinateSystem': 'frame: the piece of namerica-caribbean.webp this map shows, in % of that map (x, y = top left; w, h = size). '
-                        'A point (u, v) in % of this map is (x + u·w/100, y + v·h/100) there, so tap areas and capitals of namerica-caribbean.json apply unchanged.',
-    'source': 'Built by tools/build_namerica_caribbean.py (an exact piece of the Caribbean map) and tools/build_namerica_caribbean_places.py',
-    'frame': m['frame'], 'aspect': '11 / 8', 'magnifier': m['at'], 'objects': m['objects'], 'capitals': m['capitals'],
+    'of': d['map'], 'level': 'The Lesser Antilles, large: North America section 7',
+    'coordinateSystem': 'parts[].frame: the piece of namerica-caribbean.webp a large map shows, in % of that map (x, y = top left; w, h = size). '
+                        'A point (u, v) in % of a large map is (x + u·w/100, y + v·h/100) there, so tap areas and capitals of namerica-caribbean.json apply unchanged. '
+                        'The frames never overlap: a tap inside one opens that map.',
+    'source': 'Built by tools/build_namerica_caribbean.py (exact pieces of the Caribbean map) and tools/build_namerica_caribbean_places.py',
+    'aspect': '11 / 8', 'objects': [i for m in ms for i in m['objects']], 'capitals': [c for m in ms for c in m['capitals']],
+    'parts': [{'id': m['id'], 'name': m['name'], 'map': m['map'], 'frame': m['frame'], 'magnifier': m['at'], 'objects': m['objects'], 'capitals': m['capitals']} for m in ms],
 }
 (ROOT / 'data/maps/namerica-lesser-antilles.json').write_text(json.dumps(la, ensure_ascii=False, indent=1) + '\n')
 print('wrote data/maps/namerica-lesser-antilles.json')
